@@ -1,37 +1,37 @@
 [
   {
     "date": "2026-07-18",
-    "published_at": "2026-07-18T07:41:34.572852Z",
+    "published_at": "2026-07-18T07:45:13.819381Z",
     "briefs": [
       {
-        "category": "Worth Knowing",
-        "title": "Hierarchical Denoising Enables 54x Faster Visual Reasoning",
-        "description": "Researchers introduced Hierarchical Denoising (HDR), a video diffusion framework that uses a tree-structured latent hierarchy to enable multi-step visual reasoning and planning.",
-        "why_it_matters": "It bridges the gap between slow, reasoning-heavy bidirectional diffusion and fast, error-prone autoregressive models, achieving 54x faster inference for complex physical world modeling.",
-        "who_cares": "Robotics engineers, AI agent developers, and computer vision researchers building real-time physical simulation or spatial reasoning systems.",
+        "category": "Keep an Eye On This",
+        "title": "Nous Research Releases Hermes Agent",
+        "description": "Nous Research has open-sourced hermes-agent, an agentic framework designed to transition AI agents from static, prompt-based wrappers into stateful, self-improving systems. It features a continuous learning loop that dynamically creates skills and persists user context across sessions.",
+        "why_it_matters": "Traditional agents are stateless and struggle to retain long-term context or adapt without manual prompt engineering. Hermes Agent embeds memory and skill creation directly into the runtime, allowing agents to evolve on minimal, low-cost infrastructure.",
+        "who_cares": "AI engineers, agent developers, and LLM application architects building personalized or autonomous digital assistants.",
         "verdict": "WATCH",
-        "confidence": 85,
-        "source_url": "https://huggingface.co/papers/2607.15278"
+        "confidence": 88,
+        "source_url": "https://github.com/NousResearch/hermes-agent"
       },
       {
         "category": "Research Idea",
-        "title": "Foveated Local Perception Solves Visual Generalization Bottlenecks",
-        "description": "A new study shows that mimicking human foveated vision\u2014using recurrent, strictly local glimpses instead of global attention\u2014allows computer vision models to generalize to highly complex visual tasks without retraining.",
-        "why_it_matters": "Global-attention models often rely on shortcuts rather than systematic rules, failing at complex spatial reasoning. Shifting to local perception overcomes this length-generalization bottleneck.",
-        "who_cares": "Computer vision researchers, multimodal LLM developers, and robotics engineers designing systems for robust spatial reasoning.",
+        "title": "RxBrain: Embodied AI with Joint Language-Visual Imagination",
+        "description": "Researchers have introduced Hy-Embodied-RxBrain, an embodied cognition foundation model that unifies textual task planning and visual world-state prediction into a single Mixture-of-Transformers sequence.",
+        "why_it_matters": "Unlike standard vision-language models that only describe scenes, RxBrain allows robots to 'imagine' physical subgoals and predict future states. This enables continuous action generation without relying on massive, pre-existing robot action datasets.",
+        "who_cares": "Robotics engineers, embodied AI researchers, and autonomous agent developers.",
         "verdict": "READ",
-        "confidence": 80,
-        "source_url": "https://huggingface.co/papers/2607.09061"
+        "confidence": 82,
+        "source_url": "https://huggingface.co/papers/2607.14187"
       },
       {
-        "category": "Keep an Eye On This",
-        "title": "Token Time Continuous Diffusion for Non-Autoregressive LLMs",
-        "description": "Researchers developed Token Time Continuous Diffusion (TTCD), a language model that operates in continuous space and uses per-token denoising schedules to generate text in parallel.",
-        "why_it_matters": "It addresses the speed-versus-accuracy trade-off in non-autoregressive language generation, enabling faster parallel token generation without the typical quality degradation of discrete diffusion.",
-        "who_cares": "LLM researchers, AI infrastructure engineers, and developers building low-latency generation systems.",
+        "category": "Worth Knowing",
+        "title": "LongStraw: Million-Token RL Training on a Fixed GPU Budget",
+        "description": "A new training method called LongStraw enables million-token Group Relative Policy Optimization (GRPO) post-training on a fixed GPU budget, bridging the gap between long-context inference and RL training limits.",
+        "why_it_matters": "Standard RL post-training is typically bottlenecked at 256K tokens due to extreme memory overhead. LongStraw decouples prompt evaluation from autograd and replays response branches sequentially, drastically reducing memory usage so developers can train long-horizon agents without massive clusters.",
+        "who_cares": "LLM infrastructure engineers, reinforcement learning researchers, and platform teams optimizing GPU utilization.",
         "verdict": "WATCH",
-        "confidence": 75,
-        "source_url": "https://huggingface.co/papers/2607.14106"
+        "confidence": 80,
+        "source_url": "https://huggingface.co/papers/2607.14952"
       }
     ]
   }
