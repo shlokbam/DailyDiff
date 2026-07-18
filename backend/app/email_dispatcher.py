@@ -103,7 +103,7 @@ def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
             from email.mime.multipart import MIMEMultipart
             
             logger.info(f"Connecting to Gmail SMTP server to send briefs to {len(emails)} subscribers...")
-            server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+            server = smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=15)
             server.login(SMTP_EMAIL, SMTP_PASSWORD)
             
             for recipient in emails:

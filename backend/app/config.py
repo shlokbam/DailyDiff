@@ -29,6 +29,6 @@ ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 DB_PATH = BASE_DIR / "backend" / "subscribers.db"
 
 # Model Selection Defaults
-PRIMARY_MODEL = "gemini-3.5-flash"
-FALLBACK_MODEL_MISTRAL = "open-mixtral-8x22b"
+PRIMARY_MODEL_MISTRAL = "open-mixtral-8x22b"
+FALLBACK_MODEL_GEMINI = "gemini-3.5-flash"
 FALLBACK_MODEL_GROQ = "llama3-70b-8192"
