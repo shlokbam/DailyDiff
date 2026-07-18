@@ -2,6 +2,7 @@ import os
 import logging
 from fastapi import FastAPI, HTTPException, status, Header
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 from typing import List, Dict, Any
 from app.schemas import SubscribeRequest, UnsubscribeRequest, DailyBriefGroup
 from app.database import init_db, add_subscriber, remove_subscriber, read_history, get_subscribers
@@ -62,6 +63,71 @@ def unsubscribe(request: UnsubscribeRequest):
         logger.error(f"Error triggering unsubscribe confirmation email: {e}")
         
     return {"message": "Successfully unsubscribed from DailyDiff briefs"}
+
+@app.get("/api/unsubscribe", response_class=HTMLResponse)
+def unsubscribe_via_link(email: str):
+    """Handle unsubscribe requests from email links (GET)."""
+    success = remove_subscriber(email)
+    if not success:
+        return """
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Unsubscribe Error | DailyDiff</title>
+            <style>
+                body { background-color: #0c0d12; color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 40px; text-align: center; }
+                .container { background-color: #141620; border: 1px solid #ef4444; border-radius: 8px; padding: 40px; display: inline-block; max-width: 450px; box-shadow: 0 4px 20px rgba(239, 68, 68, 0.1); margin-top: 10vh; }
+                h2 { color: #ef4444; margin: 0 0 15px 0; font-size: 22px; }
+                p { font-size: 14px; color: #9ca3af; line-height: 1.5; margin: 0 0 20px 0; }
+                a { color: #60a5fa; text-decoration: none; font-weight: 500; font-size: 14px; }
+                a:hover { text-decoration: underline; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h2>Unsubscribe Error</h2>
+                <p>This email address was not found in our active subscriber directory.</p>
+                <a href="https://daily-diff-pi.vercel.app">Go to DailyDiff Dashboard &rarr;</a>
+            </div>
+        </body>
+        </html>
+        """
+        
+    logger.info(f"Subscriber removed via email link: {email}")
+    
+    # Send polite unsubscribe confirmation email
+    try:
+        dispatch_unsubscribe_confirmation(email)
+    except Exception as e:
+        logger.error(f"Error triggering unsubscribe confirmation email: {e}")
+        
+    return """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Unsubscribed Successfully | DailyDiff</title>
+        <style>
+            body { background-color: #0c0d12; color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 40px; text-align: center; }
+            .container { background-color: #141620; border: 1px solid #1f2937; border-radius: 8px; padding: 40px; display: inline-block; max-width: 450px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); margin-top: 10vh; }
+            h2 { color: #10b981; margin: 0 0 15px 0; font-size: 22px; }
+            p { font-size: 14px; color: #9ca3af; line-height: 1.5; margin: 0 0 20px 0; }
+            a { color: #60a5fa; text-decoration: none; font-weight: 500; font-size: 14px; }
+            a:hover { text-decoration: underline; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>You Have Been Unsubscribed</h2>
+            <p>We are sorry to see you go! You have been successfully removed from our thrice-weekly Tech Curation briefings.</p>
+            <p style="font-size: 13px; color: #6b7280; margin-bottom: 25px;">A confirmation email has been sent to your inbox.</p>
+            <a href="https://daily-diff-pi.vercel.app">Back to DailyDiff Dashboard &rarr;</a>
+        </div>
+    </body>
+    </html>
+    """
+
 
 @app.get("/api/briefs/latest", response_model=DailyBriefGroup)
 def get_latest_brief():

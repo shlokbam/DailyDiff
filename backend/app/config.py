@@ -16,6 +16,7 @@ SMTP_EMAIL = os.getenv("SMTP_EMAIL")
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 DATABASE_URL = os.getenv("DATABASE_URL")
 BREVO_API_KEY = os.getenv("BREVO_API_KEY")
+BACKEND_API_URL = os.getenv("BACKEND_API_URL")
 
 # Data File Paths
 DATA_DIR = BASE_DIR / "data"

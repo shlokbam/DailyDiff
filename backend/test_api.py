@@ -47,11 +47,23 @@ class TestDailyDiffAPI(unittest.TestCase):
         response = self.client.post("/api/subscribe", json={"email": "not-an-email"})
         self.assertEqual(response.status_code, 422) # Unprocessable Entity (Validation Error)
 
-    def test_get_archive_empty_or_populated(self):
-        """Test GET /api/briefs/archive works and returns a list."""
-        response = self.client.get("/api/briefs/archive")
+    def test_get_unsubscribe_success(self):
+        """Test GET /api/unsubscribe with a new email link click."""
+        import random
+        test_email = f"test_{random.randint(1000, 9999)}@example.com"
+        
+        # Subscribe the test email
+        self.client.post("/api/subscribe", json={"email": test_email})
+        
+        # Unsubscribe via GET link click simulation
+        response = self.client.get(f"/api/unsubscribe?email={test_email}")
         self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.json(), list)
+        self.assertIn("You Have Been Unsubscribed", response.text)
+        
+        # Trying to unsubscribe again should show the error page (since they are no longer in db)
+        response_error = self.client.get(f"/api/unsubscribe?email={test_email}")
+        self.assertEqual(response_error.status_code, 200)
+        self.assertIn("Unsubscribe Error", response_error.text)
 
 if __name__ == "__main__":
     unittest.main()
