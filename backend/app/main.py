@@ -107,9 +107,25 @@ def notify_subscribers(brief_group: DailyBriefGroup, token: str = Header(None, a
             detail="Invalid notification authorization token"
         )
         
-    emails = get_subscribers()
+    try:
+        emails = get_subscribers()
+    except Exception as db_err:
+        logger.error(f"Database error in notify_subscribers: {db_err}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Database connection or query failed: {db_err}"
+        )
+        
     if not emails:
         return {"message": "No active subscribers found. Dispatch skipped."}
         
-    dispatch_emails(emails, brief_group)
+    try:
+        dispatch_emails(emails, brief_group)
+    except Exception as mail_err:
+        logger.error(f"Mailing dispatch failed: {mail_err}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Email delivery operation failed: {mail_err}"
+        )
+        
     return {"message": f"Successfully queued notification emails to {len(emails)} subscribers"}
