@@ -1,47 +1,37 @@
 [
   {
     "date": "2026-07-18",
-    "published_at": "2026-07-18T06:43:14.616196Z",
+    "published_at": "2026-07-18T07:41:34.572852Z",
     "briefs": [
       {
         "category": "Worth Knowing",
-        "title": "LongStraw: Million-Token RL Training on a Fixed GPU Budget",
-        "description": "Researchers introduced LongStraw, a method that enables million-token Group Relative Policy Optimization (GRPO) on a fixed GPU budget. It bypasses memory bottlenecks by evaluating shared prompts without autograd and sequentially replaying response branches.",
-        "why_it_matters": "It bridges the massive gap between long-context inference and RL post-training, allowing agents to learn from long trajectories without requiring massive hardware scaling.",
-        "who_cares": "LLM training engineers, RL researchers, and developers optimizing GPU memory efficiency for agent training.",
+        "title": "Hierarchical Denoising Enables 54x Faster Visual Reasoning",
+        "description": "Researchers introduced Hierarchical Denoising (HDR), a video diffusion framework that uses a tree-structured latent hierarchy to enable multi-step visual reasoning and planning.",
+        "why_it_matters": "It bridges the gap between slow, reasoning-heavy bidirectional diffusion and fast, error-prone autoregressive models, achieving 54x faster inference for complex physical world modeling.",
+        "who_cares": "Robotics engineers, AI agent developers, and computer vision researchers building real-time physical simulation or spatial reasoning systems.",
         "verdict": "WATCH",
-        "confidence": 80,
-        "source_url": "https://huggingface.co/papers/2607.14952"
-      },
-      {
-        "category": "Hidden Gem",
-        "title": "Nous Research Hermes-Agent: A Self-Improving AI Agent",
-        "description": "Nous Research released hermes-agent, an open-source agent framework designed to autonomously synthesize skills, persist memory, and adapt to users over time through a continuous, self-improving learning loop.",
-        "why_it_matters": "It provides a practical architecture for agents to evolve and personalize locally without requiring expensive retraining or heavy compute overhead.",
-        "who_cares": "AI engineers, agent developers, and software architects building personalized, long-running autonomous assistants.",
-        "verdict": "WATCH",
-        "confidence": 88,
-        "source_url": "https://github.com/NousResearch/hermes-agent"
+        "confidence": 85,
+        "source_url": "https://huggingface.co/papers/2607.15278"
       },
       {
         "category": "Research Idea",
-        "title": "Debunking the Gains of Automatic Agent Harness Evolution",
-        "description": "A new study reveals that automatic harness evolution methods for LLM agents often overfit to public benchmarks. The researchers show that simple test-time scaling under matched compute budgets yields equivalent performance without benchmark overfitting.",
-        "why_it_matters": "It exposes a critical flaw in current agent evaluation protocols and advocates for budget-equivalent testing to prevent misleading performance claims.",
-        "who_cares": "AI research scientists, LLM evaluation engineers, and MLOps teams building benchmark suites.",
+        "title": "Foveated Local Perception Solves Visual Generalization Bottlenecks",
+        "description": "A new study shows that mimicking human foveated vision\u2014using recurrent, strictly local glimpses instead of global attention\u2014allows computer vision models to generalize to highly complex visual tasks without retraining.",
+        "why_it_matters": "Global-attention models often rely on shortcuts rather than systematic rules, failing at complex spatial reasoning. Shifting to local perception overcomes this length-generalization bottleneck.",
+        "who_cares": "Computer vision researchers, multimodal LLM developers, and robotics engineers designing systems for robust spatial reasoning.",
         "verdict": "READ",
-        "confidence": 85,
-        "source_url": "https://huggingface.co/papers/2607.12227"
+        "confidence": 80,
+        "source_url": "https://huggingface.co/papers/2607.09061"
       },
       {
         "category": "Keep an Eye On This",
-        "title": "RxBrain: Embodied AI with Joint Language-Visual Imagination",
-        "description": "Researchers introduced Hy-Embodied-RxBrain, a foundation model that unifies language planning and visual state 'imagination' into a single Mixture-of-Transformers sequence to help robots predict physical subgoals.",
-        "why_it_matters": "Unlike standard vision-language models, RxBrain allows embodied agents to generate continuous robot actions and predict intermediate physical states without requiring massive, action-specific pretraining.",
-        "who_cares": "Robotics engineers, embodied AI researchers, and computer vision developers working on physical-world interaction.",
-        "verdict": "READ",
-        "confidence": 80,
-        "source_url": "https://huggingface.co/papers/2607.14187"
+        "title": "Token Time Continuous Diffusion for Non-Autoregressive LLMs",
+        "description": "Researchers developed Token Time Continuous Diffusion (TTCD), a language model that operates in continuous space and uses per-token denoising schedules to generate text in parallel.",
+        "why_it_matters": "It addresses the speed-versus-accuracy trade-off in non-autoregressive language generation, enabling faster parallel token generation without the typical quality degradation of discrete diffusion.",
+        "who_cares": "LLM researchers, AI infrastructure engineers, and developers building low-latency generation systems.",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://huggingface.co/papers/2607.14106"
       }
     ]
   }
