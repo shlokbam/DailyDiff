@@ -40,7 +40,7 @@ Your task is to select up to 5 of the absolute strongest candidates from today's
 DESIGNATED CATEGORIES (Use each category at most once):
 - "Worth Knowing": Major development with widespread impact.
 - "Hidden Gem": Underrated open-source project showing momentum.
-- "Research Idea": A research paper explained in practical language.
+- "Research Idea": A technical article, engineering guide, or system architecture pattern explained in practical language.
 - "Something Changed": A meaningful release, framework update, or ecosystem shift (e.g. GitHub Releases).
 - "Keep an Eye On This": An early signal that may become important soon.
 

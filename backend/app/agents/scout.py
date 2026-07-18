@@ -17,11 +17,12 @@ def get_scout_window_days() -> int:
 def scout_github(days_ago: int) -> List[Dict[str, Any]]:
     """Scout GitHub for active/trending repositories pushed recently."""
     since_date = (datetime.utcnow() - timedelta(days=days_ago)).strftime("%Y-%m-%d")
-    # Query for repositories matching key topics with star thresholds, pushed recently
+    # Query for repositories matching key developer/utility topics
     queries = [
-        f"stars:>100 pushed:>{since_date} topic:ai",
-        f"stars:>100 pushed:>{since_date} topic:llm",
-        f"stars:>100 pushed:>{since_date} topic:agents",
+        f"stars:>100 pushed:>{since_date} topic:self-hosted",
+        f"stars:>100 pushed:>{since_date} topic:web-development",
+        f"stars:>100 pushed:>{since_date} topic:developer-experience",
+        f"stars:>100 pushed:>{since_date} topic:productivity",
         f"stars:>150 pushed:>{since_date} topic:developer-tools",
     ]
     
@@ -32,7 +33,7 @@ def scout_github(days_ago: int) -> List[Dict[str, Any]]:
     repos = []
     seen_ids = set()
     
-    # We do a few target queries to fetch diverse AI/Dev tooling repos
+    # We do a few target queries to fetch diverse developer utility repos
     with httpx.Client() as client:
         for q in queries:
             url = f"https://api.github.com/search/repositories?q={q}&sort=stars&order=desc&per_page=10"
@@ -62,75 +63,7 @@ def scout_github(days_ago: int) -> List[Dict[str, Any]]:
     logger.info(f"GitHub scouted {len(repos)} raw signals.")
     return repos
 
-def scout_arxiv() -> List[Dict[str, Any]]:
-    """Scout arXiv for recent preprints in AI, Computational Linguistics, and Software Engineering."""
-    url = (
-        "http://export.arxiv.org/api/query?"
-        "search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.SE"
-        "&sortBy=submittedDate&sortOrder=descending"
-        "&max_results=15"
-    )
-    papers = []
-    import xml.etree.ElementTree as ET
-    
-    try:
-        response = httpx.get(url, timeout=15)
-        if response.status_code == 200:
-            root = ET.fromstring(response.text)
-            # arXiv namespace
-            ns = {"arxiv": "http://www.w3.org/2005/Atom"}
-            
-            for entry in root.findall("{http://www.w3.org/2005/Atom}entry"):
-                title = entry.find("{http://www.w3.org/2005/Atom}title").text.strip().replace("\n", " ")
-                summary = entry.find("{http://www.w3.org/2005/Atom}summary").text.strip().replace("\n", " ")
-                paper_id_url = entry.find("{http://www.w3.org/2005/Atom}id").text.strip()
-                
-                papers.append({
-                    "source": "arXiv",
-                    "title": title,
-                    "url": paper_id_url,
-                    "description": summary[:300] + "...",
-                    "full_abstract": summary,
-                })
-        else:
-            logger.warning(f"arXiv API returned status {response.status_code}")
-    except Exception as e:
-        logger.error(f"arXiv scouting error: {e}")
-        
-    logger.info(f"arXiv scouted {len(papers)} raw signals.")
-    return papers
 
-def scout_huggingface() -> List[Dict[str, Any]]:
-    """Scout Hugging Face Daily Papers API."""
-    url = "https://huggingface.co/api/daily_papers"
-    papers = []
-    
-    try:
-        response = httpx.get(url, timeout=15)
-        if response.status_code == 200:
-            data = response.json()
-            for item in data[:10]: # Top 10 trending papers
-                paper_info = item.get("paper", {})
-                title = paper_info.get("title", "")
-                summary = paper_info.get("summary", "")
-                paper_id = paper_info.get("id", "")
-                url_hf = f"https://huggingface.co/papers/{paper_id}" if paper_id else ""
-                
-                if title:
-                    papers.append({
-                        "source": "Hugging Face",
-                        "title": title,
-                        "url": url_hf,
-                        "description": summary[:300] + "..." if summary else "",
-                        "full_abstract": summary or "",
-                    })
-        else:
-            logger.warning(f"Hugging Face daily papers API returned status {response.status_code}")
-    except Exception as e:
-        logger.error(f"Hugging Face scouting error: {e}")
-        
-    logger.info(f"Hugging Face scouted {len(papers)} raw signals.")
-    return papers
 
 def scout_hacker_news() -> List[Dict[str, Any]]:
     """Scout Hacker News top stories with score >= 60."""
@@ -273,13 +206,11 @@ def scout_ecosystem_node(state: AgentState) -> Dict[str, Any]:
     days = get_scout_window_days()
     
     github_signals = scout_github(days_ago=days)
-    arxiv_signals = scout_arxiv()
-    hf_signals = scout_huggingface()
     hn_signals = scout_hacker_news()
     dev_to_signals = scout_dev_to()
     release_signals = scout_github_releases(days_ago=days)
     
-    all_signals = github_signals + arxiv_signals + hf_signals + hn_signals + dev_to_signals + release_signals
+    all_signals = github_signals + hn_signals + dev_to_signals + release_signals
     logger.info(f"Total raw signals collected: {len(all_signals)}")
     
     return {"raw_signals": all_signals}
