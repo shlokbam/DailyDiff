@@ -15,6 +15,7 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 SMTP_EMAIL = os.getenv("SMTP_EMAIL")
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 DATABASE_URL = os.getenv("DATABASE_URL")
+BREVO_API_KEY = os.getenv("BREVO_API_KEY")
 
 # Data File Paths
 DATA_DIR = BASE_DIR / "data"

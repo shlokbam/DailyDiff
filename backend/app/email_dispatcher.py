@@ -1,5 +1,6 @@
 import os
 import logging
+import httpx
 from pathlib import Path
 from typing import List, Dict, Any
 from app.schemas import DailyBriefGroup
@@ -88,15 +89,43 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
     return html
 
 def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
-    """Dispatch daily email briefs using Gmail SMTP, Resend API, or local HTML log fallback."""
+    """Dispatch daily email briefs using Brevo API, Gmail SMTP, Resend API, or local HTML log fallback."""
     if not emails:
         logger.info("No active subscribers to notify.")
         return
 
     html_content = build_email_html(brief_group)
     
-    # 1. Try Gmail SMTP sending if configured
-    from app.config import SMTP_EMAIL, SMTP_PASSWORD
+    # 1. Try Brevo HTTP API sending if configured (Best for Render Free Tier)
+    from app.config import BREVO_API_KEY, SMTP_EMAIL, SMTP_PASSWORD
+    if BREVO_API_KEY:
+        try:
+            logger.info(f"Dispatching email briefs to {len(emails)} subscribers via Brevo HTTP API...")
+            headers = {
+                "api-key": BREVO_API_KEY,
+                "content-type": "application/json",
+                "accept": "application/json"
+            }
+            sender_email = SMTP_EMAIL if SMTP_EMAIL else "shlokbam19103@gmail.com"
+            
+            for recipient in emails:
+                payload = {
+                    "sender": {"name": "DailyDiff", "email": sender_email},
+                    "to": [{"email": recipient}],
+                    "subject": f"[DailyDiff] Tech Intelligence Brief for {brief_group.date}",
+                    "htmlContent": html_content
+                }
+                response = httpx.post("https://api.brevo.com/v3/smtp/email", json=payload, headers=headers, timeout=15)
+                if response.status_code != 201 and response.status_code != 200:
+                    logger.error(f"Brevo API failed for {recipient}: Status {response.status_code} - {response.text}")
+                    raise Exception(f"Brevo API error: {response.text}")
+                    
+            logger.info("Brevo HTTP API email dispatch completed successfully.")
+            return
+        except Exception as e:
+            logger.error(f"Failed to dispatch emails via Brevo: {e}. Trying SMTP fallback...")
+
+    # 2. Try Gmail SMTP sending if configured
     if SMTP_EMAIL and SMTP_PASSWORD:
         try:
             import smtplib
@@ -197,8 +226,34 @@ def dispatch_unsubscribe_confirmation(email: str):
     </html>
     """
     
-    # 1. Try Gmail SMTP sending if configured
-    from app.config import SMTP_EMAIL, SMTP_PASSWORD
+    # 1. Try Brevo HTTP API sending if configured (Best for Render Free Tier)
+    from app.config import BREVO_API_KEY, SMTP_EMAIL, SMTP_PASSWORD
+    if BREVO_API_KEY:
+        try:
+            logger.info(f"Sending unsubscribe confirmation to {email} via Brevo HTTP API...")
+            headers = {
+                "api-key": BREVO_API_KEY,
+                "content-type": "application/json",
+                "accept": "application/json"
+            }
+            sender_email = SMTP_EMAIL if SMTP_EMAIL else "shlokbam19103@gmail.com"
+            payload = {
+                "sender": {"name": "DailyDiff", "email": sender_email},
+                "to": [{"email": email}],
+                "subject": "[DailyDiff] Unsubscribe Confirmation",
+                "htmlContent": html_content
+            }
+            response = httpx.post("https://api.brevo.com/v3/smtp/email", json=payload, headers=headers, timeout=15)
+            if response.status_code == 201 or response.status_code == 200:
+                logger.info("Unsubscribe confirmation email sent successfully via Brevo.")
+                return
+            else:
+                logger.error(f"Brevo API failed: Status {response.status_code} - {response.text}")
+                raise Exception(f"Brevo API error: {response.text}")
+        except Exception as e:
+            logger.error(f"Failed to send unsubscribe confirmation email via Brevo: {e}. Trying SMTP fallback...")
+
+    # 2. Try Gmail SMTP sending if configured
     if SMTP_EMAIL and SMTP_PASSWORD:
         try:
             import smtplib

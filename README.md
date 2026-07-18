@@ -111,7 +111,8 @@ GEMINI_API_KEY=your_gemini_studio_key_here
 # Neon Database (Leave empty to default to local subscribers.db SQLite)
 DATABASE_URL=postgresql://neondb_owner:password@ep-host-pooler.aws.neon.tech/neondb?sslmode=require
 
-# Email dispatch (Google SMTP settings)
+# Email dispatch (Brevo API primary or Google SMTP fallback settings)
+BREVO_API_KEY=your_brevo_api_key_here
 SMTP_EMAIL=yourname@gmail.com
 SMTP_PASSWORD=16_character_google_app_password
 
@@ -121,6 +122,8 @@ BACKEND_API_URL=http://localhost:8000
 ```
 
 > [!TIP]
+> **Brevo API Key (Recommended for Render)**: Sign up at **[Brevo.com](https://www.brevo.com)**, go to **SMTP & API** on your dashboard, generate a free API key, and paste it into `BREVO_API_KEY`.
+>
 > **Google App Password**: In your Google Account settings, search for **App Passwords** under Security. Create an app named `DailyDiff` and copy the 16-character code into `SMTP_PASSWORD` (make sure 2FA is active on your Gmail).
 
 ---
