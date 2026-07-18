@@ -4,66 +4,102 @@ const API_BASE = window.location.hostname === 'localhost' || window.location.hos
   ? 'http://localhost:8000/api'
   : 'https://dailydiff.onrender.com/api';
 
+const getFaviconUrl = (url) => {
+  if (!url) return '';
+  try {
+    const hostname = new URL(url).hostname;
+    return `https://www.google.com/s2/favicons?sz=32&domain=${hostname}`;
+  } catch {
+    return '';
+  }
+};
+
 const MOCK_BRIEFS = [
   {
-    date: '2026-07-17',
-    published_at: '2026-07-17T06:00:00Z',
+    date: '2026-07-22',
+    published_at: '2026-07-22T06:00:00Z',
     briefs: [
       {
-        category: 'Worth Knowing',
-        title: 'LangGraph Native Parallel Branching Protocols',
-        description: 'The LangChain team released a new orchestration backend that enables dynamic, self-correcting parallel routing across multi-agent state machines.',
-        why_it_matters: 'This dramatically speeds up execution for deep research agents since multiple web scraper and verifier nodes can run concurrently without waiting for a single main loop thread.',
-        who_cares: 'AI Engineers, backend framework builders, platform teams.',
+        category: 'Something Changed',
+        title: 'React 19 Release Candidate: Dynamic Actions & Form States',
+        description: '**TL;DR: React 19 introduces automatic state management for async functions in form submits.** No more manually coding pending states, success notifications, or error bounds; React handles form actions natively.',
+        why_it_matters: 'Slashes boilerplate code in frontend forms by moving async status handling and loading hooks directly into the browser component runtime.',
+        who_cares: 'React developers, frontend engineers, UI builders.',
         verdict: 'INTEGRATE',
-        confidence: 94,
-        source_url: 'https://github.com/langchain-ai/langgraph'
+        confidence: 96,
+        source_url: 'https://github.com/facebook/react'
       },
       {
         category: 'Hidden Gem',
-        title: 'LiteLLM Auto-Balancing Gateway Router',
-        description: 'LiteLLM launched a lightweight HTTP gateway with built-in model load balancing, fallback routing, and automatic rate-limit cooldown recovery across 100+ LLM APIs.',
-        why_it_matters: 'Eliminates custom retry loops and key-rotation code in production apps, shifting the reliability logic to a dedicated serverless proxy.',
-        who_cares: 'Production developers, DevOps, API infrastructure teams.',
-        verdict: 'WATCH',
-        confidence: 88,
-        source_url: 'https://github.com/BerriAI/litellm'
-      },
-      {
-        category: 'Research Idea',
-        title: 'FlashAttention-3: Ultra-Fast Attention for H100 GPUs',
-        description: 'Researchers published a new GPU memory layout algorithm that utilizes asynchronous WGMMA instructions to reach 75% utilization on NVIDIA Hopper architectures.',
-        why_it_matters: 'Reduces the cost of training long-context LLMs (up to 128k context lengths) by reducing the attention bottleneck on high-performance clusters.',
-        who_cares: 'Machine learning engineers, training infra builders.',
-        verdict: 'READ',
-        confidence: 97,
-        source_url: 'https://arxiv.org/abs/2407.00287'
+        title: 'PocketBase v0.22: Lightweight Go Backend with Single-File Sync',
+        description: '**TL;DR: PocketBase is a tiny self-hosted backend that fits in a single file.** It combines an embedded SQLite database, real-time subscriptions, auth services, and dashboard controls into a single executable.',
+        why_it_matters: 'Perfect for students and hackathon builders who want a full backend database and API setup in 5 seconds without server configuration.',
+        who_cares: 'Indie creators, students, rapid prototyping engineers.',
+        verdict: 'INTEGRATE',
+        confidence: 94,
+        source_url: 'https://github.com/pocketbase/pocketbase'
       }
     ]
   },
   {
-    date: '2026-07-15',
-    published_at: '2026-07-15T06:00:00Z',
+    date: '2026-07-20',
+    published_at: '2026-07-20T06:00:00Z',
     briefs: [
       {
-        category: 'Something Changed',
-        title: 'FastAPI native integration of Pydantic v2 settings',
-        description: 'FastAPI release v0.111 implements full support for Pydantic v2 validation logic, removing deprecation warnings and speeding up serialisation times by up to 4x.',
-        why_it_matters: 'Enables faster API request validations and cleaner data modeling schemas without need for custom converters.',
-        who_cares: 'Backend web developers, API engineers.',
-        verdict: 'INTEGRATE',
-        confidence: 91,
-        source_url: 'https://github.com/tiangolo/fastapi'
+        category: 'Worth Knowing',
+        title: 'Tailwind CSS v4.0 Alpha: CSS-first Configuration Engine',
+        description: '**TL;DR: Tailwind is changing from Javascript-based config to pure CSS directives.** The compiler has been rewritten in Rust, compiling utility stylesheets up to 10x faster.',
+        why_it_matters: 'Significantly improves hot-module replacement speed in large projects, moving all tool rules into native CSS variables.',
+        who_cares: 'Web designers, frontend developers, build engineers.',
+        verdict: 'WATCH',
+        confidence: 89,
+        source_url: 'https://github.com/tailwindlabs/tailwindcss'
       },
       {
-        category: 'Keep an Eye On This',
-        title: 'Verifiable Web Proofs using zkTLS protocols',
-        description: 'A new developer SDK allows clients to generate zero-knowledge cryptographic proofs of private web data fetched via standard TLS connections.',
-        why_it_matters: 'Allows users to prove their private account data (e.g. credit score or bank balance) to other apps without giving up their passwords or credentials.',
-        who_cares: 'Security engineers, privacy developers.',
-        verdict: 'WATCH',
-        confidence: 82,
-        source_url: 'https://huggingface.co/papers/2407.01235'
+        category: 'Research Idea',
+        title: 'Designing Resilient Postgres Schema Migrations without Downtime',
+        description: '**TL;DR: A practical guide on how to add database fields to huge Postgres tables without locks.** Explains how to separate migration steps into safe statements to ensure your app stays online.',
+        why_it_matters: 'Prevents database lockups on production servers when updating table structure, keeping services fully operational.',
+        who_cares: 'Backend engineers, database administrators, devops teams.',
+        verdict: 'READ',
+        confidence: 91,
+        source_url: 'https://github.com/sashabaranov/pg-migrations'
+      }
+    ]
+  },
+  {
+    date: '2026-07-18',
+    published_at: '2026-07-18T06:00:00Z',
+    briefs: [
+      {
+        category: 'Worth Knowing',
+        title: 'Isomorphic Labs’ Drug Design Engine Outperforms AlphaFold 3',
+        description: '**TL;DR: A new AI engine doubles protein-ligand prediction accuracy and slashes drug discovery costs by running in real-time.** Isomorphic Labs’ Drug Design Engine leapfrogs AlphaFold 3 with twice the accuracy for predicting how molecules bind to proteins.',
+        why_it_matters: 'Faster, cheaper predictions mean researchers can test more hypotheses in hours instead of weeks, potentially accelerating life-saving drug development.',
+        who_cares: 'AI/ML engineers in biotech, computational chemists, drug discovery platform teams.',
+        verdict: 'INTEGRATE',
+        confidence: 90,
+        source_url: 'https://www.isomorphiclabs.com'
+      },
+      {
+        category: 'Hidden Gem',
+        title: 'Static Search Trees: 40x Faster Than Binary Search',
+        description: '**TL;DR: A new data structure crushes binary search for static datasets—no updates needed.** Static search trees (S-trees) deliver near-instant lookups by pre-optimizing memory layouts.',
+        why_it_matters: 'For systems where search speed is critical—think CDN routing, key-value stores, or analytics—this could eliminate bottlenecks.',
+        who_cares: 'Database engineers, low-latency system architects, search engine developers.',
+        verdict: 'INTEGRATE',
+        confidence: 90,
+        source_url: 'https://curiouscoding.nl/posts/static-search-tree/'
+      },
+      {
+        category: 'Research Idea',
+        title: 'SQLite’s ANALYZE Command: The Secret to Instant Queries',
+        description: '**TL;DR: Running ANALYZE on SQLite can turn painfully slow queries into lightning-fast ones.** SQLite’s ANALYZE command reveals hidden inefficiencies in your database.',
+        why_it_matters: 'Even ‘small sites’ suffer from slow queries. This tool exposes bottlenecks in your SQLite setup, letting you fix them with a single command.',
+        who_cares: 'Backend developers, Django/ORM users, SQLite adopters.',
+        verdict: 'INTEGRATE',
+        confidence: 90,
+        source_url: 'https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/'
       }
     ]
   }
@@ -72,7 +108,7 @@ const MOCK_BRIEFS = [
 export default function App() {
   const [history, setHistory] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedDate, setSelectedDate] = useState('');
   const [expandedCards, setExpandedCards] = useState({});
   const [email, setEmail] = useState('');
   const [subStatus, setSubStatus] = useState({ type: '', message: '' });
@@ -86,6 +122,7 @@ export default function App() {
           const data = await response.json();
           if (data && data.length > 0) {
             setHistory(data);
+            setSelectedDate(data[0].date);
             setLoading(false);
             return;
           }
@@ -94,13 +131,14 @@ export default function App() {
         console.warn('FastAPI backend not reachable, trying to load local static data...');
       }
       
-      // Fallback: Check if we have public JSON or use beautiful mock data
       try {
         const response = await fetch('/data/history.json');
         if (response.ok) {
           const data = await response.json();
           if (data && data.length > 0) {
-            setHistory(data.reverse()); // Newest first
+            const list = data.reverse();
+            setHistory(list);
+            setSelectedDate(list[0].date);
             setLoading(false);
             return;
           }
@@ -109,8 +147,8 @@ export default function App() {
         console.warn('Local static file not found, using default pre-populated mock briefings.');
       }
       
-      // Load pre-built mock records to ensure a stunning visual presentation
       setHistory(MOCK_BRIEFS);
+      setSelectedDate(MOCK_BRIEFS[0].date);
       setLoading(false);
     }
     fetchBriefs();
@@ -156,28 +194,13 @@ export default function App() {
     }
   };
 
-  // Filtering Logic
-  const filteredHistory = history.map(group => {
-    const matchedBriefs = group.briefs.filter(b => {
-      const matchesSearch = 
-        b.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-        b.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        b.why_it_matters.toLowerCase().includes(searchQuery.toLowerCase());
-        
-      const matchesCategory = 
-        selectedCategory === 'All' || 
-        b.category.toLowerCase() === selectedCategory.toLowerCase();
-        
-      return matchesSearch && matchesCategory;
-    });
-    
-    return {
-      ...group,
-      briefs: matchedBriefs
-    };
-  }).filter(group => group.briefs.length > 0);
-
-  const categories = ['All', 'Worth Knowing', 'Hidden Gem', 'Research Idea', 'Something Changed', 'Keep an Eye On This'];
+  // Filtering Logic (Show single selected edition, search within it)
+  const activeGroup = history.find(group => group.date === selectedDate);
+  const filteredBriefs = activeGroup ? activeGroup.briefs.filter(b => {
+    return b.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+           b.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+           b.why_it_matters.toLowerCase().includes(searchQuery.toLowerCase());
+  }) : [];
 
   return (
     <div className="app-container">
@@ -216,6 +239,25 @@ export default function App() {
               <div className="topic-pill">
                 <span className="topic-icon">💡</span>
                 <span><strong>Engineering Guides:</strong> Practical database optimizations, coding tips, and architectures.</span>
+              </div>
+            </div>
+            
+            <div style={{ margin: '1rem 0', height: '1px', background: 'var(--border-color)' }}></div>
+            <div className="how-it-works" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <h4 style={{ fontSize: '0.8rem', fontWeight: '600', color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>How it works:</h4>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem', marginTop: '0.25rem' }}>
+                <div style={{ background: 'rgba(255,255,255,0.01)', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ fontWeight: '600', fontSize: '0.75rem', color: '#60a5fa', marginBottom: '0.25rem', letterSpacing: '0.02em' }}>1. AUTOMATED SCOUTING</div>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>AI agents search Hacker News & GitHub for new tools and utility releases.</p>
+                </div>
+                <div style={{ background: 'rgba(255,255,255,0.01)', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ fontWeight: '600', fontSize: '0.75rem', color: '#34d399', marginBottom: '0.25rem', letterSpacing: '0.02em' }}>2. NO-JARGON FILTER</div>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>We remove heavy academic papers, explaining everything with simple analogies.</p>
+                </div>
+                <div style={{ background: 'rgba(255,255,255,0.01)', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ fontWeight: '600', fontSize: '0.75rem', color: '#a78bfa', marginBottom: '0.25rem', letterSpacing: '0.02em' }}>3. INBOX DISPATCH</div>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>A clean 3-minute markdown newsletter hits your inbox every Mon, Wed, and Fri.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -261,16 +303,20 @@ export default function App() {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
         
-        <div className="category-filter">
-          {categories.map(cat => (
-            <button 
-              key={cat} 
-              className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
-              onClick={() => setSelectedCategory(cat)}
-            >
-              {cat}
-            </button>
-          ))}
+        <div className="date-selector-container">
+          <label htmlFor="date-select" className="date-select-label">Edition Date:</label>
+          <select 
+            id="date-select" 
+            className="date-select-dropdown glass"
+            value={selectedDate}
+            onChange={(e) => setSelectedDate(e.target.value)}
+          >
+            {history.map(group => (
+              <option key={group.date} value={group.date}>
+                📅 {group.date} {group.date === history[0]?.date ? '(Latest)' : ''}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 
@@ -279,20 +325,24 @@ export default function App() {
         <div style={{ textAlign: 'center', margin: '4rem 0', color: 'var(--text-secondary)' }}>
           <p>Scouting technology updates...</p>
         </div>
-      ) : filteredHistory.length === 0 ? (
+      ) : !activeGroup ? (
         <div style={{ textAlign: 'center', margin: '4rem 0', color: 'var(--text-muted)' }}>
-          <p>No briefs found matching your filter criteria.</p>
+          <p>No editions found.</p>
         </div>
       ) : (
         <div className="timeline">
-          {filteredHistory.map((group) => (
-            <div key={group.date} className="timeline-group">
-              <div className="timeline-dot"></div>
-              <div className="timeline-date">{group.date}</div>
-              
+          <div className="timeline-group">
+            <div className="timeline-dot"></div>
+            <div className="timeline-date">{activeGroup.date}</div>
+            
+            {filteredBriefs.length === 0 ? (
+              <div style={{ textAlign: 'center', margin: '2rem 0', color: 'var(--text-muted)' }}>
+                <p>No briefs found matching your search query in this edition.</p>
+              </div>
+            ) : (
               <div className="briefs-grid">
-                {group.briefs.map((brief, index) => {
-                  const key = `${group.date}-${index}`;
+                {filteredBriefs.map((brief, index) => {
+                  const key = `${activeGroup.date}-${index}`;
                   const isExpanded = !!expandedCards[key];
                   
                   return (
@@ -301,7 +351,7 @@ export default function App() {
                       className="brief-card glass-card" 
                       data-category={brief.category}
                       style={{ cursor: 'pointer' }}
-                      onClick={() => toggleExpand(group.date, index)}
+                      onClick={() => toggleExpand(activeGroup.date, index)}
                     >
                       <div className="card-header">
                         <span className="category-tag">{brief.category}</span>
@@ -328,61 +378,42 @@ export default function App() {
                           
                           {brief.source_url && (
                             <div className="detail-section" style={{ marginTop: '0.25rem' }}>
-                              <a 
-                                href={brief.source_url} 
-                                target="_blank" 
-                                rel="noreferrer" 
-                                className="visit-link"
-                                onClick={(e) => e.stopPropagation()} // Stop accordion toggling
-                              >
-                                View Source Reference &rarr;
-                              </a>
+                              <div className="source-link-container">
+                                {getFaviconUrl(brief.source_url) && (
+                                  <img 
+                                    src={getFaviconUrl(brief.source_url)} 
+                                    alt="" 
+                                    className="source-favicon"
+                                    onError={(e) => { e.target.style.display = 'none'; }}
+                                  />
+                                )}
+                                <a 
+                                  href={brief.source_url} 
+                                  target="_blank" 
+                                  rel="noreferrer" 
+                                  className="visit-link"
+                                  onClick={(e) => e.stopPropagation()} // Stop accordion toggling
+                                >
+                                  View Source Reference &rarr;
+                                </a>
+                              </div>
                             </div>
                           )}
                         </div>
                       )}
                       
-                      <div className="card-footer" style={{ borderTop: isExpanded ? 'none' : '1px solid var(--border-color)', paddingTop: isExpanded ? '0' : '0.75rem' }}>
+                      <div className="card-footer" style={{ borderTop: isExpanded ? 'none' : '1px solid var(--border-color)', paddingTop: isExpanded ? '0' : '0.75rem', display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
                         <span>Click card to {isExpanded ? 'collapse' : 'reveal intelligence detail'}</span>
+                        <span className={`chevron-indicator ${isExpanded ? 'rotated' : ''}`}>▼</span>
                       </div>
                     </div>
                   );
                 })}
               </div>
-            </div>
-          ))}
+            )}
+          </div>
         </div>
       )}
-
-      {/* Subscription Section */}
-      <section className="subscribe-section glass">
-        <h2 className="subscribe-title">Continuous Intelligence Delivery</h2>
-        <p className="subscribe-text">
-          Receive a concise 3-minute tech digest directly in your inbox. Only developments worth knowing, three times a week.
-        </p>
-        <form onSubmit={handleSubscribe} className="subscribe-form">
-          <input 
-            type="email" 
-            placeholder="your.email@example.com" 
-            className="subscribe-input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            disabled={subStatus.type === 'loading'}
-          />
-          <button 
-            type="submit" 
-            className="subscribe-button"
-            disabled={subStatus.type === 'loading'}
-          >
-            {subStatus.type === 'loading' ? 'Subscribing...' : 'Subscribe'}
-          </button>
-        </form>
-        {subStatus.message && (
-          <p className={`subscribe-message ${subStatus.type === 'success' ? 'message-success' : 'message-error'}`}>
-            {subStatus.message}
-          </p>
-        )}
-      </section>
     </div>
   );
 }

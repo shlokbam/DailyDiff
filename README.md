@@ -1,8 +1,12 @@
-# 🚀 DailyDiff — Autonomous Agentic Tech Intelligence Platform
+# 🚀 DailyDiff — Autonomous Tech Curation Platform
 
 > **We scan the noise. Five things survive.**
 
-**DailyDiff** is an autonomous multi-agent research and editorial platform built using **LangGraph**, **LangChain**, **FastAPI**, and **React**. Every Monday, Wednesday, and Friday, a scheduled GitHub Actions workflow wakes up the system, crawls the tech ecosystem, deduplicates findings against historical memory, fact-checks and filters out hype, and publishes a concise 3-minute tech brief. It also dispatches a personalized HTML email briefing to subscribers via Google SMTP.
+**DailyDiff** is an autonomous multi-agent research and editorial curation platform designed for **students and software developers**. 
+
+Instead of overwhelming readers with dense mathematical papers, machine learning theories, or marketing hype, DailyDiff utilizes custom AI agents to scour the web for **developer utility tools, open-source releases (Show HN), self-hosted applications, and framework updates (FastAPI, React, Tailwind)**. It cleans up the jargon into plain English, prepends a bold **TL;DR** to every item, and serves it on a sleek, glassmorphic React timeline.
+
+The system dispatches responsive, personalized briefings to email subscribers every Monday, Wednesday, and Friday morning.
 
 ---
 
@@ -10,30 +14,47 @@
 
 ```mermaid
 graph TD
-    Start([GitHub Actions Scheduler / Mon-Wed-Fri]) --> Scout[Scout Agent]
-    Scout --> Deduplicate{Skeptic / Novelty Engine}
-    Deduplicate -- Novel Update --> Research[Research Agent]
-    Deduplicate -- Duplicate / Hype --> Archive[Archive & Drop]
+    Start([GitHub Actions Scheduler / Mon-Wed-Fri 03:30 UTC]) --> Scout[Scout Agent]
+    Scout --> Deduplicate{Skeptic / Deduplication Engine}
+    Deduplicate -- Novel Dev Update --> Research[Research Agent]
+    Deduplicate -- Duplicate / Math Hype --> Archive[Archive & Drop]
     Research --> Verify[Verifier Agent]
-    Verify --> Vet{Claims Valid?}
+    Verify --> Vet{Claims Valid in README?}
     Vet -- Yes --> Analyze[Analyst Agent]
-    Vet -- No / Exaggerated --> Research
+    Vet -- No / Exaggerated --> Drop[Drop Candidate]
     Analyze --> Editor[Editor Agent]
     Editor --> Publisher[Publisher Agent]
-    Publisher --> Push[Commit & Push to Git]
+    Publisher --> GitCommit[Commit & Push data/ to Git]
     Publisher --> Notify[Trigger API Notify Webhook]
-    Notify --> Send[SMTP Email Dispatcher]
-    Send --> End([Subscribers Inbox])
+    Notify --> Send[SMTP / Resend Dispatcher]
+    Send --> End([Subscribers' Inboxes])
 ```
 
-1. **Scout Agent**: Scrapes trending GitHub repos, arXiv AI preprints, and Hugging Face trending daily papers.
-2. **Skeptic Agent (Novelty Engine)**: Performs semantic deduplication by checking today's discoveries against our entire [history.json](data/history.json) record to filter out repeat news or marketing hype.
-3. **Research Agent**: Crawls target source files, extracts repo `README.md` files or paper abstracts.
-4. **Verifier Agent**: Validates technical claims (fact-checking) against the raw crawled text.
-5. **Analyst Agent**: Generates the "Why it matters", "Who cares", actionable verdicts (`WATCH`, `INTEGRATE`, `READ`), and confidence ratings.
-6. **Editor Agent**: Curation engine that selects the top $\le 5$ developments and maps them to briefing categories.
+### The Agentic Pipeline (LangGraph)
+1. **Scout Agent**: Periodically crawls active feeds:
+   * **GitHub Search API**: Fetches popular repositories matching `self-hosted`, `web-development`, `developer-experience`, and `productivity` topics.
+   * **Hacker News (YCombinator) API**: Scrapes top stories, prioritizing `Show HN` submissions.
+   * **Dev.to Feed**: Scrapes trending frontend and backend programming tutorials.
+   * **GitHub Releases API**: Monitors version releases of core dev frameworks (`react`, `next.js`, `fastapi`, `tailwindcss`, `django`, `go`).
+2. **Skeptic Agent (Deduplication Node)**: Compares today's raw findings against titles/descriptions inside `data/history.json` to filter out duplicate updates or hype.
+3. **Research Agent**: Crawls target URL codebases, documentation, or release notes to pull raw descriptions and README summaries.
+4. **Verifier Agent**: Fact-checks claims against the raw documentation to ensure they are fully supported.
+5. **Analyst Agent**: Evaluates the update's direct utility for developers, generating `Why It Matters`, `Who Cares`, confidence levels, and actionable verdicts (`WATCH`, `INTEGRATE`, `READ`).
+6. **Editor Agent**: Curation engine that selects the top $\le 5$ developments and maps them to briefing categories. It trims jargon (using **ELI5** rules) and prepends a bold, 1-sentence **TL;DR** to the summary.
 7. **Publisher Agent**: Saves JSON and Markdown briefs in chronological directories and pushes them back to GitHub.
-8. **Email Dispatcher**: Sends personalized responsive HTML emails via **Gmail SMTP** or **Resend**.
+
+---
+
+## 💻 Tech Stack & Infrastructure
+
+* **Backend Engine**: Python 3.12, LangGraph, LangChain, FastAPI, Uvicorn, PostgreSQL (Neon Pooler) / SQLite.
+* **Primary AI Engine**: Mistral AI (`open-mixtral-8x22b` / `mistral-small-latest`) as the primary generator to avoid tight RPM constraints, with Google Gemini (`gemini-3.5-flash`) as the automatic fail-safe fallback.
+* **Frontend Client**: Vite + React, Vanilla CSS with custom glassmorphism tokens.
+* **Deployment & Scheduling**:
+  * **Backend App**: Hosted on Render.
+  * **Frontend Client**: Hosted on Vercel.
+  * **Orchestration Runner**: Scheduled via GitHub Actions (`.github/workflows/thrice_weekly_brief.yml`) running at **03:30 UTC** (Mon, Wed, Fri).
+  * **Database Layer**: SQLite locally (`subscribers.db`); shifts automatically to **Neon Cloud Postgres** when `DATABASE_URL` is set in production.
 
 ---
 
@@ -43,18 +64,24 @@ graph TD
 DailyDiff/
 ├── .github/
 │   └── workflows/
-│       └── thrice_weekly_brief.yml # Cron Scheduler (Mon, Wed, Fri at 06:00 UTC)
+│       └── thrice_weekly_brief.yml # Cron Scheduler (Mon, Wed, Fri at 03:30 UTC)
 ├── backend/                     # Python FastAPI & LangGraph Engine
 │   ├── app/
-│   │   ├── agents/              # Pipeline nodes (scout, skeptic, verifier, etc.)
+│   │   ├── agents/              # LangGraph Agent nodes & states
+│   │   │   ├── models.py        # Mistral-to-Gemini Fallback Wrapper
+│   │   │   ├── scout.py         # HN, Dev.to, GitHub scraper routines
+│   │   │   ├── skeptic.py       # Hype filter & deduplication
+│   │   │   ├── verifier.py      # Technical assertions fact-checker
+│   │   │   ├── analyst.py       # Developer impact analyst
+│   │   │   └── editor.py        # ELI5 & TL;DR editor
 │   │   ├── config.py            # Environment configurations
-│   │   ├── database.py          # SQLite database & JSON index manager
+│   │   ├── database.py          # Dynamic SQLite / PostgreSQL switcher
 │   │   ├── email_dispatcher.py  # Gmail SMTP & Resend HTML mailer
-│   │   ├── main.py              # FastAPI Web API
-│   │   └── schemas.py           # Pydantic schemas
+│   │   ├── main.py              # FastAPI Web routes
+│   │   └── schemas.py           # Pydantic validation structures
 │   ├── requirements.txt         # Package dependencies
 │   ├── run_agent.py             # Agent pipeline runner script
-│   └── test_api.py              # API endpoint unit tests
+│   └── test_api.py              # Backend endpoint tests
 ├── frontend/                    # Vite + React Client Dashboard
 │   ├── src/
 │   │   ├── App.jsx              # Timeline dashboard UI
@@ -62,41 +89,45 @@ DailyDiff/
 │   │   └── main.jsx
 │   ├── package.json
 │   └── vite.config.js
-└── data/                        # Git-Based CMS Database
-    ├── history.json             # Combined archive (historical database)
-    ├── latest.md                # Latest compiled markdown report
-    └── archive/                 # YYYY/MM/DD.md directory structure
+├── data/                        # Git-Based CMS Database
+│   ├── history.json             # Combined archive of historical briefings
+│   ├── latest.md                # Latest compiled markdown report
+│   └── archive/                 # Chronological YYYY/MM/DD.md briefings
+└── .python-version              # Production Python environment pin (3.12)
 ```
 
 ---
 
 ## ⚡ Quick Start Guide
 
-### 1. Prerequisite Settings
+### 1. Prerequisites Setup
 
 Create a `.env` file in the root directory:
 ```env
 # AI Models Keys
-GEMINI_API_KEY=AIzaSy...           # Google AI Studio API Key
-MISTRAL_API_KEY=JGhIc...          # Mistral API Key
+MISTRAL_API_KEY=your_mistral_key_here
+GEMINI_API_KEY=your_gemini_studio_key_here
 
-# Newsletter & Webhooks (For live email delivery to anyone)
+# Neon Database (Leave empty to default to local subscribers.db SQLite)
+DATABASE_URL=postgresql://neondb_owner:password@ep-host-pooler.aws.neon.tech/neondb?sslmode=require
+
+# Email dispatch (Google SMTP settings)
 SMTP_EMAIL=yourname@gmail.com
-SMTP_PASSWORD=abcdefghijklmnop    # Google App Password (16-char code)
+SMTP_PASSWORD=16_character_google_app_password
 
-# Webhook URLs
+# Authentication Webhook token (For GHA runner to verify endpoints)
+NOTIFY_SECRET_TOKEN=generate_any_secure_string_here
 BACKEND_API_URL=http://localhost:8000
-NOTIFY_SECRET_TOKEN=generate_any_secure_token_string
 ```
 
 > [!TIP]
-> **Generating Google App Passwords**: Go to your Google Account Settings $\rightarrow$ Security $\rightarrow$ App Passwords. Choose "Other" and name it `DailyDiff` to receive a 16-character password to use as `SMTP_PASSWORD`.
+> **Google App Password**: In your Google Account settings, search for **App Passwords** under Security. Create an app named `DailyDiff` and copy the 16-character code into `SMTP_PASSWORD` (make sure 2FA is active on your Gmail).
 
 ---
 
 ### 2. Boot up the Backend
 
-First, spin up your Python virtual environment and install packages:
+First, build your virtual environment and install dependencies:
 ```bash
 # Create and activate environment
 uv venv --python 3.12
@@ -111,23 +142,23 @@ Launch the FastAPI web service:
 export PYTHONPATH=backend
 uvicorn app.main:app --port 8000 --reload
 ```
-The server will start at `http://localhost:8000`. You can check the documentation at `/docs`.
+The server will start at `http://localhost:8000`. You can inspect APIs at `/docs`.
 
 ---
 
 ### 3. Run the Agent Pipeline
 
-To run the agent workflow and compile today's briefing:
+To run the agent workflow and compile today's briefing locally:
 ```bash
 export PYTHONPATH=backend
 source .venv/bin/activate
 python backend/run_agent.py
 ```
-*(If no API keys are found, the pipeline automatically falls back to **Simulation Mode** and creates simulated briefs to test folders, database commits, and SMTP emails).*
+*(If no API keys are configured, the pipeline automatically falls back to **Simulation Mode** and creates simulated briefs to test folders, database commits, and SMTP emails).*
 
 ---
 
-### 4. Boot up the React Client
+### 4. Start the React Client
 
 Navigate into the frontend folder, install npm packages, and start the development server:
 ```bash
@@ -135,16 +166,17 @@ cd frontend
 npm install
 npm run dev
 ```
-Open **`http://localhost:5173`** in your browser to interact with the responsive, glassmorphic timeline dashboard.
+Open **`http://localhost:5173`** in your browser.
 
 ---
 
-## 📬 Subscription Flow
+## 📬 Subscription Flow & Webhooks
 
-1. **Register**: Users insert their email on the frontend website.
-2. **Persistence**: The FastAPI server saves it privately in a local SQLite database (`subscribers.db`).
-3. **Notification**: At the end of a successful run, `run_agent.py` calls the secure webhook `POST /api/notify-subscribers` on the server.
-4. **Mailing**: The server pulls the subscription table, structures a responsive HTML newsletter, and dispatches it securely using Google SMTP (or Resend API fallback).
+1. **Register**: Users submit their emails on the Vercel dashboard.
+2. **Persistence**: The FastAPI server saves it dynamically in the SQLite database (local dev) or **Neon cloud Postgres** (production).
+3. **Trigger**: After compiling briefs, `run_agent.py` triggers the secure endpoint:
+   `POST /api/notify-subscribers` (signed with the header `X-Auth-Token` matching your secret token).
+4. **Mailing**: The backend compiles a responsive HTML newsletter template featuring the **TL;DR** lists and sends it using Google SMTP (with a fallback to **Resend API**).
 
 ---
 
