@@ -1,0 +1,30 @@
+# API Keys and Secrets
+.env
+.env.local
+.env.*.local
+
+# Python environment
+.venv/
+venv/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node.js
+node_modules/
+frontend/dist/
+frontend/node_modules/
+
+# Databases
+backend/*.db
+backend/*.db-journal
+
+# Logs
+logs/
+*.log
+
+# OS metadata
+.DS_Store
+Thumbs.db

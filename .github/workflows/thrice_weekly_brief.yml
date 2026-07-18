@@ -1,0 +1,47 @@
+name: Generate Thrice-Weekly Intelligence Brief
+
+on:
+  schedule:
+    # Run at 06:00 UTC on Monday, Wednesday, and Friday
+    - cron: '0 6 * * 1,3,5'
+  workflow_dispatch: # Allows manual trigger from the GitHub UI
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to commit and push generated briefs back to the repo
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv and Python dependencies
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          export PATH="$HOME/.local/bin:$PATH"
+          uv pip install --system -r backend/requirements.txt
+
+      - name: Run LangGraph Agent Pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BACKEND_API_URL: ${{ secrets.BACKEND_API_URL }}
+          NOTIFY_SECRET_TOKEN: ${{ secrets.NOTIFY_SECRET_TOKEN }}
+        run: |
+          export PYTHONPATH=backend
+          python backend/run_agent.py
+
+      - name: Commit and Push New Briefs
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/
+          # Commit only if there are modifications in history.json or new archive markdown files
+          git diff --quiet && git diff --staged --quiet || (git commit -m "daily: publish intelligence brief for $(date +'%Y-%m-%d')" && git push)
