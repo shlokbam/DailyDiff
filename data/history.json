@@ -1,37 +1,57 @@
 [
   {
     "date": "2026-07-18",
-    "published_at": "2026-07-18T07:45:13.819381Z",
+    "published_at": "2026-07-18T07:50:33.972524Z",
     "briefs": [
       {
-        "category": "Keep an Eye On This",
-        "title": "Nous Research Releases Hermes Agent",
-        "description": "Nous Research has open-sourced hermes-agent, an agentic framework designed to transition AI agents from static, prompt-based wrappers into stateful, self-improving systems. It features a continuous learning loop that dynamically creates skills and persists user context across sessions.",
-        "why_it_matters": "Traditional agents are stateless and struggle to retain long-term context or adapt without manual prompt engineering. Hermes Agent embeds memory and skill creation directly into the runtime, allowing agents to evolve on minimal, low-cost infrastructure.",
-        "who_cares": "AI engineers, agent developers, and LLM application architects building personalized or autonomous digital assistants.",
-        "verdict": "WATCH",
+        "category": "Worth Knowing",
+        "title": "RxBrain: An Embodied AI Model That Reasons, Predicts, and Acts",
+        "description": "A new foundation model unifies language reasoning with visual imagination for embodied cognition, enabling agents to connect high-level planning with physical state grounding.",
+        "why_it_matters": "RxBrain eliminates the need for brittle modular pipelines by combining abstract task planning and physical state prediction in a single model, paving the way for more coherent and capable autonomous agents.",
+        "who_cares": "Robotics engineers, embodied AI researchers, multimodal foundation model developers, and teams building autonomous agents for real-world deployment.",
+        "verdict": "INTEGRATE",
         "confidence": 88,
-        "source_url": "https://github.com/NousResearch/hermes-agent"
-      },
-      {
-        "category": "Research Idea",
-        "title": "RxBrain: Embodied AI with Joint Language-Visual Imagination",
-        "description": "Researchers have introduced Hy-Embodied-RxBrain, an embodied cognition foundation model that unifies textual task planning and visual world-state prediction into a single Mixture-of-Transformers sequence.",
-        "why_it_matters": "Unlike standard vision-language models that only describe scenes, RxBrain allows robots to 'imagine' physical subgoals and predict future states. This enables continuous action generation without relying on massive, pre-existing robot action datasets.",
-        "who_cares": "Robotics engineers, embodied AI researchers, and autonomous agent developers.",
-        "verdict": "READ",
-        "confidence": 82,
         "source_url": "https://huggingface.co/papers/2607.14187"
       },
       {
-        "category": "Worth Knowing",
-        "title": "LongStraw: Million-Token RL Training on a Fixed GPU Budget",
-        "description": "A new training method called LongStraw enables million-token Group Relative Policy Optimization (GRPO) post-training on a fixed GPU budget, bridging the gap between long-context inference and RL training limits.",
-        "why_it_matters": "Standard RL post-training is typically bottlenecked at 256K tokens due to extreme memory overhead. LongStraw decouples prompt evaluation from autograd and replays response branches sequentially, drastically reducing memory usage so developers can train long-horizon agents without massive clusters.",
-        "who_cares": "LLM infrastructure engineers, reinforcement learning researchers, and platform teams optimizing GPU utilization.",
+        "category": "Hidden Gem",
+        "title": "SUFLECA: One-Shot CAD-to-Image Alignment for Robotics and AR",
+        "description": "A zero-shot method that replaces appearance-driven matching with geometry-grounded features to estimate 9D object poses from a single RGB image in under a second.",
+        "why_it_matters": "SUFLECA achieves occlusion-robust pose estimation that outperforms fully supervised methods on ScanNet25k, enabling scalable, label-free CAD alignment for robotics and AR/VR applications.",
+        "who_cares": "Robotics perception engineers, AR/VR developers, CAD alignment toolkit maintainers, and researchers in geometric deep learning.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://huggingface.co/papers/2607.15058"
+      },
+      {
+        "category": "Research Idea",
+        "title": "Locality Over Globality: Biologically Inspired Vision Models",
+        "description": "A study demonstrating that local, sequential visual processing enables better compositional generalization than global, single-shot vision models.",
+        "why_it_matters": "This work challenges the dominant paradigm in computer vision, suggesting that biologically inspired architectures could solve fundamental limitations in current vision models by avoiding brittle shortcuts.",
+        "who_cares": "Computer vision researchers, AI engineers designing vision-language models, agent developers working on embodied AI, and platform teams optimizing for scalable vision tasks.",
         "verdict": "WATCH",
         "confidence": 80,
-        "source_url": "https://huggingface.co/papers/2607.14952"
+        "source_url": "https://huggingface.co/papers/2607.09061"
+      },
+      {
+        "category": "Something Changed",
+        "title": "AsySplat: Efficient 3D Scene Modeling for Real-Time Applications",
+        "description": "A new asymmetric 3D Gaussian Splatting model that decouples geometry and appearance tasks, reducing redundant computation for long-sequence novel view synthesis.",
+        "why_it_matters": "AsySplat slashes computational overhead while maintaining high-quality rendering, enabling real-time 3D scene modeling on resource-constrained hardware.",
+        "who_cares": "3D computer vision engineers, real-time graphics developers, AR/VR platform teams, and researchers focused on efficient radiance field rendering.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://huggingface.co/papers/2607.10995"
+      },
+      {
+        "category": "Keep an Eye On This",
+        "title": "VIABench: A New Benchmark for Assistive AI in the Real World",
+        "description": "A comprehensive video benchmark created by and for blind individuals, evaluating MLLMs on proactive, real-time assistance tasks.",
+        "why_it_matters": "VIABench exposes critical gaps in current assistive AI by shifting evaluation from generic vision tasks to real-world blind assistance, redefining benchmarks for accessibility-focused models.",
+        "who_cares": "AI researchers in multimodal models, assistive tech developers, robotics engineers for navigation systems, and accessibility-focused product teams.",
+        "verdict": "WATCH",
+        "confidence": 90,
+        "source_url": "https://huggingface.co/papers/2607.14660"
       }
     ]
   }

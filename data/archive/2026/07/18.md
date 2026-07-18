@@ -3,45 +3,73 @@
 
 ---
 
-## 👀 KEEP AN EYE ON THIS: Nous Research Releases Hermes Agent
+## 🔥 WORTH KNOWING: RxBrain: An Embodied AI Model That Reasons, Predicts, and Acts
 
-**What Happened:** Nous Research has open-sourced hermes-agent, an agentic framework designed to transition AI agents from static, prompt-based wrappers into stateful, self-improving systems. It features a continuous learning loop that dynamically creates skills and persists user context across sessions.
+**What Happened:** A new foundation model unifies language reasoning with visual imagination for embodied cognition, enabling agents to connect high-level planning with physical state grounding.
 
-**Why It Matters:** Traditional agents are stateless and struggle to retain long-term context or adapt without manual prompt engineering. Hermes Agent embeds memory and skill creation directly into the runtime, allowing agents to evolve on minimal, low-cost infrastructure.
+**Why It Matters:** RxBrain eliminates the need for brittle modular pipelines by combining abstract task planning and physical state prediction in a single model, paving the way for more coherent and capable autonomous agents.
 
-**Who Cares:** AI engineers, agent developers, and LLM application architects building personalized or autonomous digital assistants.
-
-**Source:** [https://github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
-
-**Verdict:** `WATCH` | **Confidence:** `88%`
-
----
-
-## 🧠 RESEARCH IDEA: RxBrain: Embodied AI with Joint Language-Visual Imagination
-
-**What Happened:** Researchers have introduced Hy-Embodied-RxBrain, an embodied cognition foundation model that unifies textual task planning and visual world-state prediction into a single Mixture-of-Transformers sequence.
-
-**Why It Matters:** Unlike standard vision-language models that only describe scenes, RxBrain allows robots to 'imagine' physical subgoals and predict future states. This enables continuous action generation without relying on massive, pre-existing robot action datasets.
-
-**Who Cares:** Robotics engineers, embodied AI researchers, and autonomous agent developers.
+**Who Cares:** Robotics engineers, embodied AI researchers, multimodal foundation model developers, and teams building autonomous agents for real-world deployment.
 
 **Source:** [https://huggingface.co/papers/2607.14187](https://huggingface.co/papers/2607.14187)
 
-**Verdict:** `READ` | **Confidence:** `82%`
+**Verdict:** `INTEGRATE` | **Confidence:** `88%`
 
 ---
 
-## 🔥 WORTH KNOWING: LongStraw: Million-Token RL Training on a Fixed GPU Budget
+## 💎 HIDDEN GEM: SUFLECA: One-Shot CAD-to-Image Alignment for Robotics and AR
 
-**What Happened:** A new training method called LongStraw enables million-token Group Relative Policy Optimization (GRPO) post-training on a fixed GPU budget, bridging the gap between long-context inference and RL training limits.
+**What Happened:** A zero-shot method that replaces appearance-driven matching with geometry-grounded features to estimate 9D object poses from a single RGB image in under a second.
 
-**Why It Matters:** Standard RL post-training is typically bottlenecked at 256K tokens due to extreme memory overhead. LongStraw decouples prompt evaluation from autograd and replays response branches sequentially, drastically reducing memory usage so developers can train long-horizon agents without massive clusters.
+**Why It Matters:** SUFLECA achieves occlusion-robust pose estimation that outperforms fully supervised methods on ScanNet25k, enabling scalable, label-free CAD alignment for robotics and AR/VR applications.
 
-**Who Cares:** LLM infrastructure engineers, reinforcement learning researchers, and platform teams optimizing GPU utilization.
+**Who Cares:** Robotics perception engineers, AR/VR developers, CAD alignment toolkit maintainers, and researchers in geometric deep learning.
 
-**Source:** [https://huggingface.co/papers/2607.14952](https://huggingface.co/papers/2607.14952)
+**Source:** [https://huggingface.co/papers/2607.15058](https://huggingface.co/papers/2607.15058)
+
+**Verdict:** `INTEGRATE` | **Confidence:** `90%`
+
+---
+
+## 🧠 RESEARCH IDEA: Locality Over Globality: Biologically Inspired Vision Models
+
+**What Happened:** A study demonstrating that local, sequential visual processing enables better compositional generalization than global, single-shot vision models.
+
+**Why It Matters:** This work challenges the dominant paradigm in computer vision, suggesting that biologically inspired architectures could solve fundamental limitations in current vision models by avoiding brittle shortcuts.
+
+**Who Cares:** Computer vision researchers, AI engineers designing vision-language models, agent developers working on embodied AI, and platform teams optimizing for scalable vision tasks.
+
+**Source:** [https://huggingface.co/papers/2607.09061](https://huggingface.co/papers/2607.09061)
 
 **Verdict:** `WATCH` | **Confidence:** `80%`
+
+---
+
+## ⚡ SOMETHING CHANGED: AsySplat: Efficient 3D Scene Modeling for Real-Time Applications
+
+**What Happened:** A new asymmetric 3D Gaussian Splatting model that decouples geometry and appearance tasks, reducing redundant computation for long-sequence novel view synthesis.
+
+**Why It Matters:** AsySplat slashes computational overhead while maintaining high-quality rendering, enabling real-time 3D scene modeling on resource-constrained hardware.
+
+**Who Cares:** 3D computer vision engineers, real-time graphics developers, AR/VR platform teams, and researchers focused on efficient radiance field rendering.
+
+**Source:** [https://huggingface.co/papers/2607.10995](https://huggingface.co/papers/2607.10995)
+
+**Verdict:** `INTEGRATE` | **Confidence:** `90%`
+
+---
+
+## 👀 KEEP AN EYE ON THIS: VIABench: A New Benchmark for Assistive AI in the Real World
+
+**What Happened:** A comprehensive video benchmark created by and for blind individuals, evaluating MLLMs on proactive, real-time assistance tasks.
+
+**Why It Matters:** VIABench exposes critical gaps in current assistive AI by shifting evaluation from generic vision tasks to real-world blind assistance, redefining benchmarks for accessibility-focused models.
+
+**Who Cares:** AI researchers in multimodal models, assistive tech developers, robotics engineers for navigation systems, and accessibility-focused product teams.
+
+**Source:** [https://huggingface.co/papers/2607.14660](https://huggingface.co/papers/2607.14660)
+
+**Verdict:** `WATCH` | **Confidence:** `90%`
 
 ---
 
