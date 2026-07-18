@@ -143,7 +143,7 @@ def main():
                 "briefs": briefs
             }
             
-            response = httpx.post(f"{backend_url}/api/notify-subscribers", json=payload, headers=headers, timeout=30)
+            response = httpx.post(f"{backend_url}/api/notify-subscribers", json=payload, headers=headers, timeout=120)
             if response.status_code == 200:
                 logger.info("Successfully notified backend to send email briefs.")
             else:
