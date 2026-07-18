@@ -14,6 +14,7 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 SMTP_EMAIL = os.getenv("SMTP_EMAIL")
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Data File Paths
 DATA_DIR = BASE_DIR / "data"
