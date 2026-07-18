@@ -190,6 +190,67 @@ export default function App() {
         </span>
       </header>
 
+      {/* Intro & Landing Details Section */}
+      <section className="intro-section glass">
+        <div className="intro-grid">
+          <div className="intro-content">
+            <h2 className="intro-heading">Thrice-Weekly Tech Curation for Students & Developers</h2>
+            <p className="intro-text">
+              DailyDiff scans the noise of tech forums and codebases using intelligent AI agents. 
+              We skip the abstract math equations and academic research papers, converting tech announcements 
+              into plain, conversational English focused on real-world utility.
+            </p>
+            <div className="intro-topics">
+              <div className="topic-pill">
+                <span className="topic-icon">🛠️</span>
+                <span><strong>Developer Tools:</strong> Light databases, extensions, scripts, and editors.</span>
+              </div>
+              <div className="topic-pill">
+                <span className="topic-icon">🏠</span>
+                <span><strong>Self-Hosted Apps:</strong> Private cloud setups, home servers, and local web tools.</span>
+              </div>
+              <div className="topic-pill">
+                <span className="topic-icon">⚡</span>
+                <span><strong>Framework Updates:</strong> Tag releases and features of React, Next.js, FastAPI, Go, etc.</span>
+              </div>
+              <div className="topic-pill">
+                <span className="topic-icon">💡</span>
+                <span><strong>Engineering Guides:</strong> Practical database optimizations, coding tips, and architectures.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="intro-subscribe">
+            <h3 className="subscribe-title" style={{ fontSize: '1.25rem', marginBottom: '0.25rem' }}>Join the Briefing</h3>
+            <p className="subscribe-text" style={{ fontSize: '0.85rem', marginBottom: '1rem' }}>
+              Get a concise 3-minute markdown digest sent directly to your inbox every Mon • Wed • Fri.
+            </p>
+            <form onSubmit={handleSubscribe} className="subscribe-form-hero">
+              <input 
+                type="email" 
+                placeholder="your.email@example.com" 
+                className="subscribe-input-hero"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={subStatus.type === 'loading'}
+              />
+              <button 
+                type="submit" 
+                className="subscribe-button-hero"
+                disabled={subStatus.type === 'loading'}
+              >
+                {subStatus.type === 'loading' ? 'Subscribing...' : 'Subscribe'}
+              </button>
+            </form>
+            {subStatus.message && (
+              <p className={`subscribe-message ${subStatus.type === 'success' ? 'message-success' : 'message-error'}`} style={{ marginTop: '0.75rem' }}>
+                {subStatus.message}
+              </p>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Control Panel */}
       <div className="controls-panel glass" style={{ padding: '1rem 1.5rem' }}>
         <input 
