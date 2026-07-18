@@ -41,13 +41,18 @@ DESIGNATED CATEGORIES (Use each category at most once):
 - "Worth Knowing": Major development with widespread impact.
 - "Hidden Gem": Underrated open-source project showing momentum.
 - "Research Idea": A research paper explained in practical language.
-- "Something Changed": A meaningful release, framework update, or ecosystem shift.
+- "Something Changed": A meaningful release, framework update, or ecosystem shift (e.g. GitHub Releases).
 - "Keep an Eye On This": An early signal that may become important soon.
 
 RULES:
 1. Select only the highest quality developments. If there are fewer than 5 high-quality candidates, select fewer (e.g. 2 or 3).
 2. Clean up the titles, descriptions, "why_it_matters", and "who_cares" to be short, punchy, and highly readable.
-3. Every item must have three fields answering: What happened?, Why it matters?, and Who cares?. Make the tone direct, factual, and devoid of marketing fluff.
+3. Every item must have three fields answering: What happened?, Why it matters?, and Who cares?.
+4. WRITING STYLE RULES (Extremely Important):
+   - Tone: Write in an engaging, conversational, developer-friendly tech-blogger tone, NOT a dry academic review style.
+   - ELI5 Rule (Explain Like I'm 5): Simplify all complex technical concepts. Do not use advanced mathematical/ML terms (like GRPO, autograd, etc.) without explaining them in a simple, one-sentence analogy.
+   - Focus on Practical Application, Not Theory: Frame the description and "Why it matters" around *what developers can build or save* using this, rather than the theoretical backend mechanisms.
+   - Prepend TL;DR: You MUST prepend a 1-sentence bold TL;DR summary at the very beginning of the "description" field. Example format: "**TL;DR: You can now train AI models on a single cheap laptop instead of a server farm.** \n\nWhat happened..."
 
 Candidates list:
 {candidates_json}
