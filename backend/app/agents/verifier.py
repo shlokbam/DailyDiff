@@ -49,10 +49,12 @@ def verifier_node(state: AgentState) -> Dict[str, Any]:
         return {"vetted_candidates": []}
         
     vetted = []
+    import time
     for c in researched:
         is_valid = verify_candidate(c)
         if is_valid:
             vetted.append(c)
+        time.sleep(1.0)  # Throttling LLM requests to safeguard API quotas
             
     logger.info(f"Verifier node complete: {len(vetted)} of {len(researched)} candidates vetted successfully.")
     return {"vetted_candidates": vetted}

@@ -96,6 +96,12 @@ Do not include any code block markdown like ```json or any other text. Return on
                         candidates.append(raw_signals[idx])
                 except (ValueError, TypeError):
                     continue
+                    
+        # Slice to a maximum of 10 candidates to safeguard against downstream rate limits
+        if len(candidates) > 10:
+            logger.info(f"Slicing passed signals from {len(candidates)} down to 10 to optimize LLM call volumes.")
+            candidates = candidates[:10]
+            
         logger.info(f"Skeptic filter complete: {len(candidates)} of {len(raw_signals)} signals passed.")
     except Exception as e:
         logger.error(f"Skeptic node error: {e}. Falling back to keeping top 10 raw signals.")

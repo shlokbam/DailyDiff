@@ -75,8 +75,10 @@ def analyst_node(state: AgentState) -> Dict[str, Any]:
         return {"vetted_candidates": []}
         
     analyzed = []
+    import time
     for c in vetted:
         analyzed.append(analyze_candidate(c))
+        time.sleep(1.0)  # Throttling LLM requests to safeguard API quotas
         
     logger.info(f"Analyst node complete: processed {len(analyzed)} candidates.")
     return {"vetted_candidates": analyzed}
