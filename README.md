@@ -170,13 +170,18 @@ Open **`http://localhost:5173`** in your browser.
 
 ---
 
-## 📬 Subscription Flow & Webhooks
+## 📬 Subscription & Unsubscription Flow
 
-1. **Register**: Users submit their emails on the Vercel dashboard.
-2. **Persistence**: The FastAPI server saves it dynamically in the SQLite database (local dev) or **Neon cloud Postgres** (production).
-3. **Trigger**: After compiling briefs, `run_agent.py` triggers the secure endpoint:
-   `POST /api/notify-subscribers` (signed with the header `X-Auth-Token` matching your secret token).
-4. **Mailing**: The backend compiles a responsive HTML newsletter template featuring the **TL;DR** lists and sends it using Google SMTP (with a fallback to **Resend API**).
+* **Subscription Flow**:
+  1. **Register**: Users submit their emails on the Vercel dashboard.
+  2. **Persistence**: The FastAPI server saves it dynamically in the SQLite database (local dev) or **Neon cloud Postgres** (production).
+  3. **Trigger**: After compiling briefs, `run_agent.py` triggers the secure endpoint `POST /api/notify-subscribers` (signed with the header `X-Auth-Token` matching your secret token).
+  4. **Mailing**: The backend compiles a responsive HTML newsletter template featuring the **TL;DR** lists and sends it using Google SMTP (with a fallback to **Resend API**).
+
+* **Unsubscription Flow**:
+  1. **Link Trigger**: Users click the "Unsubscribe" link at the footer of the HTML email template.
+  2. **API Endpoint**: The request routes to `POST /api/unsubscribe` on the FastAPI server, removing their record from the active subscribers database.
+  3. **Polite Email Confirmation**: The server immediately dispatches a polite confirmation email matching the brand's dark-mode glassmorphic theme to reassure the user they have been removed.
 
 ---
 

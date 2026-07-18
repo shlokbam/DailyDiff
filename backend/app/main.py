@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Dict, Any
 from app.schemas import SubscribeRequest, UnsubscribeRequest, DailyBriefGroup
 from app.database import init_db, add_subscriber, remove_subscriber, read_history, get_subscribers
-from app.email_dispatcher import dispatch_emails
+from app.email_dispatcher import dispatch_emails, dispatch_unsubscribe_confirmation
 
 logger = logging.getLogger("DailyDiff.api")
 
@@ -54,6 +54,13 @@ def unsubscribe(request: UnsubscribeRequest):
             detail="Email address not found in subscription list"
         )
     logger.info(f"Subscriber removed: {request.email}")
+    
+    # Send polite unsubscribe confirmation email
+    try:
+        dispatch_unsubscribe_confirmation(request.email)
+    except Exception as e:
+        logger.error(f"Error triggering unsubscribe confirmation email: {e}")
+        
     return {"message": "Successfully unsubscribed from DailyDiff briefs"}
 
 @app.get("/api/briefs/latest", response_model=DailyBriefGroup)

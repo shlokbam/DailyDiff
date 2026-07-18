@@ -1,5 +1,6 @@
 import os
 import logging
+from pathlib import Path
 from typing import List, Dict, Any
 from app.schemas import DailyBriefGroup
 
@@ -152,4 +153,101 @@ def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
     with open(log_path, "w") as f:
         f.write(html_content)
     logger.info(f"Saved simulated email HTML to {log_path} for manual verification.")
+
+def dispatch_unsubscribe_confirmation(email: str):
+    """Send a polite unsubscribe confirmation email to the user."""
+    logger.info(f"Preparing to send unsubscribe confirmation email to: {email}")
+    
+    html_content = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Unsubscribed from DailyDiff</title>
+    </head>
+    <body style="background-color: #0c0d12; color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #0c0d12; padding: 40px 0;">
+            <tr>
+                <td align="center">
+                    <table width="550" border="0" cellspacing="0" cellpadding="0" style="background-color: #141620; border: 1px solid #1f2937; border-radius: 8px; padding: 40px; text-align: left;">
+                        <tr>
+                            <td align="center" style="padding-bottom: 25px; border-bottom: 1px solid #1f2937;">
+                                <h1 style="margin: 0 0 5px 0; font-size: 24px; font-weight: 700; color: #6b7280; letter-spacing: -0.02em;">DailyDiff</h1>
+                                <p style="margin: 0; font-size: 11px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.15em;">Subscription Service</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 30px 0; font-size: 15px; line-height: 1.6; color: #d1d5db;">
+                                <p style="margin-top: 0;">Hello,</p>
+                                <p>This email confirms that you have been successfully unsubscribed from the <strong>DailyDiff Tech Intelligence Briefing</strong>. You will no longer receive our thrice-weekly newsletters in your inbox.</p>
+                                <p>We are sorry to see you go! If this was an accident, or if you ever change your mind and want to stay updated with simplified tech tools, home-servers, and coding guides, you can resubscribe at any time on our website.</p>
+                                <p style="margin-bottom: 0;">Thank you for reading with us,<br><em style="color: #60a5fa;">The DailyDiff Team</em></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding-top: 25px; border-top: 1px solid #1f2937; font-size: 12px; color: #6b7280;">
+                                <p style="margin: 0;"><a href="https://daily-diff-pi.vercel.app" style="color: #60a5fa; text-decoration: none; font-weight: 500;">Visit Dashboard</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+    </html>
+    """
+    
+    # 1. Try Gmail SMTP sending if configured
+    from app.config import SMTP_EMAIL, SMTP_PASSWORD
+    if SMTP_EMAIL and SMTP_PASSWORD:
+        try:
+            import smtplib
+            from email.mime.text import MIMEText
+            from email.mime.multipart import MIMEMultipart
+            
+            logger.info(f"Connecting to Gmail SMTP server to send unsubscribe confirmation to {email}...")
+            server = smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=15)
+            server.login(SMTP_EMAIL, SMTP_PASSWORD)
+            
+            msg = MIMEMultipart("alternative")
+            msg["Subject"] = "[DailyDiff] Unsubscribe Confirmation"
+            msg["From"] = f"DailyDiff <{SMTP_EMAIL}>"
+            msg["To"] = email
+            
+            part = MIMEText(html_content, "html")
+            msg.attach(part)
+            
+            server.sendmail(SMTP_EMAIL, email, msg.as_string())
+            server.quit()
+            logger.info("Unsubscribe confirmation email sent successfully via SMTP.")
+            return
+        except Exception as e:
+            logger.error(f"Failed to send unsubscribe confirmation email via SMTP: {e}. Trying Resend fallback...")
+            
+    # 2. Try Resend API sending if configured
+    resend_key = os.getenv("RESEND_API_KEY")
+    if resend_key and not resend_key.startswith("your_"):
+        try:
+            import resend
+            resend.api_key = resend_key
+            logger.info(f"Sending unsubscribe confirmation to {email} via Resend...")
+            resend.Emails.send({
+                "from": "DailyDiff <briefs@dailydiff.dev>" if "onboarding" not in resend_key else "DailyDiff <onboarding@resend.dev>",
+                "to": email,
+                "subject": "[DailyDiff] Unsubscribe Confirmation",
+                "html": html_content
+            })
+            logger.info("Unsubscribe confirmation email sent successfully via Resend.")
+            return
+        except Exception as e:
+            logger.error(f"Failed to send unsubscribe confirmation email via Resend: {e}")
+            
+    # 3. Fallback to local files if both delivery methods are unavailable
+    logger.warning("No active email delivery method succeeded. Logging output to local file...")
+    log_dir = Path(__file__).resolve().parent.parent.parent / "logs"
+    log_dir.mkdir(exist_ok=True)
+    log_path = log_dir / f"unsubscribe_confirm_{email.replace('@', '_at_')}.html"
+    with open(log_path, "w") as f:
+        f.write(html_content)
+    logger.info(f"Saved simulated unsubscribe confirmation email HTML to {log_path} for manual verification.")
 
