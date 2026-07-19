@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function OnboardingCalendar() {
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [activeDay, setActiveDay] = useState(new Date().getDay());
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [nextDispatch, setNextDispatch] = useState(null);
 
@@ -46,7 +47,6 @@ export default function OnboardingCalendar() {
       
       const diffMs = target - now;
       if (diffMs <= 0) {
-        // Re-calculate if countdown reaches 0
         const newTarget = calculateNextDispatch();
         setNextDispatch(newTarget);
       } else {
@@ -63,16 +63,17 @@ export default function OnboardingCalendar() {
   }, []);
 
   const daysOfWeek = [
-    { name: 'Mon', index: 1, isDispatch: true, desc: 'Briefing Dispatch' },
-    { name: 'Tue', index: 2, isDispatch: false, desc: 'Scouting Ecosystem' },
-    { name: 'Wed', index: 3, isDispatch: true, desc: 'Briefing Dispatch' },
-    { name: 'Thu', index: 4, isDispatch: false, desc: 'Scouting Ecosystem' },
-    { name: 'Fri', index: 5, isDispatch: true, desc: 'Briefing Dispatch' },
-    { name: 'Sat', index: 6, isDispatch: false, desc: 'Web Scraping' },
-    { name: 'Sun', index: 0, isDispatch: false, desc: 'Queue Run' }
+    { name: 'Mon', index: 1, isDispatch: true, title: 'Briefing Dispatch', desc: 'The compiled 3-minute markdown intelligence briefing hits your inbox at 9:00 AM.' },
+    { name: 'Tue', index: 2, isDispatch: false, title: 'Scouting Feeds', desc: 'AI agents scan Hacker News and GitHub to collect raw trending signals.' },
+    { name: 'Wed', index: 3, isDispatch: true, title: 'Briefing Dispatch', desc: 'The mid-week briefing is compiled, vetted, and dispatched to readers.' },
+    { name: 'Thu', index: 4, isDispatch: false, title: 'Scouting Feeds', desc: 'AI agents filter duplication, check library readmes, and test raw candidates.' },
+    { name: 'Fri', index: 5, isDispatch: true, title: 'Briefing Dispatch', desc: 'The weekend briefing hits your inbox, focusing on local dev tools and home setups.' },
+    { name: 'Sat', index: 6, isDispatch: false, title: 'Web Scraping', desc: 'Scraper nodes extract engineering guides and package releases.' },
+    { name: 'Sun', index: 0, isDispatch: false, title: 'Queue Run', desc: 'Agents run validation checks and queue up the Monday morning release payload.' }
   ];
 
   const todayIndex = currentTime.getDay();
+  const selectedDayInfo = daysOfWeek.find(d => d.index === activeDay) || daysOfWeek[0];
 
   const formatNextDate = () => {
     if (!nextDispatch) return 'Calculating...';
@@ -86,67 +87,95 @@ export default function OnboardingCalendar() {
   };
 
   return (
-    <div className="calendar-widget glass-card">
-      <div className="calendar-header">
-        <span className="calendar-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" style={{ display: 'block' }}>
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-            <line x1="16" y1="2" x2="16" y2="6" />
-            <line x1="8" y1="2" x2="8" y2="6" />
-            <line x1="3" y1="10" x2="21" y2="10" />
-          </svg>
-        </span>
-        <div>
-          <h4 className="calendar-title">Dispatch Schedule</h4>
-          <p className="calendar-subtitle">How our curation cycle runs</p>
-        </div>
-      </div>
-
-      <div className="calendar-week-grid">
-        {daysOfWeek.map((day) => {
-          const isToday = day.index === todayIndex;
-          return (
-            <div 
-              key={day.name} 
-              className={`calendar-day-card ${day.isDispatch ? 'dispatch-day' : 'scouting-day'} ${isToday ? 'today-active' : ''}`}
-            >
-              <span className="day-name">{day.name}</span>
-              <span className="day-status-dot"></span>
-              <span className="day-label-hover">{day.desc}</span>
+    <div className="calendar-widget">
+      <div className="calendar-grid-layout">
+        
+        {/* Left Column: Interactive Dials & Details */}
+        <div className="calendar-left-col">
+          <div className="calendar-header">
+            <span className="calendar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" style={{ display: 'block' }}>
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </span>
+            <div>
+              <h4 className="calendar-title">Dispatch Schedule</h4>
+              <p className="calendar-subtitle">Click a day to view the curation cycle actions</p>
             </div>
-          );
-        })}
-      </div>
-
-      {nextDispatch && (
-        <div className="calendar-countdown-section">
-          <div className="countdown-item">
-            <span className="countdown-label">NEXT DROP ON:</span>
-            <span className="countdown-value-date">{formatNextDate()}</span>
           </div>
-          <div className="countdown-timer">
-            <span className="countdown-label">TIME REMAINING:</span>
-            <div className="timer-numbers">
-              {countdown.days > 0 && (
-                <>
-                  <span className="time-part">{countdown.days}<small>d</small></span>
+
+          <div className="calendar-week-grid">
+            {daysOfWeek.map((day) => {
+              const isToday = day.index === todayIndex;
+              const isSelected = day.index === activeDay;
+              return (
+                <div 
+                  key={day.name} 
+                  className={`calendar-day-card ${day.isDispatch ? 'dispatch-day' : 'scouting-day'} ${isToday ? 'today-active' : ''} ${isSelected ? 'selected-day' : ''}`}
+                  onClick={() => setActiveDay(day.index)}
+                >
+                  <span className="day-name">{day.name}</span>
+                  <span className="day-status-dot"></span>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Selected Day Details Panel */}
+          {selectedDayInfo && (
+            <div className="calendar-day-details animate-fade-in" style={{ '--accent-color': selectedDayInfo.isDispatch ? '#10b981' : '#f97316' }}>
+              <div className="details-header">
+                <span className="details-badge" style={{ 
+                  backgroundColor: selectedDayInfo.isDispatch ? 'rgba(16, 185, 129, 0.1)' : 'rgba(249, 115, 22, 0.1)', 
+                  color: selectedDayInfo.isDispatch ? '#10b981' : '#f97316',
+                  border: `1px solid ${selectedDayInfo.isDispatch ? 'rgba(16, 185, 129, 0.2)' : 'rgba(249, 115, 22, 0.2)'}`
+                }}>
+                  {selectedDayInfo.isDispatch ? 'Dispatch' : 'Scouting'}
+                </span>
+                <h4>{selectedDayInfo.title}</h4>
+              </div>
+              <p className="details-desc">{selectedDayInfo.desc}</p>
+            </div>
+          )}
+        </div>
+
+        {/* Right Column: Countdown Timer & Onboarding Guide */}
+        <div className="calendar-right-col">
+          {nextDispatch && (
+            <div className="calendar-countdown-section">
+              <div className="countdown-item">
+                <span className="countdown-label">NEXT DISPATCH:</span>
+                <span className="countdown-value-date">{formatNextDate()}</span>
+              </div>
+              <div className="countdown-timer">
+                <span className="countdown-label">COUNTDOWN:</span>
+                <div className="timer-numbers">
+                  {countdown.days > 0 && (
+                    <>
+                      <span className="time-part">{countdown.days}<small>d</small></span>
+                      <span className="time-divider">:</span>
+                    </>
+                  )}
+                  <span className="time-part">{String(countdown.hours).padStart(2, '0')}<small>h</small></span>
                   <span className="time-divider">:</span>
-                </>
-              )}
-              <span className="time-part">{String(countdown.hours).padStart(2, '0')}<small>h</small></span>
-              <span className="time-divider">:</span>
-              <span className="time-part">{String(countdown.minutes).padStart(2, '0')}<small>m</small></span>
-              <span className="time-divider">:</span>
-              <span className="time-part-sec">{String(countdown.seconds).padStart(2, '0')}<small>s</small></span>
+                  <span className="time-part">{String(countdown.minutes).padStart(2, '0')}<small>m</small></span>
+                  <span className="time-divider">:</span>
+                  <span className="time-part-sec">{String(countdown.seconds).padStart(2, '0')}<small>s</small></span>
+                </div>
+              </div>
             </div>
+          )}
+          
+          <div className="onboarding-guide-text">
+            <p>
+              <strong>First time reading?</strong> Every Monday, Wednesday, and Friday, our AI agents scan developer communities to bring you exactly 5 curated, practical tech updates. We strip out academic formulas and clickbait, leaving you with simple explanations and clear verdicts.
+            </p>
           </div>
         </div>
-      )}
-      
-      <div className="onboarding-guide-text">
-        <p>
-          <strong>First time reading?</strong> Every Monday, Wednesday, and Friday, our AI agents scan developer communities to bring you exactly 5 curated, practical tech updates. We strip out academic formulas and clickbait, leaving you with simple explanations and clear verdicts.
-        </p>
+
       </div>
     </div>
   );

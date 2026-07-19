@@ -250,11 +250,12 @@ export default function App() {
                   </p>
                 )}
 
-                <div style={{ margin: '1.5rem 0 1rem', height: '1px', background: 'var(--border-color)' }}></div>
-                
-                <OnboardingCalendar />
               </div>
             </div>
+
+            <div style={{ margin: '2rem 0 1.5rem', height: '1px', background: 'var(--border-color)' }}></div>
+
+            <OnboardingCalendar />
           </section>
 
 
