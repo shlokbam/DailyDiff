@@ -257,24 +257,7 @@ export default function App() {
             </div>
           </section>
 
-          {/* How It Works Section */}
-          <section className="how-it-works-section glass">
-            <h4 className="how-it-works-title">How It Works</h4>
-            <div className="how-it-works-grid">
-              <div className="how-step-card">
-                <div className="how-step-num">1. AUTOMATED SCOUTING</div>
-                <p className="how-step-desc">AI agents search Hacker News & GitHub for new tools and utility releases.</p>
-              </div>
-              <div className="how-step-card">
-                <div className="how-step-num">2. NO-JARGON FILTER</div>
-                <p className="how-step-desc">We remove heavy academic papers, explaining everything with simple analogies.</p>
-              </div>
-              <div className="how-step-card">
-                <div className="how-step-num">3. INBOX DISPATCH</div>
-                <p className="how-step-desc">A clean 3-minute markdown newsletter hits your inbox every Mon, Wed, and Fri.</p>
-              </div>
-            </div>
-          </section>
+
 
           {/* Control Panel */}
           <div className="controls-panel glass" style={{ padding: '1rem 1.5rem' }}>

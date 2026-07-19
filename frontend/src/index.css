@@ -1248,4 +1248,89 @@ body {
   }
 }
 
+/* Orchestration Timeline */
+.orchestration-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.timeline-step-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.timeline-step-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+}
+
+.step-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.step-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem;
+  border-radius: 8px;
+}
+
+.color-blue { background: rgba(96, 165, 250, 0.1); }
+.color-orange { background: rgba(249, 115, 22, 0.1); }
+.color-teal { background: rgba(6, 182, 212, 0.1); }
+.color-green { background: rgba(16, 185, 129, 0.1); }
+.color-violet { background: rgba(168, 85, 247, 0.1); }
+
+.step-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.step-number {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.step-header-text h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.step-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.step-description strong {
+  color: var(--text-primary);
+}
+
+.step-description code {
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  color: #60a5fa;
+  font-size: 0.8rem;
+}
+
+.border-scout { border-left: 4px solid #60a5fa; }
+.border-skeptic { border-left: 4px solid #f97316; }
+.border-research { border-left: 4px solid #06b6d4; }
+.border-verify { border-left: 4px solid #10b981; }
+.border-editor { border-left: 4px solid #a855f7; }
+
 

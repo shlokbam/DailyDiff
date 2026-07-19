@@ -55,6 +55,7 @@ const renderAgentIcon = (name) => {
 
 export default function TechnicalDetails() {
   const [selectedAgent, setSelectedAgent] = useState('scout');
+  const [selectedNode, setSelectedNode] = useState('trigger');
 
   const agents = [
     {
@@ -140,6 +141,23 @@ export default function TechnicalDetails() {
         <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', marginTop: '0.5rem' }}>
           DailyDiff is not written by humans curation-by-curation. Instead, it relies on a coordinated multi-agent state machine built on **LangGraph**. The system runs on a thrice-weekly cron trigger, traversing six specialized AI agent nodes to process hundreds of raw tech updates down to the **5 most valuable things** for developers.
         </p>
+
+        <div style={{ margin: '1.5rem 0 1.25rem', height: '1px', background: 'var(--border-color)' }}></div>
+        
+        <div className="how-it-works-grid">
+          <div className="how-step-card">
+            <div className="how-step-num">1. AUTOMATED SCOUTING</div>
+            <p className="how-step-desc">AI agents search Hacker News & GitHub for new tools and utility releases.</p>
+          </div>
+          <div className="how-step-card">
+            <div className="how-step-num">2. NO-JARGON FILTER</div>
+            <p className="how-step-desc">We remove heavy academic papers, explaining everything with simple analogies.</p>
+          </div>
+          <div className="how-step-card">
+            <div className="how-step-num">3. INBOX DISPATCH</div>
+            <p className="how-step-desc">A clean 3-minute markdown newsletter hits your inbox every Mon, Wed, and Fri.</p>
+          </div>
+        </div>
       </section>
 
       {/* Interactive Agent Graph */}
@@ -200,66 +218,106 @@ export default function TechnicalDetails() {
         </div>
       </section>
 
-      {/* Tech Stack Info Grid */}
+      {/* End-to-End Orchestration Pipeline */}
       <section className="tech-section margin-bottom-lg">
-        <h3 className="section-title">The Technology Stack</h3>
+        <h3 className="section-title">End-to-End Orchestration Pipeline</h3>
+        <p className="section-subtitle">The complete data lifecycle from schedule trigger to reader inboxes:</p>
         
-        <div className="tech-stack-grid">
-          <div className="stack-card glass-card">
-            <div className="stack-header">
-              <span className="stack-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" style={{ display: 'block' }}>
+        <div className="orchestration-timeline">
+          <div className="timeline-step-card glass-card border-scout">
+            <div className="step-card-header">
+              <span className="step-icon-badge color-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </span>
+              <div className="step-header-text">
+                <span className="step-number">STEP 1</span>
+                <h4>GitHub Actions Trigger (Cron Schedule)</h4>
+              </div>
+            </div>
+            <p className="step-description">
+              Every Monday, Wednesday, and Friday at <strong>03:30 UTC</strong>, a scheduled GitHub Actions workflow fires automatically. The workflow checks out the code repository, sets up Python 3.12, and runs the agent pipeline using the <code>uv</code> package manager for rapid dependency installation.
+            </p>
+          </div>
+
+          <div className="timeline-step-card glass-card border-skeptic">
+            <div className="step-card-header">
+              <span className="step-icon-badge color-orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </span>
+              <div className="step-header-text">
+                <span className="step-number">STEP 2</span>
+                <h4>LangGraph Multi-Agent Execution</h4>
+              </div>
+            </div>
+            <p className="step-description">
+              The pipeline executes the LangGraph state graph. Using Google Gemini 1.5 and Mistral models, the graph coordinates the six specialized agent nodes to crawl forums, filter hype, fetch engineering documentation, verify links, evaluate developer utility, and edit summaries.
+            </p>
+          </div>
+
+          <div className="timeline-step-card glass-card border-research">
+            <div className="step-card-header">
+              <span className="step-icon-badge color-teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
+                  <circle cx="18" cy="18" r="3" />
+                  <circle cx="6" cy="6" r="3" />
+                  <circle cx="6" cy="18" r="3" />
+                  <path d="M6 9v6" />
+                  <path d="M9 6h6a3 3 0 0 1 3 3v6" />
+                </svg>
+              </span>
+              <div className="step-header-text">
+                <span className="step-number">STEP 3</span>
+                <h4>Git-Backed Database Commit</h4>
+              </div>
+            </div>
+            <p className="step-description">
+              The finalized briefings are appended to the history database and stored as static Markdown archives inside <code>data/archive/YYYY/MM/DD.md</code>. The workflow automatically commits and pushes these files back to GitHub to keep a git-backed archive.
+            </p>
+          </div>
+
+          <div className="timeline-step-card glass-card border-verify">
+            <div className="step-card-header">
+              <span className="step-icon-badge color-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
                   <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                  <path d="M20 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2z" />
                   <line x1="6" y1="6" x2="6.01" y2="6" />
                   <line x1="6" y1="18" x2="6.01" y2="18" />
                 </svg>
               </span>
-              <h4>Backend & API</h4>
+              <div className="step-header-text">
+                <span className="step-number">STEP 4</span>
+                <h4>FastAPI Notification Webhook</h4>
+              </div>
             </div>
-            <ul>
-              <li><strong>FastAPI (Python):</strong> High performance ASGI framework handling endpoint routing and subscribes.</li>
-              <li><strong>SQLite:</strong> Local lightweight database engine for subscriber storage and metadata tracking.</li>
-              <li><strong>Brevo SMTP API:</strong> Reliable transactional email delivery service dispatching briefs to inboxes.</li>
-            </ul>
+            <p className="step-description">
+              Once file archives are saved, the agent runner fires a secure POST request to the FastAPI backend API at <code>/api/notify-subscribers</code>. The payload contains the new briefs, signed with a secure token (<code>X-Auth-Token</code>) to authenticate the dispatch command.
+            </p>
           </div>
 
-          <div className="stack-card glass-card">
-            <div className="stack-header">
-              <span className="stack-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" style={{ display: 'block' }}>
-                  <path d="M12 2v4" />
-                  <path d="M12 6a6 6 0 0 0-6 6v3h12v-3a6 6 0 0 0-6-6z" />
-                  <rect x="4" y="15" width="16" height="5" rx="1" />
-                  <circle cx="9" cy="11" r="1" fill="#34d399" />
-                  <circle cx="15" cy="11" r="1" fill="#34d399" />
+          <div className="timeline-step-card glass-card border-editor">
+            <div className="step-card-header">
+              <span className="step-icon-badge color-violet">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
                 </svg>
               </span>
-              <h4>Agent Orchestration</h4>
+              <div className="step-header-text">
+                <span className="step-number">STEP 5</span>
+                <h4>Mailing List Dispatch (SMTP)</h4>
+              </div>
             </div>
-            <ul>
-              <li><strong>LangGraph:</strong> State graph architecture modeling sequential node execution and data validation loops.</li>
-              <li><strong>LangChain Community:</strong> Python libraries wrapping HTTP integrations and system prompts.</li>
-              <li><strong>Gemini 1.5 & Mistral:</strong> Multimodal and instruction models powering context evaluations.</li>
-            </ul>
-          </div>
-
-          <div className="stack-card glass-card">
-            <div className="stack-header">
-              <span className="stack-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" style={{ display: 'block' }}>
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                  <path d="M2 12h20" />
-                </svg>
-              </span>
-              <h4>Frontend Client</h4>
-            </div>
-            <ul>
-              <li><strong>React 19:</strong> Lightweight UI components using modern custom hooks and reactive layouts.</li>
-              <li><strong>Vite:</strong> Ultra-fast bundler providing Hot Module Replacement and production optimization.</li>
-              <li><strong>Vanilla CSS:</strong> Sleek glassmorphic theme styling, native grid layouts, and custom scroll effects.</li>
-            </ul>
+            <p className="step-description">
+              The FastAPI backend receives the webhook, pulls active subscriber emails from SQLite (<code>subscribers.db</code>), formats the brief group as clean HTML bulletins, and dispatches them via SMTP using Brevo to land in reader inboxes.
+            </p>
           </div>
         </div>
       </section>
