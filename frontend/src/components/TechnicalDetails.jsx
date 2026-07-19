@@ -128,6 +128,122 @@ export default function TechnicalDetails() {
 
   const currentAgent = agents.find(a => a.id === selectedAgent);
 
+  const n8nNodes = [
+    {
+      id: 'trigger',
+      name: 'Schedule Trigger',
+      subtitle: 'Cron Action',
+      iconColor: '#60a5fa',
+      status: 'Success',
+      time: '1ms',
+      parameters: {
+        'Interval': 'Monday, Wednesday, Friday',
+        'Cron Expression': '30 3 * * 1,3,5',
+        'Timezone': 'UTC (03:30) / IST (09:00)',
+        'Output State': 'trigger_pulse: true'
+      },
+      description: 'Automatically boots the orchestration environment. GitHub Actions instantiates the workflow based on the thrice-weekly cron configuration, setting up the runner VM.',
+      svg: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+      )
+    },
+    {
+      id: 'langgraph',
+      name: 'LangGraph Runner',
+      subtitle: 'Multi-Agent Execution',
+      iconColor: '#f97316',
+      status: 'Success',
+      time: '14.2s',
+      parameters: {
+        'Executable': 'python backend/run_agent.py',
+        'AI Engines': 'Gemini 1.5 Flash, Mistral 7B',
+        'Agent Count': '6 Orchestrated Nodes',
+        'Output State': 'final_briefs (JSON payload)'
+      },
+      description: 'Coordinates the multi-agent decision graph. Scout searches social feeds, Skeptic filters, Researcher reads markdown docs, Verifier runs HEAD requests, Analyst scores value, Editor writes briefing.',
+      svg: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+          <path d="M12 2L2 7l10 5 10-5-10-5z" />
+          <path d="M2 17l10 5 10-5" />
+          <path d="M2 12l10 5 10-5" />
+        </svg>
+      )
+    },
+    {
+      id: 'git',
+      name: 'Git Committer',
+      subtitle: 'Archive Commit',
+      iconColor: '#06b6d4',
+      status: 'Success',
+      time: '350ms',
+      parameters: {
+        'Commit Bot': 'github-actions[bot]',
+        'Target Path': 'data/archive/YYYY/MM/DD.md',
+        'Action': 'Git Add, Commit, Push main',
+        'Output State': 'Decentralized git archive updated'
+      },
+      description: 'Commits files directly to the code repository. It saves a snapshot of history.json, latest.md, and the custom daily markdown file, and pushes it back to main to maintain database versioning.',
+      svg: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+          <circle cx="18" cy="18" r="3" />
+          <circle cx="6" cy="6" r="3" />
+          <circle cx="6" cy="18" r="3" />
+          <path d="M6 9v6" />
+          <path d="M9 6h6a3 3 0 0 1 3 3v6" />
+        </svg>
+      )
+    },
+    {
+      id: 'webhook',
+      name: 'POST Webhook',
+      subtitle: 'FastAPI Dispatcher',
+      iconColor: '#10b981',
+      status: 'Success',
+      time: '180ms',
+      parameters: {
+        'HTTP Method': 'POST',
+        'URL Endpoint': '/api/notify-subscribers',
+        'Auth Header': 'X-Auth-Token secret',
+        'Payload': 'DailyBriefGroup object'
+      },
+      description: 'Invokes the subscriber dispatch listener on the FastAPI backend server. Transmits the payload containing the latest briefs and authorizes using the NOTIFY_SECRET_TOKEN.',
+      svg: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+          <path d="M20 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2z" />
+          <line x1="6" y1="6" x2="6.01" y2="6" />
+          <line x1="6" y1="18" x2="6.01" y2="18" />
+        </svg>
+      )
+    },
+    {
+      id: 'smtp',
+      name: 'SMTP Mailer',
+      subtitle: 'Brevo Dispatch',
+      iconColor: '#a855f7',
+      status: 'Success',
+      time: '2.5s',
+      parameters: {
+        'Mailing Engine': 'Brevo SMTP Dispatcher',
+        'Query Target': 'subscribers.db SQLite table',
+        'Template': 'Dynamic HTML briefing builder',
+        'Output State': 'Emails sent to active readers'
+      },
+      description: 'Coordinates email delivery. FastAPI reads the SQLite subscription directory and triggers SMTP broadcasts containing styled briefings to each active reader.',
+      svg: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+      )
+    }
+  ];
+
+  const currentNode = n8nNodes.find(n => n.id === selectedNode);
+
   return (
     <div className="tech-details-container animate-fade-in">
       <header className="tech-header text-center">
@@ -218,108 +334,111 @@ export default function TechnicalDetails() {
         </div>
       </section>
 
-      {/* End-to-End Orchestration Pipeline */}
+      {/* End-to-End Orchestration Pipeline (n8n-style Canvas) */}
       <section className="tech-section margin-bottom-lg">
         <h3 className="section-title">End-to-End Orchestration Pipeline</h3>
-        <p className="section-subtitle">The complete data lifecycle from schedule trigger to reader inboxes:</p>
+        <p className="section-subtitle">Click on any node in the automated curation canvas to view its configuration, settings, and output states:</p>
         
-        <div className="orchestration-timeline">
-          <div className="timeline-step-card glass-card border-scout">
-            <div className="step-card-header">
-              <span className="step-icon-badge color-blue">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-              </span>
-              <div className="step-header-text">
-                <span className="step-number">STEP 1</span>
-                <h4>GitHub Actions Trigger (Cron Schedule)</h4>
-              </div>
-            </div>
-            <p className="step-description">
-              Every Monday, Wednesday, and Friday at <strong>03:30 UTC</strong>, a scheduled GitHub Actions workflow fires automatically. The workflow checks out the code repository, sets up Python 3.12, and runs the agent pipeline using the <code>uv</code> package manager for rapid dependency installation.
-            </p>
+        {/* Status Indicator */}
+        <div className="n8n-canvas-status">
+          <div className="status-indicator">
+            <span className="status-dot"></span>
+            <span>Workflow Status: <strong>Successful</strong></span>
           </div>
-
-          <div className="timeline-step-card glass-card border-skeptic">
-            <div className="step-card-header">
-              <span className="step-icon-badge color-orange">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>
-              </span>
-              <div className="step-header-text">
-                <span className="step-number">STEP 2</span>
-                <h4>LangGraph Multi-Agent Execution</h4>
-              </div>
-            </div>
-            <p className="step-description">
-              The pipeline executes the LangGraph state graph. Using Google Gemini 1.5 and Mistral models, the graph coordinates the six specialized agent nodes to crawl forums, filter hype, fetch engineering documentation, verify links, evaluate developer utility, and edit summaries.
-            </p>
-          </div>
-
-          <div className="timeline-step-card glass-card border-research">
-            <div className="step-card-header">
-              <span className="step-icon-badge color-teal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
-                  <circle cx="18" cy="18" r="3" />
-                  <circle cx="6" cy="6" r="3" />
-                  <circle cx="6" cy="18" r="3" />
-                  <path d="M6 9v6" />
-                  <path d="M9 6h6a3 3 0 0 1 3 3v6" />
-                </svg>
-              </span>
-              <div className="step-header-text">
-                <span className="step-number">STEP 3</span>
-                <h4>Git-Backed Database Commit</h4>
-              </div>
-            </div>
-            <p className="step-description">
-              The finalized briefings are appended to the history database and stored as static Markdown archives inside <code>data/archive/YYYY/MM/DD.md</code>. The workflow automatically commits and pushes these files back to GitHub to keep a git-backed archive.
-            </p>
-          </div>
-
-          <div className="timeline-step-card glass-card border-verify">
-            <div className="step-card-header">
-              <span className="step-icon-badge color-green">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
-                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-                  <path d="M20 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2z" />
-                  <line x1="6" y1="6" x2="6.01" y2="6" />
-                  <line x1="6" y1="18" x2="6.01" y2="18" />
-                </svg>
-              </span>
-              <div className="step-header-text">
-                <span className="step-number">STEP 4</span>
-                <h4>FastAPI Notification Webhook</h4>
-              </div>
-            </div>
-            <p className="step-description">
-              Once file archives are saved, the agent runner fires a secure POST request to the FastAPI backend API at <code>/api/notify-subscribers</code>. The payload contains the new briefs, signed with a secure token (<code>X-Auth-Token</code>) to authenticate the dispatch command.
-            </p>
-          </div>
-
-          <div className="timeline-step-card glass-card border-editor">
-            <div className="step-card-header">
-              <span className="step-icon-badge color-violet">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" style={{ display: 'block' }}>
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </span>
-              <div className="step-header-text">
-                <span className="step-number">STEP 5</span>
-                <h4>Mailing List Dispatch (SMTP)</h4>
-              </div>
-            </div>
-            <p className="step-description">
-              The FastAPI backend receives the webhook, pulls active subscriber emails from SQLite (<code>subscribers.db</code>), formats the brief group as clean HTML bulletins, and dispatches them via SMTP using Brevo to land in reader inboxes.
-            </p>
+          <div className="status-meta">
+            <span>5 Active Nodes</span>
+            <span className="meta-divider">|</span>
+            <span>Total Duration: <strong>17.2s</strong></span>
           </div>
         </div>
+
+        {/* n8n Node Canvas */}
+        <div className="n8n-canvas">
+          <div className="n8n-nodes-flow">
+            {n8nNodes.map((node, index) => (
+              <React.Fragment key={node.id}>
+                <div 
+                  className={`n8n-node ${selectedNode === node.id ? 'n8n-node-selected' : ''}`}
+                  onClick={() => setSelectedNode(node.id)}
+                  style={{ '--node-color': node.iconColor }}
+                >
+                  {/* Ports */}
+                  {index > 0 && <span className="node-port-in"></span>}
+                  {index < n8nNodes.length - 1 && <span className="node-port-out"></span>}
+                  
+                  {/* Node Header */}
+                  <div className="node-header">
+                    <div className="node-icon-badge" style={{ backgroundColor: `${node.iconColor}15`, color: node.iconColor }}>
+                      {node.svg}
+                    </div>
+                    <div className="node-status-tick">✓</div>
+                  </div>
+                  
+                  {/* Node Content */}
+                  <div className="node-body">
+                    <div className="node-title">{node.name}</div>
+                    <div className="node-subtitle">{node.subtitle}</div>
+                  </div>
+                  
+                  {/* Node Footer */}
+                  <div className="node-footer">
+                    <span className="node-execution-time">{node.time}</span>
+                  </div>
+                </div>
+                
+                {index < n8nNodes.length - 1 && (
+                  <div className="n8n-connector">
+                    <svg width="40" height="20" viewBox="0 0 40 20" fill="none" style={{ display: 'block' }}>
+                      <path d="M0 10H40" stroke="url(#wire-grad)" strokeWidth="2.5" strokeDasharray="5 5" className="wire-flow" />
+                      <defs>
+                        <linearGradient id="wire-grad" x1="0" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                          <stop stopColor={node.iconColor} />
+                          <stop offset="1" stopColor={n8nNodes[index+1].iconColor} />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+
+        {/* Parameter Editor Drawer */}
+        {currentNode && (
+          <div className="n8n-parameter-editor glass animate-fade-in" style={{ '--editor-color': currentNode.iconColor }}>
+            <div className="editor-header">
+              <div className="editor-title-group">
+                <span className="editor-icon" style={{ color: currentNode.iconColor }}>{currentNode.svg}</span>
+                <div>
+                  <h4>{currentNode.name} Config Panel</h4>
+                  <p className="editor-subtitle">Node Parameters & State variables</p>
+                </div>
+              </div>
+              <span className="editor-status-badge">Active Success</span>
+            </div>
+            
+            <p className="editor-desc">{currentNode.description}</p>
+            
+            <div className="editor-parameters-list">
+              <h5 className="parameters-heading">Node Parameters</h5>
+              <div className="parameters-table">
+                {Object.entries(currentNode.parameters).map(([key, value]) => (
+                  <div key={key} className="parameter-row">
+                    <span className="parameter-key">{key}</span>
+                    <span className="parameter-value">
+                      {value.startsWith('http') || value.startsWith('/') || value.includes('python') || value.includes('json') || value.includes('.db') || value.includes('.md') ? (
+                        <code>{value}</code>
+                      ) : (
+                        value
+                      )}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Author/Backstory section */}
