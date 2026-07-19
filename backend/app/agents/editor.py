@@ -52,7 +52,7 @@ RULES:
    - Tone: Write in an engaging, conversational, developer-friendly tech-blogger tone, NOT a dry academic review style.
    - ELI5 Rule (Explain Like I'm 5): Simplify all complex technical concepts. Do not use advanced mathematical/ML terms (like GRPO, autograd, etc.) without explaining them in a simple, one-sentence analogy.
    - Focus on Practical Application, Not Theory: Frame the description and "Why it matters" around *what developers can build or save* using this, rather than the theoretical backend mechanisms.
-   - Prepend TL;DR: You MUST prepend a 1-sentence bold TL;DR summary at the very beginning of the "description" field. Example format: "**TL;DR: You can now train AI models on a single cheap laptop instead of a server farm.** \n\nWhat happened..."
+   - Prepend Summary: You MUST prepend a 1-sentence bold summary at the very beginning of the "description" field. Do NOT include the prefix label "TL;DR:". Example format: "**You can now train AI models on a single cheap laptop instead of a server farm.** \n\nWhat happened..."
 
 Candidates list:
 {candidates_json}

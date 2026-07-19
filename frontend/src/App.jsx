@@ -14,96 +14,7 @@ const getFaviconUrl = (url) => {
   }
 };
 
-const MOCK_BRIEFS = [
-  {
-    date: '2026-07-22',
-    published_at: '2026-07-22T06:00:00Z',
-    briefs: [
-      {
-        category: 'Something Changed',
-        title: 'React 19 Release Candidate: Dynamic Actions & Form States',
-        description: '**TL;DR: React 19 introduces automatic state management for async functions in form submits.** No more manually coding pending states, success notifications, or error bounds; React handles form actions natively.',
-        why_it_matters: 'Slashes boilerplate code in frontend forms by moving async status handling and loading hooks directly into the browser component runtime.',
-        who_cares: 'React developers, frontend engineers, UI builders.',
-        verdict: 'INTEGRATE',
-        confidence: 96,
-        source_url: 'https://github.com/facebook/react'
-      },
-      {
-        category: 'Hidden Gem',
-        title: 'PocketBase v0.22: Lightweight Go Backend with Single-File Sync',
-        description: '**TL;DR: PocketBase is a tiny self-hosted backend that fits in a single file.** It combines an embedded SQLite database, real-time subscriptions, auth services, and dashboard controls into a single executable.',
-        why_it_matters: 'Perfect for students and hackathon builders who want a full backend database and API setup in 5 seconds without server configuration.',
-        who_cares: 'Indie creators, students, rapid prototyping engineers.',
-        verdict: 'INTEGRATE',
-        confidence: 94,
-        source_url: 'https://github.com/pocketbase/pocketbase'
-      }
-    ]
-  },
-  {
-    date: '2026-07-20',
-    published_at: '2026-07-20T06:00:00Z',
-    briefs: [
-      {
-        category: 'Worth Knowing',
-        title: 'Tailwind CSS v4.0 Alpha: CSS-first Configuration Engine',
-        description: '**TL;DR: Tailwind is changing from Javascript-based config to pure CSS directives.** The compiler has been rewritten in Rust, compiling utility stylesheets up to 10x faster.',
-        why_it_matters: 'Significantly improves hot-module replacement speed in large projects, moving all tool rules into native CSS variables.',
-        who_cares: 'Web designers, frontend developers, build engineers.',
-        verdict: 'WATCH',
-        confidence: 89,
-        source_url: 'https://github.com/tailwindlabs/tailwindcss'
-      },
-      {
-        category: 'Research Idea',
-        title: 'Designing Resilient Postgres Schema Migrations without Downtime',
-        description: '**TL;DR: A practical guide on how to add database fields to huge Postgres tables without locks.** Explains how to separate migration steps into safe statements to ensure your app stays online.',
-        why_it_matters: 'Prevents database lockups on production servers when updating table structure, keeping services fully operational.',
-        who_cares: 'Backend engineers, database administrators, devops teams.',
-        verdict: 'READ',
-        confidence: 91,
-        source_url: 'https://github.com/sashabaranov/pg-migrations'
-      }
-    ]
-  },
-  {
-    date: '2026-07-18',
-    published_at: '2026-07-18T06:00:00Z',
-    briefs: [
-      {
-        category: 'Worth Knowing',
-        title: 'Isomorphic Labs’ Drug Design Engine Outperforms AlphaFold 3',
-        description: '**TL;DR: A new AI engine doubles protein-ligand prediction accuracy and slashes drug discovery costs by running in real-time.** Isomorphic Labs’ Drug Design Engine leapfrogs AlphaFold 3 with twice the accuracy for predicting how molecules bind to proteins.',
-        why_it_matters: 'Faster, cheaper predictions mean researchers can test more hypotheses in hours instead of weeks, potentially accelerating life-saving drug development.',
-        who_cares: 'AI/ML engineers in biotech, computational chemists, drug discovery platform teams.',
-        verdict: 'INTEGRATE',
-        confidence: 90,
-        source_url: 'https://www.isomorphiclabs.com'
-      },
-      {
-        category: 'Hidden Gem',
-        title: 'Static Search Trees: 40x Faster Than Binary Search',
-        description: '**TL;DR: A new data structure crushes binary search for static datasets—no updates needed.** Static search trees (S-trees) deliver near-instant lookups by pre-optimizing memory layouts.',
-        why_it_matters: 'For systems where search speed is critical—think CDN routing, key-value stores, or analytics—this could eliminate bottlenecks.',
-        who_cares: 'Database engineers, low-latency system architects, search engine developers.',
-        verdict: 'INTEGRATE',
-        confidence: 90,
-        source_url: 'https://curiouscoding.nl/posts/static-search-tree/'
-      },
-      {
-        category: 'Research Idea',
-        title: 'SQLite’s ANALYZE Command: The Secret to Instant Queries',
-        description: '**TL;DR: Running ANALYZE on SQLite can turn painfully slow queries into lightning-fast ones.** SQLite’s ANALYZE command reveals hidden inefficiencies in your database.',
-        why_it_matters: 'Even ‘small sites’ suffer from slow queries. This tool exposes bottlenecks in your SQLite setup, letting you fix them with a single command.',
-        who_cares: 'Backend developers, Django/ORM users, SQLite adopters.',
-        verdict: 'INTEGRATE',
-        confidence: 90,
-        source_url: 'https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite/'
-      }
-    ]
-  }
-];
+const MOCK_BRIEFS = [];
 
 export default function App() {
   const [history, setHistory] = useState([]);
@@ -116,39 +27,48 @@ export default function App() {
 
   useEffect(() => {
     async function fetchBriefs() {
+      let fetchedHistory = [];
       try {
         const response = await fetch(`${API_BASE}/briefs/archive?limit=25`);
         if (response.ok) {
           const data = await response.json();
           if (data && data.length > 0) {
-            setHistory(data);
-            setSelectedDate(data[0].date);
-            setLoading(false);
-            return;
+            fetchedHistory = data;
           }
         }
       } catch (err) {
         console.warn('FastAPI backend not reachable, trying to load local static data...');
       }
       
-      try {
-        const response = await fetch('/data/history.json');
-        if (response.ok) {
-          const data = await response.json();
-          if (data && data.length > 0) {
-            const list = data.reverse();
-            setHistory(list);
-            setSelectedDate(list[0].date);
-            setLoading(false);
-            return;
+      if (fetchedHistory.length === 0) {
+        try {
+          const response = await fetch('/data/history.json');
+          if (response.ok) {
+            const data = await response.json();
+            if (data && data.length > 0) {
+              fetchedHistory = data.reverse();
+            }
           }
+        } catch (err) {
+          console.warn('Local static file not found, using default pre-populated mock briefings.');
         }
-      } catch (err) {
-        console.warn('Local static file not found, using default pre-populated mock briefings.');
       }
       
-      setHistory(MOCK_BRIEFS);
-      setSelectedDate(MOCK_BRIEFS[0].date);
+      // Combine: keep fetched ones, and add mock ones that don't have the same date as a fetched one
+      const fetchedDates = new Set(fetchedHistory.map(item => item.date));
+      const filteredMocks = MOCK_BRIEFS.filter(item => !fetchedDates.has(item.date));
+      
+      const combined = [...filteredMocks, ...fetchedHistory];
+      // Sort combined history by date descending
+      combined.sort((a, b) => b.date.localeCompare(a.date));
+      
+      if (combined.length > 0) {
+        setHistory(combined);
+        setSelectedDate(combined[0].date);
+      } else {
+        setHistory(MOCK_BRIEFS);
+        setSelectedDate(MOCK_BRIEFS[0].date);
+      }
       setLoading(false);
     }
     fetchBriefs();
@@ -313,7 +233,7 @@ export default function App() {
           >
             {history.map(group => (
               <option key={group.date} value={group.date}>
-                📅 {group.date} {group.date === history[0]?.date ? '(Latest)' : ''}
+                {group.date}{group.isDemo ? ' (Demo)' : ''}{group.date === history[0]?.date ? ' (Latest)' : ''}
               </option>
             ))}
           </select>
