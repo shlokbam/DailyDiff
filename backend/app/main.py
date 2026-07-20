@@ -88,7 +88,7 @@ def unsubscribe_via_link(email: str):
             <div class="container">
                 <h2>Unsubscribe Error</h2>
                 <p>This email address was not found in our active subscriber directory.</p>
-                <a href="https://daily-diff-pi.vercel.app">Go to DailyDiff Dashboard &rarr;</a>
+                <a href="https://dailydiff.in">Go to DailyDiff Dashboard &rarr;</a>
             </div>
         </body>
         </html>
@@ -122,7 +122,7 @@ def unsubscribe_via_link(email: str):
             <h2>You Have Been Unsubscribed</h2>
             <p>We are sorry to see you go! You have been successfully removed from our thrice-weekly Tech Curation briefings.</p>
             <p style="font-size: 13px; color: #6b7280; margin-bottom: 25px;">A confirmation email has been sent to your inbox.</p>
-            <a href="https://daily-diff-pi.vercel.app">Back to DailyDiff Dashboard &rarr;</a>
+            <a href="https://dailydiff.in">Back to DailyDiff Dashboard &rarr;</a>
         </div>
     </body>
     </html>
