@@ -62,8 +62,8 @@
       {
         "category": "Worth Knowing",
         "title": "Unsloth Studio: Train AI Models Locally Without Cloud Costs",
-        "description": "**Unsloth Studio lets you fine-tune and run cutting-edge AI models like Gemma 4 or Qwen3.6 on your own machine—no cloud required.** Unsloth Studio is a web UI that simplifies local AI training and inference, supporting text, audio, vision, and embedding models across Windows, Linux, and macOS. It leverages GGUF and LoRA adapters to make heavy AI workloads feasible on consumer hardware.",
-        "why_it_matters": "It slashes AI development costs by eliminating cloud dependencies, speeds up experimentation with open models, and keeps sensitive data private—all while running on hardware you already own. Imagine training a model overnight instead of waiting for cloud credits to reset.",
+        "description": "**Unsloth Studio lets you fine-tune and run cutting-edge AI models like Gemma 4 or Qwen3.6 on your own machine\u2014no cloud required.** Unsloth Studio is a web UI that simplifies local AI training and inference, supporting text, audio, vision, and embedding models across Windows, Linux, and macOS. It leverages GGUF and LoRA adapters to make heavy AI workloads feasible on consumer hardware.",
+        "why_it_matters": "It slashes AI development costs by eliminating cloud dependencies, speeds up experimentation with open models, and keeps sensitive data private\u2014all while running on hardware you already own. Imagine training a model overnight instead of waiting for cloud credits to reset.",
         "who_cares": "AI engineers, ML researchers, and platform teams focused on local-first AI, privacy-sensitive apps, or cost optimization in model training.",
         "verdict": "INTEGRATE",
         "confidence": 90,
@@ -72,7 +72,7 @@
       {
         "category": "Hidden Gem",
         "title": "Coolify: Self-Host Your Own Heroku/Vercel Alternative",
-        "description": "**Coolify turns any server into a Heroku-like PaaS—deploy apps, databases, and services with one click, no vendor lock-in.** This open-source platform lets you host static sites, full-stack apps, and 280+ services (like PostgreSQL or Redis) on your own VPS, bare metal, or even a Raspberry Pi. It’s a drop-in replacement for cloud platforms like Netlify or Vercel.",
+        "description": "**Coolify turns any server into a Heroku-like PaaS\u2014deploy apps, databases, and services with one click, no vendor lock-in.** This open-source platform lets you host static sites, full-stack apps, and 280+ services (like PostgreSQL or Redis) on your own VPS, bare metal, or even a Raspberry Pi. It\u2019s a drop-in replacement for cloud platforms like Netlify or Vercel.",
         "why_it_matters": "It gives developers full control over their infrastructure, cuts cloud bills to near-zero, and avoids the headaches of third-party platform dependencies. Perfect for indie hackers or teams tired of paying for idle resources.",
         "who_cares": "DevOps engineers, backend developers, platform teams, and indie hackers who want cost-effective, flexible deployments without sacrificing ease of use.",
         "verdict": "INTEGRATE",
@@ -82,8 +82,8 @@
       {
         "category": "Research Idea",
         "title": "Gea: A React-Level Framework Without the Virtual DOM Overhead",
-        "description": "**Gea proves you can build reactive UIs without a virtual DOM—and still keep your bundle size tiny.** This JavaScript framework uses compile-time JSX transforms, proxy-based stores, and surgical DOM patching to deliver reactivity without runtime bloat. It’s a radical rethink of how lightweight interactive apps can be.",
-        "why_it_matters": "For performance-obsessed teams, Gea challenges the status quo by showing that reactivity doesn’t have to mean heavy bundles. Ideal for dashboards, PWAs, or edge deployments where every kilobyte counts.",
+        "description": "**Gea proves you can build reactive UIs without a virtual DOM\u2014and still keep your bundle size tiny.** This JavaScript framework uses compile-time JSX transforms, proxy-based stores, and surgical DOM patching to deliver reactivity without runtime bloat. It\u2019s a radical rethink of how lightweight interactive apps can be.",
+        "why_it_matters": "For performance-obsessed teams, Gea challenges the status quo by showing that reactivity doesn\u2019t have to mean heavy bundles. Ideal for dashboards, PWAs, or edge deployments where every kilobyte counts.",
         "who_cares": "Frontend engineers, performance-focused developers, and teams building lightweight interactive applications.",
         "verdict": "READ",
         "confidence": 88,
@@ -92,9 +92,9 @@
       {
         "category": "Something Changed",
         "title": "Lerd: A Docker-Free, Rootless PHP Dev Environment",
-        "description": "**Lerd replaces Docker with a simpler, rootless PHP dev environment—automatic HTTPS, per-project PHP versions, and one-command setup.** This Podman-native tool spins up isolated PHP/Node environments with .test domains and TLS, all without sudo or bloated containers. It’s a breath of fresh air for Laravel, WordPress, or Symfony devs.",
-        "why_it_matters": "It cuts through Docker’s complexity and system pollution, making local PHP development faster and safer. No more wrestling with Dockerfiles or permission errors—just code and go.",
-        "who_cares": "PHP developers (especially Laravel/Symfony/WordPress users), DevOps teams, and engineers frustrated with Docker’s overhead.",
+        "description": "**Lerd replaces Docker with a simpler, rootless PHP dev environment\u2014automatic HTTPS, per-project PHP versions, and one-command setup.** This Podman-native tool spins up isolated PHP/Node environments with .test domains and TLS, all without sudo or bloated containers. It\u2019s a breath of fresh air for Laravel, WordPress, or Symfony devs.",
+        "why_it_matters": "It cuts through Docker\u2019s complexity and system pollution, making local PHP development faster and safer. No more wrestling with Dockerfiles or permission errors\u2014just code and go.",
+        "who_cares": "PHP developers (especially Laravel/Symfony/WordPress users), DevOps teams, and engineers frustrated with Docker\u2019s overhead.",
         "verdict": "INTEGRATE",
         "confidence": 90,
         "source_url": "https://github.com/lerd-env/lerd"
@@ -102,12 +102,68 @@
       {
         "category": "Keep an Eye On This",
         "title": "RTK: Shrink LLM Token Costs by 60-90% for Dev Commands",
-        "description": "**RTK is a CLI proxy that slashes LLM token usage by 60-90%—saving you money and speeding up AI-driven workflows.** This single Rust binary filters and compresses command outputs (like `git diff` or `npm install`), cutting API costs and latency without losing utility. It’s a game-changer for teams relying on LLMs for automation.",
-        "why_it_matters": "AI-driven dev tools are powerful but expensive. RTK makes them affordable at scale by drastically reducing token waste—imagine cutting your monthly LLM bill by 80%.",
+        "description": "**RTK is a CLI proxy that slashes LLM token usage by 60-90%\u2014saving you money and speeding up AI-driven workflows.** This single Rust binary filters and compresses command outputs (like `git diff` or `npm install`), cutting API costs and latency without losing utility. It\u2019s a game-changer for teams relying on LLMs for automation.",
+        "why_it_matters": "AI-driven dev tools are powerful but expensive. RTK makes them affordable at scale by drastically reducing token waste\u2014imagine cutting your monthly LLM bill by 80%.",
         "who_cares": "AI engineers, agent developers, platform teams, DevOps engineers, and cost-conscious engineering leaders using LLMs for automation.",
         "verdict": "WATCH",
         "confidence": 90,
         "source_url": "https://github.com/rtk-ai/rtk"
+      }
+    ]
+  },
+  {
+    "date": "2026-07-20",
+    "published_at": "2026-07-20T06:34:38.839560Z",
+    "briefs": [
+      {
+        "category": "Worth Knowing",
+        "title": "Gitea 1.0: The Self-Hosted GitHub Alternative You Can Run Anywhere",
+        "description": "**A lightweight, self-hosted GitHub alternative with built-in CI/CD, package registry, and project management\u2014now at 1.0 stability.** Gitea is a painless, all-in-one Git service that runs on anything from a Raspberry Pi to enterprise servers, offering full Git compatibility without vendor lock-in.",
+        "why_it_matters": "Gitea eliminates dependency on cloud Git platforms by providing a complete, self-hosted Git solution with built-in CI/CD, package registry, and collaboration tools. Its cross-platform Go architecture ensures seamless deployment across diverse environments, making it ideal for teams prioritizing data sovereignty or working in restricted environments.",
+        "who_cares": "DevOps engineers, platform teams, open-source maintainers, and developers seeking self-hosted Git solutions with CI/CD integration.",
+        "verdict": "INTEGRATE",
+        "confidence": 95,
+        "source_url": "https://github.com/go-gitea/gitea"
+      },
+      {
+        "category": "Hidden Gem",
+        "title": "Unsloth Studio: Train AI Models Locally Without the Cloud Tax",
+        "description": "**A web UI for fine-tuning and running open models like Gemma or Qwen locally\u2014no cloud dependency required.** Unsloth Studio simplifies local AI workflows by providing a unified interface for training, optimizing, and deploying quantized models (GGUF) or LoRA adapters on your own hardware.",
+        "why_it_matters": "Unsloth Studio democratizes AI model training by removing the need for expensive cloud GPUs. Developers can fine-tune models locally, iterate faster, and avoid recurring cloud costs\u2014all while maintaining full data privacy. Think of it as a 'Photoshop for AI models' that runs on your laptop.",
+        "who_cares": "AI engineers, ML researchers, and platform teams focused on edge deployment, model optimization, or offline-capable AI systems.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://github.com/unslothai/unsloth"
+      },
+      {
+        "category": "Research Idea",
+        "title": "SpacetimeDB: The Database That Thinks Like a Game Engine",
+        "description": "**A Rust-based runtime that merges database, pub/sub, and compute into a single system\u2014redefining real-time applications.** SpacetimeDB eliminates the need for separate backend architectures by handling state, events, and logic in one place, reducing latency to near-zero for distributed systems.",
+        "why_it_matters": "SpacetimeDB challenges traditional backend architectures by treating data as a live, reactive system. Instead of juggling databases, message queues, and APIs, developers can build real-time multiplayer games or collaborative tools with a fraction of the usual complexity. It\u2019s like having a 'game engine for backend development.'",
+        "who_cares": "Game developers, real-time collaborative tool engineers, backend architects building stateful services, and Rust developers seeking to simplify distributed system complexity.",
+        "verdict": "READ",
+        "confidence": 80,
+        "source_url": "https://github.com/clockworklabs/SpacetimeDB"
+      },
+      {
+        "category": "Something Changed",
+        "title": "Coolify 3.0: Deploy Anything\u2014Like Vercel, But on Your Own Servers",
+        "description": "**A self-hosted PaaS alternative to Vercel, Heroku, and Netlify\u2014now with 280+ one-click services and SSH-based deployments.** Coolify 3.0 turns any server into a cloud-like deployment platform, supporting static sites, databases, full-stack apps, and pre-configured services with zero vendor lock-in.",
+        "why_it_matters": "Coolify 3.0 makes it trivial to deploy applications, databases, and services on your own hardware while retaining the ease of cloud platforms. Need to run a PostgreSQL database or a Next.js app? One click. Want to migrate from Heroku? Done. It\u2019s the ultimate tool for teams that want cloud flexibility without the cloud bill.",
+        "who_cares": "DevOps engineers, platform teams, backend developers, and infrastructure architects who need flexible, self-managed deployment solutions.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://github.com/coollabsio/coolify"
+      },
+      {
+        "category": "Keep an Eye On This",
+        "title": "Open WebUI: The Local-First AI Interface for Your Private LLMs",
+        "description": "**A self-hosted, offline-capable AI platform that bridges local LLMs (like Ollama) with production-grade workflows.** Open WebUI provides a user-friendly interface for running, fine-tuning, and deploying AI models\u2014all without sending data to the cloud.",
+        "why_it_matters": "Open WebUI solves the biggest pain point in local AI: usability. While tools like Ollama let you run models locally, Open WebUI turns them into a full-fledged, customizable AI platform with built-in RAG, plugins, and multi-model support. It\u2019s the missing link between 'playing with models' and 'building production AI.'",
+        "who_cares": "AI engineers, DevOps/platform teams, agent developers, and open-source contributors focused on local-first AI deployments.",
+        "verdict": "WATCH",
+        "confidence": 85,
+        "source_url": "https://github.com/open-webui/open-webui"
       }
     ]
   }
