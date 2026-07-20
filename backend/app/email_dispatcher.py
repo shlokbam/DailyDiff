@@ -109,12 +109,16 @@ def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
                 "accept": "application/json"
             }
             sender_email = SMTP_EMAIL if SMTP_EMAIL else "shlokbam19103@gmail.com"
+            sender = {
+                "name": "DailyDiff",
+                "email": sender_email
+            }
             
             for recipient in emails:
                 unsub_url = f"{base_url}/api/unsubscribe?email={recipient}"
                 personalized_html = html_content.replace("{{UNSUBSCRIBE_URL}}", unsub_url)
                 payload = {
-                    "sender": {"name": "DailyDiff", "email": sender_email},
+                    "sender": sender,
                     "to": [{"email": recipient}],
                     "subject": f"[DailyDiff] Tech Intelligence Brief for {brief_group.date}",
                     "htmlContent": personalized_html
@@ -247,8 +251,12 @@ def dispatch_unsubscribe_confirmation(email: str):
                 "accept": "application/json"
             }
             sender_email = SMTP_EMAIL if SMTP_EMAIL else "shlokbam19103@gmail.com"
+            sender = {
+                "name": "DailyDiff",
+                "email": sender_email
+            }
             payload = {
-                "sender": {"name": "DailyDiff", "email": sender_email},
+                "sender": sender,
                 "to": [{"email": email}],
                 "subject": "[DailyDiff] Unsubscribe Confirmation",
                 "htmlContent": html_content
