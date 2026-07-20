@@ -7,6 +7,18 @@ from app.database import read_history
 
 logger = logging.getLogger("DailyDiff.skeptic")
 
+def get_published_urls() -> set:
+    """Read history.json and extract all normalized source URLs that have already been published."""
+    history = read_history()
+    published = set()
+    for day in history:
+        for b in day.get("briefs", []):
+            url = b.get("source_url")
+            if url:
+                norm_url = url.strip().rstrip("/").lower()
+                published.add(norm_url)
+    return published
+
 def extract_history_summary() -> str:
     """Read history.json and build a compact summary of recently published topics."""
     history = read_history()
@@ -33,7 +45,23 @@ def deduplicate_and_filter_node(state: AgentState) -> Dict[str, Any]:
     if not raw_signals:
         logger.warning("No raw signals found to evaluate.")
         return {"candidates": []}
+
+    published_urls = get_published_urls()
+    
+    # Pre-filter: algorithmically remove signals with URLs already published in history
+    fresh_signals = []
+    for s in raw_signals:
+        signal_url = s.get("url", "").strip().rstrip("/").lower()
+        if signal_url and signal_url in published_urls:
+            logger.info(f"Algorithmic deduplication skipped past signal: {s.get('title')} ({s.get('url')})")
+            continue
+        fresh_signals.append(s)
+
+    if not fresh_signals:
+        logger.warning("All raw signals were already published in past briefs.")
+        return {"candidates": []}
         
+    raw_signals = fresh_signals
     history_summary = extract_history_summary()
     
     # Format candidates for the LLM

@@ -17,13 +17,14 @@ def get_scout_window_days() -> int:
 def scout_github(days_ago: int) -> List[Dict[str, Any]]:
     """Scout GitHub for active/trending repositories pushed recently."""
     since_date = (datetime.utcnow() - timedelta(days=days_ago)).strftime("%Y-%m-%d")
+    created_since = (datetime.utcnow() - timedelta(days=45)).strftime("%Y-%m-%d")
     # Query for repositories matching key developer/utility topics
     queries = [
-        f"stars:>100 pushed:>{since_date} topic:self-hosted",
-        f"stars:>100 pushed:>{since_date} topic:web-development",
-        f"stars:>100 pushed:>{since_date} topic:developer-experience",
-        f"stars:>100 pushed:>{since_date} topic:productivity",
-        f"stars:>150 pushed:>{since_date} topic:developer-tools",
+        f"stars:>30 pushed:>{since_date} created:>{created_since} topic:self-hosted",
+        f"stars:>50 pushed:>{since_date} created:>{created_since} topic:web-development",
+        f"stars:>50 pushed:>{since_date} topic:developer-experience",
+        f"stars:>30 pushed:>{since_date} created:>{created_since} topic:productivity",
+        f"stars:>100 pushed:>{since_date} topic:developer-tools",
     ]
     
     headers = {"User-Agent": "DailyDiff-Agent"}
