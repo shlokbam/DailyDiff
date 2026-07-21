@@ -76,7 +76,7 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
                         <tr>
                             <td align="center" style="padding-top: 30px; border-top: 1px solid #1f2937; font-size: 12px; color: #6b7280;">
                                 <p style="margin: 0 0 5px 0;">You received this because you subscribed to DailyDiff Tech Intelligence.</p>
-                                <p style="margin: 0;"><a href="https://daily-diff-pi.vercel.app" style="color: #60a5fa; text-decoration: none;">View Dashboard</a> | <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a></p>
+                                <p style="margin: 0;"><a href="https://dailydiff.in" style="color: #60a5fa; text-decoration: none;">View Dashboard</a> | <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a></p>
                             </td>
                         </tr>
                     </table>
@@ -229,7 +229,7 @@ def dispatch_unsubscribe_confirmation(email: str):
                         </tr>
                         <tr>
                             <td align="center" style="padding-top: 25px; border-top: 1px solid #1f2937; font-size: 12px; color: #6b7280;">
-                                <p style="margin: 0;"><a href="https://daily-diff-pi.vercel.app" style="color: #60a5fa; text-decoration: none; font-weight: 500;">Visit Dashboard</a></p>
+                                <p style="margin: 0;"><a href="https://dailydiff.in" style="color: #60a5fa; text-decoration: none; font-weight: 500;">Visit Dashboard</a></p>
                             </td>
                         </tr>
                     </table>
