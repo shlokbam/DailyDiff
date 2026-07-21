@@ -8,7 +8,7 @@ from app.schemas import DailyBriefGroup
 logger = logging.getLogger("DailyDiff.email")
 
 def build_email_html(brief_group: DailyBriefGroup) -> str:
-    """Compile the daily briefs into a sleek, mobile-optimized, compact HTML email layout."""
+    """Compile the daily briefs into a beautiful, clean, responsive HTML email layout."""
     date = brief_group.date
     briefs = brief_group.briefs
     
@@ -23,26 +23,26 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
     items_html = ""
     for item in briefs:
         color = category_colors.get(item.category, "#3b82f6")
-        source_link = f'<a href="{item.source_url}" style="color: #60a5fa; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-block; margin-top: 6px;">View Source &rarr;</a>' if item.source_url else ""
+        source_link = f'<p style="margin-top: 10px;"><a href="{item.source_url}" style="color: #60a5fa; text-decoration: none; font-weight: 500;">View Source Reference &rarr;</a></p>' if item.source_url else ""
         
         items_html += f"""
-        <div style="margin-bottom: 16px; padding: 14px 16px; border-left: 3px solid {color}; background-color: #1a1d29; border-radius: 6px;">
-            <div style="margin-bottom: 6px;">
-                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: {color}; background-color: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 3px;">
+        <div style="margin-bottom: 30px; padding: 20px; border-left: 4px solid {color}; background-color: #1e2130; border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: {color}; background-color: rgba(255,255,255,0.04); padding: 3px 8px; border-radius: 3px;">
                     {item.category}
                 </span>
-                <span style="font-size: 11px; color: #9ca3af; margin-left: 8px;">
-                    {item.verdict} &bull; {item.confidence}% confidence
+                <span style="font-size: 12px; color: #9ca3af;">
+                    Verdict: <strong>{item.verdict}</strong> | Confidence: {item.confidence}%
                 </span>
             </div>
-            <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: 600; color: #ffffff; line-height: 1.3;">{item.title}</h3>
-            <p style="margin: 0 0 6px 0; font-size: 13px; line-height: 1.45; color: #d1d5db;">
+            <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #ffffff;">{item.title}</h3>
+            <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.6; color: #d1d5db;">
                 <strong>What Happened:</strong> {item.description}
             </p>
-            <p style="margin: 0 0 6px 0; font-size: 13px; line-height: 1.45; color: #d1d5db;">
+            <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.6; color: #d1d5db;">
                 <strong>Why It Matters:</strong> {item.why_it_matters}
             </p>
-            <p style="margin: 0 0 4px 0; font-size: 13px; line-height: 1.45; color: #9ca3af;">
+            <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.6; color: #d1d5db;">
                 <strong>Who Cares:</strong> {item.who_cares}
             </p>
             {source_link}
@@ -54,36 +54,29 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
     <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DailyDiff Tech Intelligence</title>
-        <style>
-            @media only screen and (max-width: 600px) {{
-                .main-card {{ padding: 20px 14px !important; width: 100% !important; }}
-                .header-title {{ font-size: 22px !important; }}
-            }}
-        </style>
     </head>
-    <body style="background-color: #0c0d12; color: #f3f4f6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #0c0d12; padding: 15px 0;">
+    <body style="background-color: #0c0d12; color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #0c0d12; padding: 20px 0;">
             <tr>
                 <td align="center">
-                    <table class="main-card" width="560" border="0" cellspacing="0" cellpadding="0" style="background-color: #12141d; border: 1px solid #1f2937; border-radius: 8px; padding: 24px 20px; text-align: left; max-width: 100%;">
+                    <table width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: #141620; border: 1px solid #1f2937; border-radius: 8px; padding: 40px; text-align: left;">
                         <tr>
-                            <td align="center" style="padding-bottom: 16px; border-bottom: 1px solid #1f2937;">
-                                <h1 class="header-title" style="margin: 0 0 4px 0; font-size: 24px; font-weight: 800; color: #60a5fa; letter-spacing: -0.02em;">DailyDiff</h1>
-                                <p style="margin: 0; font-size: 11px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.08em;">We scan the noise. Five things survive.</p>
-                                <p style="margin: 4px 0 0 0; font-size: 11px; color: #6b7280;">{date}</p>
+                            <td align="center" style="padding-bottom: 30px; border-bottom: 1px solid #1f2937;">
+                                <h1 style="margin: 0 0 5px 0; font-size: 28px; font-weight: 700; color: #60a5fa; letter-spacing: -0.02em;">DailyDiff</h1>
+                                <p style="margin: 0; font-size: 12px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.1em;">We scan the noise. Five things survive.</p>
+                                <p style="margin: 5px 0 0 0; font-size: 11px; color: #6b7280;">Published on {date}</p>
                             </td>
                         </tr>
                         <tr>
-                            <td style="padding-top: 16px;">
+                            <td style="padding-top: 30px;">
                                 {items_html}
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" style="padding-top: 20px; border-top: 1px solid #1f2937; font-size: 11px; color: #6b7280;">
-                                <p style="margin: 0 0 4px 0;">You received this because you subscribed to DailyDiff Tech Intelligence.</p>
-                                <p style="margin: 0;"><a href="https://dailydiff.in" style="color: #60a5fa; text-decoration: none; font-weight: 500;">View Dashboard</a> &bull; <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a></p>
+                            <td align="center" style="padding-top: 30px; border-top: 1px solid #1f2937; font-size: 12px; color: #6b7280;">
+                                <p style="margin: 0 0 5px 0;">You received this because you subscribed to DailyDiff Tech Intelligence.</p>
+                                <p style="margin: 0;"><a href="https://dailydiff.in" style="color: #60a5fa; text-decoration: none;">View Dashboard</a> | <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a></p>
                             </td>
                         </tr>
                     </table>
