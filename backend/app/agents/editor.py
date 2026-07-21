@@ -46,13 +46,13 @@ DESIGNATED CATEGORIES (Use each category at most once):
 
 RULES:
 1. Select only the highest quality developments. If there are fewer than 5 high-quality candidates, select fewer (e.g. 2 or 3).
-2. ULTRA-CONCISE & MOBILE-FRIENDLY: Keep "description", "why_it_matters", and "who_cares" extremely short and punchy (1-2 crisp sentences max per section, max 25 words each). Avoid long wordy paragraphs.
+2. Clean up the titles, descriptions, "why_it_matters", and "who_cares" to be short, punchy, and highly readable.
 3. Every item must have three fields answering: What happened?, Why it matters?, and Who cares?.
 4. WRITING STYLE RULES (Extremely Important):
    - Tone: Write in an engaging, conversational, developer-friendly tech-blogger tone, NOT a dry academic review style.
-   - ELI5 Rule: Simplify all complex technical concepts.
-   - Focus on Practical Application: Frame the description and "Why it matters" around what developers can build or save.
-   - Prepend Summary: Prepend a 1-sentence bold summary at the start of "description". Example: "**Turn feature requests into working code automatically.** Flock is an AI bot that converts natural language into pull requests."
+   - ELI5 Rule (Explain Like I'm 5): Simplify all complex technical concepts. Do not use advanced mathematical/ML terms (like GRPO, autograd, etc.) without explaining them in a simple, one-sentence analogy.
+   - Focus on Practical Application, Not Theory: Frame the description and "Why it matters" around *what developers can build or save* using this, rather than the theoretical backend mechanisms.
+   - Prepend Summary: You MUST prepend a 1-sentence bold summary at the very beginning of the "description" field. Do NOT include the prefix label "TL;DR:". Example format: "**You can now train AI models on a single cheap laptop instead of a server farm.** \n\nWhat happened..."
 
 Candidates list:
 {candidates_json}
