@@ -3,71 +3,71 @@
 
 ---
 
-## 🔥 WORTH KNOWING: OpenConnector: The Universal AI Agent Auth Gateway
+## 🔥 WORTH KNOWING: Flock: AI that writes its own PRs
 
-**What Happened:** **You can now connect AI agents to 1,000+ SaaS apps with a single SDK instead of building 10,000 custom integrations.** OpenConnector acts as a unified auth gateway, letting AI agents securely access tools like Slack, Notion, or Salesforce without reinventing the wheel every time.
+**What Happened:** **Turn feature requests into working code automatically—no manual coding required.** Flock is an AI dev-team bot that converts natural language requests into fully automated pull requests, slashing prototyping time by letting your AI handle the busywork.
 
-**Why It Matters:** It slashes development time by replacing app-specific connectors with a shared, inspectable runtime for credentials, schemas, and policies. Teams can finally stop rewriting the same OAuth flows and focus on building agent logic instead.
+**Why It Matters:** Flock bridges the gap between high-level planning and executable code, enabling teams to prototype and iterate at unprecedented speed using existing Claude subscriptions or Anthropic APIs. It eliminates manual coding bottlenecks, letting AI engineers and startups focus on high-impact work instead of boilerplate.
 
-**Who Cares:** AI engineers, agent developers, platform teams, DevOps engineers, and security architects who need reliable third-party integrations for AI-driven apps.
+**Who Cares:** AI engineers, agent developers, DevOps teams, startup CTOs, and engineering managers racing to ship prototypes faster.
 
-**Source:** [https://github.com/oomol-lab/open-connector](https://github.com/oomol-lab/open-connector)
-
-**Verdict:** `INTEGRATE` | **Confidence:** `90%`
-
----
-
-## 💎 HIDDEN GEM: EdgeEver: The Free, AI-Native Evernote Alternative
-
-**What Happened:** **A serverless, zero-cost note-taking app with native AI agent support and MCP integration.** EdgeEver runs entirely on Cloudflare Workers, so you pay nothing and host nothing—just start taking notes and let AI agents automate your workflows.
-
-**Why It Matters:** It’s the first truly open, self-hosted alternative to Evernote that natively speaks AI’s language. No infrastructure headaches, no vendor lock-in, and full AI agent integration out of the box.
-
-**Who Cares:** AI engineers, agent developers, platform teams, and Evernote refugees who want a lightweight, AI-ready note-taking solution without the cloud costs.
-
-**Source:** [https://github.com/tianma-if/edgeever](https://github.com/tianma-if/edgeever)
+**Source:** [https://github.com/duckbugio/flock](https://github.com/duckbugio/flock)
 
 **Verdict:** `INTEGRATE` | **Confidence:** `90%`
 
 ---
 
-## 🧠 RESEARCH IDEA: PromptScript: Git-Native AI Agent Instructions
+## 💎 HIDDEN GEM: MirrorProxy: The Swiss Army knife for package mirrors
 
-**What Happened:** **Standardize AI agent instructions the same way you version code.** PromptScript compiles validated prompts into deterministic configurations for 48 AI coding platforms, eliminating drift and manual maintenance.
+**What Happened:** **Self-hosted proxy that caches and accelerates every major package manager.** MirrorProxy acts as a unified adapter for GitHub, Docker, npm, PyPI, Cargo, and more, reducing dependency on external mirrors and improving reliability for distributed teams.
 
-**Why It Matters:** It turns chaotic prompt management into a repeatable engineering process. Teams can now audit, version, and deploy agent instructions just like software—no more broken configs or inconsistent behavior.
+**Why It Matters:** MirrorProxy centralizes control over traffic, quotas, and security policies while reducing downtime from external mirror failures. Its adapter-based architecture makes it trivial to integrate with existing ecosystems, giving DevOps teams and open-source maintainers a single tool to manage software supply chains.
 
-**Who Cares:** AI engineers, agent developers, platform teams, DevOps engineers, and engineering leaders standardizing AI workflows across tools.
+**Who Cares:** DevOps engineers, platform teams, open-source maintainers, and enterprises managing internal package mirrors or supply chain security.
 
-**Source:** [https://github.com/mrwogu/promptscript](https://github.com/mrwogu/promptscript)
-
-**Verdict:** `INTEGRATE` | **Confidence:** `90%`
-
----
-
-## ⚡ SOMETHING CHANGED: Graphify: Turn Any Codebase Into a Queryable Knowledge Graph
-
-**What Happened:** **You can now query your entire codebase, docs, and configs as a single knowledge graph—no vector store required.** Graphify parses codebases deterministically and builds a persistent graph where every relationship is explained.
-
-**Why It Matters:** It cuts token waste by 71.5x compared to raw file processing, letting AI agents navigate complex datasets efficiently. Perfect for agentic workflows that need to reason over code, PDFs, or SQL schemas without reprocessing everything.
-
-**Who Cares:** AI engineers building agentic systems, developer tooling teams, research teams managing large document collections, and platform engineers optimizing LLM interactions.
-
-**Source:** [https://github.com/Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify)
+**Source:** [https://github.com/inbjo/MirrorProxy](https://github.com/inbjo/MirrorProxy)
 
 **Verdict:** `INTEGRATE` | **Confidence:** `90%`
 
 ---
 
-## 👀 KEEP AN EYE ON THIS: Qwen-Image-3.0: The Next Leap in Multimodal AI
+## 🧠 RESEARCH IDEA: Incremental: The lazy computation library for Python
 
-**What Happened:** **A new image generation model that doesn’t just draw—it understands.** Qwen-Image-3.0 blends rich visuals with deep contextual knowledge, making it ideal for tasks like technical diagrams, educational content, or knowledge-driven design.
+**What Happened:** **Stop wasting CPU cycles—let your code recompute only what’s changed.** Incremental is a library that tracks dependencies between computations, automatically skipping redundant work in dynamic systems like reactive UIs, data pipelines, or ML training loops.
 
-**Why It Matters:** It bridges the gap between generative AI and factual grounding, enabling more accurate and meaningful visual outputs. Could redefine how we use AI for creative and technical documentation.
+**Why It Matters:** Incremental shifts the burden from manual caching to a declarative, automated system. For data engineers, frontend devs, or ML teams, this means faster iterations, lower cloud bills, and simpler code—no more reinventing the wheel for incremental updates.
 
-**Who Cares:** AI researchers in multimodal models, computer vision engineers, creative tool developers, and enterprise teams building AI-powered content generation platforms.
+**Who Cares:** Data engineers, frontend developers building reactive UIs, ML engineers optimizing training workflows, and platform teams managing large-scale compute resources.
 
-**Source:** [https://qwen.ai/blog?id=qwen-image-3.0](https://qwen.ai/blog?id=qwen-image-3.0)
+**Source:** [https://github.com/janestreet/incremental](https://github.com/janestreet/incremental)
+
+**Verdict:** `INTEGRATE` | **Confidence:** `90%`
+
+---
+
+## ⚡ SOMETHING CHANGED: rocketplaneIO: AI-powered Kubernetes SRE in a box
+
+**What Happened:** **Self-hosted Kubernetes observability that fixes issues before you even notice them.** rocketplaneIO combines zero-instrumentation eBPF monitoring with an AI copilot that safely auto-remediates problems—no manual setup required.
+
+**Why It Matters:** rocketplaneIO eliminates the operational overhead of Kubernetes troubleshooting by using eBPF for automatic traces, logs, and metrics. Platform teams and SREs can now let AI agents interact with clusters via a secure MCP interface, turning observability into actionable fixes without vendor lock-in.
+
+**Who Cares:** Platform teams, DevOps engineers, AI/ML engineers developing autonomous agents, and SREs managing Kubernetes clusters.
+
+**Source:** [https://github.com/olemeyer/rocketplaneIO](https://github.com/olemeyer/rocketplaneIO)
+
+**Verdict:** `INTEGRATE` | **Confidence:** `90%`
+
+---
+
+## 👀 KEEP AN EYE ON THIS: Python 3.15’s ultra-low overhead profiling mode
+
+**What Happened:** **Python is getting JIT-level speed without losing its soul.** Python 3.15’s new ultra-low overhead interpreter profiling mode enables near-native performance for CPU-bound workloads while keeping CPython’s simplicity intact.
+
+**Why It Matters:** This bridges the gap between interpreted and compiled execution, making JIT practical for mainstream Python use. For performance engineers and data science teams, it could unlock significant speedups without rewriting code or adopting niche runtimes.
+
+**Who Cares:** Python core developers, performance engineers, library maintainers, and teams building high-performance Python applications (e.g., data science, game engines, or compute-heavy services).
+
+**Source:** [https://fidget-spinner.github.io/posts/ultra-fast-tracing.html](https://fidget-spinner.github.io/posts/ultra-fast-tracing.html)
 
 **Verdict:** `WATCH` | **Confidence:** `80%`
 
