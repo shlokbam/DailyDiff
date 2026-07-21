@@ -36,7 +36,7 @@ graph TD
    * **Hacker News (YCombinator) API**: Scrapes top stories, prioritizing `Show HN` submissions.
    * **Dev.to Feed**: Scrapes trending frontend and backend programming tutorials.
    * **GitHub Releases API**: Monitors version releases of core dev frameworks (`react`, `next.js`, `fastapi`, `tailwindcss`, `django`, `go`).
-2. **Skeptic Agent (Deduplication Node)**: Compares today's raw findings against titles/descriptions inside `data/history.json` to filter out duplicate updates or hype.
+2. **Skeptic Agent (Deduplication Node)**: Performs algorithmic URL deduplication against `data/history.json` and evaluates raw findings with LLM hype filtering to drop duplicate topics or non-technical noise.
 3. **Research Agent**: Crawls target URL codebases, documentation, or release notes to pull raw descriptions and README summaries.
 4. **Verifier Agent**: Fact-checks claims against the raw documentation to ensure they are fully supported.
 5. **Analyst Agent**: Evaluates the update's direct utility for developers, generating `Why It Matters`, `Who Cares`, confidence levels, and actionable verdicts (`WATCH`, `INTEGRATE`, `READ`).
@@ -49,11 +49,12 @@ graph TD
 
 * **Backend Engine**: Python 3.12, LangGraph, LangChain, FastAPI, Uvicorn, PostgreSQL (Neon Pooler) / SQLite.
 * **Primary AI Engine**: Mistral AI (`open-mixtral-8x22b` / `mistral-small-latest`) as the primary generator to avoid tight RPM constraints, with Google Gemini (`gemini-3.5-flash`) as the automatic fail-safe fallback.
-* **Frontend Client**: Vite + React, Vanilla CSS with custom glassmorphism tokens.
+* **Frontend Client**: Vite + React, Vanilla CSS with custom glassmorphism tokens — deployed live at **[https://dailydiff.in](https://dailydiff.in)**.
 * **Deployment & Scheduling**:
+  * **Domain**: Custom domain `dailydiff.in` connected via Vercel DNS.
   * **Backend App**: Hosted on Render.
-  * **Frontend Client**: Hosted on Vercel.
-  * **Orchestration Runner**: Scheduled via GitHub Actions (`.github/workflows/thrice_weekly_brief.yml`) running at **03:30 UTC** (Mon, Wed, Fri).
+  * **Email Dispatcher**: Authenticated Brevo API sending from `briefs@dailydiff.in` (with SMTP & Resend fallbacks).
+  * **Orchestration Runner**: Scheduled via GitHub Actions (`.github/workflows/thrice_weekly_brief.yml`) running at **03:30 UTC** (Mon, Wed, Fri), credited directly to maintainer GitHub contributions.
   * **Database Layer**: SQLite locally (`subscribers.db`); shifts automatically to **Neon Cloud Postgres** when `DATABASE_URL` is set in production.
 
 ---
@@ -111,10 +112,10 @@ GEMINI_API_KEY=your_gemini_studio_key_here
 # Neon Database (Leave empty to default to local subscribers.db SQLite)
 DATABASE_URL=postgresql://neondb_owner:password@ep-host-pooler.aws.neon.tech/neondb?sslmode=require
 
-# Email dispatch (Brevo API primary or Google SMTP fallback settings)
+# Email dispatch (Brevo API primary sending from custom domain)
 BREVO_API_KEY=your_brevo_api_key_here
-SMTP_EMAIL=yourname@gmail.com
-SMTP_PASSWORD=16_character_google_app_password
+SMTP_EMAIL=briefs@dailydiff.in
+SMTP_PASSWORD=your_smtp_password_optional
 
 # Authentication Webhook token (For GHA runner to verify endpoints)
 NOTIFY_SECRET_TOKEN=generate_any_secure_string_here
