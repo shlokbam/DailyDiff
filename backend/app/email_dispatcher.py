@@ -108,7 +108,7 @@ def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
                 "content-type": "application/json",
                 "accept": "application/json"
             }
-            sender_email = SMTP_EMAIL if SMTP_EMAIL else "shlokbam19103@gmail.com"
+            sender_email = SMTP_EMAIL if SMTP_EMAIL else "briefs@dailydiff.in"
             sender = {
                 "name": "DailyDiff",
                 "email": sender_email
@@ -250,7 +250,7 @@ def dispatch_unsubscribe_confirmation(email: str):
                 "content-type": "application/json",
                 "accept": "application/json"
             }
-            sender_email = SMTP_EMAIL if SMTP_EMAIL else "shlokbam19103@gmail.com"
+            sender_email = SMTP_EMAIL if SMTP_EMAIL else "briefs@dailydiff.in"
             sender = {
                 "name": "DailyDiff",
                 "email": sender_email
