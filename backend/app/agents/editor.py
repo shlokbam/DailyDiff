@@ -38,11 +38,11 @@ def editor_node(state: AgentState) -> Dict[str, Any]:
 Your task is to select up to 5 of the absolute strongest candidates from today's technology list, refine their text copy for publication, and assign each to one of our designated briefing categories.
 
 DESIGNATED CATEGORIES (Use each category at most once):
-- "Worth Knowing": Major development with widespread impact.
-- "Hidden Gem": Underrated open-source project showing momentum.
-- "Research Idea": A technical article, engineering guide, or system architecture pattern explained in practical language.
-- "Something Changed": A meaningful release, framework update, or ecosystem shift (e.g. GitHub Releases).
-- "Keep an Eye On This": An early signal that may become important soon.
+- "Tech Shift": General tech industry news, shifts, hiring trends, or major developer announcements.
+- "Cool Tool": Interesting new open-source projects, tools, starter templates, or SaaS apps that are practical to use or learn from.
+- "Career & Learning": Career advice, job search tips, learning roadmaps, tutorial guides, or system design principles explained simply.
+- "Ecosystem Update": Major framework updates, tool releases, or standard updates that affect how developers build software (e.g. GitHub Releases).
+- "Watchlist": Early-stage concepts, cool tech trends, or rising libraries to keep on your radar.
 
 RULES:
 1. Select only the highest quality developments. If there are fewer than 5 high-quality candidates, select fewer (e.g. 2 or 3).
@@ -50,16 +50,16 @@ RULES:
 3. Every item must have three fields answering: What happened?, Why it matters?, and Who cares?.
 4. WRITING STYLE RULES (Extremely Important):
    - Tone: Write in an engaging, conversational, developer-friendly tech-blogger tone, NOT a dry academic review style.
-   - ELI5 Rule (Explain Like I'm 5): Simplify all complex technical concepts. Do not use advanced mathematical/ML terms (like GRPO, autograd, etc.) without explaining them in a simple, one-sentence analogy.
-   - Focus on Practical Application, Not Theory: Frame the description and "Why it matters" around *what developers can build or save* using this, rather than the theoretical backend mechanisms.
-   - Prepend Summary: You MUST prepend a 1-sentence bold summary at the very beginning of the "description" field. Do NOT include the prefix label "TL;DR:". Example format: "**You can now train AI models on a single cheap laptop instead of a server farm.** \n\nWhat happened..."
+   - ELI5 Rule (Explain Like I'm 5): Simplify all complex concepts. Do not use advanced mathematical/ML terms without explaining them in a simple, one-sentence analogy.
+   - Focus on Practical Application, Not Theory: Frame the description and "Why it matters" around *what developers can build or learn* using this, rather than the theoretical backend mechanisms.
+   - Prepend Summary: You MUST prepend a 1-sentence bold summary at the very beginning of the "description" field. Do NOT include the prefix label "TL;DR:". Example format: "**You can now deploy React apps directly to decentralized hosts in one click.** \n\nWhat happened..."
 
 Candidates list:
 {candidates_json}
 
 Output a JSON array containing the selected, formatted briefs. Every item in the array must match this schema:
 {{
-  "category": "Worth Knowing",
+  "category": "Tech Shift / Cool Tool / Career & Learning / Ecosystem Update / Watchlist",
   "title": "...",
   "description": "What happened text...",
   "why_it_matters": "Why it matters text...",
@@ -72,7 +72,7 @@ Output a JSON array containing the selected, formatted briefs. Every item in the
 Format your response exactly like this (valid JSON only):
 [
   {{
-    "category": "Worth Knowing",
+    "category": "Tech Shift",
     "title": "...",
     ...
   }}
@@ -104,7 +104,7 @@ Do not include any code block markdown like ```json or any other text. Return on
         # Fallback: convert the first 3 vetted candidates directly
         for c in vetted[:3]:
             final_briefs.append({
-                "category": "Worth Knowing" if c["source"] == "GitHub" else "Research Idea",
+                "category": "Tech Shift" if c["source"] == "GitHub" else "Career & Learning",
                 "title": c["title"],
                 "description": c["description"],
                 "why_it_matters": c.get("why_it_matters", "A notable new release worth examining."),

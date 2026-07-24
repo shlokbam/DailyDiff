@@ -18,13 +18,13 @@ def scout_github(days_ago: int) -> List[Dict[str, Any]]:
     """Scout GitHub for active/trending repositories pushed recently."""
     since_date = (datetime.utcnow() - timedelta(days=days_ago)).strftime("%Y-%m-%d")
     created_since = (datetime.utcnow() - timedelta(days=45)).strftime("%Y-%m-%d")
-    # Query for repositories matching key developer/utility topics
+    # Query for repositories matching key developer/utility topics for students/early careers
     queries = [
-        f"stars:>30 pushed:>{since_date} created:>{created_since} topic:self-hosted",
-        f"stars:>50 pushed:>{since_date} created:>{created_since} topic:web-development",
-        f"stars:>50 pushed:>{since_date} topic:developer-experience",
+        f"stars:>15 pushed:>{since_date} created:>{created_since} topic:learn-to-code",
+        f"stars:>30 pushed:>{since_date} created:>{created_since} topic:web-development",
+        f"stars:>20 pushed:>{since_date} created:>{created_since} topic:beginner-friendly",
         f"stars:>30 pushed:>{since_date} created:>{created_since} topic:productivity",
-        f"stars:>100 pushed:>{since_date} topic:developer-tools",
+        f"stars:>50 pushed:>{since_date} topic:developer-tools",
     ]
     
     headers = {"User-Agent": "DailyDiff-Agent"}
@@ -37,7 +37,7 @@ def scout_github(days_ago: int) -> List[Dict[str, Any]]:
     # We do a few target queries to fetch diverse developer utility repos
     with httpx.Client() as client:
         for q in queries:
-            url = f"https://api.github.com/search/repositories?q={q}&sort=stars&order=desc&per_page=10"
+            url = f"https://api.github.com/search/repositories?q={q}&sort=stars&order=desc&per_page=5"
             try:
                 response = client.get(url, headers=headers)
                 if response.status_code == 200:
@@ -63,6 +63,7 @@ def scout_github(days_ago: int) -> List[Dict[str, Any]]:
                 
     logger.info(f"GitHub scouted {len(repos)} raw signals.")
     return repos
+
 
 
 
@@ -109,48 +110,106 @@ def scout_hacker_news() -> List[Dict[str, Any]]:
     logger.info(f"Hacker News scouted {len(stories)} raw signals.")
     return stories
 
-def scout_dev_to() -> List[Dict[str, Any]]:
-    """Scout Dev.to RSS feed for trending technical articles."""
-    logger.info("Scouting Dev.to RSS...")
-    articles = []
+def fetch_rss_signals(url: str, source_name: str, max_items: int = 10, headers: dict = None) -> List[Dict[str, Any]]:
+    """Helper to parse generic RSS/Atom feeds into raw signals."""
+    logger.info(f"Scouting {source_name} RSS feed...")
+    signals = []
     import xml.etree.ElementTree as ET
     import re
     
+    if headers is None:
+        headers = {"User-Agent": "DailyDiff-Agent/1.0"}
+        
     try:
-        url = "https://dev.to/feed"
-        response = httpx.get(url, timeout=12)
+        response = httpx.get(url, headers=headers, timeout=15)
         if response.status_code == 200:
-            root = ET.fromstring(response.text)
-            
+            try:
+                root = ET.fromstring(response.content)
+            except ET.ParseError as pe:
+                logger.error(f"XML parse error for {source_name}: {pe}")
+                return []
+                
             channel = root.find("channel")
             if channel is not None:
-                items = channel.findall("item")[:10] # Top 10 articles
+                # Standard RSS format
+                items = channel.findall("item")[:max_items]
                 for item in items:
                     title_elem = item.find("title")
                     link_elem = item.find("link")
                     desc_elem = item.find("description")
                     
-                    title = title_elem.text.strip() if title_elem is not None else ""
-                    link = link_elem.text.strip() if link_elem is not None else ""
-                    desc = desc_elem.text.strip() if desc_elem is not None else ""
+                    title = title_elem.text.strip() if title_elem is not None and title_elem.text else ""
+                    link = link_elem.text.strip() if link_elem is not None and link_elem.text else ""
+                    desc = desc_elem.text.strip() if desc_elem is not None and desc_elem.text else ""
                     
+                    # Clean up HTML tags from description
                     desc_clean = re.sub(r'<[^>]*>', '', desc).strip()
-                    desc_clean = desc_clean[:250] + "..." if len(desc_clean) > 250 else desc_clean
+                    desc_clean = desc_clean[:300] + "..." if len(desc_clean) > 300 else desc_clean
                     
                     if title and link:
-                        articles.append({
-                            "source": "Dev.to",
+                        signals.append({
+                            "source": source_name,
                             "title": title,
                             "url": link,
-                            "description": desc_clean or f"Dev.to article: {title}."
+                            "description": desc_clean or f"{source_name} article: {title}."
+                        })
+            else:
+                # Try Atom feed structure
+                namespaces = {'atom': 'http://www.w3.org/2005/Atom'}
+                entries = root.findall(".//atom:entry", namespaces)
+                if not entries:
+                    entries = root.findall(".//entry")
+                
+                for entry in entries[:max_items]:
+                    title_elem = entry.find("{http://www.w3.org/2005/Atom}title") or entry.find("title")
+                    link_elem = entry.find("{http://www.w3.org/2005/Atom}link") or entry.find("link")
+                    desc_elem = entry.find("{http://www.w3.org/2005/Atom}content") or entry.find("{http://www.w3.org/2005/Atom}summary") or entry.find("content") or entry.find("summary")
+                    
+                    title = title_elem.text.strip() if title_elem is not None and title_elem.text else ""
+                    
+                    link = ""
+                    if link_elem is not None:
+                        link = link_elem.attrib.get("href", "")
+                        if not link and link_elem.text:
+                            link = link_elem.text.strip()
+                            
+                    desc = desc_elem.text.strip() if desc_elem is not None and desc_elem.text else ""
+                    desc_clean = re.sub(r'<[^>]*>', '', desc).strip()
+                    desc_clean = desc_clean[:300] + "..." if len(desc_clean) > 300 else desc_clean
+                    
+                    if title and link:
+                        signals.append({
+                            "source": source_name,
+                            "title": title,
+                            "url": link,
+                            "description": desc_clean or f"{source_name} entry: {title}."
                         })
         else:
-            logger.warning(f"Dev.to RSS API returned status {response.status_code}")
+            logger.warning(f"{source_name} RSS returned status {response.status_code}")
     except Exception as e:
-        logger.error(f"Dev.to RSS scouting error: {e}")
+        logger.error(f"{source_name} RSS scouting error: {e}")
         
-    logger.info(f"Dev.to scouted {len(articles)} raw signals.")
-    return articles
+    logger.info(f"{source_name} scouted {len(signals)} raw signals.")
+    return signals
+
+def scout_dev_to() -> List[Dict[str, Any]]:
+    """Scout Dev.to RSS feed for trending technical articles."""
+    return fetch_rss_signals("https://dev.to/feed", "Dev.to", max_items=10)
+
+def scout_freecodecamp() -> List[Dict[str, Any]]:
+    """Scout FreeCodeCamp RSS feed for beginner friendly tutorials and guides."""
+    return fetch_rss_signals("https://www.freecodecamp.org/news/rss/", "FreeCodeCamp", max_items=10)
+
+def scout_product_hunt() -> List[Dict[str, Any]]:
+    """Scout Product Hunt RSS feed for new technical products and tools."""
+    return fetch_rss_signals("https://www.producthunt.com/feed", "Product Hunt", max_items=12)
+
+def scout_reddit() -> List[Dict[str, Any]]:
+    """Scout Reddit webdev and learnprogramming subreddits via RSS feeds."""
+    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+    webdev_signals = fetch_rss_signals("https://www.reddit.com/r/webdev/.rss", "Reddit /r/webdev", max_items=8, headers=headers)
+    learnprog_signals = fetch_rss_signals("https://www.reddit.com/r/learnprogramming/.rss", "Reddit /r/learnprogramming", max_items=8, headers=headers)
+    return webdev_signals + learnprog_signals
 
 def scout_github_releases(days_ago: int) -> List[Dict[str, Any]]:
     """Scout major framework repositories for new releases in the window."""
@@ -209,9 +268,21 @@ def scout_ecosystem_node(state: AgentState) -> Dict[str, Any]:
     github_signals = scout_github(days_ago=days)
     hn_signals = scout_hacker_news()
     dev_to_signals = scout_dev_to()
+    freecodecamp_signals = scout_freecodecamp()
+    product_hunt_signals = scout_product_hunt()
+    reddit_signals = scout_reddit()
     release_signals = scout_github_releases(days_ago=days)
     
-    all_signals = github_signals + hn_signals + dev_to_signals + release_signals
+    all_signals = (
+        github_signals + 
+        hn_signals + 
+        dev_to_signals + 
+        freecodecamp_signals + 
+        product_hunt_signals + 
+        reddit_signals + 
+        release_signals
+    )
     logger.info(f"Total raw signals collected: {len(all_signals)}")
     
     return {"raw_signals": all_signals}
+

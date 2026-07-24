@@ -9,7 +9,7 @@ logger = logging.getLogger("DailyDiff.analyst")
 def analyze_candidate(candidate: Dict[str, Any]) -> Dict[str, Any]:
     """Analyze a vetted candidate to determine practical value, audience, verdict, and confidence."""
     prompt = f"""You are the Analyst Agent for DailyDiff.
-Analyze the following technology development and extract structured technical insights.
+Analyze the following technology news or development and extract structured practical insights for tech students and early-career software developers.
 
 TITLE: {candidate['title']}
 SOURCE: {candidate['source']}
@@ -18,10 +18,11 @@ DOCUMENTATION CONTENT:
 {candidate['detailed_content'][:2000]}
 
 Perform an evaluation and output a JSON object containing these keys:
-- "why_it_matters": Write 1-2 clear, punchy sentences explaining why this matters. Skip generic summaries; focus on the practical shift or architectural impact.
-- "who_cares": Identify the specific developer/engineering groups who should care (e.g., "AI engineers, agent developers, platform teams").
-- "verdict": Actionable recommendation. Must be exactly one of: "WATCH" (early signal), "INTEGRATE" (mature and highly useful), "READ" (research paper of interest), "IGNORE" (low priority).
-- "confidence": An integer score from 0 to 100 representing your confidence in this development's momentum and technical claims.
+- "why_it_matters": Write 1-2 clear, punchy sentences explaining why this matters. Focus on how it helps someone learn, build a project faster, save time, or understand a concept. Avoid generic descriptions.
+- "who_cares": Identify specific developer groups or learner roles who should care (e.g., "CS students building portfolios, React beginners, junior frontend developers, python learners, job-seeking software engineers").
+- "verdict": Actionable recommendation. Must be exactly one of: "WATCH" (early trend), "INTEGRATE" (highly useful to use/learn), "READ" (valuable study guide/tutorial), "IGNORE" (low priority).
+- "confidence": An integer score from 0 to 100 representing your confidence in this development's momentum and quality.
+
 
 Format your response exactly like this (valid JSON only):
 {{

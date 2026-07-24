@@ -23,15 +23,15 @@ def build_markdown_brief(briefs: list, date_str: str) -> str:
         return md_content
 
     category_emojis = {
-        "Worth Knowing": "🔥",
-        "Hidden Gem": "💎",
-        "Research Idea": "🧠",
-        "Something Changed": "⚡",
-        "Keep an Eye On This": "👀",
+        "Tech Shift": "🔥",
+        "Cool Tool": "💎",
+        "Career & Learning": "🧠",
+        "Ecosystem Update": "⚡",
+        "Watchlist": "👀",
     }
     
     for item in briefs:
-        category = item.get("category", "Worth Knowing")
+        category = item.get("category", "Tech Shift")
         emoji = category_emojis.get(category, "✨")
         
         md_content += f"## {emoji} {category.upper()}: {item.get('title')}\n\n"
@@ -62,24 +62,24 @@ def main():
         logger.warning("No API keys found. Running in SIMULATION mode to verify file generation and formatting...")
         briefs = [
             {
-                "category": "Worth Knowing",
-                "title": "LangGraph Dynamic Parallel Routing Engine",
-                "description": "LangGraph released self-correcting parallel routing protocols for multi-agent state machines.",
-                "why_it_matters": "Enables multi-agent systems to execute scrapers and validations concurrently, speeding up pipelines by 3x.",
-                "who_cares": "AI application builders, backend platform teams.",
+                "category": "Career & Learning",
+                "title": "Modern React Portfolio Template",
+                "description": "**A high-performance, responsive React portfolio template built with Tailwind CSS was launched.**\n\nWhat happened: This open-source template includes built-in SEO optimization, a dark-mode toggle, and a section for GitHub integrations designed to help students stand out.",
+                "why_it_matters": "Enables tech students and early-career developers to spin up a professional portfolio in minutes, boosting their job search readiness.",
+                "who_cares": "CS students building portfolios, job-seeking software engineers.",
                 "verdict": "INTEGRATE",
-                "confidence": 92,
-                "source_url": "https://github.com/langchain-ai/langgraph"
+                "confidence": 95,
+                "source_url": "https://github.com/learn-to-code/portfolio-template"
             },
             {
-                "category": "Hidden Gem",
-                "title": "LiteLLM API Router & Load Balancer",
-                "description": "LiteLLM launched a lightweight proxy router with built-in retries, fallbacks, and usage tracking.",
-                "why_it_matters": "Provides a single access point to load balance over 100+ LLM APIs, removing key rotation code from user apps.",
-                "who_cares": "Platform engineers, DevOps teams.",
+                "category": "Cool Tool",
+                "title": "HTTPie visual API Client",
+                "description": "**HTTPie released a web client focused on learning API request structures.**\n\nWhat happened: It offers an intuitive visual request editor and clean response parsing that makes testing endpoints and learning REST API concepts simple.",
+                "why_it_matters": "Provides a zero-setup, highly visual alternative to Postman, making it perfect for beginners learning web development.",
+                "who_cares": "React beginners, backend learners, web development students.",
                 "verdict": "WATCH",
-                "confidence": 88,
-                "source_url": "https://github.com/BerriAI/litellm"
+                "confidence": 90,
+                "source_url": "https://github.com/httpie/httpie"
             }
         ]
     else:

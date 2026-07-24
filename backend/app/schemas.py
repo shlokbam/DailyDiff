@@ -8,7 +8,7 @@ class UnsubscribeRequest(BaseModel):
     email: EmailStr = Field(..., description="The email address to unsubscribe")
 
 class BriefItem(BaseModel):
-    category: str = Field(..., description="E.g., Worth Knowing, Hidden Gem, Research Idea, Something Changed, Keep an Eye On This")
+    category: str = Field(..., description="E.g., Tech Shift, Cool Tool, Career & Learning, Ecosystem Update, Watchlist")
     title: str = Field(..., description="Headline of the update")
     description: str = Field(..., description="Description of what happened")
     why_it_matters: str = Field(..., description="Rationale for importance")

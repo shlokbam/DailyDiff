@@ -77,8 +77,8 @@ def deduplicate_and_filter_node(state: AgentState) -> Dict[str, Any]:
         )
     signals_text = "\n".join(formatted_signals)
     
-    prompt = f"""You are the Skeptic Agent for DailyDiff, a technical intelligence platform.
-Your job is to identify which of today's raw technology signals are NOVEL and SUBSTANTIAL.
+    prompt = f"""You are the Skeptic Agent for DailyDiff, a technology learning and news curation platform for tech students and early-career software engineers.
+Your job is to identify which of today's raw technology signals are NOVEL, SUBSTANTIAL, and HIGHLY RELEVANT for our audience.
 
 Here is a list of topics we have already covered recently:
 {history_summary}
@@ -86,16 +86,19 @@ Here is a list of topics we have already covered recently:
 Here are the new candidate signals discovered today:
 {signals_text}
 
-Analyze each candidate signal against the history and your technical knowledge.
-1. DEDUPLICATION: Reject candidates that represent topics we have already covered, or are mere minor/incremental versions of them.
-2. HYPE FILTER: Reject candidates that are purely marketing hype, temporary popularity spikes without technical substance, simple tutorials, or clickbait.
-3. VALUE RATING: Identify candidates that represent meaningful shifts, core library releases, outstanding research, or high-momentum open-source projects.
+Analyze each candidate signal against the history and your technical knowledge:
+1. TARGET AUDIENCE ALIGNMENT (Crucial): Keep content that is highly valuable for tech students and early-career software developers.
+   - FAVOR: Educational tutorials, career/job search advice, coding roadmaps, system design guides explained simply, useful open-source tools/libraries (e.g. CLI tools, UI frameworks, utility libraries), templates, portfolio builders, productivity hacks, and new product launches.
+   - REJECT: Overly academic/dense research papers (e.g. heavy math/ML theory), heavy enterprise infrastructure topics (e.g. database clustering, complex Kubernetes ingress, compliance standards, massive scale cloud architecture), corporate business/finance maneuvers, or low-quality clickbait.
+2. DEDUPLICATION: Reject candidates that represent topics or specific releases we have already covered, or are mere minor/incremental versions of them.
+3. QUALITY FILTER: Reject items that have no substance, are purely marketing hype, or have no clear takeaway or practical lesson.
 
 Output a JSON array containing ONLY the IDs (integer numbers) of the signals that pass your filter. 
 Format your response exactly like this:
 [1, 4, 12]
 
 Do not include any code block markdown like ```json or any other text. Return only the raw JSON array.
+
 """
     
     llm = get_llm(temperature=0.0)

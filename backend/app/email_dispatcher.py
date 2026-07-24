@@ -13,11 +13,11 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
     briefs = brief_group.briefs
     
     category_colors = {
-        "Worth Knowing": "#f97316",
-        "Hidden Gem": "#a855f7",
-        "Research Idea": "#06b6d4",
-        "Something Changed": "#eab308",
-        "Keep an Eye On This": "#ec4899",
+        "Tech Shift": "#f97316",
+        "Cool Tool": "#a855f7",
+        "Career & Learning": "#06b6d4",
+        "Ecosystem Update": "#eab308",
+        "Watchlist": "#ec4899",
     }
     
     items_html = ""
