@@ -29,6 +29,7 @@ app.add_middleware(
 )
 
 @app.get("/api/status")
+@app.head("/api/status")
 def get_status():
     """Verify backend system status."""
     return {"status": "online", "message": "DailyDiff API is fully operational"}
@@ -130,6 +131,7 @@ def unsubscribe_via_link(email: str):
 
 
 @app.get("/api/briefs/latest", response_model=DailyBriefGroup)
+@app.head("/api/briefs/latest")
 def get_latest_brief():
     """Retrieve the most recent published brief group."""
     history = read_history()
