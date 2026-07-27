@@ -334,5 +334,61 @@
         "source_url": "https://github.com/BitMiracle-AI/Dormice"
       }
     ]
+  },
+  {
+    "date": "2026-07-27",
+    "published_at": "2026-07-27T06:51:00.975292Z",
+    "briefs": [
+      {
+        "category": "Cool Tool",
+        "title": "Recall: Offline AI Memory for Your Codebase",
+        "description": "**Stop re-explaining your project every time you open your IDE.** Recall gives AI coding assistants durable, offline memory so they remember your codebase across sessions.",
+        "why_it_matters": "Recall solves the 'cold start' problem in AI-assisted coding by maintaining a local, persistent memory of your project context. No more wasting tokens or time re-explaining your codebase\u2014just seamless continuity for long-term projects.",
+        "who_cares": "Solo developers working on multi-session projects, freelancers juggling multiple client repositories, open-source contributors, and CS students collaborating on long-term assignments.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://github.com/raiyanyahya/recall"
+      },
+      {
+        "category": "Cool Tool",
+        "title": "Livediff: Real-Time File Diffs in Your Terminal",
+        "description": "**See file changes unfold live in your terminal with minimalist Rust magic.** Livediff visualizes diffs as they happen, turning passive monitoring into an active learning tool.",
+        "why_it_matters": "Livediff bridges the gap between static code review and dynamic development by showing changes in real time. Perfect for debugging generators, refactors, or migrations without context switching.",
+        "who_cares": "Junior and mid-level developers working with code generators or CI/CD pipelines, students learning version control, and terminal-centric devs tired of GUI diff tools.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://github.com/SoCkEt7/Livediff"
+      },
+      {
+        "category": "Watchlist",
+        "title": "Penguin Harness: Build Self-Improving AI Agents Locally",
+        "description": "**Your desktop just got an AI agent factory.** Penguin Harness lets you build and iterate on autonomous agents locally with access to 1,000+ models.",
+        "why_it_matters": "Democratizes AI agent development by removing cloud dependencies. Developers can prototype and test agentic systems offline, accelerating experimentation for real-world applications.",
+        "who_cares": "AI/ML enthusiasts, indie hackers building AI tools, CS students exploring autonomous systems, and engineers prototyping agent-based startups.",
+        "verdict": "INTEGRATE",
+        "confidence": 88,
+        "source_url": "https://github.com/Prism-Shadow/penguin-harness"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "PGSimCity: A Visual Tour of PostgreSQL Internals",
+        "description": "**Finally, a way to *see* how PostgreSQL works.** PGSimCity turns database theory into an interactive cityscape for faster learning.",
+        "why_it_matters": "Makes PostgreSQL\u2019s complex architecture tangible through visual metaphors. Ideal for developers who learn by doing\u2014accelerate your understanding of databases for real-world systems.",
+        "who_cares": "CS students learning databases, junior backend devs working with PostgreSQL, interview candidates prepping for system design, and engineers refining their mental models.",
+        "verdict": "INTEGRATE",
+        "confidence": 80,
+        "source_url": "https://nikolays.github.io/PGSimCity/"
+      },
+      {
+        "category": "Watchlist",
+        "title": "Decker: HyperCard Meets Modern Prototyping",
+        "description": "**Build interactive apps, games, or docs in minutes\u2014no heavy tooling required.** Decker revives HyperCard\u2019s simplicity with a modern twist.",
+        "why_it_matters": "Enables rapid prototyping of interactive projects (games, presentations, docs) without wrestling with frameworks. Its 'ditherpunk' aesthetic and Lil scripting make it uniquely accessible for creative developers.",
+        "who_cares": "Indie game makers, note-taking enthusiasts, CS students prototyping ideas, frontend devs seeking lightweight alternatives, and educators teaching interactive media.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://beyondloom.com/decker/"
+      }
+    ]
   }
 ]
