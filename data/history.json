@@ -390,5 +390,61 @@
         "source_url": "https://beyondloom.com/decker/"
       }
     ]
+  },
+  {
+    "date": "2026-07-29",
+    "published_at": "2026-07-29T06:15:50.743329Z",
+    "briefs": [
+      {
+        "category": "Cool Tool",
+        "title": "Hoppscotch: The Open-Source Postman Alternative",
+        "description": "**Hoppscotch is a lightweight, open-source API development ecosystem that works offline, on-premise, or in the cloud.** It\u2019s a fast, browser-based tool for testing APIs without heavy setup\u2014think Postman, but lighter and free.",
+        "why_it_matters": "Hoppscotch lets developers test and iterate APIs faster with a clean interface, making it perfect for learning HTTP requests or streamlining workflows. No bloated install, no cost\u2014just pure API testing power.",
+        "who_cares": "API beginners, frontend/backend developers, QA engineers, CS students, and junior devs prepping for interviews or hackathons.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://github.com/hoppscotch/hoppscotch"
+      },
+      {
+        "category": "Cool Tool",
+        "title": "Shiki: A Rust-Powered TUI Note-Taking App",
+        "description": "**Shiki is a terminal-based note-taking app built in Rust with Yazi-style navigation and git-backed versioning.** It\u2019s like Obsidian for the command line\u2014fast, version-controlled, and packed with practical features.",
+        "why_it_matters": "Shiki teaches Rust developers how to build real-world CLI tools with features like fuzzy search, multi-pane navigation, and git integration. It\u2019s a masterclass in systems programming and tooling design.",
+        "who_cares": "Rust learners, CS students, junior devs exploring TUI apps, and CLI enthusiasts studying clean Rust architecture.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://github.com/sazardev/shiki"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Prompt vs. Loop Engineering: The AI Workflow Upgrade",
+        "description": "**This guide explains how to move from one-off AI prompts to scalable, automated workflows.** It\u2019s the difference between asking an AI once and building a system that does the work for you.",
+        "why_it_matters": "Developers who master loop engineering can automate complex tasks\u2014like multi-step data processing\u2014saving hours of manual work. It\u2019s the next step beyond basic prompt usage.",
+        "who_cares": "Junior/mid-level devs using AI tools, backend engineers integrating LLMs, data scientists automating pipelines, and students learning practical AI applications.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://www.freecodecamp.org/news/prompt-vs-loop-engineering-a-guide-for-developers/"
+      },
+      {
+        "category": "Watchlist",
+        "title": "Hubble.md: The AI-Friendly Note-Taking App",
+        "description": "**Hubble.md is an open-source note-taking app designed for both humans and AI agents.** It organizes knowledge in agent-friendly formats like Markdown, making notes instantly shareable and machine-readable.",
+        "why_it_matters": "For devs experimenting with AI agents, Hubble.md bridges the gap between personal notes and agent collaboration. It\u2019s a glimpse into the future of structured, AI-compatible documentation.",
+        "who_cares": "AI/ML enthusiasts, junior devs maintaining knowledge bases, open-source contributors, and students exploring Markdown-based systems.",
+        "verdict": "WATCH",
+        "confidence": 80,
+        "source_url": "https://www.hubble.md/"
+      },
+      {
+        "category": "Watchlist",
+        "title": "Public Backlog of AI Agent Failures: Learn from Others\u2019 Mistakes",
+        "description": "**This project catalogs real-world AI agent failures\u2014from wrong tool calls to conversation drift\u2014to help developers anticipate and avoid subtle bugs.** It\u2019s the anti-highlight reel for AI testing.",
+        "why_it_matters": "Traditional testing misses the mundane but critical AI failures. This backlog accelerates learning for engineers building AI-driven systems by sharing unfiltered, practical lessons.",
+        "who_cares": "AI/ML engineers, prompt engineers, QA/test engineers, and students focusing on AI reliability.",
+        "verdict": "WATCH",
+        "confidence": 90,
+        "source_url": "https://dev.to/humanbound_ai/building-a-public-backlog-of-ai-agent-failures-whats-the-worst-thing-your-tests-didnt-catch-1l14"
+      }
+    ]
   }
 ]
