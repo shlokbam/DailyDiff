@@ -558,5 +558,61 @@
         "source_url": "https://handwritten.blog/"
       }
     ]
+  },
+  {
+    "date": "2026-08-05",
+    "published_at": "2026-08-05T06:09:01.361155Z",
+    "briefs": [
+      {
+        "category": "Cool Tool",
+        "title": "StrokeMouse: Custom macOS Gestures for Lightning-Fast Workflows",
+        "description": "**Turn your trackpad into a productivity powerhouse by creating custom mouse gestures for any macOS action.** Hold a trigger key to draw shapes that trigger shortcuts, app launches, or even shell scripts\u2014no coding required.",
+        "why_it_matters": "StrokeMouse lets you automate repetitive tasks with simple trackpad gestures, turning hours of manual work into seconds. It\u2019s a hands-on way to learn event-driven programming while supercharging your macOS workflow.",
+        "who_cares": "macOS power users, HCI tinkerers, junior developers learning input device programming, and anyone drowning in repetitive clicks.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://github.com/Licoy/StrokeMouse"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Burnlings: Rust Deep Learning Exercises for Burn Framework",
+        "description": "**Fix real code errors to master deep learning in Rust with Burnlings.** This hands-on tutorial forces you to debug and correct Burn framework snippets, bridging the gap between theory and practical ML in Rust.",
+        "why_it_matters": "Burnlings accelerates your Rust ML journey by making you *do* the work\u2014no passive tutorials here. It\u2019s perfect for Rust devs tired of Python\u2019s dominance in DL or CS students learning safe, performant ML.",
+        "who_cares": "Rust developers diving into ML, CS students frustrated by Python\u2019s limitations, and engineers transitioning from PyTorch to Rust\u2019s safety-first ecosystem.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://github.com/Bellman281/burnlings"
+      },
+      {
+        "category": "Ecosystem Update",
+        "title": "Mistral\u2019s Shieldstral: Tiny Model for Ethical AI Moderation",
+        "description": "**Mistral just released Shieldstral\u2014a 3B open-weights model for multimodal content moderation.** Lightweight enough to run locally, it helps developers build safer AI apps without cloud costs or heavy infrastructure.",
+        "why_it_matters": "Shieldstral democratizes moderation tools for indie devs and students, letting you prototype ethical AI systems without breaking the bank. It\u2019s a game-changer for teams building inclusive, responsible AI.",
+        "who_cares": "AI ethics researchers, junior ML engineers, indie hackers, and CS students focused on responsible AI or multimodal systems.",
+        "verdict": "INTEGRATE",
+        "confidence": 88,
+        "source_url": "https://mistral.ai/news/shieldstral/"
+      },
+      {
+        "category": "Watchlist",
+        "title": "Stateless MCP: Simpler Agent-Tool Integration for AI Workflows",
+        "description": "**Stateless MCP removes the headache of state management in agent-tool integration.** Developers can now build secure, auditable AI tools without wrestling with shell access or complex state logic.",
+        "why_it_matters": "This makes agent frameworks *actually* usable for early-career devs. No more debugging state leaks\u2014just plug in tools and go. Ideal for hackathons or learning agentic workflows.",
+        "who_cares": "Early-career devs, AI tooling enthusiasts, backend engineers building MCP servers, and students exploring agent systems.",
+        "verdict": "WATCH",
+        "confidence": 90,
+        "source_url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/"
+      },
+      {
+        "category": "Cool Tool",
+        "title": "Inclusive Color Space: Algorithm for Diverse Skin Tones in Apps",
+        "description": "**Generate realistic, diverse skin tones algorithmically with this open-source color space.** No more guessing\u2014just plug in the math and get inclusive character creators or UI designs.",
+        "why_it_matters": "This solves a real pain point for game devs and designers: weeks of trial-and-error in skin tone generation. Now you can build inclusive apps without the guesswork.",
+        "who_cares": "Game developers, UI/UX designers, character artists, and indie devs building inclusive character customization tools.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://toneyalexander.github.io/inclusive-color-space/"
+      }
+    ]
   }
 ]
