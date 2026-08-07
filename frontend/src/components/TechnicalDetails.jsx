@@ -66,7 +66,7 @@ export default function TechnicalDetails() {
       description: 'Periodically crawls social hubs, trending lists, and code repositories to discover newly published technologies and trending developer utilities.',
       inputs: 'None (Timer-triggered)',
       outputs: 'raw_signals (List of raw title, URL, description pairings)',
-      strategy: 'Uses Gemini with tool-calling to query Hacker News top items and GitHub trending lists over the last 24-48 hours. Filters solely for libraries, tools, and databases, ignoring opinion pieces.',
+      strategy: 'Uses direct programmatic APIs to query Hacker News top stories, GitHub repositories, and developer RSS feeds (Dev.to, FreeCodeCamp, Product Hunt, Reddit) over the last 24-72 hours. Collects raw links and titles, filtering for developers/students utility tags.',
       class: 'agent-scout'
     },
     {
@@ -76,7 +76,7 @@ export default function TechnicalDetails() {
       role: 'Hype Filter & Deduplicator',
       description: 'Critically examines raw signals to strip out noise, duplications, pure marketing hype, high-academic math papers, and general political or tech-business gossip.',
       inputs: 'raw_signals',
-      outputs: 'candidates, criticisms',
+      outputs: 'candidates',
       strategy: 'Applies rigid guidelines: rejects abstract academic papers without working code, products without public repositories, and generic SaaS marketing announcements. Performs string and vector deduplication.',
       class: 'agent-skeptic'
     },
@@ -88,7 +88,7 @@ export default function TechnicalDetails() {
       description: 'Takes filtered candidates and performs targeted web research. Crawls repo READMEs, official docs, package registry APIs, and open issues to gather granular engineering details.',
       inputs: 'candidates',
       outputs: 'researched_candidates',
-      strategy: 'Runs concurrent scraping routines using Jina Reader API or standard HTTP fetches to extract setup commands, architectural decisions, and dependencies from documentation pages.',
+      strategy: 'Scrapes documentation dynamically. For GitHub candidates, downloads raw README markdown from Raw GitHub Content APIs. For external links, performs HTTP fetches and extracts clean body text using BeautifulSoup, capping context payloads to optimize downstream LLM performance.',
       class: 'agent-research'
     },
     {
@@ -98,8 +98,8 @@ export default function TechnicalDetails() {
       role: 'Data & Link Integrity Inspector',
       description: 'Checks the validity of gathered information. Verifies links, returns HTTP status checks on homepages, and ensures all structural JSON data matches the typing schemas.',
       inputs: 'researched_candidates',
-      outputs: 'vetted_candidates, errors',
-      strategy: 'Validates all source URLs via quick HEAD requests. Ensures target packages actually exist on npm/PyPI and enforces structured JSON typing checks on the candidate schema.',
+      outputs: 'vetted_candidates',
+      strategy: 'Fact-checks the candidate claims. Uses an LLM to compare the summary description against the scraped readme/reference documentation, rejecting entries that contain exaggerations, false assertions, or represent empty placeholder repositories.',
       class: 'agent-verify'
     },
     {
@@ -110,7 +110,7 @@ export default function TechnicalDetails() {
       description: 'Scores the vetted items based on real-world utility for students, makers, and production developers. Ranks and selects the top 5 updates for the final newsletter.',
       inputs: 'vetted_candidates',
       outputs: 'vetted_candidates (Ranked and tagged)',
-      strategy: 'Applies a utility score (0-100) based on accessibility (is it easy to self-host?), uniqueness (does it solve a unique problem?), and project maturity (releases and community traction).',
+      strategy: 'Uses an LLM to perform an educational evaluation. It analyzes the scraped contents to extract specific developer user groups, write punchy sentences explaining real-world relevance, assign an actionable verdict (INTEGRATE, WATCH, READ, IGNORE), and rate confidence in its momentum.',
       class: 'agent-analyze'
     },
     {
@@ -159,7 +159,7 @@ export default function TechnicalDetails() {
       time: '14.2s',
       parameters: {
         'Executable': 'python backend/run_agent.py',
-        'AI Engines': 'Gemini 1.5 Flash, Mistral 7B',
+        'AI Engines': 'Gemini 3.5 Flash, Mistral 8x22B',
         'Agent Count': '6 Orchestrated Nodes',
         'Output State': 'final_briefs (JSON payload)'
       },

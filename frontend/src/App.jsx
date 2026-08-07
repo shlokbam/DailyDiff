@@ -29,52 +29,61 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchBriefs() {
-      let fetchedHistory = [];
+    async function loadData() {
+      // 1. Immediately load local static history backup for instant render
+      let localData = [];
+      try {
+        const response = await fetch('/data/history.json');
+        if (response.ok) {
+          const data = await response.json();
+          if (data && data.length > 0) {
+            // Sort descending (newest date first)
+            localData = [...data].sort((a, b) => b.date.localeCompare(a.date));
+            setHistory(localData);
+            setSelectedDate(localData[0].date);
+            setLoading(false); // Render starts immediately with static data!
+          }
+        }
+      } catch (err) {
+        console.warn('Failed to load local static history fallback:', err);
+      }
+
+      // 2. Fetch live database briefs in the background to check for new editions
       try {
         const response = await fetch(`${API_BASE}/briefs/archive?limit=25`);
         if (response.ok) {
           const data = await response.json();
           if (data && data.length > 0) {
-            fetchedHistory = data;
+            setHistory((prevHistory) => {
+              const merged = [...data];
+              const seenDates = new Set(merged.map(item => item.date));
+              
+              // Maintain any older static cache elements not returned by the API
+              prevHistory.forEach(item => {
+                if (!seenDates.has(item.date)) {
+                  merged.push(item);
+                }
+              });
+              
+              merged.sort((a, b) => b.date.localeCompare(a.date));
+              
+              setSelectedDate((prevDate) => {
+                if (prevDate && merged.some(item => item.date === prevDate)) {
+                  return prevDate;
+                }
+                return merged[0]?.date || '';
+              });
+              
+              return merged;
+            });
+            setLoading(false);
           }
         }
       } catch (err) {
-        console.warn('FastAPI backend not reachable, trying to load local static data...');
+        console.warn('Live API unreachable (server offline or spin-up delay). Displaying static archive.');
       }
-      
-      if (fetchedHistory.length === 0) {
-        try {
-          const response = await fetch('/data/history.json');
-          if (response.ok) {
-            const data = await response.json();
-            if (data && data.length > 0) {
-              fetchedHistory = data.reverse();
-            }
-          }
-        } catch (err) {
-          console.warn('Local static file not found, using default pre-populated mock briefings.');
-        }
-      }
-      
-      // Combine: keep fetched ones, and add mock ones that don't have the same date as a fetched one
-      const fetchedDates = new Set(fetchedHistory.map(item => item.date));
-      const filteredMocks = MOCK_BRIEFS.filter(item => !fetchedDates.has(item.date));
-      
-      const combined = [...filteredMocks, ...fetchedHistory];
-      // Sort combined history by date descending
-      combined.sort((a, b) => b.date.localeCompare(a.date));
-      
-      if (combined.length > 0) {
-        setHistory(combined);
-        setSelectedDate(combined[0].date);
-      } else {
-        setHistory(MOCK_BRIEFS);
-        setSelectedDate(MOCK_BRIEFS[0].date);
-      }
-      setLoading(false);
     }
-    fetchBriefs();
+    loadData();
   }, []);
 
   const toggleExpand = (date, index) => {
@@ -153,10 +162,11 @@ export default function App() {
               Briefing
             </button>
             <button 
-              className={`nav-link-btn ${view === 'tech' ? 'active' : ''}`}
+              className={`nav-link-btn ${view === 'tech' ? 'active' : ''} ${loading ? 'pulse-glow' : ''}`}
               onClick={() => setView('tech')}
+              style={loading ? { animationDuration: '1.5s' } : {}}
             >
-              How It's Made
+              {loading ? "⚙️ How It's Made" : "How It's Made"}
             </button>
           </nav>
         </div>
@@ -289,8 +299,41 @@ export default function App() {
 
           {/* Main timeline of briefings */}
           {loading ? (
-            <div style={{ textAlign: 'center', margin: '4rem 0', color: 'var(--text-secondary)' }}>
-              <p>Scouting technology updates...</p>
+            <div className="loader-container glass animate-fade-in">
+              <div className="pulsing-loader">
+                <svg className="scouting-icon" viewBox="0 0 24 24" fill="none" stroke="url(#scouting-grad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="48" height="48" style={{ display: 'block', margin: '0 auto 1.5rem' }}>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                  <defs>
+                    <linearGradient id="scouting-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#60a5fa" />
+                      <stop offset="1" stopColor="#a78bfa" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.75rem', background: 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                Scouting Technology Updates...
+              </h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+                Our autonomous AI agents are currently crawling social channels and scanning code repositories to compile today's technical briefing.
+              </p>
+              
+              <div style={{ padding: '1.25rem', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '12px', border: '1px solid var(--border-color)', marginBottom: '2rem', textAlign: 'left' }}>
+                <h4 style={{ fontSize: '0.9rem', color: '#60a5fa', marginBottom: '0.4rem', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  ⚡ Cold-Start Server Warning
+                </h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.82rem', lineHeight: '1.5' }}>
+                  DailyDiff's backend runs on a cloud server that sleeps after periods of inactivity. Booting it back up (cold start) can take 30-50 seconds.
+                </p>
+              </div>
+
+              <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem' }}>
+                <div className="up-arrow-animation" style={{ fontSize: '1.75rem', color: '#a78bfa', fontWeight: 'bold' }}>↑</div>
+                <p style={{ color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: '500', maxWidth: '420px', margin: '0 auto', lineHeight: '1.5' }}>
+                  Curious how this platform works? Look up! Click on <strong>How It's Made</strong> in the top navigation bar to explore our interactive agent architecture.
+                </p>
+              </div>
             </div>
           ) : !activeGroup ? (
             <div style={{ textAlign: 'center', margin: '4rem 0', color: 'var(--text-muted)' }}>
