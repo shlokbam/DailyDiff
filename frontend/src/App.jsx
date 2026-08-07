@@ -27,6 +27,13 @@ export default function App() {
   const [email, setEmail] = useState('');
   const [subStatus, setSubStatus] = useState({ type: '', message: '' });
   const [loading, setLoading] = useState(true);
+  const [showPersonalizedBanner, setShowPersonalizedBanner] = useState(() => {
+    try {
+      return localStorage.getItem('hidePersonalizedBanner') !== 'true';
+    } catch {
+      return true;
+    }
+  });
 
   useEffect(() => {
     async function loadData() {
@@ -136,6 +143,63 @@ export default function App() {
 
   return (
     <div className="app-container">
+      {/* Personalized Announcement Banner */}
+      {showPersonalizedBanner && (
+        <div className="announcement-banner glass-card animate-fade-in" style={{
+          background: 'linear-gradient(135deg, rgba(96, 165, 250, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%)',
+          borderColor: 'rgba(96, 165, 250, 0.3)',
+          padding: '1rem 1.5rem',
+          borderRadius: '12px',
+          marginBottom: '2rem',
+          position: 'relative',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          gap: '1rem',
+          boxShadow: '0 8px 32px rgba(96, 165, 250, 0.1)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <span style={{ fontSize: '1.5rem' }}>✨</span>
+            <div style={{ textAlign: 'left' }}>
+              <h4 style={{ color: '#fff', fontSize: '0.95rem', fontWeight: '600', marginBottom: '0.15rem' }}>
+                Personalized Briefings Coming Soon!
+              </h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.4' }}>
+                A new version is on the way where you will get a short form to fill about your choice of news, and we will deliver briefings customized <strong>specifically to you</strong>!
+              </p>
+            </div>
+          </div>
+          <button 
+            onClick={() => {
+              setShowPersonalizedBanner(false);
+              try {
+                localStorage.setItem('hidePersonalizedBanner', 'true');
+              } catch (e) {
+                console.warn(e);
+              }
+            }}
+            aria-label="Dismiss announcement"
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: 'var(--text-secondary)',
+              fontSize: '1.15rem',
+              cursor: 'pointer',
+              padding: '0.25rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'color 0.2s',
+              alignSelf: 'center'
+            }}
+            onMouseOver={(e) => e.currentTarget.style.color = '#fff'}
+            onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       {/* Header */}
       <header className="app-header">
         <div className="header-top-row">
