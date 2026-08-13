@@ -18,6 +18,19 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 BREVO_API_KEY = os.getenv("BREVO_API_KEY")
 BACKEND_API_URL = os.getenv("BACKEND_API_URL")
 
+# LangSmith / LangChain Tracing configuration
+LANGCHAIN_TRACING_V2 = os.getenv("LANGCHAIN_TRACING_V2") or os.getenv("LANGSMITH_TRACING") or "false"
+LANGCHAIN_API_KEY = os.getenv("LANGCHAIN_API_KEY") or os.getenv("LANGSMITH_API_KEY")
+LANGCHAIN_PROJECT = os.getenv("LANGCHAIN_PROJECT") or os.getenv("LANGSMITH_PROJECT") or "DailyDiff"
+LANGCHAIN_ENDPOINT = os.getenv("LANGCHAIN_ENDPOINT") or os.getenv("LANGSMITH_ENDPOINT") or "https://api.smith.langchain.com"
+
+# Ensure environment variables are populated for the LangChain tracing client
+if LANGCHAIN_TRACING_V2.lower() == "true" and LANGCHAIN_API_KEY:
+    os.environ["LANGCHAIN_TRACING_V2"] = "true"
+    os.environ["LANGCHAIN_API_KEY"] = LANGCHAIN_API_KEY
+    os.environ["LANGCHAIN_PROJECT"] = LANGCHAIN_PROJECT.strip('"').strip("'")  # Strip potential quotes
+    os.environ["LANGCHAIN_ENDPOINT"] = LANGCHAIN_ENDPOINT
+
 # Data File Paths
 DATA_DIR = BASE_DIR / "data"
 HISTORY_FILE_PATH = DATA_DIR / "history.json"

@@ -34,6 +34,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BACKEND_API_URL: ${{ secrets.BACKEND_API_URL }}
           NOTIFY_SECRET_TOKEN: ${{ secrets.NOTIFY_SECRET_TOKEN }}
+          LANGCHAIN_TRACING_V2: "true"
+          LANGCHAIN_API_KEY: ${{ secrets.LANGCHAIN_API_KEY }}
+          LANGCHAIN_PROJECT: "DailyDiff"
+          LANGSMITH_TRACING: "true"
+          LANGSMITH_API_KEY: ${{ secrets.LANGCHAIN_API_KEY }}
+          LANGSMITH_PROJECT: "DailyDiff"
         run: |
           export PYTHONPATH=backend
           python backend/run_agent.py
