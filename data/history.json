@@ -894,5 +894,61 @@
         "source_url": "https://dev.to/rud0lforrp/ai-is-not-a-source-of-truth-48kc"
       }
     ]
+  },
+  {
+    "date": "2026-08-19",
+    "published_at": "2026-08-19T04:10:24.871846Z",
+    "briefs": [
+      {
+        "category": "Cool Tool",
+        "title": "Lertaro: A Blazing-Fast Windows File Search Tool Built with .NET 10",
+        "description": "**Lertaro lets you search files on Windows instantly by tapping into low-level NTFS features like the USN Journal and MFT.** Built with C# WPF and NT services, it\u2019s a sleek, customizable alternative to tools like Everything or Listary, with real-time monitoring and plugin support.",
+        "why_it_matters": "Lertaro proves how leveraging NTFS internals can create near-instant search tools with minimal overhead, offering a practical blueprint for high-performance desktop utilities. It\u2019s also a great case study for modern .NET/WPF development with a plugin architecture.",
+        "who_cares": "Windows desktop developers, .NET/WPF learners, system programming enthusiasts, and junior developers exploring desktop tooling or file system optimization.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://github.com/Lertaro/Lertaro"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Three Lines to Draw Before You Scrape Instagram (Or Any Website)",
+        "description": "**Before writing a single line of scraping code, ask: Is this legal? Is it reliable? Is it worth the effort?** This guide flips the script by focusing on the three critical decisions that derail most scraping projects before they even start.",
+        "why_it_matters": "Avoid legal headaches and technical debt by setting clear boundaries upfront. This mindset shift\u2014from \u2018how to scrape\u2019 to \u2018what *should* we scrape\u2019\u2014saves time and frustration in long-term projects.",
+        "who_cares": "Junior developers learning web scraping, data engineers building pipelines, and early-career engineers working on data collection tasks.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://dev.to/automate-better/three-lines-to-draw-before-you-scrape-instagram-5h5h"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "How to Build More Accessible Websites with WCAG 2.2",
+        "description": "**Your polished website might still fail users with disabilities\u2014here\u2019s how to fix it.** This guide breaks down WCAG 2.2 into actionable steps to make your sites work for everyone, including keyboard-only users and screen readers.",
+        "why_it_matters": "Accessibility isn\u2019t an afterthought; it\u2019s a core part of good UX. Following WCAG 2.2 ensures your sites are inclusive, legally compliant, and future-proof\u2014saving costly retrofits down the line.",
+        "who_cares": "Junior frontend developers, React/Vue/Svelte beginners, UX/UI designers transitioning to development, and job seekers targeting accessibility-conscious companies.",
+        "verdict": "INTEGRATE",
+        "confidence": 95,
+        "source_url": "https://www.freecodecamp.org/news/how-to-build-more-accessible-websites-with-wcag-2-2/"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Your AI Agent Scheduler Needs a Clock-Skew Budget (Not Just Cron)",
+        "description": "**Cron jobs can fail silently if your system clock drifts\u2014here\u2019s how to design schedulers that don\u2019t.** Learn why wall-clock time, monotonic time, and retries matter when building reliable AI agent workflows.",
+        "why_it_matters": "Clock-skew budgets prevent subtle, hard-to-debug failures where jobs run at the wrong time or not at all. This teaches developers to design systems with explicit time contracts, improving reliability in distributed workflows.",
+        "who_cares": "Backend engineers building distributed systems, AI/ML engineers working with agent schedulers, and system design learners.",
+        "verdict": "INTEGRATE",
+        "confidence": 90,
+        "source_url": "https://dev.to/zira125/your-ai-agent-scheduler-needs-a-clock-skew-budget-not-just-cron-mck"
+      },
+      {
+        "category": "Watchlist",
+        "title": "Cursor\u2019s Origin: An AI-Native GitHub Alternative",
+        "description": "**Cursor just launched Origin, a streamlined code-hosting platform designed for AI-first workflows.** It simplifies repo management and PR workflows, making it easier to integrate AI tools into daily development without switching platforms.",
+        "why_it_matters": "Origin could become a key player if it succeeds in reducing friction for AI-assisted coding. It\u2019s worth watching as a potential alternative to GitHub for teams building agent-native workflows.",
+        "who_cares": "AI-first developers, Cursor users, and engineers experimenting with AI-assisted coding tools.",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://cursor.com/changelog/origin-code-hosting"
+      }
+    ]
   }
 ]
