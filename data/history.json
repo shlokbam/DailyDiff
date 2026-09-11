@@ -1424,5 +1424,41 @@
         "source_url": "https://dev.to/zoipiai/why-i-built-zoipi-cutting-through-ai-directory-bloat-and-indexing-mcp-servers-d7h"
       }
     ]
+  },
+  {
+    "date": "2026-09-11",
+    "published_at": "2026-09-11T08:25:34.542342Z",
+    "briefs": [
+      {
+        "category": "Career & Learning",
+        "title": "Shopify is moving from React Native back to Swift and Kotlin",
+        "description": "Hacker News top story (Score: 1011). Title: Shopify is moving from React Native back to Swift and Kotlin.",
+        "why_it_matters": "AI coding agents are lowering the cost of writing platform-specific code, making native Swift and Kotlin highly competitive against cross-platform frameworks like React Native. This means learning native development is becoming a stronger career bet as AI tools handle the overhead of maintaining dual codebases.",
+        "who_cares": "Aspiring mobile developers, React Native engineers, CS students choosing a mobile stack, and junior developers tracking how AI agents impact software architecture decisions.",
+        "verdict": "WATCH",
+        "confidence": 90,
+        "source_url": "https://shopify.engineering/back-to-native"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "OpenAI Agents API",
+        "description": "Hacker News top story (Score: 244). Title: OpenAI Agents API.",
+        "why_it_matters": "OpenAI's native Agents API standardizes multi-agent orchestration and state management, allowing you to build complex, collaborative AI applications without the overhead of heavy third-party frameworks. Mastering this native tooling makes building production-grade AI features faster and highly relevant to modern engineering roles.",
+        "who_cares": "CS students building AI portfolios, junior backend developers, Python and Node.js learners, and job-seeking software engineers aiming to specialize in AI engineering.",
+        "verdict": "INTEGRATE",
+        "confidence": 95,
+        "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Astra for Coding: Why Are We Doing This Again?",
+        "description": "Hacker News top story (Score: 268). Title: Astra for Coding: Why Are We Doing This Again?.",
+        "why_it_matters": "This critique by a legendary developer exposes the practical limitations of autonomous AI agents like GPT-6 Astra, helping you understand why raw AI generation can lead to over-complicated 'slop' instead of clean, maintainable code.",
+        "who_cares": "CS students building portfolios, early-career backend developers, software engineers exploring AI agents, and Python developers.",
+        "verdict": "READ",
+        "confidence": 85,
+        "source_url": "https://lucumr.pocoo.org/2026/9/7/astra-why/"
+      }
+    ]
   }
 ]
