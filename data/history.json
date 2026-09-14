@@ -1460,5 +1460,41 @@
         "source_url": "https://lucumr.pocoo.org/2026/9/7/astra-why/"
       }
     ]
+  },
+  {
+    "date": "2026-09-14",
+    "published_at": "2026-09-14T09:31:58.738694Z",
+    "briefs": [
+      {
+        "category": "Career & Learning",
+        "title": "Converting MOV to MP4 entirely in the browser \u2014 no server, no uploads, no ffmpeg",
+        "description": "Every converter website works the same way: you upload your video to somebody's server farm, wait for the transfer, wait for the conversion, download the result \u2014 and trust that your footage wasn't kept. For an 800 MB home video, that's a lot of trust.\n\nI kept wondering: the file is already on my ma...",
+        "why_it_matters": "This library proves that high-performance video remuxing can happen entirely in the browser, eliminating expensive server-side processing and heavy WASM binaries. It teaches developers how to leverage client-side capabilities for privacy-first, zero-cost media manipulation.",
+        "who_cares": "Frontend developers, full-stack engineers building media-heavy applications, portfolio-building CS students, and privacy-focused web developers.",
+        "verdict": "INTEGRATE",
+        "confidence": 88,
+        "source_url": "https://dev.to/verityminecraft/converting-mov-to-mp4-entirely-in-the-browser-no-server-no-uploads-no-ffmpeg-18jm"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "A container is just a process with a few private views. I built one in thirty lines.",
+        "description": "Here is a thing that bothered me for years without my quite admitting it: I did not know what a container actually was. I knew how to run one. I could not have told you what the kernel does when you start one, because the honest answer is that there is no such kernel object to point at. A container ...",
+        "why_it_matters": "Demystifying containers by building one from scratch strips away the 'magic' of Docker, helping developers understand Linux namespaces and OS-level virtualization. This foundational knowledge is essential for debugging containerized applications and mastering systems-level engineering.",
+        "who_cares": "CS students studying operating systems, junior DevOps engineers, backend developers using Docker, and systems programming enthusiasts.",
+        "verdict": "READ",
+        "confidence": 90,
+        "source_url": "https://dev.to/remdore/a-container-is-just-a-process-with-a-few-private-views-i-built-one-in-thirty-lines-26di"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Six Bugs That Taught Me How to Build an AI Agent That Doesn't Fall Over",
+        "description": "For the past several months I've been running a voice-driven AI assistant of my own design, continuously, unattended \u2014 240+ tools, real API integrations, real background jobs, no human babysitting it around the clock.\n\nBuilding the demo version took a weekend. Keeping it alive, unsupervised, for mon...",
+        "why_it_matters": "Moving an AI agent from a weekend prototype to a production-ready, unattended system requires solving silent failures like hanging threads and unhandled timeouts. This article provides critical, real-world debugging lessons that quickstart guides ignore, helping you build resilient, production-grade software.",
+        "who_cares": "Python developers, AI/LLM application builders, CS students building portfolio projects, and junior backend engineers transitioning from prototypes to production.",
+        "verdict": "READ",
+        "confidence": 85,
+        "source_url": "https://dev.to/kiita1302/six-bugs-that-taught-me-how-to-build-an-ai-agent-that-doesnt-fall-over-3mpp"
+      }
+    ]
   }
 ]
