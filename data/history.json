@@ -1532,5 +1532,41 @@
         "source_url": "https://codyho.dev/blog/gpu-driver/"
       }
     ]
+  },
+  {
+    "date": "2026-09-18",
+    "published_at": "2026-09-18T08:59:07.715444Z",
+    "briefs": [
+      {
+        "category": "Tech Shift",
+        "title": "webmcp-kit",
+        "description": "Make your website agent-ready: a coding-agent plugin for Claude Code and Codex that adds WebMCP tools to your web app",
+        "why_it_matters": "It allows developers to easily make their web applications 'agent-ready' by replacing fragile UI scraping with structured, local Model Context Protocol (MCP) tools. This helps developers learn how to build apps that AI agents (like Claude Code or Cursor) can interact with natively and reliably.",
+        "who_cares": "CS students building AI-native portfolios, junior full-stack developers, creators of browser-based AI agents, and active users of Cursor or Claude Code.",
+        "verdict": "WATCH",
+        "confidence": 80,
+        "source_url": "https://github.com/nekuda-ai/webmcp-kit"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Bend \u2013 A language that blocks AI mistakes via proof, on CPU and GPU",
+        "description": "Hacker News top story (Score: 442). Title: Bend \u2013 A language that blocks AI mistakes via proof, on CPU and GPU.",
+        "why_it_matters": "Bend introduces a paradigm where developers use formal proofs to safely constrain AI-generated code, offering a glimpse into the future of AI-assisted programming with automatic GPU/CPU parallelization. It helps developers learn how to enforce system invariants and 'laws' on AI agents without sacrificing execution speed.",
+        "who_cares": "CS students interested in formal verification, developers building AI-agent workflows, systems programming learners, and early-career engineers looking to understand the intersection of AI code generation and software safety.",
+        "verdict": "WATCH",
+        "confidence": 80,
+        "source_url": "https://bend-lang.com/"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+        "description": "Hacker News top story (Score: 334). Title: A heap overflow and SSO misconfiguration to compromise OpenAI internal repos.",
+        "why_it_matters": "This case study demonstrates how combining a low-level memory corruption vulnerability with identity management flaws can lead to complete repository compromise, highlighting the critical importance of defense-in-depth and secure dependency management.",
+        "who_cares": "Security-focused software engineers, DevSecOps learners, system architects, and computer science students interested in real-world exploit chains and enterprise security.",
+        "verdict": "READ",
+        "confidence": 90,
+        "source_url": "https://www.hacktron.ai/blog/hacking-openai"
+      }
+    ]
   }
 ]
