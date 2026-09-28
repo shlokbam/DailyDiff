@@ -1716,5 +1716,41 @@
         "source_url": "https://cms-sfx-demo.apeleg.com/"
       }
     ]
+  },
+  {
+    "date": "2026-09-28",
+    "published_at": "2026-09-28T11:58:09.804059Z",
+    "briefs": [
+      {
+        "category": "Tech Shift",
+        "title": "rooms",
+        "description": "Switch between projects on your Mac. Every project is a room: its windows, laid out, one shortcut away.",
+        "why_it_matters": "A new open source development in the GitHub ecosystem.",
+        "who_cares": "Developers, AI researchers",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://github.com/saragordic/rooms"
+      },
+      {
+        "category": "Tech Shift",
+        "title": "taskuary",
+        "description": "Automate your job: local-first AI task hub. Email, Teams, Slack & reports -> one timeline -> AI triage -> your coding agents (Claude Code, Codex, Gemini) do the work, you approve.",
+        "why_it_matters": "A new open source development in the GitHub ecosystem.",
+        "who_cares": "Developers, AI researchers",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://github.com/ldbumble/taskuary"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Prompting Claude Opus 5.5",
+        "description": "Hacker News top story (Score: 84). Title: Prompting Claude Opus 5.5.",
+        "why_it_matters": "A new open source development in the Hacker News ecosystem.",
+        "who_cares": "Developers, AI researchers",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5"
+      }
+    ]
   }
 ]
