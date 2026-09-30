@@ -1752,5 +1752,41 @@
         "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5"
       }
     ]
+  },
+  {
+    "date": "2026-09-30",
+    "published_at": "2026-09-30T10:42:35.816423Z",
+    "briefs": [
+      {
+        "category": "Tech Shift",
+        "title": "tsk",
+        "description": "tsk, a Linear alternative that stays in the terminal: a shared task board for you and your agents. TUI for you, CLI for them.",
+        "why_it_matters": "It bridges the gap between human task management and AI agent workflows by providing a shared terminal-based queue. This allows developers to seamlessly organize their thoughts and hand off structured tasks to AI coding assistants directly from the command line.",
+        "who_cares": "Terminal-centric developers, software engineers leveraging AI coding agents, students building complex projects with LLM assistants, and productivity enthusiasts who prefer TUIs over heavy GUI project management tools.",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://github.com/smarzban/tsk"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Dots: Always-on agents",
+        "description": "Hacker News top story (Score: 622). Title: Dots: Always-on agents.",
+        "why_it_matters": "This introduces a shift from reactive, prompt-based AI to proactive, background-running agents that execute complex workflows autonomously. Learning how these 'always-on' systems operate will help you build next-generation asynchronous applications and stay ahead of the AI integration curve.",
+        "who_cares": "AI engineering students, backend developers building automation tools, full-stack developers, and CS students looking to build cutting-edge portfolio projects.",
+        "verdict": "WATCH",
+        "confidence": 90,
+        "source_url": "https://openai.com/index/introducing-dots/"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+        "description": "Hacker News top story (Score: 943). Title: GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price.",
+        "why_it_matters": "A new open source development in the Hacker News ecosystem.",
+        "who_cares": "Developers, AI researchers",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+      }
+    ]
   }
 ]
