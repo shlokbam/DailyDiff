@@ -1788,5 +1788,41 @@
         "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/"
       }
     ]
+  },
+  {
+    "date": "2026-10-02",
+    "published_at": "2026-10-02T10:45:58.500873Z",
+    "briefs": [
+      {
+        "category": "Tech Shift",
+        "title": "pr-cockpit",
+        "description": "An extremely fast GitHub for pull request review: PRs open in 20 ms. Keyboard-first, macOS and Linux, CLI for coding agents.",
+        "why_it_matters": "A new open source development in the GitHub ecosystem.",
+        "who_cares": "Developers, AI researchers",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://github.com/theolundqvist/pr-cockpit"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "SvelteKit 3",
+        "description": "Hacker News top story (Score: 276). Title: SvelteKit 3.",
+        "why_it_matters": "A new open source development in the Hacker News ecosystem.",
+        "who_cares": "Developers, AI researchers",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://svelte.dev/blog/sveltekit-3-is-here"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
+        "description": "Hacker News top story (Score: 379). Title: Git 3.0's upcoming SHA-256 default will be a costly mistake.",
+        "why_it_matters": "A new open source development in the Hacker News ecosystem.",
+        "who_cares": "Developers, AI researchers",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://blog.gitbutler.com/git-3-sha-256"
+      }
+    ]
   }
 ]
