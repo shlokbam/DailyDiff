@@ -1824,5 +1824,41 @@
         "source_url": "https://blog.gitbutler.com/git-3-sha-256"
       }
     ]
+  },
+  {
+    "date": "2026-10-05",
+    "published_at": "2026-10-05T11:36:03.555842Z",
+    "briefs": [
+      {
+        "category": "Tech Shift",
+        "title": "cli-faq-shortcuts",
+        "description": "Turn repeated Claude Code, Codex, and Cursor prompts into reusable slash commands. Local Python history extractor + Agent Skill.",
+        "why_it_matters": "A new open source development in the GitHub ecosystem.",
+        "who_cares": "Developers, AI researchers",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://github.com/kishormorol/cli-faq-shortcuts"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "We ported the original Doom to SQL",
+        "description": "Hacker News top story (Score: 130). Title: We ported the original Doom to SQL.",
+        "why_it_matters": "A new open source development in the Hacker News ecosystem.",
+        "who_cares": "Developers, AI researchers",
+        "verdict": "WATCH",
+        "confidence": 75,
+        "source_url": "https://cedardb.com/blog/sqldoom/"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "How to Build a Secure Real-Time Chat System: Key Engineering Concepts",
+        "description": "How to Build a Secure Real-Time Chat System: Key Engineering Concepts\n\nA chat application may look simple from the user's perspective.\n\nYou type a message, press send, and the other person receives it almost instantly.\n\nBehind that simple experience is a combination of real-time networking, authenti...",
+        "why_it_matters": "Building a real-time chat app is a rite of passage for developers, but moving from a basic tutorial to a secure, production-ready system requires understanding WebSockets and backend architecture. This guide demystifies these core system design concepts, helping you build robust portfolio projects that impress interviewers.",
+        "who_cares": "CS students building portfolio projects, junior backend developers, self-taught programmers learning WebSockets, and job-seeking software engineers preparing for system design interviews.",
+        "verdict": "READ",
+        "confidence": 85,
+        "source_url": "https://dev.to/bhavy_belwal_ff3ce6f42271/how-to-build-a-secure-real-time-chat-system-key-engineering-concepts-1c1e"
+      }
+    ]
   }
 ]
