@@ -293,9 +293,7 @@ export default function AgentEvaluations() {
           { id: 'skeptic', label: '1. Skeptic Node' },
           { id: 'verifier', label: '2. Verifier Node' },
           { id: 'analyst', label: '3. Analyst Node' },
-          { id: 'editor', label: '4. Editor Node' },
-          { id: 'deepeval', label: 'DeepEval & G-Eval Engine' },
-          { id: 'methodology', label: 'CLI Execution' }
+          { id: 'editor', label: '4. Editor Node' }
         ].map(tab => (
           <button
             key={tab.id}
@@ -929,138 +927,6 @@ export default function AgentEvaluations() {
         </div>
       )}
 
-      {/* TAB 6: DEEPEVAL & G-EVAL ENGINE */}
-      {activeTab === 'deepeval' && (
-        <div className="deepeval-tab animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div className="glass" style={{ padding: '1.75rem 2rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-              <div>
-                <h3 style={{ fontSize: '1.3rem', fontWeight: '600', color: '#f3f4f6' }}>
-                  DeepEval Framework & G-Eval Concepts Explained
-                </h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
-                  Implemented directly based on Confident AI / DeepEval best practices for CI/CD agent evaluation.
-                </p>
-              </div>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', marginTop: '1.5rem' }}>
-              <div className="glass-card" style={{ padding: '1.25rem' }}>
-                <h4 style={{ color: '#60a5fa', fontSize: '0.95rem', marginBottom: '0.5rem' }}>1. LLMTestCase Data Contract</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.5' }}>
-                  Every candidate is structured into DeepEval's standard <code>LLMTestCase</code> with <code>input</code>, 
-                  <code>actual_output</code>, <code>expected_output</code>, and <code>context</code> (scraped README docs for faithfulness).
-                </p>
-              </div>
-
-              <div className="glass-card" style={{ padding: '1.25rem' }}>
-                <h4 style={{ color: '#a855f7', fontSize: '0.95rem', marginBottom: '0.5rem' }}>2. G-Eval LLM-as-a-Judge</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.5' }}>
-                  Rather than brittle regex matches, G-Eval uses prompt criteria with automated multi-step evaluation rubrics 
-                  to generate a normalized score (0 to 1.0) and explainable reasoning.
-                </p>
-              </div>
-
-              <div className="glass-card" style={{ padding: '1.25rem' }}>
-                <h4 style={{ color: '#10b981', fontSize: '0.95rem', marginBottom: '0.5rem' }}>3. assert_test & Pytest CI Integration</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.5' }}>
-                  DeepEval integrates natively with Pytest. Running <code>assert_test(test_case, [metric])</code> asserts that each metric 
-                  score exceeds the passing threshold (0.70).
-                </p>
-              </div>
-            </div>
-
-            <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)' }}>
-              <h4 style={{ color: '#f3f4f6', fontSize: '1rem', marginBottom: '0.75rem' }}>DeepEval CI Terminal Run</h4>
-              <pre style={{ background: 'rgba(0,0,0,0.4)', padding: '1rem', borderRadius: '8px', color: '#34d399', fontSize: '0.85rem', overflowX: 'auto' }}>
-                {deepeval.cli_command}
-              </pre>
-              <div style={{ display: 'flex', gap: '1rem', marginTop: '0.75rem', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                <span>Status: <strong style={{ color: '#10b981' }}>20 / 20 Tests Passed (100%)</strong></span>
-                <span>Framework: <strong>DeepEval 4.2.8</strong></span>
-                <span>Test File: <strong>test_deepeval_nodes.py</strong></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* TAB 7: METHODOLOGY & CLI */}
-      {activeTab === 'methodology' && (
-        <div className="methodology-tab animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div className="glass" style={{ padding: '1.75rem 2rem' }}>
-            <h3 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '1rem', color: '#f3f4f6' }}>
-              Node-by-Node CLI Execution Guide
-            </h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-              Each node evaluation is completely isolated into its own standalone Python script. 
-              You can run them individually during development to benchmark prompts or model swaps without running the entire pipeline.
-            </p>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div className="glass-card" style={{ padding: '1rem 1.25rem', border: '1px solid rgba(168, 85, 247, 0.4)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <strong style={{ color: '#a855f7' }}>DeepEval Official Test Runner (Pytest CI)</strong>
-                  <span style={{ fontSize: '0.75rem', color: '#c084fc' }}>G-Eval Assertions</span>
-                </div>
-                <pre style={{ background: 'rgba(0,0,0,0.3)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', color: '#c084fc', fontSize: '0.85rem' }}>
-                  .venv/bin/deepeval test run tests/evals/test_deepeval_nodes.py
-                </pre>
-              </div>
-
-              <div className="glass-card" style={{ padding: '1rem 1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <strong style={{ color: '#60a5fa' }}>1. Skeptic Node Evaluation</strong>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Precision, Recall & Deduplication</span>
-                </div>
-                <pre style={{ background: 'rgba(0,0,0,0.3)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', color: '#34d399', fontSize: '0.85rem' }}>
-                  .venv/bin/python tests/evals/eval_skeptic.py
-                </pre>
-              </div>
-
-              <div className="glass-card" style={{ padding: '1rem 1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <strong style={{ color: '#ef4444' }}>2. Verifier Node Evaluation</strong>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Adversarial Hype & Hallucination Defense</span>
-                </div>
-                <pre style={{ background: 'rgba(0,0,0,0.3)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', color: '#34d399', fontSize: '0.85rem' }}>
-                  .venv/bin/python tests/evals/eval_verifier.py
-                </pre>
-              </div>
-
-              <div className="glass-card" style={{ padding: '1rem 1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <strong style={{ color: '#f59e0b' }}>3. Analyst Node Evaluation</strong>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Audience Keywords & Practical Takeaways</span>
-                </div>
-                <pre style={{ background: 'rgba(0,0,0,0.3)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', color: '#34d399', fontSize: '0.85rem' }}>
-                  .venv/bin/python tests/evals/eval_analyst.py
-                </pre>
-              </div>
-
-              <div className="glass-card" style={{ padding: '1rem 1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <strong style={{ color: '#10b981' }}>4. Editor Node Evaluation</strong>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Markdown Format, ELI5 Tone & Variety</span>
-                </div>
-                <pre style={{ background: 'rgba(0,0,0,0.3)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', color: '#34d399', fontSize: '0.85rem' }}>
-                  .venv/bin/python tests/evals/eval_editor.py
-                </pre>
-              </div>
-
-              <div className="glass-card" style={{ padding: '1rem 1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <strong style={{ color: '#60a5fa' }}>5. Full Suite Orchestrator</strong>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Generates eval_results.json & saves to DB</span>
-                </div>
-                <pre style={{ background: 'rgba(0,0,0,0.3)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', color: '#60a5fa', fontSize: '0.85rem' }}>
-                  .venv/bin/python tests/evals/run_all_evals.py
-                </pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
