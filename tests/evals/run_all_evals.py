@@ -76,6 +76,16 @@ def run_all_evaluations() -> dict:
     }
     
     # Save to tests/evals/eval_results.json
+    # Save to database and sync files
+    try:
+        from app.database import save_eval_run
+        run_id = save_eval_run(overall_report, run_type="full_suite")
+        overall_report["db_run_id"] = run_id
+        logger.info(f"Persisted complete evaluation run #{run_id} to database.")
+    except Exception as db_err:
+        logger.warning(f"Database save error: {db_err}")
+
+    # Save to tests/evals/eval_results.json
     results_path = BASE_DIR / "tests" / "evals" / "eval_results.json"
     with open(results_path, "w") as f:
         json.dump(overall_report, f, indent=2)
@@ -94,7 +104,7 @@ def run_all_evaluations() -> dict:
 if __name__ == "__main__":
     report = run_all_evaluations()
     print("\n" + "=" * 60)
-    print("🏆 DAILYDIFF COMPOSITE EVALUATION SCORECARD")
+    print("DAILYDIFF COMPOSITE EVALUATION SCORECARD")
     print(f"Overall Quality Score:       {report['composite_quality_score']}%")
     print(f"Total Benchmark Cases:       25 cases")
     print(f"Total Execution Time:        {report['total_runtime_seconds']}s")

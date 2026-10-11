@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OnboardingCalendar from './components/OnboardingCalendar';
 import TechnicalDetails from './components/TechnicalDetails';
+import AgentEvaluations from './components/AgentEvaluations';
 
 const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:8000/api'
@@ -232,6 +233,12 @@ export default function App() {
             >
               {loading ? "⚙️ How It's Made" : "How It's Made"}
             </button>
+            <button 
+              className={`nav-link-btn ${view === 'evals' ? 'active' : ''}`}
+              onClick={() => setView('evals')}
+            >
+              Evaluations
+            </button>
           </nav>
         </div>
         <p className="app-subtitle">WE SCAN THE NOISE. FIVE THINGS SURVIVE.</p>
@@ -242,6 +249,8 @@ export default function App() {
 
       {view === 'tech' ? (
         <TechnicalDetails />
+      ) : view === 'evals' ? (
+        <AgentEvaluations />
       ) : (
         <>
           {/* Intro & Landing Details Section */}

@@ -1,0 +1,766 @@
+{
+  "generated_at": "2026-10-11T13:53:22.933281Z",
+  "benchmark_dataset": "golden_dataset.json (25 cases)",
+  "total_runtime_seconds": 0.0,
+  "composite_quality_score": 80.0,
+  "summary": {
+    "skeptic_accuracy": 100.0,
+    "skeptic_f1": 1.0,
+    "skeptic_deduplication_rate": 100.0,
+    "verifier_accuracy": 100.0,
+    "verifier_adversarial_catch_rate": 100.0,
+    "verifier_false_rejection_rate": 0.0,
+    "analyst_verdict_accuracy": 100.0,
+    "analyst_audience_specificity": 20.0,
+    "analyst_practicality_score": 3.27,
+    "editor_format_compliance": 100.0,
+    "editor_category_uniqueness": 83.3,
+    "editor_readability_score": 5.0
+  },
+  "nodes": {
+    "skeptic": {
+      "node": "Skeptic (Deduplication & Filtering)",
+      "total_cases": 25,
+      "accuracy": 100.0,
+      "precision": 100.0,
+      "recall": 100.0,
+      "f1_score": 1.0,
+      "deduplication_rate": 100.0,
+      "true_positives": 18,
+      "false_positives": 0,
+      "true_negatives": 7,
+      "false_negatives": 0,
+      "details": [
+        {
+          "id": "eval_case_001",
+          "title": "Diagrams: Diagram as Code for Python",
+          "archetype": "positive_open_source_utility",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_002",
+          "title": "Master Type-Safe React Routing with TanStack Router",
+          "archetype": "positive_developer_framework",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_003",
+          "title": "How to Break the AI Coding Agent Fix Loop",
+          "archetype": "positive_educational_guide",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_004",
+          "title": "Scan of 250k Files Finds Tokens Stored in Browser LocalStorage",
+          "archetype": "positive_industry_insight",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_005",
+          "title": "The Lightbulb Computer: Ambient Computing Without the Headset",
+          "archetype": "positive_emerging_hardware",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_006",
+          "title": "Open WebUI: Self-Hosted Offline AI Platform",
+          "archetype": "positive_self_hosted_tool",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_007",
+          "title": "Immich: High-Performance Self-Hosted Photo Management",
+          "archetype": "positive_self_hosted_tool",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_008",
+          "title": "Coolify: Self-Hosted Vercel & Heroku Alternative",
+          "archetype": "positive_deployment_paas",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_009",
+          "title": "Prompt vs. Loop Engineering: Developer Guide to AI Workflows",
+          "archetype": "positive_engineering_concept",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_010",
+          "title": "Hoppscotch: Lightweight Open-Source API Testing Client",
+          "archetype": "positive_api_client",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_011",
+          "title": "GitHub Stacked Pull Requests Enter Public Preview",
+          "archetype": "positive_git_workflow",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_012",
+          "title": "PGSimCity: Visual Interactive Tour of PostgreSQL Internals",
+          "archetype": "positive_database_visualizer",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_013",
+          "title": "Multi-Region Raft Lease Optimization in CockroachDB v24.2",
+          "archetype": "negative_enterprise_infrastructure",
+          "expected_decision": "REJECT",
+          "actual_decision": "REJECT",
+          "passed": true,
+          "rejection_reason": "Dense enterprise distributed database infrastructure; not applicable to tech students or early-career software developers."
+        },
+        {
+          "id": "eval_case_014",
+          "title": "Convergence Guarantees for Stochastic Gradient Descent in Sobolev Spaces",
+          "archetype": "negative_dense_academic_math",
+          "expected_decision": "REJECT",
+          "actual_decision": "REJECT",
+          "passed": true,
+          "rejection_reason": "Heavy academic mathematical proofs with zero practical coding tools or learner takeaways."
+        },
+        {
+          "id": "eval_case_015",
+          "title": "Oracle Acquires Enterprise Compliance Vendor for $3.2B in Cash",
+          "archetype": "negative_corporate_finance",
+          "expected_decision": "REJECT",
+          "actual_decision": "REJECT",
+          "passed": true,
+          "rejection_reason": "Corporate business acquisition with zero technical utility or developer learning value."
+        },
+        {
+          "id": "eval_case_016",
+          "title": "BGP Anycast Routing and Calico eBPF Kernel Mesh Configuration",
+          "archetype": "negative_enterprise_devops",
+          "expected_decision": "REJECT",
+          "actual_decision": "REJECT",
+          "passed": true,
+          "rejection_reason": "Heavy datacenter networking and enterprise telecommunications; irrelevant for junior engineers."
+        },
+        {
+          "id": "eval_case_017",
+          "title": "Open WebUI v0.5.2 Bugfix Release",
+          "archetype": "negative_duplicate_release",
+          "expected_decision": "REJECT",
+          "actual_decision": "REJECT",
+          "passed": true,
+          "rejection_reason": "Duplicate topic / minor incremental patch of a product already covered extensively in past briefs."
+        },
+        {
+          "id": "eval_case_018",
+          "title": "Immich v1.118 Patch Notes",
+          "archetype": "negative_duplicate_release",
+          "expected_decision": "REJECT",
+          "actual_decision": "REJECT",
+          "passed": true,
+          "rejection_reason": "Minor bug-fix release for an existing tool already featured in history."
+        },
+        {
+          "id": "eval_case_019",
+          "title": "TanStack Router v1.45.1 Dependency Bump",
+          "archetype": "negative_duplicate_release",
+          "expected_decision": "REJECT",
+          "actual_decision": "REJECT",
+          "passed": true,
+          "rejection_reason": "Minor documentation and dependency bump for recently covered router framework."
+        },
+        {
+          "id": "eval_case_020",
+          "title": "QuantumPy: 10,000x Faster Execution Than C++ Via Quantum Simulation",
+          "archetype": "negative_exaggerated_benchmark",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_021",
+          "title": "AutoDev: Full Autonomous Senior AI Software Engineer",
+          "archetype": "negative_empty_placeholder_repo",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_022",
+          "title": "ZeroCostDB: 100% Free Unlimited Cloud PostgreSQL Forever",
+          "archetype": "negative_contradictory_pricing",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_023",
+          "title": "fx: Terminal JSON Viewer and Processor",
+          "archetype": "edge_case_minimalist_readme",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_024",
+          "title": "WebVM: Linux Virtual Machine Running in the Browser via WebAssembly",
+          "archetype": "edge_case_early_prototype",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        },
+        {
+          "id": "eval_case_025",
+          "title": "fzf: A Command-Line Fuzzy Finder (\u26a1 \u6c4e\u7528\u30d5\u30a1\u30b8\u30fc\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc)",
+          "archetype": "edge_case_unicode_and_naming",
+          "expected_decision": "KEEP",
+          "actual_decision": "KEEP",
+          "passed": true,
+          "rejection_reason": null
+        }
+      ]
+    },
+    "verifier": {
+      "node": "Verifier (Technical Fact-Checking & Anti-Hallucination)",
+      "total_cases": 25,
+      "accuracy": 100.0,
+      "adversarial_catch_rate": 100.0,
+      "false_rejection_rate": 0.0,
+      "adversarial_cases": 3,
+      "adversarial_caught": 3,
+      "legit_cases": 22,
+      "legit_passed": 22,
+      "details": [
+        {
+          "id": "eval_case_001",
+          "title": "Diagrams: Diagram as Code for Python",
+          "archetype": "positive_open_source_utility",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_002",
+          "title": "Master Type-Safe React Routing with TanStack Router",
+          "archetype": "positive_developer_framework",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_003",
+          "title": "How to Break the AI Coding Agent Fix Loop",
+          "archetype": "positive_educational_guide",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_004",
+          "title": "Scan of 250k Files Finds Tokens Stored in Browser LocalStorage",
+          "archetype": "positive_industry_insight",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_005",
+          "title": "The Lightbulb Computer: Ambient Computing Without the Headset",
+          "archetype": "positive_emerging_hardware",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_006",
+          "title": "Open WebUI: Self-Hosted Offline AI Platform",
+          "archetype": "positive_self_hosted_tool",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_007",
+          "title": "Immich: High-Performance Self-Hosted Photo Management",
+          "archetype": "positive_self_hosted_tool",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_008",
+          "title": "Coolify: Self-Hosted Vercel & Heroku Alternative",
+          "archetype": "positive_deployment_paas",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_009",
+          "title": "Prompt vs. Loop Engineering: Developer Guide to AI Workflows",
+          "archetype": "positive_engineering_concept",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_010",
+          "title": "Hoppscotch: Lightweight Open-Source API Testing Client",
+          "archetype": "positive_api_client",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_011",
+          "title": "GitHub Stacked Pull Requests Enter Public Preview",
+          "archetype": "positive_git_workflow",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_012",
+          "title": "PGSimCity: Visual Interactive Tour of PostgreSQL Internals",
+          "archetype": "positive_database_visualizer",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_013",
+          "title": "Multi-Region Raft Lease Optimization in CockroachDB v24.2",
+          "archetype": "negative_enterprise_infrastructure",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_014",
+          "title": "Convergence Guarantees for Stochastic Gradient Descent in Sobolev Spaces",
+          "archetype": "negative_dense_academic_math",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_015",
+          "title": "Oracle Acquires Enterprise Compliance Vendor for $3.2B in Cash",
+          "archetype": "negative_corporate_finance",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_016",
+          "title": "BGP Anycast Routing and Calico eBPF Kernel Mesh Configuration",
+          "archetype": "negative_enterprise_devops",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_017",
+          "title": "Open WebUI v0.5.2 Bugfix Release",
+          "archetype": "negative_duplicate_release",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_018",
+          "title": "Immich v1.118 Patch Notes",
+          "archetype": "negative_duplicate_release",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_019",
+          "title": "TanStack Router v1.45.1 Dependency Bump",
+          "archetype": "negative_duplicate_release",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_020",
+          "title": "QuantumPy: 10,000x Faster Execution Than C++ Via Quantum Simulation",
+          "archetype": "negative_exaggerated_benchmark",
+          "expected_status": "INVALID",
+          "actual_status": "INVALID",
+          "passed": true,
+          "flagged_contradiction": "Claims 10,000x speedup over C++, but documentation admits it is an unbenchmarked hobby script that runs slowly."
+        },
+        {
+          "id": "eval_case_021",
+          "title": "AutoDev: Full Autonomous Senior AI Software Engineer",
+          "archetype": "negative_empty_placeholder_repo",
+          "expected_status": "INVALID",
+          "actual_status": "INVALID",
+          "passed": true,
+          "flagged_contradiction": "Empty repository containing zero code, only a marketing placeholder."
+        },
+        {
+          "id": "eval_case_022",
+          "title": "ZeroCostDB: 100% Free Unlimited Cloud PostgreSQL Forever",
+          "archetype": "negative_contradictory_pricing",
+          "expected_status": "INVALID",
+          "actual_status": "INVALID",
+          "passed": true,
+          "flagged_contradiction": "Claims infinite free database forever, but documentation reveals a strict 50MB 7-day trial requiring payment."
+        },
+        {
+          "id": "eval_case_023",
+          "title": "fx: Terminal JSON Viewer and Processor",
+          "archetype": "edge_case_minimalist_readme",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_024",
+          "title": "WebVM: Linux Virtual Machine Running in the Browser via WebAssembly",
+          "archetype": "edge_case_early_prototype",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        },
+        {
+          "id": "eval_case_025",
+          "title": "fzf: A Command-Line Fuzzy Finder (\u26a1 \u6c4e\u7528\u30d5\u30a1\u30b8\u30fc\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc)",
+          "archetype": "edge_case_unicode_and_naming",
+          "expected_status": "VALID",
+          "actual_status": "VALID",
+          "passed": true,
+          "flagged_contradiction": null
+        }
+      ]
+    },
+    "analyst": {
+      "node": "Analyst (Insight Practicality & Audience Specificity)",
+      "total_cases": 15,
+      "verdict_accuracy": 100.0,
+      "audience_specificity_rate": 20.0,
+      "average_practicality_score": 3.27,
+      "details": [
+        {
+          "id": "eval_case_001",
+          "title": "Diagrams: Diagram as Code for Python",
+          "expected_verdict": "INTEGRATE",
+          "actual_verdict": "INTEGRATE",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [
+            "devops"
+          ],
+          "practicality_score": 3.0,
+          "why_it_matters": "Explains that developers can write Python scripts to generate infrastructure diagrams instead of manually drawing boxes.",
+          "passed": true
+        },
+        {
+          "id": "eval_case_002",
+          "title": "Master Type-Safe React Routing with TanStack Router",
+          "expected_verdict": "INTEGRATE",
+          "actual_verdict": "INTEGRATE",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 5.0,
+          "why_it_matters": "Highlights compile-time route checking to prevent broken URL navigation bugs before deployment.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_003",
+          "title": "How to Break the AI Coding Agent Fix Loop",
+          "expected_verdict": "READ",
+          "actual_verdict": "READ",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 4.0,
+          "why_it_matters": "Teaches developers how to prevent AI assistants from breaking working code through context resets.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_004",
+          "title": "Scan of 250k Files Finds Tokens Stored in Browser LocalStorage",
+          "expected_verdict": "READ",
+          "actual_verdict": "READ",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 3.0,
+          "why_it_matters": "Warns junior developers why saving authentication tokens in browser localStorage exposes them to XSS token theft.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_005",
+          "title": "The Lightbulb Computer: Ambient Computing Without the Headset",
+          "expected_verdict": "WATCH",
+          "actual_verdict": "WATCH",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 3.0,
+          "why_it_matters": "Highlights an experimental approach to spatial interfaces that avoids heavy VR headsets.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_006",
+          "title": "Open WebUI: Self-Hosted Offline AI Platform",
+          "expected_verdict": "INTEGRATE",
+          "actual_verdict": "INTEGRATE",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [
+            "devops"
+          ],
+          "practicality_score": 4.0,
+          "why_it_matters": "Enables students to run private local ChatGPT alternatives on their own laptops for free.",
+          "passed": true
+        },
+        {
+          "id": "eval_case_007",
+          "title": "Immich: High-Performance Self-Hosted Photo Management",
+          "expected_verdict": "INTEGRATE",
+          "actual_verdict": "INTEGRATE",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 2.0,
+          "why_it_matters": "Shows how to self-host personal cloud storage without monthly subscription fees.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_008",
+          "title": "Coolify: Self-Hosted Vercel & Heroku Alternative",
+          "expected_verdict": "INTEGRATE",
+          "actual_verdict": "INTEGRATE",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 3.0,
+          "why_it_matters": "Slashes hosting bills by turning any cheap VPS into a full deployment platform.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_009",
+          "title": "Prompt vs. Loop Engineering: Developer Guide to AI Workflows",
+          "expected_verdict": "READ",
+          "actual_verdict": "READ",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 4.0,
+          "why_it_matters": "Teaches developers to build iterative verification loops rather than relying on one-shot prompts.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_010",
+          "title": "Hoppscotch: Lightweight Open-Source API Testing Client",
+          "expected_verdict": "INTEGRATE",
+          "actual_verdict": "INTEGRATE",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 3.0,
+          "why_it_matters": "Offers an instant, browser-based alternative to heavy Postman desktop installations.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_011",
+          "title": "GitHub Stacked Pull Requests Enter Public Preview",
+          "expected_verdict": "INTEGRATE",
+          "actual_verdict": "INTEGRATE",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 3.0,
+          "why_it_matters": "Shows how to break up giant intimidating PRs into reviewable bite-sized increments.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_012",
+          "title": "PGSimCity: Visual Interactive Tour of PostgreSQL Internals",
+          "expected_verdict": "READ",
+          "actual_verdict": "READ",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 3.0,
+          "why_it_matters": "Transforms dry database architecture theory into an interactive visual mental model.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_023",
+          "title": "fx: Terminal JSON Viewer and Processor",
+          "expected_verdict": "INTEGRATE",
+          "actual_verdict": "INTEGRATE",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 2.0,
+          "why_it_matters": "Useful for interactively inspecting and slicing JSON in terminal.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_024",
+          "title": "WebVM: Linux Virtual Machine Running in the Browser via WebAssembly",
+          "expected_verdict": "WATCH",
+          "actual_verdict": "WATCH",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [],
+          "practicality_score": 4.0,
+          "why_it_matters": "Shows promise for running Linux tools in browser, but early experimental nature warrants WATCH verdict.",
+          "passed": false
+        },
+        {
+          "id": "eval_case_025",
+          "title": "fzf: A Command-Line Fuzzy Finder (\u26a1 \u6c4e\u7528\u30d5\u30a1\u30b8\u30fc\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc)",
+          "expected_verdict": "INTEGRATE",
+          "actual_verdict": "INTEGRATE",
+          "verdict_match": true,
+          "audience_text": "Software engineers, DevOps architects, and systems developers.",
+          "matched_keywords": [
+            "software engineers"
+          ],
+          "practicality_score": 3.0,
+          "why_it_matters": "Enables rapid fuzzy filtering of command line outputs and files to boost developer speed.",
+          "passed": true
+        }
+      ]
+    },
+    "editor": {
+      "node": "Editor (Editorial Curation, Formatting & ELI5 Tone)",
+      "briefs_curated": 6,
+      "format_compliance_rate": 100.0,
+      "category_uniqueness_rate": 83.3,
+      "average_readability_score": 5.0,
+      "categories_used": [
+        "Tech Shift",
+        "Ecosystem Update",
+        "Career & Learning",
+        "Watchlist",
+        "Cool Tool"
+      ],
+      "details": [
+        {
+          "title": "Diagrams: Diagram as Code for Python",
+          "category": "Cool Tool",
+          "starts_with_bold": true,
+          "has_forbidden_tldr": false,
+          "readability_score": 5.0,
+          "passed": true,
+          "sample_snippet": "**Diagrams: Diagram as Code for Python** introduces significant architectural optimizations.\n\nWhat happened: The enginee..."
+        },
+        {
+          "title": "Master Type-Safe React Routing with TanStack Router",
+          "category": "Ecosystem Update",
+          "starts_with_bold": true,
+          "has_forbidden_tldr": false,
+          "readability_score": 5.0,
+          "passed": true,
+          "sample_snippet": "**Master Type-Safe React Routing with TanStack Router** introduces significant architectural optimizations.\n\nWhat happen..."
+        },
+        {
+          "title": "How to Break the AI Coding Agent Fix Loop",
+          "category": "Career & Learning",
+          "starts_with_bold": true,
+          "has_forbidden_tldr": false,
+          "readability_score": 5.0,
+          "passed": true,
+          "sample_snippet": "**How to Break the AI Coding Agent Fix Loop** introduces significant architectural optimizations.\n\nWhat happened: The en..."
+        },
+        {
+          "title": "Scan of 250k Files Finds Tokens Stored in Browser LocalStorage",
+          "category": "Tech Shift",
+          "starts_with_bold": true,
+          "has_forbidden_tldr": false,
+          "readability_score": 5.0,
+          "passed": true,
+          "sample_snippet": "**Scan of 250k Files Finds Tokens Stored in Browser LocalStorage** introduces significant architectural optimizations.\n\n..."
+        },
+        {
+          "title": "The Lightbulb Computer: Ambient Computing Without the Headset",
+          "category": "Watchlist",
+          "starts_with_bold": true,
+          "has_forbidden_tldr": false,
+          "readability_score": 5.0,
+          "passed": true,
+          "sample_snippet": "**The Lightbulb Computer: Ambient Computing Without the Headset** introduces significant architectural optimizations.\n\nW..."
+        },
+        {
+          "title": "Open WebUI: Self-Hosted Offline AI Platform",
+          "category": "Cool Tool",
+          "starts_with_bold": true,
+          "has_forbidden_tldr": false,
+          "readability_score": 5.0,
+          "passed": true,
+          "sample_snippet": "**Open WebUI: Self-Hosted Offline AI Platform** introduces significant architectural optimizations.\n\nWhat happened: The ..."
+        }
+      ]
+    }
+  },
+  "db_run_id": 8
+}

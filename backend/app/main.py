@@ -196,3 +196,50 @@ def notify_subscribers(brief_group: DailyBriefGroup, background_tasks: Backgroun
         
     background_tasks.add_task(dispatch_emails, emails, brief_group)
     return {"message": f"Successfully queued notification emails to {len(emails)} subscribers"}
+
+# ==========================================
+# Evaluation API Endpoints
+# ==========================================
+
+from app.database import get_latest_eval_run, get_eval_history, get_eval_run_by_id, save_eval_run
+
+@app.get("/api/evals/latest")
+@app.head("/api/evals/latest")
+def get_latest_eval():
+    """Retrieve the latest evaluation report from the database (or static fallback)."""
+    latest = get_latest_eval_run()
+    if latest:
+        return latest
+    
+    # Fallback to static eval_results.json if DB has not been populated yet
+    try:
+        from app.config import BASE_DIR
+        import json
+        json_path = BASE_DIR / "frontend" / "public" / "eval_results.json"
+        if json_path.exists():
+            with open(json_path, "r") as f:
+                return json.load(f)
+    except Exception as e:
+        logger.warning(f"Fallback reading eval_results.json error: {e}")
+        
+    raise HTTPException(status_code=404, detail="No evaluation runs recorded yet")
+
+@app.get("/api/evals/history")
+def get_eval_runs(limit: int = 50):
+    """Retrieve past evaluation runs from the database."""
+    return get_eval_history(limit=limit)
+
+@app.get("/api/evals/{run_id}")
+def get_eval_by_id(run_id: int):
+    """Retrieve a specific evaluation run by its database ID."""
+    run = get_eval_run_by_id(run_id)
+    if not run:
+        raise HTTPException(status_code=404, detail=f"Evaluation run #{run_id} not found")
+    return run
+
+@app.post("/api/evals/record", status_code=status.HTTP_201_CREATED)
+def record_eval_run(report: Dict[str, Any], run_type: str = "custom_run"):
+    """Record an evaluation run into the database."""
+    run_id = save_eval_run(report, run_type=run_type)
+    return {"message": f"Evaluation run #{run_id} successfully recorded in database", "id": run_id}
+
