@@ -1,0 +1,790 @@
+[
+  {
+    "id": "eval_case_001",
+    "category_target": "Cool Tool",
+    "archetype": "positive_open_source_utility",
+    "input_signal": {
+      "title": "Diagrams: Diagram as Code for Python",
+      "source": "FreeCodeCamp",
+      "url": "https://github.com/mingrammer/diagrams",
+      "raw_description": "Diagrams lets you draw cloud system architecture in Python code. It supports AWS, GCP, Azure, and Kubernetes.",
+      "scraped_docs": "Diagrams as Code allows you to track system architecture changes in version control. It was created for prototyping without manual visual tools. Requires Python 3.7+ and Graphviz."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "INTEGRATE",
+        "expected_audience_keywords": ["DevOps", "backend", "cloud architecture", "students learning system design"],
+        "practical_takeaway_rubric": "Explains that developers can write Python scripts to generate infrastructure diagrams instead of manually drawing boxes."
+      },
+      "editor": {
+        "expected_category": "Cool Tool",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:", "In conclusion"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_002",
+    "category_target": "Ecosystem Update",
+    "archetype": "positive_developer_framework",
+    "input_signal": {
+      "title": "Master Type-Safe React Routing with TanStack Router",
+      "source": "FreeCodeCamp",
+      "url": "https://github.com/TanStack/router",
+      "raw_description": "TanStack Router provides 100% type-safe routing for modern React and full-stack web applications with search parameter validation.",
+      "scraped_docs": "TanStack Router brings first-class search param state management, route loaders, and compile-time route verification to React applications. It eliminates string-based navigation errors."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "INTEGRATE",
+        "expected_audience_keywords": ["React beginners", "frontend developers", "TypeScript learners"],
+        "practical_takeaway_rubric": "Highlights compile-time route checking to prevent broken URL navigation bugs before deployment."
+      },
+      "editor": {
+        "expected_category": "Ecosystem Update",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_003",
+    "category_target": "Career & Learning",
+    "archetype": "positive_educational_guide",
+    "input_signal": {
+      "title": "How to Break the AI Coding Agent Fix Loop",
+      "source": "FreeCodeCamp",
+      "url": "https://www.freecodecamp.org/news/how-to-break-the-ai-coding-agent-fix-loop/",
+      "raw_description": "A practical guide on how to stop AI coding tools like Cursor and Copilot from hallucinating in endless bug loops.",
+      "scraped_docs": "Examines context window pollution in AI code editors. Demonstrates how to reset chat memory, constrain problem boundaries with unit tests, and provide minimal reproducing examples."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "READ",
+        "expected_audience_keywords": ["CS students", "software engineers using AI", "Cursor users", "early-career devs"],
+        "practical_takeaway_rubric": "Teaches developers how to prevent AI assistants from breaking working code through context resets."
+      },
+      "editor": {
+        "expected_category": "Career & Learning",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_004",
+    "category_target": "Tech Shift",
+    "archetype": "positive_industry_insight",
+    "input_signal": {
+      "title": "Scan of 250k Files Finds Tokens Stored in Browser LocalStorage",
+      "source": "Dev.to",
+      "url": "https://dev.to/security/tokens-in-localstorage-analysis",
+      "raw_description": "Empirical security analysis showing public web repositories and government sites regularly store raw auth tokens in browser localStorage.",
+      "scraped_docs": "Analyzed over a quarter-million web client files on GitHub. Discovered active authorization tokens vulnerable to trivial XSS exfiltration rather than secure HttpOnly cookie storage."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "READ",
+        "expected_audience_keywords": ["frontend developers", "junior developers learning auth", "full-stack students"],
+        "practical_takeaway_rubric": "Warns junior developers why saving authentication tokens in browser localStorage exposes them to XSS token theft."
+      },
+      "editor": {
+        "expected_category": "Tech Shift",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_005",
+    "category_target": "Watchlist",
+    "archetype": "positive_emerging_hardware",
+    "input_signal": {
+      "title": "The Lightbulb Computer: Ambient Computing Without the Headset",
+      "source": "Hacker News",
+      "url": "https://lightbulbcomputer.com/",
+      "raw_description": "A hardware prototype that screws into a standard light bulb socket, projecting an interactive computer interface onto desks.",
+      "scraped_docs": "Combines a micro-projector, computer vision camera, and onboard compute module inside a standard E26 bulb form factor. Tracks physical hand gestures on tables without requiring a VR headset."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "WATCH",
+        "expected_audience_keywords": ["UI/UX designers", "hardware makers", "creative technologists", "students"],
+        "practical_takeaway_rubric": "Highlights an experimental approach to spatial interfaces that avoids heavy VR headsets."
+      },
+      "editor": {
+        "expected_category": "Watchlist",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_006",
+    "category_target": "Cool Tool",
+    "archetype": "positive_self_hosted_tool",
+    "input_signal": {
+      "title": "Open WebUI: Self-Hosted Offline AI Platform",
+      "source": "GitHub",
+      "url": "https://github.com/open-webui/open-webui",
+      "raw_description": "A user-friendly, self-hosted web interface for local LLMs supporting Ollama and OpenAI-compatible endpoints with RAG.",
+      "scraped_docs": "Open WebUI offers chat interfaces, model management, document vector retrieval, and authentication without vendor lock-in or recurring cloud costs."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "INTEGRATE",
+        "expected_audience_keywords": ["AI learners", "CS students", "local LLM experimenters", "DevOps"],
+        "practical_takeaway_rubric": "Enables students to run private local ChatGPT alternatives on their own laptops for free."
+      },
+      "editor": {
+        "expected_category": "Cool Tool",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_007",
+    "category_target": "Cool Tool",
+    "archetype": "positive_self_hosted_tool",
+    "input_signal": {
+      "title": "Immich: High-Performance Self-Hosted Photo Management",
+      "source": "GitHub",
+      "url": "https://github.com/immich-app/immich",
+      "raw_description": "Self-hosted alternative to Google Photos with AI facial recognition, timeline navigation, and mobile backup sync.",
+      "scraped_docs": "Immich runs on Docker with PostgreSQL and Machine Learning containers for facial recognition, object detection, and automated background phone backup."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "INTEGRATE",
+        "expected_audience_keywords": ["home-server enthusiasts", "backend learners", "privacy-minded developers"],
+        "practical_takeaway_rubric": "Shows how to self-host personal cloud storage without monthly subscription fees."
+      },
+      "editor": {
+        "expected_category": "Cool Tool",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_008",
+    "category_target": "Cool Tool",
+    "archetype": "positive_deployment_paas",
+    "input_signal": {
+      "title": "Coolify: Self-Hosted Vercel & Heroku Alternative",
+      "source": "GitHub",
+      "url": "https://github.com/coollabsio/coolify",
+      "raw_description": "An open-source PaaS to deploy applications, databases, and services to your own VPS with automated SSL.",
+      "scraped_docs": "Coolify manages servers, containers, domains, and Git webhooks. Lets developers deploy Next.js, Django, Postgres, and Redis with one click on any Linux server."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "INTEGRATE",
+        "expected_audience_keywords": ["indie hackers", "junior full-stack developers", "CS students deploying projects"],
+        "practical_takeaway_rubric": "Slashes hosting bills by turning any cheap VPS into a full deployment platform."
+      },
+      "editor": {
+        "expected_category": "Cool Tool",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_009",
+    "category_target": "Career & Learning",
+    "archetype": "positive_engineering_concept",
+    "input_signal": {
+      "title": "Prompt vs. Loop Engineering: Developer Guide to AI Workflows",
+      "source": "FreeCodeCamp",
+      "url": "https://www.freecodecamp.org/news/prompt-vs-loop-engineering-a-guide-for-developers/",
+      "raw_description": "Explains how to transition from brittle one-off LLM prompts to self-healing agentic feedback loops.",
+      "scraped_docs": "Compares static zero-shot prompting with programmatic evaluation and loop engineering. Shows practical patterns for automated validation and self-correction in Python."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "READ",
+        "expected_audience_keywords": ["junior AI engineers", "backend developers building with LLMs", "students"],
+        "practical_takeaway_rubric": "Teaches developers to build iterative verification loops rather than relying on one-shot prompts."
+      },
+      "editor": {
+        "expected_category": "Career & Learning",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_010",
+    "category_target": "Cool Tool",
+    "archetype": "positive_api_client",
+    "input_signal": {
+      "title": "Hoppscotch: Lightweight Open-Source API Testing Client",
+      "source": "GitHub",
+      "url": "https://github.com/hoppscotch/hoppscotch",
+      "raw_description": "A web-first, minimalist API development ecosystem that operates offline and in-browser without Electron bloat.",
+      "scraped_docs": "Hoppscotch provides an intuitive visual request builder for REST, GraphQL, and WebSockets. Open-source, fast, and requires zero installation."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "INTEGRATE",
+        "expected_audience_keywords": ["frontend beginners", "backend learners", "students learning HTTP"],
+        "practical_takeaway_rubric": "Offers an instant, browser-based alternative to heavy Postman desktop installations."
+      },
+      "editor": {
+        "expected_category": "Cool Tool",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_011",
+    "category_target": "Ecosystem Update",
+    "archetype": "positive_git_workflow",
+    "input_signal": {
+      "title": "GitHub Stacked Pull Requests Enter Public Preview",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests/",
+      "raw_description": "GitHub rolls out native support for stacked pull requests to submit code in smaller logical layers.",
+      "scraped_docs": "Enables developers to split massive feature branches into chained, dependent pull requests. Reviewers can approve incremental PRs sequentially without merge conflicts."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "INTEGRATE",
+        "expected_audience_keywords": ["junior developers", "open-source contributors", "git learners"],
+        "practical_takeaway_rubric": "Shows how to break up giant intimidating PRs into reviewable bite-sized increments."
+      },
+      "editor": {
+        "expected_category": "Ecosystem Update",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_012",
+    "category_target": "Career & Learning",
+    "archetype": "positive_database_visualizer",
+    "input_signal": {
+      "title": "PGSimCity: Visual Interactive Tour of PostgreSQL Internals",
+      "source": "Hacker News",
+      "url": "https://nikolays.github.io/PGSimCity/",
+      "raw_description": "An educational cityscape visualization that illustrates how PostgreSQL handles memory buffers, WAL logs, and queries.",
+      "scraped_docs": "Interactive 3D representation converting database storage engines into traffic and building visual metaphors. Designed to help students understand relational database internals."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "READ",
+        "expected_audience_keywords": ["CS students learning databases", "junior backend developers", "system design candidates"],
+        "practical_takeaway_rubric": "Transforms dry database architecture theory into an interactive visual mental model."
+      },
+      "editor": {
+        "expected_category": "Career & Learning",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_013",
+    "category_target": null,
+    "archetype": "negative_enterprise_infrastructure",
+    "input_signal": {
+      "title": "Multi-Region Raft Lease Optimization in CockroachDB v24.2",
+      "source": "Hacker News",
+      "url": "https://cockroachlabs.com/blog/raft-lease-multi-region/",
+      "raw_description": "Technical deep-dive on epoch-based leaseholder transfers and cross-continental latency tuning for distributed SQL clusters.",
+      "scraped_docs": "Focuses on WAN round-trip consensus benchmarks, p99 latency guarantees in geo-distributed partitions, and Raft consensus log compaction."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "REJECT",
+        "is_student_relevant": false,
+        "rejection_reason": "Dense enterprise distributed database infrastructure; not applicable to tech students or early-career software developers."
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_014",
+    "category_target": null,
+    "archetype": "negative_dense_academic_math",
+    "input_signal": {
+      "title": "Convergence Guarantees for Stochastic Gradient Descent in Sobolev Spaces",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2608.12345",
+      "raw_description": "Mathematical proofs of bounding Lipschitz gradients in infinite-dimensional Hilbert spaces for non-convex optimization.",
+      "scraped_docs": "Contains theoretical mathematical lemmas, Sobolev inequalities, and asymptotic convergence proofs without software implementation or practical code."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "REJECT",
+        "is_student_relevant": false,
+        "rejection_reason": "Heavy academic mathematical proofs with zero practical coding tools or learner takeaways."
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_015",
+    "category_target": null,
+    "archetype": "negative_corporate_finance",
+    "input_signal": {
+      "title": "Oracle Acquires Enterprise Compliance Vendor for $3.2B in Cash",
+      "source": "Hacker News",
+      "url": "https://reuters.com/tech/oracle-acquisition-q3",
+      "raw_description": "Financial disclosure of a corporate merger to expand enterprise HIPAA audit solutions for healthcare clients.",
+      "scraped_docs": "Discusses stock share ratios, EBITDA multiples, quarterly fiscal earnings, and executive board approval for enterprise cloud compliance."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "REJECT",
+        "is_student_relevant": false,
+        "rejection_reason": "Corporate business acquisition with zero technical utility or developer learning value."
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_016",
+    "category_target": null,
+    "archetype": "negative_enterprise_devops",
+    "input_signal": {
+      "title": "BGP Anycast Routing and Calico eBPF Kernel Mesh Configuration",
+      "source": "Dev.to",
+      "url": "https://dev.to/sysadmin/bgp-anycast-ebpf-mesh",
+      "raw_description": "Guide to configuring hardware BGP peering across 10,000 node Kubernetes bare-metal telecommunication backbones.",
+      "scraped_docs": "Covers kernel socket splicing, hardware router BGP peer groups, and multi-datacenter ASN configuration for telecom networks."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "REJECT",
+        "is_student_relevant": false,
+        "rejection_reason": "Heavy datacenter networking and enterprise telecommunications; irrelevant for junior engineers."
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_017",
+    "category_target": null,
+    "archetype": "negative_duplicate_release",
+    "input_signal": {
+      "title": "Open WebUI v0.5.2 Bugfix Release",
+      "source": "GitHub",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.5.2",
+      "raw_description": "Minor patch update for Open WebUI fixing a typo in dark mode settings dialog.",
+      "scraped_docs": "Release notes for v0.5.2: Fixed CSS padding in settings modal, updated French translations. No new architectural features."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "REJECT",
+        "is_student_relevant": false,
+        "rejection_reason": "Duplicate topic / minor incremental patch of a product already covered extensively in past briefs."
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_018",
+    "category_target": null,
+    "archetype": "negative_duplicate_release",
+    "input_signal": {
+      "title": "Immich v1.118 Patch Notes",
+      "source": "GitHub",
+      "url": "https://github.com/immich-app/immich/releases/tag/v1.118.0",
+      "raw_description": "Minor patch release fixing background notification crash on Android 12 devices.",
+      "scraped_docs": "Bug fix update resolving Android notification channel initialization. No major feature additions."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "REJECT",
+        "is_student_relevant": false,
+        "rejection_reason": "Minor bug-fix release for an existing tool already featured in history."
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_019",
+    "category_target": null,
+    "archetype": "negative_duplicate_release",
+    "input_signal": {
+      "title": "TanStack Router v1.45.1 Dependency Bump",
+      "source": "GitHub",
+      "url": "https://github.com/TanStack/router/releases/tag/v1.45.1",
+      "raw_description": "Internal dependency updates and typo correction in documentation for TanStack Router.",
+      "scraped_docs": "Bumps devDependencies and corrects markdown spelling in README. No functional changes to router API."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "REJECT",
+        "is_student_relevant": false,
+        "rejection_reason": "Minor documentation and dependency bump for recently covered router framework."
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_020",
+    "category_target": null,
+    "archetype": "negative_exaggerated_benchmark",
+    "input_signal": {
+      "title": "QuantumPy: 10,000x Faster Execution Than C++ Via Quantum Simulation",
+      "source": "GitHub",
+      "url": "https://github.com/fake-user/quantumpy",
+      "raw_description": "QuantumPy claims to beat optimized C++ by 10,000x on ordinary CPUs using quantum state simulation.",
+      "scraped_docs": "README: A weekend hobby Python script experimenting with matrix multiplications. Note: Not tested against C++ and runs slowly on standard laptops."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "INVALID",
+        "are_claims_supported": false,
+        "is_placeholder_repo": false,
+        "flagged_contradiction": "Claims 10,000x speedup over C++, but documentation admits it is an unbenchmarked hobby script that runs slowly."
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_021",
+    "category_target": null,
+    "archetype": "negative_empty_placeholder_repo",
+    "input_signal": {
+      "title": "AutoDev: Full Autonomous Senior AI Software Engineer",
+      "source": "GitHub",
+      "url": "https://github.com/hype-ai/autodev",
+      "raw_description": "An autonomous software developer that writes entire full-stack apps and deploys them to AWS with zero human supervision.",
+      "scraped_docs": "# AutoDev\n\nComing Soon! Star this repo to stay tuned. Join our Discord for updates."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "INVALID",
+        "are_claims_supported": false,
+        "is_placeholder_repo": true,
+        "flagged_contradiction": "Empty repository containing zero code, only a marketing placeholder."
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_022",
+    "category_target": null,
+    "archetype": "negative_contradictory_pricing",
+    "input_signal": {
+      "title": "ZeroCostDB: 100% Free Unlimited Cloud PostgreSQL Forever",
+      "source": "Hacker News",
+      "url": "https://zerocostdb.io",
+      "raw_description": "Provides completely free, unlimited database storage without credit card or tier restrictions forever.",
+      "scraped_docs": "Terms of Service: Free tier limited to 50MB and expires after 7 days unless upgrading to the $29/month Pro subscription."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "INVALID",
+        "are_claims_supported": false,
+        "is_placeholder_repo": false,
+        "flagged_contradiction": "Claims infinite free database forever, but documentation reveals a strict 50MB 7-day trial requiring payment."
+      },
+      "analyst": null,
+      "editor": null
+    }
+  },
+  {
+    "id": "eval_case_023",
+    "category_target": "Cool Tool",
+    "archetype": "edge_case_minimalist_readme",
+    "input_signal": {
+      "title": "fx: Terminal JSON Viewer and Processor",
+      "source": "GitHub",
+      "url": "https://github.com/antonmedv/fx",
+      "raw_description": "Terminal JSON viewer and processor written in Go.",
+      "scraped_docs": "# fx\n\nInteractive command-line JSON viewer. Usage: `curl ... | fx`."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "INTEGRATE",
+        "expected_audience_keywords": ["CLI users", "backend learners", "developers testing APIs"],
+        "practical_takeaway_rubric": "Useful for interactively inspecting and slicing JSON in terminal."
+      },
+      "editor": {
+        "expected_category": "Cool Tool",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_024",
+    "category_target": "Watchlist",
+    "archetype": "edge_case_early_prototype",
+    "input_signal": {
+      "title": "WebVM: Linux Virtual Machine Running in the Browser via WebAssembly",
+      "source": "GitHub",
+      "url": "https://github.com/leaningtech/webvm",
+      "raw_description": "Serverless Linux environment running client-side in the browser using CheerpX WebAssembly virtualization.",
+      "scraped_docs": "WebVM virtualizes x86 binaries inside browser WebAssembly. Still experimental with limited network socket support and file persistence limitations."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "WATCH",
+        "expected_audience_keywords": ["systems programmers", "WebAssembly enthusiasts", "students exploring virtualization"],
+        "practical_takeaway_rubric": "Shows promise for running Linux tools in browser, but early experimental nature warrants WATCH verdict."
+      },
+      "editor": {
+        "expected_category": "Watchlist",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  },
+  {
+    "id": "eval_case_025",
+    "category_target": "Cool Tool",
+    "archetype": "edge_case_unicode_and_naming",
+    "input_signal": {
+      "title": "fzf: A Command-Line Fuzzy Finder (⚡ 汎用ファジーファインダー)",
+      "source": "GitHub",
+      "url": "https://github.com/junegunn/fzf",
+      "raw_description": "An interactive, ultra-fast Unix filter for command-line search and file navigation.",
+      "scraped_docs": "fzf is a general-purpose command-line fuzzy finder. It can be used with any list: files, command history, processes, git commits."
+    },
+    "ground_truth": {
+      "skeptic": {
+        "expected_decision": "KEEP",
+        "is_student_relevant": true,
+        "rejection_reason": null
+      },
+      "verifier": {
+        "expected_status": "VALID",
+        "are_claims_supported": true,
+        "is_placeholder_repo": false
+      },
+      "analyst": {
+        "expected_verdict": "INTEGRATE",
+        "expected_audience_keywords": ["terminal users", "command line learners", "software engineers"],
+        "practical_takeaway_rubric": "Enables rapid fuzzy filtering of command line outputs and files to boost developer speed."
+      },
+      "editor": {
+        "expected_category": "Cool Tool",
+        "must_prepend_bold_summary": true,
+        "forbidden_terms": ["TL;DR:"],
+        "eli5_reading_level": "simple_conversational"
+      }
+    }
+  }
+]
