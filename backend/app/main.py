@@ -1,6 +1,6 @@
 import os
 import logging
-from fastapi import FastAPI, HTTPException, status, Header
+from fastapi import FastAPI, HTTPException, status, Header, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from typing import List, Dict, Any
@@ -171,7 +171,7 @@ def get_brief_by_date(date: str):
     return brief
 
 @app.post("/api/notify-subscribers")
-def notify_subscribers(brief_group: DailyBriefGroup, token: str = Header(None, alias="X-Auth-Token")):
+def notify_subscribers(brief_group: DailyBriefGroup, background_tasks: BackgroundTasks, token: str = Header(None, alias="X-Auth-Token")):
     """Notify all active email subscribers about the new brief group."""
     secret_token = os.getenv("NOTIFY_SECRET_TOKEN")
     
@@ -194,13 +194,5 @@ def notify_subscribers(brief_group: DailyBriefGroup, token: str = Header(None, a
     if not emails:
         return {"message": "No active subscribers found. Dispatch skipped."}
         
-    try:
-        dispatch_emails(emails, brief_group)
-    except Exception as mail_err:
-        logger.error(f"Mailing dispatch failed: {mail_err}")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Email delivery operation failed: {mail_err}"
-        )
-        
+    background_tasks.add_task(dispatch_emails, emails, brief_group)
     return {"message": f"Successfully queued notification emails to {len(emails)} subscribers"}

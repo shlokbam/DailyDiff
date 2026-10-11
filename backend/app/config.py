@@ -44,6 +44,7 @@ ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 DB_PATH = BASE_DIR / "backend" / "subscribers.db"
 
 # Model Selection Defaults
-PRIMARY_MODEL_MISTRAL = "open-mixtral-8x22b"
-FALLBACK_MODEL_GEMINI = "gemini-3.5-flash"
-FALLBACK_MODEL_GROQ = "llama3-70b-8192"
+PRIMARY_MODEL_GROQ = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+FALLBACK_MODEL_GEMINI = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+FALLBACK_MODEL_MISTRAL = os.getenv("MISTRAL_MODEL", "open-mixtral-8x22b")
+

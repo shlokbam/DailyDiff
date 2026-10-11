@@ -206,10 +206,11 @@ def scout_product_hunt() -> List[Dict[str, Any]]:
 
 def scout_reddit() -> List[Dict[str, Any]]:
     """Scout Reddit webdev and learnprogramming subreddits via RSS feeds."""
-    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+    headers = {"User-Agent": "script:DailyDiffNewsCurator:v1.0 (by /u/DailyDiffApp; contact: briefs@dailydiff.in)"}
     webdev_signals = fetch_rss_signals("https://www.reddit.com/r/webdev/.rss", "Reddit /r/webdev", max_items=8, headers=headers)
     learnprog_signals = fetch_rss_signals("https://www.reddit.com/r/learnprogramming/.rss", "Reddit /r/learnprogramming", max_items=8, headers=headers)
     return webdev_signals + learnprog_signals
+
 
 def scout_github_releases(days_ago: int) -> List[Dict[str, Any]]:
     """Scout major framework repositories for new releases in the window."""
