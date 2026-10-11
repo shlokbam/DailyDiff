@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T14:42:18.878787Z",
+  "generated_at": "2026-10-11T15:16:31.955297Z",
   "benchmark_dataset": "golden_dataset.json (25 cases)",
   "total_runtime_seconds": 0.0,
   "composite_quality_score": 80.0,
@@ -276,7 +276,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Diagrams lets you draw cloud system architecture in Python code. It supports AWS, GCP, Azure, and Kubernetes.",
+          "documentation_snippet": "Diagrams as Code allows you to track system architecture changes in version control. It was created for prototyping without manual visual tools. Requires Python 3.7+ and Graphviz.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/mingrammer/diagrams"
         },
         {
           "id": "eval_case_002",
@@ -285,7 +288,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "TanStack Router provides 100% type-safe routing for modern React and full-stack web applications with search parameter validation.",
+          "documentation_snippet": "TanStack Router brings first-class search param state management, route loaders, and compile-time route verification to React applications. It eliminates string-based navigation errors.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/TanStack/router"
         },
         {
           "id": "eval_case_003",
@@ -294,7 +300,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "A practical guide on how to stop AI coding tools like Cursor and Copilot from hallucinating in endless bug loops.",
+          "documentation_snippet": "Examines context window pollution in AI code editors. Demonstrates how to reset chat memory, constrain problem boundaries with unit tests, and provide minimal reproducing examples.",
+          "flagged_contradiction": null,
+          "url": "https://www.freecodecamp.org/news/how-to-break-the-ai-coding-agent-fix-loop/"
         },
         {
           "id": "eval_case_004",
@@ -303,7 +312,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Empirical security analysis showing public web repositories and government sites regularly store raw auth tokens in browser localStorage.",
+          "documentation_snippet": "Analyzed over a quarter-million web client files on GitHub. Discovered active authorization tokens vulnerable to trivial XSS exfiltration rather than secure HttpOnly cookie storage.",
+          "flagged_contradiction": null,
+          "url": "https://dev.to/security/tokens-in-localstorage-analysis"
         },
         {
           "id": "eval_case_005",
@@ -312,7 +324,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "A hardware prototype that screws into a standard light bulb socket, projecting an interactive computer interface onto desks.",
+          "documentation_snippet": "Combines a micro-projector, computer vision camera, and onboard compute module inside a standard E26 bulb form factor. Tracks physical hand gestures on tables without requiring a VR headset.",
+          "flagged_contradiction": null,
+          "url": "https://lightbulbcomputer.com/"
         },
         {
           "id": "eval_case_006",
@@ -321,7 +336,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "A user-friendly, self-hosted web interface for local LLMs supporting Ollama and OpenAI-compatible endpoints with RAG.",
+          "documentation_snippet": "Open WebUI offers chat interfaces, model management, document vector retrieval, and authentication without vendor lock-in or recurring cloud costs.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/open-webui/open-webui"
         },
         {
           "id": "eval_case_007",
@@ -330,7 +348,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Self-hosted alternative to Google Photos with AI facial recognition, timeline navigation, and mobile backup sync.",
+          "documentation_snippet": "Immich runs on Docker with PostgreSQL and Machine Learning containers for facial recognition, object detection, and automated background phone backup.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/immich-app/immich"
         },
         {
           "id": "eval_case_008",
@@ -339,7 +360,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "An open-source PaaS to deploy applications, databases, and services to your own VPS with automated SSL.",
+          "documentation_snippet": "Coolify manages servers, containers, domains, and Git webhooks. Lets developers deploy Next.js, Django, Postgres, and Redis with one click on any Linux server.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/coollabsio/coolify"
         },
         {
           "id": "eval_case_009",
@@ -348,7 +372,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Explains how to transition from brittle one-off LLM prompts to self-healing agentic feedback loops.",
+          "documentation_snippet": "Compares static zero-shot prompting with programmatic evaluation and loop engineering. Shows practical patterns for automated validation and self-correction in Python.",
+          "flagged_contradiction": null,
+          "url": "https://www.freecodecamp.org/news/prompt-vs-loop-engineering-a-guide-for-developers/"
         },
         {
           "id": "eval_case_010",
@@ -357,7 +384,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "A web-first, minimalist API development ecosystem that operates offline and in-browser without Electron bloat.",
+          "documentation_snippet": "Hoppscotch provides an intuitive visual request builder for REST, GraphQL, and WebSockets. Open-source, fast, and requires zero installation.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/hoppscotch/hoppscotch"
         },
         {
           "id": "eval_case_011",
@@ -366,7 +396,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "GitHub rolls out native support for stacked pull requests to submit code in smaller logical layers.",
+          "documentation_snippet": "Enables developers to split massive feature branches into chained, dependent pull requests. Reviewers can approve incremental PRs sequentially without merge conflicts.",
+          "flagged_contradiction": null,
+          "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests/"
         },
         {
           "id": "eval_case_012",
@@ -375,7 +408,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "An educational cityscape visualization that illustrates how PostgreSQL handles memory buffers, WAL logs, and queries.",
+          "documentation_snippet": "Interactive 3D representation converting database storage engines into traffic and building visual metaphors. Designed to help students understand relational database internals.",
+          "flagged_contradiction": null,
+          "url": "https://nikolays.github.io/PGSimCity/"
         },
         {
           "id": "eval_case_013",
@@ -384,7 +420,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Technical deep-dive on epoch-based leaseholder transfers and cross-continental latency tuning for distributed SQL clusters.",
+          "documentation_snippet": "Focuses on WAN round-trip consensus benchmarks, p99 latency guarantees in geo-distributed partitions, and Raft consensus log compaction.",
+          "flagged_contradiction": null,
+          "url": "https://cockroachlabs.com/blog/raft-lease-multi-region/"
         },
         {
           "id": "eval_case_014",
@@ -393,7 +432,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Mathematical proofs of bounding Lipschitz gradients in infinite-dimensional Hilbert spaces for non-convex optimization.",
+          "documentation_snippet": "Contains theoretical mathematical lemmas, Sobolev inequalities, and asymptotic convergence proofs without software implementation or practical code.",
+          "flagged_contradiction": null,
+          "url": "https://arxiv.org/abs/2608.12345"
         },
         {
           "id": "eval_case_015",
@@ -402,7 +444,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Financial disclosure of a corporate merger to expand enterprise HIPAA audit solutions for healthcare clients.",
+          "documentation_snippet": "Discusses stock share ratios, EBITDA multiples, quarterly fiscal earnings, and executive board approval for enterprise cloud compliance.",
+          "flagged_contradiction": null,
+          "url": "https://reuters.com/tech/oracle-acquisition-q3"
         },
         {
           "id": "eval_case_016",
@@ -411,7 +456,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Guide to configuring hardware BGP peering across 10,000 node Kubernetes bare-metal telecommunication backbones.",
+          "documentation_snippet": "Covers kernel socket splicing, hardware router BGP peer groups, and multi-datacenter ASN configuration for telecom networks.",
+          "flagged_contradiction": null,
+          "url": "https://dev.to/sysadmin/bgp-anycast-ebpf-mesh"
         },
         {
           "id": "eval_case_017",
@@ -420,7 +468,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Minor patch update for Open WebUI fixing a typo in dark mode settings dialog.",
+          "documentation_snippet": "Release notes for v0.5.2: Fixed CSS padding in settings modal, updated French translations. No new architectural features.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/open-webui/open-webui/releases/tag/v0.5.2"
         },
         {
           "id": "eval_case_018",
@@ -429,7 +480,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Minor patch release fixing background notification crash on Android 12 devices.",
+          "documentation_snippet": "Bug fix update resolving Android notification channel initialization. No major feature additions.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/immich-app/immich/releases/tag/v1.118.0"
         },
         {
           "id": "eval_case_019",
@@ -438,7 +492,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Internal dependency updates and typo correction in documentation for TanStack Router.",
+          "documentation_snippet": "Bumps devDependencies and corrects markdown spelling in README. No functional changes to router API.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/TanStack/router/releases/tag/v1.45.1"
         },
         {
           "id": "eval_case_020",
@@ -447,7 +504,10 @@
           "expected_status": "INVALID",
           "actual_status": "INVALID",
           "passed": true,
-          "flagged_contradiction": "Claims 10,000x speedup over C++, but documentation admits it is an unbenchmarked hobby script that runs slowly."
+          "claim_summary": "QuantumPy claims to beat optimized C++ by 10,000x on ordinary CPUs using quantum state simulation.",
+          "documentation_snippet": "README: A weekend hobby Python script experimenting with matrix multiplications. Note: Not tested against C++ and runs slowly on standard laptops.",
+          "flagged_contradiction": "Claims 10,000x speedup over C++, but documentation admits it is an unbenchmarked hobby script that runs slowly.",
+          "url": "https://github.com/fake-user/quantumpy"
         },
         {
           "id": "eval_case_021",
@@ -456,7 +516,10 @@
           "expected_status": "INVALID",
           "actual_status": "INVALID",
           "passed": true,
-          "flagged_contradiction": "Empty repository containing zero code, only a marketing placeholder."
+          "claim_summary": "An autonomous software developer that writes entire full-stack apps and deploys them to AWS with zero human supervision.",
+          "documentation_snippet": "# AutoDev\n\nComing Soon! Star this repo to stay tuned. Join our Discord for updates.",
+          "flagged_contradiction": "Empty repository containing zero code, only a marketing placeholder.",
+          "url": "https://github.com/hype-ai/autodev"
         },
         {
           "id": "eval_case_022",
@@ -465,7 +528,10 @@
           "expected_status": "INVALID",
           "actual_status": "INVALID",
           "passed": true,
-          "flagged_contradiction": "Claims infinite free database forever, but documentation reveals a strict 50MB 7-day trial requiring payment."
+          "claim_summary": "Provides completely free, unlimited database storage without credit card or tier restrictions forever.",
+          "documentation_snippet": "Terms of Service: Free tier limited to 50MB and expires after 7 days unless upgrading to the $29/month Pro subscription.",
+          "flagged_contradiction": "Claims infinite free database forever, but documentation reveals a strict 50MB 7-day trial requiring payment.",
+          "url": "https://zerocostdb.io"
         },
         {
           "id": "eval_case_023",
@@ -474,7 +540,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Terminal JSON viewer and processor written in Go.",
+          "documentation_snippet": "# fx\n\nInteractive command-line JSON viewer. Usage: `curl ... | fx`.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/antonmedv/fx"
         },
         {
           "id": "eval_case_024",
@@ -483,7 +552,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "Serverless Linux environment running client-side in the browser using CheerpX WebAssembly virtualization.",
+          "documentation_snippet": "WebVM virtualizes x86 binaries inside browser WebAssembly. Still experimental with limited network socket support and file persistence limitations.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/leaningtech/webvm"
         },
         {
           "id": "eval_case_025",
@@ -492,7 +564,10 @@
           "expected_status": "VALID",
           "actual_status": "VALID",
           "passed": true,
-          "flagged_contradiction": null
+          "claim_summary": "An interactive, ultra-fast Unix filter for command-line search and file navigation.",
+          "documentation_snippet": "fzf is a general-purpose command-line fuzzy finder. It can be used with any list: files, command history, processes, git commits.",
+          "flagged_contradiction": null,
+          "url": "https://github.com/junegunn/fzf"
         }
       ]
     },
@@ -699,10 +774,10 @@
       "average_readability_score": 5.0,
       "categories_used": [
         "Career & Learning",
+        "Ecosystem Update",
         "Watchlist",
-        "Cool Tool",
         "Tech Shift",
-        "Ecosystem Update"
+        "Cool Tool"
       ],
       "details": [
         {
@@ -762,5 +837,5 @@
       ]
     }
   },
-  "db_run_id": 9
+  "db_run_id": 10
 }

@@ -100,7 +100,10 @@ def run_verifier_eval(dataset_path: str = None) -> dict:
             "expected_status": exp_status,
             "actual_status": act_status,
             "passed": passed,
-            "flagged_contradiction": c["ground_truth"]["verifier"].get("flagged_contradiction")
+            "claim_summary": c["input_signal"].get("raw_description", c["input_signal"].get("description", "")),
+            "documentation_snippet": c["input_signal"].get("scraped_docs", "")[:320],
+            "flagged_contradiction": c["ground_truth"]["verifier"].get("flagged_contradiction"),
+            "url": c["input_signal"].get("url", "")
         })
 
     total = len(test_cases)

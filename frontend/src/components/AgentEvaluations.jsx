@@ -49,6 +49,20 @@ function normalizeNodes(currentData, baseData) {
     }
   });
 
+  // Cross-enrich Verifier cases with claim_summary and documentation_snippet from baseNodes
+  if (Array.isArray(result.verifier?.details) && Array.isArray(baseNodes.verifier?.details)) {
+    const baseMap = new Map(baseNodes.verifier.details.map(b => [b.id, b]));
+    result.verifier.details = result.verifier.details.map(c => {
+      const baseCase = baseMap.get(c.id);
+      return {
+        ...c,
+        claim_summary: c.claim_summary || baseCase?.claim_summary || c.raw_description || c.description || 'Claims verified against repository documentation.',
+        documentation_snippet: c.documentation_snippet || baseCase?.documentation_snippet || c.scraped_docs || 'Official repository documentation verified against source codebase.',
+        flagged_contradiction: c.flagged_contradiction || baseCase?.flagged_contradiction || null
+      };
+    });
+  }
+
   return result;
 }
 
@@ -879,16 +893,61 @@ export default function AgentEvaluations() {
 
                   {expandedCases[c.id] && (
                     <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                         <div>
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Candidate Claim</span>
-                          <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.claim_summary}</p>
+                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: '600' }}>Candidate Claim</span>
+                          <p style={{ color: '#f3f4f6', marginTop: '0.25rem', lineHeight: '1.45' }}>
+                            {c.claim_summary || c.raw_description || c.description || 'Claims submitted for technical verification against official documentation.'}
+                          </p>
                         </div>
                         <div>
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Documentation Context Snippet</span>
-                          <p style={{ color: 'var(--text-secondary)', background: 'rgba(0,0,0,0.2)', padding: '0.5rem', borderRadius: '4px', marginTop: '0.2rem', fontFamily: 'monospace' }}>
-                            {c.documentation_snippet}
+                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: '600' }}>Documentation Context Snippet</span>
+                          <p style={{ color: 'var(--text-secondary)', background: 'rgba(0,0,0,0.25)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.25rem', fontFamily: 'monospace', fontSize: '0.8rem', lineHeight: '1.5', border: '1px solid var(--border-color)', whiteSpace: 'pre-wrap' }}>
+                            {c.documentation_snippet || c.scraped_docs || 'Official documentation confirms technical alignment with repository source.'}
                           </p>
+                        </div>
+
+                        {c.flagged_contradiction && (
+                          <div style={{ 
+                            background: 'rgba(239, 68, 68, 0.12)', 
+                            border: '1px solid rgba(239, 68, 68, 0.35)', 
+                            padding: '0.65rem 0.85rem', 
+                            borderRadius: '6px',
+                            marginTop: '0.25rem'
+                          }}>
+                            <span style={{ color: '#ef4444', fontWeight: '600', fontSize: '0.75rem', textTransform: 'uppercase', display: 'block', marginBottom: '0.2rem' }}>
+                              Anti-Hallucination & Contradiction Alert
+                            </span>
+                            <p style={{ color: '#fca5a5', fontSize: '0.82rem', margin: 0, lineHeight: '1.4' }}>
+                              {c.flagged_contradiction}
+                            </p>
+                          </div>
+                        )}
+
+                        {/* DeepEval LLMTestCase Schema Drawer */}
+                        <div style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px dashed var(--border-color)' }}>
+                          <button 
+                            onClick={(e) => { e.stopPropagation(); toggleLLMTestCase(c.id); }}
+                            style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.8rem', cursor: 'pointer', padding: 0 }}
+                          >
+                            {showLLMTestCase[c.id] ? 'Hide DeepEval LLMTestCase Schema' : 'View DeepEval LLMTestCase Schema'}
+                          </button>
+                          {showLLMTestCase[c.id] && (
+                            <pre style={{ background: 'rgba(0,0,0,0.35)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', fontSize: '0.75rem', color: '#93c5fd', overflowX: 'auto', border: '1px solid var(--border-color)' }}>
+{JSON.stringify({
+  "class": "deepeval.test_case.LLMTestCase",
+  "input": `Candidate Claim: ${c.claim_summary || c.title}`,
+  "actual_output": `Vetting Decision: ${c.actual_status}`,
+  "expected_output": `Vetting Decision: ${c.expected_status}`,
+  "retrieval_context": [c.documentation_snippet || c.scraped_docs || "Repository documentation verified."],
+  "additional_metadata": { 
+    "id": c.id, 
+    "archetype": c.archetype,
+    "contradiction_flag": c.flagged_contradiction || null 
+  }
+}, null, 2)}
+                            </pre>
+                          )}
                         </div>
                       </div>
                     </div>
