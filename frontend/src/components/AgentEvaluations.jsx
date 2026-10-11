@@ -12,69 +12,130 @@ const ARCHETYPE_LABELS = {
   positive_edge_tutorial: { label: 'Edge Tutorial', color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.15)' }
 };
 
+// Helper function to guarantee that every node always has benchmark cases,
+// even when an individual single-node run or CI suite is selected from the database.
+function normalizeNodes(currentData, baseData) {
+  const baseNodes = baseData?.nodes || {};
+  const currentNodes = currentData?.nodes || {};
+  const runType = (currentData?.run_type || '').toLowerCase();
+
+  // Initialize with merged node structures
+  const result = {
+    skeptic: { ...(baseNodes.skeptic || {}), ...(currentNodes.skeptic || {}) },
+    verifier: { ...(baseNodes.verifier || {}), ...(currentNodes.verifier || {}) },
+    analyst: { ...(baseNodes.analyst || {}), ...(currentNodes.analyst || {}) },
+    editor: { ...(baseNodes.editor || {}), ...(currentNodes.editor || {}) }
+  };
+
+  // If currentData is an individual single-node run where details are at root
+  if (Array.isArray(currentData?.details) && currentData.details.length > 0) {
+    if (runType.includes('skeptic') || currentData?.node?.toLowerCase().includes('skeptic')) {
+      result.skeptic = { ...result.skeptic, ...currentData, details: currentData.details };
+    } else if (runType.includes('verifier') || currentData?.node?.toLowerCase().includes('verifier')) {
+      result.verifier = { ...result.verifier, ...currentData, details: currentData.details };
+    } else if (runType.includes('analyst') || currentData?.node?.toLowerCase().includes('analyst')) {
+      result.analyst = { ...result.analyst, ...currentData, details: currentData.details };
+    } else if (runType.includes('editor') || currentData?.node?.toLowerCase().includes('editor')) {
+      result.editor = { ...result.editor, ...currentData, details: currentData.details };
+    }
+  }
+
+  // Ensure every node ALWAYS has non-empty details fallback from baseNodes
+  ['skeptic', 'verifier', 'analyst', 'editor'].forEach(key => {
+    if (!Array.isArray(result[key].details) || result[key].details.length === 0) {
+      if (Array.isArray(baseNodes[key]?.details) && baseNodes[key].details.length > 0) {
+        result[key].details = baseNodes[key].details;
+      }
+    }
+  });
+
+  return result;
+}
+
 export default function AgentEvaluations() {
   const [activeTab, setActiveTab] = useState('overview');
   const [filterStatus, setFilterStatus] = useState('all'); // 'all', 'passed', 'failed'
+  const [baselineData, setBaselineData] = useState(null);
   const [evalData, setEvalData] = useState(null);
   const [evalHistory, setEvalHistory] = useState([]);
   const [selectedRunId, setSelectedRunId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isSwitchingRun, setIsSwitchingRun] = useState(false);
   const [expandedCases, setExpandedCases] = useState({});
   const [showLLMTestCase, setShowLLMTestCase] = useState({});
 
   useEffect(() => {
+    let isMounted = true;
+
     async function loadData() {
-      // 1. Fetch DB run history
+      // 1. Instant local hydration from static /eval_results.json (loads in < 15ms)
       try {
-        const histRes = await fetch(`${API_BASE}/evals/history`);
-        if (histRes.ok) {
-          const histData = await histRes.json();
-          if (Array.isArray(histData) && histData.length > 0) {
-            setEvalHistory(histData);
+        const staticRes = await fetch('/eval_results.json');
+        if (staticRes.ok) {
+          const staticData = await staticRes.json();
+          if (isMounted) {
+            setBaselineData(staticData);
+            setEvalData(staticData);
+            setSelectedRunId(staticData.db_run_id || null);
+            setLoading(false); // Unblock immediately - zero hanging!
+          }
+        }
+      } catch (staticErr) {
+        console.warn('Could not load static eval_results.json:', staticErr);
+      }
+
+      // 2. Background database sync with 2.5s hard timeout to prevent any freeze/hang
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 2500);
+
+      try {
+        const [histRes, latestRes] = await Promise.allSettled([
+          fetch(`${API_BASE}/evals/history`, { signal: controller.signal }),
+          fetch(`${API_BASE}/evals/latest`, { signal: controller.signal })
+        ]);
+
+        clearTimeout(timeoutId);
+
+        if (isMounted) {
+          if (histRes.status === 'fulfilled' && histRes.value && histRes.value.ok) {
+            const histData = await histRes.value.json();
+            if (Array.isArray(histData) && histData.length > 0) {
+              setEvalHistory(histData);
+            }
+          }
+
+          if (latestRes.status === 'fulfilled' && latestRes.value && latestRes.value.ok) {
+            const liveData = await latestRes.value.json();
+            if (liveData && (liveData.nodes || liveData.details || liveData.summary)) {
+              setEvalData(liveData);
+              setSelectedRunId(liveData.db_run_id || null);
+            }
           }
         }
       } catch (err) {
-        console.warn('Could not load eval history from API:', err);
-      }
-
-      // 2. Fetch latest eval run (try DB API first, then local static json fallback)
-      let dataLoaded = false;
-      try {
-        const res = await fetch(`${API_BASE}/evals/latest`);
-        if (res.ok) {
-          const data = await res.json();
-          setEvalData(data);
-          setSelectedRunId(data.db_run_id || null);
-          dataLoaded = true;
-        }
-      } catch (err) {
-        console.warn('API /evals/latest unreachable, trying static fallback:', err);
-      }
-
-      if (!dataLoaded) {
-        try {
-          const staticRes = await fetch('/eval_results.json');
-          if (staticRes.ok) {
-            const data = await staticRes.json();
-            setEvalData(data);
-            setSelectedRunId(data.db_run_id || null);
-          }
-        } catch (staticErr) {
-          console.warn('Could not load static eval_results.json:', staticErr);
+        console.warn('Background database sync completed or timed out:', err);
+      } finally {
+        if (isMounted) {
+          setLoading(false);
         }
       }
-
-      setLoading(false);
     }
 
     loadData();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const handleSelectRun = async (runId) => {
-    setLoading(true);
+    setIsSwitchingRun(true);
     setSelectedRunId(runId);
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 3000);
     try {
-      const res = await fetch(`${API_BASE}/evals/${runId}`);
+      const res = await fetch(`${API_BASE}/evals/${runId}`, { signal: controller.signal });
+      clearTimeout(timeoutId);
       if (res.ok) {
         const data = await res.json();
         setEvalData(data);
@@ -82,7 +143,7 @@ export default function AgentEvaluations() {
     } catch (err) {
       console.warn(`Could not load eval run #${runId}:`, err);
     } finally {
-      setLoading(false);
+      setIsSwitchingRun(false);
     }
   };
 
@@ -103,23 +164,42 @@ export default function AgentEvaluations() {
   if (loading) {
     return (
       <div className="loader-container glass animate-fade-in" style={{ padding: '3.5rem', textAlign: 'center' }}>
-        <div style={{ 
-          width: '40px', 
-          height: '40px', 
-          border: '3px solid rgba(96, 165, 250, 0.2)', 
-          borderTopColor: '#60a5fa', 
-          borderRadius: '50%', 
-          animation: 'spin 0.8s linear infinite',
-          margin: '0 auto 1.25rem'
-        }} />
-        <h3 style={{ color: '#60a5fa', fontSize: '1.1rem', fontWeight: '600' }}>Loading Evaluation Intelligence...</h3>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.4rem' }}>Synchronizing benchmarks with database records</p>
+        <div style={{ position: 'relative', width: '56px', height: '56px', margin: '0 auto 1.5rem' }}>
+          <div style={{
+            position: 'absolute',
+            inset: '-6px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(96, 165, 250, 0.35) 0%, transparent 70%)',
+            animation: 'pulseGlow 1.8s ease-in-out infinite'
+          }} />
+          <svg style={{
+            width: '100%',
+            height: '100%',
+            animation: 'spin 0.85s linear infinite',
+            filter: 'drop-shadow(0 0 10px rgba(96, 165, 250, 0.6))'
+          }} viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="4" />
+            <circle cx="25" cy="25" r="20" fill="none" stroke="url(#spin-grad-loader)" strokeWidth="4" strokeLinecap="round" strokeDasharray="85" strokeDashoffset="55" />
+            <defs>
+              <linearGradient id="spin-grad-loader" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#60a5fa" />
+                <stop offset="100%" stopColor="#a855f7" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3 style={{ color: '#60a5fa', fontSize: '1.2rem', fontWeight: '600', letterSpacing: '-0.01em' }}>
+          Loading Evaluation Intelligence...
+        </h3>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.5rem' }}>
+          Synchronizing benchmark test cases and verification records
+        </p>
       </div>
     );
   }
 
   const summary = evalData?.summary || {};
-  const nodes = evalData?.nodes || {};
+  const nodes = normalizeNodes(evalData, baselineData);
   const deepeval = evalData?.deepeval_framework || {
     version: '4.2.8',
     pass_rate: 100.0,
@@ -545,63 +625,99 @@ export default function AgentEvaluations() {
 
           {/* Cases List */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-            {(nodes.skeptic?.details || []).filter(c => filterStatus === 'all' || (filterStatus === 'passed' ? c.passed : !c.passed)).map((c, i) => (
-              <div key={i} className="glass-card" style={{ padding: '1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <span style={{ 
-                      fontSize: '0.75rem', 
-                      padding: '0.2rem 0.5rem', 
-                      borderRadius: '4px',
-                      background: c.passed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)',
-                      color: c.passed ? '#10b981' : '#ef4444',
-                      fontWeight: '600'
-                    }}>
-                      {c.passed ? 'PASSED' : 'MISMATCH'}
-                    </span>
-                    <span style={{ 
-                      fontSize: '0.75rem', 
-                      padding: '0.2rem 0.5rem', 
-                      borderRadius: '4px',
-                      background: ARCHETYPE_LABELS[c.archetype]?.bg || 'rgba(255,255,255,0.05)',
-                      color: ARCHETYPE_LABELS[c.archetype]?.color || 'var(--text-secondary)',
-                    }}>
-                      {ARCHETYPE_LABELS[c.archetype]?.label || c.archetype}
-                    </span>
-                    <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
-                  </div>
+            {(() => {
+              const allCases = nodes.skeptic?.details || [];
+              const filteredCases = allCases.filter(c => {
+                if (filterStatus === 'all') return true;
+                const isPassed = c.passed === true || c.passed === 'true' || c.actual_decision === c.expected_decision;
+                return filterStatus === 'passed' ? isPassed : !isPassed;
+              });
 
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-                      Expected: <strong>{c.expected_decision}</strong> | Actual: <strong style={{ color: c.passed ? '#10b981' : '#ef4444' }}>{c.actual_decision}</strong>
-                    </span>
-                    <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
+              if (filteredCases.length === 0) {
+                return (
+                  <div className="glass-card" style={{ padding: '2.5rem', textAlign: 'center', color: 'var(--text-muted)' }}>
+                    <p style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>
+                      No benchmark cases match the "{filterStatus}" filter for this node.
+                    </p>
+                    <p style={{ fontSize: '0.8rem', marginTop: '0.4rem', color: 'var(--text-secondary)' }}>
+                      Total benchmark cases available: {allCases.length}
+                    </p>
+                    <button 
+                      onClick={() => setFilterStatus('all')}
+                      style={{
+                        marginTop: '1rem',
+                        padding: '0.4rem 0.9rem',
+                        borderRadius: '6px',
+                        background: 'rgba(96, 165, 250, 0.2)',
+                        color: '#60a5fa',
+                        border: '1px solid rgba(96, 165, 250, 0.4)',
+                        cursor: 'pointer',
+                        fontSize: '0.8rem'
+                      }}
+                    >
+                      View All {allCases.length} Cases
+                    </button>
                   </div>
-                </div>
+                );
+              }
 
-                {expandedCases[c.id] && (
-                  <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '0.75rem' }}>
-                      <div>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Test Case ID</span>
-                        <p style={{ color: '#f3f4f6', fontFamily: 'monospace' }}>{c.id}</p>
-                      </div>
-                      <div>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Rejection Rationale</span>
-                        <p style={{ color: 'var(--text-secondary)' }}>{c.rejection_reason || 'Eligible high-value student candidate.'}</p>
-                      </div>
+              return filteredCases.map((c, i) => (
+                <div key={c.id || i} className="glass-card" style={{ padding: '1.25rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                      <span style={{ 
+                        fontSize: '0.75rem', 
+                        padding: '0.2rem 0.5rem', 
+                        borderRadius: '4px',
+                        background: c.passed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)',
+                        color: c.passed ? '#10b981' : '#ef4444',
+                        fontWeight: '600'
+                      }}>
+                        {c.passed ? 'PASSED' : 'MISMATCH'}
+                      </span>
+                      <span style={{ 
+                        fontSize: '0.75rem', 
+                        padding: '0.2rem 0.5rem', 
+                        borderRadius: '4px',
+                        background: ARCHETYPE_LABELS[c.archetype]?.bg || 'rgba(255,255,255,0.05)',
+                        color: ARCHETYPE_LABELS[c.archetype]?.color || 'var(--text-secondary)',
+                      }}>
+                        {ARCHETYPE_LABELS[c.archetype]?.label || c.archetype}
+                      </span>
+                      <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
                     </div>
 
-                    {/* LLMTestCase Inspection Drawer */}
-                    <div style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px dashed var(--border-color)' }}>
-                      <button 
-                        onClick={(e) => { e.stopPropagation(); toggleLLMTestCase(c.id); }}
-                        style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.8rem', cursor: 'pointer', padding: 0 }}
-                      >
-                        {showLLMTestCase[c.id] ? 'Hide DeepEval LLMTestCase Schema' : 'View DeepEval LLMTestCase Schema'}
-                      </button>
-                      {showLLMTestCase[c.id] && (
-                        <pre style={{ background: 'rgba(0,0,0,0.35)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', fontSize: '0.75rem', color: '#93c5fd', overflowX: 'auto' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                      <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+                        Expected: <strong>{c.expected_decision}</strong> | Actual: <strong style={{ color: c.passed ? '#10b981' : '#ef4444' }}>{c.actual_decision}</strong>
+                      </span>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
+                    </div>
+                  </div>
+
+                  {expandedCases[c.id] && (
+                    <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '0.75rem' }}>
+                        <div>
+                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Test Case ID</span>
+                          <p style={{ color: '#f3f4f6', fontFamily: 'monospace' }}>{c.id}</p>
+                        </div>
+                        <div>
+                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Rejection Rationale</span>
+                          <p style={{ color: 'var(--text-secondary)' }}>{c.rejection_reason || 'Eligible high-value student candidate.'}</p>
+                        </div>
+                      </div>
+
+                      {/* LLMTestCase Inspection Drawer */}
+                      <div style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px dashed var(--border-color)' }}>
+                        <button 
+                          onClick={(e) => { e.stopPropagation(); toggleLLMTestCase(c.id); }}
+                          style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.8rem', cursor: 'pointer', padding: 0 }}
+                        >
+                          {showLLMTestCase[c.id] ? 'Hide DeepEval LLMTestCase Schema' : 'View DeepEval LLMTestCase Schema'}
+                        </button>
+                        {showLLMTestCase[c.id] && (
+                          <pre style={{ background: 'rgba(0,0,0,0.35)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', fontSize: '0.75rem', color: '#93c5fd', overflowX: 'auto' }}>
 {JSON.stringify({
   "class": "deepeval.test_case.LLMTestCase",
   "input": `Title: ${c.title}`,
@@ -609,13 +725,14 @@ export default function AgentEvaluations() {
   "expected_output": `Decision: ${c.expected_decision}`,
   "additional_metadata": { "id": c.id, "archetype": c.archetype }
 }, null, 2)}
-                        </pre>
-                      )}
+                          </pre>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              ));
+            })()}
           </div>
         </div>
       )}
@@ -699,49 +816,86 @@ export default function AgentEvaluations() {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-            {(nodes.verifier?.details || []).filter(c => filterStatus === 'all' || (filterStatus === 'passed' ? c.passed : !c.passed)).map((c, i) => (
-              <div key={i} className="glass-card" style={{ padding: '1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <span style={{ 
-                      fontSize: '0.75rem', 
-                      padding: '0.2rem 0.5rem', 
-                      borderRadius: '4px',
-                      background: c.passed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)',
-                      color: c.passed ? '#10b981' : '#ef4444',
-                      fontWeight: '600'
-                    }}>
-                      {c.passed ? 'VERIFIED' : 'MISMATCH'}
-                    </span>
-                    <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
-                  </div>
+            {(() => {
+              const allCases = nodes.verifier?.details || [];
+              const filteredCases = allCases.filter(c => {
+                if (filterStatus === 'all') return true;
+                const isPassed = c.passed === true || c.passed === 'true' || c.actual_status === c.expected_status;
+                return filterStatus === 'passed' ? isPassed : !isPassed;
+              });
 
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-                      Expected: <strong>{c.expected_status}</strong> | Actual: <strong style={{ color: c.passed ? '#10b981' : '#ef4444' }}>{c.actual_status}</strong>
-                    </span>
-                    <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
+              if (filteredCases.length === 0) {
+                return (
+                  <div className="glass-card" style={{ padding: '2.5rem', textAlign: 'center', color: 'var(--text-muted)' }}>
+                    <p style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>
+                      No benchmark cases match the "{filterStatus}" filter for this node.
+                    </p>
+                    <p style={{ fontSize: '0.8rem', marginTop: '0.4rem', color: 'var(--text-secondary)' }}>
+                      Total benchmark cases available: {allCases.length}
+                    </p>
+                    <button 
+                      onClick={() => setFilterStatus('all')}
+                      style={{
+                        marginTop: '1rem',
+                        padding: '0.4rem 0.9rem',
+                        borderRadius: '6px',
+                        background: 'rgba(239, 68, 68, 0.2)',
+                        color: '#ef4444',
+                        border: '1px solid rgba(239, 68, 68, 0.4)',
+                        cursor: 'pointer',
+                        fontSize: '0.8rem'
+                      }}
+                    >
+                      View All {allCases.length} Cases
+                    </button>
                   </div>
-                </div>
+                );
+              }
 
-                {expandedCases[c.id] && (
-                  <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                      <div>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Candidate Claim</span>
-                        <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.claim_summary}</p>
-                      </div>
-                      <div>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Documentation Context Snippet</span>
-                        <p style={{ color: 'var(--text-secondary)', background: 'rgba(0,0,0,0.2)', padding: '0.5rem', borderRadius: '4px', marginTop: '0.2rem', fontFamily: 'monospace' }}>
-                          {c.documentation_snippet}
-                        </p>
-                      </div>
+              return filteredCases.map((c, i) => (
+                <div key={c.id || i} className="glass-card" style={{ padding: '1.25rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                      <span style={{ 
+                        fontSize: '0.75rem', 
+                        padding: '0.2rem 0.5rem', 
+                        borderRadius: '4px',
+                        background: c.passed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)',
+                        color: c.passed ? '#10b981' : '#ef4444',
+                        fontWeight: '600'
+                      }}>
+                        {c.passed ? 'VERIFIED' : 'MISMATCH'}
+                      </span>
+                      <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                      <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+                        Expected: <strong>{c.expected_status}</strong> | Actual: <strong style={{ color: c.passed ? '#10b981' : '#ef4444' }}>{c.actual_status}</strong>
+                      </span>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
                     </div>
                   </div>
-                )}
-              </div>
-            ))}
+
+                  {expandedCases[c.id] && (
+                    <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                        <div>
+                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Candidate Claim</span>
+                          <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.claim_summary}</p>
+                        </div>
+                        <div>
+                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Documentation Context Snippet</span>
+                          <p style={{ color: 'var(--text-secondary)', background: 'rgba(0,0,0,0.2)', padding: '0.5rem', borderRadius: '4px', marginTop: '0.2rem', fontFamily: 'monospace' }}>
+                            {c.documentation_snippet}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ));
+            })()}
           </div>
         </div>
       )}
@@ -804,40 +958,51 @@ export default function AgentEvaluations() {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-            {(nodes.analyst?.details || []).map((c, i) => (
-              <div key={i} className="glass-card" style={{ padding: '1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
-                  <div>
-                    <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
-                    <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.35rem' }}>
-                      <span style={{ fontSize: '0.75rem', padding: '0.15rem 0.5rem', borderRadius: '4px', background: 'rgba(96, 165, 250, 0.15)', color: '#60a5fa' }}>
-                        Verdict: {c.actual_verdict} (Expected: {c.expected_verdict})
-                      </span>
-                      <span style={{ fontSize: '0.75rem', padding: '0.15rem 0.5rem', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b' }}>
-                        Practicality: {c.practicality_score}/5.0
-                      </span>
-                    </div>
+            {(() => {
+              const allCases = nodes.analyst?.details || [];
+              if (allCases.length === 0) {
+                return (
+                  <div className="glass-card" style={{ padding: '2.5rem', textAlign: 'center', color: 'var(--text-muted)' }}>
+                    <p style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>No candidate evaluations recorded for this node.</p>
                   </div>
-                  <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
-                </div>
+                );
+              }
 
-                {expandedCases[c.id] && (
-                  <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                      <div>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Generated "Why It Matters"</span>
-                        <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.why_it_matters}</p>
-                      </div>
-                      <div>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Target Audience Text</span>
-                        <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.audience_text}</p>
-                        <span style={{ color: '#10b981', fontSize: '0.75rem' }}>Matched: {c.matched_keywords?.join(', ') || 'General'}</span>
+              return allCases.map((c, i) => (
+                <div key={c.id || i} className="glass-card" style={{ padding: '1.25rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
+                    <div>
+                      <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
+                      <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.35rem' }}>
+                        <span style={{ fontSize: '0.75rem', padding: '0.15rem 0.5rem', borderRadius: '4px', background: 'rgba(96, 165, 250, 0.15)', color: '#60a5fa' }}>
+                          Verdict: {c.actual_verdict} (Expected: {c.expected_verdict})
+                        </span>
+                        <span style={{ fontSize: '0.75rem', padding: '0.15rem 0.5rem', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b' }}>
+                          Practicality: {c.practicality_score}/5.0
+                        </span>
                       </div>
                     </div>
+                    <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
                   </div>
-                )}
-              </div>
-            ))}
+
+                  {expandedCases[c.id] && (
+                    <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                        <div>
+                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Generated "Why It Matters"</span>
+                          <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.why_it_matters}</p>
+                        </div>
+                        <div>
+                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Target Audience Text</span>
+                          <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.audience_text}</p>
+                          <span style={{ color: '#10b981', fontSize: '0.75rem' }}>Matched: {c.matched_keywords?.join(', ') || 'General'}</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ));
+            })()}
           </div>
         </div>
       )}
@@ -900,29 +1065,40 @@ export default function AgentEvaluations() {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-            {(nodes.editor?.details || []).map((b, i) => (
-              <div key={i} className="glass-card" style={{ padding: '1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-                      <span className="category-tag">{b.category}</span>
-                      <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{b.title}</strong>
-                    </div>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.4rem', fontStyle: 'italic' }}>
-                      "{b.sample_snippet}"
-                    </p>
+            {(() => {
+              const allCases = nodes.editor?.details || [];
+              if (allCases.length === 0) {
+                return (
+                  <div className="glass-card" style={{ padding: '2.5rem', textAlign: 'center', color: 'var(--text-muted)' }}>
+                    <p style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>No editorial briefings recorded for this node.</p>
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.25rem' }}>
-                    <span style={{ fontSize: '0.75rem', color: b.starts_with_bold ? '#10b981' : '#ef4444' }}>
-                      {b.starts_with_bold ? 'Valid Bold Lead' : 'Missing Bold Lead'}
-                    </span>
-                    <span style={{ fontSize: '0.75rem', color: !b.has_forbidden_tldr ? '#10b981' : '#ef4444' }}>
-                      {!b.has_forbidden_tldr ? 'Clean Format' : 'Forbidden Label Found'}
-                    </span>
+                );
+              }
+
+              return allCases.map((b, i) => (
+                <div key={i} className="glass-card" style={{ padding: '1.25rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
+                        <span className="category-tag">{b.category}</span>
+                        <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{b.title}</strong>
+                      </div>
+                      <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.4rem', fontStyle: 'italic' }}>
+                        "{b.sample_snippet}"
+                      </p>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.25rem' }}>
+                      <span style={{ fontSize: '0.75rem', color: b.starts_with_bold ? '#10b981' : '#ef4444' }}>
+                        {b.starts_with_bold ? 'Valid Bold Lead' : 'Missing Bold Lead'}
+                      </span>
+                      <span style={{ fontSize: '0.75rem', color: !b.has_forbidden_tldr ? '#10b981' : '#ef4444' }}>
+                        {!b.has_forbidden_tldr ? 'Clean Format' : 'Forbidden Label Found'}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ));
+            })()}
           </div>
         </div>
       )}

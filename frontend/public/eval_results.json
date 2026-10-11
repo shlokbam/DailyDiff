@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T13:53:22.933281Z",
+  "generated_at": "2026-10-11T14:42:18.878787Z",
   "benchmark_dataset": "golden_dataset.json (25 cases)",
   "total_runtime_seconds": 0.0,
   "composite_quality_score": 80.0,
@@ -698,11 +698,11 @@
       "category_uniqueness_rate": 83.3,
       "average_readability_score": 5.0,
       "categories_used": [
-        "Tech Shift",
-        "Ecosystem Update",
         "Career & Learning",
         "Watchlist",
-        "Cool Tool"
+        "Cool Tool",
+        "Tech Shift",
+        "Ecosystem Update"
       ],
       "details": [
         {
@@ -762,5 +762,5 @@
       ]
     }
   },
-  "db_run_id": 8
+  "db_run_id": 9
 }

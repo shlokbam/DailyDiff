@@ -211,7 +211,14 @@ def save_eval_run(report: Dict[str, Any], run_type: str = "full_suite") -> int:
             "timestamp": datetime.utcnow().isoformat()
         }
     summary_json = json.dumps(summary_dict)
-    raw_report_json = json.dumps(report)
+    
+    # Ensure raw_report_json contains a nodes map even for single-node executions
+    wrapped_report = report.copy()
+    if "nodes" not in wrapped_report:
+        wrapped_report["nodes"] = {
+            run_type: report
+        }
+    raw_report_json = json.dumps(wrapped_report)
 
     conn = get_db_connection()
     cursor = conn.cursor()
