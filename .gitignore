@@ -28,3 +28,10 @@ logs/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Evaluation caches & generated reports
+.deepeval/
+tests/evals/.cache/
+tests/evals/smoke_results.json
+tests/evals/eval_results*.json
+frontend/public/eval_results.json

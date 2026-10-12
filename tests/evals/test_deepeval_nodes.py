@@ -65,30 +65,3 @@ def test_editor_node_geval(test_case):
     """DeepEval assertion evaluating Editor ELI5 conversational tone and formatting using G-Eval."""
     assert_test(test_case, [editor_readability_geval])
 
-def pytest_sessionfinish(session, exitstatus):
-    """Automatically persist DeepEval test run summary into the database upon completion."""
-    try:
-        from app.database import save_eval_run
-        report = {
-            "run_type": "deepeval_ci",
-            "composite_quality_score": 100.0 if exitstatus == 0 else 85.0,
-            "total_cases": 20,
-            "deepeval_framework": {
-                "version": "4.2.8",
-                "pass_rate": 100.0 if exitstatus == 0 else 0.0,
-                "total_tests": 20,
-                "passed": 20 if exitstatus == 0 else 0,
-                "failed": 0 if exitstatus == 0 else 20,
-                "cli_command": "deepeval test run tests/evals/test_deepeval_nodes.py"
-            },
-            "summary": {
-                "skeptic_geval_score": 0.92,
-                "verifier_geval_score": 0.96,
-                "analyst_geval_score": 0.94,
-                "editor_geval_score": 0.95
-            }
-        }
-        save_eval_run(report, run_type="deepeval_ci")
-    except Exception:
-        pass
-
