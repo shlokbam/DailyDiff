@@ -158,8 +158,13 @@ def append_to_history(briefs: List[Dict[str, Any]], date_str: str) -> Dict[str, 
 def save_eval_run(report: Dict[str, Any], run_type: str = "full_suite") -> int:
     """
     Persist an evaluation run into the database and sync with frontend public JSON.
+    Strictly refuses to store any report whose meta.mode is not 'live'.
     Returns the inserted run ID.
     """
+    meta = report.get("meta")
+    if not isinstance(meta, dict) or meta.get("mode") != "live":
+        raise ValueError("save_eval_run refused: only evaluation reports with meta.mode == 'live' can be persisted to database.")
+
     init_db()
     # Compute composite_score robustly across full suites and single node reports
     if "composite_quality_score" in report:
@@ -171,17 +176,19 @@ def save_eval_run(report: Dict[str, Any], run_type: str = "full_suite") -> int:
     elif "f1_score" in report:
         composite_score = float(report["f1_score"]) * 100.0
     else:
-        composite_score = 92.5
+        composite_score = 0.0
 
     # Compute total cases
-    if "total_cases" in report:
+    if "n_total" in report:
+        total_cases = int(report["n_total"])
+    elif "total_cases" in report:
         total_cases = int(report["total_cases"])
     elif "summary" in report and "total_cases" in report["summary"]:
         total_cases = int(report["summary"]["total_cases"])
     elif "details" in report:
         total_cases = len(report["details"])
     else:
-        total_cases = 25
+        total_cases = 0
 
     # Compute pass rate
     if "deepeval_framework" in report and "pass_rate" in report["deepeval_framework"]:
@@ -194,22 +201,22 @@ def save_eval_run(report: Dict[str, Any], run_type: str = "full_suite") -> int:
         passed_cnt = sum(1 for d in report["details"] if d.get("passed", False))
         pass_rate = round((passed_cnt / total_cases) * 100.0, 1)
     else:
-        pass_rate = 100.0
+        pass_rate = 0.0
 
-    # Build summary dict
-    if "summary" in report and report["summary"]:
-        summary_dict = report["summary"]
+    # Build summary dict preserving meta inside summary_json without schema migration
+    if "summary" in report and isinstance(report["summary"], dict):
+        summary_dict = report["summary"].copy()
     else:
         summary_dict = {
             "run_type": run_type,
             "node": report.get("node", run_type),
             "total_cases": total_cases,
             "pass_rate": pass_rate,
-            "composite_score": composite_score,
             "accuracy": report.get("accuracy", pass_rate),
             "f1_score": report.get("f1_score"),
-            "timestamp": datetime.utcnow().isoformat()
         }
+    summary_dict["meta"] = meta
+    summary_dict["timestamp"] = datetime.now(timezone.utc).isoformat()
     summary_json = json.dumps(summary_dict)
     
     # Ensure raw_report_json contains a nodes map even for single-node executions
