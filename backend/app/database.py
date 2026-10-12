@@ -264,7 +264,7 @@ def save_eval_run(report: Dict[str, Any], run_type: str = "full_suite") -> int:
     return run_id
 
 def get_latest_eval_run() -> Optional[Dict[str, Any]]:
-    """Retrieve the most recent evaluation run from the database."""
+    """Retrieve the most recent live evaluation run from the database."""
     init_db()
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -272,49 +272,59 @@ def get_latest_eval_run() -> Optional[Dict[str, Any]]:
         SELECT id, run_type, composite_score, total_cases, pass_rate, summary_json, raw_report_json, created_at
         FROM eval_runs
         ORDER BY id DESC
-        LIMIT 1
     """)
-    row = cursor.fetchone()
+    rows = cursor.fetchall()
     conn.close()
-    if not row:
-        return None
 
-    report = json.loads(row[6]) if row[6] else {}
-    report["db_run_id"] = row[0]
-    report["db_created_at"] = str(row[7])
-    report["run_type"] = row[1]
-    return report
+    for row in rows:
+        try:
+            report = json.loads(row[6]) if row[6] else {}
+            if report.get("meta", {}).get("mode") == "live":
+                report["db_run_id"] = row[0]
+                report["db_created_at"] = str(row[7])
+                report["run_type"] = row[1]
+                return report
+        except Exception:
+            continue
+
+    return None
 
 def get_eval_history(limit: int = 50) -> List[Dict[str, Any]]:
-    """Retrieve historical evaluation run records."""
+    """Retrieve historical live evaluation run records."""
     init_db()
     conn = get_db_connection()
     cursor = conn.cursor()
-    placeholder = "%s" if DATABASE_URL else "?"
-    cursor.execute(f"""
-        SELECT id, run_type, composite_score, total_cases, pass_rate, summary_json, created_at
+    cursor.execute("""
+        SELECT id, run_type, composite_score, total_cases, pass_rate, summary_json, raw_report_json, created_at
         FROM eval_runs
         ORDER BY id DESC
-        LIMIT {placeholder}
-    """, (limit,))
+    """)
     rows = cursor.fetchall()
     conn.close()
 
     history = []
     for r in rows:
-        history.append({
-            "id": r[0],
-            "run_type": r[1],
-            "composite_score": r[2],
-            "total_cases": r[3],
-            "pass_rate": r[4],
-            "summary": json.loads(r[5]) if r[5] else {},
-            "created_at": str(r[6])
-        })
+        try:
+            raw_report = json.loads(r[6]) if r[6] else {}
+            if raw_report.get("meta", {}).get("mode") == "live":
+                history.append({
+                    "id": r[0],
+                    "run_type": r[1],
+                    "composite_score": r[2],
+                    "total_cases": r[3],
+                    "pass_rate": r[4],
+                    "summary": json.loads(r[5]) if r[5] else {},
+                    "created_at": str(r[7])
+                })
+                if len(history) >= limit:
+                    break
+        except Exception:
+            continue
+
     return history
 
 def get_eval_run_by_id(run_id: int) -> Optional[Dict[str, Any]]:
-    """Retrieve a specific evaluation run by ID."""
+    """Retrieve a specific live evaluation run by ID."""
     init_db()
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -329,8 +339,13 @@ def get_eval_run_by_id(run_id: int) -> Optional[Dict[str, Any]]:
     if not row:
         return None
 
-    report = json.loads(row[6]) if row[6] else {}
-    report["db_run_id"] = row[0]
-    report["db_created_at"] = str(row[7])
-    report["run_type"] = row[1]
-    return report
+    try:
+        report = json.loads(row[6]) if row[6] else {}
+        if report.get("meta", {}).get("mode") != "live":
+            return None
+        report["db_run_id"] = row[0]
+        report["db_created_at"] = str(row[7])
+        report["run_type"] = row[1]
+        return report
+    except Exception:
+        return None

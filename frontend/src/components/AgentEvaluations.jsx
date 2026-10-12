@@ -82,16 +82,15 @@ export default function AgentEvaluations() {
     let isMounted = true;
 
     async function loadData() {
-      // 1. Instant local hydration from static /eval_results.json (loads in < 15ms)
+      // 1. Instant local hydration from static /eval_results.json if it is a live run
       try {
         const staticRes = await fetch('/eval_results.json');
         if (staticRes.ok) {
           const staticData = await staticRes.json();
-          if (isMounted) {
+          if (isMounted && staticData?.meta?.mode === 'live') {
             setBaselineData(staticData);
             setEvalData(staticData);
             setSelectedRunId(staticData.db_run_id || null);
-            setLoading(false); // Unblock immediately - zero hanging!
           }
         }
       } catch (staticErr) {
@@ -114,13 +113,14 @@ export default function AgentEvaluations() {
           if (histRes.status === 'fulfilled' && histRes.value && histRes.value.ok) {
             const histData = await histRes.value.json();
             if (Array.isArray(histData) && histData.length > 0) {
-              setEvalHistory(histData);
+              const liveHistory = histData.filter(h => h.summary?.meta?.mode === 'live' || h.meta?.mode === 'live');
+              setEvalHistory(liveHistory);
             }
           }
 
           if (latestRes.status === 'fulfilled' && latestRes.value && latestRes.value.ok) {
             const liveData = await latestRes.value.json();
-            if (liveData && (liveData.nodes || liveData.details || liveData.summary)) {
+            if (liveData && liveData.meta?.mode === 'live') {
               setEvalData(liveData);
               setSelectedRunId(liveData.db_run_id || null);
             }
@@ -152,7 +152,9 @@ export default function AgentEvaluations() {
       clearTimeout(timeoutId);
       if (res.ok) {
         const data = await res.json();
-        setEvalData(data);
+        if (data?.meta?.mode === 'live') {
+          setEvalData(data);
+        }
       }
     } catch (err) {
       console.warn(`Could not load eval run #${runId}:`, err);
@@ -208,6 +210,32 @@ export default function AgentEvaluations() {
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.5rem' }}>
           Synchronizing benchmark test cases and verification records
         </p>
+      </div>
+    );
+  }
+
+  // Clear Empty State when no verified live evaluation run exists
+  if (!evalData || evalData.meta?.mode !== 'live') {
+    return (
+      <div className="evaluations-container animate-fade-in" style={{ maxWidth: '900px', margin: '0 auto', paddingBottom: '4rem' }}>
+        <div className="glass-card" style={{ padding: '3.5rem 2rem', textAlign: 'center', borderLeft: '4px solid #60a5fa' }}>
+          <div style={{ display: 'inline-flex', padding: '0.85rem', borderRadius: '12px', background: 'rgba(96, 165, 250, 0.1)', color: '#60a5fa', marginBottom: '1.25rem' }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 style={{ fontSize: '1.5rem', fontWeight: '600', color: '#f3f4f6', marginBottom: '0.75rem', letterSpacing: '-0.02em' }}>
+            No live evaluation run has been published yet
+          </h3>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', maxWidth: '620px', margin: '0 auto 1.5rem', lineHeight: '1.6' }}>
+            DailyDiff benchmarks are executed against real LLM APIs on 25 golden test cases without mock substitution or seeded metrics.
+            Live evaluation scorecards will be displayed here once an end-to-end evaluation run completes.
+          </p>
+          <div style={{ display: 'inline-flex', gap: '0.5rem', background: 'rgba(0,0,0,0.25)', padding: '0.5rem 1rem', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'monospace' }}>
+            Run command: python tests/evals/run_all_evals.py --live
+          </div>
+        </div>
       </div>
     );
   }

@@ -206,35 +206,37 @@ from app.database import get_latest_eval_run, get_eval_history, get_eval_run_by_
 @app.get("/api/evals/latest")
 @app.head("/api/evals/latest")
 def get_latest_eval():
-    """Retrieve the latest evaluation report from the database (or static fallback)."""
+    """Retrieve the latest live evaluation report from the database."""
     latest = get_latest_eval_run()
-    if latest:
+    if latest and latest.get("meta", {}).get("mode") == "live":
         return latest
     
-    # Fallback to static eval_results.json if DB has not been populated yet
+    # Fallback to static eval_results.json ONLY if it is a verified live run
     try:
         from app.config import BASE_DIR
         import json
         json_path = BASE_DIR / "frontend" / "public" / "eval_results.json"
         if json_path.exists():
             with open(json_path, "r") as f:
-                return json.load(f)
+                static_data = json.load(f)
+                if static_data.get("meta", {}).get("mode") == "live":
+                    return static_data
     except Exception as e:
         logger.warning(f"Fallback reading eval_results.json error: {e}")
         
-    raise HTTPException(status_code=404, detail="No evaluation runs recorded yet")
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No live evaluation run has been published yet")
 
 @app.get("/api/evals/history")
 def get_eval_runs(limit: int = 50):
-    """Retrieve past evaluation runs from the database."""
+    """Retrieve past live evaluation runs from the database."""
     return get_eval_history(limit=limit)
 
 @app.get("/api/evals/{run_id}")
 def get_eval_by_id(run_id: int):
-    """Retrieve a specific evaluation run by its database ID."""
+    """Retrieve a specific live evaluation run by its database ID."""
     run = get_eval_run_by_id(run_id)
-    if not run:
-        raise HTTPException(status_code=404, detail=f"Evaluation run #{run_id} not found")
+    if not run or run.get("meta", {}).get("mode") != "live":
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No live evaluation run has been published yet")
     return run
 
 @app.post("/api/evals/record", status_code=status.HTTP_201_CREATED)
