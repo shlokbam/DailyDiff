@@ -10,6 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(BASE_DIR / "backend"))
 
 from app.agents.editor import editor_node
+from app.run_health import health
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("DailyDiff.eval.editor")
@@ -26,8 +27,8 @@ def evaluate_brief_format(brief: dict) -> dict:
     # 3. What happened section check
     has_what_happened = "what happened" in desc.lower() or len(desc.split("\n\n")) >= 2
 
-    # 4. Fields completeness
-    has_all_fields = all(k in brief and brief[k] for k in ["title", "description", "why_it_matters", "who_cares", "verdict", "confidence"])
+    # 4. Fields completeness (confidence is optional/deprecated)
+    has_all_fields = all(k in brief and brief[k] for k in ["title", "description", "why_it_matters", "who_cares", "verdict"])
 
     # 5. ELI5 readability heuristic: Checks for engaging, clear prose
     readability_score = 4.0
@@ -54,7 +55,7 @@ def run_editor_eval(dataset_path: Optional[str] = None) -> Dict[str, Any]:
     """
     Evaluates the Editor node using real model calls.
     Never simulates or falls back to ground truth.
-    On error, affected cases are marked status='ERROR' and metrics are computed only over evaluated cases.
+    On error or health fallback, affected cases are marked status='ERROR (fallback_used)' and excluded from scoring.
     """
     if dataset_path is None:
         dataset_path = str(BASE_DIR / "tests" / "evals" / "golden_dataset.json")
@@ -83,22 +84,30 @@ def run_editor_eval(dataset_path: Optional[str] = None) -> Dict[str, Any]:
     final_briefs = []
     error_msg = None
 
+    prev_fallbacks_len = len(health.fallbacks)
     try:
         state = {"vetted_candidates": candidates}
         result = editor_node(state)
-        final_briefs = result.get("final_briefs", [])
+        if len(health.fallbacks) > prev_fallbacks_len:
+            recent = health.fallbacks[prev_fallbacks_len:]
+            reason = recent[-1].get("reason", "Internal fallback used")
+            error_msg = f"ERROR (fallback_used): {reason}"
+            logger.warning(f"Editor used internal fallback: {reason}")
+        else:
+            final_briefs = result.get("final_briefs", [])
     except Exception as e:
         error_msg = str(e)
         logger.error(f"Editor execution error: {error_msg}")
 
     case_results = []
     if error_msg:
+        status_val = "ERROR (fallback_used)" if "fallback_used" in error_msg else "ERROR"
         for c in candidates:
             case_results.append({
                 "eval_id": c["eval_id"],
                 "title": c["title"],
                 "category": None,
-                "status": "ERROR",
+                "status": status_val,
                 "passed": False,
                 "error": error_msg,
                 "starts_with_bold": False,

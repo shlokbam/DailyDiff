@@ -9,6 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(BASE_DIR / "backend"))
 
 from app.agents.verifier import verifier_node
+from app.run_health import health
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("DailyDiff.eval.verifier")
@@ -17,7 +18,7 @@ def run_verifier_eval(dataset_path: Optional[str] = None) -> Dict[str, Any]:
     """
     Evaluates the Verifier node using real model calls.
     Never simulates or falls back to ground truth.
-    On error, affected cases are marked status='ERROR' and metrics are computed only over evaluated cases.
+    On error or health fallback, affected cases are marked status='ERROR (fallback_used)' and excluded from scoring.
     """
     if dataset_path is None:
         dataset_path = str(BASE_DIR / "tests" / "evals" / "golden_dataset.json")
@@ -46,9 +47,18 @@ def run_verifier_eval(dataset_path: Optional[str] = None) -> Dict[str, Any]:
 
     for i in range(0, len(candidates), chunk_size):
         chunk = candidates[i:i + chunk_size]
+        prev_fallbacks_len = len(health.fallbacks)
         try:
             state = {"researched_candidates": chunk}
             result = verifier_node(state)
+            if len(health.fallbacks) > prev_fallbacks_len:
+                recent = health.fallbacks[prev_fallbacks_len:]
+                reason = recent[-1].get("reason", "Internal fallback used")
+                logger.warning(f"Verifier chunk used internal fallback: {reason}")
+                for c in chunk:
+                    error_cases[c["eval_id"]] = "ERROR (fallback_used)"
+                continue
+
             vetted_candidates = result.get("vetted_candidates", [])
             for v in vetted_candidates:
                 eid = v.get("eval_id")
@@ -76,15 +86,17 @@ def run_verifier_eval(dataset_path: Optional[str] = None) -> Dict[str, Any]:
         exp_status = c["ground_truth"]["verifier"]["expected_status"]
 
         if cid in error_cases:
+            err_val = error_cases[cid]
+            status_val = "ERROR (fallback_used)" if "fallback_used" in str(err_val) else "ERROR"
             case_results.append({
                 "id": cid,
                 "title": c["input_signal"]["title"],
                 "archetype": c.get("archetype", ""),
                 "expected_status": exp_status,
-                "actual_status": "ERROR",
-                "status": "ERROR",
+                "actual_status": status_val,
+                "status": status_val,
                 "passed": False,
-                "error": error_cases[cid],
+                "error": err_val,
                 "claim_summary": c["input_signal"].get("raw_description", c["input_signal"].get("description", "")),
                 "documentation_snippet": c["input_signal"].get("scraped_docs", "")[:320],
                 "flagged_contradiction": c["ground_truth"]["verifier"].get("flagged_contradiction"),

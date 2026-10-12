@@ -9,6 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(BASE_DIR / "backend"))
 
 from app.agents.skeptic import deduplicate_and_filter_node
+from app.run_health import health
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("DailyDiff.eval.skeptic")
@@ -17,7 +18,7 @@ def run_skeptic_eval(dataset_path: Optional[str] = None, one_call: bool = False)
     """
     Evaluates the Skeptic node using real model calls.
     Never simulates or falls back to ground truth.
-    On error, affected cases are marked status='ERROR' and metrics are computed only over evaluated cases.
+    On error or health fallback, affected cases are marked status='ERROR (fallback_used)' and excluded from scoring.
     """
     if dataset_path is None:
         dataset_path = str(BASE_DIR / "tests" / "evals" / "golden_dataset.json")
@@ -48,9 +49,18 @@ def run_skeptic_eval(dataset_path: Optional[str] = None, one_call: bool = False)
 
     for i in range(0, len(raw_signals), chunk_size):
         chunk = raw_signals[i:i + chunk_size]
+        prev_fallbacks_len = len(health.fallbacks)
         try:
             state = {"raw_signals": chunk}
             result = deduplicate_and_filter_node(state)
+            if len(health.fallbacks) > prev_fallbacks_len:
+                recent = health.fallbacks[prev_fallbacks_len:]
+                reason = recent[-1].get("reason", "Internal fallback used")
+                logger.warning(f"Skeptic chunk used internal fallback: {reason}")
+                for c in chunk:
+                    error_cases[c["eval_id"]] = "ERROR (fallback_used)"
+                continue
+
             passed_candidates = result.get("candidates", [])
             for cand in passed_candidates:
                 eid = cand.get("eval_id")
@@ -76,15 +86,17 @@ def run_skeptic_eval(dataset_path: Optional[str] = None, one_call: bool = False)
         archetype = c.get("archetype", "")
 
         if cid in error_cases:
+            err_val = error_cases[cid]
+            status_val = "ERROR (fallback_used)" if "fallback_used" in str(err_val) else "ERROR"
             case_results.append({
                 "id": cid,
                 "title": c["input_signal"]["title"],
                 "archetype": archetype,
                 "expected_decision": expected_decision,
-                "actual_decision": "ERROR",
-                "status": "ERROR",
+                "actual_decision": status_val,
+                "status": status_val,
                 "passed": False,
-                "error": error_cases[cid],
+                "error": err_val,
                 "rejection_reason": c["ground_truth"]["skeptic"].get("rejection_reason")
             })
             continue
