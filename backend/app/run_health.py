@@ -29,6 +29,7 @@ class RunHealth:
             "final": 0,
         }
         self.source_counts: Dict[str, int] = {}
+        self.source_yield: Dict[str, float] = {}
         self.content_sources: Dict[str, str] = {}
         self.warnings: List[str] = []
         self._timers: Dict[str, float] = {}
@@ -68,6 +69,9 @@ class RunHealth:
     def set_source_count(self, source: str, n: int):
         self.source_counts[source] = int(n)
 
+    def set_source_yield(self, source: str, pct: float):
+        self.source_yield[source] = round(float(pct), 2)
+
     def set_content_source(self, candidate_url: str, kind: str):
         valid_kinds = {"readme", "api_fallback", "web_page", "description_only", "empty"}
         if kind not in valid_kinds:
@@ -95,6 +99,7 @@ class RunHealth:
         return {
             "counts": self.counts.copy(),
             "source_counts": self.source_counts.copy(),
+            "source_yield": self.source_yield.copy(),
             "content_sources": self.content_sources.copy(),
             "models_used": self.models_used.copy(),
             "n_llm_calls": self.llm_calls_count,
