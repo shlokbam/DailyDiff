@@ -3,8 +3,8 @@ import json
 import logging
 import sys
 from pathlib import Path
+from typing import Dict, Any, Optional
 
-# Add backend directory to sys.path so app modules can be imported
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(BASE_DIR / "backend"))
 
@@ -13,18 +13,22 @@ from app.agents.verifier import verifier_node
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("DailyDiff.eval.verifier")
 
-def run_verifier_eval(dataset_path: str = None) -> dict:
+def run_verifier_eval(dataset_path: Optional[str] = None) -> Dict[str, Any]:
+    """
+    Evaluates the Verifier node using real model calls.
+    Never simulates or falls back to ground truth.
+    On error, affected cases are marked status='ERROR' and metrics are computed only over evaluated cases.
+    """
     if dataset_path is None:
         dataset_path = str(BASE_DIR / "tests" / "evals" / "golden_dataset.json")
 
     with open(dataset_path, "r") as f:
         dataset = json.load(f)
 
-    # Test cases that have a verifier ground truth expectation
     test_cases = [item for item in dataset if item.get("ground_truth", {}).get("verifier")]
-    logger.info(f"Loaded {len(test_cases)} test cases for Verifier evaluation.")
+    n_total = len(test_cases)
+    logger.info(f"Loaded {n_total} test cases for Verifier evaluation.")
 
-    # Convert dataset items into format expected by verifier node
     candidates = []
     for c in test_cases:
         candidates.append({
@@ -37,36 +41,29 @@ def run_verifier_eval(dataset_path: str = None) -> dict:
         })
 
     vetted_ids = set()
-    fast_mode = os.getenv("FAST_EVAL") == "1"
+    error_cases = {}
+    chunk_size = 5
 
-    if fast_mode:
-        logger.info("FAST_EVAL=1: evaluating verifier against benchmark ground truth.")
-        for c in test_cases:
-            if c["ground_truth"]["verifier"].get("expected_status") == "VALID":
-                vetted_ids.add(c["id"])
-    else:
+    for i in range(0, len(candidates), chunk_size):
+        chunk = candidates[i:i + chunk_size]
         try:
-            chunk_size = 5
-            for i in range(0, len(candidates), chunk_size):
-                chunk = candidates[i:i + chunk_size]
-                state = {"researched_candidates": chunk}
-                result = verifier_node(state)
-                vetted_candidates = result.get("vetted_candidates", [])
-                for v in vetted_candidates:
-                    eid = v.get("eval_id")
-                    if eid:
-                        vetted_ids.add(eid)
-                    else:
-                        for tc in test_cases:
-                            if tc["input_signal"]["title"] == v.get("title"):
-                                vetted_ids.add(tc["id"])
+            state = {"researched_candidates": chunk}
+            result = verifier_node(state)
+            vetted_candidates = result.get("vetted_candidates", [])
+            for v in vetted_candidates:
+                eid = v.get("eval_id")
+                if eid:
+                    vetted_ids.add(eid)
+                else:
+                    for tc in test_cases:
+                        if tc["input_signal"]["title"] == v.get("title"):
+                            vetted_ids.add(tc["id"])
         except Exception as e:
-            logger.warning(f"Live model execution raised {e}; falling back to benchmark ground truth.")
-            for c in test_cases:
-                if c["ground_truth"]["verifier"].get("expected_status") == "VALID":
-                    vetted_ids.add(c["id"])
+            err_msg = str(e)
+            logger.error(f"Verifier chunk execution error: {err_msg}")
+            for c in chunk:
+                error_cases[c["eval_id"]] = err_msg
 
-    # Metrics
     correct = 0
     adversarial_total = 0
     adversarial_caught = 0
@@ -77,6 +74,24 @@ def run_verifier_eval(dataset_path: str = None) -> dict:
     for c in test_cases:
         cid = c["id"]
         exp_status = c["ground_truth"]["verifier"]["expected_status"]
+
+        if cid in error_cases:
+            case_results.append({
+                "id": cid,
+                "title": c["input_signal"]["title"],
+                "archetype": c.get("archetype", ""),
+                "expected_status": exp_status,
+                "actual_status": "ERROR",
+                "status": "ERROR",
+                "passed": False,
+                "error": error_cases[cid],
+                "claim_summary": c["input_signal"].get("raw_description", c["input_signal"].get("description", "")),
+                "documentation_snippet": c["input_signal"].get("scraped_docs", "")[:320],
+                "flagged_contradiction": c["ground_truth"]["verifier"].get("flagged_contradiction"),
+                "url": c["input_signal"].get("url", "")
+            })
+            continue
+
         act_status = "VALID" if cid in vetted_ids else "INVALID"
         passed = (act_status == exp_status)
 
@@ -99,6 +114,7 @@ def run_verifier_eval(dataset_path: str = None) -> dict:
             "archetype": c.get("archetype", ""),
             "expected_status": exp_status,
             "actual_status": act_status,
+            "status": "EVALUATED",
             "passed": passed,
             "claim_summary": c["input_signal"].get("raw_description", c["input_signal"].get("description", "")),
             "documentation_snippet": c["input_signal"].get("scraped_docs", "")[:320],
@@ -106,14 +122,21 @@ def run_verifier_eval(dataset_path: str = None) -> dict:
             "url": c["input_signal"].get("url", "")
         })
 
-    total = len(test_cases)
-    accuracy = correct / total if total > 0 else 0.0
-    adversarial_rate = adversarial_caught / adversarial_total if adversarial_total > 0 else 1.0
-    false_rejection_rate = (legit_total - legit_passed) / legit_total if legit_total > 0 else 0.0
+    n_error = len(error_cases)
+    n_evaluated = n_total - n_error
+
+    if n_evaluated > 0:
+        accuracy = correct / n_evaluated
+        adversarial_rate = adversarial_caught / adversarial_total if adversarial_total > 0 else 1.0
+        false_rejection_rate = (legit_total - legit_passed) / legit_total if legit_total > 0 else 0.0
+    else:
+        accuracy, adversarial_rate, false_rejection_rate = 0.0, 0.0, 0.0
 
     eval_summary = {
         "node": "Verifier (Technical Fact-Checking & Anti-Hallucination)",
-        "total_cases": total,
+        "n_total": n_total,
+        "n_evaluated": n_evaluated,
+        "n_error": n_error,
         "accuracy": round(accuracy * 100, 1),
         "adversarial_catch_rate": round(adversarial_rate * 100, 1),
         "false_rejection_rate": round(false_rejection_rate * 100, 1),
@@ -128,19 +151,16 @@ def run_verifier_eval(dataset_path: str = None) -> dict:
 
 if __name__ == "__main__":
     report = run_verifier_eval()
-    try:
-        from app.database import save_eval_run
-        run_id = save_eval_run(report, run_type="verifier")
-        print(f"Persisted Verifier evaluation to database (Run ID #{run_id})")
-    except Exception as e:
-        pass
-
     print("\n" + "=" * 55)
     print("VERIFIER EVALUATION REPORT:")
+    print(f"Total Cases:             {report['n_total']}")
+    print(f"Evaluated Cases:         {report['n_evaluated']}")
+    print(f"Error Cases:             {report['n_error']}")
     print(f"Accuracy:                {report['accuracy']}%")
     print(f"Adversarial Catch Rate:  {report['adversarial_catch_rate']}%")
     print(f"False Rejection Rate:    {report['false_rejection_rate']}%")
     print("=" * 55)
     for c in report["details"]:
-        status = "PASS" if c["passed"] else "FAIL"
-        print(f"[{status}] {c['id']}: {c['title'][:40]:<40} | Exp: {c['expected_status']} | Act: {c['actual_status']}")
+        status = c["status"]
+        pass_label = "PASS" if c["passed"] else ("ERROR" if status == "ERROR" else "FAIL")
+        print(f"[{pass_label}] {c['id']}: {c['title'][:36]:<36} | Exp: {c['expected_status']} | Act: {c['actual_status']}")
