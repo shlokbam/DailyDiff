@@ -12,22 +12,31 @@ const ARCHETYPE_LABELS = {
   positive_edge_tutorial: { label: 'Edge Tutorial', color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.15)' }
 };
 
-// Helper function to guarantee that every node always has benchmark cases,
-// even when an individual single-node run or CI suite is selected from the database.
-function normalizeNodes(currentData, baseData) {
-  const baseNodes = baseData?.nodes || {};
+function fmtPct(val) {
+  if (val === null || val === undefined) return 'N/A';
+  const num = Number(val);
+  if (isNaN(num)) return 'N/A';
+  return `${num.toFixed(1)}%`;
+}
+
+function fmtScore(val) {
+  if (val === null || val === undefined) return 'N/A';
+  const num = Number(val);
+  if (isNaN(num)) return 'N/A';
+  return `${num.toFixed(2)}`;
+}
+
+function normalizeNodes(currentData) {
   const currentNodes = currentData?.nodes || {};
   const runType = (currentData?.run_type || '').toLowerCase();
 
-  // Initialize with merged node structures
   const result = {
-    skeptic: { ...(baseNodes.skeptic || {}), ...(currentNodes.skeptic || {}) },
-    verifier: { ...(baseNodes.verifier || {}), ...(currentNodes.verifier || {}) },
-    analyst: { ...(baseNodes.analyst || {}), ...(currentNodes.analyst || {}) },
-    editor: { ...(baseNodes.editor || {}), ...(currentNodes.editor || {}) }
+    skeptic: { ...(currentNodes.skeptic || {}) },
+    verifier: { ...(currentNodes.verifier || {}) },
+    analyst: { ...(currentNodes.analyst || {}) },
+    editor: { ...(currentNodes.editor || {}) }
   };
 
-  // If currentData is an individual single-node run where details are at root
   if (Array.isArray(currentData?.details) && currentData.details.length > 0) {
     if (runType.includes('skeptic') || currentData?.node?.toLowerCase().includes('skeptic')) {
       result.skeptic = { ...result.skeptic, ...currentData, details: currentData.details };
@@ -40,36 +49,12 @@ function normalizeNodes(currentData, baseData) {
     }
   }
 
-  // Ensure every node ALWAYS has non-empty details fallback from baseNodes
-  ['skeptic', 'verifier', 'analyst', 'editor'].forEach(key => {
-    if (!Array.isArray(result[key].details) || result[key].details.length === 0) {
-      if (Array.isArray(baseNodes[key]?.details) && baseNodes[key].details.length > 0) {
-        result[key].details = baseNodes[key].details;
-      }
-    }
-  });
-
-  // Cross-enrich Verifier cases with claim_summary and documentation_snippet from baseNodes
-  if (Array.isArray(result.verifier?.details) && Array.isArray(baseNodes.verifier?.details)) {
-    const baseMap = new Map(baseNodes.verifier.details.map(b => [b.id, b]));
-    result.verifier.details = result.verifier.details.map(c => {
-      const baseCase = baseMap.get(c.id);
-      return {
-        ...c,
-        claim_summary: c.claim_summary || baseCase?.claim_summary || c.raw_description || c.description || 'Claims verified against repository documentation.',
-        documentation_snippet: c.documentation_snippet || baseCase?.documentation_snippet || c.scraped_docs || 'Official repository documentation verified against source codebase.',
-        flagged_contradiction: c.flagged_contradiction || baseCase?.flagged_contradiction || null
-      };
-    });
-  }
-
   return result;
 }
 
 export default function AgentEvaluations() {
   const [activeTab, setActiveTab] = useState('overview');
-  const [filterStatus, setFilterStatus] = useState('all'); // 'all', 'passed', 'failed'
-  const [baselineData, setBaselineData] = useState(null);
+  const [filterStatus, setFilterStatus] = useState('all'); // 'all', 'passed', 'failed', 'error'
   const [evalData, setEvalData] = useState(null);
   const [evalHistory, setEvalHistory] = useState([]);
   const [selectedRunId, setSelectedRunId] = useState(null);
@@ -82,22 +67,21 @@ export default function AgentEvaluations() {
     let isMounted = true;
 
     async function loadData() {
-      // 1. Instant local hydration from static /eval_results.json if it is a live run
+      // 1. Check local static /eval_results.json if it is a published live run
       try {
         const staticRes = await fetch('/eval_results.json');
         if (staticRes.ok) {
           const staticData = await staticRes.json();
           if (isMounted && staticData?.meta?.mode === 'live') {
-            setBaselineData(staticData);
             setEvalData(staticData);
             setSelectedRunId(staticData.db_run_id || null);
           }
         }
       } catch (staticErr) {
-        console.warn('Could not load static eval_results.json:', staticErr);
+        // No static live eval published
       }
 
-      // 2. Background database sync with 2.5s hard timeout to prevent any freeze/hang
+      // 2. Fetch latest live run from database API with 2.5s timeout
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 2500);
 
@@ -208,7 +192,7 @@ export default function AgentEvaluations() {
           Loading Evaluation Intelligence...
         </h3>
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.5rem' }}>
-          Synchronizing benchmark test cases and verification records
+          Synchronizing verified evaluation records
         </p>
       </div>
     );
@@ -229,31 +213,30 @@ export default function AgentEvaluations() {
             No live evaluation run has been published yet
           </h3>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', maxWidth: '620px', margin: '0 auto 1.5rem', lineHeight: '1.6' }}>
-            DailyDiff benchmarks are executed against real LLM APIs on 25 golden test cases without mock substitution or seeded metrics.
+            DailyDiff benchmarks are executed against real LLM APIs on real golden test cases without mock substitution or seeded metrics.
             Live evaluation scorecards will be displayed here once an end-to-end evaluation run completes.
           </p>
           <div style={{ display: 'inline-flex', gap: '0.5rem', background: 'rgba(0,0,0,0.25)', padding: '0.5rem 1rem', borderRadius: '6px', fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'monospace' }}>
-            Run command: python tests/evals/run_all_evals.py --live
+            Run command: python tests/evals/run_all_evals.py
           </div>
         </div>
       </div>
     );
   }
 
-  const summary = evalData?.summary || {};
-  const nodes = normalizeNodes(evalData, baselineData);
-  const deepeval = evalData?.deepeval_framework || {
-    version: '4.2.8',
-    pass_rate: 100.0,
-    total_tests: 20,
-    passed: 20,
-    failed: 0,
-    cli_command: 'deepeval test run tests/evals/test_deepeval_nodes.py'
-  };
-  const compositeScore = evalData?.composite_quality_score || 93.8;
-  const currentRunId = evalData?.db_run_id || selectedRunId || 1;
-  const runType = evalData?.run_type || 'full_suite';
-  const dbTimestamp = evalData?.db_created_at || evalData?.generated_at || 'Recorded';
+  const meta = evalData.meta || {};
+  const summary = evalData.summary || {};
+  const nodes = normalizeNodes(evalData);
+  const currentRunId = evalData.db_run_id || selectedRunId || 1;
+  const runType = evalData.run_type || 'full_suite';
+  const dbTimestamp = evalData.db_created_at || evalData.generated_at || '';
+
+  const modelsUsed = meta.models_used || {};
+  const modelsList = Object.entries(modelsUsed).map(([model, count]) => `${model} (${count})`);
+
+  const totalEvaluated = (nodes.skeptic?.n_evaluated ?? 0) + (nodes.verifier?.n_evaluated ?? 0) + (nodes.analyst?.n_evaluated ?? 0) + (nodes.editor?.n_evaluated ?? 0);
+  const totalCases = (nodes.skeptic?.n_total ?? 0) + (nodes.verifier?.n_total ?? 0) + (nodes.analyst?.n_total ?? 0) + (nodes.editor?.n_total ?? 0);
+  const totalErrors = (nodes.skeptic?.n_error ?? 0) + (nodes.verifier?.n_error ?? 0) + (nodes.analyst?.n_error ?? 0) + (nodes.editor?.n_error ?? 0);
 
   return (
     <div className="evaluations-container animate-fade-in" style={{ maxWidth: '1100px', margin: '0 auto', paddingBottom: '4rem' }}>
@@ -284,9 +267,11 @@ export default function AgentEvaluations() {
           <span style={{ fontSize: '0.85rem', color: '#f3f4f6' }}>
             Active Run <strong>#{currentRunId}</strong> [{runType}]
           </span>
-          <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-            Recorded: {dbTimestamp.replace('T', ' ').slice(0, 19)}
-          </span>
+          {dbTimestamp && (
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+              Recorded: {dbTimestamp.replace('T', ' ').slice(0, 19)}
+            </span>
+          )}
         </div>
 
         {evalHistory.length > 0 && (
@@ -310,7 +295,7 @@ export default function AgentEvaluations() {
             >
               {evalHistory.map((h) => (
                 <option key={h.id} value={h.id}>
-                  Run #{h.id} ({h.run_type}) - Score: {h.composite_score}% ({h.created_at.slice(0, 16)})
+                  Run #{h.id} ({h.run_type}) - Cases: {h.total_cases} ({h.created_at.slice(0, 16)})
                 </option>
               ))}
             </select>
@@ -332,7 +317,7 @@ export default function AgentEvaluations() {
             textTransform: 'uppercase',
             color: '#c084fc'
           }}>
-            DeepEval v{deepeval.version} • G-Eval LLM-as-a-Judge
+            DeepEval v{meta.deepeval_version || '4.2.8'} • Live Evaluation
           </span>
           <span style={{ 
             background: 'rgba(16, 185, 129, 0.15)',
@@ -343,10 +328,10 @@ export default function AgentEvaluations() {
             fontWeight: '600',
             color: '#10b981'
           }}>
-            {deepeval.passed}/{deepeval.total_tests} DeepEval Tests Passing ({deepeval.pass_rate}%)
+            Mode: {(meta.mode || 'live').toUpperCase()}
           </span>
           <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-            Dataset: 25 Golden Test Cases
+            Dataset: {meta.dataset_n || 25} Golden Test Cases
           </span>
         </div>
 
@@ -354,54 +339,97 @@ export default function AgentEvaluations() {
           Autonomous Agent Quality & Robustness Benchmark
         </h2>
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '820px' }}>
-          Powered by <strong>DeepEval</strong> and custom <strong>G-Eval</strong> LLM-as-a-judge metrics. Every node in the DailyDiff pipeline
-          is validated with structured <code>LLMTestCase</code> instances covering hallucination defense, pedagogical practicality, and tone fidelity.
+          Powered by DeepEval LLM evaluation framework. Every node in the DailyDiff pipeline
+          is validated with real model invocations covering noise rejection, anti-hype verification, pedagogical practicality, and formatting constraints.
         </p>
 
-        {/* Global Score Cards Grid */}
+        {/* Live Evaluation Run Metadata Banner */}
+        <div style={{
+          marginTop: '1.5rem',
+          padding: '1.25rem 1.5rem',
+          background: 'rgba(15, 23, 42, 0.65)',
+          border: '1px solid rgba(96, 165, 250, 0.25)',
+          borderRadius: '12px',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))',
+          gap: '1rem',
+          alignItems: 'center'
+        }}>
+          <div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Mode</div>
+            <div style={{ fontSize: '1.1rem', fontWeight: '700', color: '#34d399', marginTop: '0.2rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#34d399' }}></span>
+              {(meta.mode || 'live').toUpperCase()}
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Models Used</div>
+            <div style={{ fontSize: '0.9rem', fontWeight: '600', color: '#f3f4f6', marginTop: '0.2rem' }}>
+              {modelsList.length > 0 ? modelsList.join(', ') : 'Direct LLM Calls'}
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Run Date</div>
+            <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
+              {meta.started_at ? meta.started_at.replace('T', ' ').slice(0, 19) + ' UTC' : (dbTimestamp ? dbTimestamp.replace('T', ' ').slice(0, 19) : '-')}
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Evaluated / Total</div>
+            <div style={{ fontSize: '1.1rem', fontWeight: '700', color: '#60a5fa', marginTop: '0.2rem' }}>
+              {totalEvaluated} / {totalCases} cases
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Errors & LLM Calls</div>
+            <div style={{ fontSize: '1rem', fontWeight: '700', color: totalErrors > 0 ? '#ef4444' : '#34d399', marginTop: '0.2rem' }}>
+              {totalErrors} errors | {meta.n_llm_calls || 0} calls
+            </div>
+          </div>
+        </div>
+
+        {/* Global Node Metric Cards (No composite score card, no fallback placeholders) */}
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
           gap: '1rem', 
-          marginTop: '1.75rem',
-          paddingTop: '1.5rem',
-          borderTop: '1px solid var(--border-color)'
+          marginTop: '1.25rem'
         }}>
           <div className="glass-card" style={{ padding: '1rem 1.25rem', borderLeft: '4px solid #60a5fa' }}>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Composite Score</span>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Skeptic Accuracy</span>
             <div style={{ fontSize: '1.75rem', fontWeight: '700', color: '#60a5fa', marginTop: '0.2rem' }}>
-              {compositeScore}%
+              {fmtPct(nodes.skeptic?.accuracy)}
             </div>
-            <span style={{ fontSize: '0.75rem', color: '#34d399' }}>Weighted Node Health</span>
-          </div>
-
-          <div className="glass-card" style={{ padding: '1rem 1.25rem', borderLeft: '4px solid #a855f7' }}>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Skeptic G-Eval</span>
-            <div style={{ fontSize: '1.75rem', fontWeight: '700', color: '#a855f7', marginTop: '0.2rem' }}>
-              {Math.round((summary.skeptic_geval_score ?? 0.92) * 100)}%
-            </div>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Dedup: {summary.skeptic_deduplication_rate ?? 100}%</span>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Dedup: {fmtPct(nodes.skeptic?.deduplication_rate)}</span>
           </div>
 
           <div className="glass-card" style={{ padding: '1rem 1.25rem', borderLeft: '4px solid #ef4444' }}>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Verifier G-Eval</span>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Verifier Anti-Hype</span>
             <div style={{ fontSize: '1.75rem', fontWeight: '700', color: '#ef4444', marginTop: '0.2rem' }}>
-              {Math.round((summary.verifier_geval_score ?? 0.96) * 100)}%
+              {fmtPct(nodes.verifier?.anti_hype_rate ?? nodes.verifier?.adversarial_catch_rate)}
             </div>
-            <span style={{ fontSize: '0.75rem', color: '#34d399' }}>Groundedness & Anti-Hype</span>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Accuracy: {fmtPct(nodes.verifier?.accuracy)}</span>
+          </div>
+
+          <div className="glass-card" style={{ padding: '1rem 1.25rem', borderLeft: '4px solid #f59e0b' }}>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Analyst Specificity</span>
+            <div style={{ fontSize: '1.75rem', fontWeight: '700', color: '#f59e0b', marginTop: '0.2rem' }}>
+              {fmtPct(nodes.analyst?.audience_specificity_rate)}
+            </div>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Practicality: {fmtScore(nodes.analyst?.average_practicality_score)}</span>
           </div>
 
           <div className="glass-card" style={{ padding: '1rem 1.25rem', borderLeft: '4px solid #10b981' }}>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Editor G-Eval</span>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Editor Compliance</span>
             <div style={{ fontSize: '1.75rem', fontWeight: '700', color: '#10b981', marginTop: '0.2rem' }}>
-              {Math.round((summary.editor_geval_score ?? 0.95) * 100)}%
+              {fmtPct(nodes.editor?.format_compliance_rate)}
             </div>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Strict Markdown & Tone</span>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Readability: {fmtScore(nodes.editor?.average_readability_score)}</span>
           </div>
         </div>
       </section>
 
-      {/* Tabs Navigation (Clean typography, no emojis) */}
+      {/* Tabs Navigation */}
       <div className="eval-tabs" style={{ 
         display: 'flex', 
         gap: '0.5rem', 
@@ -490,15 +518,19 @@ export default function AgentEvaluations() {
                 <span style={{ fontSize: '0.8rem', padding: '0.2rem 0.6rem', borderRadius: '4px', background: 'rgba(96, 165, 250, 0.15)', color: '#60a5fa' }}>Pre-Filter</span>
               </div>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
-                G-Eval metric evaluates relevance & noise rejection against academic/corporate spam.
+                Evaluates noise rejection and deduplication across raw candidates.
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', paddingTop: '0.5rem', borderTop: '1px solid var(--border-color)' }}>
-                <span>G-Eval Score:</span>
-                <strong style={{ color: '#60a5fa' }}>{Math.round((summary.skeptic_geval_score ?? 0.92) * 100)}% (Threshold: 70%)</strong>
+                <span>Accuracy:</span>
+                <strong style={{ color: '#60a5fa' }}>{fmtPct(nodes.skeptic?.accuracy)}</strong>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
                 <span>Historical Dedup Rate:</span>
-                <strong style={{ color: '#34d399' }}>{nodes.skeptic?.deduplication_rate ?? 100}%</strong>
+                <strong style={{ color: '#34d399' }}>{fmtPct(nodes.skeptic?.deduplication_rate)}</strong>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+                <span>Evaluated / Total:</span>
+                <span style={{ color: 'var(--text-muted)' }}>{nodes.skeptic?.n_evaluated ?? 0} / {nodes.skeptic?.n_total ?? 0}</span>
               </div>
               <button 
                 onClick={() => setActiveTab('skeptic')}
@@ -515,15 +547,19 @@ export default function AgentEvaluations() {
                 <span style={{ fontSize: '0.8rem', padding: '0.2rem 0.6rem', borderRadius: '4px', background: 'rgba(239, 68, 68, 0.15)', color: '#ef4444' }}>Integrity</span>
               </div>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
-                G-Eval Groundedness & Anti-Hype checks summary claims against scraped repository READMEs.
+                Anti-Hype verification checks summary claims against scraped repository README context.
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', paddingTop: '0.5rem', borderTop: '1px solid var(--border-color)' }}>
-                <span>G-Eval Groundedness:</span>
-                <strong style={{ color: '#ef4444' }}>{Math.round((summary.verifier_geval_score ?? 0.96) * 100)}%</strong>
+                <span>Anti-Hype Rate:</span>
+                <strong style={{ color: '#ef4444' }}>{fmtPct(nodes.verifier?.anti_hype_rate ?? nodes.verifier?.adversarial_catch_rate)}</strong>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
-                <span>Adversarial Catch Rate:</span>
-                <strong style={{ color: '#34d399' }}>{nodes.verifier?.adversarial_catch_rate ?? 100}%</strong>
+                <span>Accuracy:</span>
+                <strong style={{ color: '#34d399' }}>{fmtPct(nodes.verifier?.accuracy)}</strong>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+                <span>Evaluated / Total:</span>
+                <span style={{ color: 'var(--text-muted)' }}>{nodes.verifier?.n_evaluated ?? 0} / {nodes.verifier?.n_total ?? 0}</span>
               </div>
               <button 
                 onClick={() => setActiveTab('verifier')}
@@ -540,15 +576,19 @@ export default function AgentEvaluations() {
                 <span style={{ fontSize: '0.8rem', padding: '0.2rem 0.6rem', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b' }}>Insights</span>
               </div>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
-                G-Eval Pedagogical Practicality evaluates actionable takeaways for developer learners.
+                Evaluates pedagogical takeaways and audience specificity for developer learners.
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', paddingTop: '0.5rem', borderTop: '1px solid var(--border-color)' }}>
-                <span>G-Eval Practicality:</span>
-                <strong style={{ color: '#f59e0b' }}>{Math.round((summary.analyst_geval_score ?? 0.94) * 100)}%</strong>
+                <span>Audience Specificity:</span>
+                <strong style={{ color: '#f59e0b' }}>{fmtPct(nodes.analyst?.audience_specificity_rate)}</strong>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
-                <span>Audience Specificity:</span>
-                <strong style={{ color: '#34d399' }}>{nodes.analyst?.audience_specificity_rate ?? 91.7}%</strong>
+                <span>Practicality (1-5):</span>
+                <strong style={{ color: '#34d399' }}>{fmtScore(nodes.analyst?.average_practicality_score)}</strong>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+                <span>Evaluated / Total:</span>
+                <span style={{ color: 'var(--text-muted)' }}>{nodes.analyst?.n_evaluated ?? 0} / {nodes.analyst?.n_total ?? 0}</span>
               </div>
               <button 
                 onClick={() => setActiveTab('analyst')}
@@ -565,15 +605,19 @@ export default function AgentEvaluations() {
                 <span style={{ fontSize: '0.8rem', padding: '0.2rem 0.6rem', borderRadius: '4px', background: 'rgba(16, 185, 129, 0.15)', color: '#10b981' }}>Editorial</span>
               </div>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
-                G-Eval Readability evaluates ELI5 tone, bold lead-in constraints, and category balance.
+                Evaluates ELI5 tone, bold lead-in constraints, and category balance.
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', paddingTop: '0.5rem', borderTop: '1px solid var(--border-color)' }}>
-                <span>G-Eval Tone Score:</span>
-                <strong style={{ color: '#10b981' }}>{Math.round((summary.editor_geval_score ?? 0.95) * 100)}%</strong>
+                <span>Format Compliance:</span>
+                <strong style={{ color: '#10b981' }}>{fmtPct(nodes.editor?.format_compliance_rate)}</strong>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
-                <span>Format Compliance:</span>
-                <strong style={{ color: '#34d399' }}>{nodes.editor?.format_compliance_rate ?? 100}%</strong>
+                <span>Readability (1-5):</span>
+                <strong style={{ color: '#34d399' }}>{fmtScore(nodes.editor?.average_readability_score)}</strong>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+                <span>Evaluated / Total:</span>
+                <span style={{ color: 'var(--text-muted)' }}>{nodes.editor?.n_evaluated ?? 0} / {nodes.editor?.n_total ?? 0}</span>
               </div>
               <button 
                 onClick={() => setActiveTab('editor')}
@@ -589,7 +633,6 @@ export default function AgentEvaluations() {
       {/* TAB 2: SKEPTIC NODE */}
       {activeTab === 'skeptic' && (
         <div className="node-detail-tab animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {/* DeepEval G-Eval Metric Card */}
           {nodes.skeptic?.geval && (
             <div className="glass" style={{ padding: '1.5rem 1.75rem', borderLeft: '4px solid #60a5fa' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
@@ -629,15 +672,15 @@ export default function AgentEvaluations() {
               <div style={{ display: 'flex', gap: '1.5rem' }}>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>ACCURACY</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#60a5fa' }}>{nodes.skeptic?.accuracy ?? 92}%</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#60a5fa' }}>{fmtPct(nodes.skeptic?.accuracy)}</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>DEDUP RATE</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#34d399' }}>{nodes.skeptic?.deduplication_rate ?? 100}%</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#34d399' }}>{fmtPct(nodes.skeptic?.deduplication_rate)}</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>F1 SCORE</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#a855f7' }}>{nodes.skeptic?.f1_score ?? 0.917}</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#a855f7' }}>{fmtScore(nodes.skeptic?.f1_score)}</div>
                 </div>
               </div>
             </div>
@@ -703,63 +746,70 @@ export default function AgentEvaluations() {
                 );
               }
 
-              return filteredCases.map((c, i) => (
-                <div key={c.id || i} className="glass-card" style={{ padding: '1.25rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                      <span style={{ 
-                        fontSize: '0.75rem', 
-                        padding: '0.2rem 0.5rem', 
-                        borderRadius: '4px',
-                        background: c.passed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)',
-                        color: c.passed ? '#10b981' : '#ef4444',
-                        fontWeight: '600'
-                      }}>
-                        {c.passed ? 'PASSED' : 'MISMATCH'}
-                      </span>
-                      <span style={{ 
-                        fontSize: '0.75rem', 
-                        padding: '0.2rem 0.5rem', 
-                        borderRadius: '4px',
-                        background: ARCHETYPE_LABELS[c.archetype]?.bg || 'rgba(255,255,255,0.05)',
-                        color: ARCHETYPE_LABELS[c.archetype]?.color || 'var(--text-secondary)',
-                      }}>
-                        {ARCHETYPE_LABELS[c.archetype]?.label || c.archetype}
-                      </span>
-                      <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
-                    </div>
-
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                      <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-                        Expected: <strong>{c.expected_decision}</strong> | Actual: <strong style={{ color: c.passed ? '#10b981' : '#ef4444' }}>{c.actual_decision}</strong>
-                      </span>
-                      <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
-                    </div>
-                  </div>
-
-                  {expandedCases[c.id] && (
-                    <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '0.75rem' }}>
-                        <div>
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Test Case ID</span>
-                          <p style={{ color: '#f3f4f6', fontFamily: 'monospace' }}>{c.id}</p>
-                        </div>
-                        <div>
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Rejection Rationale</span>
-                          <p style={{ color: 'var(--text-secondary)' }}>{c.rejection_reason || 'Eligible high-value student candidate.'}</p>
-                        </div>
+              return filteredCases.map((c, i) => {
+                const isError = c.status === 'ERROR';
+                return (
+                  <div key={c.id || i} className="glass-card" style={{ padding: '1.25rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                        <span style={{ 
+                          fontSize: '0.75rem', 
+                          padding: '0.2rem 0.5rem', 
+                          borderRadius: '4px',
+                          background: isError ? 'rgba(239, 68, 68, 0.2)' : (c.passed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)'),
+                          color: isError ? '#ef4444' : (c.passed ? '#10b981' : '#ef4444'),
+                          fontWeight: '600'
+                        }}>
+                          {isError ? 'ERROR' : (c.passed ? 'PASSED' : 'MISMATCH')}
+                        </span>
+                        <span style={{ 
+                          fontSize: '0.75rem', 
+                          padding: '0.2rem 0.5rem', 
+                          borderRadius: '4px',
+                          background: ARCHETYPE_LABELS[c.archetype]?.bg || 'rgba(255,255,255,0.05)',
+                          color: ARCHETYPE_LABELS[c.archetype]?.color || 'var(--text-secondary)',
+                        }}>
+                          {ARCHETYPE_LABELS[c.archetype]?.label || c.archetype}
+                        </span>
+                        <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
                       </div>
 
-                      {/* LLMTestCase Inspection Drawer */}
-                      <div style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px dashed var(--border-color)' }}>
-                        <button 
-                          onClick={(e) => { e.stopPropagation(); toggleLLMTestCase(c.id); }}
-                          style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.8rem', cursor: 'pointer', padding: 0 }}
-                        >
-                          {showLLMTestCase[c.id] ? 'Hide DeepEval LLMTestCase Schema' : 'View DeepEval LLMTestCase Schema'}
-                        </button>
-                        {showLLMTestCase[c.id] && (
-                          <pre style={{ background: 'rgba(0,0,0,0.35)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', fontSize: '0.75rem', color: '#93c5fd', overflowX: 'auto' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                        <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+                          Expected: <strong>{c.expected_decision}</strong> | Actual: <strong style={{ color: isError ? '#ef4444' : (c.passed ? '#10b981' : '#ef4444') }}>{c.actual_decision}</strong>
+                        </span>
+                        <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
+                      </div>
+                    </div>
+
+                    {expandedCases[c.id] && (
+                      <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
+                        {isError && c.error && (
+                          <div style={{ background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', padding: '0.6rem 0.8rem', borderRadius: '6px', marginBottom: '0.75rem', color: '#fca5a5' }}>
+                            <strong>Execution Error:</strong> {c.error}
+                          </div>
+                        )}
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '0.75rem' }}>
+                          <div>
+                            <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Test Case ID</span>
+                            <p style={{ color: '#f3f4f6', fontFamily: 'monospace' }}>{c.id}</p>
+                          </div>
+                          <div>
+                            <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Rejection Rationale</span>
+                            <p style={{ color: 'var(--text-secondary)' }}>{c.rejection_reason || 'Eligible candidate.'}</p>
+                          </div>
+                        </div>
+
+                        {/* LLMTestCase Inspection Drawer */}
+                        <div style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px dashed var(--border-color)' }}>
+                          <button 
+                            onClick={(e) => { e.stopPropagation(); toggleLLMTestCase(c.id); }}
+                            style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.8rem', cursor: 'pointer', padding: 0 }}
+                          >
+                            {showLLMTestCase[c.id] ? 'Hide DeepEval LLMTestCase Schema' : 'View DeepEval LLMTestCase Schema'}
+                          </button>
+                          {showLLMTestCase[c.id] && (
+                            <pre style={{ background: 'rgba(0,0,0,0.35)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', fontSize: '0.75rem', color: '#93c5fd', overflowX: 'auto' }}>
 {JSON.stringify({
   "class": "deepeval.test_case.LLMTestCase",
   "input": `Title: ${c.title}`,
@@ -767,13 +817,14 @@ export default function AgentEvaluations() {
   "expected_output": `Decision: ${c.expected_decision}`,
   "additional_metadata": { "id": c.id, "archetype": c.archetype }
 }, null, 2)}
-                          </pre>
-                        )}
+                            </pre>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              ));
+                    )}
+                  </div>
+                );
+              });
             })()}
           </div>
         </div>
@@ -782,7 +833,6 @@ export default function AgentEvaluations() {
       {/* TAB 3: VERIFIER NODE */}
       {activeTab === 'verifier' && (
         <div className="node-detail-tab animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {/* DeepEval G-Eval Metric Card */}
           {nodes.verifier?.geval && (
             <div className="glass" style={{ padding: '1.5rem 1.75rem', borderLeft: '4px solid #ef4444' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
@@ -821,16 +871,18 @@ export default function AgentEvaluations() {
               </div>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
                 <div style={{ textAlign: 'right' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>ADVERSARIAL CATCH</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#ef4444' }}>{nodes.verifier?.adversarial_catch_rate ?? 100}%</div>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>ANTI-HYPE RATE</span>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#ef4444' }}>
+                    {fmtPct(nodes.verifier?.anti_hype_rate ?? nodes.verifier?.adversarial_catch_rate)}
+                  </div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>ACCURACY</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#60a5fa' }}>{nodes.verifier?.accuracy ?? 96}%</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#60a5fa' }}>{fmtPct(nodes.verifier?.accuracy)}</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>FALSE REJECTION</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#34d399' }}>{nodes.verifier?.false_rejection_rate ?? 4.5}%</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#34d399' }}>{fmtPct(nodes.verifier?.false_rejection_rate)}</div>
                 </div>
               </div>
             </div>
@@ -894,74 +946,81 @@ export default function AgentEvaluations() {
                 );
               }
 
-              return filteredCases.map((c, i) => (
-                <div key={c.id || i} className="glass-card" style={{ padding: '1.25rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                      <span style={{ 
-                        fontSize: '0.75rem', 
-                        padding: '0.2rem 0.5rem', 
-                        borderRadius: '4px',
-                        background: c.passed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)',
-                        color: c.passed ? '#10b981' : '#ef4444',
-                        fontWeight: '600'
-                      }}>
-                        {c.passed ? 'VERIFIED' : 'MISMATCH'}
-                      </span>
-                      <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
+              return filteredCases.map((c, i) => {
+                const isError = c.status === 'ERROR';
+                return (
+                  <div key={c.id || i} className="glass-card" style={{ padding: '1.25rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                        <span style={{ 
+                          fontSize: '0.75rem', 
+                          padding: '0.2rem 0.5rem', 
+                          borderRadius: '4px',
+                          background: isError ? 'rgba(239, 68, 68, 0.2)' : (c.passed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)'),
+                          color: isError ? '#ef4444' : (c.passed ? '#10b981' : '#ef4444'),
+                          fontWeight: '600'
+                        }}>
+                          {isError ? 'ERROR' : (c.passed ? 'VERIFIED' : 'MISMATCH')}
+                        </span>
+                        <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
+                      </div>
+
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                        <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+                          Expected: <strong>{c.expected_status}</strong> | Actual: <strong style={{ color: isError ? '#ef4444' : (c.passed ? '#10b981' : '#ef4444') }}>{c.actual_status}</strong>
+                        </span>
+                        <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
+                      </div>
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                      <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-                        Expected: <strong>{c.expected_status}</strong> | Actual: <strong style={{ color: c.passed ? '#10b981' : '#ef4444' }}>{c.actual_status}</strong>
-                      </span>
-                      <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
-                    </div>
-                  </div>
-
-                  {expandedCases[c.id] && (
-                    <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                        <div>
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: '600' }}>Candidate Claim</span>
-                          <p style={{ color: '#f3f4f6', marginTop: '0.25rem', lineHeight: '1.45' }}>
-                            {c.claim_summary || c.raw_description || c.description || 'Claims submitted for technical verification against official documentation.'}
-                          </p>
-                        </div>
-                        <div>
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: '600' }}>Documentation Context Snippet</span>
-                          <p style={{ color: 'var(--text-secondary)', background: 'rgba(0,0,0,0.25)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.25rem', fontFamily: 'monospace', fontSize: '0.8rem', lineHeight: '1.5', border: '1px solid var(--border-color)', whiteSpace: 'pre-wrap' }}>
-                            {c.documentation_snippet || c.scraped_docs || 'Official documentation confirms technical alignment with repository source.'}
-                          </p>
-                        </div>
-
-                        {c.flagged_contradiction && (
-                          <div style={{ 
-                            background: 'rgba(239, 68, 68, 0.12)', 
-                            border: '1px solid rgba(239, 68, 68, 0.35)', 
-                            padding: '0.65rem 0.85rem', 
-                            borderRadius: '6px',
-                            marginTop: '0.25rem'
-                          }}>
-                            <span style={{ color: '#ef4444', fontWeight: '600', fontSize: '0.75rem', textTransform: 'uppercase', display: 'block', marginBottom: '0.2rem' }}>
-                              Anti-Hallucination & Contradiction Alert
-                            </span>
-                            <p style={{ color: '#fca5a5', fontSize: '0.82rem', margin: 0, lineHeight: '1.4' }}>
-                              {c.flagged_contradiction}
-                            </p>
+                    {expandedCases[c.id] && (
+                      <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
+                        {isError && c.error && (
+                          <div style={{ background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', padding: '0.6rem 0.8rem', borderRadius: '6px', marginBottom: '0.75rem', color: '#fca5a5' }}>
+                            <strong>Execution Error:</strong> {c.error}
                           </div>
                         )}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                          <div>
+                            <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: '600' }}>Candidate Claim</span>
+                            <p style={{ color: '#f3f4f6', marginTop: '0.25rem', lineHeight: '1.45' }}>
+                              {c.claim_summary || c.raw_description || c.description || 'Claims submitted for technical verification against official documentation.'}
+                            </p>
+                          </div>
+                          <div>
+                            <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: '600' }}>Documentation Context Snippet</span>
+                            <p style={{ color: 'var(--text-secondary)', background: 'rgba(0,0,0,0.25)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.25rem', fontFamily: 'monospace', fontSize: '0.8rem', lineHeight: '1.5', border: '1px solid var(--border-color)', whiteSpace: 'pre-wrap' }}>
+                              {c.documentation_snippet || c.scraped_docs || 'Official documentation confirms technical alignment with repository source.'}
+                            </p>
+                          </div>
 
-                        {/* DeepEval LLMTestCase Schema Drawer */}
-                        <div style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px dashed var(--border-color)' }}>
-                          <button 
-                            onClick={(e) => { e.stopPropagation(); toggleLLMTestCase(c.id); }}
-                            style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.8rem', cursor: 'pointer', padding: 0 }}
-                          >
-                            {showLLMTestCase[c.id] ? 'Hide DeepEval LLMTestCase Schema' : 'View DeepEval LLMTestCase Schema'}
-                          </button>
-                          {showLLMTestCase[c.id] && (
-                            <pre style={{ background: 'rgba(0,0,0,0.35)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', fontSize: '0.75rem', color: '#93c5fd', overflowX: 'auto', border: '1px solid var(--border-color)' }}>
+                          {c.flagged_contradiction && (
+                            <div style={{ 
+                              background: 'rgba(239, 68, 68, 0.12)', 
+                              border: '1px solid rgba(239, 68, 68, 0.35)', 
+                              padding: '0.65rem 0.85rem', 
+                              borderRadius: '6px',
+                              marginTop: '0.25rem'
+                            }}>
+                              <span style={{ color: '#ef4444', fontWeight: '600', fontSize: '0.75rem', textTransform: 'uppercase', display: 'block', marginBottom: '0.2rem' }}>
+                                Anti-Hallucination & Contradiction Alert
+                              </span>
+                              <p style={{ color: '#fca5a5', fontSize: '0.82rem', margin: 0, lineHeight: '1.4' }}>
+                                {c.flagged_contradiction}
+                              </p>
+                            </div>
+                          )}
+
+                          {/* DeepEval LLMTestCase Schema Drawer */}
+                          <div style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px dashed var(--border-color)' }}>
+                            <button 
+                              onClick={(e) => { e.stopPropagation(); toggleLLMTestCase(c.id); }}
+                              style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.8rem', cursor: 'pointer', padding: 0 }}
+                            >
+                              {showLLMTestCase[c.id] ? 'Hide DeepEval LLMTestCase Schema' : 'View DeepEval LLMTestCase Schema'}
+                            </button>
+                            {showLLMTestCase[c.id] && (
+                              <pre style={{ background: 'rgba(0,0,0,0.35)', padding: '0.75rem', borderRadius: '6px', marginTop: '0.5rem', fontSize: '0.75rem', color: '#93c5fd', overflowX: 'auto', border: '1px solid var(--border-color)' }}>
 {JSON.stringify({
   "class": "deepeval.test_case.LLMTestCase",
   "input": `Candidate Claim: ${c.claim_summary || c.title}`,
@@ -974,14 +1033,15 @@ export default function AgentEvaluations() {
     "contradiction_flag": c.flagged_contradiction || null 
   }
 }, null, 2)}
-                            </pre>
-                          )}
+                              </pre>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              ));
+                    )}
+                  </div>
+                );
+              });
             })()}
           </div>
         </div>
@@ -990,11 +1050,10 @@ export default function AgentEvaluations() {
       {/* TAB 4: ANALYST NODE */}
       {activeTab === 'analyst' && (
         <div className="node-detail-tab animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {/* DeepEval G-Eval Metric Card */}
           {nodes.analyst?.geval && (
             <div className="glass" style={{ padding: '1.5rem 1.75rem', borderLeft: '4px solid #f59e0b' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div style={{ display: 'center', alignItems: 'center', gap: '0.5rem' }}>
                   <span style={{ fontSize: '0.8rem', padding: '0.2rem 0.6rem', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.2)', color: '#f59e0b', fontWeight: '600' }}>
                     DeepEval G-Eval Metric
                   </span>
@@ -1030,15 +1089,15 @@ export default function AgentEvaluations() {
               <div style={{ display: 'flex', gap: '1.5rem' }}>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>PRACTICALITY (1-5)</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#f59e0b' }}>{nodes.analyst?.average_practicality_score ?? 4.45}</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#f59e0b' }}>{fmtScore(nodes.analyst?.average_practicality_score)}</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>AUDIENCE SPECIFICITY</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#10b981' }}>{nodes.analyst?.audience_specificity_rate ?? 91.7}%</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#10b981' }}>{fmtPct(nodes.analyst?.audience_specificity_rate)}</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>VERDICT ACCURACY</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#60a5fa' }}>{nodes.analyst?.verdict_accuracy ?? 91.7}%</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#60a5fa' }}>{fmtPct(nodes.analyst?.verdict_accuracy)}</div>
                 </div>
               </div>
             </div>
@@ -1055,40 +1114,50 @@ export default function AgentEvaluations() {
                 );
               }
 
-              return allCases.map((c, i) => (
-                <div key={c.id || i} className="glass-card" style={{ padding: '1.25rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
-                    <div>
-                      <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
-                      <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.35rem' }}>
-                        <span style={{ fontSize: '0.75rem', padding: '0.15rem 0.5rem', borderRadius: '4px', background: 'rgba(96, 165, 250, 0.15)', color: '#60a5fa' }}>
-                          Verdict: {c.actual_verdict} (Expected: {c.expected_verdict})
-                        </span>
-                        <span style={{ fontSize: '0.75rem', padding: '0.15rem 0.5rem', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b' }}>
-                          Practicality: {c.practicality_score}/5.0
-                        </span>
+              return allCases.map((c, i) => {
+                const isError = c.status === 'ERROR';
+                return (
+                  <div key={c.id || i} className="glass-card" style={{ padding: '1.25rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => toggleCase(c.id)}>
+                      <div>
+                        <strong style={{ fontSize: '0.95rem', color: '#f3f4f6' }}>{c.title}</strong>
+                        <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.35rem' }}>
+                          <span style={{ fontSize: '0.75rem', padding: '0.15rem 0.5rem', borderRadius: '4px', background: isError ? 'rgba(239, 68, 68, 0.2)' : 'rgba(96, 165, 250, 0.15)', color: isError ? '#ef4444' : '#60a5fa' }}>
+                            {isError ? 'Error' : `Verdict: ${c.actual_verdict} (Expected: ${c.expected_verdict})`}
+                          </span>
+                          {!isError && (
+                            <span style={{ fontSize: '0.75rem', padding: '0.15rem 0.5rem', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b' }}>
+                              Practicality: {c.practicality_score}/5.0
+                            </span>
+                          )}
+                        </div>
                       </div>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
                     </div>
-                    <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>{expandedCases[c.id] ? '▲' : '▼'}</span>
-                  </div>
 
-                  {expandedCases[c.id] && (
-                    <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                        <div>
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Generated "Why It Matters"</span>
-                          <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.why_it_matters}</p>
-                        </div>
-                        <div>
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Target Audience Text</span>
-                          <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.audience_text}</p>
-                          <span style={{ color: '#10b981', fontSize: '0.75rem' }}>Matched: {c.matched_keywords?.join(', ') || 'General'}</span>
+                    {expandedCases[c.id] && (
+                      <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', fontSize: '0.85rem' }}>
+                        {isError && c.error && (
+                          <div style={{ background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', padding: '0.6rem 0.8rem', borderRadius: '6px', marginBottom: '0.75rem', color: '#fca5a5' }}>
+                            <strong>Execution Error:</strong> {c.error}
+                          </div>
+                        )}
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                          <div>
+                            <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Generated "Why It Matters"</span>
+                            <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.why_it_matters || 'No rationale recorded.'}</p>
+                          </div>
+                          <div>
+                            <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Target Audience Text</span>
+                            <p style={{ color: '#f3f4f6', marginTop: '0.2rem' }}>{c.audience_text || 'None'}</p>
+                            <span style={{ color: '#10b981', fontSize: '0.75rem' }}>Matched: {c.matched_keywords?.join(', ') || 'General'}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              ));
+                    )}
+                  </div>
+                );
+              });
             })()}
           </div>
         </div>
@@ -1097,7 +1166,6 @@ export default function AgentEvaluations() {
       {/* TAB 5: EDITOR NODE */}
       {activeTab === 'editor' && (
         <div className="node-detail-tab animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {/* DeepEval G-Eval Metric Card */}
           {nodes.editor?.geval && (
             <div className="glass" style={{ padding: '1.5rem 1.75rem', borderLeft: '4px solid #10b981' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
@@ -1137,15 +1205,15 @@ export default function AgentEvaluations() {
               <div style={{ display: 'flex', gap: '1.5rem' }}>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>FORMAT COMPLIANCE</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#10b981' }}>{nodes.editor?.format_compliance_rate ?? 100}%</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#10b981' }}>{fmtPct(nodes.editor?.format_compliance_rate)}</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>READABILITY (1-5)</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#60a5fa' }}>{nodes.editor?.average_readability_score ?? 4.8}</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#60a5fa' }}>{fmtScore(nodes.editor?.average_readability_score)}</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>CATEGORY DIVERSITY</span>
-                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#a855f7' }}>{nodes.editor?.category_uniqueness_rate ?? 100}%</div>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', color: '#a855f7' }}>{fmtPct(nodes.editor?.category_uniqueness_rate)}</div>
                 </div>
               </div>
             </div>
