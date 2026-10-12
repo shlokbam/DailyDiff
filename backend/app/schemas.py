@@ -14,7 +14,7 @@ class BriefItem(BaseModel):
     why_it_matters: str = Field(..., description="Rationale for importance")
     who_cares: str = Field(..., description="Target audience group descriptions")
     verdict: str = Field(..., description="Actionable recommendation verdict (WATCH, INTEGRATE, READ, IGNORE)")
-    confidence: int = Field(..., ge=0, le=100, description="Confidence score out of 100")
+    confidence: Optional[int] = Field(None, ge=0, le=100, description="Optional legacy confidence score out of 100")
     source_url: Optional[str] = Field(None, description="Primary link or reference URL")
 
 class DailyBriefGroup(BaseModel):

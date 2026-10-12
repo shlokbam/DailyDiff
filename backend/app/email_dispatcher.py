@@ -25,6 +25,8 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
         color = category_colors.get(item.category, "#3b82f6")
         source_link = f'<p style="margin-top: 10px;"><a href="{item.source_url}" style="color: #60a5fa; text-decoration: none; font-weight: 500;">View Source Reference &rarr;</a></p>' if item.source_url else ""
         
+        show_conf = os.getenv("SHOW_CONFIDENCE", "false").lower() == "true"
+        conf_str = f" | Confidence: {item.confidence}%" if (show_conf and item.confidence is not None) else ""
         items_html += f"""
         <div style="margin-bottom: 30px; padding: 20px; border-left: 4px solid {color}; background-color: #1e2130; border-radius: 4px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
@@ -32,7 +34,7 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
                     {item.category}
                 </span>
                 <span style="font-size: 12px; color: #9ca3af;">
-                    Verdict: <strong>{item.verdict}</strong> | Confidence: {item.confidence}%
+                    Verdict: <strong>{item.verdict}</strong>{conf_str}
                 </span>
             </div>
             <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #ffffff;">{item.title}</h3>
