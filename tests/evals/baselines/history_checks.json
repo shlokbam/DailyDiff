@@ -1,0 +1,950 @@
+{
+  "metadata": {
+    "history_file": "/Users/shlokbam/Documents/Code/DailyDiff/data/history.json",
+    "total_days": 41,
+    "skipped_checks": [
+      "evidence_based_numeric_tokens"
+    ],
+    "note": "History has no evidence text; evidence-based numeric check skipped."
+  },
+  "windows": {
+    "before 2026-09-04": {
+      "window": "before 2026-09-04",
+      "days_count": 23,
+      "days_passed": 3,
+      "pass_rate_fmt": "3/23 = 13.0% (95% CI 4.5-32.1%)",
+      "check_rates": {
+        "count_at_most_5": {
+          "passed": 23,
+          "total": 23,
+          "rate_fmt": "23/23 = 100.0% (95% CI 85.7-100.0%)"
+        },
+        "categories_unique": {
+          "passed": 9,
+          "total": 23,
+          "rate_fmt": "9/23 = 39.1% (95% CI 22.2-59.2%)"
+        },
+        "required_fields_present": {
+          "passed": 23,
+          "total": 23,
+          "rate_fmt": "23/23 = 100.0% (95% CI 85.7-100.0%)"
+        },
+        "category_valid": {
+          "passed": 17,
+          "total": 23,
+          "rate_fmt": "17/23 = 73.9% (95% CI 53.5-87.5%)"
+        },
+        "has_bold_lead": {
+          "passed": 23,
+          "total": 23,
+          "rate_fmt": "23/23 = 100.0% (95% CI 85.7-100.0%)"
+        },
+        "no_tldr_label": {
+          "passed": 23,
+          "total": 23,
+          "rate_fmt": "23/23 = 100.0% (95% CI 85.7-100.0%)"
+        },
+        "verdict_valid": {
+          "passed": 23,
+          "total": 23,
+          "rate_fmt": "23/23 = 100.0% (95% CI 85.7-100.0%)"
+        },
+        "url_valid_https": {
+          "passed": 23,
+          "total": 23,
+          "rate_fmt": "23/23 = 100.0% (95% CI 85.7-100.0%)"
+        },
+        "no_generic_fallback": {
+          "passed": 23,
+          "total": 23,
+          "rate_fmt": "23/23 = 100.0% (95% CI 85.7-100.0%)"
+        }
+      }
+    },
+    "from 2026-09-04 onward": {
+      "window": "from 2026-09-04 onward",
+      "days_count": 18,
+      "days_passed": 7,
+      "pass_rate_fmt": "7/18 = 38.9% (95% CI 20.3-61.4%)",
+      "check_rates": {
+        "count_at_most_5": {
+          "passed": 18,
+          "total": 18,
+          "rate_fmt": "18/18 = 100.0% (95% CI 82.4-100.0%)"
+        },
+        "categories_unique": {
+          "passed": 7,
+          "total": 18,
+          "rate_fmt": "7/18 = 38.9% (95% CI 20.3-61.4%)"
+        },
+        "required_fields_present": {
+          "passed": 18,
+          "total": 18,
+          "rate_fmt": "18/18 = 100.0% (95% CI 82.4-100.0%)"
+        },
+        "category_valid": {
+          "passed": 18,
+          "total": 18,
+          "rate_fmt": "18/18 = 100.0% (95% CI 82.4-100.0%)"
+        },
+        "has_bold_lead": {
+          "passed": 7,
+          "total": 18,
+          "rate_fmt": "7/18 = 38.9% (95% CI 20.3-61.4%)"
+        },
+        "no_tldr_label": {
+          "passed": 18,
+          "total": 18,
+          "rate_fmt": "18/18 = 100.0% (95% CI 82.4-100.0%)"
+        },
+        "verdict_valid": {
+          "passed": 18,
+          "total": 18,
+          "rate_fmt": "18/18 = 100.0% (95% CI 82.4-100.0%)"
+        },
+        "url_valid_https": {
+          "passed": 18,
+          "total": 18,
+          "rate_fmt": "18/18 = 100.0% (95% CI 82.4-100.0%)"
+        },
+        "no_generic_fallback": {
+          "passed": 11,
+          "total": 18,
+          "rate_fmt": "11/18 = 61.1% (95% CI 38.6-79.7%)"
+        }
+      }
+    }
+  },
+  "per_date": [
+    {
+      "date": "2026-07-18",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": false,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Brief 'Open WebUI: The Self-Hosted AI Platform Breaking Vendor Lock-In' has invalid category 'Worth Knowing'. Must be one of designated categories.",
+        "Brief 'Immich: The Self-Hosted Google Photos Alternative' has invalid category 'Hidden Gem'. Must be one of designated categories.",
+        "Brief 'Static Search Trees: 40x Faster Than Binary Search' has invalid category 'Research Idea'. Must be one of designated categories.",
+        "Brief 'Next.js v16.3.0-Canary.89: Experimental Performance Shifts' has invalid category 'Something Changed'. Must be one of designated categories.",
+        "Brief 'Kimi K3: The Chinese AI Model Challenging Western Giants' has invalid category 'Keep an Eye On This'. Must be one of designated categories."
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": false,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Brief 'Unsloth Studio: Train AI Models Locally Without Cloud Costs' has invalid category 'Worth Knowing'. Must be one of designated categories.",
+        "Brief 'Coolify: Self-Host Your Own Heroku/Vercel Alternative' has invalid category 'Hidden Gem'. Must be one of designated categories.",
+        "Brief 'Gea: A React-Level Framework Without the Virtual DOM Overhead' has invalid category 'Research Idea'. Must be one of designated categories.",
+        "Brief 'Lerd: A Docker-Free, Rootless PHP Dev Environment' has invalid category 'Something Changed'. Must be one of designated categories.",
+        "Brief 'RTK: Shrink LLM Token Costs by 60-90% for Dev Commands' has invalid category 'Keep an Eye On This'. Must be one of designated categories."
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": false,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Brief 'Gitea 1.0: The Self-Hosted GitHub Alternative You Can Run Anywhere' has invalid category 'Worth Knowing'. Must be one of designated categories.",
+        "Brief 'Unsloth Studio: Train AI Models Locally Without the Cloud Tax' has invalid category 'Hidden Gem'. Must be one of designated categories.",
+        "Brief 'SpacetimeDB: The Database That Thinks Like a Game Engine' has invalid category 'Research Idea'. Must be one of designated categories.",
+        "Brief 'Coolify 3.0: Deploy Anything\u2014Like Vercel, But on Your Own Servers' has invalid category 'Something Changed'. Must be one of designated categories.",
+        "Brief 'Open WebUI: The Local-First AI Interface for Your Private LLMs' has invalid category 'Keep an Eye On This'. Must be one of designated categories."
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": false,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Brief 'OpenConnector: The Universal AI Agent Auth Gateway' has invalid category 'Worth Knowing'. Must be one of designated categories.",
+        "Brief 'EdgeEver: The Serverless Evernote That Plays Nice with AI Agents' has invalid category 'Hidden Gem'. Must be one of designated categories.",
+        "Brief 'Graphify: Turn Any Codebase into a Queryable Knowledge Graph' has invalid category 'Research Idea'. Must be one of designated categories.",
+        "Brief 'PromptScript: Git-Native AI Prompts for Enterprise Teams' has invalid category 'Something Changed'. Must be one of designated categories.",
+        "Brief 'Qwen-Image-3.0: The First AI That Generates Images with Real Knowledge' has invalid category 'Keep an Eye On This'. Must be one of designated categories."
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": false,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Brief 'TurboLLM: The Local LLM Swiss Army Knife' has invalid category 'Worth Knowing'. Must be one of designated categories.",
+        "Brief 'Trawl: The Self-Hosted Scraping Powerhouse' has invalid category 'Hidden Gem'. Must be one of designated categories.",
+        "Brief 'Open Science: The AI Workbench for Scientific Discovery' has invalid category 'Research Idea'. Must be one of designated categories.",
+        "Brief 'InfraKitchen: Platform Engineering for Infrastructure Management' has invalid category 'Something Changed'. Must be one of designated categories.",
+        "Brief 'RoleCraft: The Zero-Dependency AI Agent Skill Installer' has invalid category 'Keep an Eye On This'. Must be one of designated categories."
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": false,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Brief 'FlareMo: Cloudflare-Powered Personal Knowledge Base' has invalid category 'Worth Knowing'. Must be one of designated categories.",
+        "Brief 'Torollo: Build Backend Systems Visually\u2014Locally' has invalid category 'Hidden Gem'. Must be one of designated categories.",
+        "Brief 'ctx: The Missing Piece for AI Coding Context' has invalid category 'Research Idea'. Must be one of designated categories.",
+        "Brief 'EnvKit: The All-in-One Local Dev Stack with AI Superpowers' has invalid category 'Something Changed'. Must be one of designated categories.",
+        "Brief 'Dormice: The $0 Sandbox for AI Agents' has invalid category 'Keep an Eye On This'. Must be one of designated categories."
+      ]
+    },
+    {
+      "date": "2026-07-27",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Cool Tool', 'Watchlist']."
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Cool Tool', 'Watchlist']."
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "number_of_briefs": 5,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    },
+    {
+      "date": "2026-08-03",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Watchlist']."
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Cool Tool']."
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "number_of_briefs": 5,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    },
+    {
+      "date": "2026-08-10",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Cool Tool']."
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "number_of_briefs": 5,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    },
+    {
+      "date": "2026-08-14",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Cool Tool', 'Career & Learning']."
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning']."
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning']."
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning']."
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning', 'Cool Tool']."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Cool Tool']."
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning']."
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Cool Tool', 'Career & Learning']."
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "number_of_briefs": 5,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Cool Tool']."
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": false
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'GPT-6 Astra' missing prepended bold lead-in summary in description.",
+        "Brief 'Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly' missing prepended bold lead-in summary in description.",
+        "Brief 'Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out' missing prepended bold lead-in summary in description.",
+        "Brief 'Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out' contains degraded generic fallback text."
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "number_of_briefs": 4,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    },
+    {
+      "date": "2026-09-09",
+      "number_of_briefs": 5,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    },
+    {
+      "date": "2026-09-11",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'Shopify is moving from React Native back to Swift and Kotlin' missing prepended bold lead-in summary in description.",
+        "Brief 'OpenAI Agents API' missing prepended bold lead-in summary in description.",
+        "Brief 'Astra for Coding: Why Are We Doing This Again?' missing prepended bold lead-in summary in description."
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'Converting MOV to MP4 entirely in the browser \u2014 no server, no uploads, no ffmpeg' missing prepended bold lead-in summary in description.",
+        "Brief 'A container is just a process with a few private views. I built one in thirty lines.' missing prepended bold lead-in summary in description.",
+        "Brief 'Six Bugs That Taught Me How to Build an AI Agent That Doesn't Fall Over' missing prepended bold lead-in summary in description."
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'agent-isles' missing prepended bold lead-in summary in description.",
+        "Brief 'Gemini 3.8 Live and 3.8 Live Extended Thinking' missing prepended bold lead-in summary in description.",
+        "Brief 'Building a Linux GPU Driver for the M4 Mac Mini in One Month' missing prepended bold lead-in summary in description."
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'webmcp-kit' missing prepended bold lead-in summary in description.",
+        "Brief 'Bend \u2013 A language that blocks AI mistakes via proof, on CPU and GPU' missing prepended bold lead-in summary in description.",
+        "Brief 'A heap overflow and SSO misconfiguration to compromise OpenAI internal repos' missing prepended bold lead-in summary in description."
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "number_of_briefs": 5,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    },
+    {
+      "date": "2026-09-23",
+      "number_of_briefs": 5,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    },
+    {
+      "date": "2026-09-25",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": false
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'magpie' missing prepended bold lead-in summary in description.",
+        "Brief 'F-Droid 2.0' missing prepended bold lead-in summary in description.",
+        "Brief 'F-Droid 2.0' contains degraded generic fallback text.",
+        "Brief 'Show HN: Air-gapped file encryption as self-decrypting HTML page' missing prepended bold lead-in summary in description."
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": false
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Tech Shift'].",
+        "Brief 'rooms' missing prepended bold lead-in summary in description.",
+        "Brief 'rooms' contains degraded generic fallback text.",
+        "Brief 'taskuary' missing prepended bold lead-in summary in description.",
+        "Brief 'taskuary' contains degraded generic fallback text.",
+        "Brief 'Prompting Claude Opus 5.5' missing prepended bold lead-in summary in description.",
+        "Brief 'Prompting Claude Opus 5.5' contains degraded generic fallback text."
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": false
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'tsk' missing prepended bold lead-in summary in description.",
+        "Brief 'Dots: Always-on agents' missing prepended bold lead-in summary in description.",
+        "Brief 'GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price' missing prepended bold lead-in summary in description.",
+        "Brief 'GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price' contains degraded generic fallback text."
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": false
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'pr-cockpit' missing prepended bold lead-in summary in description.",
+        "Brief 'pr-cockpit' contains degraded generic fallback text.",
+        "Brief 'SvelteKit 3' missing prepended bold lead-in summary in description.",
+        "Brief 'SvelteKit 3' contains degraded generic fallback text.",
+        "Brief 'Git 3.0's upcoming SHA-256 default will be a costly mistake' missing prepended bold lead-in summary in description.",
+        "Brief 'Git 3.0's upcoming SHA-256 default will be a costly mistake' contains degraded generic fallback text."
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": false
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'cli-faq-shortcuts' missing prepended bold lead-in summary in description.",
+        "Brief 'cli-faq-shortcuts' contains degraded generic fallback text.",
+        "Brief 'We ported the original Doom to SQL' missing prepended bold lead-in summary in description.",
+        "Brief 'We ported the original Doom to SQL' contains degraded generic fallback text.",
+        "Brief 'How to Build a Secure Real-Time Chat System: Key Engineering Concepts' missing prepended bold lead-in summary in description."
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "number_of_briefs": 3,
+      "passed": false,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": false,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": false,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": false
+      },
+      "violations": [
+        "Category uniqueness violation: duplicate categories assigned: ['Career & Learning'].",
+        "Brief 'Decisions API is in public beta' missing prepended bold lead-in summary in description.",
+        "Brief 'Decisions API is in public beta' contains degraded generic fallback text.",
+        "Brief 'Mistral Large 4' missing prepended bold lead-in summary in description.",
+        "Brief 'Mistral Large 4' contains degraded generic fallback text.",
+        "Brief 'What Claude Code Can and Can't Do with Full Access Inside a Docker Sandbox' missing prepended bold lead-in summary in description.",
+        "Brief 'What Claude Code Can and Can't Do with Full Access Inside a Docker Sandbox' contains degraded generic fallback text."
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "number_of_briefs": 4,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    },
+    {
+      "date": "2026-10-11",
+      "number_of_briefs": 5,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    },
+    {
+      "date": "2026-10-12",
+      "number_of_briefs": 4,
+      "passed": true,
+      "checks": {
+        "count_at_most_5": true,
+        "categories_unique": true,
+        "required_fields_present": true,
+        "category_valid": true,
+        "has_bold_lead": true,
+        "no_tldr_label": true,
+        "verdict_valid": true,
+        "url_valid_https": true,
+        "no_generic_fallback": true
+      },
+      "violations": []
+    }
+  ]
+}
