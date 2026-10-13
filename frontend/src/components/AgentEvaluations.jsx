@@ -303,6 +303,43 @@ export default function AgentEvaluations() {
         )}
       </div>
 
+      {/* INCOMPLETE Banner */}
+      {meta.incomplete && (
+        <div style={{
+          marginBottom: '1.5rem',
+          padding: '1rem 1.5rem',
+          background: 'rgba(239, 68, 68, 0.15)',
+          border: '1px solid rgba(239, 68, 68, 0.4)',
+          borderRadius: '8px',
+          color: '#f87171',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: '1rem',
+          fontWeight: '600'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <span style={{
+              background: '#ef4444',
+              color: '#fff',
+              padding: '0.25rem 0.65rem',
+              borderRadius: '4px',
+              fontSize: '0.75rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.06em',
+              fontWeight: '700'
+            }}>
+              INCOMPLETE
+            </span>
+            <span>Evaluation run completed with errors (--allow-errors permitted)</span>
+          </div>
+          <div style={{ fontSize: '0.9rem', color: '#fca5a5' }}>
+            Evaluated: <strong>{totalEvaluated}</strong> / <strong>{totalCases}</strong> cases
+          </div>
+        </div>
+      )}
+
       {/* Header Banner */}
       <section className="eval-hero glass" style={{ padding: '2rem 2.5rem', marginBottom: '2rem', position: 'relative', overflow: 'hidden' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>

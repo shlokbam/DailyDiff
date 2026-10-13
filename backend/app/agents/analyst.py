@@ -3,7 +3,7 @@ import json
 import logging
 from typing import Dict, Any, List, Tuple
 from app.agents.state import AgentState
-from app.agents.models import get_llm, invoke_llm
+from app.agents.models import get_llm, invoke_json, escape_untrusted
 from app.agents.researcher import MAX_EVIDENCE_CHARS
 from app.run_health import health
 
@@ -36,10 +36,10 @@ def _format_analyst_prompt(candidates_with_idx: List[Tuple[int, Dict[str, Any]]]
         evidence = c.get("detailed_content") or c.get("description", "")
         formatted_docs.append(
             f'<document id="{idx}">\n'
-            f'<title>{c["title"]}</title>\n'
-            f'<source>{c.get("source", "")}</source>\n'
-            f'<url>{c.get("url", "")}</url>\n'
-            f'<content>\n{evidence[:MAX_EVIDENCE_CHARS]}\n</content>\n'
+            f'<title>{escape_untrusted(c.get("title", ""))}</title>\n'
+            f'<source>{escape_untrusted(c.get("source", ""))}</source>\n'
+            f'<url>{escape_untrusted(c.get("url", ""))}</url>\n'
+            f'<content>\n{escape_untrusted(evidence[:MAX_EVIDENCE_CHARS])}\n</content>\n'
             f'</document>'
         )
     documents_text = "\n\n".join(formatted_docs)
@@ -94,18 +94,7 @@ def analyst_node(state: AgentState) -> Dict[str, Any]:
     analysis_map: Dict[int, Dict[str, Any]] = {}
 
     try:
-        response = invoke_llm("analyst", llm, prompt)
-        content = response.content.strip()
-
-        if content.startswith("```"):
-            lines = content.split("\n")
-            if lines[0].startswith("```"):
-                lines = lines[1:]
-            if lines[-1].startswith("```"):
-                lines = lines[:-1]
-            content = "\n".join(lines).strip()
-
-        analysis_list = json.loads(content)
+        analysis_list = invoke_json("analyst", llm, prompt, validate_fn=lambda x: isinstance(x, list))
         if isinstance(analysis_list, list):
             for item in analysis_list:
                 if _is_valid_analysis(item):
@@ -128,16 +117,7 @@ def analyst_node(state: AgentState) -> Dict[str, Any]:
         logger.info(f"Analyst node retrying {len(missing_items)} missing or invalid items...")
         retry_prompt = _format_analyst_prompt(missing_items)
         try:
-            retry_resp = invoke_llm("analyst", llm, retry_prompt)
-            retry_content = retry_resp.content.strip()
-            if retry_content.startswith("```"):
-                lines = retry_content.split("\n")
-                if lines[0].startswith("```"):
-                    lines = lines[1:]
-                if lines[-1].startswith("```"):
-                    lines = lines[:-1]
-                retry_content = "\n".join(lines).strip()
-            retry_list = json.loads(retry_content)
+            retry_list = invoke_json("analyst", llm, retry_prompt, validate_fn=lambda x: isinstance(x, list))
             if isinstance(retry_list, list):
                 for item in retry_list:
                     if _is_valid_analysis(item):
@@ -160,16 +140,31 @@ def analyst_node(state: AgentState) -> Dict[str, Any]:
             c_copy["why_it_matters"] = str(item_analysis["why_it_matters"]).strip()
             c_copy["who_cares"] = str(item_analysis["who_cares"]).strip()
             c_copy["verdict"] = str(item_analysis["verdict"]).upper()
-            # Remove confidence score completely from new briefs
             c_copy.pop("confidence", None)
             analyzed.append(c_copy)
+            health.add_decision("analyst", {
+                "title": c.get("title"),
+                "url": c.get("url"),
+                "outcome": "kept",
+                "verdict": c_copy["verdict"],
+                "reason": c_copy["why_it_matters"]
+            })
         else:
             dropped_count += 1
             logger.warning(f"Dropping candidate {idx} ({c.get('title')}) due to missing/invalid analysis.")
+            health.add_degradation("analyst", f"Dropped candidate '{c.get('title')}' due to missing/invalid analysis after retry")
+            health.add_decision("analyst", {
+                "title": c.get("title"),
+                "url": c.get("url"),
+                "outcome": "dropped",
+                "reason": "Missing or invalid analysis output after retry"
+            })
 
-    if dropped_count > 0:
-        health.mark_fallback("analyst", f"Dropped {dropped_count} candidates due to invalid analysis after retry")
+    if dropped_count > 0 and len(analyzed) == 0:
+        # If ALL candidates were dropped, the node failed entirely
+        health.mark_fallback("analyst", "All candidates failed analysis after retry")
 
     logger.info(f"Batched Analyst node complete: {len(analyzed)} of {len(vetted)} candidates analyzed successfully.")
     health.set_count("analyzed", len(analyzed))
     return {"vetted_candidates": analyzed}
+

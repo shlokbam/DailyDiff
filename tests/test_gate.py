@@ -154,30 +154,54 @@ def test_gate_healthy_state_publishes(tmp_path):
             "who_cares": "Backend engineers and DevOps architects.",
             "verdict": "INTEGRATE",
             "source_url": "https://github.com/mingrammer/diagrams"
+        },
+        {
+            "category": "Tech Shift",
+            "title": "TanStack Router Launch",
+            "description": "**TanStack Router brings first-class type safety to client routing.** What happened: Full type safety.",
+            "why_it_matters": "Eliminates broken links at compile time.",
+            "who_cares": "React developers.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://github.com/tanstack/router"
+        },
+        {
+            "category": "Career & Learning",
+            "title": "HTTPie Learning Client",
+            "description": "**HTTPie provides interactive visual requests.** What happened: Clean visual editor.",
+            "why_it_matters": "Helps students understand API calls.",
+            "who_cares": "CS students.",
+            "verdict": "WATCH",
+            "source_url": "https://github.com/httpie/httpie"
         }
     ]
 
     mock_graph = MagicMock()
     mock_graph.invoke.return_value = {
-        "raw_signals": [{"title": "Diagrams", "url": "https://github.com/mingrammer/diagrams", "source": "GitHub", "description": "Diagrams as code"}],
-        "candidates": [{"title": "Diagrams", "url": "https://github.com/mingrammer/diagrams"}],
-        "researched_candidates": [{
-            "title": "Diagrams",
-            "url": "https://github.com/mingrammer/diagrams",
-            "source": "GitHub",
-            "content_source": "readme",
-            "description": "Diagrams as code",
-            "detailed_content": "Diagrams lets you draw cloud architecture using python code."
-        }],
-        "vetted_candidates": [{
-            "title": "Diagrams",
-            "url": "https://github.com/mingrammer/diagrams",
-            "verifier_status": "VALID",
-            "verifier_reason": "Verified against README",
-            "verdict": "INTEGRATE",
-            "why_it_matters": "Version controlled diagrams.",
-            "who_cares": "DevOps developers"
-        }],
+        "raw_signals": [{"title": b["title"], "url": b["source_url"], "source": "GitHub", "description": b["why_it_matters"]} for b in valid_briefs],
+        "candidates": [{"title": b["title"], "url": b["source_url"]} for b in valid_briefs],
+        "researched_candidates": [
+            {
+                "title": b["title"],
+                "url": b["source_url"],
+                "source": "GitHub",
+                "content_source": "readme",
+                "description": b["why_it_matters"],
+                "detailed_content": b["description"]
+            }
+            for b in valid_briefs
+        ],
+        "vetted_candidates": [
+            {
+                "title": b["title"],
+                "url": b["source_url"],
+                "verifier_status": "VALID",
+                "verifier_reason": "Verified against README",
+                "verdict": b["verdict"],
+                "why_it_matters": b["why_it_matters"],
+                "who_cares": b["who_cares"]
+            }
+            for b in valid_briefs
+        ],
         "final_briefs": valid_briefs
     }
 

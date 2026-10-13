@@ -7,6 +7,9 @@ FORBIDDEN_STRINGS = [
     "FAST_EVAL",
     "falling back to benchmark ground truth",
     "seed_baseline",
+    "Decision: REJECT (Filtered by Skeptic)",
+    "Verification Status: INVALID",
+    "Not prioritized",
 ]
 
 def test_no_forbidden_simulation_patterns():

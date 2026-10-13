@@ -3,7 +3,7 @@ import json
 import logging
 from typing import Dict, Any, List
 from app.agents.state import AgentState
-from app.agents.models import get_llm, invoke_llm
+from app.agents.models import get_llm, invoke_json, escape_untrusted
 from app.agents.researcher import MAX_EVIDENCE_CHARS
 from app.run_health import health
 
@@ -33,6 +33,13 @@ def verifier_node(state: AgentState) -> Dict[str, Any]:
         if not is_release and (not has_evidence or content_src in ["description_only", "empty", "api_fallback"]):
             if not allow_unverifiable:
                 logger.info(f"Dropping unverifiable candidate without primary docs: {c.get('title')} (source: {content_src})")
+                health.add_degradation("verifier", f"Candidate '{c.get('title')}' dropped as UNVERIFIABLE (content_source: {content_src})")
+                health.add_decision("verifier", {
+                    "title": c.get("title"),
+                    "url": c.get("url"),
+                    "outcome": "UNVERIFIABLE",
+                    "reason": f"No primary documentation available (content_source: {content_src})"
+                })
                 continue
         verifiable_candidates.append(c)
 
@@ -46,10 +53,10 @@ def verifier_node(state: AgentState) -> Dict[str, Any]:
         evidence = c.get("detailed_content", "")[:MAX_EVIDENCE_CHARS]
         formatted_docs.append(
             f'<document id="{idx}">\n'
-            f'<title>{c["title"]}</title>\n'
-            f'<source>{c.get("source", "")}</source>\n'
-            f'<candidate_claims>{c.get("description", "")}</candidate_claims>\n'
-            f'<reference_documentation>\n{evidence}\n</reference_documentation>\n'
+            f'<title>{escape_untrusted(c.get("title", ""))}</title>\n'
+            f'<source>{escape_untrusted(c.get("source", ""))}</source>\n'
+            f'<candidate_claims>{escape_untrusted(c.get("description", ""))}</candidate_claims>\n'
+            f'<reference_documentation>\n{escape_untrusted(evidence)}\n</reference_documentation>\n'
             f'</document>'
         )
     documents_text = "\n\n".join(formatted_docs)
@@ -82,21 +89,7 @@ Do not include any code block markdown like ```json or any other text. Return on
     vetted = []
 
     try:
-        response = invoke_llm("verifier", llm, prompt)
-        content = response.content.strip()
-
-        # Clean markdown wrappers if present
-        if content.startswith("```"):
-            lines = content.split("\n")
-            if lines[0].startswith("```"):
-                lines = lines[1:]
-            if lines[-1].startswith("```"):
-                lines = lines[:-1]
-            content = "\n".join(lines).strip()
-
-        verification_results = json.loads(content)
-        if not isinstance(verification_results, list):
-            raise ValueError(f"Verifier LLM returned non-list output: {type(verification_results)}")
+        verification_results = invoke_json("verifier", llm, prompt, validate_fn=lambda x: isinstance(x, list))
 
         approved_map = {}
         for item in verification_results:
@@ -119,8 +112,20 @@ Do not include any code block markdown like ```json or any other text. Return on
                 c_copy["verifier_status"] = "VALID"
                 c_copy["verifier_reason"] = reason
                 vetted.append(c_copy)
+                health.add_decision("verifier", {
+                    "title": c.get("title"),
+                    "url": c.get("url"),
+                    "outcome": "VALID",
+                    "reason": reason
+                })
             else:
                 logger.info(f"Verifier rejected candidate {idx} ({c.get('title')}): status={status}, reason={reason}")
+                health.add_decision("verifier", {
+                    "title": c.get("title"),
+                    "url": c.get("url"),
+                    "outcome": status,
+                    "reason": reason
+                })
 
         logger.info(f"Batched Verifier complete: {len(vetted)} of {len(verifiable_candidates)} candidates vetted successfully.")
     except Exception as e:
@@ -130,3 +135,4 @@ Do not include any code block markdown like ```json or any other text. Return on
 
     health.set_count("verified", len(vetted))
     return {"vetted_candidates": vetted}
+

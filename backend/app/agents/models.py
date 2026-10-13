@@ -1,5 +1,6 @@
 import logging
-from typing import Any
+import json
+from typing import Any, Optional, Callable
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_groq import ChatGroq
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -104,3 +105,79 @@ def invoke_llm(node: str, llm: BaseChatModel, prompt: Any) -> Any:
         raise e
     finally:
         health.stop_timer(node)
+
+def escape_untrusted(text: Any) -> str:
+    """
+    Escapes XML special characters in untrusted external text.
+    Prevents closing tag breakout in prompt document wrappers.
+    """
+    if text is None:
+        return ""
+    return str(text).replace("<", "&lt;").replace(">", "&gt;")
+
+def _strip_markdown_fences(content: str) -> str:
+    """Strip markdown code block fences (e.g. ```json ... ```) from LLM output."""
+    s = content.strip()
+    if s.startswith("```"):
+        lines = s.split("\n")
+        if lines[0].startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip().startswith("```"):
+            lines = lines[:-1]
+        s = "\n".join(lines).strip()
+    return s
+
+def invoke_json(
+    node: str,
+    llm: BaseChatModel,
+    prompt: Any,
+    validate_fn: Optional[Callable[[Any], bool]] = None,
+) -> Any:
+    """
+    Invokes LLM and parses JSON output.
+    On JSON parse or validation failure, retries ONCE with a reminder.
+    Only after the retry fails does it call health.mark_fallback.
+    Both attempts are recorded in health.
+    """
+    last_err: Optional[Exception] = None
+
+    # First attempt
+    try:
+        resp = invoke_llm(node, llm, prompt)
+        text = _strip_markdown_fences(resp.content if hasattr(resp, "content") else str(resp))
+        parsed = json.loads(text)
+        if validate_fn is not None and not validate_fn(parsed):
+            raise ValueError(f"Schema validation failed for {node} response")
+        return parsed
+    except BudgetExceeded:
+        raise
+    except Exception as e:
+        last_err = e
+        logger.warning(f"First attempt of {node} produced invalid JSON/schema ({e}). Retrying once...")
+
+    # Build retry prompt with reminder
+    retry_prompt = prompt
+    reminder = (
+        "\n\nIMPORTANT: Your previous response was not valid JSON or failed schema validation. "
+        "Please return ONLY a valid JSON structure matching the requested format with no markdown formatting, "
+        "no code fences, and no surrounding text."
+    )
+    if isinstance(retry_prompt, str):
+        retry_prompt = retry_prompt + reminder
+
+    # Retry attempt
+    try:
+        retry_resp = invoke_llm(node, llm, retry_prompt)
+        text = _strip_markdown_fences(retry_resp.content if hasattr(retry_resp, "content") else str(retry_resp))
+        parsed = json.loads(text)
+        if validate_fn is not None and not validate_fn(parsed):
+            raise ValueError(f"Schema validation failed on retry for {node} response")
+        return parsed
+    except BudgetExceeded:
+        raise
+    except Exception as retry_err:
+        last_err = retry_err
+        logger.error(f"{node} JSON parsing/validation failed after retry: {retry_err}")
+        health.mark_fallback(node, f"Malformed JSON output after retry: {last_err}")
+        raise last_err
+

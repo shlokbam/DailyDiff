@@ -2,7 +2,7 @@ import json
 import logging
 from typing import Dict, Any, List
 from app.agents.state import AgentState
-from app.agents.models import get_llm, invoke_llm
+from app.agents.models import get_llm, invoke_json, escape_untrusted
 from app.database import read_history
 from app.run_health import health
 
@@ -58,6 +58,12 @@ def deduplicate_and_filter_node(state: AgentState) -> Dict[str, Any]:
         signal_url = s.get("url", "").strip().rstrip("/").lower()
         if signal_url and signal_url in published_urls:
             logger.info(f"Algorithmic deduplication skipped past signal: {s.get('title')} ({s.get('url')})")
+            health.add_decision("skeptic", {
+                "title": s.get("title"),
+                "url": s.get("url"),
+                "outcome": "dropped",
+                "reason": "Algorithmic deduplication: already published in history"
+            })
             continue
         fresh_signals.append(s)
 
@@ -81,15 +87,15 @@ def deduplicate_and_filter_node(state: AgentState) -> Dict[str, Any]:
 
     history_summary = extract_history_summary()
 
-    # Format candidates for the LLM with untrusted data wrappers
+    # Format candidates for the LLM with untrusted data wrappers and escaping
     formatted_signals = []
     for idx, s in enumerate(fresh_signals):
         formatted_signals.append(
             f'<signal id="{idx}">\n'
-            f'<source>{s.get("source", "")}</source>\n'
-            f'<title>{s.get("title", "")}</title>\n'
-            f'<description>{s.get("description", "")}</description>\n'
-            f'<url>{s.get("url", "")}</url>\n'
+            f'<source>{escape_untrusted(s.get("source", ""))}</source>\n'
+            f'<title>{escape_untrusted(s.get("title", ""))}</title>\n'
+            f'<description>{escape_untrusted(s.get("description", ""))}</description>\n'
+            f'<url>{escape_untrusted(s.get("url", ""))}</url>\n'
             f'</signal>'
         )
     signals_text = "\n\n".join(formatted_signals)
@@ -125,34 +131,50 @@ Do not include any code block markdown like ```json or any other text. Return on
     candidates = []
 
     try:
-        response = invoke_llm("skeptic", llm, prompt)
-        content = response.content.strip()
-
-        # Clean up any potential markdown wrapping from LLM
-        if content.startswith("```"):
-            lines = content.split("\n")
-            if lines[0].startswith("```"):
-                lines = lines[1:]
-            if lines[-1].startswith("```"):
-                lines = lines[:-1]
-            content = "\n".join(lines).strip()
-
-        passed_ids = json.loads(content)
+        passed_ids = invoke_json("skeptic", llm, prompt, validate_fn=lambda x: isinstance(x, list))
+        valid_passed_indices = set()
 
         if isinstance(passed_ids, list):
             for pid in passed_ids:
                 try:
                     idx = int(pid)
                     if 0 <= idx < len(fresh_signals):
+                        valid_passed_indices.add(idx)
                         candidates.append(fresh_signals[idx])
                 except (ValueError, TypeError):
                     continue
+
+        # Record initial LLM decisions
+        for idx, s in enumerate(fresh_signals):
+            if idx not in valid_passed_indices:
+                health.add_decision("skeptic", {
+                    "title": s.get("title"),
+                    "url": s.get("url"),
+                    "outcome": "rejected",
+                    "reason": "Filtered out by skeptic LLM"
+                })
 
         # Slice to a maximum of 10 candidates to safeguard against downstream rate limits
         if len(candidates) > 10:
             dropped_by_cap = len(candidates) - 10
             logger.info(f"Slicing passed signals from {len(candidates)} down to 10. Dropped {dropped_by_cap} signals due to the 10-item cap.")
+            health.add_degradation("skeptic", f"Dropped {dropped_by_cap} signals due to the 10-item cap.")
+            for s in candidates[10:]:
+                health.add_decision("skeptic", {
+                    "title": s.get("title"),
+                    "url": s.get("url"),
+                    "outcome": "dropped",
+                    "reason": "Dropped due to 10-candidate cap"
+                })
             candidates = candidates[:10]
+
+        for s in candidates:
+            health.add_decision("skeptic", {
+                "title": s.get("title"),
+                "url": s.get("url"),
+                "outcome": "kept",
+                "reason": "Passed skeptic relevance filter"
+            })
 
         logger.info(f"Skeptic filter complete: {len(candidates)} of {len(fresh_signals)} signals passed.")
     except Exception as e:
@@ -162,3 +184,4 @@ Do not include any code block markdown like ```json or any other text. Return on
 
     health.set_count("skeptic_passed", len(candidates))
     return {"candidates": candidates}
+

@@ -14,6 +14,8 @@ class RunHealth:
 
     def reset(self):
         self.fallbacks: List[Dict[str, str]] = []
+        self.degradations: List[Dict[str, Any]] = []
+        self.decisions: Dict[str, List[Dict[str, Any]]] = {}
         self.llm_calls_count = 0
         self.llm_errors_count = 0
         self.models_used: Dict[str, int] = {}
@@ -37,11 +39,35 @@ class RunHealth:
         self.start_time: float = time.time()
 
     def mark_fallback(self, node: str, reason: str):
-        self.fallbacks.append({"node": node, "reason": reason})
+        """Record a hard fallback event where a node failed completely."""
+        self.fallbacks.append({"node": node, "reason": str(reason)})
 
     @property
     def has_fallbacks(self) -> bool:
         return len(self.fallbacks) > 0
+
+    def add_degradation(self, node: str, reason: str, details: Any = None):
+        """Record a soft degradation event (e.g. item drop, duplicate category trimming)."""
+        record: Dict[str, Any] = {"node": node, "reason": str(reason)}
+        if details is not None:
+            record["details"] = details
+        self.degradations.append(record)
+
+    @property
+    def has_degradations(self) -> bool:
+        return len(self.degradations) > 0
+
+    def add_decision(self, node: str, record: Dict[str, Any]):
+        """Record an item-level decision outcome (kept, VALID, INVALID, UNVERIFIABLE, dropped)."""
+        clean_rec: Dict[str, Any] = {}
+        for k, v in record.items():
+            if isinstance(v, str) and len(v) > 200:
+                clean_rec[k] = v[:200]
+            else:
+                clean_rec[k] = v
+        if node not in self.decisions:
+            self.decisions[node] = []
+        self.decisions[node].append(clean_rec)
 
     def record_llm_call(self, node: str, response: Any = None, error: Any = None):
         self.llm_calls_count += 1
@@ -50,6 +76,8 @@ class RunHealth:
         if error is not None:
             self.llm_errors_count += 1
             self.node_llm_errors[node] = self.node_llm_errors.get(node, 0) + 1
+            # Do not count failed calls under "unknown-model"
+            return
 
         model_name = "unknown-model"
         if response is not None:
@@ -111,6 +139,9 @@ class RunHealth:
             "warnings": list(self.warnings),
             "fallbacks": list(self.fallbacks),
             "has_fallbacks": self.has_fallbacks,
+            "degradations": list(self.degradations),
+            "has_degradations": self.has_degradations,
+            "decisions": {k: list(v) for k, v in self.decisions.items()},
         }
 
 # Global module singleton

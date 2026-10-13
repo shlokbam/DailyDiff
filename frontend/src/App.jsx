@@ -440,9 +440,6 @@ export default function App() {
                             <span className="category-tag">{brief.category}</span>
                             <div className="footer-metrics">
                               <span className="metric-pill">Verdict: {brief.verdict}</span>
-                              {brief.confidence != null && (
-                                <span className="metric-pill">Confidence: {brief.confidence}%</span>
-                              )}
                             </div>
                           </div>
                           

@@ -110,7 +110,7 @@ export default function TechnicalDetails() {
       description: 'Scores the vetted items based on real-world utility for students, makers, and production developers. Ranks and selects the top 5 updates for the final newsletter.',
       inputs: 'vetted_candidates',
       outputs: 'vetted_candidates (Ranked and tagged)',
-      strategy: 'Uses an LLM to perform an educational evaluation. It analyzes the scraped contents to extract specific developer user groups, write punchy sentences explaining real-world relevance, assign an actionable verdict (INTEGRATE, WATCH, READ, IGNORE), and rate confidence in its momentum.',
+      strategy: 'Uses an LLM to perform an educational evaluation. It analyzes the scraped contents to extract specific developer user groups, write punchy sentences explaining real-world relevance, and assign an actionable verdict (INTEGRATE, WATCH, READ).',
       class: 'agent-analyze'
     },
     {
@@ -118,10 +118,10 @@ export default function TechnicalDetails() {
       title: 'Editor Agent',
       icon: 'editor',
       role: 'Plain-English Translator',
-      description: 'Takes the top 5 scored items and rewrites them into concise, plain-English summaries using intuitive analogies, setting final verdicts and confidence rankings.',
+      description: 'Takes the top 5 scored items and rewrites them into concise, plain-English summaries using intuitive analogies and setting final verdicts.',
       inputs: 'vetted_candidates (Top 5)',
       outputs: 'final_briefs (Ready for dispatch), history.json',
-      strategy: 'Translates jargon (e.g., replaces complex matrix formulas with simpler concepts). Assigns verdicts: INTEGRATE, WATCH, or IGNORE, and formats the output into clean markdown structure.',
+      strategy: 'Translates jargon (e.g., replaces complex matrix formulas with simpler concepts). Assigns verdicts: INTEGRATE, WATCH, or READ, and formats the output into clean markdown structure.',
       class: 'agent-editor'
     }
   ];

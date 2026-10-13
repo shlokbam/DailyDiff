@@ -10,6 +10,7 @@ from pathlib import Path
 from app.config import ARCHIVE_DIR, HISTORY_FILE_PATH, DATA_DIR
 from app.database import init_db, init_history_file, append_to_history
 from app.agents.graph import create_agent_graph
+from app.agents.researcher import MAX_EVIDENCE_CHARS
 from app.run_health import health
 from app.checks import validate_briefs
 
@@ -73,13 +74,15 @@ def build_run_snapshot(date_str: str, result_state: dict, briefs: list, failure_
     for c in result_state.get("researched_candidates", []):
         url = c.get("url")
         if url:
-            evidence_by_url[url] = f"{c.get('description', '')} {(c.get('detailed_content') or '')[:1200]}"
+            evidence_by_url[url] = f"{c.get('description', '')} {(c.get('detailed_content') or '')[:MAX_EVIDENCE_CHARS]}"
 
+    health_dict = health.to_dict()
     snapshot = {
         "date": date_str,
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "git_sha": get_git_sha(),
-        "health": health.to_dict(),
+        "health": health_dict,
+        "decisions": health_dict.get("decisions", {}),
         "raw_signals": [
             {
                 "title": s.get("title"),
@@ -98,7 +101,7 @@ def build_run_snapshot(date_str: str, result_state: dict, briefs: list, failure_
                 "url": c.get("url"),
                 "source": c.get("source"),
                 "content_source": c.get("content_source"),
-                "evidence": (c.get("detailed_content") or "")[:1500]
+                "evidence": (c.get("detailed_content") or "")[:MAX_EVIDENCE_CHARS]
             }
             for c in result_state.get("researched_candidates", [])
         ],
@@ -123,11 +126,15 @@ def build_run_snapshot(date_str: str, result_state: dict, briefs: list, failure_
         "final_briefs": briefs
     }
     if failure_reasons:
+        snapshot["failure_reasons"] = failure_reasons
         snapshot["degraded_reasons"] = failure_reasons
     return snapshot
 
 def main():
     start_time = time.time()
+    # Compute date string once and reuse across snapshot, gate, and archive
+    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
     logger.info("Initializing DailyDiff system environments...")
     init_db()
     init_history_file()
@@ -148,6 +155,7 @@ def main():
 
     briefs = []
     result_state = {}
+    min_briefs = int(os.getenv("MIN_BRIEFS", "3"))
 
     if not has_any_key:
         if is_github_actions or has_backend_url:
@@ -191,10 +199,18 @@ def main():
             "errors": []
         }
 
-        result_state = graph.invoke(initial_state)
-        briefs = result_state.get("final_briefs", [])
+        try:
+            result_state = graph.invoke(initial_state)
+            briefs = result_state.get("final_briefs", [])
+        except Exception as exc:
+            logger.error(f"LangGraph execution exception: {exc}")
+            health.mark_fallback("graph", str(exc))
+            degraded_path = runs_dir / f"{date_str}.degraded.json"
+            snapshot = build_run_snapshot(date_str, {}, [], failure_reasons=[f"Workflow execution exception: {exc}"])
+            with open(degraded_path, "w") as f:
+                json.dump(snapshot, f, indent=2)
+            sys.exit(1)
 
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     elapsed_time = time.time() - start_time
     run_budget = float(os.getenv("RUN_BUDGET_SECONDS", "900"))
 
@@ -203,33 +219,49 @@ def main():
     # ==========================================
     failure_reasons = []
 
-    # 1. Health fallbacks check
+    # 1. Health hard fallbacks check
     if health.has_fallbacks:
-        failure_reasons.append(f"Pipeline marked fallbacks: {health.fallbacks}")
+        failure_reasons.append(f"Pipeline marked hard fallbacks: {health.fallbacks}")
 
-    # 2. Checks violations (only when briefs exist)
+    # Build evidence and candidate URLs
+    evidence_by_url = {}
+    candidate_urls = set()
+    for c in result_state.get("researched_candidates", []):
+        url = c.get("url")
+        if url:
+            candidate_urls.add(url)
+            evidence_by_url[url] = f"{c.get('description', '')} {(c.get('detailed_content') or '')[:MAX_EVIDENCE_CHARS]}"
+
+    # 2. Per-brief validation and soft filtering
     if briefs:
-        evidence_by_url = {}
-        for c in result_state.get("researched_candidates", []):
-            url = c.get("url")
-            if url:
-                evidence_by_url[url] = f"{c.get('description', '')} {(c.get('detailed_content') or '')[:1200]}"
-        violations = validate_briefs(briefs, evidence_by_url)
-        if violations:
-            failure_reasons.extend(violations)
+        surviving_briefs = []
+        for b in briefs:
+            b_violations = validate_briefs([b], evidence_by_url=evidence_by_url, candidate_urls=candidate_urls)
+            if b_violations:
+                msg = f"Dropped brief '{b.get('title')}': {'; '.join(b_violations)}"
+                logger.warning(f"Gate validation dropped brief: {msg}")
+                health.add_degradation("gate", msg)
+            else:
+                surviving_briefs.append(b)
+        briefs = surviving_briefs
 
-    # 3. Zero briefs check: distinguish genuine quiet day from node failure
-    if not briefs:
-        is_genuine_quiet_day = (
-            not health.has_fallbacks and
-            health.llm_errors_count == 0 and
+    # 3. Brief count check vs MIN_BRIEFS (distinguish genuine quiet day)
+    # A genuine quiet day has no hard fallbacks, no LLM errors, and zero briefs because models legitimately returned 0 candidates
+    is_genuine_quiet_day = (
+        not health.has_fallbacks
+        and health.llm_errors_count == 0
+        and len(briefs) == 0
+        and (
             health.counts.get("skeptic_passed", 0) == 0
+            or (health.counts.get("skeptic_passed", 0) > 0 and health.counts.get("verified", 0) == 0)
         )
-        if not is_genuine_quiet_day:
-            failure_reasons.append(
-                f"Zero briefs produced due to upstream node failure (skeptic passed={health.counts.get('skeptic_passed')}, "
-                f"llm_errors={health.llm_errors_count}, fallbacks={health.fallbacks})."
-            )
+    )
+
+    if len(briefs) < min_briefs and not is_genuine_quiet_day:
+        failure_reasons.append(
+            f"Insufficient briefs: produced {len(briefs)} briefs (minimum required: {min_briefs}). "
+            f"Not a quiet day (fallbacks={health.fallbacks}, llm_errors={health.llm_errors_count})."
+        )
 
     # 4. Runtime budget check
     if elapsed_time > run_budget:
@@ -275,13 +307,13 @@ def main():
     # Generate and save Markdown archive
     md_text = build_markdown_brief(briefs, date_str)
 
-    # Hierarchical archive path: YYYY/MM/DD.md
-    now = datetime.now(timezone.utc)
-    year_dir = ARCHIVE_DIR / f"{now.year}"
-    month_dir = year_dir / f"{now.month:02d}"
+    # Hierarchical archive path: YYYY/MM/DD.md using pre-computed date_str
+    parts = date_str.split("-")
+    year_dir = ARCHIVE_DIR / parts[0]
+    month_dir = year_dir / parts[1]
     month_dir.mkdir(parents=True, exist_ok=True)
 
-    day_file_path = month_dir / f"{now.day:02d}.md"
+    day_file_path = month_dir / f"{parts[2]}.md"
     with open(day_file_path, "w") as f:
         f.write(md_text)
     logger.info(f"Saved Markdown archive to {day_file_path}")

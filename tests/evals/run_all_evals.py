@@ -109,6 +109,29 @@ def run_all_evaluations(smoke: bool = False, allow_errors: bool = False) -> dict
         }
     }
 
+    total_errors = (
+        skeptic_report["n_error"]
+        + verifier_report["n_error"]
+        + analyst_report["n_error"]
+        + editor_report["n_error"]
+    )
+    has_node_error = total_errors > 0
+
+    if has_node_error:
+        if allow_errors or ("--allow-errors" in sys.argv):
+            meta["incomplete"] = True
+            overall_report["meta"]["incomplete"] = True
+        else:
+            print("\n" + "=" * 60)
+            print("[FAILURE] Evaluation run encountered node errors:")
+            print(f"  Skeptic errors:  {skeptic_report['n_error']}")
+            print(f"  Verifier errors: {verifier_report['n_error']}")
+            print(f"  Analyst errors:  {analyst_report['n_error']}")
+            print(f"  Editor errors:   {editor_report['n_error']}")
+            print("Run not persisted because --allow-errors was not set. Exiting 1.")
+            print("=" * 60 + "\n")
+            sys.exit(1)
+
     # Handling persistence & output files based on mode
     if mode == "smoke":
         smoke_results_path = BASE_DIR / "tests" / "evals" / "smoke_results.json"
