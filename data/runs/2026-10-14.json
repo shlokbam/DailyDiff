@@ -1,0 +1,1850 @@
+{
+  "date": "2026-10-14",
+  "timestamp": "2026-10-14T09:00:50.592626+00:00",
+  "git_sha": "d7154c910ce38dbc80d88f847df8e2ceccdeda9f",
+  "health": {
+    "counts": {
+      "raw_signals": 75,
+      "after_dedup": 66,
+      "skeptic_passed": 8,
+      "researched": 8,
+      "verified": 5,
+      "analyzed": 5,
+      "final": 5
+    },
+    "source_counts": {
+      "GitHub": 14,
+      "Hacker News": 20,
+      "Dev.to": 10,
+      "FreeCodeCamp": 10,
+      "Product Hunt": 12,
+      "Reddit": 8,
+      "GitHub Release": 1
+    },
+    "source_yield": {
+      "GitHub": 0.71,
+      "Hacker News": 1.0,
+      "Dev.to": 1.0,
+      "FreeCodeCamp": 0.5,
+      "Product Hunt": 1.0,
+      "Reddit": 0.0,
+      "GitHub Release": 1.0
+    },
+    "content_sources": {
+      "https://deepmind.google/models/gemini/": "web_page",
+      "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/": "web_page",
+      "https://www.anthropic.com/engineering/redesigning-source-control": "web_page",
+      "https://github.com/rust-lang/rust/issues/164250": "web_page",
+      "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0": "web_page",
+      "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao": "web_page",
+      "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id": "web_page",
+      "https://www.producthunt.com/products/editui": "description_only"
+    },
+    "models_used": {
+      "live-model": 4
+    },
+    "n_llm_calls": 4,
+    "n_llm_errors": 0,
+    "node_llm_calls": {
+      "skeptic": 1,
+      "verifier": 1,
+      "analyst": 1,
+      "editor": 1
+    },
+    "node_llm_errors": {},
+    "durations": {
+      "skeptic": 27.258,
+      "verifier": 15.677,
+      "analyst": 13.893,
+      "editor": 86.742
+    },
+    "total_elapsed_seconds": 155.455,
+    "warnings": [],
+    "fallbacks": [],
+    "has_fallbacks": false,
+    "degradations": [
+      {
+        "node": "verifier",
+        "reason": "Candidate 'EditUI' dropped as UNVERIFIABLE (content_source: description_only)"
+      }
+    ],
+    "has_degradations": true,
+    "decisions": {
+      "skeptic": [
+        {
+          "title": "tws-labs",
+          "url": "https://github.com/TrainWithShubham/tws-labs",
+          "outcome": "dropped",
+          "reason": "Algorithmic deduplication: already published in history"
+        },
+        {
+          "title": "graphify",
+          "url": "https://github.com/Graphify-Labs/graphify",
+          "outcome": "dropped",
+          "reason": "Algorithmic deduplication: already published in history"
+        },
+        {
+          "title": "puppeteer",
+          "url": "https://github.com/puppeteer/puppeteer",
+          "outcome": "dropped",
+          "reason": "Algorithmic deduplication: already published in history"
+        },
+        {
+          "title": "OpenHands",
+          "url": "https://github.com/OpenHands/OpenHands",
+          "outcome": "dropped",
+          "reason": "Algorithmic deduplication: already published in history"
+        },
+        {
+          "title": "The State of AI and Software Engineering: Code is Cheaper but Expertise are More Valuable [Full Book]",
+          "url": "https://www.freecodecamp.org/news/the-state-of-ai-and-software-engineering-book/",
+          "outcome": "dropped",
+          "reason": "Algorithmic deduplication: already published in history"
+        },
+        {
+          "title": "Master Modern React Routing: TanStack Router Crash Course",
+          "url": "https://www.freecodecamp.org/news/master-modern-react-routing-tanstack-router-crash-course/",
+          "outcome": "dropped",
+          "reason": "Algorithmic deduplication: already published in history"
+        },
+        {
+          "title": "How to Create System Design Diagrams using Python",
+          "url": "https://www.freecodecamp.org/news/how-to-create-system-design-diagrams-using-python/",
+          "outcome": "dropped",
+          "reason": "Algorithmic deduplication: already published in history"
+        },
+        {
+          "title": "Build and Train a 25M Parameter LLM From Scratch on Your CPU",
+          "url": "https://www.freecodecamp.org/news/build-and-train-a-25m-parameter-llm-from-scratch-on-your-cpu/",
+          "outcome": "dropped",
+          "reason": "Algorithmic deduplication: already published in history"
+        },
+        {
+          "title": "What Claude Code Can and Can't Do with Full Access Inside a Docker Sandbox",
+          "url": "https://www.freecodecamp.org/news/claude-code-in-a-docker-sandbox/",
+          "outcome": "dropped",
+          "reason": "Algorithmic deduplication: already published in history"
+        },
+        {
+          "title": "awesome-tauri-apps",
+          "url": "https://github.com/chrysler-stone/awesome-tauri-apps",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Agent-For-Dummies",
+          "url": "https://github.com/agent-for-dummys/Agent-For-Dummies",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "roblox-game-copier-blueprint-lab",
+          "url": "https://github.com/monw3249-rgb/roblox-game-copier-blueprint-lab",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "PecoFence",
+          "url": "https://github.com/DayuanJiang/PecoFence",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "WinShun",
+          "url": "https://github.com/LingCore/WinShun",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "betterwispr",
+          "url": "https://github.com/opennookorg/betterwispr",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "no-tipe-releases",
+          "url": "https://github.com/Darlingfxx02/no-tipe-releases",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Tapbar",
+          "url": "https://github.com/Earendel-lab/Tapbar",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "rea",
+          "url": "https://github.com/morluto/rea",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "ponytail",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Sound \u2013 Bartosz Ciechanowski (2022)",
+          "url": "https://ciechanow.ski/sound/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs",
+          "url": "https://github.com/android/ndk/issues/2260",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Grace Hopper Celebration Cancelled",
+          "url": "https://anitab.org/press-release",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+          "url": "https://guitoro.com/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Felix Rieseberg Homepage",
+          "url": "https://felixrieseberg.com/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)",
+          "url": "https://www.openculture.com/2026/10/a-900-page-pre-pantone-guide-to-color-from-1692.html",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "The United Kingdom generates less electricity per person than in the 1970s",
+          "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Recreational Programming",
+          "url": "https://www.cphiri.dev/presentations/recreational-programming",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Show HN: How random are you?",
+          "url": "https://lab.specr.net/rigged-draw/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "MIT class project turns into an FDA-cleared treatment for tremors",
+          "url": "https://news.mit.edu/2026/mit-class-project-turns-into-fda-cleared-treatment-for-tremors-1002",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "AlphaNIST",
+          "url": "https://alpha-nist.github.io/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "OpenAI engineer arrested in bugging of executive conference room",
+          "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Apple HomeView",
+          "url": "https://www.apple.com/apple-homeview/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Show HN: XY Music Notation",
+          "url": "https://music.xy.dev/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "AI is a tool and using it well takes skill",
+          "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Thunderbird for iOS",
+          "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "A 3% zoom hid a one-pixel rounding gap for 372 cards, then cut the first letters off the 373rd",
+          "url": "https://dev.to/daniel_pertu/a-3-zoom-hid-a-one-pixel-rounding-gap-for-372-cards-then-cut-the-first-letters-off-the-373rd-fpg",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Four files in our monorepo print the same legally required sentence, and three of them disagree about its wording",
+          "url": "https://dev.to/daniel_pertu/four-files-in-our-monorepo-print-the-same-legally-required-sentence-and-three-of-them-disagree-dpo",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "I Simulated Whether Cutting Supply Chains Can Stop a War. The Math Says: Sometimes. Here's Exactly When.\"",
+          "url": "https://dev.to/alirezaai/i-simulated-whether-cutting-supply-chains-can-stop-a-war-the-math-says-sometimes-heres-exactly-l01",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "\"4200subscribers\": the content said \"black\" and the renderer believed it",
+          "url": "https://dev.to/daniel_pertu/4200subscribers-the-content-said-black-and-the-renderer-believed-it-4m82",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Um registro de vers\u00f5es para estudar a documenta\u00e7\u00e3o da Duraqex",
+          "url": "https://dev.to/duarteseabra/um-registro-de-versoes-para-estudar-a-documentacao-da-duraqex-222j",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Our favicon is 1,322 bytes, our touch icon is rasterised from it at build time, and we serve no favicon.ico at all",
+          "url": "https://dev.to/daniel_pertu/our-favicon-is-1322-bytes-our-touch-icon-is-rasterised-from-it-at-build-time-and-we-serve-no-4dcm",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "PaperPilot: A Privacy-First Document Assistant for Freelancers",
+          "url": "https://dev.to/prince20073/paperpilot-a-privacy-first-document-assistant-for-freelancers-18f0",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "How to Keep a File for Minutes, Not Years, on Cloud Run",
+          "url": "https://www.freecodecamp.org/news/how-to-keep-a-file-for-minutes-not-years-on-cloud-run/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "What to Do When Your Constants Are Someone Else's Law",
+          "url": "https://www.freecodecamp.org/news/what-to-do-when-your-constants-are-someone-else-s-law/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "How to Measure Conformance Between an Operational Specification and Its Execution",
+          "url": "https://www.freecodecamp.org/news/measure-conformance-operational-specification-execution/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "How to Add Structured Data (JSON-LD) to a Next.js Site and Validate It",
+          "url": "https://www.freecodecamp.org/news/nextjs-json-ld-structured-data/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Create Scalable AI Automations with n8n",
+          "url": "https://www.freecodecamp.org/news/create-scalable-ai-automations-with-n8n/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Rambox",
+          "url": "https://www.producthunt.com/products/rambox",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Etchv",
+          "url": "https://www.producthunt.com/products/etchv",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Inferock",
+          "url": "https://www.producthunt.com/products/inferock",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Blade",
+          "url": "https://www.producthunt.com/products/blade-4",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Apple HomePod mini 2",
+          "url": "https://www.producthunt.com/products/apple-homepod-mini",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Pancake",
+          "url": "https://www.producthunt.com/products/pancake-6",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "AdAnt 2.0",
+          "url": "https://www.producthunt.com/products/adant-ai",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Table Canon",
+          "url": "https://www.producthunt.com/products/table-canon-ttrpg-campaign-memory",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Nimble",
+          "url": "https://www.producthunt.com/products/nimble-5",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "SlashDocs by Razorpay",
+          "url": "https://www.producthunt.com/products/razorpay",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Make0 Brain",
+          "url": "https://www.producthunt.com/products/make0-brain",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Monthly Getting Started / Web Dev Career Thread",
+          "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Monthly Getting Started / Web Dev Career Thread",
+          "url": "https://www.reddit.com/r/webdev/comments/1wuxkge/monthly_getting_started_web_dev_career_thread/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "What does a normal sized PR look like on your team these days?",
+          "url": "https://www.reddit.com/r/webdev/comments/1x504mq/what_does_a_normal_sized_pr_look_like_on_your/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Finding it impossible to solve problems",
+          "url": "https://www.reddit.com/r/webdev/comments/1x5hwby/finding_it_impossible_to_solve_problems/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "What's out there beyond webdev, since the rise of AI?",
+          "url": "https://www.reddit.com/r/webdev/comments/1x4rvjt/whats_out_there_beyond_webdev_since_the_rise_of_ai/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Unable to save the picture on XAMPP image folder",
+          "url": "https://www.reddit.com/r/webdev/comments/1x5l5d7/unable_to_save_the_picture_on_xampp_image_folder/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Are 5-6 round interviews the normal now?",
+          "url": "https://www.reddit.com/r/webdev/comments/1x4m79m/are_56_round_interviews_the_normal_now/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Is a vibe coding first mentality normal at agencies?",
+          "url": "https://www.reddit.com/r/webdev/comments/1x5aekp/is_a_vibe_coding_first_mentality_normal_at/",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "vercel/next.js Release: v16.5.0-canary.10",
+          "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.10",
+          "outcome": "rejected",
+          "reason": "Filtered out by skeptic LLM"
+        },
+        {
+          "title": "Gemini 4 Argon",
+          "url": "https://deepmind.google/models/gemini/",
+          "outcome": "kept",
+          "reason": "Passed skeptic relevance filter"
+        },
+        {
+          "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+          "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+          "outcome": "kept",
+          "reason": "Passed skeptic relevance filter"
+        },
+        {
+          "title": "Redesigning source control at Anthropic",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+          "outcome": "kept",
+          "reason": "Passed skeptic relevance filter"
+        },
+        {
+          "title": "11 year old unsoundness bugs found in Rust borrow checker",
+          "url": "https://github.com/rust-lang/rust/issues/164250",
+          "outcome": "kept",
+          "reason": "Passed skeptic relevance filter"
+        },
+        {
+          "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+          "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+          "outcome": "kept",
+          "reason": "Passed skeptic relevance filter"
+        },
+        {
+          "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+          "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+          "outcome": "kept",
+          "reason": "Passed skeptic relevance filter"
+        },
+        {
+          "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+          "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+          "outcome": "kept",
+          "reason": "Passed skeptic relevance filter"
+        },
+        {
+          "title": "EditUI",
+          "url": "https://www.producthunt.com/products/editui",
+          "outcome": "kept",
+          "reason": "Passed skeptic relevance filter"
+        }
+      ],
+      "verifier": [
+        {
+          "title": "EditUI",
+          "url": "https://www.producthunt.com/products/editui",
+          "outcome": "UNVERIFIABLE",
+          "reason": "No primary documentation available (content_source: description_only)"
+        },
+        {
+          "title": "Gemini 4 Argon",
+          "url": "https://deepmind.google/models/gemini/",
+          "outcome": "INVALID",
+          "reason": "Reference documentation does not mention Gemini 4 Argon."
+        },
+        {
+          "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+          "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+          "outcome": "VALID",
+          "reason": "Documentation confirms Ledger verified a hardware spy chip implant behind crypto thefts."
+        },
+        {
+          "title": "Redesigning source control at Anthropic",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+          "outcome": "VALID",
+          "reason": "Documentation verifies Anthropic's post on redesigning their internal source control system."
+        },
+        {
+          "title": "11 year old unsoundness bugs found in Rust borrow checker",
+          "url": "https://github.com/rust-lang/rust/issues/164250",
+          "outcome": "INVALID",
+          "reason": "Reference documentation does not mention or substantiate borrow checker unsoundness bugs."
+        },
+        {
+          "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+          "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+          "outcome": "VALID",
+          "reason": "Text matches the referenced article verbatim."
+        },
+        {
+          "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+          "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+          "outcome": "VALID",
+          "reason": "Text matches the referenced article verbatim."
+        },
+        {
+          "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+          "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+          "outcome": "VALID",
+          "reason": "Text matches the referenced article verbatim."
+        }
+      ],
+      "analyst": [
+        {
+          "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+          "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+          "outcome": "kept",
+          "verdict": "WATCH",
+          "reason": "Demonstrates critical hardware supply-chain vulnerabilities where physical tampering bypasses software protections. It highlights why security models must account for third-party distributors and phys"
+        },
+        {
+          "title": "Redesigning source control at Anthropic",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+          "outcome": "kept",
+          "verdict": "READ",
+          "reason": "Reveals how AI code generation shifts the engineering bottleneck from writing code to VCS and CI infrastructure as daily merges scale over tenfold. It offers a rare look at why standard distributed Gi"
+        },
+        {
+          "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+          "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+          "outcome": "kept",
+          "verdict": "READ",
+          "reason": "Demystifies content-addressing, the foundational computer science concept powering Git, Docker, and distributed storage systems. Mastering how cryptographic hashes replace location-based paths clarifi"
+        },
+        {
+          "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+          "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+          "outcome": "kept",
+          "verdict": "INTEGRATE",
+          "reason": "Demonstrates how automated evaluation suites combine deterministic and LLM-graded checks to expose flawed assumptions in agentic workflows. It proves that ad-hoc manual testing is insufficient when bu"
+        },
+        {
+          "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+          "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+          "outcome": "kept",
+          "verdict": "INTEGRATE",
+          "reason": "Explains how mismatched loading skeletons create layout drift and harm Core Web Vitals via Cumulative Layout Shift (CLS). Treating skeletons as exact box-model measurements rather than visual approxim"
+        }
+      ],
+      "editor": [
+        {
+          "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+          "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+          "outcome": "kept",
+          "reason": "Selected for final brief"
+        },
+        {
+          "title": "Redesigning source control at Anthropic",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+          "outcome": "kept",
+          "reason": "Selected for final brief"
+        },
+        {
+          "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+          "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+          "outcome": "kept",
+          "reason": "Selected for final brief"
+        },
+        {
+          "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+          "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+          "outcome": "kept",
+          "reason": "Selected for final brief"
+        },
+        {
+          "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+          "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+          "outcome": "kept",
+          "reason": "Selected for final brief"
+        }
+      ]
+    }
+  },
+  "decisions": {
+    "skeptic": [
+      {
+        "title": "tws-labs",
+        "url": "https://github.com/TrainWithShubham/tws-labs",
+        "outcome": "dropped",
+        "reason": "Algorithmic deduplication: already published in history"
+      },
+      {
+        "title": "graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "outcome": "dropped",
+        "reason": "Algorithmic deduplication: already published in history"
+      },
+      {
+        "title": "puppeteer",
+        "url": "https://github.com/puppeteer/puppeteer",
+        "outcome": "dropped",
+        "reason": "Algorithmic deduplication: already published in history"
+      },
+      {
+        "title": "OpenHands",
+        "url": "https://github.com/OpenHands/OpenHands",
+        "outcome": "dropped",
+        "reason": "Algorithmic deduplication: already published in history"
+      },
+      {
+        "title": "The State of AI and Software Engineering: Code is Cheaper but Expertise are More Valuable [Full Book]",
+        "url": "https://www.freecodecamp.org/news/the-state-of-ai-and-software-engineering-book/",
+        "outcome": "dropped",
+        "reason": "Algorithmic deduplication: already published in history"
+      },
+      {
+        "title": "Master Modern React Routing: TanStack Router Crash Course",
+        "url": "https://www.freecodecamp.org/news/master-modern-react-routing-tanstack-router-crash-course/",
+        "outcome": "dropped",
+        "reason": "Algorithmic deduplication: already published in history"
+      },
+      {
+        "title": "How to Create System Design Diagrams using Python",
+        "url": "https://www.freecodecamp.org/news/how-to-create-system-design-diagrams-using-python/",
+        "outcome": "dropped",
+        "reason": "Algorithmic deduplication: already published in history"
+      },
+      {
+        "title": "Build and Train a 25M Parameter LLM From Scratch on Your CPU",
+        "url": "https://www.freecodecamp.org/news/build-and-train-a-25m-parameter-llm-from-scratch-on-your-cpu/",
+        "outcome": "dropped",
+        "reason": "Algorithmic deduplication: already published in history"
+      },
+      {
+        "title": "What Claude Code Can and Can't Do with Full Access Inside a Docker Sandbox",
+        "url": "https://www.freecodecamp.org/news/claude-code-in-a-docker-sandbox/",
+        "outcome": "dropped",
+        "reason": "Algorithmic deduplication: already published in history"
+      },
+      {
+        "title": "awesome-tauri-apps",
+        "url": "https://github.com/chrysler-stone/awesome-tauri-apps",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Agent-For-Dummies",
+        "url": "https://github.com/agent-for-dummys/Agent-For-Dummies",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "roblox-game-copier-blueprint-lab",
+        "url": "https://github.com/monw3249-rgb/roblox-game-copier-blueprint-lab",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "PecoFence",
+        "url": "https://github.com/DayuanJiang/PecoFence",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "WinShun",
+        "url": "https://github.com/LingCore/WinShun",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "betterwispr",
+        "url": "https://github.com/opennookorg/betterwispr",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "no-tipe-releases",
+        "url": "https://github.com/Darlingfxx02/no-tipe-releases",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Tapbar",
+        "url": "https://github.com/Earendel-lab/Tapbar",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "rea",
+        "url": "https://github.com/morluto/rea",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Sound \u2013 Bartosz Ciechanowski (2022)",
+        "url": "https://ciechanow.ski/sound/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs",
+        "url": "https://github.com/android/ndk/issues/2260",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Grace Hopper Celebration Cancelled",
+        "url": "https://anitab.org/press-release",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+        "url": "https://guitoro.com/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Felix Rieseberg Homepage",
+        "url": "https://felixrieseberg.com/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)",
+        "url": "https://www.openculture.com/2026/10/a-900-page-pre-pantone-guide-to-color-from-1692.html",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "The United Kingdom generates less electricity per person than in the 1970s",
+        "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Recreational Programming",
+        "url": "https://www.cphiri.dev/presentations/recreational-programming",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Show HN: How random are you?",
+        "url": "https://lab.specr.net/rigged-draw/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "MIT class project turns into an FDA-cleared treatment for tremors",
+        "url": "https://news.mit.edu/2026/mit-class-project-turns-into-fda-cleared-treatment-for-tremors-1002",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "AlphaNIST",
+        "url": "https://alpha-nist.github.io/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "OpenAI engineer arrested in bugging of executive conference room",
+        "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Apple HomeView",
+        "url": "https://www.apple.com/apple-homeview/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Show HN: XY Music Notation",
+        "url": "https://music.xy.dev/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "AI is a tool and using it well takes skill",
+        "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Thunderbird for iOS",
+        "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "A 3% zoom hid a one-pixel rounding gap for 372 cards, then cut the first letters off the 373rd",
+        "url": "https://dev.to/daniel_pertu/a-3-zoom-hid-a-one-pixel-rounding-gap-for-372-cards-then-cut-the-first-letters-off-the-373rd-fpg",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Four files in our monorepo print the same legally required sentence, and three of them disagree about its wording",
+        "url": "https://dev.to/daniel_pertu/four-files-in-our-monorepo-print-the-same-legally-required-sentence-and-three-of-them-disagree-dpo",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "I Simulated Whether Cutting Supply Chains Can Stop a War. The Math Says: Sometimes. Here's Exactly When.\"",
+        "url": "https://dev.to/alirezaai/i-simulated-whether-cutting-supply-chains-can-stop-a-war-the-math-says-sometimes-heres-exactly-l01",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "\"4200subscribers\": the content said \"black\" and the renderer believed it",
+        "url": "https://dev.to/daniel_pertu/4200subscribers-the-content-said-black-and-the-renderer-believed-it-4m82",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Um registro de vers\u00f5es para estudar a documenta\u00e7\u00e3o da Duraqex",
+        "url": "https://dev.to/duarteseabra/um-registro-de-versoes-para-estudar-a-documentacao-da-duraqex-222j",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Our favicon is 1,322 bytes, our touch icon is rasterised from it at build time, and we serve no favicon.ico at all",
+        "url": "https://dev.to/daniel_pertu/our-favicon-is-1322-bytes-our-touch-icon-is-rasterised-from-it-at-build-time-and-we-serve-no-4dcm",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "PaperPilot: A Privacy-First Document Assistant for Freelancers",
+        "url": "https://dev.to/prince20073/paperpilot-a-privacy-first-document-assistant-for-freelancers-18f0",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "How to Keep a File for Minutes, Not Years, on Cloud Run",
+        "url": "https://www.freecodecamp.org/news/how-to-keep-a-file-for-minutes-not-years-on-cloud-run/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "What to Do When Your Constants Are Someone Else's Law",
+        "url": "https://www.freecodecamp.org/news/what-to-do-when-your-constants-are-someone-else-s-law/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "How to Measure Conformance Between an Operational Specification and Its Execution",
+        "url": "https://www.freecodecamp.org/news/measure-conformance-operational-specification-execution/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "How to Add Structured Data (JSON-LD) to a Next.js Site and Validate It",
+        "url": "https://www.freecodecamp.org/news/nextjs-json-ld-structured-data/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Create Scalable AI Automations with n8n",
+        "url": "https://www.freecodecamp.org/news/create-scalable-ai-automations-with-n8n/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Rambox",
+        "url": "https://www.producthunt.com/products/rambox",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Etchv",
+        "url": "https://www.producthunt.com/products/etchv",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Inferock",
+        "url": "https://www.producthunt.com/products/inferock",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Blade",
+        "url": "https://www.producthunt.com/products/blade-4",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Apple HomePod mini 2",
+        "url": "https://www.producthunt.com/products/apple-homepod-mini",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Pancake",
+        "url": "https://www.producthunt.com/products/pancake-6",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "AdAnt 2.0",
+        "url": "https://www.producthunt.com/products/adant-ai",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Table Canon",
+        "url": "https://www.producthunt.com/products/table-canon-ttrpg-campaign-memory",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Nimble",
+        "url": "https://www.producthunt.com/products/nimble-5",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "SlashDocs by Razorpay",
+        "url": "https://www.producthunt.com/products/razorpay",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Make0 Brain",
+        "url": "https://www.producthunt.com/products/make0-brain",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Monthly Getting Started / Web Dev Career Thread",
+        "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Monthly Getting Started / Web Dev Career Thread",
+        "url": "https://www.reddit.com/r/webdev/comments/1wuxkge/monthly_getting_started_web_dev_career_thread/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "What does a normal sized PR look like on your team these days?",
+        "url": "https://www.reddit.com/r/webdev/comments/1x504mq/what_does_a_normal_sized_pr_look_like_on_your/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Finding it impossible to solve problems",
+        "url": "https://www.reddit.com/r/webdev/comments/1x5hwby/finding_it_impossible_to_solve_problems/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "What's out there beyond webdev, since the rise of AI?",
+        "url": "https://www.reddit.com/r/webdev/comments/1x4rvjt/whats_out_there_beyond_webdev_since_the_rise_of_ai/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Unable to save the picture on XAMPP image folder",
+        "url": "https://www.reddit.com/r/webdev/comments/1x5l5d7/unable_to_save_the_picture_on_xampp_image_folder/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Are 5-6 round interviews the normal now?",
+        "url": "https://www.reddit.com/r/webdev/comments/1x4m79m/are_56_round_interviews_the_normal_now/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Is a vibe coding first mentality normal at agencies?",
+        "url": "https://www.reddit.com/r/webdev/comments/1x5aekp/is_a_vibe_coding_first_mentality_normal_at/",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "vercel/next.js Release: v16.5.0-canary.10",
+        "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.10",
+        "outcome": "rejected",
+        "reason": "Filtered out by skeptic LLM"
+      },
+      {
+        "title": "Gemini 4 Argon",
+        "url": "https://deepmind.google/models/gemini/",
+        "outcome": "kept",
+        "reason": "Passed skeptic relevance filter"
+      },
+      {
+        "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+        "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+        "outcome": "kept",
+        "reason": "Passed skeptic relevance filter"
+      },
+      {
+        "title": "Redesigning source control at Anthropic",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "outcome": "kept",
+        "reason": "Passed skeptic relevance filter"
+      },
+      {
+        "title": "11 year old unsoundness bugs found in Rust borrow checker",
+        "url": "https://github.com/rust-lang/rust/issues/164250",
+        "outcome": "kept",
+        "reason": "Passed skeptic relevance filter"
+      },
+      {
+        "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+        "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+        "outcome": "kept",
+        "reason": "Passed skeptic relevance filter"
+      },
+      {
+        "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+        "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+        "outcome": "kept",
+        "reason": "Passed skeptic relevance filter"
+      },
+      {
+        "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+        "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+        "outcome": "kept",
+        "reason": "Passed skeptic relevance filter"
+      },
+      {
+        "title": "EditUI",
+        "url": "https://www.producthunt.com/products/editui",
+        "outcome": "kept",
+        "reason": "Passed skeptic relevance filter"
+      }
+    ],
+    "verifier": [
+      {
+        "title": "EditUI",
+        "url": "https://www.producthunt.com/products/editui",
+        "outcome": "UNVERIFIABLE",
+        "reason": "No primary documentation available (content_source: description_only)"
+      },
+      {
+        "title": "Gemini 4 Argon",
+        "url": "https://deepmind.google/models/gemini/",
+        "outcome": "INVALID",
+        "reason": "Reference documentation does not mention Gemini 4 Argon."
+      },
+      {
+        "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+        "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+        "outcome": "VALID",
+        "reason": "Documentation confirms Ledger verified a hardware spy chip implant behind crypto thefts."
+      },
+      {
+        "title": "Redesigning source control at Anthropic",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "outcome": "VALID",
+        "reason": "Documentation verifies Anthropic's post on redesigning their internal source control system."
+      },
+      {
+        "title": "11 year old unsoundness bugs found in Rust borrow checker",
+        "url": "https://github.com/rust-lang/rust/issues/164250",
+        "outcome": "INVALID",
+        "reason": "Reference documentation does not mention or substantiate borrow checker unsoundness bugs."
+      },
+      {
+        "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+        "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+        "outcome": "VALID",
+        "reason": "Text matches the referenced article verbatim."
+      },
+      {
+        "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+        "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+        "outcome": "VALID",
+        "reason": "Text matches the referenced article verbatim."
+      },
+      {
+        "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+        "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+        "outcome": "VALID",
+        "reason": "Text matches the referenced article verbatim."
+      }
+    ],
+    "analyst": [
+      {
+        "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+        "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+        "outcome": "kept",
+        "verdict": "WATCH",
+        "reason": "Demonstrates critical hardware supply-chain vulnerabilities where physical tampering bypasses software protections. It highlights why security models must account for third-party distributors and phys"
+      },
+      {
+        "title": "Redesigning source control at Anthropic",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "outcome": "kept",
+        "verdict": "READ",
+        "reason": "Reveals how AI code generation shifts the engineering bottleneck from writing code to VCS and CI infrastructure as daily merges scale over tenfold. It offers a rare look at why standard distributed Gi"
+      },
+      {
+        "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+        "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+        "outcome": "kept",
+        "verdict": "READ",
+        "reason": "Demystifies content-addressing, the foundational computer science concept powering Git, Docker, and distributed storage systems. Mastering how cryptographic hashes replace location-based paths clarifi"
+      },
+      {
+        "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+        "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+        "outcome": "kept",
+        "verdict": "INTEGRATE",
+        "reason": "Demonstrates how automated evaluation suites combine deterministic and LLM-graded checks to expose flawed assumptions in agentic workflows. It proves that ad-hoc manual testing is insufficient when bu"
+      },
+      {
+        "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+        "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+        "outcome": "kept",
+        "verdict": "INTEGRATE",
+        "reason": "Explains how mismatched loading skeletons create layout drift and harm Core Web Vitals via Cumulative Layout Shift (CLS). Treating skeletons as exact box-model measurements rather than visual approxim"
+      }
+    ],
+    "editor": [
+      {
+        "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+        "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+        "outcome": "kept",
+        "reason": "Selected for final brief"
+      },
+      {
+        "title": "Redesigning source control at Anthropic",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "outcome": "kept",
+        "reason": "Selected for final brief"
+      },
+      {
+        "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+        "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+        "outcome": "kept",
+        "reason": "Selected for final brief"
+      },
+      {
+        "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+        "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+        "outcome": "kept",
+        "reason": "Selected for final brief"
+      },
+      {
+        "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+        "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+        "outcome": "kept",
+        "reason": "Selected for final brief"
+      }
+    ]
+  },
+  "raw_signals": [
+    {
+      "title": "tws-labs",
+      "url": "https://github.com/TrainWithShubham/tws-labs",
+      "source": "GitHub",
+      "description": "Learn DevOps, Cloud and AI by doing: a real terminal, tasks graded on real machine state. Runs on Windows, macOS and Linux."
+    },
+    {
+      "title": "awesome-tauri-apps",
+      "url": "https://github.com/chrysler-stone/awesome-tauri-apps",
+      "source": "GitHub",
+      "description": "Curated list of desktop and mobile apps built with Tauri."
+    },
+    {
+      "title": "Agent-For-Dummies",
+      "url": "https://github.com/agent-for-dummys/Agent-For-Dummies",
+      "source": "GitHub",
+      "description": "Agent/RAG/AI\u5e94\u7528\uff1aAgent\u5b66\u4e60\u7b14\u8bb0 \u56fe\u6587\u7ed3\u5408\u96f6\u57fa\u7840\u5165\u95e8\u5b66\u4e60\u7b14\u8bb0"
+    },
+    {
+      "title": "roblox-game-copier-blueprint-lab",
+      "url": "https://github.com/monw3249-rgb/roblox-game-copier-blueprint-lab",
+      "source": "GitHub",
+      "description": "Beginner Roblox Game Copier Guide 2026: Safe Clone Workflow for Authorized Projects"
+    },
+    {
+      "title": "PecoFence",
+      "url": "https://github.com/DayuanJiang/PecoFence",
+      "source": "GitHub",
+      "description": "A free, open-source Stardock Fences alternative for Windows 11. Glass fences, live folders, tabs, Peek. Rust, ten languages, portable."
+    },
+    {
+      "title": "WinShun",
+      "url": "https://github.com/LingCore/WinShun",
+      "source": "GitHub",
+      "description": "Win\u987a\uff1a\u514d\u8d39\u5f00\u6e90\u7684 Windows \u5feb\u901f\u641c\u7d22\u542f\u52a8\u5668\u3002\u53cc\u51fb Ctrl\uff0c\u62fc\u97f3\u79d2\u641c\u6587\u4ef6\u3001\u5168\u6587\u641c\u7d22 Word/Excel/PDF\u3001\u526a\u8d34\u677f\u5386\u53f2\uff08\u4ee3\u66ff Win+V\uff09\u3001\u5bf9\u8bdd\u6846\u641c\u7d22\u3001\u4efb\u52a1\u680f\u641c\u7d22\u3001\u63d2\u4ef6\u3001AI \u52a9\u624b MCP\u3002Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative."
+    },
+    {
+      "title": "betterwispr",
+      "url": "https://github.com/opennookorg/betterwispr",
+      "source": "GitHub",
+      "description": "Free, open-source, local-first dictation app for macOS. Hold a shortcut, speak, and text is typed into any app. On-device speech-to-text with Whisper, Parakeet and Apple speech. Private, offline, open-source Wispr Flow alternative."
+    },
+    {
+      "title": "no-tipe-releases",
+      "url": "https://github.com/Darlingfxx02/no-tipe-releases",
+      "source": "GitHub",
+      "description": "Free desktop dictation for macOS and Windows. Speak messages, emails and notes into your apps with local or cloud speech recognition."
+    },
+    {
+      "title": "Tapbar",
+      "url": "https://github.com/Earendel-lab/Tapbar",
+      "source": "GitHub",
+      "description": "Launch any app or trigger quick actions from the status bar or anywhere on your screen."
+    },
+    {
+      "title": "rea",
+      "url": "https://github.com/morluto/rea",
+      "source": "GitHub",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries."
+    },
+    {
+      "title": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "source": "GitHub",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."
+    },
+    {
+      "title": "graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "source": "GitHub",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store."
+    },
+    {
+      "title": "puppeteer",
+      "url": "https://github.com/puppeteer/puppeteer",
+      "source": "GitHub",
+      "description": "JavaScript API for Chrome and Firefox"
+    },
+    {
+      "title": "OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "source": "GitHub",
+      "description": "\ud83d\ude4c OpenHands: AI-Driven Development"
+    },
+    {
+      "title": "Gemini 4 Argon",
+      "url": "https://deepmind.google/models/gemini/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 1269). Title: Gemini 4 Argon."
+    },
+    {
+      "title": "Sound \u2013 Bartosz Ciechanowski (2022)",
+      "url": "https://ciechanow.ski/sound/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 108). Title: Sound \u2013 Bartosz Ciechanowski (2022)."
+    },
+    {
+      "title": "AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs",
+      "url": "https://github.com/android/ndk/issues/2260",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 221). Title: AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs."
+    },
+    {
+      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 668). Title: Ledger confirms spy chip implant behind wallet crypto thefts."
+    },
+    {
+      "title": "Grace Hopper Celebration Cancelled",
+      "url": "https://anitab.org/press-release",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 179). Title: Grace Hopper Celebration Cancelled."
+    },
+    {
+      "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+      "url": "https://guitoro.com/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 420). Title: Show HN: Guitoro, a virtual guitar you strum with your keyboard."
+    },
+    {
+      "title": "Felix Rieseberg Homepage",
+      "url": "https://felixrieseberg.com/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 178). Title: Felix Rieseberg Homepage."
+    },
+    {
+      "title": "900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)",
+      "url": "https://www.openculture.com/2026/10/a-900-page-pre-pantone-guide-to-color-from-1692.html",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 158). Title: 900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)."
+    },
+    {
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 757). Title: Redesigning source control at Anthropic."
+    },
+    {
+      "title": "The United Kingdom generates less electricity per person than in the 1970s",
+      "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 301). Title: The United Kingdom generates less electricity per person than in the 1970s."
+    },
+    {
+      "title": "Recreational Programming",
+      "url": "https://www.cphiri.dev/presentations/recreational-programming",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 173). Title: Recreational Programming."
+    },
+    {
+      "title": "Show HN: How random are you?",
+      "url": "https://lab.specr.net/rigged-draw/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 141). Title: Show HN: How random are you?."
+    },
+    {
+      "title": "MIT class project turns into an FDA-cleared treatment for tremors",
+      "url": "https://news.mit.edu/2026/mit-class-project-turns-into-fda-cleared-treatment-for-tremors-1002",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 207). Title: MIT class project turns into an FDA-cleared treatment for tremors."
+    },
+    {
+      "title": "AlphaNIST",
+      "url": "https://alpha-nist.github.io/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 71). Title: AlphaNIST."
+    },
+    {
+      "title": "OpenAI engineer arrested in bugging of executive conference room",
+      "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 566). Title: OpenAI engineer arrested in bugging of executive conference room."
+    },
+    {
+      "title": "Apple HomeView",
+      "url": "https://www.apple.com/apple-homeview/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 723). Title: Apple HomeView."
+    },
+    {
+      "title": "Show HN: XY Music Notation",
+      "url": "https://music.xy.dev/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 69). Title: Show HN: XY Music Notation."
+    },
+    {
+      "title": "AI is a tool and using it well takes skill",
+      "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 675). Title: AI is a tool and using it well takes skill."
+    },
+    {
+      "title": "11 year old unsoundness bugs found in Rust borrow checker",
+      "url": "https://github.com/rust-lang/rust/issues/164250",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 719). Title: 11 year old unsoundness bugs found in Rust borrow checker."
+    },
+    {
+      "title": "Thunderbird for iOS",
+      "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
+      "source": "Hacker News",
+      "description": "Hacker News top story (Score: 435). Title: Thunderbird for iOS."
+    },
+    {
+      "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+      "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+      "source": "Dev.to",
+      "description": "Let me make you a small promise, because it's worth your fifteen minutes.\n\nThere's an idea you rely on dozens of times a day \u2014 every time you make a commit, every time you pull an image \u2014 and you've almost certainly never seen it directly. It hides underneath the tools, doing its work quietly, while..."
+    },
+    {
+      "title": "A 3% zoom hid a one-pixel rounding gap for 372 cards, then cut the first letters off the 373rd",
+      "url": "https://dev.to/daniel_pertu/a-3-zoom-hid-a-one-pixel-rounding-gap-for-372-cards-then-cut-the-first-letters-off-the-373rd-fpg",
+      "source": "Dev.to",
+      "description": "A while ago I wrote about\nputting a real screenshot at the top of 372 practice test cards:\na dev-only capture route, a crop script, and a manifest the build generates so a\ncard can never point at a file that is not there.\n\nThis post is what happened when a second kind of content needed the same\ntrea..."
+    },
+    {
+      "title": "Four files in our monorepo print the same legally required sentence, and three of them disagree about its wording",
+      "url": "https://dev.to/daniel_pertu/four-files-in-our-monorepo-print-the-same-legally-required-sentence-and-three-of-them-disagree-dpo",
+      "source": "Dev.to",
+      "description": "Munchable answers questions about packaged food for people with gut conditions, which means a certain amount of its copy is not copy. It is a requirement. \"Not a medical device\", \"always read the physical label\", \"a warning is not an all clear\": those sentences have to be on the screen, they have to..."
+    },
+    {
+      "title": "I Simulated Whether Cutting Supply Chains Can Stop a War. The Math Says: Sometimes. Here's Exactly When.\"",
+      "url": "https://dev.to/alirezaai/i-simulated-whether-cutting-supply-chains-can-stop-a-war-the-math-says-sometimes-heres-exactly-l01",
+      "source": "Dev.to",
+      "description": "Every engineer knows this feeling: you find the single point of failure in someone else's system and think, \"If I just cut that one dependency, the whole thing stops.\"\n\nNow scale that thought up to a military. Fuel. Refinery catalysts. Gallium. Neodymium magnets. Chips. Cut the chokepoints, and the ..."
+    },
+    {
+      "title": "\"4200subscribers\": the content said \"black\" and the renderer believed it",
+      "url": "https://dev.to/daniel_pertu/4200subscribers-the-content-said-black-and-the-renderer-believed-it-4m82",
+      "source": "Dev.to",
+      "description": "Our numerical reasoning practice shows you source material (a table, a bar\nchart, a line graph) and asks you questions about it. The content that drives\nthose charts carries a unit alongside each value, because \"4200\" on its own\nmeans nothing and \"4200 subscribers\" does.\n\nFor a while, several of our..."
+    },
+    {
+      "title": "Um registro de vers\u00f5es para estudar a documenta\u00e7\u00e3o da Duraqex",
+      "url": "https://dev.to/duarteseabra/um-registro-de-versoes-para-estudar-a-documentacao-da-duraqex-222j",
+      "source": "Dev.to",
+      "description": "Ao acompanhar a documenta\u00e7\u00e3o da Duraqex, uso uma pergunta como orienta\u00e7\u00e3o: outra pessoa conseguiria entender exatamente qual conte\u00fado sustentou minha nota?\n\n\n\nPara isso, proponho um registro pequeno de proveni\u00eancia e vers\u00f5es. \u00c9 um m\u00e9todo de pesquisa, n\u00e3o uma ferramenta oferecida pela plataforma.\n\nOs..."
+    },
+    {
+      "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+      "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+      "source": "Dev.to",
+      "description": "Every new project I started, I wrote the same Claude Code setup by hand: a CLAUDE.md, a few guard hooks, some reviewer agents. Every template I tried gave me a web-app config with brackets to fill in, which is the wrong shape for a CLI, a Terraform repo or a smart contract.\n\nSo I built a plugin that..."
+    },
+    {
+      "title": "Our favicon is 1,322 bytes, our touch icon is rasterised from it at build time, and we serve no favicon.ico at all",
+      "url": "https://dev.to/daniel_pertu/our-favicon-is-1322-bytes-our-touch-icon-is-rasterised-from-it-at-build-time-and-we-serve-no-4dcm",
+      "source": "Dev.to",
+      "description": "Munchable is a Next.js site with a bitten chocolate chip cookie for a logo. There are three places a browser or a crawler asks for that logo, and the three answers are built differently on purpose. You can check every number in this post yourself with curl.\n\n\n  \n  \n  One drawing\n\n\n\n\n\n$ curl -sI http..."
+    },
+    {
+      "title": "PaperPilot: A Privacy-First Document Assistant for Freelancers",
+      "url": "https://dev.to/prince20073/paperpilot-a-privacy-first-document-assistant-for-freelancers-18f0",
+      "source": "Dev.to",
+      "description": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 2: Side Hustle\n\n\n  \n  \n  What I Built\n\n\nPaperPilot is a document management web application designed for freelancers and small businesses.\n\nFreelancers often waste time organizing invoices, receipts, and other business document..."
+    },
+    {
+      "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+      "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+      "source": "Dev.to",
+      "description": "A route-level loading.tsx in Next.js is the cheapest good thing you can add to\na slow page. It is also a duplicate of your layout written in grey boxes, and\nlike every duplicate it drifts.\n\nHere is the skeleton I had for our assessment centre exercise list. It looks\nfine:\n\n\n\nfunction ExerciseCardSke..."
+    },
+    {
+      "title": "How to Keep a File for Minutes, Not Years, on Cloud Run",
+      "url": "https://www.freecodecamp.org/news/how-to-keep-a-file-for-minutes-not-years-on-cloud-run/",
+      "source": "FreeCodeCamp",
+      "description": "A print job, a one-time download, or a support attachment typically only needs to exist until someone finishes with it. But most backends still store it like Google Drive: a named object, no expiry, a"
+    },
+    {
+      "title": "The State of AI and Software Engineering: Code is Cheaper but Expertise are More Valuable [Full Book]",
+      "url": "https://www.freecodecamp.org/news/the-state-of-ai-and-software-engineering-book/",
+      "source": "FreeCodeCamp",
+      "description": "A report on AI productivity, human capability, software economics, SaaS defensibility, and the future of engineering work. Between 2024 and 2026, the marginal cost of producing a line of working code"
+    },
+    {
+      "title": "What to Do When Your Constants Are Someone Else's Law",
+      "url": "https://www.freecodecamp.org/news/what-to-do-when-your-constants-are-someone-else-s-law/",
+      "source": "FreeCodeCamp",
+      "description": "A colleague once asked me why a number in my code had a comment three lines long. The number was 18. The comment said which rule it came from, which section notified it, and that it could change witho"
+    },
+    {
+      "title": "How to Measure Conformance Between an Operational Specification and Its Execution",
+      "url": "https://www.freecodecamp.org/news/measure-conformance-operational-specification-execution/",
+      "source": "FreeCodeCamp",
+      "description": "In my previous article, I explored executor independence: the idea that different execution mechanisms should be able to satisfy the same operational specification. By executor independence, I mean th"
+    },
+    {
+      "title": "How to Add Structured Data (JSON-LD) to a Next.js Site and Validate It",
+      "url": "https://www.freecodecamp.org/news/nextjs-json-ld-structured-data/",
+      "source": "FreeCodeCamp",
+      "description": "Structured data has always mattered to search engines. When a search engine reads your page, it sees HTML: a heading, some paragraphs, a date somewhere, a name somewhere else. Structured data tells it"
+    },
+    {
+      "title": "Create Scalable AI Automations with n8n",
+      "url": "https://www.freecodecamp.org/news/create-scalable-ai-automations-with-n8n/",
+      "source": "FreeCodeCamp",
+      "description": "Most automation tutorials show you how to connect two simple apps and call it a day. But building workflows that companies can actually run in production requires an entirely different skill set, one"
+    },
+    {
+      "title": "Master Modern React Routing: TanStack Router Crash Course",
+      "url": "https://www.freecodecamp.org/news/master-modern-react-routing-tanstack-router-crash-course/",
+      "source": "FreeCodeCamp",
+      "description": "Routing in modern web applications has evolved far beyond simply rendering a component based on a URL path. Developers today want end-to-end type safety, automated code splitting, seamless URL search"
+    },
+    {
+      "title": "How to Create System Design Diagrams using Python",
+      "url": "https://www.freecodecamp.org/news/how-to-create-system-design-diagrams-using-python/",
+      "source": "FreeCodeCamp",
+      "description": "Creating system architecture design diagrams is an important part of technical documentation. As system complexity grows, clarity within teams becomes even more important. But creating diagrams from s"
+    },
+    {
+      "title": "Build and Train a 25M Parameter LLM From Scratch on Your CPU",
+      "url": "https://www.freecodecamp.org/news/build-and-train-a-25m-parameter-llm-from-scratch-on-your-cpu/",
+      "source": "FreeCodeCamp",
+      "description": "You don't need a massive GPU cluster to learn how modern frontier AI works. In our new video on the freeCodeCamp.org YouTube channel, you will build, pre-train, and fine-tune a working 25-million para"
+    },
+    {
+      "title": "What Claude Code Can and Can't Do with Full Access Inside a Docker Sandbox",
+      "url": "https://www.freecodecamp.org/news/claude-code-in-a-docker-sandbox/",
+      "source": "FreeCodeCamp",
+      "description": "Claude Code can do more than suggest a fix. It can edit files, install dependencies, run tests, and start your application. But letting it finish a task on its own raises a practical question: how muc"
+    },
+    {
+      "title": "Rambox",
+      "url": "https://www.producthunt.com/products/rambox",
+      "source": "Product Hunt",
+      "description": "Ready-to-use workspaces as you switch tasks and contexts\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "Etchv",
+      "url": "https://www.producthunt.com/products/etchv",
+      "source": "Product Hunt",
+      "description": "API for invisible watermarks in images, PDFs and videos\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "Inferock",
+      "url": "https://www.producthunt.com/products/inferock",
+      "source": "Product Hunt",
+      "description": "Serverless inference, with credits back for failed calls.\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "EditUI",
+      "url": "https://www.producthunt.com/products/editui",
+      "source": "Product Hunt",
+      "description": "Point at your UI. Tell your coding agent what to change.\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "Blade",
+      "url": "https://www.producthunt.com/products/blade-4",
+      "source": "Product Hunt",
+      "description": "Find your first customers hiding in your inbox\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "Apple HomePod mini 2",
+      "url": "https://www.producthunt.com/products/apple-homepod-mini",
+      "source": "Product Hunt",
+      "description": "Apple's tiny smart speaker, now built for Siri AI\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "Pancake",
+      "url": "https://www.producthunt.com/products/pancake-6",
+      "source": "Product Hunt",
+      "description": "The Vercel for GTM\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "AdAnt 2.0",
+      "url": "https://www.producthunt.com/products/adant-ai",
+      "source": "Product Hunt",
+      "description": "Muse for Social Media Marketing\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "Table Canon",
+      "url": "https://www.producthunt.com/products/table-canon-ttrpg-campaign-memory",
+      "source": "Product Hunt",
+      "description": "Automated notes, searchable history, prep ideas for GMs\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "Nimble",
+      "url": "https://www.producthunt.com/products/nimble-5",
+      "source": "Product Hunt",
+      "description": "SOTA Decision Model\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "SlashDocs by Razorpay",
+      "url": "https://www.producthunt.com/products/razorpay",
+      "source": "Product Hunt",
+      "description": "Self-hosted collaboration layer for agent-written HTML\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "Make0 Brain",
+      "url": "https://www.producthunt.com/products/make0-brain",
+      "source": "Product Hunt",
+      "description": "A memory store that works across all of your AI agents.\n          \n          \n            Discussion\n            |\n            Link"
+    },
+    {
+      "title": "Monthly Getting Started / Web Dev Career Thread",
+      "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+      "source": "Reddit /r/webdev",
+      "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ ..."
+    },
+    {
+      "title": "Monthly Getting Started / Web Dev Career Thread",
+      "url": "https://www.reddit.com/r/webdev/comments/1wuxkge/monthly_getting_started_web_dev_career_thread/",
+      "source": "Reddit /r/webdev",
+      "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ ..."
+    },
+    {
+      "title": "What does a normal sized PR look like on your team these days?",
+      "url": "https://www.reddit.com/r/webdev/comments/1x504mq/what_does_a_normal_sized_pr_look_like_on_your/",
+      "source": "Reddit /r/webdev",
+      "description": "I saw the old rule that you shouldn\u2019t review more than 200 to 400 lines in one sitting from a Cisco study of 2,500 reviews, and if you go past that point (i.e 400), the quality of reviews starts becoming bad. I would guess most teams are past that now. Salesforce has reported PRs regularly going ove..."
+    },
+    {
+      "title": "Finding it impossible to solve problems",
+      "url": "https://www.reddit.com/r/webdev/comments/1x5hwby/finding_it_impossible_to_solve_problems/",
+      "source": "Reddit /r/webdev",
+      "description": "Hey guys. I&#39;m a web developer and have a job but unsure if I can pass future interviews, because when I get a technical question like a basic loop problem, &quot;program that starts counting from 1 and increases by 1 during each iteration, stopping once it reaches 5&quot;. This is incredibly inc..."
+    },
+    {
+      "title": "What's out there beyond webdev, since the rise of AI?",
+      "url": "https://www.reddit.com/r/webdev/comments/1x4rvjt/whats_out_there_beyond_webdev_since_the_rise_of_ai/",
+      "source": "Reddit /r/webdev",
+      "description": "I&#39;ve been working in web development for 20 years. First 10 years were more backend focussed, but the last 10 years were more frontend, where my passion lies. Working for an agency, mainly working on medium sized projects.  These past few months have been confronting. Unlike many others, I reall..."
+    },
+    {
+      "title": "Unable to save the picture on XAMPP image folder",
+      "url": "https://www.reddit.com/r/webdev/comments/1x5l5d7/unable_to_save_the_picture_on_xampp_image_folder/",
+      "source": "Reddit /r/webdev",
+      "description": "Hey everyone, I am trying to save the image in the xamp img folder, but due to some reason I am unable to do that. I don&#39;t know what the problem is, however, I am able to save the picture in the different folder and then copy and paste it from that into the XAMP image folder but I can&#39;t dire..."
+    },
+    {
+      "title": "Are 5-6 round interviews the normal now?",
+      "url": "https://www.reddit.com/r/webdev/comments/1x4m79m/are_56_round_interviews_the_normal_now/",
+      "source": "Reddit /r/webdev",
+      "description": "Am I the only person who thinks this is kind of f$cked?  &#32; submitted by &#32;  /u/____FARTS____   [link] &#32; [comments]"
+    },
+    {
+      "title": "Is a vibe coding first mentality normal at agencies?",
+      "url": "https://www.reddit.com/r/webdev/comments/1x5aekp/is_a_vibe_coding_first_mentality_normal_at/",
+      "source": "Reddit /r/webdev",
+      "description": "My first web dev job, I vibe coded almost all of the components. It was a small agency comprised of just my boss and a designer. My boss knew how to code but he needed more hands on deck to help him out with the amount of clients he was handling. I came in expecting to learn more about PHP and Shopi..."
+    },
+    {
+      "title": "vercel/next.js Release: v16.5.0-canary.10",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.10",
+      "source": "GitHub Release",
+      "description": "New official release for vercel/next.js. Tag: v16.5.0-canary.10. Features: v16.5.0-canary.10. Details: ### Core Changes\n\n- docs: make agent feedback command work in npm workspaces: #100135\n- test: install local Next.js sibling packages in CNA tests: #100062\n- Don't blame the Pages Router for next/headers imported through a Client Component: #100087\n- Resolve relative imports in `next.config.ts` from ..."
+    }
+  ],
+  "skeptic_kept": [
+    "https://deepmind.google/models/gemini/",
+    "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+    "https://www.anthropic.com/engineering/redesigning-source-control",
+    "https://github.com/rust-lang/rust/issues/164250",
+    "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+    "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+    "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+    "https://www.producthunt.com/products/editui"
+  ],
+  "candidates": [
+    {
+      "title": "Gemini 4 Argon",
+      "url": "https://deepmind.google/models/gemini/",
+      "source": "Hacker News",
+      "content_source": "web_page",
+      "evidence": "Gemini \u2014 Google DeepMind Skip to main content\nExplore our next generation AI systems\nExplore models\nGemini\nGemini Build intelligent agents\nGemini Omni Create anything from anything\nNano Banana Create and edit detailed images\nGemini Audio Talk, create and control audio\nSpecialized models\nVeo Generate cinematic video with audio\nGenie 3 Generate and explore interactive worlds\nLyria Generate high fidelity music and audio\nGemini Robotics Perceive, reason, use tools and interact\nOpen models\nGemma Build responsible AI applications at scale\nOur latest AI breakthroughs and updates from the lab\nExplore research\nBreakthroughs\nSIMA 2 An agent that plays, reasons, and learns with you\nGenie 3 Generate and explore interactive worlds\nAlphaGo Mastering the game of Go\nGemini Robotics Perceive, reason, use tools and interact\nLearn more\nEvals\nPublications\nResponsibility\nFrontier safety\nUnlocking a new era of discovery with AI\nExplore science\nBreakthroughs\nAlphaFold Predict protein structures with high accuracy\nAlphaGenome Using AI to understand the human genome\nWeatherNext Fast and accurate AI weather forecasting\nAlphaEarth Map our planet in unprecedented detail\nAlphaEvolve Design advanced algorithms for math and applications in computing\nLearn more\nGemini for Science\nExperimental Tools\nScience Skills\nOur mission is to build AI responsibly to benefit humanity\nAbout Google DeepMind\nResponsibility Ensuring AI safety through proactive security, even against evolving threats\nNews Discover our latest AI breakthroughs, projects, and updates\nCareers We\u2019re looking for people who want to make a real, positive impact on the world\nLearn more\nEducation\nOur National Partnerships for AI\nAccelerator programs\nThe Podcast\nDeepMind Institute\nModels\nExplore our next generation AI systems\nExplore models\nGemini\nGemini Build intelligent agents\nGemini Omni Create anything from anything\nNano Banana Create and edit detailed images\nGemini Audio Talk, create and control audio\nSpecialized models\nVeo Generate cinematic video with audio\nGenie 3 Generate and explore interactive worlds\nLyria Generate high fidelity music and audio\nGemini Robotics Perceive, reason, use tools and interact\nOpen models\nGemma Build responsible AI applications at scale\nResearch\nOur latest AI breakthroughs and updates from the lab\nExplore research\nBreakthroughs\nSIMA 2 An agent that plays, reasons, and learns with you\nGenie 3 Generate and explore interactive worlds\nAlphaGo Mastering the game of Go\nGemini Robotics Perceive, reason, use tools and interact\nLearn more\nEvals\nPublications\nResponsibility\nFrontier safety\nScience\nUnlocking a new era of discovery with AI\nExplore science\nBreakthroughs\nAlphaFold Predict protein structures with high accuracy\nAlphaGenome Using AI to understand the human genome\nWeatherNext Fast and accurate AI weather forecasting\nAlphaEarth Map our planet in unprecedented detail\nAlphaEvolve Design advanced algorithms for math and applications in computing\nLearn more\nGemini for Science\nExperimental Tools\n"
+    },
+    {
+      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+      "source": "Hacker News",
+      "content_source": "web_page",
+      "evidence": "Ledger confirms spy chip implant behind wallet crypto thefts\nNews\nFeatured\nLatest\nAnthropic warns self-replicating AI could spread to your smart devices\nMicrosoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days\nWindows 11 KB5127648 & KB5126653 cumulative updates released\nLedger confirms spy chip implant behind wallet crypto thefts\nOpenAI engineer arrested for allegedly planting spy device in office\nGhostscript flaw lets hackers hijack servers via PDF uploads\nAnthropic warns self-replicating AI could spread to your smart devices\nMicrosoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days\nTutorials\nLatest\nPopular\nHow to access the Dark Web using the Tor Browser\nHow to enable Kernel-mode Hardware-enforced Stack Protection in Windows 11\nHow to use the Windows Registry Editor\nHow to backup and restore the Windows Registry\nHow to start Windows in Safe Mode\nHow to remove a Trojan, Virus, Worm, or other Malware\nHow to show hidden files in Windows 7\nHow to see hidden files in Windows\nWebinars\nDownloads\nLatest\nMost Downloaded\nQualys BrowserCheck\nSTOPDecrypter\nAuroraDecrypter\nFilesLockerDecrypter\nAdwCleaner\nComboFix\nRKill\nJunkware Removal Tool\nDeals\nCategories\neLearning\nIT Certification Courses\nGear + Gadgets\nSecurity\nVPNs\nPopular\nBest VPNs\nHow to change IP address\nAccess the dark web safely\nBest VPN for YouTube\nForums\nMore\nVirus Removal Guides\nStartup Database\nUninstall Database\nGlossary\nSend us a Tip!\nWelcome Guide\nHome News Security Ledger confirms spy chip implant behind wallet crypto thefts\nLedger confirms spy chip implant behind wallet crypto thefts\nBy\nBill Toulas\nOctober 12, 2026\n12:27 PM\n1\nLedger has confirmed that some of its devices distributed through Southeast Asian reseller CryptoBilis were compromised with a hardware implant that drained users' cryptocurrency wallets.\nThe company has been investigating reports of users losing funds from wallets purchased through CryptoBilis, a major Malaysia-based hardware wallet retailer operating across Southeast Asia.\nSome researchers have shown the implant in Ledger X since September 16, saying tampered devices were available for nearly half the price of the original hardware.\nLedger wallets are physical devices designed to securely store the private keys that control cryptocurrency assets and authorize transactions.\nOn October 9, Ledger said it had launched an investigation into user reports of cryptocurrency losses and asked CryptoBilis to stop selling and shipping Ledger devices.\nThe next day, the company confirmed hardware tampering on at least one device, though it\u2019s still unclear exactly how or when the devices were tampered with.\n\"Ledger can confirm that one of the impacted users\u2019 devices contained an unauthorized hardware implant. Ledger is reaching out to impacted users as part of the ongoing investigation,\" Ledger said.\nThe crypto wallet maker also noted that it was working with authorities to identify the perpetrator and bring them to justice.\n\u201c[...]Ledger recommends users who "
+    },
+    {
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "source": "Hacker News",
+      "content_source": "web_page",
+      "evidence": "Redesigning source control at Anthropic \\ Anthropic Skip to main content Skip to footer Research Policy Commitments Learn News Try Claude Engineering at Anthropic\nRedesigning source control at Anthropic Published\nOct 13, 2026 As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months. At Anthropic, coding is no longer the bottleneck to building systems or doing research. Claude is able to autonomously iterate on research loops, micro-optimize complex programs, and build new services from the ground up at a speed and scale we haven\u2019t seen before. The bottleneck, now, is all of the developer infrastructure built for human scale: source control, builds, and CI. In May 2026, Anthropic averaged around 2,500 code changes merged per day; as of September, we merged over 30,000 per day. We don\u2019t expect this rate of growth to slow down anytime soon; the latent demand for merging code is practically infinite, and every bottleneck we remove immediately leads to a further increase in the amount of code we produce. Changes merged to our monorepo per day, from January to September 2026. In order to support this growth, we built Scion, an in-house version control system, and fully migrated our monorepo from git in five months. We also built and shipped a code review surface (called Antique), code search, a rich source control IAM system, novel ways of managing and landing large amounts of reviewed code, and more, all in that same time period. In this post, we\u2019ll focus on how we built Scion specifically. It makes for an interesting case study: Claude\u2019s ability to write code was both what put us in this situation in the first place\nand\nhow we were able to quickly build a high-quality, scalable system to deal with it. Growing our monorepo Before we explore what we built, we should acknowledge how unusual our workload is. Unsurprisingly, Anthropic uses Claude to write software far more than almost any other company, so we\u2019re often the first to see where tools built for human scale start to strain. Source control is just one example of this. While we don\u2019t expect many organizations to have these problems in the very near term, we suspect it won\u2019t be too long before others who use AI coding tools experience these same pressure points, which is why we wanted to share what we built and what we learned. Git is a decentralized system: every clone is a complete, self-contained repository that can compute diffs, read history and blame, and check out any revision while fully offline. For the vast majority of repositories, this is the right design, and it\u2019s a large part of why git became the standard. As our monorepo grows, it increasingly doesn\u2019t fit that design space. The history of our main branch alone is almost 100 GB, and a\ncompressed\nworking copy is over 25 GB. We perform on the order of 25 million code checkouts per day for CI, before counti"
+    },
+    {
+      "title": "11 year old unsoundness bugs found in Rust borrow checker",
+      "url": "https://github.com/rust-lang/rust/issues/164250",
+      "source": "Hacker News",
+      "content_source": "web_page",
+      "evidence": "Skip to content\nNavigation Menu Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Copilot app Direct agents from issue to merge MCP Registry Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes Code Quality Enforce quality at merge APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners View all resources Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community GitHub Stars Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nrust-lang rust Repository navigation Code Issues 5k+ \u00a0( 5k+ ) Pull requests 1.4k \u00a0( 1.4k ) Actions Projects Security and quality 6 \u00a0( 6 ) Insights More\nitems\nFooter\n\u00a9 2026 GitHub,\u00a0Inc.\nFooter navigation\nTerms\nPrivacy\nSecurity\nStatus\nCommunity\nDocs\nContact\nManage cookies\nDo not share my personal information\nYou can\u2019t perform that action at this time."
+    },
+    {
+      "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+      "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+      "source": "Dev.to",
+      "content_source": "web_page",
+      "evidence": "Git, Docker, and IPFS All Hide the Same Beautiful Idea - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nJames Anderson\nPosted on\nOct 14\nGit, Docker, and IPFS All Hide the Same Beautiful Idea\n# git\n# docker\n# programming\n# computerscience\nLet me make you a small promise, because it's worth your fifteen minutes.\nThere's an idea you rely on dozens of times a day \u2014 every time you make a commit, every time you pull an image \u2014 and you've almost certainly never seen it directly. It hides underneath the tools, doing its work quietly, while you type\ngit commit\nand watch a hash scroll past without once wondering what that hash actually\nis .\nIt's one of the most elegant ideas in all of computing. Simple enough to explain in a single sentence. Powerful enough that git, Docker, and IPFS are all built on it \u2014 three very different tools, one shared foundation. And once you see it, something nice happens: a whole pile of \"huh, why does it work like that?\" questions about your daily tools quietly resolve into \"oh,\nof course. \"\nThat's the promise. One idea, and by the end your tools make more sense than they did this morning. Let me show it to you.\nFirst, the ordinary way \u2014 and its quiet flaw\nAlmost all the time, we find data by its\nlocation.\nA file path:\n/home/james/report.pdf . A URL:\nexample.com/report.pdf . A database row by its ID. In every case, the address tells you\nwhere the thing lives\n\u2014 \"the thing over there.\"\nThis feels so natural we never question it. But it has a quiet weakness, and the whole idea we're building to is a response to that weakness, so it's worth noticing.\nThe name tells you nothing about the content.\nThe file at\n/home/james/report.pdf\ncould be the report you wrote yesterday, or a corrupted version, or something an attacker swapped in \u2014 and the path looks identical in all three cases. The address is a\npromise\nthat has to be trusted. You ask for a location, you get back whatever currently lives there, and you have no built-in way to know it's what you expected.\nSo here's the question that cracks the whole thing open: what if the address\nwas\nthe content? What if, instead of naming data by where it sits, you named it by\nwhat it actually is ?\nThe idea, in one sentence\nHere it is, the whole thing:\nInstead of addressing data by its location, you address it by a cryptographic hash of its content \u2014 a short, unique fingerprint computed from the bytes themselves.\nThat's content-addressing. The \"address\" of a piece of data isn't a path or a name someone chose. It's a fingerprint derived from the data itself.\nIf the analogy helps: think of it like a fingerprint for a person, or a nutrition label that's\ncomputed from the food\nrather than printed by the manufacturer. It comes\nfrom\nthe thing. Change the thing ev"
+    },
+    {
+      "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+      "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+      "source": "Dev.to",
+      "content_source": "web_page",
+      "evidence": "I wrote evals for my Claude Code plugin. The first run proved my README wrong. - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSagi Tal\nPosted on\nOct 14\n\u2022\nAI-assisted\nI wrote evals for my Claude Code plugin. The first run proved my README wrong.\n# claudecode\n# ai\n# testing\n# opensource\nEvery new project I started, I wrote the same Claude Code setup by hand: a\nCLAUDE.md , a few guard hooks, some reviewer agents. Every template I tried gave me a web-app config with brackets to fill in, which is the wrong shape for a CLI, a Terraform repo or a smart contract.\nSo I built a plugin that does it for me. You describe the project in one paragraph, it works out the project's traits (language, whether there's a UI, a database, a trust boundary, whether it's published), and it writes the harness that follows from those. A CLI with no database gets no persistence guard. A published library gets a semver reviewer that an app doesn't need.\nI tested it by hand on ten very different projects, from a game server to a C++ audio plugin, and fixed what broke each time. It felt done. Then I wrote an eval suite, and it kept telling me things I didn't want to hear.\nThe setup\nClaude Code has a built-in way to test plugins:\nclaude plugin eval . Each eval case is a real Claude Code session. You give it a prompt, it runs, and graders check what came out. I started with eight cases, one for each thing the plugin claims to do:\nCase\nWhat it checks\nself-triggers-on-bare-description\nA plain project description is enough to start it\ntwo-guided-questions\nThe two setup questions (cost and scope) actually get asked\nweb-app-auth-db\nAn app with logins and a database gets a security reviewer, a data-layer guard and a secret scan\npublished-library-semver\nA published library gets a semver reviewer\ncli-no-ui-no-persistence\nA CLI with no UI or database gets neither kind of reviewer\nretrofit-existing-repo\nOn a repo that already has a setup, it keeps what's there\ncost-low-caps-models\nAsking to keep cost low means no agent runs on the most expensive model\nvague-description\n\"I want to build an app\" doesn't get a made-up stack\nGraders come in two kinds. Some are deterministic, like this one, which just checks the skill was invoked:\n---\ntype :\ntool_used\ntool :\nSkill\ninput_match :\n' \"skill\"\\s*:\\s*\"(?:[\\w-]+:)?init\"'\nweight :\n1\n---\nOthers are an LLM reading the output against a written rubric, for things a regex can't judge, like \"is this agent actually in the roster, or only mentioned as something to add later?\"\nWhat the evals caught\n1. My README's main promise was false\nThe README said you could just describe your project and the setup would start. The first eval run said otherwise. Given only a project description, with no mention of Claude Code or sett"
+    },
+    {
+      "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+      "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+      "source": "Dev.to",
+      "content_source": "web_page",
+      "evidence": "A loading skeleton is a second implementation of your layout, and mine was lying about four things - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDaniel Pertu\nPosted on\nOct 14\nA loading skeleton is a second implementation of your layout, and mine was lying about four things\n# webdev\n# css\n# nextjs\n# react\nA route-level\nloading.tsx\nin Next.js is the cheapest good thing you can add to\na slow page. It is also a duplicate of your layout written in grey boxes, and\nlike every duplicate it drifts.\nHere is the skeleton I had for our assessment centre exercise list. It looks\nfine:\nfunction\nExerciseCardSkeleton ()\n{\nreturn\n(\n< div\nclassName = \"border-border bg-card flex h-full flex-col gap-3 rounded-xl border p-5\" >\n< div\nclassName = \"flex items-start justify-between gap-3\" >\n< div\nclassName = \"flex min-w-0 items-center gap-3\" >\n< Skeleton\nclassName = \"h-11 w-11 shrink-0 rounded-xl\"\n/>\n< Skeleton\nclassName = \"h-5 w-32\"\n/>\n</ div >\n< Skeleton\nclassName = \"h-5 w-16 shrink-0 rounded-full\"\n/>\n</ div >\n< div\nclassName = \"flex-1 space-y-2\" >\n< Skeleton\nclassName = \"h-4 w-full\"\n/>\n< Skeleton\nclassName = \"h-4 w-3/4\"\n/>\n</ div >\n< div\nclassName = \"flex flex-wrap gap-3\" >\n< Skeleton\nclassName = \"h-3 w-20\"\n/>\n< Skeleton\nclassName = \"h-3 w-12\"\n/>\n< Skeleton\nclassName = \"h-3 w-14\"\n/>\n< Skeleton\nclassName = \"h-3 w-20\"\n/>\n</ div >\n< div\nclassName = \"border-border/60 mt-1 border-t pt-3\" >\n< Skeleton\nclassName = \"h-4 w-28\"\n/>\n</ div >\n</ div >\n);\n}\nNow the card it is standing in for. An icon tile of\nh-14 w-14 , not\nh-11\nw-11 . A title that is two lines, not one.\nshadow-sm\nand no border. Padding of\npx-3 py-6 sm:p-6 , not a flat\np-5 . A meta row of a clock, a duration and a\nsector label, which is three items, not four. And no footer divider at all.\nEvery one of those is a small lie, and the sum of them is a page that reflows\nthe moment the real content lands. That is a Cumulative Layout Shift you\nauthored on purpose and then forgot about.\nThe rule I settled on\nA skeleton earns its place only if swapping it for the real component changes\nnothing about the box model. So it stops being a drawing of a card and starts\nbeing a measurement of one:\n/** Mirrors ExerciseCard: icon tile beside a two-line title, description, then time and sector. */\nfunction\nExerciseCardSkeleton ()\n{\nreturn\n(\n< div\nclassName = \"bg-card h-full rounded-xl shadow-sm\" >\n< div\nclassName = \"space-y-3 px-3 py-6 sm:p-6\" >\n< div\nclassName = \"flex items-start justify-between gap-3\" >\n< div\nclassName = \"flex min-w-0 flex-1 items-center gap-3\" >\n< Skeleton\nclassName = \"h-14 w-14 shrink-0 rounded-xl\"\n/>\n< div\nclassName = \"w-full space-y-2\" >\n< Skeleton\nclassName = \"h-5 w-3/4\"\n/>\n< Skeleton\nclassName = \"h-5 w-1/2\"\n/>\n</ div >\n</ div >\n< Skeleton\nclassName = \"h-5 w-16 shrink-"
+    },
+    {
+      "title": "EditUI",
+      "url": "https://www.producthunt.com/products/editui",
+      "source": "Product Hunt",
+      "content_source": "description_only",
+      "evidence": ""
+    }
+  ],
+  "verifier_results": [
+    {
+      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+      "status": "VALID",
+      "reason": "Documentation confirms Ledger verified a hardware spy chip implant behind crypto thefts."
+    },
+    {
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "status": "VALID",
+      "reason": "Documentation verifies Anthropic's post on redesigning their internal source control system."
+    },
+    {
+      "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+      "url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0",
+      "status": "VALID",
+      "reason": "Text matches the referenced article verbatim."
+    },
+    {
+      "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+      "url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao",
+      "status": "VALID",
+      "reason": "Text matches the referenced article verbatim."
+    },
+    {
+      "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+      "url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id",
+      "status": "VALID",
+      "reason": "Text matches the referenced article verbatim."
+    }
+  ],
+  "analyst_outputs": [
+    {
+      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+      "verdict": "WATCH",
+      "why_it_matters": "Demonstrates critical hardware supply-chain vulnerabilities where physical tampering bypasses software protections. It highlights why security models must account for third-party distributors and physical integrity.",
+      "who_cares": "Security engineers, embedded systems developers, and Web3/fintech developers."
+    },
+    {
+      "title": "Redesigning source control at Anthropic",
+      "verdict": "READ",
+      "why_it_matters": "Reveals how AI code generation shifts the engineering bottleneck from writing code to VCS and CI infrastructure as daily merges scale over tenfold. It offers a rare look at why standard distributed Git fails under extreme monorepo loads.",
+      "who_cares": "Platform engineers, DevOps/infrastructure developers, and systems architecture students."
+    },
+    {
+      "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+      "verdict": "READ",
+      "why_it_matters": "Demystifies content-addressing, the foundational computer science concept powering Git, Docker, and distributed storage systems. Mastering how cryptographic hashes replace location-based paths clarifies how your daily developer tools actually work.",
+      "who_cares": "CS students, junior backend developers, and software engineering apprentices."
+    },
+    {
+      "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+      "verdict": "INTEGRATE",
+      "why_it_matters": "Demonstrates how automated evaluation suites combine deterministic and LLM-graded checks to expose flawed assumptions in agentic workflows. It proves that ad-hoc manual testing is insufficient when building reliable AI plugins.",
+      "who_cares": "AI application developers, LLM tool builders, and full-stack engineers exploring AI workflows."
+    },
+    {
+      "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+      "verdict": "INTEGRATE",
+      "why_it_matters": "Explains how mismatched loading skeletons create layout drift and harm Core Web Vitals via Cumulative Layout Shift (CLS). Treating skeletons as exact box-model measurements rather than visual approximations keeps UI transitions smooth and jank-free.",
+      "who_cares": "Junior frontend developers, React and Next.js engineers, and UI/UX designers."
+    }
+  ],
+  "final_briefs": [
+    {
+      "category": "Tech Shift",
+      "title": "Redesigning source control at Anthropic",
+      "description": "**Anthropic migrated its monorepo from Git to an in-house version control system called Scion after daily code merges surged tenfold.** Claude's ability to autonomously write and micro-optimize code pushed merges from 2,500 per day in May 2026 to over 30,000 per day by September 2026. Git is designed like a decentralized library where every developer checks out a full copy of all shelves, but with a 100 GB main branch history and 25 million CI checkouts daily, that model broke down. In response, Anthropic engineered and deployed Scion, alongside code review and search tools, in five months.",
+      "why_it_matters": "Demonstrates that high-volume AI code generation shifts the primary software engineering bottleneck from authoring code to version control and CI infrastructure, exposing the physical limits of traditional distributed Git.",
+      "who_cares": "Platform engineers, DevOps/infrastructure architects, and systems developers managing monorepos.",
+      "verdict": "READ",
+      "source_url": "https://www.anthropic.com/engineering/redesigning-source-control"
+    },
+    {
+      "category": "Cool Tool",
+      "title": "I wrote evals for my Claude Code plugin. The first run proved my README wrong.",
+      "description": "**Automated plugin evaluation suites for Claude Code exposed broken setup promises that slipped right past manual testing.** A developer built a generator plugin to configure project harnesses (like guard hooks and reviewer agents) and benchmarked it using the built-in `claude plugin eval` suite across eight test cases. Think of evals like unit tests for probabilistic agents: they run real sessions against deterministic checks (such as verifying a skill tool was invoked) and LLM-graded rubrics, immediately revealing that the plugin failed to trigger on bare project descriptions despite documentation claims.",
+      "why_it_matters": "Proves that manual trial-and-error testing is insufficient for agentic tools, highlighting how structured eval harnesses combining regex and LLM grading catch real-world workflow regressions.",
+      "who_cares": "AI tool builders, full-stack engineers configuring agent environments, and Claude Code plugin developers.",
+      "verdict": "INTEGRATE",
+      "source_url": "https://dev.to/sagaga144/i-wrote-evals-for-my-claude-code-plugin-the-first-run-proved-my-readme-wrong-jao"
+    },
+    {
+      "category": "Career & Learning",
+      "title": "Git, Docker, and IPFS All Hide the Same Beautiful Idea",
+      "description": "**Content-addressing replaces arbitrary storage paths with cryptographic hash fingerprints, powering the architecture behind Git, Docker, and IPFS.** Normally, systems locate data by where it lives\u2014like a file path or URL\u2014which acts as a blind promise that can be modified or corrupted without your knowledge. Content-addressing flips this by naming data by what it is: a unique cryptographic hash calculated directly from the raw bytes, much like a person's fingerprint or a nutrition label computed directly from the food itself.",
+      "why_it_matters": "Demystifies the shared foundational design pattern behind modern developer tooling, helping engineers understand how distributed storage and versioning guarantee data immutability and tamper-resistance.",
+      "who_cares": "Computer science students, junior backend engineers, and developers curious about system internals.",
+      "verdict": "READ",
+      "source_url": "https://dev.to/james_anderson_h/git-docker-and-ipfs-all-hide-the-same-beautiful-idea-3j0"
+    },
+    {
+      "category": "Ecosystem Update",
+      "title": "A loading skeleton is a second implementation of your layout, and mine was lying about four things",
+      "description": "**Imprecise Next.js loading skeletons create subtle layout mismatches that directly trigger Cumulative Layout Shift when live data renders.** A Next.js route-level `loading.tsx` is effectively a gray-box duplicate of your real component, and visual shortcuts\u2014such as mismatched icon sizes (h-11 versus h-14), different padding, or extra meta items\u2014cause the page to jerk as content arrives. Skeletons should not be rough visual drawings of a card; they must be exact millimeter-perfect box-model measurements so swapping them for the live component changes zero dimensions.",
+      "why_it_matters": "Treating UI skeletons as strict box-model implementations eliminates layout drift, keeping core web metrics clean and preventing self-inflicted Cumulative Layout Shift (CLS) reflows.",
+      "who_cares": "Frontend developers, React and Next.js engineers, and web performance specialists.",
+      "verdict": "INTEGRATE",
+      "source_url": "https://dev.to/daniel_pertu/a-loading-skeleton-is-a-second-implementation-of-your-layout-and-mine-was-lying-about-four-things-41id"
+    },
+    {
+      "category": "Watchlist",
+      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+      "description": "**Ledger confirmed that unauthorized spy chip hardware implants in devices sold by a Southeast Asian reseller were used to steal user funds.** Following reports of cryptocurrency losses from devices purchased through Malaysia-based distributor CryptoBilis, Ledger initiated an investigation, halted partner shipments on October 9, and confirmed on October 10 that at least one unit contained physical hardware tampering. Researchers noted tampered Ledger X units had circulated since mid-September at roughly half the standard retail price.",
+      "why_it_matters": "Exposes severe physical supply-chain vulnerabilities where embedded hardware implants bypass cryptographic software protections, showing that distributor chain-of-custody is as critical as firmware security.",
+      "who_cares": "Embedded systems developers, security engineers, and Web3 hardware users.",
+      "verdict": "WATCH",
+      "source_url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/"
+    }
+  ]
+}
