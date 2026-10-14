@@ -45,6 +45,6 @@ DB_PATH = BASE_DIR / "backend" / "subscribers.db"
 
 # Model Selection Defaults
 PRIMARY_MODEL_GROQ = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-FALLBACK_MODEL_GEMINI = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+FALLBACK_MODEL_GEMINI = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 FALLBACK_MODEL_MISTRAL = os.getenv("MISTRAL_MODEL", "open-mixtral-8x22b")
 

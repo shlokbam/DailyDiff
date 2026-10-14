@@ -1,184 +1,115 @@
-import os
-import json
+"""
+Editor evaluation fed with real Analyst outputs.
+Reports quality rule checks as counts, plus DeepEval G-Eval Faithfulness per brief.
+Never leaks answers from ground-truth rubric text.
+"""
+
 import logging
-import re
-import sys
-from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Dict, Any, List
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-sys.path.insert(0, str(BASE_DIR / "backend"))
-
+from app.agents.analyst import analyst_node
 from app.agents.editor import editor_node
+from app.checks import (
+    has_bold_lead, no_tldr_label, categories_unique, count_at_most_5,
+    required_fields_present, category_valid, verdict_valid, url_valid_https,
+    is_generic_fallback_text, unsupported_numeric_tokens
+)
 from app.run_health import health
+from tests.evals.common import load_dataset, rate
+from tests.evals.judge import create_faithfulness_geval, DailyDiffJudge, LLMTestCase
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("DailyDiff.eval.editor")
 
-def evaluate_brief_format(brief: dict) -> dict:
-    desc = brief.get("description", "")
-
-    # 1. Bold summary check: Must start with ** and have closing **
-    starts_with_bold = desc.strip().startswith("**") and "**" in desc.strip()[2:]
-
-    # 2. Forbidden labels check: Must NOT contain "TL;DR:"
-    has_forbidden_tldr = "tl;dr:" in desc.lower()
-
-    # 3. What happened section check
-    has_what_happened = "what happened" in desc.lower() or len(desc.split("\n\n")) >= 2
-
-    # 4. Fields completeness (confidence is optional/deprecated)
-    has_all_fields = all(k in brief and brief[k] for k in ["title", "description", "why_it_matters", "who_cares", "verdict"])
-
-    # 5. ELI5 readability heuristic: Checks for engaging, clear prose
-    readability_score = 4.0
-    if len(desc) < 60:
-        readability_score -= 1.5
-    if "as shown in equation" in desc.lower() or "asymptotically" in desc.lower():
-        readability_score -= 1.0
-    if starts_with_bold and not has_forbidden_tldr:
-        readability_score += 1.0
-
-    readability_score = min(5.0, max(1.0, readability_score))
-    is_valid = starts_with_bold and not has_forbidden_tldr and has_all_fields
-
-    return {
-        "starts_with_bold": starts_with_bold,
-        "has_forbidden_tldr": has_forbidden_tldr,
-        "has_what_happened": has_what_happened,
-        "has_all_fields": has_all_fields,
-        "readability_score": readability_score,
-        "is_valid": is_valid
-    }
-
-def run_editor_eval(dataset_path: Optional[str] = None) -> Dict[str, Any]:
-    """
-    Evaluates the Editor node using real model calls.
-    Never simulates or falls back to ground truth.
-    On error or health fallback, affected cases are marked status='ERROR (fallback_used)' and excluded from scoring.
-    """
-    if dataset_path is None:
-        dataset_path = str(BASE_DIR / "tests" / "evals" / "golden_dataset.json")
-
-    with open(dataset_path, "r") as f:
-        dataset = json.load(f)
-
-    test_cases = [item for item in dataset if item.get("ground_truth", {}).get("editor")]
-    n_total = len(test_cases)
-    logger.info(f"Loaded {n_total} vetted candidates for Editor curation evaluation.")
+def run_editor_eval(sample_size: int = 5, run_judge: bool = True) -> Dict[str, Any]:
+    dataset = load_dataset()
+    # Select sample of valid golden cases
+    golden_valid = [
+        c for c in dataset
+        if c.get("ground_truth", {}).get("verifier", {}).get("expected_status") == "VALID"
+        and c.get("ground_truth", {}).get("skeptic", {}).get("expected_decision") == "KEEP"
+    ][:sample_size]
 
     candidates = []
-    for c in test_cases:
+    evidence_by_url = {}
+    for c in golden_valid:
+        sig = c["input_signal"]
+        url = sig.get("url", "")
+        ev = sig.get("scraped_docs", "")
+        evidence_by_url[url] = ev
         candidates.append({
-            "eval_id": c["id"],
-            "title": c["input_signal"]["title"],
-            "description": c["input_signal"].get("raw_description", ""),
-            "why_it_matters": c["ground_truth"]["analyst"]["practical_takeaway_rubric"] if c.get("ground_truth", {}).get("analyst") else "A notable developer update.",
-            "who_cares": ", ".join(c["ground_truth"]["analyst"]["expected_audience_keywords"]) if c.get("ground_truth", {}).get("analyst") else "Developers",
-            "verdict": c["ground_truth"]["analyst"]["expected_verdict"] if c.get("ground_truth", {}).get("analyst") else "WATCH",
-            "confidence": 90,
-            "source": c["input_signal"].get("source", "GitHub"),
-            "url": c["input_signal"].get("url", "")
+            "id": c["id"],
+            "title": sig["title"],
+            "url": url,
+            "description": sig.get("raw_description", ""),
+            "detailed_content": ev,
         })
 
-    final_briefs = []
-    error_msg = None
+    # Step 1: Run through REAL Analyst to get authentic output (never golden rubric)
+    health.reset()
+    analyst_out = analyst_node({"vetted_candidates": candidates})
+    vetted = analyst_out.get("vetted_candidates", [])
+    if not vetted:
+        print("Analyst returned 0 candidates for Editor eval.")
+        return {"node": "editor", "status": "ERROR", "error": "Analyst returned 0 candidates"}
 
-    prev_fallbacks_len = len(health.fallbacks)
-    try:
-        state = {"vetted_candidates": candidates}
-        result = editor_node(state)
-        if len(health.fallbacks) > prev_fallbacks_len:
-            recent = health.fallbacks[prev_fallbacks_len:]
-            reason = recent[-1].get("reason", "Internal fallback used")
-            error_msg = f"ERROR (fallback_used): {reason}"
-            logger.warning(f"Editor used internal fallback: {reason}")
-        else:
-            final_briefs = result.get("final_briefs", [])
-    except Exception as e:
-        error_msg = str(e)
-        logger.error(f"Editor execution error: {error_msg}")
+    # Step 2: Feed into Editor
+    health.reset()
+    editor_out = editor_node({"vetted_candidates": vetted})
+    briefs = editor_out.get("briefs", [])
 
-    case_results = []
-    if error_msg:
-        status_val = "ERROR (fallback_used)" if "fallback_used" in error_msg else "ERROR"
-        for c in candidates:
-            case_results.append({
-                "eval_id": c["eval_id"],
-                "title": c["title"],
-                "category": None,
-                "status": status_val,
-                "passed": False,
-                "error": error_msg,
-                "starts_with_bold": False,
-                "has_forbidden_tldr": False,
-                "readability_score": 0.0,
-                "sample_snippet": ""
-            })
-        n_error = n_total
-        n_evaluated = 0
-        format_compliance = 0.0
-        category_uniqueness = 0.0
-        avg_readability = 0.0
-        categories_used = []
-    else:
-        n_error = 0
-        n_evaluated = len(final_briefs)
-        categories = [b.get("category") for b in final_briefs]
-        unique_categories = set(c for c in categories if c)
-        category_uniqueness = (len(unique_categories) / len(categories)) * 100 if categories else 0.0
+    if health.has_fallbacks or health.llm_errors_count > 0:
+        return {"node": "editor", "status": "ERROR", "error": "Editor LLM fallback/error"}
 
-        format_passed_count = 0
-        total_readability = 0.0
-
-        for b in final_briefs:
-            fmt = evaluate_brief_format(b)
-            if fmt["is_valid"]:
-                format_passed_count += 1
-            total_readability += fmt["readability_score"]
-
-            case_results.append({
-                "title": b.get("title"),
-                "category": b.get("category"),
-                "status": "EVALUATED",
-                "starts_with_bold": fmt["starts_with_bold"],
-                "has_forbidden_tldr": fmt["has_forbidden_tldr"],
-                "readability_score": fmt["readability_score"],
-                "passed": fmt["is_valid"],
-                "sample_snippet": b.get("description", "")[:120] + "..."
-            })
-
-        format_compliance = (format_passed_count / n_evaluated) * 100 if n_evaluated > 0 else 0.0
-        avg_readability = total_readability / n_evaluated if n_evaluated > 0 else 0.0
-        categories_used = list(unique_categories)
-
-    eval_summary = {
-        "node": "Editor (Editorial Curation, Formatting & ELI5 Tone)",
-        "n_total": n_total,
-        "n_evaluated": n_evaluated,
-        "n_error": n_error,
-        "briefs_curated": n_evaluated,
-        "format_compliance_rate": round(format_compliance, 1),
-        "category_uniqueness_rate": round(category_uniqueness, 1),
-        "average_readability_score": round(avg_readability, 2),
-        "categories_used": categories_used,
-        "details": case_results
+    total_briefs = len(briefs)
+    checks_passed = {
+        "bold_lead": sum(1 for b in briefs if has_bold_lead(b.get("description", ""))),
+        "no_tldr": sum(1 for b in briefs if no_tldr_label(b.get("description", ""))),
+        "valid_category": sum(1 for b in briefs if category_valid(b)),
+        "unique_categories": total_briefs if categories_unique(briefs) else 0,
+        "at_most_5": total_briefs if count_at_most_5(briefs) else 0,
+        "required_fields": sum(1 for b in briefs if required_fields_present(b)),
+        "https_urls": sum(1 for b in briefs if url_valid_https(b.get("source_url", ""))),
+        "no_generic_text": sum(1 for b in briefs if not (is_generic_fallback_text(b.get("description", "")) or is_generic_fallback_text(b.get("why_it_matters", "")))),
+        "supported_numbers": sum(1 for b in briefs if not unsupported_numeric_tokens(
+            f"{b.get('title', '')} {b.get('description', '')} {b.get('why_it_matters', '')}",
+            evidence_by_url.get(b.get("source_url", ""), "")
+        )),
     }
 
-    return eval_summary
+    # Step 3: G-Eval Faithfulness per brief
+    faithfulness_scores = []
+    judge = DailyDiffJudge() if run_judge else None
+    metric = create_faithfulness_geval(judge=judge) if run_judge else None
+
+    if run_judge and metric:
+        for b in briefs:
+            u = b.get("source_url", "")
+            ev = evidence_by_url.get(u, "")
+            text = f"{b.get('title', '')}\n{b.get('description', '')}\nWhy It Matters: {b.get('why_it_matters', '')}"
+            try:
+                tc = LLMTestCase(input="Draft brief from evidence", actual_output=text, context=[ev[:MAX_DOC_CHARS if 'MAX_DOC_CHARS' in locals() else 3000]])
+                metric.measure(tc)
+                score = float(metric.score or 0.0)
+                faithfulness_scores.append(score)
+            except Exception as je:
+                logger.warning(f"Faithfulness judge call failed for {b.get('title')}: {je}")
+
+    avg_faith = round(sum(faithfulness_scores) / len(faithfulness_scores), 2) if faithfulness_scores else 0.0
+
+    print(f"\n--- EDITOR EVALUATION ({total_briefs} Briefs Generated) ---")
+    print("Rule Checks:")
+    for chk, count in checks_passed.items():
+        print(f"  {chk:22} {rate(count, total_briefs)}")
+    if run_judge:
+        print(f"G-Eval Faithfulness: Average = {avg_faith:.2f} ({len(faithfulness_scores)} briefs scored)")
+
+    return {
+        "node": "editor",
+        "total_briefs": total_briefs,
+        "rule_checks": {chk: rate(count, total_briefs) for chk, count in checks_passed.items()},
+        "faithfulness_avg": avg_faith,
+        "faithfulness_scores": faithfulness_scores,
+    }
 
 if __name__ == "__main__":
-    report = run_editor_eval()
-    print("\n" + "=" * 55)
-    print("EDITOR EVALUATION REPORT:")
-    print(f"Total Input Cases:       {report['n_total']}")
-    print(f"Briefs Evaluated:        {report['n_evaluated']}")
-    print(f"Error Cases:             {report['n_error']}")
-    print(f"Format Compliance:       {report['format_compliance_rate']}%")
-    print(f"Category Uniqueness:     {report['category_uniqueness_rate']}%")
-    print(f"Avg Readability (1-5):   {report['average_readability_score']} / 5.0")
-    print("=" * 55)
-    for c in report["details"]:
-        status = c["status"]
-        pass_label = "PASS" if c["passed"] else ("ERROR" if status == "ERROR" else "FAIL")
-        print(f"[{pass_label}] [{c.get('category')}] {c['title'][:36]:<36} | Bold: {c.get('starts_with_bold')} | Readability: {c.get('readability_score')}/5")
+    run_editor_eval()
