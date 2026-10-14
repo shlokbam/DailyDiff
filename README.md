@@ -1,285 +1,95 @@
-# 🚀 DailyDiff — Autonomous Tech Curation Platform
+# DailyDiff
 
-> **We scan the noise. Five things survive.**
+Autonomous tech curation pipeline (LangGraph + FastAPI + React) designed for computer science students and software engineers. It scans open-source codebases, developer releases, and tech forums, filtering out enterprise marketing fluff and dense academic theory into concise, actionable developer briefs.
 
-**DailyDiff** is an autonomous multi-agent research and editorial curation platform designed for **students and software developers**. 
+## Architecture
 
-Instead of overwhelming readers with dense mathematical papers, machine learning theories, or marketing hype, DailyDiff utilizes custom AI agents to scour the web for **developer utility tools, open-source releases (Show HN), self-hosted applications, and framework updates (FastAPI, React, Tailwind)**. It cleans up the jargon into plain English, prepends a bold **TL;DR** to every item, and serves it on a sleek, glassmorphic React timeline.
-
-The system dispatches responsive, personalized briefings to email subscribers every Monday, Wednesday, and Friday morning.
-
----
-
-## 🛠️ The Architecture & Agentic Workflow
-
-```mermaid
-graph TD
-    Start([GitHub Actions Scheduler / Mon-Wed-Fri 03:30 UTC]) --> Scout[Scout Agent]
-    Scout --> Deduplicate{Skeptic / Deduplication Engine}
-    Deduplicate -- Novel Dev Update --> Research[Research Agent]
-    Deduplicate -- Duplicate / Math Hype --> Archive[Archive & Drop]
-    Research --> Verify[Verifier Agent]
-    Verify --> Vet{Claims Valid in README?}
-    Vet -- Yes --> Analyze[Analyst Agent]
-    Vet -- No / Exaggerated --> Drop[Drop Candidate]
-    Analyze --> Editor[Editor Agent]
-    Editor --> Publisher[Publisher Agent]
-    Publisher --> GitCommit[Commit & Push data/ to Git]
-    Publisher --> Notify[Trigger API Notify Webhook]
-    Notify --> Send[SMTP / Resend Dispatcher]
-    Send --> End([Subscribers' Inboxes])
+```
+Scout (Ecosystem Signals)
+  │
+  ▼
+Skeptic (Deduplication & Scope Filtering)
+  │
+  ▼
+Researcher (Documentation Scraper)
+  │
+  ▼
+Verifier (Fact-Checking & Anti-Hype in 1 Batched LLM Call)
+  │
+  ▼
+Analyst (Pedagogical Utility & Audience in 1 Batched LLM Call)
+  │
+  ▼
+Editor (Curation, Formatting & Category Balance in 1 Batched LLM Call)
+  │
+  ▼
+Quality Gate (Strict Verification & Publication Snapshot)
 ```
 
-### The Agentic Pipeline (LangGraph)
-1. **Scout Agent**: Periodically crawls active feeds:
-   * **GitHub Search API**: Fetches popular repositories matching `self-hosted`, `web-development`, `developer-experience`, and `productivity` topics.
-   * **Hacker News (YCombinator) API**: Scrapes top stories, prioritizing `Show HN` submissions.
-   * **Dev.to Feed**: Scrapes trending frontend and backend programming tutorials.
-   * **GitHub Releases API**: Monitors version releases of core dev frameworks (`react`, `next.js`, `fastapi`, `tailwindcss`, `django`, `go`).
-2. **Skeptic Agent (Deduplication Node)**: Performs algorithmic URL deduplication against `data/history.json` and evaluates raw findings with LLM hype filtering to drop duplicate topics or non-technical noise.
-3. **Research Agent**: Crawls target URL codebases, documentation, or release notes to pull raw descriptions and README summaries.
-4. **Verifier Agent**: Fact-checks claims against the raw documentation to ensure they are fully supported.
-5. **Analyst Agent**: Evaluates the update's direct utility for developers, generating `Why It Matters`, `Who Cares`, confidence levels, and actionable verdicts (`WATCH`, `INTEGRATE`, `READ`).
-6. **Editor Agent**: Curation engine that selects the top $\le 5$ developments and maps them to briefing categories. It trims jargon (using **ELI5** rules) and prepends a bold, 1-sentence **TL;DR** to the summary.
-7. **Publisher Agent**: Saves JSON and Markdown briefs in chronological directories and pushes them back to GitHub.
+## Reliability Design
 
----
+- **Fail-Closed Execution**: If any node encounters an unrecoverable API error or malformed JSON after one retry, it halts immediately without publishing degraded content or generic fallback text.
+- **Batched Invocations**: Verifier, Analyst, and Editor each make exactly ONE batched LLM call per run, preserving API quota and preventing rate limit cascading.
+- **Single Evidence Length**: All nodes enforce a unified `MAX_EVIDENCE_CHARS = 3000` window.
+- **Strict Quality Gate**: Publication blocks (exit code 1, writing `data/runs/DATE.degraded.json` without modifying history, archives, or dispatching emails) if any node hard-failed, if fewer than 3 briefs survive (unless a genuine quiet day), or if briefs violate rule checks (bold lead, no TL;DR, valid HTTPS source URLs, unique categories, and grounded numbers).
+- **Run Snapshots**: Every run produces a minimal audit snapshot (`data/runs/DATE.json` or `.degraded.json`) recording date, git sha, stage counts, models used, LLM call counts, node durations, and warnings.
 
-## 💻 Tech Stack & Infrastructure
+## Live Evaluation Results
 
-* **Backend Engine**: Python 3.12, LangGraph, LangChain, FastAPI, Uvicorn, PostgreSQL (Neon Pooler) / SQLite.
-* **Primary AI Engine**: Mistral AI (`open-mixtral-8x22b` / `mistral-small-latest`) as the primary generator to avoid tight RPM constraints, with Google Gemini (`gemini-3.5-flash`) as the automatic fail-safe fallback.
-* **Frontend Client**: Vite + React, Vanilla CSS with custom glassmorphism tokens — deployed live at **[https://dailydiff.in](https://dailydiff.in)**.
-* **Deployment & Scheduling**:
-  * **Domain**: Custom domain `dailydiff.in` connected via Vercel DNS.
-  * **Backend App**: Hosted on Render.
-  * **Email Dispatcher**: Authenticated Brevo API sending from `briefs@dailydiff.in` (with SMTP & Resend fallbacks).
-  * **Orchestration Runner**: Scheduled via GitHub Actions (`.github/workflows/thrice_weekly_brief.yml`) running at **03:30 UTC** (Mon, Wed, Fri), credited directly to maintainer GitHub contributions.
-  * **Database Layer**: SQLite locally (`subscribers.db`); shifts automatically to **Neon Cloud Postgres** when `DATABASE_URL` is set in production.
-
----
-
-## 📂 Project Structure
+Evaluated on 2026-10-14 against git commit `a9878f3` using real LLM API calls with zero mock substitution:
 
 ```text
-DailyDiff/
-├── .github/
-│   └── workflows/
-│       └── thrice_weekly_brief.yml # Cron Scheduler (Mon, Wed, Fri at 03:30 UTC)
-├── backend/                     # Python FastAPI & LangGraph Engine
-│   ├── app/
-│   │   ├── agents/              # LangGraph Agent nodes & states
-│   │   │   ├── models.py        # Mistral-to-Gemini Fallback Wrapper
-│   │   │   ├── scout.py         # HN, Dev.to, GitHub scraper routines
-│   │   │   ├── skeptic.py       # Hype filter & deduplication
-│   │   │   ├── verifier.py      # Technical assertions fact-checker
-│   │   │   ├── analyst.py       # Developer impact analyst
-│   │   │   └── editor.py        # ELI5 & TL;DR editor
-│   │   ├── config.py            # Environment configurations
-│   │   ├── database.py          # Dynamic SQLite / PostgreSQL switcher
-│   │   ├── email_dispatcher.py  # Gmail SMTP & Resend HTML mailer
-│   │   ├── main.py              # FastAPI Web routes
-│   │   └── schemas.py           # Pydantic validation structures
-│   ├── requirements.txt         # Package dependencies
-│   ├── run_agent.py             # Agent pipeline runner script
-│   └── test_api.py              # Backend endpoint tests
-├── frontend/                    # Vite + React Client Dashboard
-│   ├── src/
-│   │   ├── App.jsx              # Timeline dashboard UI
-│   │   ├── index.css            # Custom CSS Glassmorphic design tokens
-│   │   └── main.jsx
-│   ├── package.json
-│   └── vite.config.js
-├── data/                        # Git-Based CMS Database
-│   ├── history.json             # Combined archive of historical briefings
-│   ├── latest.md                # Latest compiled markdown report
-│   └── archive/                 # Chronological YYYY/MM/DD.md briefings
-├── tests/                       # Evaluation & Benchmark Test Suites
-│   ├── conftest.py              # Pytest session hooks & DB persistence
-│   └── evals/                   # Node-by-Node Evals & DeepEval Suite
-│       ├── golden_dataset.json  # 25 curated test cases across 6 archetypes
-│       ├── deepeval_judge.py    # Custom DeepEvalBaseLLM judge
-│       ├── deepeval_metrics.py  # G-Eval metrics (SingleTurnParams)
-│       ├── deepeval_adapter.py  # LLMTestCase adapter
-│       ├── test_deepeval_nodes.py # Official DeepEval Pytest test runner
-│       ├── eval_skeptic.py      # Skeptic node evaluation
-│       ├── eval_verifier.py     # Verifier anti-hallucination evaluation
-│       ├── eval_analyst.py      # Analyst utility evaluation
-│       ├── eval_editor.py       # Editor curation & formatting evaluation
-│       └── run_all_evals.py     # Comprehensive orchestrator runner
-└── .python-version              # Production Python environment pin (3.12)
+================================================================================
+Node         | Metric                         | Count & Rate                    
+--------------------------------------------------------------------------------
+Skeptic      | Accuracy                       | 16/25 = 64% (with this few cases, roughly 45-80%)
+Skeptic      | Precision                      | 13/17 = 76% (with this few cases, roughly 53-90%)
+Skeptic      | Recall                         | 13/18 = 72% (with this few cases, roughly 49-88%)
+Skeptic      | Scope Drift Filtered           | 3/7 = 43% (with this few cases, roughly 16-75%)
+Verifier     | Bad Items Caught               | 15/16 = 94% (with this few cases, roughly 72-99%)
+Verifier     | Good Items Wrongly Rejected    | 1/22 = 5% (with this few cases, roughly 1-22%)
+Verifier     | Prompt Injections Succeeded    | 1/5 = 20%
+Analyst      | Verdict Match (Ref-based)      | 14/15 = 93% (with this few cases, roughly 70-99%)
+Analyst      | G-Eval Usefulness Avg          | 0.53 (>=0.7: 5/15 = 33% (with this few cases, roughly 15-58%))
+Editor       | Rule Checks Passed             | 5/5 = 100% (with this few cases, roughly 57-100%)
+Editor       | G-Eval Faithfulness Avg        | 0.54
+Pipeline     | Bad Items Leaked               | 1/6 (Expected: 0/6)
+Pipeline     | Gate Decision                  | BLOCKED
+Pipeline     | Total Duration                 | 8.6s
+================================================================================
 ```
 
----
+## Known Limitations
 
-## ⚡ Quick Start Guide
+- LLM Judge calls use the same provider chain as the pipeline; the judge is uncalibrated.
+- Prompt injection bypass occurred on 1 of 5 adversarial attacks (subtle override prompts can bypass small models).
+- Free-tier rate limits (15 RPM on Google Gemini) require exponential backoff delays during large evaluation runs.
+- The numeric consistency rule flags valid numbers if the model rewrites exact evidence figures (e.g., '250k' vs 'quarter million').
+- Scope drift filtering occasionally admits niche enterprise infrastructure when described as developer tools.
 
-### 1. Prerequisites Setup
+## Running Tests & Evals
 
-Create a `.env` file in the root directory:
-```env
-# AI Models Keys
-MISTRAL_API_KEY=your_mistral_key_here
-GEMINI_API_KEY=your_gemini_studio_key_here
-
-# Neon Database (Leave empty to default to local subscribers.db SQLite)
-DATABASE_URL=postgresql://neondb_owner:password@ep-host-pooler.aws.neon.tech/neondb?sslmode=require
-
-# Email dispatch (Brevo API primary sending from custom domain)
-BREVO_API_KEY=your_brevo_api_key_here
-SMTP_EMAIL=briefs@dailydiff.in
-SMTP_PASSWORD=your_smtp_password_optional
-
-# Authentication Webhook token (For GHA runner to verify endpoints)
-NOTIFY_SECRET_TOKEN=generate_any_secure_string_here
-BACKEND_API_URL=http://localhost:8000
-```
-
-> [!TIP]
-> **Brevo API Key (Recommended for Render)**: Sign up at **[Brevo.com](https://www.brevo.com)**, go to **SMTP & API** on your dashboard, generate a free API key, and paste it into `BREVO_API_KEY`.
->
-> **Google App Password**: In your Google Account settings, search for **App Passwords** under Security. Create an app named `DailyDiff` and copy the 16-character code into `SMTP_PASSWORD` (make sure 2FA is active on your Gmail).
-
----
-
-### 2. Boot up the Backend
-
-First, build your virtual environment and install dependencies:
+### Offline Unit Tests
 ```bash
-# Create and activate environment
-uv venv --python 3.12
-source .venv/bin/activate
-
-# Install dependencies
-uv pip install -r backend/requirements.txt
+PYTHONPATH=backend pytest tests -m "not live" -q
 ```
 
-Launch the FastAPI web service:
+### End-to-End Evaluation Suite
+Requires `GEMINI_API_KEY`, `MISTRAL_API_KEY`, or `GROQ_API_KEY` in `.env`:
 ```bash
-export PYTHONPATH=backend
-uvicorn app.main:app --port 8000 --reload
+python tests/evals/run_evals.py
 ```
-The server will start at `http://localhost:8000`. You can inspect APIs at `/docs`.
-
----
-
-### 3. Run the Agent Pipeline
-
-To run the agent workflow and compile today's briefing locally:
+Individual component evaluations can also run standalone:
 ```bash
-export PYTHONPATH=backend
-source .venv/bin/activate
-python backend/run_agent.py
-```
-*(If no API keys are configured, the pipeline automatically falls back to **Simulation Mode** and creates simulated briefs to test folders, database commits, and SMTP emails).*
-
----
-
-### 4. Start the React Client
-
-Navigate into the frontend folder, install npm packages, and start the development server:
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Open **`http://localhost:5173`** in your browser.
-
----
-
-## 📬 Subscription & Unsubscription Flow
-
-* **Subscription Flow**:
-  1. **Register**: Users submit their emails on the Vercel dashboard.
-  2. **Persistence**: The FastAPI server saves it dynamically in the SQLite database (local dev) or **Neon cloud Postgres** (production).
-  3. **Trigger**: After compiling briefs, `run_agent.py` triggers the secure endpoint `POST /api/notify-subscribers` (signed with the header `X-Auth-Token` matching your secret token).
-  4. **Mailing**: The backend compiles a responsive HTML newsletter template featuring the **TL;DR** lists and sends it using Google SMTP (with a fallback to **Resend API**).
-
-* **Unsubscription Flow**:
-  1. **Link Trigger**: Users click the "Unsubscribe" link at the footer of the HTML email template.
-  2. **API Endpoint**: The request routes to `POST /api/unsubscribe` on the FastAPI server, removing their record from the active subscribers database.
-  3. **Polite Email Confirmation**: The server immediately dispatches a polite confirmation email matching the brand's dark-mode glassmorphic theme to reassure the user they have been removed.
-
----
-
-## 🧪 Testing the API
-
-We write standard Pytest-compatible tests using `unittest`. Run the test suite:
-```bash
-export PYTHONPATH=backend
-source .venv/bin/activate
-python -m unittest backend/test_api.py
-```
-
----
-
-## 📊 LLM Agent Evaluation Framework
-
-DailyDiff implements an automated evaluation harness to test each agent node (Skeptic, Verifier, Analyst, Editor) against a curated dataset of developer news signals.
-
-> [!IMPORTANT]
-> **No live results are published yet.** Evaluation scores are produced exclusively by executing real model calls against live test cases. When executed without live API access or with `--smoke`, smoke tests verify test machinery integrity without publishing scores.
-
----
-
-### 1. The Benchmark Dataset (`tests/evals/golden_dataset.json`)
-A benchmark dataset of **25 curated test cases** covering realistic developer updates across diverse archetypes (student tools, enterprise announcements, duplicates, and adversarial hype traps).
-
-Each test case provides ground-truth expectations for each pipeline node:
-* `skeptic`: Expected retention/rejection decision (`KEEP` vs `DROP`)
-* `verifier`: Expected claim verification (`VALID` vs `REJECTED`)
-* `analyst`: Expected integration verdict and audience alignment
-* `editor`: Expected category assignment and format constraints
-
----
-
-### 2. Evaluated Nodes & Target Metrics
-
-The harness measures model behavior against defined engineering targets:
-
-| Node | Evaluator Script | Metrics Measured | Targets (Not Results) |
-| :--- | :--- | :--- | :--- |
-| **Skeptic** | `tests/evals/eval_skeptic.py` | Accuracy, Precision, Recall, F1 Score, Deduplication Rate | $\ge 90\%$ Precision, $100\%$ Dedup |
-| **Verifier** | `tests/evals/eval_verifier.py` | Anti-Hype Catch Rate, False Rejection Rate, Groundedness | $100\%$ Catch Rate, $< 5\%$ False Rejection |
-| **Analyst** | `tests/evals/eval_analyst.py` | Verdict Accuracy, Audience Specificity, Practicality Score (1-5) | $\ge 90\%$ Verdict Match, $> 3.5 / 5$ Practicality |
-| **Editor** | `tests/evals/eval_editor.py` | Bold Lead Compliance, Forbidden Label Defense, Diversity, Readability | $100\%$ Compliance, $> 80\%$ Diversity |
-
----
-
-### 3. DeepEval Integration (`tests/evals/test_deepeval_nodes.py`)
-Evaluation metrics leverage **DeepEval** and custom **G-Eval (LLM-as-a-Judge)** criteria:
-* **Real Output Adapter**: In live evaluation, actual model outputs are sourced from cached live pipeline runs (`tests/evals/.cache/`) rather than mocks.
-* **G-Eval Judge**: Evaluates chain-of-thought reasoning using live LLM judge calls (`deepeval_judge.py`) with retries. If the judge API is unavailable in live testing, tests fail explicitly.
-* **Pytest Live Marker**: DeepEval tests require real LLM invocation and are marked with `@pytest.mark.live`. Standard `pytest` runs bypass them by default.
-
----
-
-### 4. Running Evaluations
-
-```bash
-# Smoke test (validates harness integrity, pipeline execution, and formatting without API keys)
-python tests/evals/run_all_evals.py --smoke
-
-# Live evaluation run (invokes live model APIs, requires GROQ_API_KEY, GEMINI_API_KEY, or MISTRAL_API_KEY)
-python tests/evals/run_all_evals.py
-
-# Run individual node live evaluations
 python tests/evals/eval_skeptic.py
 python tests/evals/eval_verifier.py
 python tests/evals/eval_analyst.py
 python tests/evals/eval_editor.py
-
-# Run DeepEval live test suite with pytest
-pytest tests/evals/test_deepeval_nodes.py -m live
+python tests/evals/eval_pipeline.py
+python tests/evals/eval_history.py
 ```
 
----
-
-### 5. Evaluation Limitations
-
-* **Small Benchmark Size**: The dataset currently consists of 25 hand-labeled test cases. While diverse in archetype coverage, statistical variance is high on single-case changes.
-* **Single-Author Ground Truth**: Ground-truth decisions and expected outputs were annotated by a single author. Inter-annotator agreement has not been measured.
-* **Dataset Derivation**: Several positive signal cases were adapted from actual pipeline input runs during early prototype validation.
-* **Uncalibrated Judge Scoring**: G-Eval judge prompts use zero-shot LLM reasoning without empirical alignment calibration against human evaluation panels.
-* **No Published Benchmarks**: Any numbers listed in this repository represent engineering targets; no verified production benchmark metrics are currently published.
-
+### Frontend Build
+```bash
+cd frontend && npm run build
+```

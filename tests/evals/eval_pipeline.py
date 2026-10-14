@@ -48,6 +48,7 @@ def get_frozen_12_signals() -> List[Dict[str, Any]]:
             s = c["input_signal"].copy()
             s["id"] = c["id"]
             s["is_bad"] = False
+            s["description"] = s.get("description") or s.get("raw_description", "")
             s["scraped_docs"] = s.get("scraped_docs", "")
             signals.append(s)
         elif c["id"] in reject_ids:
@@ -55,6 +56,7 @@ def get_frozen_12_signals() -> List[Dict[str, Any]]:
             s["id"] = c["id"]
             s["is_bad"] = True
             s["reject_reason"] = "should_reject_topic"
+            s["description"] = s.get("description") or s.get("raw_description", "")
             s["scraped_docs"] = s.get("scraped_docs", "")
             signals.append(s)
 
@@ -64,6 +66,7 @@ def get_frozen_12_signals() -> List[Dict[str, Any]]:
             s["id"] = p["id"]
             s["is_bad"] = True
             s["reject_reason"] = p.get("error_type", "planted_bad")
+            s["description"] = s.get("description") or s.get("raw_description", "")
             s["scraped_docs"] = s.get("scraped_docs", "")
             signals.append(s)
 
@@ -96,9 +99,9 @@ def run_pipeline_eval(run_judge: bool = True) -> Dict[str, Any]:
             "id": c.get("id"),
             "title": c.get("title"),
             "url": c.get("url"),
-            "description": c.get("description"),
-            "detailed_content": c.get("scraped_docs", evidence_by_url.get(c.get("url"), "")),
-            "content_source": "frozen_evidence",
+            "description": c.get("description") or c.get("raw_description", ""),
+            "detailed_content": c.get("scraped_docs") or evidence_by_url.get(c.get("url"), ""),
+            "content_source": "scraped_docs",
         })
     timings["researcher"] = round(time.time() - t0, 2)
     llm_calls["researcher"] = 0
@@ -125,7 +128,7 @@ def run_pipeline_eval(run_judge: bool = True) -> Dict[str, Any]:
     editor_out = editor_node({"vetted_candidates": analyzed})
     timings["editor"] = round(time.time() - t0, 2)
     llm_calls["editor"] = health.llm_calls_count - c0
-    briefs = editor_out.get("briefs", [])
+    briefs = editor_out.get("final_briefs") or editor_out.get("briefs", [])
 
     total_time = round(time.time() - start_total, 2)
 

@@ -12,9 +12,12 @@ import json
 import time
 from pathlib import Path
 
-# Add backend directory to path
+# Add repo root and backend directory to path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-sys.path.insert(0, str(BASE_DIR / "backend"))
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+if str(BASE_DIR / "backend") not in sys.path:
+    sys.path.insert(0, str(BASE_DIR / "backend"))
 
 from tests.evals.eval_skeptic import run_skeptic_eval
 from tests.evals.eval_verifier import run_verifier_eval
