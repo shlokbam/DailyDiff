@@ -4,10 +4,19 @@ Uses real LLM calls with retry on API failure. Raises JudgeUnavailableError on f
 Implements exactly two G-Eval metrics: Usefulness and Faithfulness.
 """
 
+import os
+import sys
 import json
 import logging
 import time
+from pathlib import Path
 from typing import Optional
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(REPO_ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from deepeval.models.base_model import DeepEvalBaseLLM
 from deepeval.metrics import GEval

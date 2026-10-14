@@ -4,9 +4,18 @@ Reference-based: reports confusion counts (TP, FP, TN, FN), precision, recall, a
 and scope drift (correct rejection of enterprise, math, finance, and duplicate releases).
 """
 
+import os
+import sys
 import logging
+from pathlib import Path
 from typing import Dict, Any, Optional
 from unittest.mock import patch
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(REPO_ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from app.agents.skeptic import deduplicate_and_filter_node
 from app.run_health import health

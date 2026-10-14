@@ -5,11 +5,18 @@ and results comparison functions.
 """
 
 import os
+import sys
 import json
 import math
 import time
 from pathlib import Path
 from typing import Dict, Any, List, Tuple, Optional, Callable
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(REPO_ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from app.run_health import health
 

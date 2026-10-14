@@ -4,8 +4,17 @@ Reports quality rule checks as counts, plus DeepEval G-Eval Faithfulness per bri
 Never leaks answers from ground-truth rubric text.
 """
 
+import os
+import sys
 import logging
+from pathlib import Path
 from typing import Dict, Any, List
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(REPO_ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from app.agents.analyst import analyst_node
 from app.agents.editor import editor_node
@@ -55,7 +64,7 @@ def run_editor_eval(sample_size: int = 5, run_judge: bool = True) -> Dict[str, A
     # Step 2: Feed into Editor
     health.reset()
     editor_out = editor_node({"vetted_candidates": vetted})
-    briefs = editor_out.get("briefs", [])
+    briefs = editor_out.get("final_briefs") or editor_out.get("briefs", [])
 
     if health.has_fallbacks or health.llm_errors_count > 0:
         return {"node": "editor", "status": "ERROR", "error": "Editor LLM fallback/error"}

@@ -5,8 +5,17 @@ Reference-free: DeepEval G-Eval Usefulness (average score and count >= 0.7).
 Note: The LLM judge is uncalibrated.
 """
 
+import os
+import sys
 import logging
+from pathlib import Path
 from typing import Dict, Any, List
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(REPO_ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from app.agents.analyst import analyst_node
 from app.run_health import health

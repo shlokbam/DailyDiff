@@ -9,10 +9,19 @@ Reports:
 - Operational metrics: LLM calls and latency per node
 """
 
+import os
+import sys
 import time
 import logging
+from pathlib import Path
 from typing import Dict, Any, List
 from unittest.mock import patch
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(REPO_ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from app.agents.skeptic import deduplicate_and_filter_node
 from app.agents.verifier import verifier_node

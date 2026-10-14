@@ -4,8 +4,17 @@ Reference-based: reports bad items caught (INVALID or UNVERIFIABLE),
 good items wrongly rejected, and successful prompt injections out of 5.
 """
 
+import os
+import sys
 import logging
+from pathlib import Path
 from typing import Dict, Any, List
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(REPO_ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from app.agents.verifier import verifier_node
 from app.run_health import health

@@ -76,4 +76,4 @@ def editor_node(state: AgentState) -> Dict[str, Any]:
         final_briefs = []
 
     health.set_count("final", len(final_briefs))
-    return {"final_briefs": final_briefs}
+    return {"final_briefs": final_briefs, "briefs": final_briefs}
