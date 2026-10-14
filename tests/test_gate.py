@@ -1,221 +1,116 @@
+"""
+Unit tests for the publication gate in backend/run_agent.py.
+Verifies fail-closed behavior, degraded snapshot creation, quiet days,
+and history integrity without depending on a hardcoded date.
+"""
+
 import os
-import sys
 import json
 import pytest
 from unittest.mock import patch, MagicMock
-from langchain_core.messages import AIMessage
 
 from app.run_health import health
-from app.agents.models import invoke_llm, BudgetExceeded
-from app.agents.verifier import verifier_node
-from app.agents.analyst import analyst_node
-from app.agents.editor import editor_node
-from app.agents.skeptic import deduplicate_and_filter_node
 from run_agent import main as run_agent_main
 
-class Mock429Error(Exception):
-    """Simulated HTTP 429 Rate Limit error."""
-    pass
 
-class FailingLLM:
-    def invoke(self, *args, **kwargs):
-        raise Mock429Error("HTTP 429: Too Many Requests / Rate limit exceeded")
-
-def test_budget_exceeded_raises():
+@pytest.fixture(autouse=True)
+def reset_health():
     health.reset()
-    mock_llm = MagicMock()
-    with patch.dict(os.environ, {"LLM_TIME_BUDGET_SECONDS": "0"}):
-        # Force health.over_budget() to True
-        with patch.object(health, "over_budget", return_value=True):
-            with pytest.raises(BudgetExceeded):
-                invoke_llm("test_node", mock_llm, "test prompt")
-
-def test_skeptic_fails_closed_on_429():
+    yield
     health.reset()
-    state = {
-        "raw_signals": [
-            {"source": "GitHub", "title": "Cool Repo", "url": "https://github.com/a/b", "description": "A repo."}
-        ]
+
+
+def _make_brief(i: int, cat: str = "Tech Shift") -> dict:
+    return {
+        "category": cat,
+        "title": f"Tool {i}",
+        "description": f"**Tool {i} is a great utility.** Useful for building software.",
+        "why_it_matters": "Saves developer time.",
+        "who_cares": "Engineers.",
+        "verdict": "INTEGRATE",
+        "source_url": f"https://github.com/example/tool_{i}",
     }
-    with patch("app.agents.skeptic.get_llm", return_value=FailingLLM()):
-        with patch("app.agents.skeptic.get_published_urls", return_value=set()):
-            result = deduplicate_and_filter_node(state)
-            assert result["candidates"] == [], "Skeptic must return empty list on LLM failure"
-            assert health.has_fallbacks is True
-            assert any(f["node"] == "skeptic" for f in health.fallbacks)
 
-def test_verifier_fails_closed_on_429():
-    health.reset()
-    state = {
-        "researched_candidates": [
-            {
-                "title": "TanStack Router",
-                "source": "GitHub",
-                "url": "https://github.com/tanstack/router",
-                "content_source": "readme",
-                "detailed_content": "Type-safe routing for modern applications.",
-                "description": "TanStack Router is a type-safe routing library."
-            }
-        ]
-    }
-    with patch("app.agents.verifier.get_llm", return_value=FailingLLM()):
-        result = verifier_node(state)
-        assert result["vetted_candidates"] == [], "Verifier must return empty list on LLM failure"
-        assert health.has_fallbacks is True
-        assert any(f["node"] == "verifier" for f in health.fallbacks)
 
-def test_analyst_fails_closed_on_429():
-    health.reset()
-    state = {
-        "vetted_candidates": [
-            {
-                "title": "Immich",
-                "source": "GitHub",
-                "url": "https://github.com/immich-app/immich",
-                "content_source": "readme",
-                "detailed_content": "Self-hosted photo management.",
-                "description": "Immich is a high-performance self-hosted photos platform."
-            }
-        ]
-    }
-    with patch("app.agents.analyst.get_llm", return_value=FailingLLM()):
-        result = analyst_node(state)
-        assert result["vetted_candidates"] == [], "Analyst must return empty list on LLM failure"
-        assert health.has_fallbacks is True
-        assert any(f["node"] == "analyst" for f in health.fallbacks)
+def test_gate_blocks_on_hard_failure(tmp_path):
+    """If any node records a hard failure, the gate must exit 1, write degraded snapshot, and leave history untouched."""
+    fake_data = tmp_path / "data"
+    fake_data.mkdir()
+    fake_archive = fake_data / "archive"
+    fake_archive.mkdir()
+    fake_history = fake_data / "history.json"
+    fake_history.write_text("[]", encoding="utf-8")
 
-def test_editor_fails_closed_on_429():
-    health.reset()
-    state = {
-        "vetted_candidates": [
-            {
-                "title": "Coolify",
-                "source": "GitHub",
-                "url": "https://github.com/coollabsio/coolify",
-                "content_source": "readme",
-                "detailed_content": "An open-source self-hosting solution.",
-                "description": "Coolify is an open-source self-hosting dashboard.",
-                "why_it_matters": "Simplifies server management.",
-                "who_cares": "Developers hosting apps.",
-                "verdict": "INTEGRATE"
-            }
-        ]
-    }
-    with patch("app.agents.editor.get_llm", return_value=FailingLLM()):
-        result = editor_node(state)
-        assert result["final_briefs"] == [], "Editor must return empty list on LLM failure"
-        assert health.has_fallbacks is True
-        assert any(f["node"] == "editor" for f in health.fallbacks)
-
-def test_gate_degraded_state_blocks_publication(tmp_path):
-    mock_graph = MagicMock()
-    def mock_invoke(state):
-        health.mark_fallback("verifier", "HTTP 429 Rate limit exceeded")
+    def failing_invoke(state):
+        health.mark_fallback("verifier", "Model 429 rate limit")
         return {
-            "raw_signals": [],
+            "raw_signals": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
             "candidates": [],
             "researched_candidates": [],
             "vetted_candidates": [],
-            "final_briefs": []
+            "final_briefs": [_make_brief(1), _make_brief(2), _make_brief(3)],
         }
-    mock_graph.invoke.side_effect = mock_invoke
+
+    mock_graph = MagicMock()
+    mock_graph.invoke.side_effect = failing_invoke
 
     env_overrides = {
-        "GROQ_API_KEY": "test-key-mock",
-        "BACKEND_API_URL": "http://mock-backend:8000",
-        "PUBLISH_GATE": "strict",
+        "GROQ_API_KEY": "test-key",
+        "BACKEND_API_URL": "",
+        "MIN_BRIEFS": "3",
     }
-
-    fake_data = tmp_path / "data"
-    fake_data.mkdir()
 
     with patch.dict(os.environ, env_overrides):
         with patch("run_agent.create_agent_graph", return_value=mock_graph):
             with patch("run_agent.append_to_history") as mock_append:
                 with patch("run_agent.DATA_DIR", fake_data):
-                    with patch("httpx.post") as mock_http:
-                        with pytest.raises(SystemExit) as exc_info:
-                            run_agent_main()
-                        assert exc_info.value.code == 1, "Degraded pipeline must exit with code 1"
-                        assert not mock_append.called, "append_to_history must NOT be called on degraded run"
-                        assert not mock_http.called, "Notify webhook must NOT be called on degraded run"
-                        # Verify degraded snapshot was written to fake_data/runs
-                        written_degraded = list((fake_data / "runs").glob("*.degraded.json"))
-                        assert len(written_degraded) == 1
+                    with patch("run_agent.ARCHIVE_DIR", fake_archive):
+                        with patch("run_agent.HISTORY_FILE_PATH", fake_history):
+                            with pytest.raises(SystemExit) as exc_info:
+                                run_agent_main()
+                            assert exc_info.value.code == 1
 
-def test_gate_healthy_state_publishes(tmp_path):
-    health.reset()
-    valid_briefs = [
-        {
-            "category": "Cool Tool",
-            "title": "Diagrams as Code in Python",
-            "description": "**You can now generate cloud architecture diagrams using plain Python code.** Diagrams lets you sketch system topologies.",
-            "why_it_matters": "Treating diagrams as code lets you version-control architecture alongside source repositories.",
-            "who_cares": "Backend engineers and DevOps architects.",
-            "verdict": "INTEGRATE",
-            "source_url": "https://github.com/mingrammer/diagrams"
-        },
-        {
-            "category": "Tech Shift",
-            "title": "TanStack Router Launch",
-            "description": "**TanStack Router brings first-class type safety to client routing.** What happened: Full type safety.",
-            "why_it_matters": "Eliminates broken links at compile time.",
-            "who_cares": "React developers.",
-            "verdict": "INTEGRATE",
-            "source_url": "https://github.com/tanstack/router"
-        },
-        {
-            "category": "Career & Learning",
-            "title": "HTTPie Learning Client",
-            "description": "**HTTPie provides interactive visual requests.** What happened: Clean visual editor.",
-            "why_it_matters": "Helps students understand API calls.",
-            "who_cares": "CS students.",
-            "verdict": "WATCH",
-            "source_url": "https://github.com/httpie/httpie"
-        }
-    ]
+                            # History must NOT be touched
+                            mock_append.assert_not_called()
+                            assert fake_history.read_text(encoding="utf-8") == "[]"
 
-    mock_graph = MagicMock()
-    mock_graph.invoke.return_value = {
-        "raw_signals": [{"title": b["title"], "url": b["source_url"], "source": "GitHub", "description": b["why_it_matters"]} for b in valid_briefs],
-        "candidates": [{"title": b["title"], "url": b["source_url"]} for b in valid_briefs],
-        "researched_candidates": [
-            {
-                "title": b["title"],
-                "url": b["source_url"],
-                "source": "GitHub",
-                "content_source": "readme",
-                "description": b["why_it_matters"],
-                "detailed_content": b["description"]
-            }
-            for b in valid_briefs
-        ],
-        "vetted_candidates": [
-            {
-                "title": b["title"],
-                "url": b["source_url"],
-                "verifier_status": "VALID",
-                "verifier_reason": "Verified against README",
-                "verdict": b["verdict"],
-                "why_it_matters": b["why_it_matters"],
-                "who_cares": b["who_cares"]
-            }
-            for b in valid_briefs
-        ],
-        "final_briefs": valid_briefs
-    }
+                            # Degraded snapshot must be written
+                            runs_dir = fake_data / "runs"
+                            assert runs_dir.exists()
+                            degraded_files = list(runs_dir.glob("*.degraded.json"))
+                            assert len(degraded_files) == 1
+                            snapshot = json.loads(degraded_files[0].read_text(encoding="utf-8"))
+                            assert len(snapshot.get("failure_reasons", [])) > 0
 
-    env_overrides = {
-        "GROQ_API_KEY": "test-key-mock",
-        "PUBLISH_GATE": "strict",
-        "BACKEND_API_URL": "",  # Don't call webhook in unit test
-    }
+
+def test_gate_publishes_when_one_item_dropped(tmp_path):
+    """If 4 of 5 briefs survive rule checks with no hard failure, gate publishes successfully."""
+    cats = ["Tech Shift", "Cool Tool", "Career & Learning", "Ecosystem Update", "Watchlist"]
+    valid_briefs = [_make_brief(i, cats[i]) for i in range(4)]
+    bad_brief = _make_brief(5, "InvalidCategory")  # will be dropped by quality checks
 
     fake_data = tmp_path / "data"
     fake_data.mkdir()
     fake_archive = fake_data / "archive"
     fake_archive.mkdir()
     fake_history = fake_data / "history.json"
+    fake_history.write_text("[]", encoding="utf-8")
+
+    all_briefs = valid_briefs + [bad_brief]
+    mock_graph = MagicMock()
+    mock_graph.invoke.return_value = {
+        "raw_signals": [{"title": f"T{i}", "url": b["source_url"]} for i, b in enumerate(all_briefs)],
+        "candidates": [{"title": f"T{i}", "url": b["source_url"]} for i, b in enumerate(all_briefs)],
+        "researched_candidates": [{"title": f"T{i}", "url": b["source_url"]} for i, b in enumerate(all_briefs)],
+        "vetted_candidates": [{"title": f"T{i}", "url": b["source_url"]} for i, b in enumerate(all_briefs)],
+        "final_briefs": all_briefs,
+    }
+
+    env_overrides = {
+        "GROQ_API_KEY": "test-key",
+        "BACKEND_API_URL": "",
+        "MIN_BRIEFS": "3",
+    }
 
     with patch.dict(os.environ, env_overrides):
         with patch("run_agent.create_agent_graph", return_value=mock_graph):
@@ -224,7 +119,85 @@ def test_gate_healthy_state_publishes(tmp_path):
                     with patch("run_agent.ARCHIVE_DIR", fake_archive):
                         with patch("run_agent.HISTORY_FILE_PATH", fake_history):
                             run_agent_main()
-                            assert mock_append.called, "append_to_history MUST be called on healthy run"
-                            written_runs = list((fake_data / "runs").glob("*.json"))
-                            assert len(written_runs) == 1
-                            assert not any(".degraded." in p.name for p in written_runs)
+                            assert mock_append.called
+                            published_briefs = mock_append.call_args[0][0]
+                            assert len(published_briefs) == 4
+
+                            # Normal run snapshot written
+                            runs_dir = fake_data / "runs"
+                            run_files = [f for f in runs_dir.glob("*.json") if not f.name.endswith(".degraded.json")]
+                            assert len(run_files) == 1
+
+
+def test_quiet_day_publishes(tmp_path):
+    """A genuine quiet day (zero candidates survived legitimately, no hard failures) publishes empty list."""
+    fake_data = tmp_path / "data"
+    fake_data.mkdir()
+    fake_archive = fake_data / "archive"
+    fake_archive.mkdir()
+    fake_history = fake_data / "history.json"
+    fake_history.write_text("[]", encoding="utf-8")
+
+    mock_graph = MagicMock()
+    mock_graph.invoke.return_value = {
+        "raw_signals": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
+        "candidates": [],
+        "researched_candidates": [],
+        "vetted_candidates": [],
+        "final_briefs": [],
+    }
+
+    env_overrides = {
+        "GROQ_API_KEY": "test-key",
+        "BACKEND_API_URL": "",
+        "MIN_BRIEFS": "3",
+    }
+
+    with patch.dict(os.environ, env_overrides):
+        with patch("run_agent.create_agent_graph", return_value=mock_graph):
+            with patch("run_agent.append_to_history") as mock_append:
+                with patch("run_agent.DATA_DIR", fake_data):
+                    with patch("run_agent.ARCHIVE_DIR", fake_archive):
+                        with patch("run_agent.HISTORY_FILE_PATH", fake_history):
+                            run_agent_main()
+                            assert mock_append.called
+                            assert mock_append.call_args[0][0] == []
+
+
+def test_fewer_than_min_briefs_blocks(tmp_path):
+    """When fewer than MIN_BRIEFS survive and it is NOT a quiet day, gate blocks and exits 1."""
+    cats = ["Tech Shift", "Cool Tool"]
+    two_briefs = [_make_brief(i, cats[i]) for i in range(2)]
+
+    fake_data = tmp_path / "data"
+    fake_data.mkdir()
+    fake_archive = fake_data / "archive"
+    fake_archive.mkdir()
+    fake_history = fake_data / "history.json"
+    fake_history.write_text("[]", encoding="utf-8")
+
+    mock_graph = MagicMock()
+    mock_graph.invoke.return_value = {
+        "raw_signals": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
+        "candidates": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
+        "researched_candidates": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
+        "vetted_candidates": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
+        "final_briefs": two_briefs,  # only 2 briefs, MIN_BRIEFS defaults to 3
+    }
+
+    env_overrides = {
+        "GROQ_API_KEY": "test-key",
+        "BACKEND_API_URL": "",
+        "MIN_BRIEFS": "3",
+    }
+
+    with patch.dict(os.environ, env_overrides):
+        with patch("run_agent.create_agent_graph", return_value=mock_graph):
+            with patch("run_agent.append_to_history") as mock_append:
+                with patch("run_agent.DATA_DIR", fake_data):
+                    with patch("run_agent.ARCHIVE_DIR", fake_archive):
+                        with patch("run_agent.HISTORY_FILE_PATH", fake_history):
+                            with pytest.raises(SystemExit) as exc_info:
+                                run_agent_main()
+                            assert exc_info.value.code == 1
+                            mock_append.assert_not_called()

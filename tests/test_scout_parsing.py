@@ -1,5 +1,6 @@
 import pytest
-from app.agents.scout import parse_feed_content
+from unittest.mock import patch, MagicMock
+from app.agents.scout import parse_feed_content, scout_github_releases
 
 SAMPLE_ATOM_FEED = b"""<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -50,3 +51,23 @@ def test_rss_feed_parsing_yields_signal():
     assert sig["title"] == "Understanding Modern Concurrency in Python"
     assert sig["url"] == "https://dev.to/user/concurrency-guide"
     assert "async programming" in sig["description"]
+
+def test_null_release_body_is_safe():
+    """Verify that a GitHub release with a null body does not crash."""
+    mock_resp = MagicMock()
+    mock_resp.status_code = 200
+    mock_resp.json.return_value = [
+        {
+            "tag_name": "v1.0.0",
+            "name": "Release v1.0.0",
+            "html_url": "https://github.com/example/repo/releases/v1.0.0",
+            "published_at": "2026-10-14T00:00:00Z",
+            "body": None,  # Null body
+        }
+    ]
+    with patch("httpx.Client") as mock_client_cls:
+        client_instance = mock_client_cls.return_value.__enter__.return_value
+        client_instance.get.return_value = mock_resp
+        releases = scout_github_releases(days_ago=10)
+        assert len(releases) > 0
+        assert "Details: ..." in releases[0]["description"]
