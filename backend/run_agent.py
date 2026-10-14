@@ -1,352 +1,157 @@
+"""
+DailyDiff Pipeline Runner & Publish Gate.
+Orchestrates graph execution, quality gate validation, snapshot creation, and publication.
+"""
+
 import os
 import sys
-import time
-import logging
 import json
+import logging
 import subprocess
-import httpx
 from datetime import datetime, timezone
 from pathlib import Path
-from app.config import ARCHIVE_DIR, HISTORY_FILE_PATH, DATA_DIR
+import httpx
+
+from app.config import DATA_DIR, ARCHIVE_DIR, HISTORY_FILE_PATH
 from app.database import init_db, init_history_file, append_to_history
+from app.run_health import health
 from app.agents.graph import create_agent_graph
 from app.agents.researcher import MAX_EVIDENCE_CHARS
-from app.run_health import health
 from app.checks import validate_briefs
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("DailyDiff.runner")
 
 def get_git_sha() -> str:
-    """Retrieve current commit SHA for run provenance."""
     try:
-        res = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, check=True)
-        return res.stdout.strip()
+        return subprocess.check_output(["git", "rev-parse", "HEAD"], stderr=subprocess.DEVNULL).decode("utf-8").strip()
     except Exception:
         return "unknown"
 
 def build_markdown_brief(briefs: list, date_str: str) -> str:
-    """Generate a clean, readable Markdown version of the daily brief."""
-    md_content = f"# DailyDiff — {date_str}\n"
-    md_content += "*We scan the noise. Five things survive.*\n\n"
-    md_content += "---\n\n"
+    lines = [f"# DailyDiff Brief — {date_str}\n"]
+    for b in briefs:
+        lines.append(f"### [{b.get('category')}] {b.get('title')}")
+        lines.append(f"{b.get('description')}\n")
+        lines.append(f"**Why it matters:** {b.get('why_it_matters')}\n")
+        lines.append(f"**Who cares:** {b.get('who_cares')}\n")
+        lines.append(f"**Verdict:** `{b.get('verdict')}` | [Source]({b.get('source_url')})\n\n---\n")
+    return "\n".join(lines)
 
-    if not briefs:
-        md_content += "### No meaningful updates today. The technology ecosystem was quiet.\n"
-        return md_content
-
-    category_emojis = {
-        "Tech Shift": "🔥",
-        "Cool Tool": "💎",
-        "Career & Learning": "🧠",
-        "Ecosystem Update": "⚡",
-        "Watchlist": "👀",
-    }
-
-    show_confidence = os.getenv("SHOW_CONFIDENCE", "false").lower() == "true"
-
-    for item in briefs:
-        category = item.get("category", "Tech Shift")
-        emoji = category_emojis.get(category, "✨")
-
-        md_content += f"## {emoji} {category.upper()}: {item.get('title')}\n\n"
-        md_content += f"**What Happened:** {item.get('description')}\n\n"
-        md_content += f"**Why It Matters:** {item.get('why_it_matters')}\n\n"
-        md_content += f"**Who Cares:** {item.get('who_cares')}\n\n"
-
-        url = item.get("source_url")
-        if url:
-            md_content += f"**Source:** [{url}]({url})\n\n"
-
-        if show_confidence and item.get("confidence") is not None:
-            md_content += f"**Verdict:** `{item.get('verdict', 'WATCH')}` | **Confidence:** `{item.get('confidence')}%`\n\n"
-        else:
-            md_content += f"**Verdict:** `{item.get('verdict', 'WATCH')}`\n\n"
-
-        md_content += "---\n\n"
-
-    return md_content
-
-def build_run_snapshot(date_str: str, result_state: dict, briefs: list, failure_reasons: list = None) -> dict:
-    """Build a complete state and provenance snapshot for data/runs."""
-    evidence_by_url = {}
-    for c in result_state.get("researched_candidates", []):
-        url = c.get("url")
-        if url:
-            evidence_by_url[url] = f"{c.get('description', '')} {(c.get('detailed_content') or '')[:MAX_EVIDENCE_CHARS]}"
-
-    health_dict = health.to_dict()
+def build_run_snapshot(date_str: str, briefs: list, failure_reasons: list = None) -> dict:
+    """Builds a small, informative snapshot of the run."""
     snapshot = {
         "date": date_str,
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "git_sha": get_git_sha(),
-        "health": health_dict,
-        "decisions": health_dict.get("decisions", {}),
-        "raw_signals": [
-            {
-                "title": s.get("title"),
-                "url": s.get("url"),
-                "source": s.get("source"),
-                "description": (s.get("description") or "")[:500]
-            }
-            for s in result_state.get("raw_signals", [])
-        ],
-        "skeptic_kept": [
-            c.get("url") for c in result_state.get("candidates", [])
-        ],
-        "candidates": [
-            {
-                "title": c.get("title"),
-                "url": c.get("url"),
-                "source": c.get("source"),
-                "content_source": c.get("content_source"),
-                "evidence": (c.get("detailed_content") or "")[:MAX_EVIDENCE_CHARS]
-            }
-            for c in result_state.get("researched_candidates", [])
-        ],
-        "verifier_results": [
-            {
-                "title": c.get("title"),
-                "url": c.get("url"),
-                "status": c.get("verifier_status", "VALID"),
-                "reason": c.get("verifier_reason", "")
-            }
-            for c in result_state.get("vetted_candidates", [])
-        ],
-        "analyst_outputs": [
-            {
-                "title": c.get("title"),
-                "verdict": c.get("verdict"),
-                "why_it_matters": c.get("why_it_matters"),
-                "who_cares": c.get("who_cares")
-            }
-            for c in result_state.get("vetted_candidates", [])
-        ],
-        "final_briefs": briefs
+        "counts": health.counts,
+        "models_used": health.models_used,
+        "llm_calls": health.llm_calls_count,
+        "durations_seconds": health.durations,
+        "hard_failures": health.fallbacks,
+        "warnings": health.warnings,
+        "final_briefs": briefs,
     }
     if failure_reasons:
         snapshot["failure_reasons"] = failure_reasons
-        snapshot["degraded_reasons"] = failure_reasons
+        snapshot["status"] = "degraded"
+    else:
+        snapshot["status"] = "healthy"
     return snapshot
 
-def main():
-    start_time = time.time()
-    # Compute date string once and reuse across snapshot, gate, and archive
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+def publish_gate(briefs: list, candidate_urls: set, evidence_by_url: dict, date_str: str, runs_dir: Path, min_briefs: int):
+    """Strict publish gate: drops invalid briefs, enforces categories, blocks on failure."""
+    # 1. Soft filter: drop individual briefs that fail quality rules
+    surviving = []
+    for b in briefs:
+        errs = validate_briefs([b], evidence_by_url=evidence_by_url, candidate_urls=candidate_urls)
+        if errs:
+            logger.warning(f"Dropping brief '{b.get('title')}': {'; '.join(errs)}")
+            health.add_warning(f"Dropped brief '{b.get('title')}': {errs[0]}")
+        else:
+            surviving.append(b)
 
-    logger.info("Initializing DailyDiff system environments...")
+    # 2. Enforce unique categories and at most 5 briefs
+    seen_cats = set()
+    deduped = []
+    for b in surviving:
+        cat = b.get("category")
+        if cat not in seen_cats:
+            seen_cats.add(cat)
+            deduped.append(b)
+    briefs = deduped[:5]
+
+    # 3. Determine if gate passes or fails
+    failure_reasons = []
+    if health.has_fallbacks:
+        failure_reasons.append(f"Hard node fallbacks: {health.fallbacks}")
+
+    # A genuine quiet day has no hard failures, no LLM errors, and legitimately 0 candidates
+    is_quiet_day = not health.has_fallbacks and health.llm_errors_count == 0 and len(briefs) == 0
+    if len(briefs) < min_briefs and not is_quiet_day:
+        failure_reasons.append(f"Produced {len(briefs)} briefs (minimum required: {min_briefs}).")
+
+    if failure_reasons:
+        logger.error(f"[GATE REJECTION] Degraded run for {date_str}: {failure_reasons}")
+        degraded_path = runs_dir / f"{date_str}.degraded.json"
+        with open(degraded_path, "w") as f:
+            json.dump(build_run_snapshot(date_str, briefs, failure_reasons), f, indent=2)
+        sys.exit(1)
+
+    # 4. Gate passed: publish output
+    logger.info(f"[GATE APPROVED] Publishing {len(briefs)} briefs for {date_str}...")
+    run_path = runs_dir / f"{date_str}.json"
+    with open(run_path, "w") as f:
+        json.dump(build_run_snapshot(date_str, briefs), f, indent=2)
+
+    append_to_history(briefs, date_str)
+
+    # Save Markdown archive
+    parts = date_str.split("-")
+    month_dir = ARCHIVE_DIR / parts[0] / parts[1]
+    month_dir.mkdir(parents=True, exist_ok=True)
+    with open(month_dir / f"{parts[2]}.md", "w") as f:
+        f.write(build_markdown_brief(briefs, date_str))
+
+    # Notify subscribers if configured
+    backend_url = os.getenv("BACKEND_API_URL")
+    if backend_url and briefs:
+        try:
+            headers = {"X-Auth-Token": os.getenv("NOTIFY_SECRET_TOKEN", "")}
+            payload = {"date": date_str, "published_at": datetime.now(timezone.utc).isoformat(), "briefs": briefs}
+            httpx.post(f"{backend_url}/api/notify-subscribers", json=payload, headers=headers, timeout=60)
+        except Exception as e:
+            logger.error(f"Failed to dispatch subscriber notification: {e}")
+
+def main():
+    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     init_db()
     init_history_file()
-
-    # Reset health tracker singleton
     health.reset()
 
     runs_dir = DATA_DIR / "runs"
     runs_dir.mkdir(parents=True, exist_ok=True)
-
-    gemini_key = os.getenv("GEMINI_API_KEY")
-    mistral_key = os.getenv("MISTRAL_API_KEY")
-    groq_key = os.getenv("GROQ_API_KEY")
-    is_github_actions = bool(os.getenv("GITHUB_ACTIONS"))
-    has_backend_url = bool(os.getenv("BACKEND_API_URL"))
-
-    has_any_key = bool(gemini_key or mistral_key or groq_key)
-
-    briefs = []
-    result_state = {}
     min_briefs = int(os.getenv("MIN_BRIEFS", "3"))
 
-    if not has_any_key:
-        if is_github_actions or has_backend_url:
-            raise RuntimeError(
-                "Execution aborted: No LLM API keys (GROQ_API_KEY, GEMINI_API_KEY, MISTRAL_API_KEY) found. "
-                "Simulation mode is strictly prohibited in CI or connected backend environments."
-            )
-        logger.warning("No API keys found and running in local dev. Running in SIMULATION mode...")
-        briefs = [
-            {
-                "category": "Career & Learning",
-                "title": "Modern React Portfolio Template",
-                "description": "**A high-performance, responsive React portfolio template built with Tailwind CSS was launched.**\n\nWhat happened: This open-source template includes built-in SEO optimization, a dark-mode toggle, and a section for GitHub integrations designed to help students stand out.",
-                "why_it_matters": "Enables tech students and early-career developers to spin up a professional portfolio in minutes, boosting their job search readiness.",
-                "who_cares": "CS students building portfolios, job-seeking software engineers.",
-                "verdict": "INTEGRATE",
-                "source_url": "https://github.com/learn-to-code/portfolio-template"
-            },
-            {
-                "category": "Cool Tool",
-                "title": "HTTPie visual API Client",
-                "description": "**HTTPie released a web client focused on learning API request structures.**\n\nWhat happened: It offers an intuitive visual request editor and clean response parsing that makes testing endpoints and learning REST API concepts simple.",
-                "why_it_matters": "Provides a zero-setup, highly visual alternative to Postman, making it perfect for beginners learning web development.",
-                "who_cares": "React beginners, backend learners, web development students.",
-                "verdict": "WATCH",
-                "source_url": "https://github.com/httpie/httpie"
-            }
-        ]
-        result_state = {"raw_signals": [], "candidates": [], "researched_candidates": [], "vetted_candidates": [], "final_briefs": briefs}
-    else:
-        logger.info("Starting LangGraph agent workflow execution...")
-        graph = create_agent_graph()
+    logger.info("Executing DailyDiff graph workflow...")
+    graph = create_agent_graph()
+    try:
+        res = graph.invoke({"raw_signals": [], "candidates": [], "researched_candidates": [], "vetted_candidates": [], "final_briefs": []})
+    except Exception as exc:
+        logger.error(f"Graph execution failed: {exc}")
+        health.mark_fallback("graph", str(exc))
+        with open(runs_dir / f"{date_str}.degraded.json", "w") as f:
+            json.dump(build_run_snapshot(date_str, [], [f"Graph exception: {exc}"]), f, indent=2)
+        sys.exit(1)
 
-        initial_state = {
-            "raw_signals": [],
-            "candidates": [],
-            "researched_candidates": [],
-            "vetted_candidates": [],
-            "criticisms": [],
-            "final_briefs": [],
-            "errors": []
-        }
+    briefs = res.get("final_briefs", [])
+    candidate_urls = {c.get("url") for c in res.get("researched_candidates", []) if c.get("url")}
+    evidence_by_url = {
+        c.get("url"): f"{c.get('description', '')} {(c.get('detailed_content') or '')[:MAX_EVIDENCE_CHARS]}"
+        for c in res.get("researched_candidates", []) if c.get("url")
+    }
 
-        try:
-            result_state = graph.invoke(initial_state)
-            briefs = result_state.get("final_briefs", [])
-        except Exception as exc:
-            logger.error(f"LangGraph execution exception: {exc}")
-            health.mark_fallback("graph", str(exc))
-            degraded_path = runs_dir / f"{date_str}.degraded.json"
-            snapshot = build_run_snapshot(date_str, {}, [], failure_reasons=[f"Workflow execution exception: {exc}"])
-            with open(degraded_path, "w") as f:
-                json.dump(snapshot, f, indent=2)
-            sys.exit(1)
-
-    elapsed_time = time.time() - start_time
-    run_budget = float(os.getenv("RUN_BUDGET_SECONDS", "900"))
-
-    # ==========================================
-    # Publication Quality Gate
-    # ==========================================
-    failure_reasons = []
-
-    # 1. Health hard fallbacks check
-    if health.has_fallbacks:
-        failure_reasons.append(f"Pipeline marked hard fallbacks: {health.fallbacks}")
-
-    # Build evidence and candidate URLs
-    evidence_by_url = {}
-    candidate_urls = set()
-    for c in result_state.get("researched_candidates", []):
-        url = c.get("url")
-        if url:
-            candidate_urls.add(url)
-            evidence_by_url[url] = f"{c.get('description', '')} {(c.get('detailed_content') or '')[:MAX_EVIDENCE_CHARS]}"
-
-    # 2. Per-brief validation and soft filtering
-    if briefs:
-        surviving_briefs = []
-        for b in briefs:
-            b_violations = validate_briefs([b], evidence_by_url=evidence_by_url, candidate_urls=candidate_urls)
-            if b_violations:
-                msg = f"Dropped brief '{b.get('title')}': {'; '.join(b_violations)}"
-                logger.warning(f"Gate validation dropped brief: {msg}")
-                health.add_degradation("gate", msg)
-            else:
-                surviving_briefs.append(b)
-        briefs = surviving_briefs
-
-    # 3. Brief count check vs MIN_BRIEFS (distinguish genuine quiet day)
-    # A genuine quiet day has no hard fallbacks, no LLM errors, and zero briefs because models legitimately returned 0 candidates
-    is_genuine_quiet_day = (
-        not health.has_fallbacks
-        and health.llm_errors_count == 0
-        and len(briefs) == 0
-        and (
-            health.counts.get("skeptic_passed", 0) == 0
-            or (health.counts.get("skeptic_passed", 0) > 0 and health.counts.get("verified", 0) == 0)
-        )
-    )
-
-    if len(briefs) < min_briefs and not is_genuine_quiet_day:
-        failure_reasons.append(
-            f"Insufficient briefs: produced {len(briefs)} briefs (minimum required: {min_briefs}). "
-            f"Not a quiet day (fallbacks={health.fallbacks}, llm_errors={health.llm_errors_count})."
-        )
-
-    # 4. Runtime budget check
-    if elapsed_time > run_budget:
-        failure_reasons.append(f"Execution runtime {elapsed_time:.1f}s exceeded RUN_BUDGET_SECONDS ({run_budget}s).")
-
-    # Handle Gate Verdict
-    publish_gate_mode = os.getenv("PUBLISH_GATE", "strict").lower()
-
-    if failure_reasons:
-        logger.error(f"[GATE REJECTION] Pipeline produced degraded output for {date_str}!")
-        for r in failure_reasons:
-            logger.error(f"  - {r}")
-
-        degraded_path = runs_dir / f"{date_str}.degraded.json"
-        snapshot = build_run_snapshot(date_str, result_state, briefs, failure_reasons)
-        with open(degraded_path, "w") as f:
-            json.dump(snapshot, f, indent=2)
-        logger.error(f"Saved degraded run snapshot to {degraded_path}")
-
-        if publish_gate_mode == "warn":
-            logger.warning("PUBLISH_GATE=warn configured: publishing degraded output anyway despite failures.")
-        else:
-            logger.error("Failing loud: blocking publication, archive updates, and email dispatch.")
-            sys.exit(1)
-
-    # Gate PASSED: Publish output
-    logger.info(f"Publication gate passed successfully ({len(briefs)} briefs). Publishing for {date_str}...")
-
-    # Write data/runs/YYYY-MM-DD.json
-    run_path = runs_dir / f"{date_str}.json"
-    snapshot = build_run_snapshot(date_str, result_state, briefs)
-    with open(run_path, "w") as f:
-        json.dump(snapshot, f, indent=2)
-    logger.info(f"Saved run telemetry snapshot to {run_path}")
-
-    # Append to history.json (skip in simulation mode to avoid polluting history)
-    if not has_any_key:
-        logger.info("Simulation mode: skipping history, archive, and email dispatch.")
-        return
-
-    append_to_history(briefs, date_str)
-
-    # Generate and save Markdown archive
-    md_text = build_markdown_brief(briefs, date_str)
-
-    # Hierarchical archive path: YYYY/MM/DD.md using pre-computed date_str
-    parts = date_str.split("-")
-    year_dir = ARCHIVE_DIR / parts[0]
-    month_dir = year_dir / parts[1]
-    month_dir.mkdir(parents=True, exist_ok=True)
-
-    day_file_path = month_dir / f"{parts[2]}.md"
-    with open(day_file_path, "w") as f:
-        f.write(md_text)
-    logger.info(f"Saved Markdown archive to {day_file_path}")
-
-    # Also save as latest.md
-    latest_md_path = HISTORY_FILE_PATH.parent / "latest.md"
-    with open(latest_md_path, "w") as f:
-        f.write(md_text)
-    logger.info(f"Saved latest brief to {latest_md_path}")
-
-    # Trigger subscription email dispatch via FastAPI webhook if configured
-    backend_url = os.getenv("BACKEND_API_URL")
-    notify_token = os.getenv("NOTIFY_SECRET_TOKEN")
-    if backend_url and briefs:
-        logger.info(f"Triggering email notifications to backend at {backend_url}...")
-        try:
-            headers = {}
-            if notify_token:
-                headers["X-Auth-Token"] = notify_token
-
-            payload = {
-                "date": date_str,
-                "published_at": datetime.now(timezone.utc).isoformat(),
-                "briefs": briefs
-            }
-
-            response = httpx.post(f"{backend_url}/api/notify-subscribers", json=payload, headers=headers, timeout=120)
-            if response.status_code == 200:
-                logger.info("Successfully notified backend to send email briefs.")
-            else:
-                logger.error(f"Failed to notify backend: Status {response.status_code} - {response.text}")
-        except Exception as e:
-            logger.error(f"Error calling notify-subscribers webhook: {e}")
+    publish_gate(briefs, candidate_urls, evidence_by_url, date_str, runs_dir, min_briefs)
 
 if __name__ == "__main__":
     main()
