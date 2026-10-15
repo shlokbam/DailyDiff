@@ -31,6 +31,18 @@ class FailingLLM:
         raise MockAPIError("HTTP 429 Too Many Requests")
 
 
+class CountingLLM:
+    def __init__(self, outputs):
+        self.outputs, self.calls = list(outputs), 0
+
+    def invoke(self, prompt):
+        self.calls += 1
+        out = self.outputs.pop(0)
+        if isinstance(out, Exception):
+            raise out
+        return AIMessage(content=out)
+
+
 @pytest.fixture(autouse=True)
 def reset_health():
     health.reset()
@@ -141,9 +153,44 @@ def test_invoke_json_fails_closed_when_malformed_twice():
     with pytest.raises(Exception):
         invoke_json("verifier", mock_llm, "test prompt")
 
-    assert health.has_fallbacks is True
-    assert any(f["node"] == "verifier" for f in health.fallbacks)
     assert mock_llm.invoke.call_count == 2
+
+
+def test_api_error_is_not_retried():
+    llm = CountingLLM([MockAPIError("429")])
+    with pytest.raises(MockAPIError):
+        invoke_json("analyst", llm, "p")
+    assert llm.calls == 1
+
+
+def test_bad_json_then_good_json_makes_two_calls():
+    llm = CountingLLM(["not json", "[1]"])
+    assert invoke_json("analyst", llm, "p") == [1]
+    assert llm.calls == 2
+
+
+def test_bad_json_twice_raises_after_two_calls():
+    llm = CountingLLM(["x", "y"])
+    with pytest.raises(ValueError):
+        invoke_json("analyst", llm, "p")
+    assert llm.calls == 2
+
+
+def test_analyst_records_exactly_one_fallback_on_api_error():
+    with patch("app.agents.analyst.get_llm", return_value=FailingLLM()):
+        state = {
+            "vetted_candidates": [
+                {
+                    "title": "T",
+                    "description": "D",
+                    "url": "https://example.com",
+                    "detailed_content": "C",
+                }
+            ]
+        }
+        analyst_node(state)
+        assert len(health.fallbacks) == 1
+        assert "429" in health.fallbacks[0]["reason"]
 
 
 # 3. Verifier drops candidates with missing evidence

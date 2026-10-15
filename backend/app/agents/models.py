@@ -68,21 +68,20 @@ def _clean_json_str(text: str) -> str:
     return s
 
 def invoke_json(node: str, llm: BaseChatModel, prompt: Any, validate_fn: Optional[Callable[[Any], bool]] = None) -> Any:
-    """Invokes LLM and parses JSON. Retries ONCE only if JSON is malformed or invalid."""
-    last_err: Optional[Exception] = None
+    """Calls the LLM and parses JSON.
+    - An API error (429, timeout, network) is raised immediately. It is NOT retried.
+    - Malformed JSON or a failed schema check is retried ONCE.
+    The calling node records the failure (one hard fallback per failed node)."""
     for attempt in range(2):
         p = prompt if attempt == 0 else f"{prompt}\n\nIMPORTANT: Return ONLY valid JSON, no surrounding text or markdown."
+        resp = invoke_llm(node, llm, p)  # API errors propagate from here, outside the try block
         try:
-            resp = invoke_llm(node, llm, p)
             data = json.loads(_clean_json_str(getattr(resp, "content", str(resp))))
             if validate_fn and not validate_fn(data):
                 raise ValueError(f"Schema check failed on {node} output")
             return data
-        except Exception as e:
-            last_err = e
-            if attempt == 0 and not isinstance(e, (KeyboardInterrupt, SystemExit)):
-                logger.warning(f"{node} produced malformed JSON on attempt 1 ({e}). Retrying once...")
-            else:
-                logger.error(f"{node} failed after retry: {e}")
-                health.mark_fallback(node, f"JSON parsing failed: {e}")
-                raise e
+        except ValueError as e:  # json.JSONDecodeError is a ValueError
+            if attempt == 0:
+                logger.warning(f"{node} returned bad JSON ({e}). Retrying once...")
+                continue
+            raise ValueError(f"{node}: invalid JSON after one retry: {e}") from e
