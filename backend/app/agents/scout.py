@@ -62,8 +62,16 @@ def fetch_rss(url: str, source_name: str, max_items: int = 10, headers: dict = N
     return []
 
 def scout_github(days_ago: int) -> List[Dict[str, Any]]:
-    since = (datetime.now(timezone.utc) - timedelta(days=days_ago)).strftime("%Y-%m-%d")
-    queries = [f"stars:>20 pushed:>{since} topic:developer-tools", f"stars:>15 pushed:>{since} topic:learn-to-code", f"stars:>25 pushed:>{since} topic:web-development"]
+    now = datetime.now(timezone.utc)
+    since = (now - timedelta(days=days_ago)).strftime("%Y-%m-%d")
+    created_since = (now - timedelta(days=45)).strftime("%Y-%m-%d")
+    queries = [
+        f"stars:>15 pushed:>{since} created:>{created_since} topic:learn-to-code",
+        f"stars:>30 pushed:>{since} created:>{created_since} topic:web-development",
+        f"stars:>20 pushed:>{since} created:>{created_since} topic:beginner-friendly",
+        f"stars:>30 pushed:>{since} created:>{created_since} topic:productivity",
+        f"stars:>50 pushed:>{since} topic:developer-tools",
+    ]
     headers = {"User-Agent": "DailyDiff-Agent", **({"Authorization": f"token {GITHUB_TOKEN}"} if GITHUB_TOKEN else {})}
     repos, seen = [], set()
     with httpx.Client(follow_redirects=True) as client:
@@ -74,7 +82,16 @@ def scout_github(days_ago: int) -> List[Dict[str, Any]]:
                     for it in r.json().get("items", []):
                         if it["id"] not in seen:
                             seen.add(it["id"])
-                            repos.append({"source": "GitHub", "title": it["name"], "url": it["html_url"], "description": it.get("description") or f"GitHub repository {it['name']}"})
+                            repos.append({
+                                "source": "GitHub",
+                                "title": it["name"],
+                                "full_name": it["full_name"],
+                                "url": it["html_url"],
+                                "description": it.get("description") or f"GitHub repository {it['name']}",
+                                "stars": it.get("stargazers_count", 0),
+                                "forks": it.get("forks_count", 0),
+                                "language": it.get("language") or "Unknown",
+                            })
             except Exception as e:
                 logger.warning(f"GitHub search error for {q}: {e}")
     return repos
