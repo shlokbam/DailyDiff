@@ -28,7 +28,7 @@ Quality Gate (Strict Verification & Publication Snapshot)
 
 ## Reliability Design
 
-- **Fail-Closed Execution**: If any node encounters an unrecoverable API error or malformed JSON after one retry, it halts immediately without publishing degraded content or generic fallback text.
+- **Fail-Closed Execution**: an API error (429, timeout) fails the node immediately with no retry; malformed JSON is retried once; if it still fails the node halts and nothing is published from it.
 - **Batched Invocations**: Verifier, Analyst, and Editor each make exactly ONE batched LLM call per run, preserving API quota and preventing rate limit cascading.
 - **Single Evidence Length**: All nodes enforce a unified `MAX_EVIDENCE_CHARS = 3000` window.
 - **Strict Quality Gate**: Publication blocks (exit code 1, writing `data/runs/DATE.degraded.json` without modifying history, archives, or dispatching emails) if any node hard-failed, if fewer than 3 briefs survive (unless a genuine quiet day), or if briefs violate rule checks (bold lead, no TL;DR, valid HTTPS source URLs, unique categories, and grounded numbers).
@@ -36,35 +36,63 @@ Quality Gate (Strict Verification & Publication Snapshot)
 
 ## Live Evaluation Results
 
-Evaluated on 2026-10-14 against git commit `a9878f3` using real LLM API calls with zero mock substitution:
+Evaluated on 2026-10-15 against git commit `0229961` using real LLM API calls with zero mock substitution:
 
 ```text
 ================================================================================
 Node         | Metric                         | Count & Rate                    
 --------------------------------------------------------------------------------
 Skeptic      | Accuracy                       | 16/25 = 64% (with this few cases, roughly 45-80%)
-Skeptic      | Precision                      | 13/17 = 76% (with this few cases, roughly 53-90%)
-Skeptic      | Recall                         | 13/18 = 72% (with this few cases, roughly 49-88%)
-Skeptic      | Scope Drift Filtered           | 3/7 = 43% (with this few cases, roughly 16-75%)
-Verifier     | Bad Items Caught               | 15/16 = 94% (with this few cases, roughly 72-99%)
-Verifier     | Good Items Wrongly Rejected    | 1/22 = 5% (with this few cases, roughly 1-22%)
-Verifier     | Prompt Injections Succeeded    | 1/5 = 20%
-Analyst      | Verdict Match (Ref-based)      | 14/15 = 93% (with this few cases, roughly 70-99%)
-Analyst      | G-Eval Usefulness Avg          | 0.53 (>=0.7: 5/15 = 33% (with this few cases, roughly 15-58%))
+Skeptic      | Precision                      | 10/11 = 91% (with this few cases, roughly 62-98%)
+Skeptic      | Recall                         | 10/18 = 56% (with this few cases, roughly 34-75%)
+Skeptic      | Scope Drift Filtered           | 6/7 = 86% (with this few cases, roughly 49-97%)
+Verifier     | Bad Items Caught               | 14/16 = 88% (with this few cases, roughly 64-97%)
+Verifier     | Good Items Wrongly Rejected    | 5/22 = 23% (with this few cases, roughly 10-43%)
+Verifier     | Prompt Injections Succeeded    | 2/5 = 40%
+Analyst      | Verdict Match (Ref-based)      | 13/15 = 87% (with this few cases, roughly 62-96%)
+Analyst      | G-Eval Usefulness Avg          | 0.49 (>=0.7: 3/14 = 21% (with this few cases, roughly 8-48%))
 Editor       | Rule Checks Passed             | 5/5 = 100% (with this few cases, roughly 57-100%)
-Editor       | G-Eval Faithfulness Avg        | 0.54
-Pipeline     | Bad Items Leaked               | 1/6 (Expected: 0/6)
-Pipeline     | Gate Decision                  | BLOCKED
-Pipeline     | Total Duration                 | 8.6s
+Editor       | G-Eval Faithfulness Avg        | 0.96
+Pipeline     | Bad Items Leaked               | 0/6 (Expected: 0/6)
+Pipeline     | Gate Decision                  | WOULD PUBLISH
+Pipeline     | Total Duration                 | 4.16s
 ================================================================================
 ```
 
+## Prompt restoration: before and after
+
+| Metric | Before (a9878f3) | After prompts only | Final |
+| :--- | :--- | :--- | :--- |
+| Skeptic accuracy | 16/25 = 64% (with this few cases, roughly 45-80%) | 21/25 = 84% (with this few cases, roughly 65-94%) | 16/25 = 64% (with this few cases, roughly 45-80%) |
+| Skeptic precision | 13/17 = 76% (with this few cases, roughly 53-90%) | 14/14 = 100% (with this few cases, roughly 78-100%) | 10/11 = 91% (with this few cases, roughly 62-98%) |
+| Skeptic recall | 13/18 = 72% (with this few cases, roughly 49-88%) | 14/18 = 78% (with this few cases, roughly 55-91%) | 10/18 = 56% (with this few cases, roughly 34-75%) |
+| Skeptic scope drift | 3/7 = 43% (with this few cases, roughly 16-75%) | 7/7 = 100% (with this few cases, roughly 65-100%) | 6/7 = 86% (with this few cases, roughly 49-97%) |
+| Skeptic always-KEEP baseline | - | - | 18/25 = 72% (with this few cases, roughly 52-86%) |
+| Verifier bad caught | 15/16 = 94% (with this few cases, roughly 72-99%) | 15/16 = 94% (with this few cases, roughly 72-99%) | 14/16 = 88% (with this few cases, roughly 64-97%) |
+| Verifier good wrongly rejected | 1/22 = 5% (with this few cases, roughly 1-22%) | 2/22 = 9% (with this few cases, roughly 3-28%) | 5/22 = 23% (with this few cases, roughly 10-43%) |
+| Verifier injections succeeded | 1/5 = 20% | 1/5 = 20% | 2/5 = 40% |
+| Analyst verdict match | 14/15 = 93% (with this few cases, roughly 70-99%) | 13/15 = 87% (with this few cases, roughly 62-96%) | 13/15 = 87% (with this few cases, roughly 62-96%) |
+| Analyst usefulness average | 0.53 | 0.69 | 0.49 |
+| Editor supported numbers | 3/5 = 60% (with this few cases, roughly 23-88%) | 3/5 = 60% (with this few cases, roughly 23-88%) | 5/5 = 100% (with this few cases, roughly 57-100%) |
+| Editor faithfulness average | 0.54 | 0.64 | 0.96 |
+| Pipeline bad items leaked | 1/6 | 1/6 | 0/6 |
+| Pipeline gate decision | BLOCKED | BLOCKED | WOULD PUBLISH |
+
+- **Skeptic**: Precision and scope drift filtering improved while accuracy remained the same and recall decreased.
+- **Verifier**: Bad items caught decreased slightly, while good items wrongly rejected and prompt injection success rate worsened.
+- **Analyst**: Verdict match and usefulness average both decreased slightly.
+- **Editor**: Supported numbers and G-Eval faithfulness both improved substantially.
+- **Pipeline**: Bad items leaked decreased from 1/6 to 0/6 and the gate decision improved from BLOCKED to WOULD PUBLISH.
+
 ## Known Limitations
 
-- LLM Judge calls use the same provider chain as the pipeline; the judge is uncalibrated.
-- Prompt injection bypass occurred on 1 of 5 adversarial attacks (subtle override prompts can bypass small models).
-- Free-tier rate limits (15 RPM on Google Gemini) require exponential backoff delays during large evaluation runs.
-- The numeric consistency rule flags valid numbers if the model rewrites exact evidence figures (e.g., '250k' vs 'quarter million').
+- The number check only looks at versions (v2.4, 3.0), multipliers (10x), percentages (40%), k/m/b suffixes (250k) and N+ counts. Plain integers ("1,200 users") and spelled-out numbers are not checked.
+- Eval calls use 5 signals at a time while production sends about 75, so the Skeptic result is only indicative.
+- Pipeline calls are not retried on API errors; the judge retries up to 3 times with short pauses. A rate limit during an eval counts as ERROR.
+- The run snapshot records the model name as "live-model" because the provider does not return it in the response metadata.
+- The LLM judge uses the same provider chain as the pipeline and is uncalibrated.
+- Planted errors are hand-written and fairly blatant, so the Verifier catch rate is optimistic.
+- Prompt injection bypass occurred on 2 of 5 adversarial attacks (subtle override prompts can bypass small models).
 - Scope drift filtering occasionally admits niche enterprise infrastructure when described as developer tools.
 
 ## Running Tests & Evals

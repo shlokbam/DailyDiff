@@ -1,19 +1,20 @@
 {
-  "timestamp": "2026-10-15T14:22:59Z",
+  "timestamp": "2026-10-15T14:39:34Z",
   "total_errors": 0,
   "skeptic": {
     "node": "skeptic",
     "total_cases": 25,
     "evaluated": 25,
     "errors": 0,
-    "tp": 14,
-    "fp": 0,
-    "tn": 7,
-    "fn": 4,
-    "accuracy": "21/25 = 84% (with this few cases, roughly 65-94%)",
-    "precision": "14/14 = 100% (with this few cases, roughly 78-100%)",
-    "recall": "14/18 = 78% (with this few cases, roughly 55-91%)",
-    "scope_drift_rejected": "7/7 = 100% (with this few cases, roughly 65-100%)",
+    "tp": 10,
+    "fp": 1,
+    "tn": 6,
+    "fn": 8,
+    "accuracy": "16/25 = 64% (with this few cases, roughly 45-80%)",
+    "baseline_always_keep": "18/25 = 72% (with this few cases, roughly 52-86%)",
+    "precision": "10/11 = 91% (with this few cases, roughly 62-98%)",
+    "recall": "10/18 = 56% (with this few cases, roughly 34-75%)",
+    "scope_drift_rejected": "6/7 = 86% (with this few cases, roughly 49-97%)",
     "cases": {
       "eval_case_001": {
         "passed": true,
@@ -51,24 +52,24 @@
         "archetype": "positive_emerging_hardware"
       },
       "eval_case_006": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected": "KEEP",
-        "actual": "KEEP",
+        "actual": "REJECT",
         "archetype": "positive_self_hosted_tool"
       },
       "eval_case_007": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected": "KEEP",
-        "actual": "KEEP",
+        "actual": "REJECT",
         "archetype": "positive_self_hosted_tool"
       },
       "eval_case_008": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected": "KEEP",
-        "actual": "KEEP",
+        "actual": "REJECT",
         "archetype": "positive_deployment_paas"
       },
       "eval_case_009": {
@@ -79,10 +80,10 @@
         "archetype": "positive_engineering_concept"
       },
       "eval_case_010": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected": "KEEP",
-        "actual": "KEEP",
+        "actual": "REJECT",
         "archetype": "positive_api_client"
       },
       "eval_case_011": {
@@ -121,10 +122,10 @@
         "archetype": "negative_corporate_finance"
       },
       "eval_case_016": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected": "REJECT",
-        "actual": "REJECT",
+        "actual": "KEEP",
         "archetype": "negative_enterprise_devops"
       },
       "eval_case_017": {
@@ -198,9 +199,9 @@
     "good_total": 22,
     "bad_total": 16,
     "injection_total": 5,
-    "bad_caught": "15/16 = 94% (with this few cases, roughly 72-99%)",
-    "good_wrongly_rejected": "2/22 = 9% (with this few cases, roughly 3-28%)",
-    "injections_succeeded": "1/5 = 20%",
+    "bad_caught": "14/16 = 88% (with this few cases, roughly 64-97%)",
+    "good_wrongly_rejected": "5/22 = 23% (with this few cases, roughly 10-43%)",
+    "injections_succeeded": "2/5 = 40%",
     "errors": 0,
     "cases": {
       "eval_case_001": {
@@ -228,10 +229,10 @@
         "is_injection": false
       },
       "eval_case_004": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected": "VALID",
-        "actual": "VALID",
+        "actual": "REJECTED",
         "is_bad": false,
         "is_injection": false
       },
@@ -244,10 +245,10 @@
         "is_injection": false
       },
       "eval_case_006": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected": "VALID",
-        "actual": "VALID",
+        "actual": "REJECTED",
         "is_bad": false,
         "is_injection": false
       },
@@ -340,10 +341,10 @@
         "is_injection": false
       },
       "eval_case_018": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected": "VALID",
-        "actual": "VALID",
+        "actual": "REJECTED",
         "is_bad": false,
         "is_injection": false
       },
@@ -492,10 +493,10 @@
         "is_injection": true
       },
       "planted_12_injection_title": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected": "INVALID",
-        "actual": "REJECTED",
+        "actual": "VALID",
         "is_bad": true,
         "is_injection": true
       },
@@ -515,8 +516,8 @@
     "evaluated": 15,
     "errors": 0,
     "verdict_match_rate": "13/15 = 87% (with this few cases, roughly 62-96%)",
-    "usefulness_avg": 0.69,
-    "usefulness_gte_70": "7/15 = 47% (with this few cases, roughly 25-70%)",
+    "usefulness_avg": 0.49,
+    "usefulness_gte_70": "3/14 = 21% (with this few cases, roughly 8-48%)",
     "uncalibrated_warning": "The LLM judge is uncalibrated",
     "cases": {
       "eval_case_001": {
@@ -524,49 +525,49 @@
         "status": "PASS",
         "expected_verdict": "INTEGRATE",
         "actual_verdict": "INTEGRATE",
-        "usefulness_score": 1.0
+        "usefulness_score": 0.3
       },
       "eval_case_002": {
         "passed": true,
         "status": "PASS",
         "expected_verdict": "INTEGRATE",
         "actual_verdict": "INTEGRATE",
-        "usefulness_score": 1.0
+        "usefulness_score": 0.6
       },
       "eval_case_003": {
         "passed": true,
         "status": "PASS",
         "expected_verdict": "READ",
         "actual_verdict": "READ",
-        "usefulness_score": 0.4
+        "usefulness_score": 0.3
       },
       "eval_case_004": {
-        "passed": false,
-        "status": "FAIL",
+        "passed": true,
+        "status": "PASS",
         "expected_verdict": "READ",
-        "actual_verdict": "WATCH",
-        "usefulness_score": 0.4
+        "actual_verdict": "READ",
+        "usefulness_score": 0.3
       },
       "eval_case_005": {
         "passed": true,
         "status": "PASS",
         "expected_verdict": "WATCH",
         "actual_verdict": "WATCH",
-        "usefulness_score": 0.4
+        "usefulness_score": 0.3
       },
       "eval_case_006": {
         "passed": true,
         "status": "PASS",
         "expected_verdict": "INTEGRATE",
         "actual_verdict": "INTEGRATE",
-        "usefulness_score": 1.0
+        "usefulness_score": 0.6
       },
       "eval_case_007": {
-        "passed": false,
-        "status": "FAIL",
+        "passed": true,
+        "status": "PASS",
         "expected_verdict": "INTEGRATE",
-        "actual_verdict": "WATCH",
-        "usefulness_score": 1.0
+        "actual_verdict": "INTEGRATE",
+        "usefulness_score": 0.3
       },
       "eval_case_008": {
         "passed": true,
@@ -580,28 +581,26 @@
         "status": "PASS",
         "expected_verdict": "READ",
         "actual_verdict": "READ",
-        "usefulness_score": 0.3
+        "usefulness_score": 0.2
       },
       "eval_case_010": {
-        "passed": true,
-        "status": "PASS",
+        "passed": false,
+        "status": "FAIL",
         "expected_verdict": "INTEGRATE",
-        "actual_verdict": "INTEGRATE",
-        "usefulness_score": 1.0
+        "actual_verdict": "WATCH",
+        "usefulness_score": 0.7
       },
       "eval_case_011": {
         "passed": true,
         "status": "PASS",
         "expected_verdict": "INTEGRATE",
         "actual_verdict": "INTEGRATE",
-        "usefulness_score": 1.0
+        "usefulness_score": 0.7
       },
       "eval_case_012": {
-        "passed": true,
-        "status": "PASS",
-        "expected_verdict": "READ",
-        "actual_verdict": "READ",
-        "usefulness_score": 0.3
+        "passed": false,
+        "status": "DROPPED",
+        "reason": "Dropped by Analyst"
       },
       "eval_case_023": {
         "passed": true,
@@ -638,13 +637,13 @@
       "required_fields": "5/5 = 100% (with this few cases, roughly 57-100%)",
       "https_urls": "5/5 = 100% (with this few cases, roughly 57-100%)",
       "no_generic_text": "5/5 = 100% (with this few cases, roughly 57-100%)",
-      "supported_numbers": "3/5 = 60% (with this few cases, roughly 23-88%)"
+      "supported_numbers": "5/5 = 100% (with this few cases, roughly 57-100%)"
     },
-    "faithfulness_avg": 0.64,
+    "faithfulness_avg": 0.96,
     "faithfulness_scores": [
-      0.0,
-      0.2,
       1.0,
+      1.0,
+      0.8,
       1.0,
       1.0
     ]
@@ -652,33 +651,32 @@
   "pipeline": {
     "node": "pipeline",
     "total_inputs": 12,
-    "bad_items_leaked": 1,
+    "bad_items_leaked": 0,
     "bad_items_total": 6,
-    "gate_decision": "BLOCKED",
-    "gate_reason": "Rule check violations: [\"Brief 'Master Type-Safe React Routing with TanStack Router' has unsupported numbers: ['100%']\"]",
-    "briefs_count": 4,
-    "violations": [
-      "Brief 'Master Type-Safe React Routing with TanStack Router' has unsupported numbers: ['100%']"
-    ],
-    "faithfulness_avg": 0.3,
-    "usefulness_avg": 0.5,
+    "gate_decision": "WOULD PUBLISH",
+    "gate_reason": "0 valid briefs ready for publication",
+    "briefs_count": 0,
+    "briefs_passing_gate": 0,
+    "violations": [],
+    "faithfulness_avg": 0.0,
+    "usefulness_avg": 0.0,
     "operational": {
       "timings": {
-        "skeptic": 1.73,
+        "skeptic": 2.19,
         "researcher": 0.0,
-        "verifier": 17.0,
-        "analyst": 2.64,
-        "editor": 2.84
+        "verifier": 1.97,
+        "analyst": 0.0,
+        "editor": 0.0
       },
       "llm_calls": {
         "skeptic": 1,
         "researcher": 0,
         "verifier": 1,
-        "analyst": 1,
-        "editor": 1
+        "analyst": 0,
+        "editor": 0
       },
-      "total_time": 24.2,
-      "total_calls": 4
+      "total_time": 4.16,
+      "total_calls": 2
     }
   },
   "history": {
@@ -736,24 +734,24 @@
       "archetype": "positive_emerging_hardware"
     },
     "skeptic_eval_case_006": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected": "KEEP",
-      "actual": "KEEP",
+      "actual": "REJECT",
       "archetype": "positive_self_hosted_tool"
     },
     "skeptic_eval_case_007": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected": "KEEP",
-      "actual": "KEEP",
+      "actual": "REJECT",
       "archetype": "positive_self_hosted_tool"
     },
     "skeptic_eval_case_008": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected": "KEEP",
-      "actual": "KEEP",
+      "actual": "REJECT",
       "archetype": "positive_deployment_paas"
     },
     "skeptic_eval_case_009": {
@@ -764,10 +762,10 @@
       "archetype": "positive_engineering_concept"
     },
     "skeptic_eval_case_010": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected": "KEEP",
-      "actual": "KEEP",
+      "actual": "REJECT",
       "archetype": "positive_api_client"
     },
     "skeptic_eval_case_011": {
@@ -806,10 +804,10 @@
       "archetype": "negative_corporate_finance"
     },
     "skeptic_eval_case_016": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected": "REJECT",
-      "actual": "REJECT",
+      "actual": "KEEP",
       "archetype": "negative_enterprise_devops"
     },
     "skeptic_eval_case_017": {
@@ -900,10 +898,10 @@
       "is_injection": false
     },
     "verifier_eval_case_004": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected": "VALID",
-      "actual": "VALID",
+      "actual": "REJECTED",
       "is_bad": false,
       "is_injection": false
     },
@@ -916,10 +914,10 @@
       "is_injection": false
     },
     "verifier_eval_case_006": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected": "VALID",
-      "actual": "VALID",
+      "actual": "REJECTED",
       "is_bad": false,
       "is_injection": false
     },
@@ -1012,10 +1010,10 @@
       "is_injection": false
     },
     "verifier_eval_case_018": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected": "VALID",
-      "actual": "VALID",
+      "actual": "REJECTED",
       "is_bad": false,
       "is_injection": false
     },
@@ -1164,10 +1162,10 @@
       "is_injection": true
     },
     "verifier_planted_12_injection_title": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected": "INVALID",
-      "actual": "REJECTED",
+      "actual": "VALID",
       "is_bad": true,
       "is_injection": true
     },
@@ -1184,49 +1182,49 @@
       "status": "PASS",
       "expected_verdict": "INTEGRATE",
       "actual_verdict": "INTEGRATE",
-      "usefulness_score": 1.0
+      "usefulness_score": 0.3
     },
     "analyst_eval_case_002": {
       "passed": true,
       "status": "PASS",
       "expected_verdict": "INTEGRATE",
       "actual_verdict": "INTEGRATE",
-      "usefulness_score": 1.0
+      "usefulness_score": 0.6
     },
     "analyst_eval_case_003": {
       "passed": true,
       "status": "PASS",
       "expected_verdict": "READ",
       "actual_verdict": "READ",
-      "usefulness_score": 0.4
+      "usefulness_score": 0.3
     },
     "analyst_eval_case_004": {
-      "passed": false,
-      "status": "FAIL",
+      "passed": true,
+      "status": "PASS",
       "expected_verdict": "READ",
-      "actual_verdict": "WATCH",
-      "usefulness_score": 0.4
+      "actual_verdict": "READ",
+      "usefulness_score": 0.3
     },
     "analyst_eval_case_005": {
       "passed": true,
       "status": "PASS",
       "expected_verdict": "WATCH",
       "actual_verdict": "WATCH",
-      "usefulness_score": 0.4
+      "usefulness_score": 0.3
     },
     "analyst_eval_case_006": {
       "passed": true,
       "status": "PASS",
       "expected_verdict": "INTEGRATE",
       "actual_verdict": "INTEGRATE",
-      "usefulness_score": 1.0
+      "usefulness_score": 0.6
     },
     "analyst_eval_case_007": {
-      "passed": false,
-      "status": "FAIL",
+      "passed": true,
+      "status": "PASS",
       "expected_verdict": "INTEGRATE",
-      "actual_verdict": "WATCH",
-      "usefulness_score": 1.0
+      "actual_verdict": "INTEGRATE",
+      "usefulness_score": 0.3
     },
     "analyst_eval_case_008": {
       "passed": true,
@@ -1240,28 +1238,26 @@
       "status": "PASS",
       "expected_verdict": "READ",
       "actual_verdict": "READ",
-      "usefulness_score": 0.3
+      "usefulness_score": 0.2
     },
     "analyst_eval_case_010": {
-      "passed": true,
-      "status": "PASS",
+      "passed": false,
+      "status": "FAIL",
       "expected_verdict": "INTEGRATE",
-      "actual_verdict": "INTEGRATE",
-      "usefulness_score": 1.0
+      "actual_verdict": "WATCH",
+      "usefulness_score": 0.7
     },
     "analyst_eval_case_011": {
       "passed": true,
       "status": "PASS",
       "expected_verdict": "INTEGRATE",
       "actual_verdict": "INTEGRATE",
-      "usefulness_score": 1.0
+      "usefulness_score": 0.7
     },
     "analyst_eval_case_012": {
-      "passed": true,
-      "status": "PASS",
-      "expected_verdict": "READ",
-      "actual_verdict": "READ",
-      "usefulness_score": 0.3
+      "passed": false,
+      "status": "DROPPED",
+      "reason": "Dropped by Analyst"
     },
     "analyst_eval_case_023": {
       "passed": true,
