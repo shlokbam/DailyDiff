@@ -1,3 +1,4 @@
+from datetime import datetime, timezone, timedelta
 import pytest
 from unittest.mock import patch, MagicMock
 from app.agents.scout import parse_feed_content, scout_github_releases, scout_github
@@ -61,7 +62,7 @@ def test_null_release_body_is_safe():
             "tag_name": "v1.0.0",
             "name": "Release v1.0.0",
             "html_url": "https://github.com/example/repo/releases/v1.0.0",
-            "published_at": "2026-10-14T00:00:00Z",
+            "published_at": (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "body": None,  # Null body
         }
     ]
