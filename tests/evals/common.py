@@ -44,7 +44,7 @@ def wilson_interval(k: int, n: int, z: float = 1.96) -> Tuple[float, float]:
 def rate(k: int, n: int) -> str:
     """Formats count k out of n as a percentage with Wilson confidence interval."""
     if n <= 0:
-        return "0/0 = 0%"
+        return "n/a (no cases)"
     pct = round(100.0 * k / n)
     low, high = wilson_interval(k, n)
     return f"{k}/{n} = {pct}% (with this few cases, roughly {round(low * 100)}-{round(high * 100)}%)"

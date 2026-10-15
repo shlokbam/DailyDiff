@@ -90,6 +90,8 @@ def run_skeptic_eval(chunk_size: int = 5) -> Dict[str, Any]:
     print("\n--- SKEPTIC EVALUATION (25 Golden Signals) ---")
     print(f"Confusion Matrix: TP={tp}, FP={fp}, TN={tn}, FN={fn} | Errors={errors}")
     print(f"Accuracy:    {acc_str}")
+    keep_total = sum(1 for c in cases if c["ground_truth"]["skeptic"]["expected_decision"] == "KEEP")
+    print(f"Baseline (always KEEP):  {rate(keep_total, len(cases))}")
     print(f"Precision:   {prec_str}")
     print(f"Recall:      {rec_str}")
     print(f"Scope Drift: Correctly rejected should-reject: {drift_str}")
@@ -101,6 +103,7 @@ def run_skeptic_eval(chunk_size: int = 5) -> Dict[str, Any]:
         "errors": errors,
         "tp": tp, "fp": fp, "tn": tn, "fn": fn,
         "accuracy": acc_str,
+        "baseline_always_keep": rate(keep_total, len(cases)),
         "precision": prec_str,
         "recall": rec_str,
         "scope_drift_rejected": drift_str,
