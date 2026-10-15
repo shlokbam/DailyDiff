@@ -140,21 +140,11 @@ def run_pipeline_eval(run_judge: bool = True) -> Dict[str, Any]:
         if u in bad_urls:
             leaked_items.append({"title": b.get("title"), "url": u, "reason": bad_urls[u].get("reject_reason")})
 
-    # Rule checks on final briefs
-    violations = validate_briefs(briefs, evidence_by_url=evidence_by_url, candidate_urls=list(evidence_by_url.keys()))
-
-    # Gate publish check
-    gate_decision = "BLOCKED"
-    gate_reason = ""
-    if health.has_fallbacks:
-        gate_reason = f"Hard fallback encountered: {health.fallbacks}"
-    elif len(briefs) < 3:
-        gate_reason = f"Only {len(briefs)} briefs (fewer than MIN_BRIEFS 3)"
-    elif violations:
-        gate_reason = f"Rule check violations: {violations}"
-    else:
-        gate_decision = "WOULD PUBLISH"
-        gate_reason = f"{len(briefs)} valid briefs ready for publication"
+    from run_agent import check_briefs
+    surviving, gate_failures = check_briefs(briefs, len(briefs), set(evidence_by_url.keys()), evidence_by_url, 3)
+    gate_decision = "BLOCKED" if gate_failures else "WOULD PUBLISH"
+    gate_reason = "; ".join(gate_failures) if gate_failures else f"{len(surviving)} valid briefs ready for publication"
+    violations = [w for w in health.warnings if w.startswith("Dropped brief")]
 
     # DeepEval G-Eval per brief
     judge = DailyDiffJudge() if run_judge else None
@@ -188,6 +178,7 @@ def run_pipeline_eval(run_judge: bool = True) -> Dict[str, Any]:
         for item in leaked_items:
             print(f"  WARNING - Leaked: {item['title']} ({item['reason']})")
     print(f"Gate Verdict: {gate_decision} ({gate_reason})")
+    print(f"Briefs passing the gate: {len(surviving)} of {len(briefs)}")
     print(f"Final Briefs Count: {len(briefs)}")
     print(f"Rule Violations: {violations if violations else 'None (100% compliant)'}")
     if run_judge:
@@ -206,6 +197,7 @@ def run_pipeline_eval(run_judge: bool = True) -> Dict[str, Any]:
         "gate_decision": gate_decision,
         "gate_reason": gate_reason,
         "briefs_count": len(briefs),
+        "briefs_passing_gate": len(surviving),
         "violations": violations,
         "faithfulness_avg": avg_faith,
         "usefulness_avg": avg_use,

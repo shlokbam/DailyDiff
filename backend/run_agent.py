@@ -59,9 +59,8 @@ def build_run_snapshot(date_str: str, briefs: list, failure_reasons: list = None
         snapshot["status"] = "healthy"
     return snapshot
 
-def publish_gate(briefs: list, candidate_urls: set, evidence_by_url: dict, date_str: str, runs_dir: Path, min_briefs: int):
-    """Strict publish gate: drops invalid briefs, enforces categories, blocks on failure."""
-    # 1. Soft filter: drop individual briefs that fail quality rules
+def check_briefs(briefs, produced_count, candidate_urls, evidence_by_url, min_briefs):
+    """Decides what may be published. No files, no exit. Returns (surviving_briefs, failure_reasons)."""
     surviving = []
     for b in briefs:
         errs = validate_briefs([b], evidence_by_url=evidence_by_url, candidate_urls=candidate_urls)
@@ -71,25 +70,27 @@ def publish_gate(briefs: list, candidate_urls: set, evidence_by_url: dict, date_
         else:
             surviving.append(b)
 
-    # 2. Enforce unique categories and at most 5 briefs
-    seen_cats = set()
-    deduped = []
+    seen, unique = set(), []
     for b in surviving:
-        cat = b.get("category")
-        if cat not in seen_cats:
-            seen_cats.add(cat)
-            deduped.append(b)
-    briefs = deduped[:5]
+        if b.get("category") not in seen:
+            seen.add(b.get("category"))
+            unique.append(b)
+    surviving = unique[:5]
 
-    # 3. Determine if gate passes or fails
-    failure_reasons = []
+    reasons = []
     if health.has_fallbacks:
-        failure_reasons.append(f"Hard node fallbacks: {health.fallbacks}")
+        reasons.append(f"Hard node fallbacks: {health.fallbacks}")
+    # A quiet day means the PIPELINE produced nothing and nothing failed. Briefs dropped by the gate do not count.
+    quiet_day = produced_count == 0 and not health.has_fallbacks and health.llm_errors_count == 0
+    if produced_count > 0 and not surviving:
+        reasons.append(f"All {produced_count} briefs were dropped by the rule checks.")
+    elif len(surviving) < min_briefs and not quiet_day:
+        reasons.append(f"Produced {len(surviving)} briefs (minimum required: {min_briefs}).")
+    return surviving, reasons
 
-    # A genuine quiet day has no hard failures, no LLM errors, and legitimately 0 candidates
-    is_quiet_day = not health.has_fallbacks and health.llm_errors_count == 0 and len(briefs) == 0
-    if len(briefs) < min_briefs and not is_quiet_day:
-        failure_reasons.append(f"Produced {len(briefs)} briefs (minimum required: {min_briefs}).")
+def publish_gate(briefs: list, candidate_urls: set, evidence_by_url: dict, date_str: str, runs_dir: Path, min_briefs: int, produced_count: int):
+    """Strict publish gate: drops invalid briefs, enforces categories, blocks on failure."""
+    briefs, failure_reasons = check_briefs(briefs, produced_count, candidate_urls, evidence_by_url, min_briefs)
 
     if failure_reasons:
         logger.error(f"[GATE REJECTION] Degraded run for {date_str}: {failure_reasons}")
@@ -148,7 +149,7 @@ def main():
     candidate_urls = {c.get("url") for c in res.get("researched_candidates", []) if c.get("url")}
     evidence_by_url = {c.get("url"): build_evidence(c, MAX_EVIDENCE_CHARS) for c in res.get("researched_candidates", []) if c.get("url")}
 
-    publish_gate(briefs, candidate_urls, evidence_by_url, date_str, runs_dir, min_briefs)
+    publish_gate(briefs, candidate_urls, evidence_by_url, date_str, runs_dir, min_briefs, produced_count=len(briefs))
 
 if __name__ == "__main__":
     main()

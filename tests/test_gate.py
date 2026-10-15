@@ -10,7 +10,7 @@ import pytest
 from unittest.mock import patch, MagicMock
 
 from app.run_health import health
-from run_agent import main as run_agent_main
+from run_agent import main as run_agent_main, check_briefs
 
 
 @pytest.fixture(autouse=True)
@@ -201,3 +201,34 @@ def test_fewer_than_min_briefs_blocks(tmp_path):
                                 run_agent_main()
                             assert exc_info.value.code == 1
                             mock_append.assert_not_called()
+
+
+def test_all_briefs_dropped_is_blocked_not_a_quiet_day():
+    briefs = [
+        {
+            "category": "Tech Shift",
+            "title": f"Tool {i}",
+            "description": "No bold lead sentence here.",
+            "why_it_matters": "Why.",
+            "who_cares": "Who.",
+            "verdict": "READ",
+            "source_url": f"https://example.com/tool_{i}",
+        }
+        for i in range(5)
+    ]
+    candidate_urls = {b["source_url"] for b in briefs}
+    surviving, reasons = check_briefs(briefs, produced_count=5, candidate_urls=candidate_urls, evidence_by_url={}, min_briefs=3)
+    assert surviving == []
+    assert any("dropped" in r for r in reasons)
+
+
+def test_zero_produced_and_healthy_is_a_quiet_day():
+    surviving, reasons = check_briefs([], produced_count=0, candidate_urls=set(), evidence_by_url={}, min_briefs=3)
+    assert reasons == []
+
+
+def test_zero_produced_with_llm_error_is_blocked():
+    health.record_llm_call("editor", error=RuntimeError("x"))
+    surviving, reasons = check_briefs([], produced_count=0, candidate_urls=set(), evidence_by_url={}, min_briefs=3)
+    assert len(reasons) > 0
+
