@@ -46,7 +46,7 @@ def test_skeptic_fails_closed_on_api_error():
         ]
     }
     with patch("app.agents.skeptic.get_llm", return_value=FailingLLM()):
-        with patch("app.agents.skeptic.get_published_urls", return_value=set()):
+        with patch("app.agents.skeptic.get_published_urls", return_value=set()), patch("app.agents.skeptic.extract_history_summary", return_value="No past briefs have been published yet."):
             result = deduplicate_and_filter_node(state)
             assert result["candidates"] == []
             assert health.has_fallbacks is True

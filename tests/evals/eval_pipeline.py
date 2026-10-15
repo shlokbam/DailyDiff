@@ -85,7 +85,7 @@ def run_pipeline_eval(run_judge: bool = True) -> Dict[str, Any]:
     # 1. Skeptic
     t0 = time.time()
     c0 = health.llm_calls_count
-    with patch("app.agents.skeptic.get_published_urls", return_value=set()):
+    with patch("app.agents.skeptic.get_published_urls", return_value=set()), patch("app.agents.skeptic.extract_history_summary", return_value="No past briefs have been published yet."):
         skeptic_out = deduplicate_and_filter_node({"raw_signals": signals})
     timings["skeptic"] = round(time.time() - t0, 2)
     llm_calls["skeptic"] = health.llm_calls_count - c0

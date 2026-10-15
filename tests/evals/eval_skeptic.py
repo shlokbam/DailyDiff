@@ -31,7 +31,7 @@ def run_skeptic_eval(chunk_size: int = 5) -> Dict[str, Any]:
     scope_drift_rejected = 0
     results_by_case = {}
 
-    with patch("app.agents.skeptic.get_published_urls", return_value=set()):
+    with patch("app.agents.skeptic.get_published_urls", return_value=set()), patch("app.agents.skeptic.extract_history_summary", return_value="No past briefs have been published yet."):
         for i in range(0, len(cases), chunk_size):
             chunk = cases[i:i + chunk_size]
             signals = [c["input_signal"] for c in chunk]
