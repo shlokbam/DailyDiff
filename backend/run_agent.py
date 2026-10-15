@@ -17,7 +17,7 @@ from app.database import init_db, init_history_file, append_to_history
 from app.run_health import health
 from app.agents.graph import create_agent_graph
 from app.agents.researcher import MAX_EVIDENCE_CHARS
-from app.checks import validate_briefs
+from app.checks import validate_briefs, build_evidence
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("DailyDiff.runner")
@@ -146,10 +146,7 @@ def main():
 
     briefs = res.get("final_briefs", [])
     candidate_urls = {c.get("url") for c in res.get("researched_candidates", []) if c.get("url")}
-    evidence_by_url = {
-        c.get("url"): f"{c.get('description', '')} {(c.get('detailed_content') or '')[:MAX_EVIDENCE_CHARS]}"
-        for c in res.get("researched_candidates", []) if c.get("url")
-    }
+    evidence_by_url = {c.get("url"): build_evidence(c, MAX_EVIDENCE_CHARS) for c in res.get("researched_candidates", []) if c.get("url")}
 
     publish_gate(briefs, candidate_urls, evidence_by_url, date_str, runs_dir, min_briefs)
 

@@ -22,6 +22,7 @@ from app.checks import (
     unsupported_numeric_tokens,
     validate_briefs,
     DESIGNATED_CATEGORIES,
+    build_evidence,
 )
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -198,3 +199,42 @@ def test_history_fixture_checks():
     assert oct_11 is not None
     violations_11 = validate_briefs(oct_11.get("briefs", []))
     assert len(violations_11) == 0
+
+
+def test_number_in_source_title_is_not_flagged():
+    url = "https://example.com/p"
+    brief = {
+        "category": "Tech Shift",
+        "title": "Scan of 250k Files",
+        "description": "**Researchers scanned 250k files.** More.",
+        "why_it_matters": "Shows a common mistake.",
+        "who_cares": "Web developers",
+        "verdict": "READ",
+        "source_url": url,
+    }
+    cand = {
+        "title": "Scan of 250k Files",
+        "description": "Security analysis.",
+        "detailed_content": "Researchers scanned many repos.",
+    }
+    assert validate_briefs([brief], evidence_by_url={url: build_evidence(cand, 3000)}, candidate_urls={url}) == []
+
+
+def test_number_absent_from_title_and_evidence_is_flagged():
+    url = "https://example.com/p"
+    brief = {
+        "category": "Tech Shift",
+        "title": "Scan of 250k Files",
+        "description": "**Researchers scanned 350k files.** More.",
+        "why_it_matters": "Shows a common mistake.",
+        "who_cares": "Web developers",
+        "verdict": "READ",
+        "source_url": url,
+    }
+    cand = {
+        "title": "Scan of 250k Files",
+        "description": "Security analysis.",
+        "detailed_content": "Researchers scanned many repos.",
+    }
+    assert len(validate_briefs([brief], evidence_by_url={url: build_evidence(cand, 3000)}, candidate_urls={url})) > 0
+

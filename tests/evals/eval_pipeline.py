@@ -27,7 +27,8 @@ from app.agents.skeptic import deduplicate_and_filter_node
 from app.agents.verifier import verifier_node
 from app.agents.analyst import analyst_node
 from app.agents.editor import editor_node
-from app.checks import validate_briefs, categories_unique, count_at_most_5
+from app.checks import categories_unique, count_at_most_5, build_evidence
+from app.agents.researcher import MAX_EVIDENCE_CHARS
 from app.run_health import health
 from tests.evals.common import load_dataset, load_planted_errors, rate
 from tests.evals.judge import create_faithfulness_geval, create_usefulness_geval, DailyDiffJudge, LLMTestCase
@@ -75,7 +76,7 @@ def get_frozen_12_signals() -> List[Dict[str, Any]]:
 def run_pipeline_eval(run_judge: bool = True) -> Dict[str, Any]:
     signals = get_frozen_12_signals()
     bad_urls = {s["url"].strip().rstrip("/").lower(): s for s in signals if s["is_bad"]}
-    evidence_by_url = {s["url"]: s.get("scraped_docs", "") for s in signals}
+    evidence_by_url = {s["url"]: build_evidence({"title": s.get("title"), "description": s.get("description") or s.get("raw_description", ""), "detailed_content": s.get("scraped_docs", "")}, MAX_EVIDENCE_CHARS) for s in signals}
 
     timings = {}
     llm_calls = {}

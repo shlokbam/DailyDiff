@@ -10,6 +10,11 @@ from urllib.parse import urlparse, parse_qsl, urlunparse, urlencode
 DESIGNATED_CATEGORIES = {"Tech Shift", "Cool Tool", "Career & Learning", "Ecosystem Update", "Watchlist"}
 GENERIC_PATTERNS = ["a new open source development in the", "a notable new development in the"]
 
+def build_evidence(candidate: Dict[str, Any], max_chars: int) -> str:
+    """Everything a brief may quote: the source title, its description, and the first max_chars of its page text."""
+    return f"{candidate.get('title', '')} {candidate.get('description', '')} {(candidate.get('detailed_content') or '')[:max_chars]}"
+
+
 def has_bold_lead(desc: str) -> bool:
     d = (desc or "").strip()
     return d.startswith("**") and d.find("**", 2) > 2

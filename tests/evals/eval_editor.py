@@ -21,8 +21,9 @@ from app.agents.editor import editor_node
 from app.checks import (
     has_bold_lead, no_tldr_label, categories_unique, count_at_most_5,
     required_fields_present, category_valid, verdict_valid, url_valid_https,
-    is_generic_fallback_text, unsupported_numeric_tokens
+    is_generic_fallback_text, unsupported_numeric_tokens, build_evidence
 )
+from app.agents.researcher import MAX_EVIDENCE_CHARS
 from app.run_health import health
 from tests.evals.common import load_dataset, rate
 from tests.evals.judge import create_faithfulness_geval, DailyDiffJudge, LLMTestCase
@@ -44,7 +45,7 @@ def run_editor_eval(sample_size: int = 5, run_judge: bool = True) -> Dict[str, A
         sig = c["input_signal"]
         url = sig.get("url", "")
         ev = sig.get("scraped_docs", "")
-        evidence_by_url[url] = ev
+        evidence_by_url[url] = build_evidence({"title": sig["title"], "description": sig.get("raw_description", ""), "detailed_content": ev}, MAX_EVIDENCE_CHARS)
         candidates.append({
             "id": c["id"],
             "title": sig["title"],
