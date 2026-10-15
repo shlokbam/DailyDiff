@@ -5,6 +5,7 @@ Never retries API errors. Retries once for malformed JSON only.
 """
 
 import json
+import re
 import logging
 from typing import Any, Optional, Callable
 from langchain_core.language_models.chat_models import BaseChatModel
@@ -57,8 +58,10 @@ def invoke_llm(node: str, llm: BaseChatModel, prompt: Any) -> Any:
         health.stop_timer(node)
 
 def escape_untrusted(text: Any) -> str:
-    """Prevents prompt injection breakouts by escaping angle brackets."""
-    return str(text or "").replace("<", "&lt;").replace(">", "&gt;")
+    """Removes HTML comments (invisible on the page but readable by the model), then escapes < and >."""
+    s = re.sub(r"<!--.*?-->", "", str(text or ""), flags=re.DOTALL)
+    s = re.sub(r"<!--.*", "", s, flags=re.DOTALL)  # an unclosed comment: drop everything after it
+    return s.replace("<", "&lt;").replace(">", "&gt;")
 
 def _clean_json_str(text: str) -> str:
     s = text.strip()
