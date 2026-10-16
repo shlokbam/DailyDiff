@@ -321,20 +321,8 @@ DailyDiff/
 │   ├── history.json             # Published briefs history (production)
 │   ├── archive/                 # Daily generated Markdown newsletters
 │   └── runs/                    # Immutable execution telemetry snapshots
-├── EXPLAIN.md                   # In-depth architectural study guide for AI interviews
 └── README.md
 ```
-
----
-
-## 📚 Study Guide & Interview Prep
-
-Preparing for an AI Systems or Agentic Engineering interview? Read **[`EXPLAIN.md`](EXPLAIN.md)** for a deep-dive breakdown covering:
-- **How to prevent silent degradations in production multi-agent chains.**
-- **Why batched nodes outperform chatty agent loops.**
-- **How to write deterministic grounding checks for LLM numeric claims.**
-- **LLM-as-a-judge G-Eval rubric design & Wilson score confidence intervals.**
-- **Adversarial prompt injection defense mechanisms.**
 
 ---
 
