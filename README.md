@@ -33,14 +33,86 @@ Developer feeds are saturated with corporate PR announcements, repetitive framew
 
 ```mermaid
 flowchart TD
-    A[Scout\nGitHub, HN, Dev.to, ProductHunt, Reddit] --> B[Skeptic\nAlgorithmic Dedup & Relevance Filtering]
-    B --> C[Researcher\nMarkdown Doc Scraping up to 3k chars]
-    C --> D[Verifier\nBatched Fact-Checking & Anti-Hype Guard]
-    D --> E[Analyst\nBatched Developer Utility & Verdicts]
-    E --> F[Editor\nFormat Curation, Bold Lead, Balance]
-    F --> G{Quality Gate\n5 Hard Invariants}
-    G -- PASS --> H[Publish to Archive & Dispatch Briefs]
-    G -- FAIL --> I[Block Publication & Save Degraded Snapshot]
+    %% Subgraph 1: Signal Ingestion
+    subgraph Sources["🌐 1. Raw Developer Ecosystem Sources"]
+        direction TB
+        S1["🐙 GitHub Trending & Releases"]
+        S2["📰 Hacker News (Top & Ask HN)"]
+        S3["💻 Dev.to & freeCodeCamp"]
+        S4["🚀 Product Hunt & Reddit Tech"]
+    end
+
+    %% Subgraph 2: Multi-Agent Intelligence Core
+    subgraph Pipeline["🧠 2. LangGraph Autonomous Multi-Agent Core Engine"]
+        direction TB
+        N1["🔍 Node 1: Scout<br/>Concurrent Async Extraction (~75 Raw Signals)"]
+        N2["🛡️ Node 2: Skeptic<br/>URL Dedup vs Archive + Noise Filter (~20 Candidates Survive)"]
+        N3["📚 Node 3: Researcher<br/>Doc Scraper & Evidence Grounding (Bounded ≤ 3,000 Chars)"]
+        
+        subgraph LLMLayer["⚡ Resilient Dual-Provider LLM Tier"]
+            LLM_Primary["Groq (Llama 3.3 70B Versatile)<br/>Ultra-low latency primary provider"]
+            LLM_Backup["Mistral AI (Mixtral 8x22B)<br/>Automatic 30s timeout fallback"]
+            LLM_Primary -.->|Timeout / Rate Limit Failover| LLM_Backup
+        end
+
+        N4["🔬 Node 4: Verifier (1 Batched Call)<br/>Cross-checks Evidence & Neutralizes Injections"]
+        N5["📊 Node 5: Analyst (1 Batched Call)<br/>Scores Pedagogical Utility & Assigns Verdicts"]
+        N6["✍️ Node 6: Editor (1 Batched Call)<br/>Curates Top 5 Items across 5 Designated Categories"]
+
+        N1 --> N2
+        N2 --> N3
+        N3 --> N4
+        N4 --> N5
+        N5 --> N6
+
+        LLMLayer -.->|Inference| N4
+        LLMLayer -.->|Inference| N5
+        LLMLayer -.->|Inference| N6
+    end
+
+    %% Subgraph 3: Fail-Closed Quality Gate
+    subgraph GateSection["🛡️ 3. Fail-Closed Quality Gate"]
+        direction TB
+        QG{"Quality Gate Invariant Check"}
+        Inv["Strict Validation Invariants:<br/>• Exactly 5 briefs<br/>• 5 unique categories<br/>• Bold lead sentence<br/>• Zero TL;DR labels<br/>• 100% grounded numeric tokens"]
+        QG --- Inv
+    end
+
+    %% Subgraph 4: Publication & Multi-Channel Delivery
+    subgraph Delivery["🚀 4. Multi-Channel Production Delivery"]
+        direction TB
+        D_UI["💻 React 18 + Vite Dashboard (dailydiff.in)<br/>Glassmorphic UI • Offline Cache • Cold-Start Resilient"]
+        D_DB["🐘 Neon PostgreSQL Database<br/>Persistent Subscriber & Publication History"]
+        D_Email["📬 Email Dispatcher (Brevo API / SMTP)<br/>Responsive Dark Mode Markdown Briefings"]
+    end
+
+    %% Subgraph 5: Telemetry & Safety
+    subgraph Safety["🛑 Automated Safety Fallback"]
+        FailNode["⚠️ Publication Blocked<br/>Save Degraded Run Telemetry to data/runs/<br/>Zero Subscriber Spam"]
+    end
+
+    %% Connections
+    Sources --> N1
+    N6 --> QG
+    QG ==>|✅ ALL 5 INVARIANTS PASS| D_UI
+    QG ==>|✅ ALL 5 INVARIANTS PASS| D_DB
+    QG ==>|✅ ALL 5 INVARIANTS PASS| D_Email
+    QG -->|❌ ANY INVARIANT FAILS| FailNode
+
+    %% Styling
+    classDef sourceStyle fill:#1e293b,stroke:#475569,stroke-width:1px,color:#f8fafc;
+    classDef agentStyle fill:#0f172a,stroke:#3b82f6,stroke-width:2px,color:#f8fafc;
+    classDef llmStyle fill:#1e1b4b,stroke:#818cf8,stroke-width:1px,color:#e0e7ff;
+    classDef gateStyle fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fef3c7;
+    classDef passStyle fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#ecfdf5;
+    classDef failStyle fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#fef2f2;
+
+    class S1,S2,S3,S4 sourceStyle;
+    class N1,N2,N3,N4,N5,N6 agentStyle;
+    class LLM_Primary,LLM_Backup llmStyle;
+    class QG,Inv gateStyle;
+    class D_UI,D_DB,D_Email passStyle;
+    class FailNode failStyle;
 ```
 
 ### Pipeline Nodes
