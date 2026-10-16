@@ -3,12 +3,15 @@
 > **We scan the noise. Five things survive.**  
 > An autonomous multi-agent tech intelligence pipeline built with **LangGraph**, **FastAPI**, and **React**. Designed for computer science students and software engineers to convert overwhelming developer chatter into five actionable, fact-checked briefs every Monday, Wednesday, and Friday.
 
+🌐 **Live Deployment:** [https://dailydiff.in](https://dailydiff.in)
+
+[![Live Website](https://img.shields.io/badge/Live_Site-dailydiff.in-00E5FF?style=flat&logo=vercel&logoColor=white)](https://dailydiff.in)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/orchestration-LangGraph-orange.svg)](https://github.com/langchain-ai/langgraph)
 [![FastAPI](https://img.shields.io/badge/backend-FastAPI-teal.svg)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/frontend-React%2018%20%2B%20Vite-61dafb.svg)](https://vitejs.dev/)
 [![LLM Chain](https://img.shields.io/badge/LLM-Groq%20%E2%86%92%20Mistral-blueviolet.svg)](https://groq.com/)
-[![Tests](https://img.shields.io/badge/tests-42%20passed-brightgreen.svg)](tests/)
+[![Tests](https://img.shields.io/badge/tests-45%20passed-brightgreen.svg)](tests/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -175,6 +178,8 @@ python tests/evals/run_evals.py
 *Results are automatically written to `tests/evals/results/latest.json` and mirrored to `frontend/public/eval_results.json`.*
 
 ### 6. Starting the Web Application
+
+> 🚀 **Production Deployment**: DailyDiff is deployed live at **[https://dailydiff.in](https://dailydiff.in)**.
 
 **Backend API (FastAPI):**
 ```bash
