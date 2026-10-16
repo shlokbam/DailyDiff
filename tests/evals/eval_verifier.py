@@ -1,178 +1,143 @@
-import os
-import json
-import logging
-import sys
-from pathlib import Path
-from typing import Dict, Any, Optional
+"""
+Verifier evaluation on golden verifier cases and planted_errors.json.
+Reference-based: reports bad items caught (INVALID or UNVERIFIABLE),
+good items wrongly rejected, and successful prompt injections out of 5.
+"""
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-sys.path.insert(0, str(BASE_DIR / "backend"))
+import os
+import sys
+import logging
+from pathlib import Path
+from typing import Dict, Any, List
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(REPO_ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from app.agents.verifier import verifier_node
 from app.run_health import health
+from tests.evals.common import load_dataset, load_planted_errors, rate
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("DailyDiff.eval.verifier")
 
-def run_verifier_eval(dataset_path: Optional[str] = None) -> Dict[str, Any]:
-    """
-    Evaluates the Verifier node using real model calls.
-    Never simulates or falls back to ground truth.
-    On error or health fallback, affected cases are marked status='ERROR (fallback_used)' and excluded from scoring.
-    """
-    if dataset_path is None:
-        dataset_path = str(BASE_DIR / "tests" / "evals" / "golden_dataset.json")
+def run_verifier_eval(chunk_size: int = 5) -> Dict[str, Any]:
+    golden = load_dataset()
+    planted = load_planted_errors()
 
-    with open(dataset_path, "r") as f:
-        dataset = json.load(f)
-
-    test_cases = [item for item in dataset if item.get("ground_truth", {}).get("verifier")]
-    n_total = len(test_cases)
-    logger.info(f"Loaded {n_total} test cases for Verifier evaluation.")
-
-    candidates = []
-    for c in test_cases:
-        candidates.append({
-            "eval_id": c["id"],
-            "title": c["input_signal"]["title"],
-            "description": c["input_signal"].get("raw_description", ""),
-            "detailed_content": c["input_signal"].get("scraped_docs", ""),
-            "source": c["input_signal"].get("source", ""),
-            "url": c["input_signal"].get("url", "")
+    all_cases = []
+    for g in golden:
+        exp = g["ground_truth"]["verifier"]["expected_status"]
+        all_cases.append({
+            "id": g["id"],
+            "title": g["input_signal"]["title"],
+            "description": g["input_signal"].get("raw_description", ""),
+            "url": g["input_signal"].get("url", ""),
+            "detailed_content": g["input_signal"].get("scraped_docs", ""),
+            "content_source": "scraped_docs",
+            "expected": exp,
+            "is_bad": exp == "INVALID",
+            "is_injection": False,
         })
 
-    vetted_ids = set()
-    error_cases = {}
-    chunk_size = 5
+    for p in planted:
+        exp = p.get("expected", "INVALID")
+        sig = p["input_signal"]
+        all_cases.append({
+            "id": p["id"],
+            "title": sig["title"],
+            "description": sig.get("raw_description", ""),
+            "url": sig.get("url", ""),
+            "detailed_content": sig.get("scraped_docs", ""),
+            "content_source": sig.get("content_source", "scraped_docs"),
+            "expected": exp,
+            "is_bad": True,
+            "is_injection": (p.get("error_type") == "prompt_injection"),
+        })
 
-    for i in range(0, len(candidates), chunk_size):
-        chunk = candidates[i:i + chunk_size]
-        prev_fallbacks_len = len(health.fallbacks)
+    bad_total = sum(1 for c in all_cases if c["is_bad"])
+    good_total = sum(1 for c in all_cases if not c["is_bad"])
+    injection_total = sum(1 for c in all_cases if c["is_injection"])
+
+    bad_caught = 0
+    good_wrongly_rejected = 0
+    injections_succeeded = 0
+    errors = 0
+    results_by_case = {}
+
+    for i in range(0, len(all_cases), chunk_size):
+        chunk = all_cases[i:i + chunk_size]
+        health.reset()
+
         try:
-            state = {"researched_candidates": chunk}
-            result = verifier_node(state)
-            if len(health.fallbacks) > prev_fallbacks_len:
-                recent = health.fallbacks[prev_fallbacks_len:]
-                reason = recent[-1].get("reason", "Internal fallback used")
-                logger.warning(f"Verifier chunk used internal fallback: {reason}")
+            out = verifier_node({"researched_candidates": chunk})
+            if health.has_fallbacks or health.llm_errors_count > 0:
                 for c in chunk:
-                    error_cases[c["eval_id"]] = "ERROR (fallback_used)"
+                    errors += 1
+                    results_by_case[c["id"]] = {"passed": False, "status": "ERROR", "reason": "LLM fallback/error"}
                 continue
 
-            vetted_candidates = result.get("vetted_candidates", [])
-            for v in vetted_candidates:
-                eid = v.get("eval_id")
-                if eid:
-                    vetted_ids.add(eid)
-                else:
-                    for tc in test_cases:
-                        if tc["input_signal"]["title"] == v.get("title"):
-                            vetted_ids.add(tc["id"])
-        except Exception as e:
-            err_msg = str(e)
-            logger.error(f"Verifier chunk execution error: {err_msg}")
+            vetted_urls = {v["url"].strip().rstrip("/").lower() for v in out.get("vetted_candidates", []) if v.get("url")}
+
             for c in chunk:
-                error_cases[c["eval_id"]] = err_msg
+                cid = c["id"]
+                url = c["url"].strip().rstrip("/").lower()
+                actual_status = "VALID" if url in vetted_urls else "REJECTED"
 
-    correct = 0
-    adversarial_total = 0
-    adversarial_caught = 0
-    legit_total = 0
-    legit_passed = 0
-    case_results = []
+                passed = False
+                if c["is_bad"]:
+                    # Bad item is caught if it was NOT passed as VALID (marked INVALID or dropped as UNVERIFIABLE)
+                    if actual_status == "REJECTED":
+                        bad_caught += 1
+                        passed = True
+                else:
+                    # Good item was expected to be VALID
+                    if actual_status == "REJECTED":
+                        good_wrongly_rejected += 1
+                    else:
+                        passed = True
 
-    for c in test_cases:
-        cid = c["id"]
-        exp_status = c["ground_truth"]["verifier"]["expected_status"]
+                if c["is_injection"] and actual_status == "VALID":
+                    injections_succeeded += 1
 
-        if cid in error_cases:
-            err_val = error_cases[cid]
-            status_val = "ERROR (fallback_used)" if "fallback_used" in str(err_val) else "ERROR"
-            case_results.append({
-                "id": cid,
-                "title": c["input_signal"]["title"],
-                "archetype": c.get("archetype", ""),
-                "expected_status": exp_status,
-                "actual_status": status_val,
-                "status": status_val,
-                "passed": False,
-                "error": err_val,
-                "claim_summary": c["input_signal"].get("raw_description", c["input_signal"].get("description", "")),
-                "documentation_snippet": c["input_signal"].get("scraped_docs", "")[:320],
-                "flagged_contradiction": c["ground_truth"]["verifier"].get("flagged_contradiction"),
-                "url": c["input_signal"].get("url", "")
-            })
-            continue
+                results_by_case[cid] = {
+                    "passed": passed,
+                    "status": "PASS" if passed else "FAIL",
+                    "expected": c["expected"],
+                    "actual": actual_status,
+                    "is_bad": c["is_bad"],
+                    "is_injection": c["is_injection"],
+                }
 
-        act_status = "VALID" if cid in vetted_ids else "INVALID"
-        passed = (act_status == exp_status)
+        except Exception as e:
+            logger.error(f"Verifier eval exception on chunk {i}: {e}")
+            for c in chunk:
+                errors += 1
+                results_by_case[c["id"]] = {"passed": False, "status": "ERROR", "reason": str(e)}
 
-        is_adversarial = (exp_status == "INVALID")
-        if is_adversarial:
-            adversarial_total += 1
-            if act_status == "INVALID":
-                adversarial_caught += 1
-        else:
-            legit_total += 1
-            if act_status == "VALID":
-                legit_passed += 1
+    bad_str = rate(bad_caught, bad_total)
+    good_rej_str = rate(good_wrongly_rejected, good_total)
+    inj_str = f"{injections_succeeded}/{injection_total} = {round(100.0 * injections_succeeded / injection_total if injection_total else 0)}%"
 
-        if passed:
-            correct += 1
+    print("\n--- VERIFIER EVALUATION (Golden + Planted Errors) ---")
+    print(f"Total Cases: {len(all_cases)} (Good: {good_total}, Bad: {bad_total}, Injections: {injection_total}) | Errors: {errors}")
+    print(f"Bad Items Caught (INVALID/UNVERIFIABLE): {bad_str}")
+    print(f"Good Items Wrongly Rejected:            {good_rej_str}")
+    print(f"Prompt Injections Succeeded:            {inj_str} (Expected: 0/{injection_total})")
 
-        case_results.append({
-            "id": cid,
-            "title": c["input_signal"]["title"],
-            "archetype": c.get("archetype", ""),
-            "expected_status": exp_status,
-            "actual_status": act_status,
-            "status": "EVALUATED",
-            "passed": passed,
-            "claim_summary": c["input_signal"].get("raw_description", c["input_signal"].get("description", "")),
-            "documentation_snippet": c["input_signal"].get("scraped_docs", "")[:320],
-            "flagged_contradiction": c["ground_truth"]["verifier"].get("flagged_contradiction"),
-            "url": c["input_signal"].get("url", "")
-        })
-
-    n_error = len(error_cases)
-    n_evaluated = n_total - n_error
-
-    if n_evaluated > 0:
-        accuracy = correct / n_evaluated
-        adversarial_rate = adversarial_caught / adversarial_total if adversarial_total > 0 else 1.0
-        false_rejection_rate = (legit_total - legit_passed) / legit_total if legit_total > 0 else 0.0
-    else:
-        accuracy, adversarial_rate, false_rejection_rate = 0.0, 0.0, 0.0
-
-    eval_summary = {
-        "node": "Verifier (Technical Fact-Checking & Anti-Hallucination)",
-        "n_total": n_total,
-        "n_evaluated": n_evaluated,
-        "n_error": n_error,
-        "accuracy": round(accuracy * 100, 1),
-        "adversarial_catch_rate": round(adversarial_rate * 100, 1),
-        "false_rejection_rate": round(false_rejection_rate * 100, 1),
-        "adversarial_cases": adversarial_total,
-        "adversarial_caught": adversarial_caught,
-        "legit_cases": legit_total,
-        "legit_passed": legit_passed,
-        "details": case_results
+    return {
+        "node": "verifier",
+        "total_cases": len(all_cases),
+        "good_total": good_total,
+        "bad_total": bad_total,
+        "injection_total": injection_total,
+        "bad_caught": bad_str,
+        "good_wrongly_rejected": good_rej_str,
+        "injections_succeeded": inj_str,
+        "errors": errors,
+        "cases": results_by_case,
     }
 
-    return eval_summary
-
 if __name__ == "__main__":
-    report = run_verifier_eval()
-    print("\n" + "=" * 55)
-    print("VERIFIER EVALUATION REPORT:")
-    print(f"Total Cases:             {report['n_total']}")
-    print(f"Evaluated Cases:         {report['n_evaluated']}")
-    print(f"Error Cases:             {report['n_error']}")
-    print(f"Accuracy:                {report['accuracy']}%")
-    print(f"Adversarial Catch Rate:  {report['adversarial_catch_rate']}%")
-    print(f"False Rejection Rate:    {report['false_rejection_rate']}%")
-    print("=" * 55)
-    for c in report["details"]:
-        status = c["status"]
-        pass_label = "PASS" if c["passed"] else ("ERROR" if status == "ERROR" else "FAIL")
-        print(f"[{pass_label}] {c['id']}: {c['title'][:36]:<36} | Exp: {c['expected_status']} | Act: {c['actual_status']}")
+    run_verifier_eval()

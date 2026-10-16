@@ -1,6 +1,6 @@
 import sqlite3
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from app.config import DB_PATH, HISTORY_FILE_PATH, DATABASE_URL
@@ -14,48 +14,22 @@ def get_db_connection():
         return sqlite3.connect(DB_PATH)
 
 def init_db():
-    """Initialize the database (subscribers and eval_runs)."""
+    """Initialize the database (subscribers table)."""
     conn = get_db_connection()
     cursor = conn.cursor()
     if DATABASE_URL:
-        # Postgres schema
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS subscribers (
                 id SERIAL PRIMARY KEY,
                 email TEXT UNIQUE NOT NULL,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            );
-        """)
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS eval_runs (
-                id SERIAL PRIMARY KEY,
-                run_type TEXT NOT NULL,
-                composite_score REAL,
-                total_cases INTEGER,
-                pass_rate REAL,
-                summary_json TEXT,
-                raw_report_json TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         """)
     else:
-        # SQLite schema
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS subscribers (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 email TEXT UNIQUE NOT NULL,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            );
-        """)
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS eval_runs (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                run_type TEXT NOT NULL,
-                composite_score REAL,
-                total_cases INTEGER,
-                pass_rate REAL,
-                summary_json TEXT,
-                raw_report_json TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         """)
@@ -74,7 +48,6 @@ def add_subscriber(email: str) -> bool:
         conn.close()
         return True
     except Exception:
-        # Fails gracefully on duplicate unique email constraints
         conn.close()
         return False
 
@@ -103,8 +76,6 @@ def get_subscribers() -> List[str]:
     conn.close()
     return emails
 
-# Git-Based Memory (history.json) Management
-
 def init_history_file():
     """Ensure history.json exists and is initialized as an empty list."""
     if not HISTORY_FILE_PATH.exists():
@@ -128,231 +99,17 @@ def save_history(history_data: List[Dict[str, Any]]):
         json.dump(history_data, f, indent=2)
 
 def append_to_history(briefs: List[Dict[str, Any]], date_str: str) -> Dict[str, Any]:
-    """
-    Append a new list of daily briefs to the history index.
-    A daily brief record represents a group of briefs for a single day.
-    """
+    """Append a new list of daily briefs to the history index."""
     history = read_history()
-    
-    # Check if we already have a record for this date
     existing_index = next((i for i, item in enumerate(history) if item.get("date") == date_str), None)
-    
     new_entry = {
         "date": date_str,
-        "published_at": datetime.utcnow().isoformat() + "Z",
+        "published_at": datetime.now(timezone.utc).isoformat(),
         "briefs": briefs
     }
-    
     if existing_index is not None:
         history[existing_index] = new_entry
     else:
         history.append(new_entry)
-        
     save_history(history)
     return new_entry
-
-# ==========================================
-# Evaluation Runs Database Persistence
-# ==========================================
-
-def save_eval_run(report: Dict[str, Any], run_type: str = "full_suite") -> int:
-    """
-    Persist an evaluation run into the database and sync with frontend public JSON.
-    Strictly refuses to store any report whose meta.mode is not 'live'.
-    Returns the inserted run ID.
-    """
-    meta = report.get("meta")
-    if not isinstance(meta, dict) or meta.get("mode") != "live":
-        raise ValueError("save_eval_run refused: only evaluation reports with meta.mode == 'live' can be persisted to database.")
-
-    init_db()
-    # Compute composite_score robustly across full suites and single node reports
-    if "composite_quality_score" in report:
-        composite_score = float(report["composite_quality_score"])
-    elif "accuracy" in report:
-        composite_score = float(report["accuracy"])
-    elif "pass_rate" in report:
-        composite_score = float(report["pass_rate"])
-    elif "f1_score" in report:
-        composite_score = float(report["f1_score"]) * 100.0
-    else:
-        composite_score = 0.0
-
-    # Compute total cases
-    if "n_total" in report:
-        total_cases = int(report["n_total"])
-    elif "total_cases" in report:
-        total_cases = int(report["total_cases"])
-    elif "summary" in report and "total_cases" in report["summary"]:
-        total_cases = int(report["summary"]["total_cases"])
-    elif "details" in report:
-        total_cases = len(report["details"])
-    else:
-        total_cases = 0
-
-    # Compute pass rate
-    if "deepeval_framework" in report and "pass_rate" in report["deepeval_framework"]:
-        pass_rate = float(report["deepeval_framework"]["pass_rate"])
-    elif "accuracy" in report:
-        pass_rate = float(report["accuracy"])
-    elif "pass_rate" in report:
-        pass_rate = float(report["pass_rate"])
-    elif "details" in report and total_cases > 0:
-        passed_cnt = sum(1 for d in report["details"] if d.get("passed", False))
-        pass_rate = round((passed_cnt / total_cases) * 100.0, 1)
-    else:
-        pass_rate = 0.0
-
-    # Build summary dict preserving meta inside summary_json without schema migration
-    if "summary" in report and isinstance(report["summary"], dict):
-        summary_dict = report["summary"].copy()
-    else:
-        summary_dict = {
-            "run_type": run_type,
-            "node": report.get("node", run_type),
-            "total_cases": total_cases,
-            "pass_rate": pass_rate,
-            "accuracy": report.get("accuracy", pass_rate),
-            "f1_score": report.get("f1_score"),
-        }
-    summary_dict["meta"] = meta
-    summary_dict["timestamp"] = datetime.now(timezone.utc).isoformat()
-    summary_json = json.dumps(summary_dict)
-    
-    # Ensure raw_report_json contains a nodes map even for single-node executions
-    wrapped_report = report.copy()
-    if "nodes" not in wrapped_report:
-        wrapped_report["nodes"] = {
-            run_type: report
-        }
-    raw_report_json = json.dumps(wrapped_report)
-
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    placeholder = "%s" if DATABASE_URL else "?"
-
-    if DATABASE_URL:
-        cursor.execute(
-            f"""
-            INSERT INTO eval_runs (run_type, composite_score, total_cases, pass_rate, summary_json, raw_report_json)
-            VALUES ({placeholder}, {placeholder}, {placeholder}, {placeholder}, {placeholder}, {placeholder})
-            RETURNING id
-            """,
-            (run_type, composite_score, total_cases, pass_rate, summary_json, raw_report_json)
-        )
-        run_id = cursor.fetchone()[0]
-    else:
-        cursor.execute(
-            """
-            INSERT INTO eval_runs (run_type, composite_score, total_cases, pass_rate, summary_json, raw_report_json)
-            VALUES (?, ?, ?, ?, ?, ?)
-            """,
-            (run_type, composite_score, total_cases, pass_rate, summary_json, raw_report_json)
-        )
-        run_id = cursor.lastrowid
-
-    conn.commit()
-    conn.close()
-
-    # Also synchronize frontend public directory so static offline loading is instantly updated
-    try:
-        from app.config import BASE_DIR
-        pub_path = BASE_DIR / "frontend" / "public" / "eval_results.json"
-        pub_path.parent.mkdir(parents=True, exist_ok=True)
-        # Augment report with db run_id
-        augmented_report = report.copy()
-        augmented_report["db_run_id"] = run_id
-        augmented_report["run_type"] = run_type
-        with open(pub_path, "w") as f:
-            json.dump(augmented_report, f, indent=2)
-    except Exception:
-        pass
-
-    return run_id
-
-def get_latest_eval_run() -> Optional[Dict[str, Any]]:
-    """Retrieve the most recent live evaluation run from the database."""
-    init_db()
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute("""
-        SELECT id, run_type, composite_score, total_cases, pass_rate, summary_json, raw_report_json, created_at
-        FROM eval_runs
-        ORDER BY id DESC
-    """)
-    rows = cursor.fetchall()
-    conn.close()
-
-    for row in rows:
-        try:
-            report = json.loads(row[6]) if row[6] else {}
-            if report.get("meta", {}).get("mode") == "live":
-                report["db_run_id"] = row[0]
-                report["db_created_at"] = str(row[7])
-                report["run_type"] = row[1]
-                return report
-        except Exception:
-            continue
-
-    return None
-
-def get_eval_history(limit: int = 50) -> List[Dict[str, Any]]:
-    """Retrieve historical live evaluation run records."""
-    init_db()
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute("""
-        SELECT id, run_type, composite_score, total_cases, pass_rate, summary_json, raw_report_json, created_at
-        FROM eval_runs
-        ORDER BY id DESC
-    """)
-    rows = cursor.fetchall()
-    conn.close()
-
-    history = []
-    for r in rows:
-        try:
-            raw_report = json.loads(r[6]) if r[6] else {}
-            if raw_report.get("meta", {}).get("mode") == "live":
-                history.append({
-                    "id": r[0],
-                    "run_type": r[1],
-                    "composite_score": r[2],
-                    "total_cases": r[3],
-                    "pass_rate": r[4],
-                    "summary": json.loads(r[5]) if r[5] else {},
-                    "created_at": str(r[7])
-                })
-                if len(history) >= limit:
-                    break
-        except Exception:
-            continue
-
-    return history
-
-def get_eval_run_by_id(run_id: int) -> Optional[Dict[str, Any]]:
-    """Retrieve a specific live evaluation run by ID."""
-    init_db()
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    placeholder = "%s" if DATABASE_URL else "?"
-    cursor.execute(f"""
-        SELECT id, run_type, composite_score, total_cases, pass_rate, summary_json, raw_report_json, created_at
-        FROM eval_runs
-        WHERE id = {placeholder}
-    """, (run_id,))
-    row = cursor.fetchone()
-    conn.close()
-    if not row:
-        return None
-
-    try:
-        report = json.loads(row[6]) if row[6] else {}
-        if report.get("meta", {}).get("mode") != "live":
-            return None
-        report["db_run_id"] = row[0]
-        report["db_created_at"] = str(row[7])
-        report["run_type"] = row[1]
-        return report
-    except Exception:
-        return None

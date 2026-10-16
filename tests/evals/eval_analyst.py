@@ -1,218 +1,134 @@
-import os
-import json
-import logging
-import re
-import sys
-from pathlib import Path
-from typing import Dict, Any, Optional
+"""
+Analyst evaluation on 15 golden analyst cases.
+Reference-based: verdict matches expected (WATCH, INTEGRATE, READ).
+Reference-free: DeepEval G-Eval Usefulness (average score and count >= 0.7).
+Note: The LLM judge is uncalibrated.
+"""
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-sys.path.insert(0, str(BASE_DIR / "backend"))
+import os
+import sys
+import logging
+from pathlib import Path
+from typing import Dict, Any, List
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(REPO_ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from app.agents.analyst import analyst_node
 from app.run_health import health
+from tests.evals.common import load_dataset, rate
+from tests.evals.judge import create_usefulness_geval, DailyDiffJudge, LLMTestCase
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("DailyDiff.eval.analyst")
 
-def score_practicality(text: str) -> float:
-    """Heuristic rubric score for practical engineering takeaway (1 to 5 scale)."""
-    if not text or len(text) < 20:
-        return 1.0
-
-    score = 2.0
-    action_words = ["build", "learn", "deploy", "save", "debug", "prevent", "eliminate", "automate", "test", "run", "monitor", "optimize"]
-    found_actions = sum(1 for w in action_words if re.search(r"\b" + w, text.lower()))
-    if found_actions >= 1:
-        score += 1.0
-    if found_actions >= 2:
-        score += 1.0
-
-    if "good tool" in text.lower() or "notable development" in text.lower():
-        score -= 1.0
-
-    if len(text) > 80:
-        score += 1.0
-
-    return min(5.0, max(1.0, score))
-
-def run_analyst_eval(dataset_path: Optional[str] = None) -> Dict[str, Any]:
-    """
-    Evaluates the Analyst node using real model calls.
-    Never simulates or falls back to ground truth.
-    On error or health fallback, affected cases are marked status='ERROR (fallback_used)' and excluded from scoring.
-    """
-    if dataset_path is None:
-        dataset_path = str(BASE_DIR / "tests" / "evals" / "golden_dataset.json")
-
-    with open(dataset_path, "r") as f:
-        dataset = json.load(f)
-
-    test_cases = [item for item in dataset if item.get("ground_truth", {}).get("analyst")]
-    n_total = len(test_cases)
-    logger.info(f"Loaded {n_total} test cases for Analyst evaluation.")
-
-    candidates = []
-    for c in test_cases:
-        candidates.append({
-            "eval_id": c["id"],
-            "title": c["input_signal"]["title"],
-            "description": c["input_signal"].get("raw_description", ""),
-            "detailed_content": c["input_signal"].get("scraped_docs", ""),
-            "source": c["input_signal"].get("source", ""),
-            "url": c["input_signal"].get("url", "")
-        })
-
-    analyzed_candidates = []
-    error_cases = {}
-    chunk_size = 6
-
-    for i in range(0, len(candidates), chunk_size):
-        chunk = candidates[i:i + chunk_size]
-        prev_fallbacks_len = len(health.fallbacks)
-        try:
-            state = {"vetted_candidates": chunk}
-            result = analyst_node(state)
-            if len(health.fallbacks) > prev_fallbacks_len:
-                recent = health.fallbacks[prev_fallbacks_len:]
-                reason = recent[-1].get("reason", "Internal fallback used")
-                logger.warning(f"Analyst chunk used internal fallback: {reason}")
-                for c in chunk:
-                    error_cases[c["eval_id"]] = "ERROR (fallback_used)"
-                continue
-
-            analyzed_candidates.extend(result.get("vetted_candidates", []))
-        except Exception as e:
-            err_msg = str(e)
-            logger.error(f"Analyst chunk execution error: {err_msg}")
-            for c in chunk:
-                error_cases[c["eval_id"]] = err_msg
-
-    analyzed_map = {}
-    for a in analyzed_candidates:
-        eid = a.get("eval_id")
-        if eid:
-            analyzed_map[eid] = a
-        else:
-            for tc in test_cases:
-                if tc["input_signal"]["title"] == a.get("title"):
-                    analyzed_map[tc["id"]] = a
+def run_analyst_eval(chunk_size: int = 5, run_judge: bool = True) -> Dict[str, Any]:
+    dataset = load_dataset()
+    cases = [c for c in dataset if c.get("ground_truth", {}).get("analyst")]
 
     verdict_matches = 0
-    total_practicality_score = 0.0
-    total_specificity_score = 0.0
-    case_results = []
+    errors = 0
+    usefulness_scores = []
+    usefulness_gte_70 = 0
+    results_by_case = {}
 
-    for c in test_cases:
-        cid = c["id"]
-        gt = c["ground_truth"]["analyst"]
-        exp_verdict = gt["expected_verdict"]
-        exp_keywords = [kw.lower() for kw in gt.get("expected_audience_keywords", [])]
+    judge = DailyDiffJudge() if run_judge else None
+    metric = create_usefulness_geval(judge=judge) if run_judge else None
 
-        if cid in error_cases:
-            err_val = error_cases[cid]
-            status_val = "ERROR (fallback_used)" if "fallback_used" in str(err_val) else "ERROR"
-            case_results.append({
-                "id": cid,
-                "title": c["input_signal"]["title"],
-                "expected_verdict": exp_verdict,
-                "actual_verdict": status_val,
-                "status": status_val,
-                "passed": False,
-                "error": err_val,
-                "verdict_match": False,
-                "audience_text": "",
-                "matched_keywords": [],
-                "practicality_score": 0.0,
-                "why_it_matters": ""
+    for i in range(0, len(cases), chunk_size):
+        chunk = cases[i:i + chunk_size]
+        candidates = []
+        for c in chunk:
+            sig = c["input_signal"]
+            candidates.append({
+                "id": c["id"],
+                "title": sig["title"],
+                "url": sig.get("url", ""),
+                "description": sig.get("raw_description", ""),
+                "detailed_content": sig.get("scraped_docs", ""),
             })
-            continue
 
-        analyzed_item = analyzed_map.get(cid)
-        if analyzed_item is None:
-            # Dropped by analyst
-            case_results.append({
-                "id": cid,
-                "title": c["input_signal"]["title"],
-                "expected_verdict": exp_verdict,
-                "actual_verdict": "DROPPED",
-                "status": "EVALUATED",
-                "passed": False,
-                "verdict_match": False,
-                "audience_text": "",
-                "matched_keywords": [],
-                "practicality_score": 0.0,
-                "why_it_matters": ""
-            })
-            continue
+        health.reset()
+        try:
+            out = analyst_node({"vetted_candidates": candidates})
+            if health.has_fallbacks or health.llm_errors_count > 0:
+                for c in chunk:
+                    errors += 1
+                    results_by_case[c["id"]] = {"passed": False, "status": "ERROR", "reason": "LLM fallback/error"}
+                continue
 
-        act_verdict = analyzed_item.get("verdict", "UNKNOWN")
-        act_why = analyzed_item.get("why_it_matters", "")
-        act_who = analyzed_item.get("who_cares", "")
+            analyzed_by_url = {cand["url"].strip().rstrip("/").lower(): cand for cand in out.get("vetted_candidates", [])}
 
-        verdict_ok = (act_verdict == exp_verdict)
-        if verdict_ok:
-            verdict_matches += 1
+            for c in chunk:
+                cid = c["id"]
+                url = c["input_signal"].get("url", "").strip().rstrip("/").lower()
+                cand = analyzed_by_url.get(url)
 
-        matched_kw = [kw for kw in exp_keywords if kw in act_who.lower()]
-        specificity_ok = (len(matched_kw) >= 1)
-        if specificity_ok:
-            total_specificity_score += 1.0
+                if not cand:
+                    results_by_case[cid] = {"passed": False, "status": "DROPPED", "reason": "Dropped by Analyst"}
+                    continue
 
-        practicality = score_practicality(act_why)
-        total_practicality_score += practicality
+                act_verdict = str(cand.get("verdict", "")).upper()
+                exp_verdict = str(c["ground_truth"]["analyst"]["expected_verdict"]).upper()
+                v_match = (act_verdict == exp_verdict)
+                if v_match:
+                    verdict_matches += 1
 
-        case_passed = (verdict_ok and specificity_ok and practicality >= 3.0)
+                score = None
+                if run_judge and metric:
+                    try:
+                        test_case = LLMTestCase(
+                            input=f"{cand['title']}: {cand.get('description', '')}\nDocs: {cand.get('detailed_content', '')[:1000]}",
+                            actual_output=f"Why It Matters: {cand.get('why_it_matters', '')}\nWho Cares: {cand.get('who_cares', '')}\nVerdict: {act_verdict}",
+                        )
+                        metric.measure(test_case)
+                        score = float(metric.score or 0.0)
+                        usefulness_scores.append(score)
+                        if score >= 0.7:
+                            usefulness_gte_70 += 1
+                    except Exception as je:
+                        logger.warning(f"Judge evaluation failed for {cid}: {je}")
 
-        case_results.append({
-            "id": cid,
-            "title": c["input_signal"]["title"],
-            "expected_verdict": exp_verdict,
-            "actual_verdict": act_verdict,
-            "status": "EVALUATED",
-            "verdict_match": verdict_ok,
-            "audience_text": act_who,
-            "matched_keywords": matched_kw,
-            "practicality_score": practicality,
-            "why_it_matters": act_why,
-            "passed": case_passed
-        })
+                results_by_case[cid] = {
+                    "passed": v_match,
+                    "status": "PASS" if v_match else "FAIL",
+                    "expected_verdict": exp_verdict,
+                    "actual_verdict": act_verdict,
+                    "usefulness_score": score,
+                }
 
-    n_error = len(error_cases)
-    n_evaluated = n_total - n_error
+        except Exception as e:
+            logger.error(f"Analyst eval exception on chunk {i}: {e}")
+            for c in chunk:
+                errors += 1
+                results_by_case[c["id"]] = {"passed": False, "status": "ERROR", "reason": str(e)}
 
-    if n_evaluated > 0:
-        verdict_accuracy = (verdict_matches / n_evaluated) * 100
-        audience_specificity = (total_specificity_score / n_evaluated) * 100
-        avg_practicality = total_practicality_score / n_evaluated
-    else:
-        verdict_accuracy, audience_specificity, avg_practicality = 0.0, 0.0, 0.0
+    evaluated = len(cases) - errors
+    v_rate_str = rate(verdict_matches, evaluated) if evaluated > 0 else "0/0 = 0%"
+    n_scores = len(usefulness_scores)
+    avg_score = round(sum(usefulness_scores) / n_scores, 2) if n_scores > 0 else 0.0
+    gte_str = rate(usefulness_gte_70, n_scores) if n_scores > 0 else "0/0 = 0%"
 
-    eval_summary = {
-        "node": "Analyst (Insight Practicality & Audience Specificity)",
-        "n_total": n_total,
-        "n_evaluated": n_evaluated,
-        "n_error": n_error,
-        "verdict_accuracy": round(verdict_accuracy, 1),
-        "audience_specificity_rate": round(audience_specificity, 1),
-        "average_practicality_score": round(avg_practicality, 2),
-        "details": case_results
+    print("\n--- ANALYST EVALUATION (15 Golden Cases) ---")
+    print(f"Total: {len(cases)} | Evaluated: {evaluated} | Errors: {errors}")
+    print(f"Verdict Match (Reference-based): {v_rate_str}")
+    if run_judge:
+        print(f"G-Eval Usefulness (Reference-free): Average={avg_score:.2f} | Score >= 0.7: {gte_str}")
+        print("  *(Note: The LLM judge is uncalibrated)*")
+
+    return {
+        "node": "analyst",
+        "total_cases": len(cases),
+        "evaluated": evaluated,
+        "errors": errors,
+        "verdict_match_rate": v_rate_str,
+        "usefulness_avg": avg_score,
+        "usefulness_gte_70": gte_str,
+        "uncalibrated_warning": "The LLM judge is uncalibrated",
+        "cases": results_by_case,
     }
 
-    return eval_summary
-
 if __name__ == "__main__":
-    report = run_analyst_eval()
-    print("\n" + "=" * 55)
-    print("ANALYST EVALUATION REPORT:")
-    print(f"Total Cases:               {report['n_total']}")
-    print(f"Evaluated Cases:           {report['n_evaluated']}")
-    print(f"Error Cases:               {report['n_error']}")
-    print(f"Verdict Match Rate:        {report['verdict_accuracy']}%")
-    print(f"Audience Specificity Rate: {report['audience_specificity_rate']}%")
-    print(f"Avg Practicality (1-5):    {report['average_practicality_score']} / 5.0")
-    print("=" * 55)
-    for c in report["details"]:
-        status = c["status"]
-        pass_label = "PASS" if c["passed"] else ("ERROR" if status == "ERROR" else "FAIL")
-        print(f"[{pass_label}] {c['id']}: Exp: {c['expected_verdict']} | Act: {c['actual_verdict']} | Practicality: {c['practicality_score']}/5")
+    run_analyst_eval()

@@ -1,105 +1,50 @@
-import logging
+"""
+LLM provider setup and invocation.
+Priority: Groq -> Mistral (30s timeouts).
+Never retries API errors. Retries once for malformed JSON only.
+"""
+
 import json
+import re
+import logging
 from typing import Any, Optional, Callable
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_groq import ChatGroq
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_mistralai import ChatMistralAI
+
 from app.config import (
-    GEMINI_API_KEY,
-    MISTRAL_API_KEY,
-    GROQ_API_KEY,
-    PRIMARY_MODEL_GROQ,
-    FALLBACK_MODEL_GEMINI,
-    FALLBACK_MODEL_MISTRAL,
+    GROQ_API_KEY, MISTRAL_API_KEY,
+    PRIMARY_MODEL_GROQ, FALLBACK_MODEL_MISTRAL,
 )
 from app.run_health import health
 
 logger = logging.getLogger("DailyDiff.models")
 
-class BudgetExceeded(Exception):
-    """Raised when pipeline total runtime exceeds LLM_TIME_BUDGET_SECONDS."""
-    pass
-
 def get_llm(temperature: float = 0.2) -> BaseChatModel:
-    """
-    Get the language model client with an automated multi-provider fallback configuration.
-    Configures strict 30s timeouts and max 1 retry to fail fast on outages.
-    Priority order:
-    1. Groq (ultra-fast sub-second inference, high rate limits)
-    2. Google Gemini (gemini-3.8-flash)
-    3. Mistral AI
-    """
-    available_llms = []
-
-    # 1. Groq
+    """Build provider fallback chain: Groq -> Mistral (30s timeouts)."""
+    providers = []
     if GROQ_API_KEY:
         try:
-            groq_llm = ChatGroq(
-                model=PRIMARY_MODEL_GROQ,
-                groq_api_key=GROQ_API_KEY,
-                temperature=temperature,
-                request_timeout=30.0,
-                max_retries=1,
-            )
-            available_llms.append(groq_llm)
+            providers.append(ChatGroq(model=PRIMARY_MODEL_GROQ, groq_api_key=GROQ_API_KEY, temperature=temperature, request_timeout=30.0, max_retries=0))
         except Exception as e:
-            logger.warning(f"Failed to initialize ChatGroq: {e}")
-
-    # 2. Gemini
-    if GEMINI_API_KEY:
-        try:
-            gemini_llm = ChatGoogleGenerativeAI(
-                model=FALLBACK_MODEL_GEMINI,
-                google_api_key=GEMINI_API_KEY,
-                temperature=temperature,
-                timeout=30.0,
-                max_retries=1,
-            )
-            available_llms.append(gemini_llm)
-        except Exception as e:
-            logger.warning(f"Failed to initialize ChatGoogleGenerativeAI: {e}")
-
-    # 3. Mistral AI
+            logger.warning(f"Could not init Groq: {e}")
     if MISTRAL_API_KEY:
         try:
-            mistral_llm = ChatMistralAI(
-                model=FALLBACK_MODEL_MISTRAL,
-                mistral_api_key=MISTRAL_API_KEY,
-                temperature=temperature,
-                timeout=30.0,
-                max_retries=1,
-            )
-            available_llms.append(mistral_llm)
+            providers.append(ChatMistralAI(model=FALLBACK_MODEL_MISTRAL, mistral_api_key=MISTRAL_API_KEY, temperature=temperature, timeout=30.0, max_retries=0))
         except Exception as e:
-            logger.warning(f"Failed to initialize ChatMistralAI: {e}")
+            logger.warning(f"Could not init Mistral: {e}")
 
-    if not available_llms:
-        raise ValueError(
-            "No valid LLM API key (GROQ_API_KEY, GEMINI_API_KEY, or MISTRAL_API_KEY) found in environment."
-        )
-
-    primary_llm = available_llms[0]
-    fallback_llms = available_llms[1:]
-
-    if fallback_llms:
-        return primary_llm.with_fallbacks(fallback_llms)
-    return primary_llm
+    if not providers:
+        raise ValueError("No valid LLM API key (GROQ or MISTRAL) found.")
+    return providers[0].with_fallbacks(providers[1:]) if len(providers) > 1 else providers[0]
 
 def invoke_llm(node: str, llm: BaseChatModel, prompt: Any) -> Any:
-    """
-    Standardized LLM invocation wrapper for all agent nodes.
-    Checks time budget, tracks execution timings, and records call counts/errors in health.
-    """
-    if health.over_budget():
-        health.add_warning(f"LLM time budget exceeded before executing node: {node}")
-        raise BudgetExceeded(f"Execution time exceeded LLM_TIME_BUDGET_SECONDS budget before node '{node}'")
-
+    """Invokes LLM once without retry; tracks timings and errors."""
     health.start_timer(node)
     try:
-        response = llm.invoke(prompt)
-        health.record_llm_call(node, response=response)
-        return response
+        resp = llm.invoke(prompt)
+        health.record_llm_call(node, response=resp)
+        return resp
     except Exception as e:
         health.record_llm_call(node, error=e)
         raise e
@@ -107,77 +52,33 @@ def invoke_llm(node: str, llm: BaseChatModel, prompt: Any) -> Any:
         health.stop_timer(node)
 
 def escape_untrusted(text: Any) -> str:
-    """
-    Escapes XML special characters in untrusted external text.
-    Prevents closing tag breakout in prompt document wrappers.
-    """
-    if text is None:
-        return ""
-    return str(text).replace("<", "&lt;").replace(">", "&gt;")
+    """Removes HTML comments (invisible on the page but readable by the model), then escapes < and >."""
+    s = re.sub(r"<!--.*?-->", "", str(text or ""), flags=re.DOTALL)
+    s = re.sub(r"<!--.*", "", s, flags=re.DOTALL)  # an unclosed comment: drop everything after it
+    return s.replace("<", "&lt;").replace(">", "&gt;")
 
-def _strip_markdown_fences(content: str) -> str:
-    """Strip markdown code block fences (e.g. ```json ... ```) from LLM output."""
-    s = content.strip()
+def _clean_json_str(text: str) -> str:
+    s = text.strip()
     if s.startswith("```"):
         lines = s.split("\n")
-        if lines[0].startswith("```"):
-            lines = lines[1:]
-        if lines and lines[-1].strip().startswith("```"):
-            lines = lines[:-1]
-        s = "\n".join(lines).strip()
+        s = "\n".join(lines[1:-1] if lines[-1].strip().startswith("```") else lines[1:]).strip()
     return s
 
-def invoke_json(
-    node: str,
-    llm: BaseChatModel,
-    prompt: Any,
-    validate_fn: Optional[Callable[[Any], bool]] = None,
-) -> Any:
-    """
-    Invokes LLM and parses JSON output.
-    On JSON parse or validation failure, retries ONCE with a reminder.
-    Only after the retry fails does it call health.mark_fallback.
-    Both attempts are recorded in health.
-    """
-    last_err: Optional[Exception] = None
-
-    # First attempt
-    try:
-        resp = invoke_llm(node, llm, prompt)
-        text = _strip_markdown_fences(resp.content if hasattr(resp, "content") else str(resp))
-        parsed = json.loads(text)
-        if validate_fn is not None and not validate_fn(parsed):
-            raise ValueError(f"Schema validation failed for {node} response")
-        return parsed
-    except BudgetExceeded:
-        raise
-    except Exception as e:
-        last_err = e
-        logger.warning(f"First attempt of {node} produced invalid JSON/schema ({e}). Retrying once...")
-
-    # Build retry prompt with reminder
-    retry_prompt = prompt
-    reminder = (
-        "\n\nIMPORTANT: Your previous response was not valid JSON or failed schema validation. "
-        "Please return ONLY a valid JSON structure matching the requested format with no markdown formatting, "
-        "no code fences, and no surrounding text."
-    )
-    if isinstance(retry_prompt, str):
-        retry_prompt = retry_prompt + reminder
-
-    # Retry attempt
-    try:
-        retry_resp = invoke_llm(node, llm, retry_prompt)
-        text = _strip_markdown_fences(retry_resp.content if hasattr(retry_resp, "content") else str(retry_resp))
-        parsed = json.loads(text)
-        if validate_fn is not None and not validate_fn(parsed):
-            raise ValueError(f"Schema validation failed on retry for {node} response")
-        return parsed
-    except BudgetExceeded:
-        raise
-    except Exception as retry_err:
-        last_err = retry_err
-        logger.error(f"{node} JSON parsing/validation failed after retry: {retry_err}")
-        health.mark_fallback(node, f"Malformed JSON output after retry: {last_err}")
-        raise last_err
-
+def invoke_json(node: str, llm: BaseChatModel, prompt: Any, validate_fn: Optional[Callable[[Any], bool]] = None) -> Any:
+    """Calls the LLM and parses JSON.
+    - An API error (429, timeout, network) is raised immediately. It is NOT retried.
+    - Malformed JSON or a failed schema check is retried ONCE.
+    The calling node records the failure (one hard fallback per failed node)."""
+    for attempt in range(2):
+        p = prompt if attempt == 0 else f"{prompt}\n\nIMPORTANT: Return ONLY valid JSON, no surrounding text or markdown."
+        resp = invoke_llm(node, llm, p)  # API errors propagate from here, outside the try block
+        try:
+            data = json.loads(_clean_json_str(getattr(resp, "content", str(resp))))
+            if validate_fn and not validate_fn(data):
+                raise ValueError(f"Schema check failed on {node} output")
+            return data
+        except ValueError as e:  # json.JSONDecodeError is a ValueError
+            if attempt == 0:
+                logger.warning(f"{node} returned bad JSON ({e}). Retrying once...")
+                continue
+            raise ValueError(f"{node}: invalid JSON after one retry: {e}") from e
