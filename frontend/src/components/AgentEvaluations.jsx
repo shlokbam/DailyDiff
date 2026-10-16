@@ -365,7 +365,7 @@ export default function AgentEvaluations() {
         {[
           { id: 'overview', label: 'System Overview' },
           { id: 'datasets', label: `Test Datasets (${goldenData.length + plantedData.length})` },
-          { id: 'glossary', label: 'Plain English Definitions' },
+          { id: 'glossary', label: 'Evals Definitions' },
           { id: 'skeptic', label: `1. Skeptic (${skepticCases.length})` },
           { id: 'verifier', label: `2. Verifier (${verifierCases.length})` },
           { id: 'analyst', label: `3. Analyst (${analystCases.length})` },
@@ -975,7 +975,7 @@ export default function AgentEvaluations() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           <div className="glass" style={{ padding: '2rem' }}>
             <h3 style={{ fontSize: '1.35rem', fontWeight: '700', color: '#f3f4f6', marginBottom: '0.5rem' }}>
-              Plain English Definitions
+              Evals Definitions
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.6' }}>
               In AI systems engineering, raw numbers don't tell the full story without knowing what is being measured. Here is a beginner-friendly explanation of each metric reported on this dashboard.
