@@ -26,6 +26,7 @@ export default function App() {
   const [selectedDate, setSelectedDate] = useState('');
   const [expandedCards, setExpandedCards] = useState({});
   const [email, setEmail] = useState('');
+  const [subMode, setSubMode] = useState('subscribe'); // 'subscribe' or 'unsubscribe'
   const [subStatus, setSubStatus] = useState({ type: '', message: '' });
   const [loading, setLoading] = useState(true);
   const [showPersonalizedBanner, setShowPersonalizedBanner] = useState(() => {
@@ -35,6 +36,22 @@ export default function App() {
       return true;
     }
   });
+
+  // Auto-detect unsubscribe intent or prefilled email from URL query params
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('mode') === 'unsubscribe' || params.has('unsubscribe')) {
+        setSubMode('unsubscribe');
+        const unsubEmail = params.get('email') || params.get('unsubscribe');
+        if (unsubEmail && unsubEmail.includes('@')) {
+          setEmail(unsubEmail);
+        }
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
 
   useEffect(() => {
     async function loadData() {
@@ -102,36 +119,83 @@ export default function App() {
     }));
   };
 
-  const handleSubscribe = async (e) => {
+  const switchSubMode = (mode) => {
+    setSubMode(mode);
+    setSubStatus({ type: '', message: '' });
+  };
+
+  const handleSubscriptionAction = async (e) => {
     e.preventDefault();
     if (!email || !email.includes('@')) {
       setSubStatus({ type: 'error', message: 'Please enter a valid email address.' });
       return;
     }
     
-    setSubStatus({ type: 'loading', message: 'Subscribing...' });
-    try {
-      const response = await fetch(`${API_BASE}/subscribe`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-      
-      if (response.status === 201 || response.status === 200) {
-        setSubStatus({ type: 'success', message: 'Awesome! You are subscribed to DailyDiff.' });
-        setEmail('');
-      } else {
-        const data = await response.json();
-        setSubStatus({ type: 'error', message: data.detail || 'Subscription failed.' });
-      }
-    } catch (err) {
-      // Offline fallback
+    const isUnsub = subMode === 'unsubscribe';
+    setSubStatus({ 
+      type: 'loading', 
+      message: isUnsub ? 'Unsubscribing...' : 'Subscribing...' 
+    });
+
+    // Notify user if Render backend is waking up from cold start (> 3.5s)
+    let coldStartTimer = setTimeout(() => {
       setSubStatus({ 
-        type: 'success', 
-        message: 'Mock subscription accepted! (FastAPI local server offline, but your address is validated).' 
+        type: 'loading', 
+        message: isUnsub 
+          ? 'Unsubscribing... (connecting to server, please wait a moment)' 
+          : 'Subscribing... (connecting to server, please wait a moment)' 
       });
-      setEmail('');
-    }
+    }, 3500);
+
+    const executeRequest = async (attempt = 1) => {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 70000); // 70s timeout for Render cold start
+
+      try {
+        const endpoint = isUnsub ? `${API_BASE}/unsubscribe` : `${API_BASE}/subscribe`;
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email.trim() }),
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+        clearTimeout(coldStartTimer);
+
+        if (response.status === 201 || response.status === 200) {
+          const successMsg = isUnsub
+            ? 'You have been successfully unsubscribed. A confirmation email has been dispatched.'
+            : 'Awesome! You are subscribed to DailyDiff.';
+          setSubStatus({ type: 'success', message: successMsg });
+          setEmail('');
+        } else if (response.status === 404 && isUnsub) {
+          setSubStatus({ 
+            type: 'error', 
+            message: 'This email address was not found in our active subscriber directory.' 
+          });
+        } else {
+          const data = await response.json().catch(() => ({}));
+          setSubStatus({ 
+            type: 'error', 
+            message: data.detail || (isUnsub ? 'Unsubscribe failed.' : 'Subscription failed.') 
+          });
+        }
+      } catch (err) {
+        clearTimeout(timeoutId);
+        // If initial attempt fails due to network wake-up timing, retry once automatically
+        if (attempt === 1 && !controller.signal.aborted) {
+          setTimeout(() => executeRequest(2), 2000);
+          return;
+        }
+        clearTimeout(coldStartTimer);
+        setSubStatus({ 
+          type: 'error', 
+          message: 'Could not reach server. The backend may still be waking up — please try again in a moment.' 
+        });
+      }
+    };
+
+    executeRequest();
   };
 
   // Filtering Logic (Show single selected edition, search within it)
@@ -306,11 +370,32 @@ export default function App() {
               </div>
               
               <div className="intro-subscribe">
-                <h3 className="subscribe-title" style={{ fontSize: '1.25rem', marginBottom: '0.25rem' }}>Join the Briefing</h3>
+                <div className="sub-mode-toggle">
+                  <button
+                    type="button"
+                    className={`sub-mode-btn ${subMode === 'subscribe' ? 'active' : ''}`}
+                    onClick={() => switchSubMode('subscribe')}
+                  >
+                    Subscribe
+                  </button>
+                  <button
+                    type="button"
+                    className={`sub-mode-btn ${subMode === 'unsubscribe' ? 'active unsubscribe-tab' : ''}`}
+                    onClick={() => switchSubMode('unsubscribe')}
+                  >
+                    Unsubscribe
+                  </button>
+                </div>
+
+                <h3 className="subscribe-title" style={{ fontSize: '1.25rem', marginBottom: '0.25rem' }}>
+                  {subMode === 'subscribe' ? 'Join the Briefing' : 'Manage Subscription'}
+                </h3>
                 <p className="subscribe-text" style={{ fontSize: '0.85rem', marginBottom: '1rem' }}>
-                  Get a concise 3-minute markdown digest sent directly to your inbox every Mon • Wed • Fri.
+                  {subMode === 'subscribe'
+                    ? 'Get a concise 3-minute markdown digest sent directly to your inbox every Mon • Wed • Fri.'
+                    : 'Enter your email below to instantly unsubscribe from the DailyDiff newsletter.'}
                 </p>
-                <form onSubmit={handleSubscribe} className="subscribe-form-hero">
+                <form onSubmit={handleSubscriptionAction} className="subscribe-form-hero">
                   <input 
                     type="email" 
                     placeholder="your.email@example.com" 
@@ -321,14 +406,16 @@ export default function App() {
                   />
                   <button 
                     type="submit" 
-                    className="subscribe-button-hero"
+                    className={subMode === 'unsubscribe' ? 'unsubscribe-button-hero' : 'subscribe-button-hero'}
                     disabled={subStatus.type === 'loading'}
                   >
-                    {subStatus.type === 'loading' ? 'Subscribing...' : 'Subscribe'}
+                    {subStatus.type === 'loading' 
+                      ? (subMode === 'unsubscribe' ? 'Unsubscribing...' : 'Subscribing...') 
+                      : (subMode === 'unsubscribe' ? 'Unsubscribe' : 'Subscribe')}
                   </button>
                 </form>
                 {subStatus.message && (
-                  <p className={`subscribe-message ${subStatus.type === 'success' ? 'message-success' : 'message-error'}`} style={{ marginTop: '0.75rem' }}>
+                  <p className={`subscribe-message ${subStatus.type === 'success' ? 'message-success' : subStatus.type === 'loading' ? 'message-loading' : 'message-error'}`} style={{ marginTop: '0.75rem' }}>
                     {subStatus.message}
                   </p>
                 )}

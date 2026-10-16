@@ -47,7 +47,7 @@ def subscribe(request: SubscribeRequest):
     return {"message": "Successfully subscribed to DailyDiff briefs"}
 
 @app.post("/api/unsubscribe")
-def unsubscribe(request: UnsubscribeRequest):
+def unsubscribe(request: UnsubscribeRequest, background_tasks: BackgroundTasks):
     """Unsubscribe an email address."""
     success = remove_subscriber(request.email)
     if not success:
@@ -57,16 +57,13 @@ def unsubscribe(request: UnsubscribeRequest):
         )
     logger.info(f"Subscriber removed: {request.email}")
     
-    # Send polite unsubscribe confirmation email
-    try:
-        dispatch_unsubscribe_confirmation(request.email)
-    except Exception as e:
-        logger.error(f"Error triggering unsubscribe confirmation email: {e}")
+    # Send polite unsubscribe confirmation email asynchronously in background
+    background_tasks.add_task(dispatch_unsubscribe_confirmation, request.email)
         
     return {"message": "Successfully unsubscribed from DailyDiff briefs"}
 
 @app.get("/api/unsubscribe", response_class=HTMLResponse)
-def unsubscribe_via_link(email: str):
+def unsubscribe_via_link(email: str, background_tasks: BackgroundTasks):
     """Handle unsubscribe requests from email links (GET)."""
     success = remove_subscriber(email)
     if not success:
@@ -97,11 +94,8 @@ def unsubscribe_via_link(email: str):
         
     logger.info(f"Subscriber removed via email link: {email}")
     
-    # Send polite unsubscribe confirmation email
-    try:
-        dispatch_unsubscribe_confirmation(email)
-    except Exception as e:
-        logger.error(f"Error triggering unsubscribe confirmation email: {e}")
+    # Send polite unsubscribe confirmation email asynchronously in background
+    background_tasks.add_task(dispatch_unsubscribe_confirmation, email)
         
     return """
     <!DOCTYPE html>
@@ -175,11 +169,11 @@ def notify_subscribers(brief_group: DailyBriefGroup, background_tasks: Backgroun
     """Notify all active email subscribers about the new brief group."""
     secret_token = os.getenv("NOTIFY_SECRET_TOKEN")
     
-    # Simple token validation to prevent public abuse of the email dispatcher
-    if secret_token and token != secret_token:
+    # Simple token validation to prevent public abuse of the email dispatcher (fails closed)
+    if not secret_token or token != secret_token:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid notification authorization token"
+            detail="Invalid or unconfigured notification authorization token"
         )
         
     try:

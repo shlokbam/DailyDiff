@@ -76,9 +76,9 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" style="padding-top: 30px; border-top: 1px solid #1f2937; font-size: 12px; color: #6b7280;">
-                                <p style="margin: 0 0 5px 0;">You received this because you subscribed to DailyDiff Tech Intelligence.</p>
-                                <p style="margin: 0;"><a href="https://dailydiff.in" style="color: #60a5fa; text-decoration: none;">View Dashboard</a> | <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a></p>
+                            <td align="center" style="padding-top: 30px; border-top: 1px solid #1f2937; font-size: 12px; color: #6b7280; line-height: 1.6;">
+                                <p style="margin: 0 0 6px 0;">You received this because you subscribed to DailyDiff Tech Intelligence.</p>
+                                <p style="margin: 0;">If you want to unsubscribe, visit our website at <a href="https://dailydiff.in?mode=unsubscribe" style="color: #60a5fa; text-decoration: underline;">dailydiff.in</a> and click on the <strong>Unsubscribe</strong> button.</p>
                             </td>
                         </tr>
                     </table>
@@ -99,8 +99,7 @@ def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
     html_content = build_email_html(brief_group)
     
     # 1. Try Brevo HTTP API sending if configured (Best for Render Free Tier)
-    from app.config import BREVO_API_KEY, SMTP_EMAIL, SMTP_PASSWORD, BACKEND_API_URL
-    base_url = BACKEND_API_URL if BACKEND_API_URL else "https://dailydiff.onrender.com"
+    from app.config import BREVO_API_KEY, SMTP_EMAIL, SMTP_PASSWORD
     
     if BREVO_API_KEY:
         try:
@@ -117,13 +116,11 @@ def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
             }
             
             for recipient in emails:
-                unsub_url = f"{base_url}/api/unsubscribe?email={recipient}"
-                personalized_html = html_content.replace("{{UNSUBSCRIBE_URL}}", unsub_url)
                 payload = {
                     "sender": sender,
                     "to": [{"email": recipient}],
                     "subject": f"[DailyDiff] Tech Intelligence Brief for {brief_group.date}",
-                    "htmlContent": personalized_html
+                    "htmlContent": html_content
                 }
                 response = httpx.post("https://api.brevo.com/v3/smtp/email", json=payload, headers=headers, timeout=15)
                 if response.status_code != 201 and response.status_code != 200:
@@ -147,15 +144,13 @@ def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
             server.login(SMTP_EMAIL, SMTP_PASSWORD)
             
             for recipient in emails:
-                unsub_url = f"{base_url}/api/unsubscribe?email={recipient}"
-                personalized_html = html_content.replace("{{UNSUBSCRIBE_URL}}", unsub_url)
                 msg = MIMEMultipart("alternative")
                 msg["Subject"] = f"[DailyDiff] Tech Intelligence Brief for {brief_group.date}"
                 msg["From"] = f"DailyDiff <{SMTP_EMAIL}>"
                 msg["To"] = recipient
                 
                 # Attach responsive HTML brief content
-                part = MIMEText(personalized_html, "html")
+                part = MIMEText(html_content, "html")
                 msg.attach(part)
                 
                 server.sendmail(SMTP_EMAIL, recipient, msg.as_string())
@@ -175,13 +170,11 @@ def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
             logger.info(f"Dispatching email briefs to {len(emails)} subscribers via Resend...")
             
             for recipient in emails:
-                unsub_url = f"{base_url}/api/unsubscribe?email={recipient}"
-                personalized_html = html_content.replace("{{UNSUBSCRIBE_URL}}", unsub_url)
                 resend.Emails.send({
                     "from": "DailyDiff <briefs@dailydiff.dev>" if "onboarding" not in resend_key else "DailyDiff <onboarding@resend.dev>",
                     "to": recipient,
                     "subject": f"[DailyDiff] Curated brief for {brief_group.date}",
-                    "html": personalized_html
+                    "html": html_content
                 })
             logger.info("Resend email dispatch completed.")
             return
@@ -193,10 +186,8 @@ def dispatch_emails(emails: List[str], brief_group: DailyBriefGroup):
     log_dir = Path(__file__).resolve().parent.parent.parent / "logs"
     log_dir.mkdir(exist_ok=True)
     log_path = log_dir / f"email_dispatch_{brief_group.date}.html"
-    unsub_url = f"{base_url}/api/unsubscribe?email=test_subscriber@example.com"
-    personalized_html = html_content.replace("{{UNSUBSCRIBE_URL}}", unsub_url)
     with open(log_path, "w") as f:
-        f.write(personalized_html)
+        f.write(html_content)
     logger.info(f"Saved simulated email HTML to {log_path} for manual verification.")
 
 def dispatch_unsubscribe_confirmation(email: str):
