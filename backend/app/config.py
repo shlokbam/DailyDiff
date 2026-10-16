@@ -8,9 +8,8 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # API Keys and SMTP configuration
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 SMTP_EMAIL = os.getenv("SMTP_EMAIL")
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
@@ -45,6 +44,5 @@ DB_PATH = BASE_DIR / "backend" / "subscribers.db"
 
 # Model Selection Defaults
 PRIMARY_MODEL_GROQ = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-FALLBACK_MODEL_GEMINI = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 FALLBACK_MODEL_MISTRAL = os.getenv("MISTRAL_MODEL", "open-mixtral-8x22b")
 

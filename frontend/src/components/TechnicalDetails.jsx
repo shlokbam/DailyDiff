@@ -159,7 +159,7 @@ export default function TechnicalDetails() {
       time: '14.2s',
       parameters: {
         'Executable': 'python backend/run_agent.py',
-        'AI Engines': 'Gemini 3.5 Flash, Mistral 8x22B',
+        'AI Engines': 'Groq (Llama 3.3 70B), Mistral 8x22B',
         'Agent Count': '6 Orchestrated Nodes',
         'Output State': 'final_briefs (JSON payload)'
       },

@@ -26,7 +26,7 @@ This document is a study guide for computer science students and engineers prepa
 | `backend/app/config.py` | Environment variable loader, API key bindings, and provider fallback defaults. |
 | `backend/app/main.py` | FastAPI server exposing subscription endpoints and serving the static React frontend. |
 | `backend/app/agents/graph.py` | LangGraph StateGraph compiling the multi-agent nodes into an executable workflow. |
-| `backend/app/agents/models.py` | Multi-provider LLM chain (Groq -> Gemini -> Mistral), 30s timeouts, single-retry JSON parser, and XML escaping. |
+| `backend/app/agents/models.py` | Multi-provider LLM chain (Groq -> Mistral), 30s timeouts, single-retry JSON parser, and XML escaping. |
 | `backend/app/agents/state.py` | TypedDict schema defining candidate flow through graph nodes. |
 | `backend/app/agents/scout.py` | Ecosystem scraper parsing Atom/RSS feeds, GitHub repos, and framework releases. |
 | `backend/app/agents/skeptic.py` | Deduplication engine and relevance filter for student/developer utility. |

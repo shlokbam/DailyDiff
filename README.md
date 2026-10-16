@@ -103,7 +103,7 @@ PYTHONPATH=backend pytest tests -m "not live" -q
 ```
 
 ### End-to-End Evaluation Suite
-Requires `GEMINI_API_KEY`, `MISTRAL_API_KEY`, or `GROQ_API_KEY` in `.env`:
+Requires `GROQ_API_KEY` or `MISTRAL_API_KEY` in `.env`:
 ```bash
 python tests/evals/run_evals.py
 ```

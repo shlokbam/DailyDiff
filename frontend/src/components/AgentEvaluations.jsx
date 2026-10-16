@@ -60,7 +60,7 @@ export default function AgentEvaluations() {
         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
           <span>Run Date: <strong style={{ color: '#f3f4f6' }}>{data.timestamp ? data.timestamp.replace('T', ' ').slice(0, 19) + ' UTC' : 'Recent'}</strong></span>
           <span>Errors: <strong style={{ color: data.total_errors > 0 ? '#ef4444' : '#34d399' }}>{data.total_errors ?? 0}</strong></span>
-          <span>Models: <strong style={{ color: '#60a5fa' }}>Groq / Gemini / Mistral</strong></span>
+          <span>Models: <strong style={{ color: '#60a5fa' }}>Groq / Mistral</strong></span>
         </div>
       </div>
 
