@@ -14,20 +14,34 @@ from langchain_mistralai import ChatMistralAI
 
 from app.config import (
     GROQ_API_KEY, MISTRAL_API_KEY,
-    PRIMARY_MODEL_GROQ, FALLBACK_MODEL_MISTRAL,
+    PRIMARY_MODEL_GROQ, GROQ_FALLBACK_MODELS, FALLBACK_MODEL_MISTRAL,
 )
 from app.run_health import health
 
 logger = logging.getLogger("DailyDiff.models")
 
 def get_llm(temperature: float = 0.2) -> BaseChatModel:
-    """Build provider fallback chain: Groq -> Mistral (30s timeouts)."""
+    """Build resilient provider fallback chain across active Groq models -> Mistral (30s timeouts)."""
     providers = []
     if GROQ_API_KEY:
-        try:
-            providers.append(ChatGroq(model=PRIMARY_MODEL_GROQ, groq_api_key=GROQ_API_KEY, temperature=temperature, request_timeout=30.0, max_retries=0))
-        except Exception as e:
-            logger.warning(f"Could not init Groq: {e}")
+        groq_models = [PRIMARY_MODEL_GROQ] + GROQ_FALLBACK_MODELS
+        seen = set()
+        for model_name in groq_models:
+            if model_name and model_name not in seen:
+                seen.add(model_name)
+                try:
+                    providers.append(
+                        ChatGroq(
+                            model=model_name,
+                            groq_api_key=GROQ_API_KEY,
+                            temperature=temperature,
+                            request_timeout=30.0,
+                            max_retries=0
+                        )
+                    )
+                except Exception as e:
+                    logger.warning(f"Could not init Groq model {model_name}: {e}")
+
     if MISTRAL_API_KEY:
         try:
             providers.append(ChatMistralAI(model=FALLBACK_MODEL_MISTRAL, mistral_api_key=MISTRAL_API_KEY, temperature=temperature, timeout=30.0, max_retries=0))

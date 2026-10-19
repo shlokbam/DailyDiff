@@ -42,7 +42,8 @@ ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 # Database Config
 DB_PATH = BASE_DIR / "backend" / "subscribers.db"
 
-# Model Selection Defaults
-PRIMARY_MODEL_GROQ = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-FALLBACK_MODEL_MISTRAL = os.getenv("MISTRAL_MODEL", "open-mixtral-8x22b")
+# Model Selection Defaults (Active Groq Models)
+PRIMARY_MODEL_GROQ = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+GROQ_FALLBACK_MODELS = ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"]
+FALLBACK_MODEL_MISTRAL = os.getenv("MISTRAL_MODEL", "mistral-small-latest")
 
