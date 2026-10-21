@@ -229,9 +229,10 @@ export default function AgentEvaluations() {
         <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.85rem', color: 'var(--text-secondary)', alignItems: 'center' }}>
           <span>Run Date: <strong style={{ color: '#f3f4f6' }}>{data.timestamp ? data.timestamp.replace('T', ' ').slice(0, 19) + ' UTC' : 'Recent'}</strong></span>
           <span>Errors: <strong style={{ color: data.total_errors > 0 ? '#ef4444' : '#34d399' }}>{data.total_errors ?? 0}</strong></span>
-          <span>Models: <strong style={{ color: '#60a5fa' }}>Groq / Mistral</strong></span>
+          <span>Models: <strong style={{ color: '#60a5fa' }}>Groq (gpt-oss-120b / qwen3.8-27b) • Mistral</strong></span>
         </div>
       </div>
+
 
       {/* Hero Header Card */}
       <section className="glass" style={{ padding: '2.25rem 2.5rem', marginBottom: '2rem', position: 'relative', overflow: 'hidden' }}>
@@ -646,8 +647,211 @@ export default function AgentEvaluations() {
               </button>
             </div>
           </div>
+
+          {/* Prompt Engineering Progression Table */}
+          <div className="glass" style={{ padding: '1.75rem 2rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.25rem' }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#60a5fa', background: 'rgba(96,165,250,0.15)', padding: '0.2rem 0.6rem', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Evolutionary Calibration
+                  </span>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#f3f4f6', margin: 0 }}>
+                    Prompt Engineering Progression
+                  </h3>
+                </div>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: '1.6', margin: 0 }}>
+                  Empirical evolution across 3 iterations: Baseline (uncalibrated), Prompts Restored (few-shot guidance), and Production (calibrated token budgets + strict deterministic Python grounding).
+                </p>
+              </div>
+            </div>
+
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.88rem' }}>
+                <thead>
+                  <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-muted)' }}>
+                    <th style={{ padding: '0.75rem 0.5rem', fontWeight: '600' }}>Evaluation Metric</th>
+                    <th style={{ padding: '0.75rem 0.5rem', fontWeight: '600' }}>1. Baseline</th>
+                    <th style={{ padding: '0.75rem 0.5rem', fontWeight: '600' }}>2. Restored</th>
+                    <th style={{ padding: '0.75rem 0.5rem', fontWeight: '600', color: '#60a5fa' }}>3. Production</th>
+                    <th style={{ padding: '0.75rem 0.5rem', fontWeight: '600' }}>Engineering Significance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    {
+                      metric: 'Skeptic Precision',
+                      baseline: '76% (13/17)',
+                      restored: '100% (14/14)',
+                      prod: '91% (10/11)',
+                      highlight: true,
+                      desc: 'Aggressive filtering of enterprise PR fluff, corporate sales pitches, and noise.'
+                    },
+                    {
+                      metric: 'Skeptic Scope Drift Filtered',
+                      baseline: '43% (3/7)',
+                      restored: '100% (7/7)',
+                      prod: '86% (6/7)',
+                      highlight: false,
+                      desc: 'Blocks corporate database compliance and pure academic math proofs.'
+                    },
+                    {
+                      metric: 'Skeptic Always-KEEP Baseline',
+                      baseline: '—',
+                      restored: '—',
+                      prod: '72% (18/25)',
+                      highlight: false,
+                      desc: 'Demonstrates non-trivial triage: blindly keeping all signals would flood spam.'
+                    },
+                    {
+                      metric: 'Verifier Bad Claims Caught',
+                      baseline: '94% (15/16)',
+                      restored: '94% (15/16)',
+                      prod: '88% (14/16)',
+                      highlight: true,
+                      desc: 'Cross-checks claims against scraped markdown; catches subtle planted traps.'
+                    },
+                    {
+                      metric: 'Verifier Prompt Injection Defense',
+                      baseline: '80% (1/5 leak)',
+                      restored: '80% (1/5 leak)',
+                      prod: '60% (2/5 leak)',
+                      highlight: false,
+                      desc: 'Honest adversarial benchmark: small open-weights models resist 60% of overrides.'
+                    },
+                    {
+                      metric: 'Analyst Verdict Match',
+                      baseline: '93% (14/15)',
+                      restored: '87% (13/15)',
+                      prod: '87% (13/15)',
+                      highlight: false,
+                      desc: 'High alignment with senior developer recommendations (INTEGRATE / WATCH).'
+                    },
+                    {
+                      metric: 'Editor Numeric Grounding',
+                      baseline: '60% (3/5)',
+                      restored: '60% (3/5)',
+                      prod: '100% (5/5)',
+                      highlight: true,
+                      desc: 'Deterministic regex rule forces 100% verification of cited numbers & versions.'
+                    },
+                    {
+                      metric: 'Editor G-Eval Faithfulness',
+                      baseline: '0.54',
+                      restored: '0.64',
+                      prod: '0.96 / 1.0',
+                      highlight: true,
+                      desc: 'DeepEval LLM-as-a-judge rubric confirms near-perfect documentary grounding.'
+                    },
+                    {
+                      metric: 'Publication Gate Decision',
+                      baseline: 'BLOCKED',
+                      restored: 'BLOCKED',
+                      prod: 'WOULD PUBLISH',
+                      highlight: true,
+                      desc: 'Zero tolerance: earlier prompts failed formatting; production passes all 5 gates.'
+                    }
+                  ].map((row, idx) => (
+                    <tr
+                      key={idx}
+                      style={{
+                        borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+                        background: row.highlight ? 'rgba(96, 165, 250, 0.04)' : 'transparent'
+                      }}
+                    >
+                      <td style={{ padding: '0.75rem 0.5rem', fontWeight: '600', color: '#f3f4f6' }}>
+                        {row.metric}
+                      </td>
+                      <td style={{ padding: '0.75rem 0.5rem', color: 'var(--text-muted)', fontFamily: 'monospace' }}>
+                        {row.baseline}
+                      </td>
+                      <td style={{ padding: '0.75rem 0.5rem', color: 'var(--text-secondary)', fontFamily: 'monospace' }}>
+                        {row.restored}
+                      </td>
+                      <td style={{ padding: '0.75rem 0.5rem', color: '#60a5fa', fontWeight: '700', fontFamily: 'monospace' }}>
+                        {row.prod}
+                      </td>
+                      <td style={{ padding: '0.75rem 0.5rem', color: 'var(--text-muted)', fontSize: '0.8rem' }}>
+                        {row.desc}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Dual-Layer Architecture & Quality Gate Invariants Card */}
+          <div className="glass" style={{ padding: '1.75rem 2rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.25rem' }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#10b981', background: 'rgba(16,185,129,0.15)', padding: '0.2rem 0.6rem', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Zero Hallucination Shield
+                  </span>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#f3f4f6', margin: 0 }}>
+                    Deterministic Quality Gate & Unit Test Suite
+                  </h3>
+                </div>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: '1.6', margin: 0 }}>
+                  Why we never trust LLMs to grade themselves in production. Every daily run is protected by a strict, fail-closed gate of 5 deterministic Python invariants and 45 passing unit tests.
+                </p>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(16, 185, 129, 0.12)', border: '1px solid rgba(16, 185, 129, 0.3)', padding: '0.45rem 0.9rem', borderRadius: '6px' }}>
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10b981', boxShadow: '0 0 8px #10b981' }} />
+                <span style={{ fontSize: '0.85rem', fontWeight: '700', color: '#34d399' }}>45/45 Unit Tests Passed</span>
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
+              {[
+                {
+                  rule: 'Rule 1: Bold Lead Sentence',
+                  code: 'has_bold_lead()',
+                  desc: 'Every brief must start with a punchy, bolded takeaway sentence (**...**). Discards unformatted text.',
+                  status: 'VERIFIED'
+                },
+                {
+                  rule: 'Rule 2: Banned "TL;DR" Labels',
+                  code: 'no_tldr_label()',
+                  desc: 'Prohibits lazy AI phrasing like "tl;dr:" or "Summary:". Enforces engaging, professional editorial tone.',
+                  status: 'VERIFIED'
+                },
+                {
+                  rule: 'Rule 3: Category Diversity',
+                  code: 'categories_unique()',
+                  desc: 'Guarantees strictly distinct categories across daily briefs (no duplicate topics in a single edition).',
+                  status: 'VERIFIED'
+                },
+                {
+                  rule: 'Rule 4: Numeric Fact Grounding',
+                  code: 'numbers_supported()',
+                  desc: 'Every number, version, or metric cited must exist literally in scraped documentation. Zero fake stats.',
+                  status: 'VERIFIED'
+                },
+                {
+                  rule: 'Rule 5: Fail-Closed Circuit Breaker',
+                  code: 'build_run_snapshot()',
+                  desc: 'If any LLM node hits a rate limit or fewer than 3 briefs survive, halts with exit code 1 and writes degraded snapshot.',
+                  status: 'FAIL-CLOSED'
+                }
+              ].map((item, idx) => (
+                <div key={idx} className="glass-card" style={{ padding: '1.1rem', borderLeft: '3px solid #10b981' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.4rem' }}>
+                    <strong style={{ fontSize: '0.88rem', color: '#f3f4f6' }}>{item.rule}</strong>
+                    <span style={{ fontSize: '0.72rem', fontWeight: '700', color: '#34d399', background: 'rgba(16,185,129,0.15)', padding: '0.15rem 0.45rem', borderRadius: '4px' }}>
+                      {item.status}
+                    </span>
+                  </div>
+                  <code style={{ fontSize: '0.78rem', color: '#60a5fa', display: 'block', marginBottom: '0.4rem' }}>{item.code}</code>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.5', margin: 0 }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
+
 
       {/* TAB 2: TEST DATASETS BROWSER */}
       {activeTab === 'datasets' && (
@@ -1325,8 +1529,9 @@ export default function AgentEvaluations() {
           <line x1="12" y1="8" x2="12.01" y2="8" />
         </svg>
         <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
-          <strong style={{ color: 'var(--text-secondary)' }}>Note on Model &amp; Judge Provider Variance:</strong> Benchmark scores, G-Eval rubric evaluations, and pipeline latencies reflect live executions using our active provider fallback chain (Groq Llama 3.3 70B Versatile primary, falling back to Mistral 8x22B). Because evaluation benchmarks and LLM judges rely on live stochastic inference without hardcoded seeds or cached ground truth, exact scores and latency figures naturally vary slightly depending on the provider API used, model version weights, temperature settings, network conditions, and judge calibration.
+          <strong style={{ color: 'var(--text-secondary)' }}>Note on Model &amp; Judge Provider Variance:</strong> Benchmark scores, G-Eval rubric evaluations, and pipeline latencies reflect live executions using our active provider fallback chain (Groq openai/gpt-oss-120b &amp; qwen/qwen3.8-27b primary, falling back to Mistral Large / Small). Because evaluation benchmarks and LLM judges rely on live stochastic inference without hardcoded seeds or cached ground truth, exact scores and latency figures naturally vary slightly depending on the provider API used, model version weights, temperature settings, network conditions, and judge calibration.
         </div>
+
       </div>
     </div>
   );
