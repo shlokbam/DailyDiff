@@ -2095,5 +2095,56 @@
         "source_url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/"
       }
     ]
+  },
+  {
+    "date": "2026-10-21",
+    "published_at": "2026-10-21T18:52:44.979873+00:00",
+    "briefs": [
+      {
+        "category": "Cool Tool",
+        "title": "Kodeida",
+        "description": "**Turn coding practice into a pixel\u2011art adventure.** Kodeida is a pre\u2011alpha offline game where you write Python, JavaScript or TypeScript to move the hero through worlds inspired by Ukrainian literature. It blends LeetCode\u2011style challenges with a story\u2011driven UI, letting beginners experiment with real code while exploring fairy\u2011tale settings. The project ships with a downloadable release, a trailer, and a website for easy access.",
+        "why_it_matters": "Turns learning LeetCode patterns into a playable adventure, letting beginners practice Python, JavaScript or TypeScript without leaving the game.",
+        "who_cares": "Novice programmers and educators looking for an engaging, offline way to teach coding fundamentals.",
+        "verdict": "READ",
+        "source_url": "https://github.com/f3an/kodeida"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Open\u2011Source Radar",
+        "description": "**Find a fresh, beginner\u2011friendly issue and turn it into a merged pull request.** This open\u2011source project curates unclaimed issues from active repositories, refreshed every 12\u202fhours, and groups them by language and topic. It also bundles a step\u2011by\u2011step contribution guide and even publishes the dataset on Hugging Face. As of the latest update there are 3,369 open issues, 1,273 labeled for beginners, and 1,149 active projects.",
+        "why_it_matters": "Aggregates fresh, beginner\u2011friendly issues from active projects and bundles a step\u2011by\u2011step contribution guide, cutting the guesswork out of open\u2011source onboarding.",
+        "who_cares": "First\u2011time contributors, mentors, and maintainers who want to surface easy wins for the community.",
+        "verdict": "READ",
+        "source_url": "https://github.com/TanbirRamim/open-source-radar"
+      },
+      {
+        "category": "Tech Shift",
+        "title": "Atticus (macOS)",
+        "description": "**A Claude\u2011powered voice assistant that runs locally on your Mac without any API keys.** Hold \u2303\u2325Space, speak a command, and Atticus can move windows, open apps, search the web, draw diagrams, and even dictate text. It learns shortcuts as you use it, runs background agents for heavy tasks, and keeps all voice data on\u2011device for privacy. Installation is a one\u2011liner script, and it works with Claude Pro, Claude Max, or other local models.",
+        "why_it_matters": "A Claude\u2011powered voice assistant that runs locally on macOS, learns your shortcuts, and can control windows, files, and the web without any API keys.",
+        "who_cares": "Mac power users and developers who want AI\u2011driven automation while keeping everything on their machine.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://github.com/SaarthurR/atticus-mac"
+      },
+      {
+        "category": "Ecosystem Update",
+        "title": "REA (Reverse Engineer Anything)",
+        "description": "**A modular MCP\u2011based framework for reverse\u2011engineering binaries, applications, and runtime behavior.** REA ships as an npm package (`rea\u2011agents`) and provides a catalog of pluggable agents that can dissect code down to the binary level. It supports dozens of languages for its documentation and is licensed under MIT. The project also offers a Discord community for collaboration.",
+        "why_it_matters": "Offers a modular MCP\u2011based framework for reverse\u2011engineering binaries, apps, and runtime behavior, automating tedious analysis with pluggable agents.",
+        "who_cares": "Security researchers, reverse\u2011engineers, and devs building tooling around binary analysis.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://github.com/morluto/rea"
+      },
+      {
+        "category": "Watchlist",
+        "title": "WinShun",
+        "description": "**Press Ctrl twice and search your entire Windows PC\u2014everything from files to clipboard history.** WinShun is a free, open\u2011source launcher that combines pinyin file search, full\u2011text indexing of Word/Excel/PDF, clipboard history with OCR, task\u2011bar search, and an AI assistant MCP. It bundles eleven tools in one package and runs on Windows\u202f10\u202f|\u202f11 (x64).",
+        "why_it_matters": "A single\u2011press Windows launcher that combines pinyin file search, full\u2011text document indexing, clipboard history with OCR, and an AI assistant\u2014all free and open source.",
+        "who_cares": "Windows power users and developers who need a fast, extensible replacement for Spotlight/Listary.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://github.com/LingCore/WinShun"
+      }
+    ]
   }
 ]
