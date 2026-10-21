@@ -6,7 +6,7 @@ Assigns unique designated categories and formats bold lead sentence. Fails close
 import logging
 from typing import Dict, Any, List
 from app.agents.state import AgentState
-from app.agents.models import get_llm, invoke_json, escape_untrusted
+from app.agents.models import get_llm, invoke_json, escape_untrusted, rate_limit_pause
 from app.agents.researcher import MAX_EVIDENCE_CHARS
 from app.run_health import health
 
@@ -29,9 +29,12 @@ def editor_node(state: AgentState) -> Dict[str, Any]:
         health.set_count("final", 0)
         return {"final_briefs": []}
 
+    rate_limit_pause("editor", seconds=35)
+
     docs = []
-    for idx, c in enumerate(vetted):
-        ev = (c.get("detailed_content") or "")[:MAX_EVIDENCE_CHARS]
+    # Budget candidates to top 6 and cap evidence to 1,000 chars for free-tier TPM headroom
+    for idx, c in enumerate(vetted[:6]):
+        ev = (c.get("detailed_content") or "")[:1000]
         docs.append(
             f'<candidate id="{idx}">\n'
             f'<title>{escape_untrusted(c.get("title"))}</title>\n'

@@ -6,7 +6,7 @@ Drops unverifiable items lacking evidence. Fails closed on model error.
 import logging
 from typing import Dict, Any
 from app.agents.state import AgentState
-from app.agents.models import get_llm, invoke_json, escape_untrusted
+from app.agents.models import get_llm, invoke_json, escape_untrusted, rate_limit_pause
 from app.agents.researcher import MAX_EVIDENCE_CHARS
 from app.run_health import health
 
@@ -28,6 +28,8 @@ def verifier_node(state: AgentState) -> Dict[str, Any]:
     if not verifiable:
         health.set_count("verified", 0)
         return {"vetted_candidates": []}
+
+    rate_limit_pause("verifier", seconds=20)
 
     docs = []
     for idx, c in enumerate(verifiable):

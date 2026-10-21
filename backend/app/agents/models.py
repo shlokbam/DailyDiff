@@ -4,6 +4,9 @@ Priority: Groq -> Mistral (30s timeouts).
 Never retries API errors. Retries once for malformed JSON only.
 """
 
+import os
+import sys
+import time
 import json
 import re
 import logging
@@ -19,6 +22,14 @@ from app.config import (
 from app.run_health import health
 
 logger = logging.getLogger("DailyDiff.models")
+
+def rate_limit_pause(node: str, seconds: int = 30):
+    """Paces execution between LLM nodes to stay strictly beneath free-tier 8,000 TPM quotas.
+    Automatically skipped during unit tests (pytest) or if SKIP_PIPELINE_PAUSE=1."""
+    if os.getenv("SKIP_PIPELINE_PAUSE") == "1" or "pytest" in sys.modules:
+        return
+    logger.info(f"Rate-limit pacing: sleeping {seconds}s before '{node}' node to reset 60s rolling TPM window...")
+    time.sleep(seconds)
 
 def get_llm(temperature: float = 0.2) -> BaseChatModel:
     """Build resilient provider fallback chain across active Groq models -> Mistral (30s timeouts)."""

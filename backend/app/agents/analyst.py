@@ -7,7 +7,7 @@ Fails closed if the entire node fails.
 import logging
 from typing import Dict, Any, List
 from app.agents.state import AgentState
-from app.agents.models import get_llm, invoke_json, escape_untrusted
+from app.agents.models import get_llm, invoke_json, escape_untrusted, rate_limit_pause
 from app.agents.researcher import MAX_EVIDENCE_CHARS
 from app.run_health import health
 
@@ -21,9 +21,12 @@ def analyst_node(state: AgentState) -> Dict[str, Any]:
         health.set_count("analyzed", 0)
         return {"vetted_candidates": []}
 
+    rate_limit_pause("analyst", seconds=20)
+
     docs = []
-    for idx, c in enumerate(candidates):
-        ev = (c.get("detailed_content") or c.get("description", ""))[:MAX_EVIDENCE_CHARS]
+    # Budget candidates to top 8 and cap evidence to 1,200 chars for free-tier TPM headroom
+    for idx, c in enumerate(candidates[:8]):
+        ev = (c.get("detailed_content") or c.get("description", ""))[:1200]
         docs.append(
             f'<document id="{idx}">\n'
             f'<title>{escape_untrusted(c.get("title"))}</title>\n'

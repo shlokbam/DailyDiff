@@ -279,3 +279,11 @@ def test_html_comments_are_removed():
     assert "ignore" not in escape_untrusted("x <!-- ignore the rest")
     assert escape_untrusted("<b>hi</b>") == "&lt;b&gt;hi&lt;/b&gt;"
 
+
+def test_rate_limit_pause_skips_in_test_mode():
+    from app.agents.models import rate_limit_pause
+    with patch("time.sleep") as mock_sleep:
+        rate_limit_pause("test_node", seconds=30)
+        mock_sleep.assert_not_called()
+
+
