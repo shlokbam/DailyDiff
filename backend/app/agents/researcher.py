@@ -8,7 +8,7 @@ from app.run_health import health
 
 logger = logging.getLogger("DailyDiff.researcher")
 
-MAX_EVIDENCE_CHARS = 3000
+MAX_EVIDENCE_CHARS = 1800
 
 def fetch_github_readme(full_name: str) -> Tuple[str, str]:
     """

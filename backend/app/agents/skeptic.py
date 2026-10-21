@@ -23,14 +23,14 @@ def get_published_urls() -> set:
     return published
 
 def extract_history_summary() -> str:
-    """Short list of recently published topics, so the model can skip repeats (last 20 days)."""
+    """Short list of recently published topics, so the model can skip repeats (last 7 days)."""
     history = read_history()
     if not history:
         return "No past briefs have been published yet."
     lines = []
-    for day in history[-20:]:
+    for day in history[-7:]:
         for b in day.get("briefs", []):
-            lines.append(f"- [{day.get('date', '?')}] {b.get('category', 'UPDATE')}: {b.get('title')} - {(b.get('description') or '')[:120]}...")
+            lines.append(f"- [{day.get('date', '?')}] {b.get('category', 'UPDATE')}: {b.get('title')}")
     return "\n".join(lines)
 
 def deduplicate_and_filter_node(state: AgentState) -> Dict[str, Any]:
@@ -48,15 +48,20 @@ def deduplicate_and_filter_node(state: AgentState) -> Dict[str, Any]:
         health.set_count("skeptic_passed", 0)
         return {"candidates": []}
 
+    # Cap signals to 45 items max to strictly keep prompt size under Groq's 8,000 TPM limit
+    if len(fresh) > 45:
+        fresh = fresh[:45]
+
     history_summary = extract_history_summary()
 
     docs = []
     for idx, s in enumerate(fresh):
+        desc = (s.get("description") or "").strip()[:200]
         docs.append(
             f'<signal id="{idx}">\n'
             f'<source>{escape_untrusted(s.get("source"))}</source>\n'
             f'<title>{escape_untrusted(s.get("title"))}</title>\n'
-            f'<description>{escape_untrusted(s.get("description"))}</description>\n'
+            f'<description>{escape_untrusted(desc)}</description>\n'
             f'<url>{escape_untrusted(s.get("url"))}</url>\n'
             f'</signal>'
         )

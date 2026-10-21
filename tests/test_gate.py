@@ -20,6 +20,13 @@ def reset_health():
     health.reset()
 
 
+@pytest.fixture(autouse=True)
+def mock_db():
+    with patch("run_agent.init_db"):
+        yield
+
+
+
 def _make_brief(i: int, cat: str = "Tech Shift") -> dict:
     return {
         "category": cat,
