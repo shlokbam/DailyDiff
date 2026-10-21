@@ -29,12 +29,11 @@ def editor_node(state: AgentState) -> Dict[str, Any]:
         health.set_count("final", 0)
         return {"final_briefs": []}
 
-    rate_limit_pause("editor", seconds=35)
+    rate_limit_pause("editor", seconds=45)
 
     docs = []
-    # Budget candidates to top 6 and cap evidence to 1,000 chars for free-tier TPM headroom
-    for idx, c in enumerate(vetted[:6]):
-        ev = (c.get("detailed_content") or "")[:1000]
+    for idx, c in enumerate(vetted):
+        ev = (c.get("detailed_content") or "")[:MAX_EVIDENCE_CHARS]
         docs.append(
             f'<candidate id="{idx}">\n'
             f'<title>{escape_untrusted(c.get("title"))}</title>\n'

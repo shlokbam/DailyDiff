@@ -21,12 +21,11 @@ def analyst_node(state: AgentState) -> Dict[str, Any]:
         health.set_count("analyzed", 0)
         return {"vetted_candidates": []}
 
-    rate_limit_pause("analyst", seconds=20)
+    rate_limit_pause("analyst", seconds=25)
 
     docs = []
-    # Budget candidates to top 8 and cap evidence to 1,200 chars for free-tier TPM headroom
-    for idx, c in enumerate(candidates[:8]):
-        ev = (c.get("detailed_content") or c.get("description", ""))[:1200]
+    for idx, c in enumerate(candidates):
+        ev = (c.get("detailed_content") or c.get("description", ""))[:MAX_EVIDENCE_CHARS]
         docs.append(
             f'<document id="{idx}">\n'
             f'<title>{escape_untrusted(c.get("title"))}</title>\n'
