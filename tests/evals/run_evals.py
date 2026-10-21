@@ -84,6 +84,15 @@ def run_all():
     with open(frontend_public, "w", encoding="utf-8") as f:
         json.dump(summary_data, f, indent=2)
 
+    # Sync benchmark datasets to frontend/public
+    for ds_name in ["golden_dataset.json", "planted_errors.json"]:
+        src = BASE_DIR / "tests" / "evals" / ds_name
+        dst = BASE_DIR / "frontend" / "public" / ds_name
+        if src.exists():
+            with open(src, "r", encoding="utf-8") as sf, open(dst, "w", encoding="utf-8") as df:
+                df.write(sf.read())
+
+
     # Check for regressions
     comparison = compare_results(summary_data, prev_run)
 

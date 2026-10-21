@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-15T14:39:34Z",
+  "timestamp": "2026-10-21T08:49:43Z",
   "total_errors": 0,
   "skeptic": {
     "node": "skeptic",
@@ -689,12 +689,12 @@
       "total": 23
     },
     "after": {
-      "bold_lead": 7,
-      "no_tldr": 18,
-      "unique_categories": 7,
-      "at_most_5": 18,
-      "no_generic_fallback": 11,
-      "total": 18
+      "bold_lead": 8,
+      "no_tldr": 19,
+      "unique_categories": 8,
+      "at_most_5": 19,
+      "no_generic_fallback": 12,
+      "total": 19
     }
   },
   "cases": {

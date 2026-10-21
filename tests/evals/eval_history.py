@@ -1,7 +1,16 @@
 """Online/offline history eval: runs rule checks across published history before and after 2026-09-04."""
+import sys
 import json
 from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+if str(BASE_DIR / "backend") not in sys.path:
+    sys.path.insert(0, str(BASE_DIR / "backend"))
+
 from app.checks import has_bold_lead, no_tldr_label, categories_unique, count_at_most_5, is_generic_fallback_text
+
 
 def run_history_eval(history_path: str = "data/history.json"):
     days = json.load(open(history_path, "r", encoding="utf-8"))

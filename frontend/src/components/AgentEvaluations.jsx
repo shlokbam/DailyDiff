@@ -259,7 +259,7 @@ export default function AgentEvaluations() {
             fontWeight: '600',
             color: '#10b981'
           }}>
-            Dataset: 25 Golden + 16 Planted Traps
+            Dataset: 25 Golden + 13 Planted Traps (38 Scenarios)
           </span>
           <span style={{
             background: 'rgba(59, 130, 246, 0.15)',
@@ -370,7 +370,7 @@ export default function AgentEvaluations() {
           { id: 'skeptic', label: `1. Skeptic (${skepticCases.length})` },
           { id: 'verifier', label: `2. Verifier (${verifierCases.length})` },
           { id: 'analyst', label: `3. Analyst (${analystCases.length})` },
-          { id: 'editor', label: '4. Editor & Gate' },
+          { id: 'editor', label: `4. Editor & Gate (${data.editor?.total_briefs ?? 5})` },
           { id: 'table', label: 'Full Metrics Table' }
         ].map((tab) => (
           <button
@@ -404,7 +404,7 @@ export default function AgentEvaluations() {
                   Golden Benchmark Dataset Breakdown
                 </h3>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.6', marginTop: '0.25rem' }}>
-                  Our test suite consists of 25 curated reference scenarios + 16 hand-written planted error cases, testing genuine developer utility vs. enterprise noise and hallucinated metrics.
+                  Our test suite consists of 25 curated reference scenarios + 13 hand-written planted error cases (38 total), testing genuine developer utility vs. enterprise noise and hallucinated metrics.
                 </p>
               </div>
               <button
@@ -420,7 +420,7 @@ export default function AgentEvaluations() {
                   cursor: 'pointer'
                 }}
               >
-                Browse All 41 Datasets →
+                Browse All 38 Datasets →
               </button>
             </div>
 
@@ -441,7 +441,7 @@ export default function AgentEvaluations() {
                 <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Dense math proofs & theoretical papers</span>
               </div>
               <div className="glass-card" style={{ padding: '1.25rem', textAlign: 'center' }}>
-                <span style={{ fontSize: '1.75rem', fontWeight: '800', color: '#ef4444' }}>16</span>
+                <span style={{ fontSize: '1.75rem', fontWeight: '800', color: '#ef4444' }}>13</span>
                 <p style={{ fontSize: '0.85rem', fontWeight: '600', color: '#f3f4f6', marginTop: '0.25rem' }}>Planted Errors</p>
                 <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Hallucinated numbers, wrong claims & fake metrics</span>
               </div>
