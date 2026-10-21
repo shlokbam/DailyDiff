@@ -9,9 +9,12 @@ logger = logging.getLogger("DailyDiff.email")
 
 def build_email_html(brief_group: DailyBriefGroup) -> str:
     """Compile the daily briefs into a beautiful, clean, responsive HTML email layout."""
+    import html as _html
+    import re as _re
+
     date = brief_group.date
     briefs = brief_group.briefs
-    
+
     category_colors = {
         "Tech Shift": "#f97316",
         "Cool Tool": "#a855f7",
@@ -19,66 +22,123 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
         "Ecosystem Update": "#eab308",
         "Watchlist": "#ec4899",
     }
-    
+
+    def _fmt(value) -> str:
+        """Escape text, turn **bold** / `code` markdown into real HTML, keep line breaks."""
+        text = _html.escape(str(value if value is not None else "").strip())
+        text = _re.sub(r"\*\*(.+?)\*\*", r"<strong style=\"color:#ffffff;\">\1</strong>", text, flags=_re.DOTALL)
+        text = _re.sub(
+            r"`([^`]+)`",
+            r"<code style=\"background-color:#0c0d12; color:#e5e7eb; padding:1px 5px; border-radius:3px; font-family:Consolas,'Courier New',monospace; font-size:13px;\">\1</code>",
+            text,
+        )
+        return text.replace("\n", "<br>")
+
+    show_conf = os.getenv("SHOW_CONFIDENCE", "false").lower() == "true"
+
     items_html = ""
     for item in briefs:
         color = category_colors.get(item.category, "#3b82f6")
-        source_link = f'<p style="margin-top: 10px;"><a href="{item.source_url}" style="color: #60a5fa; text-decoration: none; font-weight: 500;">View Source Reference &rarr;</a></p>' if item.source_url else ""
-        
-        show_conf = os.getenv("SHOW_CONFIDENCE", "false").lower() == "true"
+        source_link = (
+            f'<tr><td class="card-pad" style="padding: 4px 20px 18px 20px;">'
+            f'<a href="{_html.escape(str(item.source_url), quote=True)}" '
+            f'style="color: #60a5fa; text-decoration: none; font-weight: 500; font-size: 14px;">'
+            f'View Source Reference &rarr;</a></td></tr>'
+            if item.source_url else ""
+        )
+
         conf_str = f" | Confidence: {item.confidence}%" if (show_conf and item.confidence is not None) else ""
+
         items_html += f"""
-        <div style="margin-bottom: 30px; padding: 20px; border-left: 4px solid {color}; background-color: #1e2130; border-radius: 4px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: {color}; background-color: rgba(255,255,255,0.04); padding: 3px 8px; border-radius: 3px;">
-                    {item.category}
-                </span>
-                <span style="font-size: 12px; color: #9ca3af;">
-                    Verdict: <strong>{item.verdict}</strong>{conf_str}
-                </span>
-            </div>
-            <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #ffffff;">{item.title}</h3>
-            <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.6; color: #d1d5db;">
-                <strong>What Happened:</strong> {item.description}
-            </p>
-            <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.6; color: #d1d5db;">
-                <strong>Why It Matters:</strong> {item.why_it_matters}
-            </p>
-            <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.6; color: #d1d5db;">
-                <strong>Who Cares:</strong> {item.who_cares}
-            </p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="margin-bottom: 24px; background-color: #1e2130; border-left: 4px solid {color}; border-radius: 4px;">
+            <tr>
+                <td class="card-pad" style="padding: 18px 20px 6px 20px;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                        <tr>
+                            <td align="left" valign="middle" style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: {color};">
+                                <span style="background-color: rgba(255,255,255,0.04); padding: 3px 8px; border-radius: 3px; white-space: nowrap;">{_html.escape(str(item.category))}</span>
+                            </td>
+                            <td align="right" valign="middle" style="font-size: 12px; color: #9ca3af; line-height: 1.4;">
+                                Verdict: <strong style="color: #e5e7eb;">{_html.escape(str(item.verdict))}</strong>{_html.escape(conf_str)}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="card-pad" style="padding: 8px 20px 4px 20px;">
+                    <h3 style="margin: 0; font-size: 19px; line-height: 1.35; color: #ffffff; font-weight: 700;">{_fmt(item.title)}</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="card-pad" style="padding: 10px 20px 0 20px; font-size: 14px; line-height: 1.65; color: #d1d5db;">
+                    <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #9ca3af; margin-bottom: 3px;">What Happened</div>
+                    {_fmt(item.description)}
+                </td>
+            </tr>
+            <tr>
+                <td class="card-pad" style="padding: 14px 20px 0 20px; font-size: 14px; line-height: 1.65; color: #d1d5db;">
+                    <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #9ca3af; margin-bottom: 3px;">Why It Matters</div>
+                    {_fmt(item.why_it_matters)}
+                </td>
+            </tr>
+            <tr>
+                <td class="card-pad" style="padding: 14px 20px 14px 20px; font-size: 14px; line-height: 1.65; color: #d1d5db;">
+                    <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #9ca3af; margin-bottom: 3px;">Who Cares</div>
+                    {_fmt(item.who_cares)}
+                </td>
+            </tr>
             {source_link}
-        </div>
+        </table>
         """
-        
+
     html = f"""
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark">
+        <meta name="supported-color-schemes" content="dark">
         <title>DailyDiff Tech Intelligence</title>
+        <style>
+            body {{ margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }}
+            table {{ border-collapse: collapse; }}
+            @media only screen and (max-width: 620px) {{
+                .outer-pad {{ padding: 12px 8px !important; }}
+                .container {{ width: 100% !important; }}
+                .container-pad {{ padding: 20px 14px !important; }}
+                .card-pad {{ padding-left: 14px !important; padding-right: 14px !important; }}
+            }}
+        </style>
     </head>
     <body style="background-color: #0c0d12; color: #f3f4f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0;">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #0c0d12; padding: 20px 0;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="background-color: #0c0d12;">
             <tr>
-                <td align="center">
-                    <table width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: #141620; border: 1px solid #1f2937; border-radius: 8px; padding: 40px; text-align: left;">
+                <td align="center" class="outer-pad" style="padding: 20px 10px;">
+                    <table class="container" width="600" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%; max-width: 600px; background-color: #141620; border: 1px solid #1f2937; border-radius: 8px; text-align: left;">
                         <tr>
-                            <td align="center" style="padding-bottom: 30px; border-bottom: 1px solid #1f2937;">
-                                <h1 style="margin: 0 0 5px 0; font-size: 28px; font-weight: 700; color: #60a5fa; letter-spacing: -0.02em;">DailyDiff</h1>
-                                <p style="margin: 0; font-size: 12px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.1em;">We scan the noise. Five things survive.</p>
-                                <p style="margin: 5px 0 0 0; font-size: 11px; color: #6b7280;">Published on {date}</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding-top: 30px;">
-                                {items_html}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" style="padding-top: 30px; border-top: 1px solid #1f2937; font-size: 12px; color: #6b7280; line-height: 1.6;">
-                                <p style="margin: 0 0 6px 0;">You received this because you subscribed to DailyDiff Tech Intelligence.</p>
-                                <p style="margin: 0;">If you want to unsubscribe, visit our website at <a href="https://dailydiff.in?mode=unsubscribe" style="color: #60a5fa; text-decoration: underline;">dailydiff.in</a> and click on the <strong>Unsubscribe</strong> button.</p>
+                            <td class="container-pad" style="padding: 32px 28px;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                                    <tr>
+                                        <td align="center" style="padding-bottom: 26px; border-bottom: 1px solid #1f2937;">
+                                            <h1 style="margin: 0 0 5px 0; font-size: 28px; font-weight: 700; color: #60a5fa; letter-spacing: -0.02em;">DailyDiff</h1>
+                                            <p style="margin: 0; font-size: 12px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.5;">We scan the noise. Five things survive.</p>
+                                            <p style="margin: 5px 0 0 0; font-size: 11px; color: #6b7280;">Published on {date}</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-top: 26px;">
+                                            {items_html}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="padding-top: 24px; border-top: 1px solid #1f2937; font-size: 12px; color: #6b7280; line-height: 1.6;">
+                                            <p style="margin: 0 0 6px 0;">You received this because you subscribed to DailyDiff Tech Intelligence.</p>
+                                            <p style="margin: 0;">If you want to unsubscribe, visit our website at <a href="https://dailydiff.in?mode=unsubscribe" style="color: #60a5fa; text-decoration: underline;">dailydiff.in</a> and click on the <strong>Unsubscribe</strong> button.</p>
+                                        </td>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
                     </table>
