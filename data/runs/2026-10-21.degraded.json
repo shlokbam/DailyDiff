@@ -1,32 +1,29 @@
 {
   "date": "2026-10-21",
-  "timestamp": "2026-10-21T08:49:43.042203+00:00",
-  "git_sha": "74f2839cb2d1748f42c6c2b1eb8a74e23058de85",
+  "timestamp": "2026-10-21T18:25:36.785381+00:00",
+  "git_sha": "93418caa4d3e456bfc5c3eb6af1ae40098f77788",
   "counts": {
-    "raw_signals": 64,
-    "after_dedup": 59,
-    "skeptic_passed": 0,
-    "researched": 0,
-    "verified": 0,
-    "analyzed": 0,
-    "final": 0
+    "raw_signals": 63,
+    "after_dedup": 58,
+    "skeptic_passed": 10
   },
-  "models_used": {},
+  "models_used": {
+    "openai/gpt-oss-120b": 1
+  },
   "llm_calls": 1,
   "durations_seconds": {
-    "skeptic": 0.6
+    "skeptic": 4.58
   },
   "hard_failures": [
     {
-      "node": "skeptic",
-      "reason": "Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01kmhf8sn6ezwsfhs4nyembjc3` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 10411, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+      "node": "graph",
+      "reason": "'RunHealth' object has no attribute 'set_content_source'"
     }
   ],
   "warnings": [],
   "final_briefs": [],
   "failure_reasons": [
-    "Hard node fallbacks: [{'node': 'skeptic', 'reason': \"Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01kmhf8sn6ezwsfhs4nyembjc3` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 10411, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\"}]",
-    "Produced 0 briefs (minimum required: 3)."
+    "Graph exception: 'RunHealth' object has no attribute 'set_content_source'"
   ],
   "status": "degraded"
 }
