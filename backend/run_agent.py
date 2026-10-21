@@ -45,6 +45,7 @@ def build_run_snapshot(date_str: str, briefs: list, failure_reasons: list = None
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "git_sha": get_git_sha(),
         "counts": health.counts,
+        "content_sources": health.content_sources,
         "models_used": health.models_used,
         "llm_calls": health.llm_calls_count,
         "durations_seconds": health.durations,

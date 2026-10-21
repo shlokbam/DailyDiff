@@ -239,3 +239,12 @@ def test_zero_produced_with_llm_error_is_blocked():
     surviving, reasons = check_briefs([], produced_count=0, candidate_urls=set(), evidence_by_url={}, min_briefs=3)
     assert len(reasons) > 0
 
+
+def test_run_health_set_content_source_and_snapshot():
+    from run_agent import build_run_snapshot
+    health.set_content_source("https://github.com/example/tool", "readme")
+    assert health.content_sources.get("https://github.com/example/tool") == "readme"
+    snapshot = build_run_snapshot("2026-10-21", [])
+    assert snapshot["content_sources"].get("https://github.com/example/tool") == "readme"
+
+

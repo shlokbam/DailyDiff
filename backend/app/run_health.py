@@ -14,11 +14,17 @@ class RunHealth:
         self.fallbacks: List[Dict[str, str]] = []  # Hard failures
         self.warnings: List[str] = []               # Soft issues (e.g. dropped items)
         self.counts: Dict[str, int] = {}            # Stage counts
+        self.content_sources: Dict[str, str] = {}   # Tracked content source kinds
         self.models_used: Dict[str, int] = {}       # Model names and call counts
         self.durations: Dict[str, float] = {}       # Seconds elapsed per node
         self.llm_calls_count = 0
         self.llm_errors_count = 0
         self._timers: Dict[str, float] = {}
+
+    def set_content_source(self, url: str, source_kind: str):
+        """Record content source type (readme, web_page, description_only, empty) for an evidence URL."""
+        if url:
+            self.content_sources[str(url)] = str(source_kind)
 
     def mark_fallback(self, node: str, reason: str):
         """Record a hard node failure that blocks publication."""
