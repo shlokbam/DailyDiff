@@ -1,29 +1,51 @@
 {
   "date": "2026-10-21",
-  "timestamp": "2026-10-21T18:25:36.785381+00:00",
-  "git_sha": "93418caa4d3e456bfc5c3eb6af1ae40098f77788",
+  "timestamp": "2026-10-21T18:31:35.298317+00:00",
+  "git_sha": "4272ded97476952c6ad555ce356d0a43f2c8170d",
   "counts": {
     "raw_signals": 63,
     "after_dedup": 58,
-    "skeptic_passed": 10
+    "skeptic_passed": 10,
+    "researched": 10,
+    "verified": 9,
+    "analyzed": 9,
+    "final": 0
+  },
+  "content_sources": {
+    "https://github.com/f3an/kodeida": "readme",
+    "https://github.com/monw3249-rgb/roblox-game-copier-blueprint-lab": "readme",
+    "https://github.com/TanbirRamim/open-source-radar": "readme",
+    "https://github.com/LingCore/WinShun": "readme",
+    "https://github.com/opennookorg/betterwispr": "readme",
+    "https://github.com/InukaAsith/TwinDesk": "readme",
+    "https://github.com/SaarthurR/atticus-mac": "readme",
+    "https://github.com/josefchen/muster": "readme",
+    "https://github.com/morluto/rea": "readme",
+    "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/": "web_page"
   },
   "models_used": {
-    "openai/gpt-oss-120b": 1
+    "openai/gpt-oss-120b": 1,
+    "openai/gpt-oss-20b": 1,
+    "qwen/qwen3.8-27b": 1
   },
-  "llm_calls": 1,
+  "llm_calls": 4,
   "durations_seconds": {
-    "skeptic": 4.58
+    "skeptic": 4.04,
+    "verifier": 3.03,
+    "analyst": 2.61,
+    "editor": 0.86
   },
   "hard_failures": [
     {
-      "node": "graph",
-      "reason": "'RunHealth' object has no attribute 'set_content_source'"
+      "node": "editor",
+      "reason": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kmhf8sn6ezwsfhs4nyembjc3` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5152, Requested 7561. Please try again in 35.3475s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
     }
   ],
   "warnings": [],
   "final_briefs": [],
   "failure_reasons": [
-    "Graph exception: 'RunHealth' object has no attribute 'set_content_source'"
+    "Hard node fallbacks: [{'node': 'editor', 'reason': \"Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kmhf8sn6ezwsfhs4nyembjc3` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5152, Requested 7561. Please try again in 35.3475s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\"}]",
+    "Produced 0 briefs (minimum required: 3)."
   ],
   "status": "degraded"
 }
