@@ -21,7 +21,7 @@ def analyst_node(state: AgentState) -> Dict[str, Any]:
         health.set_count("analyzed", 0)
         return {"vetted_candidates": []}
 
-    rate_limit_pause("analyst", seconds=25)
+    rate_limit_pause("analyst", seconds=30)
 
     docs = []
     for idx, c in enumerate(candidates):

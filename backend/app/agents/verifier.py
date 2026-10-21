@@ -29,7 +29,7 @@ def verifier_node(state: AgentState) -> Dict[str, Any]:
         health.set_count("verified", 0)
         return {"vetted_candidates": []}
 
-    rate_limit_pause("verifier", seconds=25)
+    rate_limit_pause("verifier", seconds=35)
 
     docs = []
     for idx, c in enumerate(verifiable):

@@ -29,7 +29,7 @@ def editor_node(state: AgentState) -> Dict[str, Any]:
         health.set_count("final", 0)
         return {"final_briefs": []}
 
-    rate_limit_pause("editor", seconds=45)
+    rate_limit_pause("editor", seconds=50)
 
     docs = []
     for idx, c in enumerate(vetted):
