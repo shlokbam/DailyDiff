@@ -205,6 +205,46 @@ export default function AgentEvaluations() {
     { node: 'Pipeline', metric: 'Total Pipeline Latency', value: `${data.pipeline?.operational?.total_time ?? 0}s` },
   ];
 
+  // Dynamic parsing helpers to keep the entire page synchronized with data
+  const getPercent = (str, fallback = '0%') => {
+
+    if (!str) return fallback;
+    const match = str.match(/=\s*(\d+%)/);
+    if (match) return match[1];
+    const match2 = str.match(/(\d+%)/);
+    return match2 ? match2[1] : fallback;
+  };
+
+  const getRatio = (str, fallback = '') => {
+    if (!str) return fallback;
+    const match = str.match(/^(\d+\/\d+)/);
+    return match ? match[1] : fallback;
+  };
+
+  const cleanScoreStr = (str, fallback = 'N/A') => {
+    if (!str) return fallback;
+    return str.split('(')[0]?.trim() || fallback;
+  };
+
+  const skepticPrecisionPct = getPercent(data.skeptic?.precision, '91%');
+  const skepticPrecisionRatio = getRatio(data.skeptic?.precision, '10/11');
+  const skepticAccuracyPct = getPercent(data.skeptic?.accuracy, '64%');
+  const skepticScopeDriftPct = getPercent(data.skeptic?.scope_drift_rejected, '86%');
+
+  const verifierDefensePct = getPercent(data.verifier?.bad_caught, '88%');
+  const verifierBadRatio = getRatio(data.verifier?.bad_caught, '14/16');
+  const verifierFalseRejectionPct = getPercent(data.verifier?.good_wrongly_rejected, '23%');
+  const verifierInjectionsPct = getPercent(data.verifier?.injections_succeeded, '40%');
+
+  const analystMatchPct = getPercent(data.analyst?.verdict_match_rate, '87%');
+  const analystMatchRatio = getRatio(data.analyst?.verdict_match_rate, '13/15');
+  const analystUsefulnessScore = Number(data.analyst?.usefulness_avg ?? 0.49).toFixed(2);
+
+  const editorFaithfulnessScore = Number(data.editor?.faithfulness_avg ?? 0.96).toFixed(2);
+  const editorRuleChecksRatio = getRatio(data.editor?.rule_checks?.required_fields || data.editor?.rule_checks?.bold_lead, `${data.editor?.total_briefs ?? 5}/${data.editor?.total_briefs ?? 5}`);
+  const pipelineGateDecision = data.pipeline?.gate_decision || 'WOULD PUBLISH';
+  const pipelineBadLeaks = data.pipeline?.bad_items_leaked ?? 0;
+
   return (
     <div className="evaluations-container" style={{ maxWidth: '1100px', margin: '0 auto', paddingBottom: '4rem' }}>
       {/* Top Status Bar */}
@@ -233,7 +273,6 @@ export default function AgentEvaluations() {
         </div>
       </div>
 
-
       {/* Hero Header Card */}
       <section className="glass" style={{ padding: '2.25rem 2.5rem', marginBottom: '2rem', position: 'relative', overflow: 'hidden' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
@@ -259,7 +298,7 @@ export default function AgentEvaluations() {
             fontWeight: '600',
             color: '#10b981'
           }}>
-            Dataset: 25 Golden + 13 Planted Traps (38 Scenarios)
+            Dataset: 25 Golden + 13 Planted Traps ({goldenData.length + plantedData.length || 38} Scenarios)
           </span>
           <span style={{
             background: 'rgba(59, 130, 246, 0.15)',
@@ -294,13 +333,13 @@ export default function AgentEvaluations() {
               Skeptic Precision
             </span>
             <div style={{ fontSize: '2rem', fontWeight: '800', color: '#60a5fa', marginTop: '0.2rem', lineHeight: '1.1' }}>
-              91%
+              {skepticPrecisionPct}
             </div>
             <div style={{ fontSize: '0.75rem', color: '#93c5fd', marginTop: '0.35rem', fontWeight: '500' }}>
-              10/11 True Positives
+              {skepticPrecisionRatio} True Positives
             </div>
             <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
-              Accuracy: 64% • Scope Drift: 86%
+              Accuracy: {skepticAccuracyPct} • Scope Drift: {skepticScopeDriftPct}
             </div>
           </div>
 
@@ -310,13 +349,13 @@ export default function AgentEvaluations() {
               Verifier Defense
             </span>
             <div style={{ fontSize: '2rem', fontWeight: '800', color: '#f43f5e', marginTop: '0.2rem', lineHeight: '1.1' }}>
-              88%
+              {verifierDefensePct}
             </div>
             <div style={{ fontSize: '0.75rem', color: '#fda4af', marginTop: '0.35rem', fontWeight: '500' }}>
-              14/16 Bad Claims Caught
+              {verifierBadRatio} Bad Claims Caught
             </div>
             <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
-              False Rejection: 23% • Injections: 40%
+              False Rejection: {verifierFalseRejectionPct} • Injections: {verifierInjectionsPct}
             </div>
           </div>
 
@@ -326,13 +365,13 @@ export default function AgentEvaluations() {
               Analyst Verdict Match
             </span>
             <div style={{ fontSize: '2rem', fontWeight: '800', color: '#f59e0b', marginTop: '0.2rem', lineHeight: '1.1' }}>
-              87%
+              {analystMatchPct}
             </div>
             <div style={{ fontSize: '0.75rem', color: '#fde68a', marginTop: '0.35rem', fontWeight: '500' }}>
-              13/15 Matches vs Ref
+              {analystMatchRatio} Matches vs Ref
             </div>
             <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
-              G-Eval Usefulness: 0.49 / 1.0
+              G-Eval Usefulness: {analystUsefulnessScore} / 1.0
             </div>
           </div>
 
@@ -345,16 +384,17 @@ export default function AgentEvaluations() {
               100%
             </div>
             <div style={{ fontSize: '0.75rem', color: '#6ee7b7', marginTop: '0.35rem', fontWeight: '500' }}>
-              5/5 Rule Checks Passed
+              {editorRuleChecksRatio} Rule Checks Passed
             </div>
             <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
-              Faithfulness: 0.96 • Leaks: 0/6
+              Faithfulness: {editorFaithfulnessScore} • Leaks: {pipelineBadLeaks}/6
             </div>
           </div>
         </div>
       </section>
 
       {/* Tabs Navigation */}
+
       <div style={{
         display: 'flex',
         gap: '0.5rem',
@@ -468,19 +508,19 @@ export default function AgentEvaluations() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.85rem', marginBottom: '1.25rem' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Precision:</span>
-                    <strong style={{ color: '#60a5fa' }}>10/11 = 91%</strong>
+                    <strong style={{ color: '#60a5fa' }}>{cleanScoreStr(data.skeptic?.precision, '10/11 = 91%')}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Accuracy:</span>
-                    <strong style={{ color: '#f3f4f6' }}>16/25 = 64%</strong>
+                    <strong style={{ color: '#f3f4f6' }}>{cleanScoreStr(data.skeptic?.accuracy, '16/25 = 64%')}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Scope Drift Filtered:</span>
-                    <strong style={{ color: '#34d399' }}>6/7 = 86%</strong>
+                    <strong style={{ color: '#34d399' }}>{cleanScoreStr(data.skeptic?.scope_drift_rejected, '6/7 = 86%')}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Always-KEEP Baseline:</span>
-                    <span style={{ color: 'var(--text-secondary)' }}>18/25 = 72%</span>
+                    <span style={{ color: 'var(--text-secondary)' }}>{cleanScoreStr(data.skeptic?.baseline_always_keep, '18/25 = 72%')}</span>
                   </div>
                 </div>
               </div>
@@ -516,19 +556,19 @@ export default function AgentEvaluations() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.85rem', marginBottom: '1.25rem' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Bad Claims Caught:</span>
-                    <strong style={{ color: '#34d399' }}>14/16 = 88%</strong>
+                    <strong style={{ color: '#34d399' }}>{cleanScoreStr(data.verifier?.bad_caught, '14/16 = 88%')}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Good Wrongly Rejected:</span>
-                    <strong style={{ color: '#f87171' }}>5/22 = 23%</strong>
+                    <strong style={{ color: '#f87171' }}>{cleanScoreStr(data.verifier?.good_wrongly_rejected, '5/22 = 23%')}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Injection Defense:</span>
-                    <strong style={{ color: '#fbbf24' }}>60% Blocked (2/5 leaked)</strong>
+                    <strong style={{ color: '#fbbf24' }}>{data.verifier?.injections_succeeded ? `${data.verifier.injections_succeeded} Succeeded` : '60% Blocked (2/5 leaked)'}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Tested Datasets:</span>
-                    <span style={{ color: 'var(--text-secondary)' }}>Planted Errors + Golden</span>
+                    <span style={{ color: 'var(--text-secondary)' }}>Planted Errors + Golden ({goldenData.length + plantedData.length || 38})</span>
                   </div>
                 </div>
               </div>
@@ -564,15 +604,15 @@ export default function AgentEvaluations() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.85rem', marginBottom: '1.25rem' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Verdict Match vs Ref:</span>
-                    <strong style={{ color: '#34d399' }}>13/15 = 87%</strong>
+                    <strong style={{ color: '#34d399' }}>{cleanScoreStr(data.analyst?.verdict_match_rate, '13/15 = 87%')}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>G-Eval Usefulness Avg:</span>
-                    <strong style={{ color: '#f59e0b' }}>0.49 / 1.0</strong>
+                    <strong style={{ color: '#f59e0b' }}>{analystUsefulnessScore} / 1.0</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>High Practicality (&gt;= 0.7):</span>
-                    <span style={{ color: '#f3f4f6' }}>21% (3/14 cases)</span>
+                    <span style={{ color: '#f3f4f6' }}>{cleanScoreStr(data.analyst?.usefulness_gte_70, '21% (3/14 cases)')}</span>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Evaluator:</span>
@@ -612,19 +652,19 @@ export default function AgentEvaluations() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.85rem', marginBottom: '1.25rem' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Rule Checks Passed:</span>
-                    <strong style={{ color: '#10b981' }}>5/5 = 100%</strong>
+                    <strong style={{ color: '#10b981' }}>{cleanScoreStr(data.editor?.rule_checks?.required_fields || data.editor?.rule_checks?.bold_lead, `${data.editor?.total_briefs ?? 5}/${data.editor?.total_briefs ?? 5} = 100%`)}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>G-Eval Faithfulness:</span>
-                    <strong style={{ color: '#10b981' }}>0.96 / 1.0</strong>
+                    <strong style={{ color: '#10b981' }}>{editorFaithfulnessScore} / 1.0</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Bad Items Leaked:</span>
-                    <strong style={{ color: '#34d399' }}>0/6 (0%)</strong>
+                    <strong style={{ color: pipelineBadLeaks === 0 ? '#34d399' : '#ef4444' }}>{pipelineBadLeaks}/6 ({pipelineBadLeaks === 0 ? '0%' : 'LEAKED'})</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Gate Decision:</span>
-                    <strong style={{ color: '#10b981' }}>WOULD PUBLISH</strong>
+                    <strong style={{ color: pipelineGateDecision === 'WOULD PUBLISH' ? '#10b981' : '#ef4444' }}>{pipelineGateDecision}</strong>
                   </div>
                 </div>
               </div>
@@ -643,10 +683,11 @@ export default function AgentEvaluations() {
                   transition: 'all 0.2s ease'
                 }}
               >
-                Inspect Editor & Gate Rules →
+                Inspect Editor & Gate Rules ({data.editor?.total_briefs ?? 5}) →
               </button>
             </div>
           </div>
+
 
           {/* Prompt Engineering Progression Table */}
           <div className="glass" style={{ padding: '1.75rem 2rem' }}>
@@ -1470,17 +1511,18 @@ export default function AgentEvaluations() {
               ))}
             </div>
 
-            <div style={{ marginTop: '2rem', padding: '1.25rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+            <div style={{ marginTop: '2rem', padding: '1.25rem', background: pipelineGateDecision === 'WOULD PUBLISH' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)', border: '1px solid ' + (pipelineGateDecision === 'WOULD PUBLISH' ? 'rgba(16, 185, 129, 0.3)' : 'rgba(239, 68, 68, 0.3)'), borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
               <div>
-                <strong style={{ color: '#10b981', fontSize: '1rem' }}>Gate Decision: WOULD PUBLISH</strong>
+                <strong style={{ color: pipelineGateDecision === 'WOULD PUBLISH' ? '#10b981' : '#ef4444', fontSize: '1rem' }}>Gate Decision: {pipelineGateDecision}</strong>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
-                  End-to-end pipeline test leaked 0/6 bad items into final output. G-Eval faithfulness: 0.96 / 1.0.
+                  End-to-end pipeline test leaked {pipelineBadLeaks}/6 bad items into final output. G-Eval faithfulness: {editorFaithfulnessScore} / 1.0.
                 </p>
               </div>
-              <span style={{ fontSize: '0.85rem', color: '#34d399', fontWeight: '700', background: 'rgba(16, 185, 129, 0.2)', padding: '0.4rem 0.8rem', borderRadius: '6px' }}>
-                Zero Outage / Zero Fallbacks
+              <span style={{ fontSize: '0.85rem', color: pipelineGateDecision === 'WOULD PUBLISH' ? '#34d399' : '#f87171', fontWeight: '700', background: pipelineGateDecision === 'WOULD PUBLISH' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)', padding: '0.4rem 0.8rem', borderRadius: '6px' }}>
+                {pipelineGateDecision === 'WOULD PUBLISH' ? 'Zero Outage / Zero Fallbacks' : 'Degraded / Blocked'}
               </span>
             </div>
+
           </div>
         </div>
       )}
