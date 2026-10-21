@@ -138,6 +138,7 @@ Between September 1 and October 21, 2026, the pipeline encountered repeated prod
   3. **History Compression:** Prior context was reduced from 20 days to 7 days, stripping body summaries and retaining only titles and categories.
   4. **Researcher Evidence Ceiling:** Enforced an 1,800-character ceiling on scraped evidence in [`backend/app/agents/researcher.py`](file:///Users/shlokbam/Documents/Code/DailyDiff/backend/app/agents/researcher.py#L65).
   - **Result:** Average Skeptic prompt size plummeted from ~10,411 tokens to ~2,400 tokens (~70% below the TPM cap).
+  - **Empirical Validation (Oct 21, 18:25 UTC):** In the next workflow execution ([`data/runs/2026-10-21.degraded.json`](file:///Users/shlokbam/Documents/Code/DailyDiff/data/runs/2026-10-21.degraded.json)), Skeptic dispatched to Groq `openai/gpt-oss-120b` and succeeded with `HTTP 200 OK` in 4.58s, successfully passing 10 candidates. This confirmed that the prompt budget completely eliminated the 413 error. (A subsequent application-level `AttributeError` on `RunHealth.set_content_source` was immediately caught by the fail-closed harness and resolved in commit `2e4c41d`).
 
 ---
 
