@@ -11,7 +11,7 @@
 [![FastAPI](https://img.shields.io/badge/backend-FastAPI-teal.svg)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/frontend-React%2019%20%2B%20Vite-61dafb.svg)](https://vitejs.dev/)
 [![LLM Chain](https://img.shields.io/badge/LLM-Groq%20gpt--oss%20%E2%86%92%20Mistral-blueviolet.svg)](https://groq.com/)
-[![Tests](https://img.shields.io/badge/tests-47%20passed-brightgreen.svg)](tests/)
+[![Tests](https://img.shields.io/badge/tests-75%20passed-brightgreen.svg)](tests/)
 
 ---
 
@@ -147,6 +147,17 @@ flowchart TD
   5. No generic filler text.
   6. Every version, multiplier (`10x`), percentage, `k/m/b` count, or `N+` figure in the title, description, or why_it_matters appears in the source evidence (title + description + scraped text).
 - **Run-level decision**: briefs that fail are dropped, duplicate categories are removed, and at most 5 are kept. Publication is **blocked** (degraded snapshot, exit code 1) if any node failed, if every brief was dropped, or if fewer than `MIN_BRIEFS` (default 3) survive. If the pipeline produced nothing *and* nothing errored, the run is treated as a quiet day and an empty edition is recorded.
+- **Same-day retries**: the workflow runs at 09:00 IST, then again at 11:00 and 13:00 IST. Each run first checks whether today's edition is already published, and stops if it is (or only resends a pending email). Progress is saved per step in `data/runs/state/YYYY-MM-DD.json`, so a retry continues where the last run stopped:
+
+  | What happened | Next run starts at |
+  |:---|:---|
+  | API or bad-JSON error in a step | That step (finished steps are reused) |
+  | Verifier approved fewer than `MIN_BRIEFS` items | Scout, with today's rejected URLs skipped by the Skeptic |
+  | Analyst kept fewer than `MIN_BRIEFS` items | Analyst |
+  | Gate kept fewer than `MIN_BRIEFS` briefs | Editor |
+
+  On a restart, a Verifier that finds nothing new counts as a failure, not a quiet day. If the 13:00 run also fails, no edition is sent that day.
+- **Email delivery**: before notifying subscribers, the runner wakes the backend (`GET /api/status` every 10s, for up to 120s, to cover Render's cold start). Only HTTP 200 from `/api/notify-subscribers` counts as sent. Otherwise the email stays `pending` in the state file, the run exits 1, and the next retry resends it without re-running the pipeline. "Sent" means the backend accepted the request; delivery failures inside the backend (Brevo/SMTP) are not visible to the pipeline.
 - **Audit snapshots**: every run writes `data/runs/YYYY-MM-DD.json` (or `.degraded.json`) with stage counts, content sources, models used, LLM call count, node durations, hard failures, warnings, and the final briefs. CI commits `data/` even when the run fails.
 
 ---
@@ -276,7 +287,7 @@ RESEND_API_KEY=your_resend_api_key
 
 ### 4. Running Offline Unit Tests
 
-47 offline tests cover the rule checks, the publish gate, fail-closed node behavior, JSON retry logic, prompt escaping, feed parsing, API auth, and the anti-simulation guard. No live API calls are made:
+75 offline tests cover the rule checks, the publish gate, retry & resume, email retry, fail-closed node behavior, JSON retry logic, prompt escaping, feed parsing, API auth, and the anti-simulation guard. No live API calls are made:
 
 ```bash
 PYTHONPATH=backend pytest tests -m "not live" -q
@@ -334,7 +345,7 @@ Open **`http://localhost:5173/`**. On `localhost` the app calls `http://localhos
 
 | Workflow | Trigger | What it does |
 |:---|:---|:---|
-| [`thrice_weekly_brief.yml`](.github/workflows/thrice_weekly_brief.yml) | Cron `30 3 * * 1,3,5` (03:30 UTC / 09:00 IST, Mon/Wed/Fri) and manual dispatch | Installs deps with `uv`, runs `backend/run_agent.py`, then commits and pushes any changes under `data/`, even when the run is blocked. |
+| [`thrice_weekly_brief.yml`](.github/workflows/thrice_weekly_brief.yml) | Cron `30 3`, `30 5`, `30 7 * * 1,3,5` (09:00, 11:00, 13:00 IST, Mon/Wed/Fri) and manual dispatch | Installs deps with `uv`, runs `backend/run_agent.py`, then commits and pushes any changes under `data/` (including the day's state file), even when the run is blocked. The two later runs exit immediately once the day is done. |
 | [`evals.yml`](.github/workflows/evals.yml) | Pull requests | Runs the offline test suite (`pytest tests -m "not live"`). |
 
 ---
@@ -347,7 +358,7 @@ DailyDiff/
 │   ├── thrice_weekly_brief.yml  # Scheduled pipeline run (Mon, Wed, Fri) + data commit
 │   └── evals.yml                # Offline test suite on pull requests
 ├── backend/
-│   ├── run_agent.py             # Pipeline runner & fail-closed publish gate
+│   ├── run_agent.py             # Pipeline runner, resume/retry rules, publish gate, email delivery
 │   ├── test_api.py              # Legacy unittest API checks (not collected by pytest)
 │   ├── requirements.txt         # Python dependencies
 │   └── app/
@@ -355,6 +366,7 @@ DailyDiff/
 │       ├── database.py          # SQLite / Postgres subscribers + history.json I/O
 │       ├── checks.py            # Per-brief rule checks & numeric grounding
 │       ├── run_health.py        # Run telemetry: counts, timings, failures, warnings
+│       ├── run_state.py         # Per-day progress file for resume & email retry
 │       ├── schemas.py           # Pydantic request/response models
 │       ├── email_dispatcher.py  # HTML email builder + Brevo/SMTP/Resend delivery
 │       ├── main.py              # FastAPI endpoints
@@ -385,6 +397,8 @@ DailyDiff/
 │   ├── conftest.py              # Forces local SQLite, sets import paths
 │   ├── test_checks.py           # Rule check unit tests
 │   ├── test_gate.py             # Publish gate & quiet-day tests
+│   ├── test_resume.py           # Retry & resume, email wake/retry
+│   ├── test_run_state.py        # Daily state file
 │   ├── test_nodes.py            # Fail-closed nodes, JSON retry, escaping
 │   ├── test_scout_parsing.py    # RSS/Atom & GitHub parsing tests
 │   ├── test_api_auth.py         # Notify-endpoint auth & unsubscribe tests
@@ -401,6 +415,7 @@ DailyDiff/
 │   ├── history.json             # All published editions
 │   ├── archive/YYYY/MM/DD.md    # Markdown copy of each published edition
 │   └── runs/                    # Per-run snapshots (*.json / *.degraded.json)
+│       └── state/               # Per-day progress: stage outputs, rejected URLs, email status
 ├── SYSTEM_ARCHITECTURE_AND_DECISION_ENGINE.md
 ├── FREE_TIER_LLM_INCIDENT_REPORT_AND_ANALYSIS.md
 └── README.md

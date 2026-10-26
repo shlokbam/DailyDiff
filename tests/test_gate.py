@@ -27,6 +27,17 @@ def mock_db():
 
 
 
+def _streaming_graph(final_state: dict, before=None) -> MagicMock:
+    """A fake compiled graph whose stream() yields the whole final state as one editor update."""
+    def stream(_input):
+        if before:
+            before()
+        yield {"editor": final_state}
+    graph = MagicMock()
+    graph.stream.side_effect = stream
+    return graph
+
+
 def _make_brief(i: int, cat: str = "Tech Shift") -> dict:
     return {
         "category": cat,
@@ -48,9 +59,10 @@ def test_gate_blocks_on_hard_failure(tmp_path):
     fake_history = fake_data / "history.json"
     fake_history.write_text("[]", encoding="utf-8")
 
-    def failing_invoke(state):
+    def mark_verifier_failure():
         health.mark_fallback("verifier", "Model 429 rate limit")
-        return {
+
+    final_state = {
             "raw_signals": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
             "candidates": [],
             "researched_candidates": [],
@@ -58,8 +70,7 @@ def test_gate_blocks_on_hard_failure(tmp_path):
             "final_briefs": [_make_brief(1), _make_brief(2), _make_brief(3)],
         }
 
-    mock_graph = MagicMock()
-    mock_graph.invoke.side_effect = failing_invoke
+    mock_graph = _streaming_graph(final_state, before=mark_verifier_failure)
 
     env_overrides = {
         "GROQ_API_KEY": "test-key",
@@ -104,14 +115,13 @@ def test_gate_publishes_when_one_item_dropped(tmp_path):
     fake_history.write_text("[]", encoding="utf-8")
 
     all_briefs = valid_briefs + [bad_brief]
-    mock_graph = MagicMock()
-    mock_graph.invoke.return_value = {
+    mock_graph = _streaming_graph({
         "raw_signals": [{"title": f"T{i}", "url": b["source_url"]} for i, b in enumerate(all_briefs)],
         "candidates": [{"title": f"T{i}", "url": b["source_url"]} for i, b in enumerate(all_briefs)],
         "researched_candidates": [{"title": f"T{i}", "url": b["source_url"]} for i, b in enumerate(all_briefs)],
         "vetted_candidates": [{"title": f"T{i}", "url": b["source_url"]} for i, b in enumerate(all_briefs)],
         "final_briefs": all_briefs,
-    }
+    })
 
     env_overrides = {
         "GROQ_API_KEY": "test-key",
@@ -145,14 +155,13 @@ def test_quiet_day_publishes(tmp_path):
     fake_history = fake_data / "history.json"
     fake_history.write_text("[]", encoding="utf-8")
 
-    mock_graph = MagicMock()
-    mock_graph.invoke.return_value = {
+    mock_graph = _streaming_graph({
         "raw_signals": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
         "candidates": [],
         "researched_candidates": [],
         "vetted_candidates": [],
         "final_briefs": [],
-    }
+    })
 
     env_overrides = {
         "GROQ_API_KEY": "test-key",
@@ -183,14 +192,13 @@ def test_fewer_than_min_briefs_blocks(tmp_path):
     fake_history = fake_data / "history.json"
     fake_history.write_text("[]", encoding="utf-8")
 
-    mock_graph = MagicMock()
-    mock_graph.invoke.return_value = {
+    mock_graph = _streaming_graph({
         "raw_signals": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
         "candidates": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
         "researched_candidates": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
         "vetted_candidates": [{"title": "T1", "url": "https://github.com/example/tool_1"}],
         "final_briefs": two_briefs,  # only 2 briefs, MIN_BRIEFS defaults to 3
-    }
+    })
 
     env_overrides = {
         "GROQ_API_KEY": "test-key",

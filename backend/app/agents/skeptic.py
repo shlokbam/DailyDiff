@@ -40,8 +40,10 @@ def deduplicate_and_filter_node(state: AgentState) -> Dict[str, Any]:
         health.set_count("skeptic_passed", 0)
         return {"candidates": []}
 
+    # Skip already-published URLs and URLs rejected by an earlier run today
     published_urls = get_published_urls()
-    fresh = [s for s in raw_signals if s.get("url", "").strip().rstrip("/").lower() not in published_urls]
+    excluded = published_urls | {u.strip().rstrip("/").lower() for u in state.get("exclude_urls", []) if u}
+    fresh = [s for s in raw_signals if s.get("url", "").strip().rstrip("/").lower() not in excluded]
     health.set_count("after_dedup", len(fresh))
 
     if not fresh:

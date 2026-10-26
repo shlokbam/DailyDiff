@@ -287,3 +287,21 @@ def test_rate_limit_pause_skips_in_test_mode():
         mock_sleep.assert_not_called()
 
 
+
+
+def test_skeptic_drops_excluded_urls():
+    state = {
+        "raw_signals": [
+            {"source": "GitHub", "title": "A", "url": "https://github.com/a/b/", "description": "Repo A."},
+            {"source": "GitHub", "title": "C", "url": "https://github.com/c/d", "description": "Repo C."},
+        ],
+        "exclude_urls": ["https://GitHub.com/a/b"],
+    }
+    mock_llm = MagicMock()
+    mock_llm.invoke.return_value = AIMessage(content="[0]")
+    with patch("app.agents.skeptic.get_llm", return_value=mock_llm), \
+         patch("app.agents.skeptic.get_published_urls", return_value=set()), \
+         patch("app.agents.skeptic.extract_history_summary", return_value="none"):
+        result = deduplicate_and_filter_node(state)
+    assert [c["url"] for c in result["candidates"]] == ["https://github.com/c/d"]
+    assert health.counts["after_dedup"] == 1
