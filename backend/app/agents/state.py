@@ -22,3 +22,6 @@ class AgentState(TypedDict):
     
     # Execution error logs (if any)
     errors: List[str]
+
+    # URLs rejected by an earlier run today; the Skeptic skips them on a restart
+    exclude_urls: List[str]
