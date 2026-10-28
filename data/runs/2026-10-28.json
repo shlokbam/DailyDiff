@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-28",
+  "timestamp": "2026-10-28T09:59:56.877189+00:00",
+  "git_sha": "98fa129ebf6bd68916074dc236d474770a3a8493",
+  "counts": {
+    "raw_signals": 62,
+    "after_dedup": 55,
+    "skeptic_passed": 10,
+    "researched": 10,
+    "verified": 4,
+    "analyzed": 4,
+    "final": 4
+  },
+  "content_sources": {
+    "https://github.com/Huerte/awesome-easy-to-join-orgs": "readme",
+    "https://github.com/monw3249-rgb/roblox-game-copier-blueprint-lab": "readme",
+    "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide": "readme",
+    "https://github.com/cristipufu/strata-files": "readme",
+    "https://github.com/Manan-Santoki/OpenShelf": "readme",
+    "https://github.com/tt-a1i/archify": "readme",
+    "https://vertex.degree/": "web_page",
+    "https://www.brangus.io/survival-llm": "web_page",
+    "https://healeycodes.com/decompiling-fast-food-tycoon-2-drawing-the-world": "web_page",
+    "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/": "web_page"
+  },
+  "models_used": {
+    "openai/gpt-oss-120b": 3,
+    "qwen/qwen3.8-27b": 1
+  },
+  "llm_calls": 4,
+  "durations_seconds": {
+    "skeptic": 5.11,
+    "verifier": 4.01,
+    "analyst": 1.2,
+    "editor": 3.95
+  },
+  "hard_failures": [],
+  "warnings": [],
+  "final_briefs": [
+    {
+      "category": "Career & Learning",
+      "title": "awesome-easy-to-join-orgs",
+      "description": "**A curated list lets anyone join open\u2011source GitHub organizations without writing code.** The repository collects GitHub orgs that accept newcomers after they open a single issue, so you can become a member even if you have no coding experience. It\u2019s aimed at beginners, students, and career\u2011switchers who want to start building an open\u2011source contribution history and meet people in established communities.",
+      "why_it_matters": "Provides a low\u2011barrier entry point for developers to build open\u2011source contribution history and network within established communities without immediate code requirements.",
+      "who_cares": "Junior developers, students, and career switchers seeking their first open\u2011source contributions.",
+      "verdict": "READ",
+      "source_url": "https://github.com/Huerte/awesome-easy-to-join-orgs"
+    },
+    {
+      "category": "Cool Tool",
+      "title": "roblox-game-copier-blueprint-lab",
+      "description": "**An ethics\u2011first sandbox shows how to dissect and rebuild authorized Roblox games.** The repo walks beginners through three layers\u2014orientation, structure mapping, and rebuild practice\u2014explaining why each step matters before showing how to do it. It emphasizes credit, clean conscience, and a documented workflow for learning Roblox game architecture without shady shortcuts.",
+      "why_it_matters": "Offers a structured, ethics\u2011focused educational framework for understanding game architecture and asset management, emphasizing legitimate reverse\u2011engineering practices for learning purposes.",
+      "who_cares": "Aspiring game developers and Roblox Studio users interested in system design and ethical project replication.",
+      "verdict": "READ",
+      "source_url": "https://github.com/monw3249-rgb/roblox-game-copier-blueprint-lab"
+    },
+    {
+      "category": "Tech Shift",
+      "title": "enshrouded-server-ubuntu-guide",
+      "description": "**A step\u2011by\u2011step guide shows how to run a Windows\u2011only Enshrouded server on Ubuntu using Wine and systemd.** The instructions fetch the Windows server binary via SteamCMD, wrap it in Wine, and configure a systemd service for persistence. It targets Ubuntu\u202f22.04 and 24.04 and assumes familiarity with sudo, port forwarding, and command\u2011line config editing.",
+      "why_it_matters": "Documents a practical, tested workflow for running Windows\u2011based game servers on Linux using Wine and systemd, solving a common infrastructure challenge for dedicated server hosting.",
+      "who_cares": "DevOps engineers, sysadmins, and community server hosts managing Linux\u2011based infrastructure for gaming.",
+      "verdict": "INTEGRATE",
+      "source_url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide"
+    },
+    {
+      "category": "Watchlist",
+      "title": "OpenShelf",
+      "description": "**OpenShelf adds a drag\u2011and\u2011drop wheel to macOS\u2019s menu bar for quick file actions.** While dragging any file, press a key to reveal a wheel of wedges; dropping the file on a wedge lets you convert, edit, AirDrop, or shelve it\u2014all offline. The utility is built with Swift\u202f6 for macOS\u202f14+, showcasing modern menu\u2011bar APIs.",
+      "why_it_matters": "Demonstrates modern Swift\u202f6 and macOS\u202f14+ APIs for creating lightweight, offline\u2011first menu bar utilities that enhance developer workflow efficiency through drag\u2011and\u2011drop interactions.",
+      "who_cares": "macOS native developers and productivity tool creators looking for reference implementations in Swift.",
+      "verdict": "WATCH",
+      "source_url": "https://github.com/Manan-Santoki/OpenShelf"
+    }
+  ],
+  "status": "healthy"
+}
