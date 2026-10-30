@@ -1,0 +1,794 @@
+{
+  "date": "2026-10-30",
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "roblox-game-copier-blueprint-lab",
+            "full_name": "monw3249-rgb/roblox-game-copier-blueprint-lab",
+            "url": "https://github.com/monw3249-rgb/roblox-game-copier-blueprint-lab",
+            "description": "Beginner Roblox Game Copier Guide 2026: Safe Clone Workflow for Authorized Projects",
+            "stars": 70,
+            "forks": 0,
+            "language": "HTML"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "TwinDesk",
+            "full_name": "InukaAsith/TwinDesk",
+            "url": "https://github.com/InukaAsith/TwinDesk",
+            "description": " All your computers and your phone, working as one desk. Screens, apps, files, clipboard, calls, texts, notifications, mouse and keyboard, shared between Mac, Windows, Linux and Android. Free and open source. No account, no cloud, and now no shared network needed.",
+            "stars": 1683,
+            "forks": 123,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "WinShun",
+            "full_name": "LingCore/WinShun",
+            "url": "https://github.com/LingCore/WinShun",
+            "description": "Win\u987a\uff1a\u514d\u8d39\u5f00\u6e90\u7684 Windows \u5feb\u901f\u641c\u7d22\u542f\u52a8\u5668\u3002\u53cc\u51fb Ctrl\uff0c\u62fc\u97f3\u79d2\u641c\u6587\u4ef6\u3001\u5168\u6587\u641c\u7d22 Word/Excel/PDF\u3001\u526a\u8d34\u677f\u5386\u53f2\uff08\u4ee3\u66ff Win+V\uff09\u3001\u5bf9\u8bdd\u6846\u641c\u7d22\u3001\u4efb\u52a1\u680f\u641c\u7d22\u3001\u63d2\u4ef6\u3001AI \u52a9\u624b MCP\u3002Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative.",
+            "stars": 762,
+            "forks": 52,
+            "language": "C++"
+          },
+          {
+            "source": "GitHub",
+            "title": "atticus-mac",
+            "full_name": "SaarthurR/atticus-mac",
+            "url": "https://github.com/SaarthurR/atticus-mac",
+            "description": "Fast, free voice assistant for your Mac. No API key: runs on your Claude Pro or Max plan. Sends background agents for big jobs, remembers you and learns your shortcuts. Hold \u2303\u2325Space and talk.",
+            "stars": 461,
+            "forks": 41,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenTodo",
+            "full_name": "OpenTodoApp/OpenTodo",
+            "url": "https://github.com/OpenTodoApp/OpenTodo",
+            "description": "Your tasks, your server. An open-source, local-first task manager you can host yourself. Everything you expect from a commercial task app, without the subscription or the lock-in.",
+            "stars": 191,
+            "forks": 18,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenShelf",
+            "full_name": "Manan-Santoki/OpenShelf",
+            "url": "https://github.com/Manan-Santoki/OpenShelf",
+            "description": "Free, open-source Mac utility: start dragging any file, tap a key, and drop it on a wheel to convert, edit, AirDrop or shelve it. Runs fully offline.",
+            "stars": 169,
+            "forks": 9,
+            "language": "Swift"
+          },
+          {
+            "source": "GitHub",
+            "title": "rea",
+            "full_name": "morluto/rea",
+            "url": "https://github.com/morluto/rea",
+            "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+            "stars": 409922,
+            "forks": 102624,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "ECC",
+            "full_name": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "stars": 292989,
+            "forks": 43347,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "ponytail",
+            "full_name": "DietrichGebert/ponytail",
+            "url": "https://github.com/DietrichGebert/ponytail",
+            "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+            "stars": 180571,
+            "forks": 9919,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95768,
+            "forks": 9593,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 92248,
+            "forks": 12270,
+            "language": "TypeScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance",
+            "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+            "description": "Hacker News top story (Score: 1372): Binance-hacker-1029 \u2013 $5.6B stolen from Binance"
+          },
+          {
+            "source": "Hacker News",
+            "title": "We're releasing the weights of Mistral Large 4",
+            "url": "https://mistral.ai/news/mistral-large-4-oss/",
+            "description": "Hacker News top story (Score: 1486): We're releasing the weights of Mistral Large 4"
+          },
+          {
+            "source": "Hacker News",
+            "title": "How Do You Take a Picture of a Black Hole?",
+            "url": "https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/",
+            "description": "Hacker News top story (Score: 6): How Do You Take a Picture of a Black Hole?"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Gilgamesh by Simon Armitage review \u2013 an ancient epic is brilliantly translated",
+            "url": "https://www.theguardian.com/books/2026/oct/20/gilgamesh-by-simon-armitage-review-an-ancient-epic-is-brilliantly-translated-for-our-times",
+            "description": "Hacker News top story (Score: 36): Gilgamesh by Simon Armitage review \u2013 an ancient epic is brilliantly translated"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Cuis: The Modern Smalltalk-80",
+            "url": "https://cuis.st/",
+            "description": "Hacker News top story (Score: 122): Cuis: The Modern Smalltalk-80"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Herdr has released native app",
+            "url": "https://github.com/herdrdev/herdr-app",
+            "description": "Hacker News top story (Score: 211): Herdr has released native app"
+          },
+          {
+            "source": "Hacker News",
+            "title": "I'm so bad at billiards that I ended up in the hyperbolic plane [video]",
+            "url": "https://www.youtube.com/watch?v=kL9BTbIGxLg",
+            "description": "Hacker News top story (Score: 135): I'm so bad at billiards that I ended up in the hyperbolic plane [video]"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Astroterm: A Planetarium for Your Terminal",
+            "url": "https://github.com/da-luce/astroterm",
+            "description": "Hacker News top story (Score: 143): Astroterm: A Planetarium for Your Terminal"
+          },
+          {
+            "source": "Hacker News",
+            "title": "We ran AI agent swarms in Minecraft and Mindustry",
+            "url": "https://labs.ycombinator.com/projects/games/index.html",
+            "description": "Hacker News top story (Score: 293): We ran AI agent swarms in Minecraft and Mindustry"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Artificial Analysis v5 and the benchmarker's dilemma",
+            "url": "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
+            "description": "Hacker News top story (Score: 17): Artificial Analysis v5 and the benchmarker's dilemma"
+          },
+          {
+            "source": "Hacker News",
+            "title": "'Elite North Korean hackers' blamed for $6.3B Binance hack",
+            "url": "https://www.theguardian.com/business/live/2026/oct/30/uk-house-price-growth-crypto-industry-6bn-binance-hack-eurozone-france-gdp-latest-news-updates",
+            "description": "Hacker News top story (Score: 56): 'Elite North Korean hackers' blamed for $6.3B Binance hack"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Wasmer (YC S19) Is Hiring OS/Hypervisor Experts in Europe",
+            "url": "https://www.workatastartup.com/jobs/98722",
+            "description": "Hacker News top story (Score: 1): Wasmer (YC S19) Is Hiring OS/Hypervisor Experts in Europe"
+          },
+          {
+            "source": "Hacker News",
+            "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+            "url": "https://github.com/SheepSeb/tinyworldformer",
+            "description": "Hacker News top story (Score: 214): A tiny world model running games on a Raspberry Pi Pico 2 W"
+          },
+          {
+            "source": "Hacker News",
+            "title": "H.264 Is Magic (2016)",
+            "url": "https://sidbala.com/h-264-is-magic/",
+            "description": "Hacker News top story (Score: 438): H.264 Is Magic (2016)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: I Turned DOOM into a Transformer",
+            "url": "https://github.com/mottopanikeiku/doomformer",
+            "description": "Hacker News top story (Score: 94): Show HN: I Turned DOOM into a Transformer"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Best AI Visibility Tools in 2026",
+            "url": "https://dev.to/sasha_magicspace_329d68d/best-ai-visibility-tools-in-2026-79c",
+            "description": "A practical buyer guide to tracking how ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews talk about your brand.\n\nA growing share of buyer research now starts with a question typed into an AI assistant instead of a search box. Someone asks \"what's the best payroll software for a 20-perso"
+          },
+          {
+            "source": "Dev.to",
+            "title": "A 429 is not a no: our licence check has three answers and only one of them stops the monitor",
+            "url": "https://dev.to/daniel_pertu/a-429-is-not-a-no-our-licence-check-has-three-answers-and-only-one-of-them-stops-the-monitor-14bh",
+            "description": "Notifio is a desktop app that watches rental search pages and emails you the moment a new listing appears. It is sold as a one-time licence, so the desktop app holds an email and an activation code, and notifio.app holds the row that says whether that pair is real.\n\nWhich means the app has to ask. A"
+          },
+          {
+            "source": "Dev.to",
+            "title": "GitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby",
+            "url": "https://dev.to/damiano_builds/gitlab-was-patched-the-server-was-still-vulnerable-cve-2026-97229-lives-in-ruby-22ie",
+            "description": "On October 20, 2026, someone registered an account on Alpine Linux's public GitLab instance and started sending it crafted CI configurations. The instance crashed eight times over two days. Four of those crashes were the attacker getting partway through an exploit and failing at the next step. Alpin"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Why Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware",
+            "url": "https://dev.to/zelvior/why-your-download-manager-matters-cross-platform-downloads-and-legacy-hardware-2cl9",
+            "description": "Downloading files is something almost every computer user does. Whether it's software, documents, images, archives, development tools, or large files, downloading has become an essential part of everyday computing.\n\nBut there's something interesting: while operating systems and applications continue"
+          },
+          {
+            "source": "Dev.to",
+            "title": "15 pages about 15 rental sites, 445 strings, and 3 of them appear on a second page",
+            "url": "https://dev.to/daniel_pertu/15-pages-about-15-rental-sites-445-strings-and-3-of-them-appear-on-a-second-page-2k2g",
+            "description": "Notifio watches rental search pages and emails you when a new listing appears. It works on any site that lists results as a normal web page, which means the obvious SEO move is one page per site: /alerts/kamernet, /alerts/rightmove, /alerts/idealista, and so on for every portal people actually searc"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Rare-Earth Quantum Memories, Week of Oct 27: Er Hits 1 ms On-Demand at Telecom",
+            "url": "https://dev.to/alfiomus/rare-earth-quantum-memories-week-of-oct-27-er-hits-1-ms-on-demand-at-telecom-ian",
+            "description": "Weekly digest of verified rare-earth-ion results relevant to quantum memories and quantum network interfaces. Each item is labeled Journal (peer reviewed / accepted) or Preprint. Long-form version with full sourcing is on my blog (canonical).\n\n\n  \n  \n  1. Er:YSiO - on-demand ms storage at telecom (J"
+          },
+          {
+            "source": "Dev.to",
+            "title": "WordPress 7.2 beta: 6 changes plugin and block developers should test before December 8",
+            "url": "https://dev.to/farhanshafi/wordpress-72-beta-6-changes-plugin-and-block-developers-should-test-before-december-8-5g3e",
+            "description": "WordPress 7.2 is in beta. RC1 is on November 17 and the final release is planned for December 8.\n\nThe WordPress Developer Blog published its October \"What's new for developers?\" roundup. Most of it is new features. These six items are different: they can change how your existing plugin or block beha"
+          },
+          {
+            "source": "Dev.to",
+            "title": "When Not to Use GitHub Copilot: An Experienced Developer's Checklist",
+            "url": "https://dev.to/thomaslanghorst/when-not-to-use-github-copilot-an-experienced-developers-checklist-1j47",
+            "description": "A while ago I accepted a Copilot suggestion that looked exactly right. It was idiomatic, it compiled, it passed code review. Weeks later I found out it was subtly wrong, in a way that never showed up in tests and only surfaced under real conditions.\n\nThat bug changed the question I ask about Copilot"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How AI-Powered Search Works: A Guide for Devs on AI Visibility",
+            "url": "https://www.freecodecamp.org/news/ai-search-visibility/",
+            "description": "Searched worked in a familiar way for decades: you'd type in your query, get back a list of pages, and choose one to click on. Behind the scenes, Google would find the pages it thought you might want,"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Real-World Penetration Testing: Hands-On Ethical Hacking Crash Course",
+            "url": "https://www.freecodecamp.org/news/learn-real-world-penetration-testing-hands-on-ethical-hacking-crash-course/",
+            "description": "Understanding how malicious actors infiltrate networks is the first step to building resilient infrastructure. To help developers and aspiring security analysts learn the fundamentals of offensive sec"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "High-Speed Decision Pipelines: Jev and Prefill-Only Inference from Scratch",
+            "url": "https://www.freecodecamp.org/news/high-speed-decision-pipelines-jev-and-prefill-only-inference-from-scratch/",
+            "description": "Autoregressive token generation is notoriously slow and memory-intensive, especially when you only need a model to make a structured classification or routing decision rather than write out paragraphs"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Build with Gemini 4 Argon \u2013 Fast-Track API Crash Course",
+            "url": "https://www.freecodecamp.org/news/build-with-gemini-4-argon-fast-track-api-crash-course/",
+            "description": "Google just released Gemini 4 Argon which is its most capable model designed specifically for complex reasoning, advanced coding, math, and science. To help you get building right away, we just publis"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Secure Your AI Agents \u2013 Free Model Context Protocol (MCP) Security Course",
+            "url": "https://www.freecodecamp.org/news/secure-your-ai-agents-free-model-context-protocol-mcp-security-course/",
+            "description": "The Model Context Protocol (MCP) helps connect LLMs to external tools, databases, and APIs. But giving AI agents hands and feet to take real-world actions introduces an entirely new attack surface. We"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Python in Marketing: A Practical Guide to Marketing Analytics, Automation, and Data-Driven Growth [Full Book]",
+            "url": "https://www.freecodecamp.org/news/python-in-marketing-a-practical-book/",
+            "description": "Marketing has always involved wrangling lots of data. Before digital marketing, businesses had to track sales, customer purchases, coupon redemptions, store traffic, and survey responses to understand"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Cloud Service Models Explained: IaaS vs PaaS vs\u00a0SaaS",
+            "url": "https://www.freecodecamp.org/news/cloud-service-models-explained-iaas-vs-paas-vs-saas/",
+            "description": "You likely use cloud services every day. When you check Gmail, join a Zoom meeting, or message your team on Slack, you use cloud-hosted software. But you don't manage the servers it runs on or maintai"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Command-Line Weather App with Python",
+            "url": "https://www.freecodecamp.org/news/how-to-build-a-command-line-weather-app-with-python/",
+            "description": "After doing a few basic Python projects, I got a bit bored of programs that just take input and print something back. I wanted to make something that actually gets data from the internet. So, I built"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Norah Studio",
+            "url": "https://www.producthunt.com/products/norah-studio",
+            "description": "A new space to explore your music\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "StepGrab",
+            "url": "https://www.producthunt.com/products/stepgrab",
+            "description": "Now on Windows, with redaction and a real editor\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Cluinn",
+            "url": "https://www.producthunt.com/products/cluinn",
+            "description": "Answers your questions during the call, not after. For Mac.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Canva Brush",
+            "url": "https://www.producthunt.com/products/canva",
+            "description": "Canva Brush: a vision-language model that edits your designs\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "iSurge",
+            "url": "https://www.producthunt.com/products/isurge",
+            "description": "An activity monitor, at your notch.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Vaani Developer Platform",
+            "url": "https://www.producthunt.com/products/vaani-developer-platfrom",
+            "description": "The only voice AI harness that you'll ever need\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Teable Mobile",
+            "url": "https://www.producthunt.com/products/teable-4",
+            "description": "Build the systems your team runs on, now from your phone\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "MCP Server by XWiki",
+            "url": "https://www.producthunt.com/products/xwiki",
+            "description": "Give your AI your wiki's knowledge while keeping the control\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "SparkBots AI (Powered by Jev)",
+            "url": "https://www.producthunt.com/products/sparkbots-ai-analyze-pages-and-pdfs",
+            "description": "Instantly extract key details and analyze any webpage or PDF\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "ilse",
+            "url": "https://www.producthunt.com/products/ilse",
+            "description": "Point at your app and your AI agent changes the code\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1wuxkge/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Don't let AI steal your dreams",
+            "url": "https://www.reddit.com/r/webdev/comments/1xiquzi/dont_let_ai_steal_your_dreams/",
+            "description": "Unpopular opinion: I feel that as tech gets better at automating certain processes, the expectation of learning more complicated processes will kick in. But people outside the field cannot even begin to comprehend the basic process of not leaving the ports of your server open, or other basic CS best"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "How to Create Your Own Decentralized Messenger Protocol",
+            "url": "https://www.reddit.com/r/webdev/comments/1xixlgx/how_to_create_your_own_decentralized_messenger/",
+            "description": "&#32; submitted by &#32;  /u/fagnerbrack   [link] &#32; [comments]"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Animation libraries for ostentatious and OTT animations",
+            "url": "https://www.reddit.com/r/webdev/comments/1xirpu5/animation_libraries_for_ostentatious_and_ott/",
+            "description": "I&#39;m interested to know if anyone has recommendations for libraries that could provide completely over the top (to the point of being silly) animations. I&#39;m trying to make a site that&#39;s intended just for family/friends, that is a dumb comedy thing to be used only for a minute or two. It w"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Is there any tutorial without AI to make website?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xj9j8o/is_there_any_tutorial_without_ai_to_make_website/",
+            "description": "I&#39;ve been trying to search what platform or app to install that is not purely generated AI, because I had this task not to generate anything or related to AI.  I&#39;m trying to make a website portfolio of my own and practice   &#32; submitted by &#32;  /u/OutsideHour5580   [link] &#32; [comment"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.33",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.33",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.33. Details: ### Core Changes\n\n- Stop patching error inspection if source maps are disabled: #93364\n\n### Misc Changes\n\n- Turbopack: store ChunkGroupInfo::chunk_groups as a Vec: #100935\n- [test] Fix flaky file-system-cache-clock tests: #100946\n- [ci] Fix test axis fixtures never running their off state in CI: #10..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "ponytail",
+            "full_name": "DietrichGebert/ponytail",
+            "url": "https://github.com/DietrichGebert/ponytail",
+            "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+            "stars": 180571,
+            "forks": 9919,
+            "language": "JavaScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "We're releasing the weights of Mistral Large 4",
+            "url": "https://mistral.ai/news/mistral-large-4-oss/",
+            "description": "Hacker News top story (Score: 1486): We're releasing the weights of Mistral Large 4"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Cuis: The Modern Smalltalk-80",
+            "url": "https://cuis.st/",
+            "description": "Hacker News top story (Score: 122): Cuis: The Modern Smalltalk-80"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Astroterm: A Planetarium for Your Terminal",
+            "url": "https://github.com/da-luce/astroterm",
+            "description": "Hacker News top story (Score: 143): Astroterm: A Planetarium for Your Terminal"
+          },
+          {
+            "source": "Hacker News",
+            "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+            "url": "https://github.com/SheepSeb/tinyworldformer",
+            "description": "Hacker News top story (Score: 214): A tiny world model running games on a Raspberry Pi Pico 2 W"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: I Turned DOOM into a Transformer",
+            "url": "https://github.com/mottopanikeiku/doomformer",
+            "description": "Hacker News top story (Score: 94): Show HN: I Turned DOOM into a Transformer"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Best AI Visibility Tools in 2026",
+            "url": "https://dev.to/sasha_magicspace_329d68d/best-ai-visibility-tools-in-2026-79c",
+            "description": "A practical buyer guide to tracking how ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews talk about your brand.\n\nA growing share of buyer research now starts with a question typed into an AI assistant instead of a search box. Someone asks \"what's the best payroll software for a 20-perso"
+          },
+          {
+            "source": "Dev.to",
+            "title": "GitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby",
+            "url": "https://dev.to/damiano_builds/gitlab-was-patched-the-server-was-still-vulnerable-cve-2026-97229-lives-in-ruby-22ie",
+            "description": "On October 20, 2026, someone registered an account on Alpine Linux's public GitLab instance and started sending it crafted CI configurations. The instance crashed eight times over two days. Four of those crashes were the attacker getting partway through an exploit and failing at the next step. Alpin"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Why Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware",
+            "url": "https://dev.to/zelvior/why-your-download-manager-matters-cross-platform-downloads-and-legacy-hardware-2cl9",
+            "description": "Downloading files is something almost every computer user does. Whether it's software, documents, images, archives, development tools, or large files, downloading has become an essential part of everyday computing.\n\nBut there's something interesting: while operating systems and applications continue"
+          },
+          {
+            "source": "Dev.to",
+            "title": "WordPress 7.2 beta: 6 changes plugin and block developers should test before December 8",
+            "url": "https://dev.to/farhanshafi/wordpress-72-beta-6-changes-plugin-and-block-developers-should-test-before-december-8-5g3e",
+            "description": "WordPress 7.2 is in beta. RC1 is on November 17 and the final release is planned for December 8.\n\nThe WordPress Developer Blog published its October \"What's new for developers?\" roundup. Most of it is new features. These six items are different: they can change how your existing plugin or block beha"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "ponytail",
+            "full_name": "DietrichGebert/ponytail",
+            "url": "https://github.com/DietrichGebert/ponytail",
+            "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+            "stars": 180571,
+            "forks": 9919,
+            "language": "JavaScript",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/logo-dark.png\">\n    <img src=\"assets/logo.png\" width=\"220\" alt=\"Ponytail, the lazy senior dev\">\n  </picture>\n</p>\n\n<h1 align=\"center\">Ponytail</h1>\n\n<p align=\"center\">\n  <em>He says nothing. He writes one line. It works.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/50668?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-50668\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/50668\" alt=\"DietrichGebert%2Fponytail | Trendshift\" width=\"250\" height=\"55\"/></a>\n</p>\n\n<p align=\"center\">\n  <img src=\"https://img.shields.io/github/stars/DietrichGebert/ponytail?style=flat-square&color=111111&label=stars\" alt=\"Stars\">\n  <img src=\"https://img.shields.io/github/v/release/DietrichGebert/ponytail?style=flat-square&color=111111&label=release\" alt=\"Release\">\n  <img src=\"https://img.shields.io/npm/v/@dietrichgebert/ponytail?style=flat-square&color=111111&label=npm\" alt=\"npm\">\n  <img src=\"https://img.shields.io/badge/works%20with-20%20agents-111111?style=flat-square\" alt=\"Works with 20 agents\">\n  <img src=\"https://img.shields.io/badge/license-MIT-111111?style=flat-square\" alt=\"MIT license\">\n</p>\n\n<p align=\"center\">\n  <a href=\"https://ponytail.dev/stories\"><img src=\"assets/stories-banner.png\" alt=\"Using Ponytail at work? Tell us your story\" width=\"760\"></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/50668\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/50668/daily\" alt=\"DietrichGebert/ponytail | Trendshift\" width=\"250\" height=\"55\"/></a>\n  <a href=\"https://trendshift.io/repositories/50668\" target=\"_bl",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "We're releasing the weights of Mistral Large 4",
+            "url": "https://mistral.ai/news/mistral-large-4-oss/",
+            "description": "Hacker News top story (Score: 1486): We're releasing the weights of Mistral Large 4",
+            "detailed_content": "Mistral Large 4 (Le Chonk) is now open weight | Mistral\nGet in touch\nMenu\nResearch Sovereign AI\nCloud\nCustomers\nCompany\nGet in touch\nLogin\nWhy Sovereign AI\nProducts\nMethod\nSovereign AI in practice\nInference\nCompute\nEnergy & utilities\nManufacturing\nFinancial services\nPublic sector\nCybersecurity\nAll customers\nBlog\nDocs\nAbout us\nCareers\nResearch Sovereign AI Cloud Customers Company\nWhy Sovereign AI\nProducts\nMethod\nSovereign AI in practice\nInference\nCompute\nEnergy & utilities\nManufacturing\nFinancial services\nPublic sector\nCybersecurity\nAll customers\nBlog\nDocs\nAbout us\nCareers\nGet in touch Login\nStudio\nVibe\nMistral Large 4 (Le Chonk) Built for Coders, Trusted by Defenders. Mistral Large 4 (Le Chonk) Built for Coders, Trusted by Defenders.\nBack to Blog\nShare this post\nCopy url to clipboard Copied\nThinking Summary Mistral released Mistral Large 4 (Le Chonk), a 1-trillion-parameter multimodal model, now available with improved coding, cybersecurity, and reasoning efficiency. It leads open-weight benchmarks in coding and defensive security while offering three reasoning modes for cost-performance balance. Fully open-weight and European-trained, it empowers sovereign AI with customizable, self-hosted deployment options. We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybersecurity. Earlier this month, we released Mistral Large 4 (Le Chonk), our flagship 1-trillion-parameter, natively multimodal model, in public preview. The response to the preview has exceeded our expectations, and we're grateful to our developer community, early-access customers, and partners for their support, collaboration, and feedback. Since then, we've put that feedback to work while continuing to scale reinforcement learning, driving massive improvements in\nc",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Cuis: The Modern Smalltalk-80",
+            "url": "https://cuis.st/",
+            "description": "Hacker News top story (Score: 122): Cuis: The Modern Smalltalk-80",
+            "detailed_content": "Cuis Smalltalk | The modern Smalltalk-80\nCuis Smalltalk\nOverview Documentation Stories News Community Packages\nThe modern Smalltalk-80\nCuis is a\nfree Smalltalk-80 environment\nwith a specific set of goals: being\nsimple and powerful . It is also\nportable to any platform , fast and efficient.\nGet started\nA typical work-in-progress scene in Cuis Smalltalk application development: An Inspector displays an object from the running application, a message is sent to this object to show its halo, and the auto-completion tool is active. Class browsers are open on the application\u2019s relevant classes; a Transcript provides feedback on the application\u2019s execution; under the application view, a Workspace contains code related to the application.\nA showcase of Cuis Smalltalk\u2019s support for vector graphics, SVG, TrueType fonts and Unicode.\n\u201cI like it\u2026 It\u2019s nice and clean and simple and pretty. Nice stuff!\u201d\nAlan Kay\n2007-04-27\n\u00b7\nSource\n\u201cYay, Juan. You GO, guy! \u2026a great example of malleable software (and a clever mind) at work.\u201d\nDan Ingalls\n2007-04-27\n\u00b7\nSource\n\u201cI think you have a very elegant design aesthetic.\u201d\nJohn Maloney\n2007-11-19\n\u00b7 Private communication\nMore nice comments about Cuis\nLatest news\n2026-10-01\nCuis at Smalltalks 2026\nSmalltalks 2026\ntakes place from October 14 to 16 at the Facultad Regional Rosario of the UTN, in Rosario, Argentina, and Cuis will be there: eight talks of the program come from the Cuis community or show work done in Cuis. We hope to see you all there!\n2026-06-02\nJuly Cuis Meeting\nWhat.\nIt is a \u201cDemo Meeting\u201d for demonstration then discussion.\nMilan Lajtos will present his experience on using a code agent to\ndevelop Blueprint, a revisit of the Cuis Smalltalk system desktop.\n2026-06-01\nCuis 7.8 release\nCuis 7.8 stable release!\nOlder news\nSubscribe\nLatest meeti",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Astroterm: A Planetarium for Your Terminal",
+            "url": "https://github.com/da-luce/astroterm",
+            "description": "Hacker News top story (Score: 143): Astroterm: A Planetarium for Your Terminal",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Events Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nda-luce astroterm Repository navigation Code Issues 34 \u00a0( 34 ) Pull requests ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+            "url": "https://github.com/SheepSeb/tinyworldformer",
+            "description": "Hacker News top story (Score: 214): A tiny world model running games on a Raspberry Pi Pico 2 W",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Events Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nSheepSeb tinyworldformer Repository navigation Code Issues Pull requests Acti",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: I Turned DOOM into a Transformer",
+            "url": "https://github.com/mottopanikeiku/doomformer",
+            "description": "Hacker News top story (Score: 94): Show HN: I Turned DOOM into a Transformer",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Events Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nmottopanikeiku doomformer Repository navigation Code Issues Pull requests 1 \u00a0",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Best AI Visibility Tools in 2026",
+            "url": "https://dev.to/sasha_magicspace_329d68d/best-ai-visibility-tools-in-2026-79c",
+            "description": "A practical buyer guide to tracking how ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews talk about your brand.\n\nA growing share of buyer research now starts with a question typed into an AI assistant instead of a search box. Someone asks \"what's the best payroll software for a 20-perso",
+            "detailed_content": "Best AI Visibility Tools in 2026 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSasha Magic Space\nPosted on\nOct 30\n\u2022\nOriginally published at\nmagicspaceblog.hashnode.dev\nBest AI Visibility Tools in 2026\n# aiseo\n# seo\n# chatgpt\n# marketing\nA practical buyer guide to tracking how ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews talk about your brand.\nA growing share of buyer research now starts with a question typed into an AI assistant instead of a search box. Someone asks \"what's the best payroll software for a 20-person agency?\" and gets a short answer naming three or four products. If you're not in that answer, you never made the shortlist, and your analytics won't tell you why.\nAI visibility tools close that gap. This guide covers what to look for, how the main options differ, and how to pick one without overbuying.\nWhat an AI visibility tool actually does\nUnder the hood, most tools in this space follow the same loop:\nDefine prompts.\nThe questions a buyer might ask, such as \"best X for Y\" or \"X vs Y\" or \"alternatives to X\".\nQuery engines.\nSend those prompts to one or more AI engines, usually more than once, because answers vary from run to run.\nParse answers.\nDetect which brands are mentioned, in what order, and which sources (URLs) are cited.\nReport.\nTurn that into a visibility score, competitor comparisons, and ideally something you can act on.\nThe differences come down to which engines are covered, how prompts are chosen, how often scans run, what happens to citation data, and how much it costs.\nComparison cri",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "GitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby",
+            "url": "https://dev.to/damiano_builds/gitlab-was-patched-the-server-was-still-vulnerable-cve-2026-97229-lives-in-ruby-22ie",
+            "description": "On October 20, 2026, someone registered an account on Alpine Linux's public GitLab instance and started sending it crafted CI configurations. The instance crashed eight times over two days. Four of those crashes were the attacker getting partway through an exploit and failing at the next step. Alpin",
+            "detailed_content": "GitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDamiano\nPosted on\nOct 30\n\u2022\nOriginally published at\ndamianobianda.hashnode.dev\nGitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby\n# security\n# gitlab\n# ruby\n# devops\nOn October 20, 2026, someone registered an account on Alpine Linux's public GitLab instance and started sending it crafted CI configurations. The instance crashed eight times over two days. Four of those crashes were the attacker getting partway through an exploit and failing at the next step. Alpine's maintainers later wrote, with unusual honesty, \"The attack came close to working.\"\nThe vulnerability is CVE-2026-97229, a CVSS 10.0 unauthenticated remote code execution flaw in GitLab CE and EE. On October 29, CISA added it to the Known Exploited Vulnerabilities catalog, giving US federal agencies until November 1 to patch. This post is about the part of the story that should worry anyone running a self-managed GitLab: Alpine upgraded GitLab, and the vulnerability did not go away.\nWhat CVE-2026-97229 actually is\nPer the CVE record and GitLab's October 12 critical patch release (19.4.2, 19.3.5, 19.2.8), the flaw is an integer overflow or wraparound in how GitLab evaluates regular expressions inside CI/CD configuration. An unauthenticated user can send a specially crafted regex in a CI config and execute arbitrary code on the server, because the regex validation is insufficient.\nThe crucial detail: the underlyin",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Why Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware",
+            "url": "https://dev.to/zelvior/why-your-download-manager-matters-cross-platform-downloads-and-legacy-hardware-2cl9",
+            "description": "Downloading files is something almost every computer user does. Whether it's software, documents, images, archives, development tools, or large files, downloading has become an essential part of everyday computing.\n\nBut there's something interesting: while operating systems and applications continue",
+            "detailed_content": "Why Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nZelvior\nPosted on\nOct 30\nWhy Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware\n# opensource\n# productivity\n# linux\n# zdm\nDownloading files is something almost every computer user does. Whether it's software, documents, images, archives, development tools, or large files, downloading has become an essential part of everyday computing.\nBut there's something interesting: while operating systems and applications continue to evolve, the way we manage downloads doesn't always receive the attention it deserves.\nMost users rely on their browser's built-in download manager. For basic tasks, that's perfectly fine. However, when downloads become frequent, involve multiple files, or require more control, a dedicated download manager can make a difference.\nThis is one of the areas I've been interested in exploring through my own software project:\nZelvior Download Manager (ZDM).\nIn this article, let's explore why dedicated download managers matter, why cross-platform compatibility is important, and why supporting older hardware is still worth considering.\n1. The Problem With Relying Entirely on Browser Downloads\nModern browsers provide built-in download functionality, and for many users, it does everything they need.\nHowever, browser-based downloads aren't necessarily ideal for every workflow.\nConsider these situations:\nYou're downloading multiple files simultaneously.\nYou regularly need to ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "WordPress 7.2 beta: 6 changes plugin and block developers should test before December 8",
+            "url": "https://dev.to/farhanshafi/wordpress-72-beta-6-changes-plugin-and-block-developers-should-test-before-december-8-5g3e",
+            "description": "WordPress 7.2 is in beta. RC1 is on November 17 and the final release is planned for December 8.\n\nThe WordPress Developer Blog published its October \"What's new for developers?\" roundup. Most of it is new features. These six items are different: they can change how your existing plugin or block beha",
+            "detailed_content": "WordPress 7.2 beta: 6 changes plugin and block developers should test before December 8 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nFarhan Shafi\nPosted on\nOct 30\nWordPress 7.2 beta: 6 changes plugin and block developers should test before December 8\n# wordpress\n# php\n# gutenberg\n# webdev\nWordPress 7.2 is in beta. RC1 is on November 17 and the final release is planned for December 8.\nThe WordPress Developer Blog published its October \"What's new for developers?\" roundup. Most of it is new features. These six items are different: they can change how your existing plugin or block behaves. Only one of them is a plain deprecation.\n1. wp_kses() on the HTML API\nWordPress is rebuilding its HTML sanitizer on top of the HTML API. The new parser normalizes output, strips the contents of script and style elements, and rejects some malformed SVG, MathML and comments. This is targeted for 7.2 or 7.3.\nWhat to check: any code that stores or compares sanitized HTML, especially SVG and inline markup. The filter\nwp_kses_force_legacy_parser\nrestores the old behavior, but the Developer Blog calls it a stopgap. Breakage should be reported on Trac ticket 66208.\n2. NO_BACKSLASH_ESCAPES is gone from the wpdb session\nwpdb\nnow strips\nNO_BACKSLASH_ESCAPES\nfrom WordPress's own database session. Plugins and mu-plugins load too late to change that. To keep the mode, remove it from the\nincompatible_sql_modes\nfilter inside a\ndb.php\ndrop-in:\n// wp-content/db.php\nadd_filter (\n'incompatible_sql_modes' ,\nfunction\n(\n$modes\n)\n{\nreturn\narray_diff (\n$modes ,\narray ",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "We're releasing the weights of Mistral Large 4",
+            "url": "https://mistral.ai/news/mistral-large-4-oss/",
+            "description": "Hacker News top story (Score: 1486): We're releasing the weights of Mistral Large 4",
+            "detailed_content": "Mistral Large 4 (Le Chonk) is now open weight | Mistral\nGet in touch\nMenu\nResearch Sovereign AI\nCloud\nCustomers\nCompany\nGet in touch\nLogin\nWhy Sovereign AI\nProducts\nMethod\nSovereign AI in practice\nInference\nCompute\nEnergy & utilities\nManufacturing\nFinancial services\nPublic sector\nCybersecurity\nAll customers\nBlog\nDocs\nAbout us\nCareers\nResearch Sovereign AI Cloud Customers Company\nWhy Sovereign AI\nProducts\nMethod\nSovereign AI in practice\nInference\nCompute\nEnergy & utilities\nManufacturing\nFinancial services\nPublic sector\nCybersecurity\nAll customers\nBlog\nDocs\nAbout us\nCareers\nGet in touch Login\nStudio\nVibe\nMistral Large 4 (Le Chonk) Built for Coders, Trusted by Defenders. Mistral Large 4 (Le Chonk) Built for Coders, Trusted by Defenders.\nBack to Blog\nShare this post\nCopy url to clipboard Copied\nThinking Summary Mistral released Mistral Large 4 (Le Chonk), a 1-trillion-parameter multimodal model, now available with improved coding, cybersecurity, and reasoning efficiency. It leads open-weight benchmarks in coding and defensive security while offering three reasoning modes for cost-performance balance. Fully open-weight and European-trained, it empowers sovereign AI with customizable, self-hosted deployment options. We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybersecurity. Earlier this month, we released Mistral Large 4 (Le Chonk), our flagship 1-trillion-parameter, natively multimodal model, in public preview. The response to the preview has exceeded our expectations, and we're grateful to our developer community, early-access customers, and partners for their support, collaboration, and feedback. Since then, we've put that feedback to work while continuing to scale reinforcement learning, driving massive improvements in\nc",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Documentation confirms release of Mistral Large 4 weights."
+          },
+          {
+            "source": "Hacker News",
+            "title": "Cuis: The Modern Smalltalk-80",
+            "url": "https://cuis.st/",
+            "description": "Hacker News top story (Score: 122): Cuis: The Modern Smalltalk-80",
+            "detailed_content": "Cuis Smalltalk | The modern Smalltalk-80\nCuis Smalltalk\nOverview Documentation Stories News Community Packages\nThe modern Smalltalk-80\nCuis is a\nfree Smalltalk-80 environment\nwith a specific set of goals: being\nsimple and powerful . It is also\nportable to any platform , fast and efficient.\nGet started\nA typical work-in-progress scene in Cuis Smalltalk application development: An Inspector displays an object from the running application, a message is sent to this object to show its halo, and the auto-completion tool is active. Class browsers are open on the application\u2019s relevant classes; a Transcript provides feedback on the application\u2019s execution; under the application view, a Workspace contains code related to the application.\nA showcase of Cuis Smalltalk\u2019s support for vector graphics, SVG, TrueType fonts and Unicode.\n\u201cI like it\u2026 It\u2019s nice and clean and simple and pretty. Nice stuff!\u201d\nAlan Kay\n2007-04-27\n\u00b7\nSource\n\u201cYay, Juan. You GO, guy! \u2026a great example of malleable software (and a clever mind) at work.\u201d\nDan Ingalls\n2007-04-27\n\u00b7\nSource\n\u201cI think you have a very elegant design aesthetic.\u201d\nJohn Maloney\n2007-11-19\n\u00b7 Private communication\nMore nice comments about Cuis\nLatest news\n2026-10-01\nCuis at Smalltalks 2026\nSmalltalks 2026\ntakes place from October 14 to 16 at the Facultad Regional Rosario of the UTN, in Rosario, Argentina, and Cuis will be there: eight talks of the program come from the Cuis community or show work done in Cuis. We hope to see you all there!\n2026-06-02\nJuly Cuis Meeting\nWhat.\nIt is a \u201cDemo Meeting\u201d for demonstration then discussion.\nMilan Lajtos will present his experience on using a code agent to\ndevelop Blueprint, a revisit of the Cuis Smalltalk system desktop.\n2026-06-01\nCuis 7.8 release\nCuis 7.8 stable release!\nOlder news\nSubscribe\nLatest meeti",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference describes Cuis as modern Smalltalk-80, matching claim."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Best AI Visibility Tools in 2026",
+            "url": "https://dev.to/sasha_magicspace_329d68d/best-ai-visibility-tools-in-2026-79c",
+            "description": "A practical buyer guide to tracking how ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews talk about your brand.\n\nA growing share of buyer research now starts with a question typed into an AI assistant instead of a search box. Someone asks \"what's the best payroll software for a 20-perso",
+            "detailed_content": "Best AI Visibility Tools in 2026 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSasha Magic Space\nPosted on\nOct 30\n\u2022\nOriginally published at\nmagicspaceblog.hashnode.dev\nBest AI Visibility Tools in 2026\n# aiseo\n# seo\n# chatgpt\n# marketing\nA practical buyer guide to tracking how ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews talk about your brand.\nA growing share of buyer research now starts with a question typed into an AI assistant instead of a search box. Someone asks \"what's the best payroll software for a 20-person agency?\" and gets a short answer naming three or four products. If you're not in that answer, you never made the shortlist, and your analytics won't tell you why.\nAI visibility tools close that gap. This guide covers what to look for, how the main options differ, and how to pick one without overbuying.\nWhat an AI visibility tool actually does\nUnder the hood, most tools in this space follow the same loop:\nDefine prompts.\nThe questions a buyer might ask, such as \"best X for Y\" or \"X vs Y\" or \"alternatives to X\".\nQuery engines.\nSend those prompts to one or more AI engines, usually more than once, because answers vary from run to run.\nParse answers.\nDetect which brands are mentioned, in what order, and which sources (URLs) are cited.\nReport.\nTurn that into a visibility score, competitor comparisons, and ideally something you can act on.\nThe differences come down to which engines are covered, how prompts are chosen, how often scans run, what happens to citation data, and how much it costs.\nComparison cri",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article content matches described AI visibility guide."
+          },
+          {
+            "source": "Dev.to",
+            "title": "GitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby",
+            "url": "https://dev.to/damiano_builds/gitlab-was-patched-the-server-was-still-vulnerable-cve-2026-97229-lives-in-ruby-22ie",
+            "description": "On October 20, 2026, someone registered an account on Alpine Linux's public GitLab instance and started sending it crafted CI configurations. The instance crashed eight times over two days. Four of those crashes were the attacker getting partway through an exploit and failing at the next step. Alpin",
+            "detailed_content": "GitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDamiano\nPosted on\nOct 30\n\u2022\nOriginally published at\ndamianobianda.hashnode.dev\nGitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby\n# security\n# gitlab\n# ruby\n# devops\nOn October 20, 2026, someone registered an account on Alpine Linux's public GitLab instance and started sending it crafted CI configurations. The instance crashed eight times over two days. Four of those crashes were the attacker getting partway through an exploit and failing at the next step. Alpine's maintainers later wrote, with unusual honesty, \"The attack came close to working.\"\nThe vulnerability is CVE-2026-97229, a CVSS 10.0 unauthenticated remote code execution flaw in GitLab CE and EE. On October 29, CISA added it to the Known Exploited Vulnerabilities catalog, giving US federal agencies until November 1 to patch. This post is about the part of the story that should worry anyone running a self-managed GitLab: Alpine upgraded GitLab, and the vulnerability did not go away.\nWhat CVE-2026-97229 actually is\nPer the CVE record and GitLab's October 12 critical patch release (19.4.2, 19.3.5, 19.2.8), the flaw is an integer overflow or wraparound in how GitLab evaluates regular expressions inside CI/CD configuration. An unauthenticated user can send a specially crafted regex in a CI config and execute arbitrary code on the server, because the regex validation is insufficient.\nThe crucial detail: the underlyin",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Documentation details CVE-2026-97229 and GitLab issue as claimed."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Why Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware",
+            "url": "https://dev.to/zelvior/why-your-download-manager-matters-cross-platform-downloads-and-legacy-hardware-2cl9",
+            "description": "Downloading files is something almost every computer user does. Whether it's software, documents, images, archives, development tools, or large files, downloading has become an essential part of everyday computing.\n\nBut there's something interesting: while operating systems and applications continue",
+            "detailed_content": "Why Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nZelvior\nPosted on\nOct 30\nWhy Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware\n# opensource\n# productivity\n# linux\n# zdm\nDownloading files is something almost every computer user does. Whether it's software, documents, images, archives, development tools, or large files, downloading has become an essential part of everyday computing.\nBut there's something interesting: while operating systems and applications continue to evolve, the way we manage downloads doesn't always receive the attention it deserves.\nMost users rely on their browser's built-in download manager. For basic tasks, that's perfectly fine. However, when downloads become frequent, involve multiple files, or require more control, a dedicated download manager can make a difference.\nThis is one of the areas I've been interested in exploring through my own software project:\nZelvior Download Manager (ZDM).\nIn this article, let's explore why dedicated download managers matter, why cross-platform compatibility is important, and why supporting older hardware is still worth considering.\n1. The Problem With Relying Entirely on Browser Downloads\nModern browsers provide built-in download functionality, and for many users, it does everything they need.\nHowever, browser-based downloads aren't necessarily ideal for every workflow.\nConsider these situations:\nYou're downloading multiple files simultaneously.\nYou regularly need to ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference article discusses download manager importance as claimed."
+          },
+          {
+            "source": "Dev.to",
+            "title": "WordPress 7.2 beta: 6 changes plugin and block developers should test before December 8",
+            "url": "https://dev.to/farhanshafi/wordpress-72-beta-6-changes-plugin-and-block-developers-should-test-before-december-8-5g3e",
+            "description": "WordPress 7.2 is in beta. RC1 is on November 17 and the final release is planned for December 8.\n\nThe WordPress Developer Blog published its October \"What's new for developers?\" roundup. Most of it is new features. These six items are different: they can change how your existing plugin or block beha",
+            "detailed_content": "WordPress 7.2 beta: 6 changes plugin and block developers should test before December 8 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nFarhan Shafi\nPosted on\nOct 30\nWordPress 7.2 beta: 6 changes plugin and block developers should test before December 8\n# wordpress\n# php\n# gutenberg\n# webdev\nWordPress 7.2 is in beta. RC1 is on November 17 and the final release is planned for December 8.\nThe WordPress Developer Blog published its October \"What's new for developers?\" roundup. Most of it is new features. These six items are different: they can change how your existing plugin or block behaves. Only one of them is a plain deprecation.\n1. wp_kses() on the HTML API\nWordPress is rebuilding its HTML sanitizer on top of the HTML API. The new parser normalizes output, strips the contents of script and style elements, and rejects some malformed SVG, MathML and comments. This is targeted for 7.2 or 7.3.\nWhat to check: any code that stores or compares sanitized HTML, especially SVG and inline markup. The filter\nwp_kses_force_legacy_parser\nrestores the old behavior, but the Developer Blog calls it a stopgap. Breakage should be reported on Trac ticket 66208.\n2. NO_BACKSLASH_ESCAPES is gone from the wpdb session\nwpdb\nnow strips\nNO_BACKSLASH_ESCAPES\nfrom WordPress's own database session. Plugins and mu-plugins load too late to change that. To keep the mode, remove it from the\nincompatible_sql_modes\nfilter inside a\ndb.php\ndrop-in:\n// wp-content/db.php\nadd_filter (\n'incompatible_sql_modes' ,\nfunction\n(\n$modes\n)\n{\nreturn\narray_diff (\n$modes ,\narray ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference outlines WordPress 7.2 beta changes matching claim."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "We're releasing the weights of Mistral Large 4",
+            "url": "https://mistral.ai/news/mistral-large-4-oss/",
+            "description": "Hacker News top story (Score: 1486): We're releasing the weights of Mistral Large 4",
+            "detailed_content": "Mistral Large 4 (Le Chonk) is now open weight | Mistral\nGet in touch\nMenu\nResearch Sovereign AI\nCloud\nCustomers\nCompany\nGet in touch\nLogin\nWhy Sovereign AI\nProducts\nMethod\nSovereign AI in practice\nInference\nCompute\nEnergy & utilities\nManufacturing\nFinancial services\nPublic sector\nCybersecurity\nAll customers\nBlog\nDocs\nAbout us\nCareers\nResearch Sovereign AI Cloud Customers Company\nWhy Sovereign AI\nProducts\nMethod\nSovereign AI in practice\nInference\nCompute\nEnergy & utilities\nManufacturing\nFinancial services\nPublic sector\nCybersecurity\nAll customers\nBlog\nDocs\nAbout us\nCareers\nGet in touch Login\nStudio\nVibe\nMistral Large 4 (Le Chonk) Built for Coders, Trusted by Defenders. Mistral Large 4 (Le Chonk) Built for Coders, Trusted by Defenders.\nBack to Blog\nShare this post\nCopy url to clipboard Copied\nThinking Summary Mistral released Mistral Large 4 (Le Chonk), a 1-trillion-parameter multimodal model, now available with improved coding, cybersecurity, and reasoning efficiency. It leads open-weight benchmarks in coding and defensive security while offering three reasoning modes for cost-performance balance. Fully open-weight and European-trained, it empowers sovereign AI with customizable, self-hosted deployment options. We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybersecurity. Earlier this month, we released Mistral Large 4 (Le Chonk), our flagship 1-trillion-parameter, natively multimodal model, in public preview. The response to the preview has exceeded our expectations, and we're grateful to our developer community, early-access customers, and partners for their support, collaboration, and feedback. Since then, we've put that feedback to work while continuing to scale reinforcement learning, driving massive improvements in\nc",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Documentation confirms release of Mistral Large 4 weights.",
+            "why_it_matters": "Mistral Large\u202f4 releases a 1\u2011trillion\u2011parameter open\u2011weight LLM that outperforms open models on code generation and security analysis, enabling on\u2011prem, privacy\u2011first AI tooling.",
+            "who_cares": "AI/ML engineers building code assistants, security tools, or self\u2011hosted AI services.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Cuis: The Modern Smalltalk-80",
+            "url": "https://cuis.st/",
+            "description": "Hacker News top story (Score: 122): Cuis: The Modern Smalltalk-80",
+            "detailed_content": "Cuis Smalltalk | The modern Smalltalk-80\nCuis Smalltalk\nOverview Documentation Stories News Community Packages\nThe modern Smalltalk-80\nCuis is a\nfree Smalltalk-80 environment\nwith a specific set of goals: being\nsimple and powerful . It is also\nportable to any platform , fast and efficient.\nGet started\nA typical work-in-progress scene in Cuis Smalltalk application development: An Inspector displays an object from the running application, a message is sent to this object to show its halo, and the auto-completion tool is active. Class browsers are open on the application\u2019s relevant classes; a Transcript provides feedback on the application\u2019s execution; under the application view, a Workspace contains code related to the application.\nA showcase of Cuis Smalltalk\u2019s support for vector graphics, SVG, TrueType fonts and Unicode.\n\u201cI like it\u2026 It\u2019s nice and clean and simple and pretty. Nice stuff!\u201d\nAlan Kay\n2007-04-27\n\u00b7\nSource\n\u201cYay, Juan. You GO, guy! \u2026a great example of malleable software (and a clever mind) at work.\u201d\nDan Ingalls\n2007-04-27\n\u00b7\nSource\n\u201cI think you have a very elegant design aesthetic.\u201d\nJohn Maloney\n2007-11-19\n\u00b7 Private communication\nMore nice comments about Cuis\nLatest news\n2026-10-01\nCuis at Smalltalks 2026\nSmalltalks 2026\ntakes place from October 14 to 16 at the Facultad Regional Rosario of the UTN, in Rosario, Argentina, and Cuis will be there: eight talks of the program come from the Cuis community or show work done in Cuis. We hope to see you all there!\n2026-06-02\nJuly Cuis Meeting\nWhat.\nIt is a \u201cDemo Meeting\u201d for demonstration then discussion.\nMilan Lajtos will present his experience on using a code agent to\ndevelop Blueprint, a revisit of the Cuis Smalltalk system desktop.\n2026-06-01\nCuis 7.8 release\nCuis 7.8 stable release!\nOlder news\nSubscribe\nLatest meeti",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference describes Cuis as modern Smalltalk-80, matching claim.",
+            "why_it_matters": "Cuis provides a lightweight, fully portable Smalltalk\u201180 environment with modern UI, ideal for rapid prototyping and live\u2011coding exploration.",
+            "who_cares": "Smalltalk enthusiasts, language researchers, and developers who value live, reflective programming environments.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Best AI Visibility Tools in 2026",
+            "url": "https://dev.to/sasha_magicspace_329d68d/best-ai-visibility-tools-in-2026-79c",
+            "description": "A practical buyer guide to tracking how ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews talk about your brand.\n\nA growing share of buyer research now starts with a question typed into an AI assistant instead of a search box. Someone asks \"what's the best payroll software for a 20-perso",
+            "detailed_content": "Best AI Visibility Tools in 2026 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSasha Magic Space\nPosted on\nOct 30\n\u2022\nOriginally published at\nmagicspaceblog.hashnode.dev\nBest AI Visibility Tools in 2026\n# aiseo\n# seo\n# chatgpt\n# marketing\nA practical buyer guide to tracking how ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews talk about your brand.\nA growing share of buyer research now starts with a question typed into an AI assistant instead of a search box. Someone asks \"what's the best payroll software for a 20-person agency?\" and gets a short answer naming three or four products. If you're not in that answer, you never made the shortlist, and your analytics won't tell you why.\nAI visibility tools close that gap. This guide covers what to look for, how the main options differ, and how to pick one without overbuying.\nWhat an AI visibility tool actually does\nUnder the hood, most tools in this space follow the same loop:\nDefine prompts.\nThe questions a buyer might ask, such as \"best X for Y\" or \"X vs Y\" or \"alternatives to X\".\nQuery engines.\nSend those prompts to one or more AI engines, usually more than once, because answers vary from run to run.\nParse answers.\nDetect which brands are mentioned, in what order, and which sources (URLs) are cited.\nReport.\nTurn that into a visibility score, competitor comparisons, and ideally something you can act on.\nThe differences come down to which engines are covered, how prompts are chosen, how often scans run, what happens to citation data, and how much it costs.\nComparison cri",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article content matches described AI visibility guide.",
+            "why_it_matters": "AI visibility platforms turn opaque LLM\u2011driven search results into measurable brand exposure data, letting teams act on AI\u2011first discovery.",
+            "who_cares": "Product managers, dev\u2011ops, and engineers responsible for brand presence in AI\u2011driven search and recommendation pipelines.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "GitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby",
+            "url": "https://dev.to/damiano_builds/gitlab-was-patched-the-server-was-still-vulnerable-cve-2026-97229-lives-in-ruby-22ie",
+            "description": "On October 20, 2026, someone registered an account on Alpine Linux's public GitLab instance and started sending it crafted CI configurations. The instance crashed eight times over two days. Four of those crashes were the attacker getting partway through an exploit and failing at the next step. Alpin",
+            "detailed_content": "GitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDamiano\nPosted on\nOct 30\n\u2022\nOriginally published at\ndamianobianda.hashnode.dev\nGitLab Was Patched, the Server Was Still Vulnerable: CVE-2026-97229 Lives in Ruby\n# security\n# gitlab\n# ruby\n# devops\nOn October 20, 2026, someone registered an account on Alpine Linux's public GitLab instance and started sending it crafted CI configurations. The instance crashed eight times over two days. Four of those crashes were the attacker getting partway through an exploit and failing at the next step. Alpine's maintainers later wrote, with unusual honesty, \"The attack came close to working.\"\nThe vulnerability is CVE-2026-97229, a CVSS 10.0 unauthenticated remote code execution flaw in GitLab CE and EE. On October 29, CISA added it to the Known Exploited Vulnerabilities catalog, giving US federal agencies until November 1 to patch. This post is about the part of the story that should worry anyone running a self-managed GitLab: Alpine upgraded GitLab, and the vulnerability did not go away.\nWhat CVE-2026-97229 actually is\nPer the CVE record and GitLab's October 12 critical patch release (19.4.2, 19.3.5, 19.2.8), the flaw is an integer overflow or wraparound in how GitLab evaluates regular expressions inside CI/CD configuration. An unauthenticated user can send a specially crafted regex in a CI config and execute arbitrary code on the server, because the regex validation is insufficient.\nThe crucial detail: the underlyin",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Documentation details CVE-2026-97229 and GitLab issue as claimed.",
+            "why_it_matters": "CVE\u20112026\u201197229 is a critical remote\u2011code\u2011execution flaw in GitLab\u2019s Ruby regex handling that survives the official patch, leaving self\u2011hosted instances vulnerable.",
+            "who_cares": "GitLab administrators, DevOps, SRE, and security engineers running self\u2011managed GitLab installations.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Why Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware",
+            "url": "https://dev.to/zelvior/why-your-download-manager-matters-cross-platform-downloads-and-legacy-hardware-2cl9",
+            "description": "Downloading files is something almost every computer user does. Whether it's software, documents, images, archives, development tools, or large files, downloading has become an essential part of everyday computing.\n\nBut there's something interesting: while operating systems and applications continue",
+            "detailed_content": "Why Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nZelvior\nPosted on\nOct 30\nWhy Your Download Manager Matters: Cross-Platform Downloads and Legacy Hardware\n# opensource\n# productivity\n# linux\n# zdm\nDownloading files is something almost every computer user does. Whether it's software, documents, images, archives, development tools, or large files, downloading has become an essential part of everyday computing.\nBut there's something interesting: while operating systems and applications continue to evolve, the way we manage downloads doesn't always receive the attention it deserves.\nMost users rely on their browser's built-in download manager. For basic tasks, that's perfectly fine. However, when downloads become frequent, involve multiple files, or require more control, a dedicated download manager can make a difference.\nThis is one of the areas I've been interested in exploring through my own software project:\nZelvior Download Manager (ZDM).\nIn this article, let's explore why dedicated download managers matter, why cross-platform compatibility is important, and why supporting older hardware is still worth considering.\n1. The Problem With Relying Entirely on Browser Downloads\nModern browsers provide built-in download functionality, and for many users, it does everything they need.\nHowever, browser-based downloads aren't necessarily ideal for every workflow.\nConsider these situations:\nYou're downloading multiple files simultaneously.\nYou regularly need to ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference article discusses download manager importance as claimed.",
+            "why_it_matters": "ZDM delivers a cross\u2011platform, low\u2011resource download manager, giving power users and developers fine\u2011grained control over large or batch downloads on legacy hardware.",
+            "who_cares": "CLI tool developers, power users, and teams maintaining download pipelines across diverse operating systems.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "WordPress 7.2 beta: 6 changes plugin and block developers should test before December 8",
+            "url": "https://dev.to/farhanshafi/wordpress-72-beta-6-changes-plugin-and-block-developers-should-test-before-december-8-5g3e",
+            "description": "WordPress 7.2 is in beta. RC1 is on November 17 and the final release is planned for December 8.\n\nThe WordPress Developer Blog published its October \"What's new for developers?\" roundup. Most of it is new features. These six items are different: they can change how your existing plugin or block beha",
+            "detailed_content": "WordPress 7.2 beta: 6 changes plugin and block developers should test before December 8 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nFarhan Shafi\nPosted on\nOct 30\nWordPress 7.2 beta: 6 changes plugin and block developers should test before December 8\n# wordpress\n# php\n# gutenberg\n# webdev\nWordPress 7.2 is in beta. RC1 is on November 17 and the final release is planned for December 8.\nThe WordPress Developer Blog published its October \"What's new for developers?\" roundup. Most of it is new features. These six items are different: they can change how your existing plugin or block behaves. Only one of them is a plain deprecation.\n1. wp_kses() on the HTML API\nWordPress is rebuilding its HTML sanitizer on top of the HTML API. The new parser normalizes output, strips the contents of script and style elements, and rejects some malformed SVG, MathML and comments. This is targeted for 7.2 or 7.3.\nWhat to check: any code that stores or compares sanitized HTML, especially SVG and inline markup. The filter\nwp_kses_force_legacy_parser\nrestores the old behavior, but the Developer Blog calls it a stopgap. Breakage should be reported on Trac ticket 66208.\n2. NO_BACKSLASH_ESCAPES is gone from the wpdb session\nwpdb\nnow strips\nNO_BACKSLASH_ESCAPES\nfrom WordPress's own database session. Plugins and mu-plugins load too late to change that. To keep the mode, remove it from the\nincompatible_sql_modes\nfilter inside a\ndb.php\ndrop-in:\n// wp-content/db.php\nadd_filter (\n'incompatible_sql_modes' ,\nfunction\n(\n$modes\n)\n{\nreturn\narray_diff (\n$modes ,\narray ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference outlines WordPress 7.2 beta changes matching claim.",
+            "why_it_matters": "WordPress\u202f7.2 introduces breaking changes to wp_kses sanitization and removes NO_BACKSLASH_ESCAPES, which can break existing plugins and blocks if not updated.",
+            "who_cares": "WordPress plugin and Gutenberg block developers preparing for the upcoming 7.2 release.",
+            "verdict": "INTEGRATE"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Tech Shift",
+            "title": "Mistral Large\u202f4 (Le\u202fChonk) \u2013 1\u2011trillion\u2011parameter open\u2011weight LLM",
+            "description": "**Mistral has open\u2011sourced a 1\u2011trillion\u2011parameter multimodal model that beats other open models on code and security tasks.** The new \u201cLe\u202fChonk\u201d model ships with three reasoning modes so you can trade cost for performance, and it\u2019s fully open\u2011weight and trained in Europe, making it a solid foundation for self\u2011hosted AI tools that need privacy\u2011first handling of code generation or threat analysis.",
+            "why_it_matters": "Mistral Large\u202f4 releases a 1\u2011trillion\u2011parameter open\u2011weight LLM that outperforms open models on code generation and security analysis, enabling on\u2011prem, privacy\u2011first AI tooling.",
+            "who_cares": "AI/ML engineers building code assistants, security tools, or self\u2011hosted AI services.",
+            "verdict": "WATCH",
+            "source_url": "https://mistral.ai/news/mistral-large-4-oss/"
+          },
+          {
+            "category": "Cool Tool",
+            "title": "ZDM \u2013 A lightweight cross\u2011platform download manager",
+            "description": "**ZDM gives power users a low\u2011resource, cross\u2011OS download manager that works even on legacy hardware.** It lets you queue many files, throttle bandwidth, and resume interrupted transfers\u2014all from a simple CLI/GUI hybrid, filling the gap left by browser\u2011only download handling.",
+            "why_it_matters": "ZDM delivers a cross\u2011platform, low\u2011resource download manager, giving power users and developers fine\u2011grained control over large or batch downloads on legacy hardware.",
+            "who_cares": "CLI tool developers, power users, and teams maintaining download pipelines across diverse operating systems.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/zelvior/why-your-download-manager-matters-cross-platform-downloads-and-legacy-hardware-2cl9"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "GitLab CVE\u20112026\u201197229 \u2013 Critical RCE that survived the patch",
+            "description": "**A critical remote\u2011code\u2011execution flaw in GitLab\u2019s Ruby regex handling remains exploitable even after the official October patch.** The integer\u2011overflow bug in CI/CD configuration lets an unauthenticated attacker run arbitrary code, and self\u2011managed instances that only applied the patch are still at risk.",
+            "why_it_matters": "CVE\u20112026\u201197229 is a critical remote\u2011code\u2011execution flaw in GitLab\u2019s Ruby regex handling that survives the official patch, leaving self\u2011hosted instances vulnerable.",
+            "who_cares": "GitLab administrators, DevOps, SRE, and security engineers running self\u2011managed GitLab installations.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/damiano_builds/gitlab-was-patched-the-server-was-still-vulnerable-cve-2026-97229-lives-in-ruby-22ie"
+          },
+          {
+            "category": "Watchlist",
+            "title": "Cuis \u2013 The modern Smalltalk\u201180 environment",
+            "description": "**Cuis offers a free, portable Smalltalk\u201180 system that stays true to the language\u2019s live\u2011coding spirit while adding modern UI niceties.** It\u2019s fast, supports vector graphics, SVG, TrueType fonts and Unicode, and provides an inspector, auto\u2011completion, and a workspace that make rapid prototyping feel like a conversation with the code.",
+            "why_it_matters": "Cuis provides a lightweight, fully portable Smalltalk\u201180 environment with modern UI, ideal for rapid prototyping and live\u2011coding exploration.",
+            "who_cares": "Smalltalk enthusiasts, language researchers, and developers who value live, reflective programming environments.",
+            "verdict": "READ",
+            "source_url": "https://cuis.st/"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "WordPress\u202f7.2 beta \u2013 Six breaking changes plugin and block developers must test",
+            "description": "**WordPress\u202f7.2 introduces a revamped HTML sanitizer and drops the NO_BACKSLASH_ESCAPES flag, changes that can silently break existing plugins and Gutenberg blocks.** The beta highlights the new wp_kses behavior, the removal of the flag from the wpdb session, and provides quick code snippets to detect and mitigate the impact before the final release on December\u202f8.",
+            "why_it_matters": "WordPress\u202f7.2 introduces breaking changes to wp_kses sanitization and removes NO_BACKSLASH_ESCAPES, which can break existing plugins and blocks if not updated.",
+            "who_cares": "WordPress plugin and Gutenberg block developers preparing for the upcoming 7.2 release.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/farhanshafi/wordpress-72-beta-6-changes-plugin-and-block-developers-should-test-before-december-8-5g3e"
+          }
+        ]
+      }
+    }
+  },
+  "rejected_urls": [],
+  "restarted": false,
+  "email": {
+    "status": "sent",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": []
+}
