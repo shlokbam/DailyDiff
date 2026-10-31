@@ -269,6 +269,22 @@ body {
   line-height: 1.6;
 }
 
+/* Bold lead sentence written by the Editor */
+.brief-description strong,
+.detail-value strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.brief-description code,
+.detail-value code {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
 .brief-details {
   display: flex;
   flex-direction: column;
