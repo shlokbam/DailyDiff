@@ -17,6 +17,20 @@ const getFaviconUrl = (url) => {
   }
 };
 
+// Renders the **bold** and `code` markdown the Editor writes as elements (no raw HTML injection)
+const renderInline = (text) => {
+  if (!text) return text;
+  return String(text).split(/(\*\*(?:(?!\*\*)[\s\S])+?\*\*|`[^`]+`)/g).map((part, i) => {
+    if (part.length > 4 && part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    if (part.length > 2 && part.startsWith('`') && part.endsWith('`')) {
+      return <code key={i}>{part.slice(1, -1)}</code>;
+    }
+    return part;
+  });
+};
+
 const MOCK_BRIEFS = [];
 
 export default function App() {
@@ -531,18 +545,18 @@ export default function App() {
                           </div>
                           
                           <h3 className="brief-title">{brief.title}</h3>
-                          <p className="brief-description">{brief.description}</p>
+                          <p className="brief-description">{renderInline(brief.description)}</p>
                           
                           {isExpanded && (
                             <div className="brief-details">
                               <div className="detail-section">
                                 <span className="detail-label">Why It Matters</span>
-                                <p className="detail-value">{brief.why_it_matters}</p>
+                                <p className="detail-value">{renderInline(brief.why_it_matters)}</p>
                               </div>
                               
                               <div className="detail-section">
                                 <span className="detail-label">Who Cares</span>
-                                <p className="detail-value">{brief.who_cares}</p>
+                                <p className="detail-value">{renderInline(brief.who_cares)}</p>
                               </div>
                               
                               {brief.source_url && (
