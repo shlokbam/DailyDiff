@@ -426,3 +426,7 @@ DailyDiff/
 ## 📄 License
 
 MIT License.
+
+---
+
+Built by [Shlok Bam](https://shlokbam.in), see more projects on my portfolio.

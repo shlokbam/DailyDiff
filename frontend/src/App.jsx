@@ -599,6 +599,9 @@ export default function App() {
           )}
         </>
       )}
+      <footer style={{ textAlign: 'center', padding: '28px 16px 32px', fontSize: '0.8rem', opacity: 0.7 }}>
+        <a href="https://shlokbam.in" target="_blank" rel="noopener" style={{ color: 'inherit', opacity: 0.75 }}>Built by Shlok Bam · shlokbam.in</a>
+      </footer>
     </div>
   );
 }
