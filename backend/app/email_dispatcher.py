@@ -158,6 +158,7 @@ def build_email_html(brief_group: DailyBriefGroup) -> str:
                                         <td align="center" style="padding-top: 14px; border-top: 1px solid #1f2937; font-size: 11px; color: #6b7280; line-height: 1.6;">
                                             <p style="margin: 0 0 4px 0;">You received this because you subscribed to DailyDiff Tech Intelligence.</p>
                                             <p style="margin: 0;">If you want to unsubscribe, visit our website at <a href="https://dailydiff.in?mode=unsubscribe" style="color: #60a5fa; text-decoration: underline;">dailydiff.in</a> and click on the <strong>Unsubscribe</strong> button.</p>
+                                            <p style="margin: 10px 0 0 0;">Built by <a href="https://shlokbam.in/?utm_source=dailydiff&amp;utm_medium=email&amp;utm_campaign=brief" style="color: #9ca3af; text-decoration: underline;">Shlok Bam</a> &middot; <a href="https://shlokbam.in/?utm_source=dailydiff&amp;utm_medium=email&amp;utm_campaign=brief" style="color: #9ca3af; text-decoration: none;">shlokbam.in</a></p>
                                         </td>
                                     </tr>
                                 </table>
@@ -305,6 +306,7 @@ def dispatch_unsubscribe_confirmation(email: str):
                         <tr>
                             <td align="center" style="padding-top: 25px; border-top: 1px solid #1f2937; font-size: 12px; color: #6b7280;">
                                 <p style="margin: 0;"><a href="https://dailydiff.in" style="color: #60a5fa; text-decoration: none; font-weight: 500;">Visit Dashboard</a></p>
+                                <p style="margin: 10px 0 0 0; font-size: 11px;">Built by <a href="https://shlokbam.in/?utm_source=dailydiff&amp;utm_medium=email&amp;utm_campaign=unsubscribe" style="color: #9ca3af; text-decoration: underline;">Shlok Bam</a> &middot; shlokbam.in</p>
                             </td>
                         </tr>
                     </table>
