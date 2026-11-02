@@ -2332,5 +2332,47 @@
         "source_url": "https://dev.to/farhanshafi/wordpress-72-beta-6-changes-plugin-and-block-developers-should-test-before-december-8-5g3e"
       }
     ]
+  },
+  {
+    "date": "2026-11-02",
+    "published_at": "2026-11-02T11:38:58.304625+00:00",
+    "briefs": [
+      {
+        "category": "Cool Tool",
+        "title": "awesome-tauri-apps",
+        "description": "**Tauri powers a growing catalog of real\u2011world desktop and mobile apps you can actually download.** The curated list groups applications into categories such as AI tools, notes, developer utilities, productivity, communication, and more, demonstrating how a tiny, fast, and secure Rust\u2011backed web UI can be used in production.",
+        "why_it_matters": "Tauri lets you ship tiny, fast desktop apps with a web UI and Rust backend. Seeing production apps proves it\u2019s battle\u2011tested and ready for your next cross\u2011platform tool.",
+        "who_cares": "Frontend engineers, Rust developers, and anyone building cross\u2011platform desktop or mobile apps.",
+        "verdict": "READ",
+        "source_url": "https://github.com/chrysler-stone/awesome-tauri-apps"
+      },
+      {
+        "category": "Watchlist",
+        "title": "TokenEconomizer",
+        "description": "**TokenEconomizer slashes LLM token usage by up to 31\u202f% while often boosting success rates.** The experience\u2011driven black\u2011box system applies micro\u2011skills, tool pruning, and a failure\u2011loop mechanism to keep coding agents cheap and effective, achieving 18.4\u201330.9\u202f% lower mean cost across five agent\u2011model combinations on SWE\u2011Bench tasks.",
+        "why_it_matters": "TokenEconomizer reduces LLM token consumption by 18\u201131\u202f% while often improving success rates, directly lowering cloud\u2011API costs for coding assistants.",
+        "who_cares": "AI/ML engineers, developers of LLM\u2011powered coding assistants, and teams managing large\u2011scale LLM usage.",
+        "verdict": "READ",
+        "source_url": "https://github.com/microsoft/TokenEconomizer"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "My parser read past the input. AddressSanitizer stayed quiet.",
+        "description": "**A tiny C parser can silently over\u2011read input, evading AddressSanitizer unless the surrounding allocation changes.** The post provides a reproducible three\u2011byte example, explains why ASan doesn\u2019t flag the overflow when the read stays inside the allocated buffer, and warns of this hidden risk for fuzz\u2011harness developers.",
+        "why_it_matters": "The article demonstrates a subtle class of buffer\u2011overflow bugs that ASan can miss when input length is mis\u2011interpreted, a critical pitfall for fuzzing and security testing.",
+        "who_cares": "Systems programmers, security researchers, and C/C++ developers who rely on sanitizers and fuzzers.",
+        "verdict": "READ",
+        "source_url": "https://dev.to/panditshivam/my-parser-read-past-the-input-addresssanitizer-stayed-quiet-4mbi"
+      },
+      {
+        "category": "Ecosystem Update",
+        "title": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port",
+        "description": "**Cloudflare Tunnel lets you publish a Docker\u2011hosted web service over HTTPS without ever opening inbound ports.** The guide walks through running cloudflared in Docker Compose, turning an outbound\u2011only connection into a secure public endpoint and removing the need for manual Nginx reverse\u2011proxy or certificate management.",
+        "why_it_matters": "Cloudflare Tunnel lets you expose Dockerized services over HTTPS without opening inbound ports, simplifying secure public access and eliminating manual reverse\u2011proxy and cert\u2011management work.",
+        "who_cares": "DevOps engineers, backend developers, and anyone deploying web services in Docker containers.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://dev.to/maldiharyojudanto/mengenal-cloudflare-tunnel-di-docker-cara-kerja-dan-panduan-praktis-publikasi-web-tanpa-buka-port-4anb"
+      }
+    ]
   }
 ]
