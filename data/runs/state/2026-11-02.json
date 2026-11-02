@@ -1,0 +1,803 @@
+{
+  "date": "2026-11-02",
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "devstart-lab",
+            "full_name": "brunnojob/devstart-lab",
+            "url": "https://github.com/brunnojob/devstart-lab",
+            "description": "DevStart Lab - An interactive open-source platform to learn programming, explore real projects, and contribute to GitHub.",
+            "stars": 50,
+            "forks": 1,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "tws-labs",
+            "full_name": "TrainWithShubham/tws-labs",
+            "url": "https://github.com/TrainWithShubham/tws-labs",
+            "description": "Learn DevOps, Cloud and AI by doing: a real terminal, tasks graded on real machine state. Runs on Windows, macOS and Linux.",
+            "stars": 23,
+            "forks": 40,
+            "language": "Shell"
+          },
+          {
+            "source": "GitHub",
+            "title": "awesome-tauri-apps",
+            "full_name": "chrysler-stone/awesome-tauri-apps",
+            "url": "https://github.com/chrysler-stone/awesome-tauri-apps",
+            "description": "Curated list of desktop and mobile apps built with Tauri.",
+            "stars": 48,
+            "forks": 40,
+            "language": "Unknown"
+          },
+          {
+            "source": "GitHub",
+            "title": "roblox-game-copier-blueprint-lab",
+            "full_name": "monw3249-rgb/roblox-game-copier-blueprint-lab",
+            "url": "https://github.com/monw3249-rgb/roblox-game-copier-blueprint-lab",
+            "description": "Beginner Roblox Game Copier Guide 2026: Safe Clone Workflow for Authorized Projects",
+            "stars": 70,
+            "forks": 0,
+            "language": "HTML"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 4325,
+            "forks": 248,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "TwinDesk",
+            "full_name": "InukaAsith/TwinDesk",
+            "url": "https://github.com/InukaAsith/TwinDesk",
+            "description": " All your computers and your phone, working as one desk. Screens, apps, files, clipboard, calls, texts, notifications, mouse and keyboard, shared between Mac, Windows, Linux and Android. Free and open source. No account, no cloud, and now no shared network needed.",
+            "stars": 2854,
+            "forks": 212,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "WinShun",
+            "full_name": "LingCore/WinShun",
+            "url": "https://github.com/LingCore/WinShun",
+            "description": "Win\u987a\uff1a\u514d\u8d39\u5f00\u6e90\u7684 Windows \u5feb\u901f\u641c\u7d22\u542f\u52a8\u5668\u3002\u53cc\u51fb Ctrl\uff0c\u62fc\u97f3\u79d2\u641c\u6587\u4ef6\u3001\u5168\u6587\u641c\u7d22 Word/Excel/PDF\u3001\u526a\u8d34\u677f\u5386\u53f2\uff08\u4ee3\u66ff Win+V\uff09\u3001\u5bf9\u8bdd\u6846\u641c\u7d22\u3001\u4efb\u52a1\u680f\u641c\u7d22\u3001\u63d2\u4ef6\u3001AI \u52a9\u624b MCP\u3002Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative.",
+            "stars": 806,
+            "forks": 54,
+            "language": "C++"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.5 MB binary, 4.5 MB of RAM, 10 to 60 tokens per agent reply, starts in 2 ms, zero setup.",
+            "stars": 738,
+            "forks": 43,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "atticus-mac",
+            "full_name": "SaarthurR/atticus-mac",
+            "url": "https://github.com/SaarthurR/atticus-mac",
+            "description": "Fast, free voice assistant for your Mac. No API key: runs on your Claude Pro or Max plan. Sends background agents for big jobs, remembers you and learns your shortcuts. Hold \u2303\u2325Space and talk.",
+            "stars": 544,
+            "forks": 49,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "ECC",
+            "full_name": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "stars": 295126,
+            "forks": 43687,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 140827,
+            "forks": 13461,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95789,
+            "forks": 9598,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 92583,
+            "forks": 6322,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 92490,
+            "forks": 12324,
+            "language": "TypeScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
+            "url": "https://hackerbooks.org",
+            "description": "Hacker News top story (Score: 1446): Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Postgres 19 is late because so many more bugs are being found now",
+            "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
+            "description": "Hacker News top story (Score: 520): Postgres 19 is late because so many more bugs are being found now"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: Wikihack \u2013 HackerTube, but for Wikipedia articles mentioned on HN",
+            "url": "https://wikihack.netlify.app",
+            "description": "Hacker News top story (Score: 224): Show HN: Wikihack \u2013 HackerTube, but for Wikipedia articles mentioned on HN"
+          },
+          {
+            "source": "Hacker News",
+            "title": "HackerTube: YouTube built from videos recommended by HN",
+            "url": "https://karpathy.bearblog.dev/hacker-tube/",
+            "description": "Hacker News top story (Score: 2613): HackerTube: YouTube built from videos recommended by HN"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: I've updated my Linux System Call website and API",
+            "url": "https://syscall.sh/",
+            "description": "Hacker News top story (Score: 26): Show HN: I've updated my Linux System Call website and API"
+          },
+          {
+            "source": "Hacker News",
+            "title": "F/OSS Comics #13: BSD Unix, Part 3 \u2013 The Beginning of BSD Unix",
+            "url": "https://fosscomics.com/posts/13.%20BSD%20Unix%20Part%203%20-%20The%20Beginning%20of%20BSD%20Unix/",
+            "description": "Hacker News top story (Score: 138): F/OSS Comics #13: BSD Unix, Part 3 \u2013 The Beginning of BSD Unix"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Bones may release proteins that slow aging and extend life span",
+            "url": "https://www.science.org/content/article/bones-may-release-proteins-slow-aging-and-extend-life-span",
+            "description": "Hacker News top story (Score: 124): Bones may release proteins that slow aging and extend life span"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Mystery of 60-Second Fluctuations in Power Grids Solved",
+            "url": "https://www.fz-juelich.de/en/news/archive/press-release/2026/mystery-of-60-second-fluctuations-in-power-grids-solved",
+            "description": "Hacker News top story (Score: 142): Mystery of 60-Second Fluctuations in Power Grids Solved"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Trigger.dev customer environment variables exposed",
+            "url": "https://trigger.dev/blog/security-incident-nov-2026",
+            "description": "Hacker News top story (Score: 98): Trigger.dev customer environment variables exposed"
+          },
+          {
+            "source": "Hacker News",
+            "title": "From Charlemagne to the Kitchen Boy: Reading the Hamburg Rathaus",
+            "url": "https://alsterrunde.com/from-charlemagne-to-the-kitchen-boy-reading-the-hamburg-rathaus/",
+            "description": "Hacker News top story (Score: 42): From Charlemagne to the Kitchen Boy: Reading the Hamburg Rathaus"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: HackerHack \u2013 HackerBooks but for Posts Posted on HN",
+            "url": "https://news.ycombinator.com/",
+            "description": "Hacker News top story (Score: 23): Show HN: HackerHack \u2013 HackerBooks but for Posts Posted on HN"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Nibnib: Image compression with extreme decompression speed",
+            "url": "https://github.com/raphlinus/nibnib",
+            "description": "Hacker News top story (Score: 152): Nibnib: Image compression with extreme decompression speed"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Tips for more effective fuzz testing with AFL++",
+            "url": "https://nullprogram.com/blog/2025/02/05/",
+            "description": "Hacker News top story (Score: 125): Tips for more effective fuzz testing with AFL++"
+          },
+          {
+            "source": "Hacker News",
+            "title": "China's First Frontier AI Export Controls: Mofcom Announcement No. 48",
+            "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/",
+            "description": "Hacker News top story (Score: 55): China's First Frontier AI Export Controls: Mofcom Announcement No. 48"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Two Truths and a Lie: Developer Edition.",
+            "url": "https://dev.to/elsie-rainee/two-truths-and-a-lie-developer-edition-k8n",
+            "description": "We all know the classic icebreaker: three statements, two true, one a lie. Today we're playing it with a developer twist.\n\nBelow are three rounds. Pick the lie in each one, then check the answers at the bottom. No Googling, and no cheating!\n\n\n  \n  \n  Round 1: Origins\n\n\n\nThe first computer \"bug\" was "
+          },
+          {
+            "source": "Dev.to",
+            "title": "My parser read past the input. AddressSanitizer stayed quiet.",
+            "url": "https://dev.to/panditshivam/my-parser-read-past-the-input-addresssanitizer-stayed-quiet-4mbi",
+            "description": "I gave a deliberately broken parser three bytes. It read byte four. AddressSanitizer said nothing.\n\nThen I changed the allocation around the input. Same parser, same three bytes, same compiler flags: heap-buffer-overflow. There it was. \ud83e\uddea\n\nThe bug hadn't appeared between runs. My first test had given"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Nibnib says 4bpp. The file still has a header.",
+            "url": "https://dev.to/panditshivam/nibnib-says-4bpp-the-file-still-has-a-header-56e4",
+            "description": "My tiny nibnib file was larger than the raw RGB image I fed into it.\n\nFor a 16\u00d716 synthetic gradient, the raw RGB pixels took 768 bytes. The nibnib file took 1,220 bytes. Nothing had gone wrong with the encoder. The file had a palette to carry. \ud83d\udce6\n\nThat was the useful surprise in trying Raph Levien's"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Choosing the Right AI Calling Agent for Your E\u2011commerce Business: A Practical Checklist",
+            "url": "https://dev.to/prashant_dhawade_a3880a77/choosing-the-right-ai-calling-agent-for-your-e-commerce-business-a-practical-checklist-57ea",
+            "description": "Why AI Calling Agents Matter for E\u2011commerce\n\n\nIn today\u2019s hyper\u2011competitive online market, speed and personalization are everything. An AI calling agent can handle thousands of customer interactions in real time, freeing your human agents to focus on complex issues. From order confirmations to post\u2011p"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port",
+            "url": "https://dev.to/maldiharyojudanto/mengenal-cloudflare-tunnel-di-docker-cara-kerja-dan-panduan-praktis-publikasi-web-tanpa-buka-port-4anb",
+            "description": "Di dua artikel sebelumnya, kita telah menyelesaikan dua fondasi krusial:\n\n\n\nSetup Docker di VPS Linux: Menjaga Aplikasi Tetap Aktif 24/7 Tanpa Takut Reboot \u2014 Membangun fondasi server yang stabil, Swap RAM, dan proteksi UFW Firewall.\n\n\nPanduan Praktis Docker Network: Mengelola Komunikasi Antar-Contai"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Java Virtual Threads Aren't Free: 6 Hidden Costs to Check Before Production",
+            "url": "https://dev.to/neetu/java-virtual-threads-arent-free-6-hidden-costs-to-check-before-production-1p0l",
+            "description": "Java virtual threads make it cheap to run a huge number of concurrent tasks, but they don't make your system's limits go away. Memory, database connections, CPU cores, locks and observability all still cost something. Virtual threads were previewed in Java 19 (JEP 425) and became a standard feature "
+          },
+          {
+            "source": "Dev.to",
+            "title": "Understanding Preprocessor Directives, Header Files, and Variable Declarations in C",
+            "url": "https://dev.to/vincenttommi/understanding-preprocessor-directives-header-files-and-variable-declarations-in-c-1o8n",
+            "description": "When learning C programming, there are some fundamental concepts every beginner needs to understand before writing more complex programs.\n\nThree of these concepts are preprocessor directives, header files, and variable declarations.\n\nAlthough they may look simple, they play an important role in how "
+          },
+          {
+            "source": "Dev.to",
+            "title": "Ensuring Compliance and Data Security with AI Calling Agents",
+            "url": "https://dev.to/prashant_dhawade_a3880a77/ensuring-compliance-and-data-security-with-ai-calling-agents-oek",
+            "description": "1. Why AI Calling Agents Are Transforming Customer Outreach\n\n\nAI calling agents, powered by natural language processing and machine learning, can handle thousands of outbound calls per day with consistent quality. They reduce human error, cut costs, and free up human agents for high\u2011value tasks. How"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Detect Financial Fraud Patterns\nwith Knowledge Graphs: A Production\nGuide",
+            "url": "https://www.freecodecamp.org/news/how-to-detect-financial-fraud-patterns-with-knowledge-graphs-a-production-guide/",
+            "description": "Most anti-fraud architectures in enterprise payment workflows evaluate transactions in isolation. When an invoice arrives, an automated rules engine checks it against static thresholds. It checks whet"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How AI-Powered Search Works: A Guide for Devs on AI Visibility",
+            "url": "https://www.freecodecamp.org/news/ai-search-visibility/",
+            "description": "Searched worked in a familiar way for decades: you'd type in your query, get back a list of pages, and choose one to click on. Behind the scenes, Google would find the pages it thought you might want,"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Real-World Penetration Testing: Hands-On Ethical Hacking Crash Course",
+            "url": "https://www.freecodecamp.org/news/learn-real-world-penetration-testing-hands-on-ethical-hacking-crash-course/",
+            "description": "Understanding how malicious actors infiltrate networks is the first step to building resilient infrastructure. To help developers and aspiring security analysts learn the fundamentals of offensive sec"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "High-Speed Decision Pipelines: Jev and Prefill-Only Inference from Scratch",
+            "url": "https://www.freecodecamp.org/news/high-speed-decision-pipelines-jev-and-prefill-only-inference-from-scratch/",
+            "description": "Autoregressive token generation is notoriously slow and memory-intensive, especially when you only need a model to make a structured classification or routing decision rather than write out paragraphs"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Build with Gemini 4 Argon \u2013 Fast-Track API Crash Course",
+            "url": "https://www.freecodecamp.org/news/build-with-gemini-4-argon-fast-track-api-crash-course/",
+            "description": "Google just released Gemini 4 Argon which is its most capable model designed specifically for complex reasoning, advanced coding, math, and science. To help you get building right away, we just publis"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Secure Your AI Agents \u2013 Free Model Context Protocol (MCP) Security Course",
+            "url": "https://www.freecodecamp.org/news/secure-your-ai-agents-free-model-context-protocol-mcp-security-course/",
+            "description": "The Model Context Protocol (MCP) helps connect LLMs to external tools, databases, and APIs. But giving AI agents hands and feet to take real-world actions introduces an entirely new attack surface. We"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Python in Marketing: A Practical Guide to Marketing Analytics, Automation, and Data-Driven Growth [Full Book]",
+            "url": "https://www.freecodecamp.org/news/python-in-marketing-a-practical-book/",
+            "description": "Marketing has always involved wrangling lots of data. Before digital marketing, businesses had to track sales, customer purchases, coupon redemptions, store traffic, and survey responses to understand"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Cloud Service Models Explained: IaaS vs PaaS vs\u00a0SaaS",
+            "url": "https://www.freecodecamp.org/news/cloud-service-models-explained-iaas-vs-paas-vs-saas/",
+            "description": "You likely use cloud services every day. When you check Gmail, join a Zoom meeting, or message your team on Slack, you use cloud-hosted software. But you don't manage the servers it runs on or maintai"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "diff-tour",
+            "url": "https://www.producthunt.com/products/diff-tour",
+            "description": "AI writes the code. Learn to read it like a senior engineer.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Display 1.0",
+            "url": "https://www.producthunt.com/products/display-dev",
+            "description": "Create docs and apps with any agent, in one workspace\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "CuriousLM",
+            "url": "https://www.producthunt.com/products/curiouslm",
+            "description": "Private AI that runs on your device. No account.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Clayzo",
+            "url": "https://www.producthunt.com/products/clayzo",
+            "description": "Create animations and motion design with your coding agent\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Self-Growing Websites by Greta.sh",
+            "url": "https://www.producthunt.com/products/gretabyquestera",
+            "description": "Build a website that can do its own SEO & AEO automatically\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Hyperresearch",
+            "url": "https://www.producthunt.com/products/hyperresearch",
+            "description": "Durable, verified agentic search\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "beacon.sh",
+            "url": "https://www.producthunt.com/products/asymptotelabs",
+            "description": "Open-source self-improving memory for AI coding agents\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Cedric AI for Meetings",
+            "url": "https://www.producthunt.com/products/cedric",
+            "description": "The first AI agent to present your slides and attend for you\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Friday Work",
+            "url": "https://www.producthunt.com/products/friday-work",
+            "description": "When Claude hits its limit, your task keeps going\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "redu.cloud",
+            "url": "https://www.producthunt.com/products/redu-cloud",
+            "description": "Run machines at agent speed, not human speed.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1xl1aup/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "what do you actually look at first when something breaks in prod?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xlnsin/what_do_you_actually_look_at_first_when_something/",
+            "description": "im trying to get better at debugging production issues faster. right now when something goes wrong i kind of just grep through logs hoping something jumps out, which works eventually but feels inefficient curious what other backend devs actually check first. like do you have a mental checklist you r"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Good providers for hosting a basic html + js website?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xlio2z/good_providers_for_hosting_a_basic_html_js_website/",
+            "description": "I feel this may seem like a very strange question to ask given the circumstances, and hopefully this isn&#39;t breaking any rules. A few days ago I had a falling out with someone who happened to be hosting my website on their rented server. It&#39;s a very basic portfolio website with HTML and some "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "EN 301 549 V4.1.1 is out, but as of 3 November 2026 no version of it is cited in the Official Journal under the European Accessibility Act",
+            "url": "https://www.reddit.com/r/webdev/comments/1xlrg0n/en_301_549_v411_is_out_but_as_of_3_november_2026/",
+            "description": "A question that comes up in every EAA thread: &quot;which standard do we test against, and does passing it protect us?&quot; Here is what the primary texts say as of 3 November 2026. Quick definition, because it matters here: under Art. 15(1) of the EAA, a product or service that meets a harmonised "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "CheerpJ 5.0: Java 21/25 in the browser, full OpenJDK, and a new WasmGC engine",
+            "url": "https://www.reddit.com/r/webdev/comments/1xlutrk/cheerpj_50_java_2125_in_the_browser_full_openjdk/",
+            "description": "&#32; submitted by &#32;  /u/alexp_lt   [link] &#32; [comments]"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.36",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.36",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.36. Details: ### Core Changes\n\n- Upgrade React from `a703ca64-20261030` to `e84e1492-20261031`: #100999\n- Upgrade React from `dc9aed36-20261027` to `a703ca64-20261030`: #100965\n\n### Misc Changes\n\n- Turbopack: resolve per-module data once during module graph construction: #94842\n\n### Credits \n\nHuge thanks to @luk..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "awesome-tauri-apps",
+            "full_name": "chrysler-stone/awesome-tauri-apps",
+            "url": "https://github.com/chrysler-stone/awesome-tauri-apps",
+            "description": "Curated list of desktop and mobile apps built with Tauri.",
+            "stars": 48,
+            "forks": 40,
+            "language": "Unknown"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 4325,
+            "forks": 248,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.5 MB binary, 4.5 MB of RAM, 10 to 60 tokens per agent reply, starts in 2 ms, zero setup.",
+            "stars": 738,
+            "forks": 43,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 92583,
+            "forks": 6322,
+            "language": "JavaScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
+            "url": "https://hackerbooks.org",
+            "description": "Hacker News top story (Score: 1446): Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: I've updated my Linux System Call website and API",
+            "url": "https://syscall.sh/",
+            "description": "Hacker News top story (Score: 26): Show HN: I've updated my Linux System Call website and API"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Nibnib: Image compression with extreme decompression speed",
+            "url": "https://github.com/raphlinus/nibnib",
+            "description": "Hacker News top story (Score: 152): Nibnib: Image compression with extreme decompression speed"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Tips for more effective fuzz testing with AFL++",
+            "url": "https://nullprogram.com/blog/2025/02/05/",
+            "description": "Hacker News top story (Score: 125): Tips for more effective fuzz testing with AFL++"
+          },
+          {
+            "source": "Dev.to",
+            "title": "My parser read past the input. AddressSanitizer stayed quiet.",
+            "url": "https://dev.to/panditshivam/my-parser-read-past-the-input-addresssanitizer-stayed-quiet-4mbi",
+            "description": "I gave a deliberately broken parser three bytes. It read byte four. AddressSanitizer said nothing.\n\nThen I changed the allocation around the input. Same parser, same three bytes, same compiler flags: heap-buffer-overflow. There it was. \ud83e\uddea\n\nThe bug hadn't appeared between runs. My first test had given"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port",
+            "url": "https://dev.to/maldiharyojudanto/mengenal-cloudflare-tunnel-di-docker-cara-kerja-dan-panduan-praktis-publikasi-web-tanpa-buka-port-4anb",
+            "description": "Di dua artikel sebelumnya, kita telah menyelesaikan dua fondasi krusial:\n\n\n\nSetup Docker di VPS Linux: Menjaga Aplikasi Tetap Aktif 24/7 Tanpa Takut Reboot \u2014 Membangun fondasi server yang stabil, Swap RAM, dan proteksi UFW Firewall.\n\n\nPanduan Praktis Docker Network: Mengelola Komunikasi Antar-Contai"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "awesome-tauri-apps",
+            "full_name": "chrysler-stone/awesome-tauri-apps",
+            "url": "https://github.com/chrysler-stone/awesome-tauri-apps",
+            "description": "Curated list of desktop and mobile apps built with Tauri.",
+            "stars": 48,
+            "forks": 40,
+            "language": "Unknown",
+            "detailed_content": "# Awesome Tauri Apps [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)\n\n> A curated list of **real-world desktop (and mobile) applications built with [Tauri](https://tauri.app)**.\n\nTauri lets you build small, fast and secure apps with a web frontend and a Rust backend. This list is about *apps you can actually download and use*, not libraries or plugins.\n\n> Looking for Tauri plugins, tooling and learning resources? See the official [tauri-apps/awesome-tauri](https://github.com/tauri-apps/awesome-tauri).\n\n## Contents\n\n- [AI Tools](#ai-tools)\n- [Notes & Knowledge](#notes--knowledge)\n- [Developer Tools](#developer-tools)\n- [Productivity](#productivity)\n- [Communication](#communication)\n- [Networking & Security](#networking--security)\n- [Media & Recording](#media--recording)\n- [Games & Launchers](#games--launchers)\n- [Finance](#finance)\n- [Science & Data](#science--data)\n- [Utilities](#utilities)\n- [Contributing](#contributing)\n\n## AI Tools\n\n### Chat & Local LLMs\n\n- [ChatGPT Desktop (lencx)](https://github.com/lencx/ChatGPT) - Unofficial ChatGPT desktop client.\n- [Jan](https://github.com/menloresearch/jan) - Open-source, offline-first ChatGPT alternative running local LLMs.\n- [Local.ai](https://github.com/louisgv/local.ai) - Simple app to run AI models locally with no GPU required.\n- [NextChat](https://github.com/ChatGPTNextWeb/NextChat) - Lightweight, fast AI assistant with a desktop app supporting many model providers.\n\n### Speech & Transcription\n\n- [Handy](https://github.com/cjpais/Handy) - Free, open-source, offline speech-to-text for any text field.\n- [talat](https://talat.app) - Transcribes meetings and dictation on your own machine, with notes and summaries, for macOS and Windows. Closed-source. (Commercial)\n- [Vibe](https://github.com/thewh1teagle/vibe)",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 4325,
+            "forks": 248,
+            "language": "Python",
+            "detailed_content": "# TokenEconomizer: Experience-Driven Black-Box Cost Control for Coding Agents\n\n<p align=\"center\">\n  Aaron J. Li<sup>1</sup>,\n  Weijia Xu<sup>2</sup>,\n  Chandan Singh<sup>2</sup>,\n  Zixiao Chen<sup>3</sup>,\n  Jeevana Priya Inala<sup>2</sup>,\n  Charlotte Siska<sup>3</sup>,\n  <br>\n  Acar Tamersoy<sup>3</sup>,\n  Bin Yu<sup>1</sup>,\n  Ion Stoica<sup>1</sup>,\n  Michel Galley<sup>2</sup>,\n  Jianfeng Gao<sup>2</sup>\n</p>\n<p align=\"center\">\n  <sup>1</sup>UC Berkeley &nbsp; <sup>2</sup>Microsoft Research &nbsp; <sup>3</sup>Microsoft Security\n</p>\n\n<p align=\"center\">\n  <a href=\"https://arxiv.org/abs/2610.22732\"><img src=\"https://img.shields.io/badge/arXiv-2610.22732-b31b1b.svg\" alt=\"arXiv\"></a>\n  <a href=\"https://tokeneconomizer.github.io\"><img src=\"https://img.shields.io/badge/project-page-2f6fb0.svg\" alt=\"Project page\"></a>\n  <a href=\"https://x.com/aaron_jli/status/2114797313613053952\"><img src=\"https://img.shields.io/badge/X-post-000000.svg?logo=x&logoColor=white\" alt=\"X post\"></a>\n  <img src=\"https://img.shields.io/badge/python-3.10%2B-3776ab.svg\" alt=\"Python 3.10+\">\n  <img src=\"https://img.shields.io/badge/license-Apache%202.0-blue.svg\" alt=\"Apache 2.0 license\">\n</p>\n\n<p align=\"center\">\n  Our measurement on SWE-Bench tasks: <b>18.4\u201330.9% lower mean cost</b> across five agent\u2013model\n  combinations, cheaper in <b>all 30</b> repository \u00d7 combination cells, and Pass@1 up in\n  <b>4 of 5</b>. <a href=\"#results\">Results</a>\n</p>\n\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-reduced-motion: reduce)\" srcset=\"docs/assets/teaser.png\">\n    <img src=\"docs/assets/teaser.gif\" width=\"100%\" alt=\"An animation that opens on a title card: TokenEconomizer, experience-driven black-box cost control for coding agents, with its three mechanisms (micro-skills, tool pruning, failure-loop i",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.5 MB binary, 4.5 MB of RAM, 10 to 60 tokens per agent reply, starts in 2 ms, zero setup.",
+            "stars": 738,
+            "forks": 43,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/kanzo-dark.jpg\">\n    <img alt=\"kanzo: a tiny kanban board for you and your coding agents\" src=\"docs/img/kanzo-light.jpg\">\n  </picture>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml\"><img src=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml/badge.svg\" alt=\"CI\"></a>\n  <a href=\"https://crates.io/crates/kanzo\"><img src=\"https://img.shields.io/crates/v/kanzo\" alt=\"crates.io\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue\" alt=\"AGPL-3.0\"></a>\n</p>\n\nKanzo is a kanban board in your browser and an MCP server in one 4.5 MB program, so you and your coding agents work on the same tasks: on one computer, or on one board shared by all of them. No account, no server, no setup: run `kanzo` and it works.\n\nYou never edit a file. Everything is done in one of three places:\n\n- **the board**, in your browser, for you;\n- **MCP**, for your agents: they take tasks, move cards and comment;\n- **the `kanzo` command**, for the terminal and scripts.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/board-dark.gif\">\n  <img alt=\"The Kanzo board: agents move cards while you watch, \u2318K finds a task in any project, Laptop A shares the board and Laptop B joins it\" src=\"docs/img/board-light.gif\">\n</picture>\n\n## Install\n\n> [!TIP]\n> **Just ask your agent:** *\"install Kanzo from github.com/emanuele-em/kanzo.\"*\n\n```sh\ncurl -LsSf https://github.com/emanuele-em/kanzo/releases/latest/download/kanzo-installer.sh | sh\n```\n\nFor macOS and Linux, including every Raspberry Pi. On Windows, in PowerShell:\n\n```powershell\npowershell -ExecutionPolicy Bypass -c \"irm https://github.com/emanuele-em/kanzo",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 92583,
+            "forks": 6322,
+            "language": "JavaScript",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/archify-lockup-dark.svg\" />\n    <img src=\"docs/assets/archify-lockup-light.svg\" alt=\"Archify\" width=\"440\" height=\"121\" />\n  </picture>\n</p>\n<h3 align=\"center\">Turn anything you want to understand, plan, or share into an interactive visual.</h3>\n\n<p align=\"center\"><img src=\"docs/assets/archify-readme-hero.png\" alt=\"Archify \u2014 interactive diagrams\" width=\"960\" /></p>\n\n<p align=\"center\"><strong>Official channels\uff1a</strong> <a href=\"https://archify.si\">archify.si</a> \u00b7 <a href=\"https://github.com/tt-a1i/archify\">GitHub</a><br/>Archify is free and open source. Third-party online services and paid plans are operated by their respective providers and do not represent Archify. <a href=\"#official-services\">Service details \u2192</a></p>\n\n<p align=\"center\">Start with an idea, a question, or a plan. Describe it to your AI agent, and Archify turns it into an interactive HTML you can explore, customize, and share. From travel itineraries and learning maps to complex systems\u2014make it your own.</p>\n\n<p align=\"center\">See what the community is creating\u2014and imagine what you could make next.</p>\n\n<p align=\"center\">\n  <a href=\"https://archify.si/gallery.html\"><strong>Live demos</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#start\"><strong>Get started</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"https://archify.si/guide.html\"><strong>Scenario guide</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#community\"><strong>Community</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_ZH.md\"><strong>\u7b80\u4f53\u4e2d\u6587</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_JA.md\"><strong>\u65e5\u672c\u8a9e</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_KO.md\"><strong>\ud55c\uad6d\uc5b4</strong></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/31352?utm_source=repo",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
+            "url": "https://hackerbooks.org",
+            "description": "Hacker News top story (Score: 1446): Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
+            "detailed_content": "Hacker Books \u2014 books mentioned in Hacker News comments\nSkip to content\nHacker Books\nSearch books and authors\n?\nHome\nTop all-time\nMost recommended\nRising\nTrends\nFor You\nAbout\nTopics\nNot affiliated with Y Combinator or Hacker News. Data: HN comments via open-index/hacker-news, book metadata via Open Library.\nBuy links are affiliate links (Bookshop.org, Amazon): buying through them supports this site at no extra cost to you. As an Amazon Associate I earn from qualifying purchases.\nMade by\nroansh .\nKeyboard shortcuts\n/ Focus search\nj\n/\nk Next / previous book\nEnter Open focused book\nEsc Close / go back\ng\nh Go to Home\ng\nt Go to Top all-time\ng\nm Go to Most recommended\ng\nr Go to Rising\ng\nf Go to For You\n? Show this help\nClose",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: I've updated my Linux System Call website and API",
+            "url": "https://syscall.sh/",
+            "description": "Hacker News top story (Score: 26): Show HN: I've updated my Linux System Call website and API",
+            "detailed_content": "Linux System Call Tables by Architecture \u00b7 syscall.sh\nskip to content\nsyscall.sh\nx64\nx86\narm64\narm\nriscv64\nall arches\napi\nabout\nLinux syscall tables\nEvery Linux syscall table in one place, grouped by architecture: system calls for 27 architectures with their numbers, arguments and registers, from Linux 3.3 to 7.3.\nArchitectures\nx64\nx86_64\n369 syscalls \u00b7 since 3.3\nx86\ni386, 32 bit x86\n441 syscalls \u00b7 since 3.3\narm64\nAArch64\n326 syscalls \u00b7 since 3.7\narm\nARM EABI, 32 bit\n426 syscalls \u00b7 since 4.10\nriscv64\nRISC-V, 64 bit\n327 syscalls \u00b7 since 4.15\nia32\nIA-32 compat on x86_64\n439 syscalls \u00b7 since 3.3\nx32\nx32 ABI on x86_64\n369 syscalls \u00b7 since 3.4\nloongarch64\nLoongArch, 64 bit\n323 syscalls \u00b7 since 5.19\nppc64\nPowerPC, 64 bit\n383 syscalls \u00b7 since 5.0\nppc\nPowerPC, 32 bit\n425 syscalls \u00b7 since 5.0\ns390x\nIBM Z\n378 syscalls \u00b7 since 4.16\nmips64\nMIPS n64 ABI\n363 syscalls \u00b7 since 5.0\nmipsn32\nMIPS n32 ABI\n387 syscalls \u00b7 since 5.0\nmipso32\nMIPS o32 ABI\n413 syscalls \u00b7 since 5.0\nalpha\nDEC Alpha\n403 syscalls \u00b7 since 5.0\narc\nSynopsys ARC\n350 syscalls \u00b7 since 3.9\ncsky\nC-SKY\n346 syscalls \u00b7 since 4.20\nhexagon\nQualcomm Hexagon\n345 syscalls \u00b7 since 3.7\nm68k\nMotorola 68000\n435 syscalls \u00b7 since 5.0\nmicroblaze\nXilinx MicroBlaze\n423 syscalls \u00b7 since 5.0\nnios2\nIntel Nios II\n346 syscalls \u00b7 since 3.19\nopenrisc\nOpenRISC\n346 syscalls \u00b7 since 3.7\nparisc\nHP PA-RISC\n404 syscalls \u00b7 since 5.0\nsh\nSuperH\n433 syscalls \u00b7 since 5.0\nsparc\nSPARC, 32 bit\n434 syscalls \u00b7 since 5.0\nsparc64\nSPARC, 64 bit\n399 syscalls \u00b7 since 5.0\nxtensa\nTensilica Xtensa\n388 syscalls \u00b7 since 5.0\nEvery architecture's table, with the full history of when each syscall appeared and when it was dropped, is also a plain JSON file at\n/<arch>/syscalls.json , for example\n/x64/syscalls.json .\nCalling conventions\nNumber in\nNR , arguments in\nARG0\nto\nARG5 ,",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Nibnib: Image compression with extreme decompression speed",
+            "url": "https://github.com/raphlinus/nibnib",
+            "description": "Hacker News top story (Score: 152): Nibnib: Image compression with extreme decompression speed",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Events Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nraphlinus nibnib Repository navigation Code Issues 1 \u00a0( 1 ) Pull requests Act",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Tips for more effective fuzz testing with AFL++",
+            "url": "https://nullprogram.com/blog/2025/02/05/",
+            "description": "Hacker News top story (Score: 125): Tips for more effective fuzz testing with AFL++",
+            "detailed_content": "Tips for more effective fuzz testing with AFL++",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "My parser read past the input. AddressSanitizer stayed quiet.",
+            "url": "https://dev.to/panditshivam/my-parser-read-past-the-input-addresssanitizer-stayed-quiet-4mbi",
+            "description": "I gave a deliberately broken parser three bytes. It read byte four. AddressSanitizer said nothing.\n\nThen I changed the allocation around the input. Same parser, same three bytes, same compiler flags: heap-buffer-overflow. There it was. \ud83e\uddea\n\nThe bug hadn't appeared between runs. My first test had given",
+            "detailed_content": "My parser read past the input. AddressSanitizer stayed quiet. - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nShivam Dwivedi\nPosted on\nNov 2\nMy parser read past the input. AddressSanitizer stayed quiet.\n# c\n# testing\n# debugging\n# programming\nI gave a deliberately broken parser three bytes. It read byte four. AddressSanitizer said nothing.\nThen I changed the allocation around the input. Same parser, same three bytes, same compiler flags:\nheap-buffer-overflow . There it was. \ud83e\uddea\nThe bug hadn't appeared between runs. My first test had given it somewhere comfortable to hide.\nWhat I Built\nI made a small C reproducer for a fuzz-harness trap:\nthe length of a test case can be smaller than the memory holding it .\nChris Wellons describes this in his AFL++ guide, which is circulating again in the fuzzing discussion. It's an older guide, not a new AFL++ release. The useful detail is the warning about passing a reusable input buffer straight into a target.[1]\nA fuzzer's harness is the bit of code that hands generated inputs to the program. If it hands over a short input inside a larger allocation, an invalid read relative to the input can still touch allocated memory.\nAddressSanitizer, or ASan, instruments memory accesses to catch errors such as heap overflows.[2] It doesn't automatically know the meaning of every length argument in your API.\nOriginal diagram of the executed example. The wider buffer is a synthetic stand-in for reusable backing storage.\nDemo\nHere's the complete intentionally broken program. Save it as\nboundary.c :\n#include\n<s",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port",
+            "url": "https://dev.to/maldiharyojudanto/mengenal-cloudflare-tunnel-di-docker-cara-kerja-dan-panduan-praktis-publikasi-web-tanpa-buka-port-4anb",
+            "description": "Di dua artikel sebelumnya, kita telah menyelesaikan dua fondasi krusial:\n\n\n\nSetup Docker di VPS Linux: Menjaga Aplikasi Tetap Aktif 24/7 Tanpa Takut Reboot \u2014 Membangun fondasi server yang stabil, Swap RAM, dan proteksi UFW Firewall.\n\n\nPanduan Praktis Docker Network: Mengelola Komunikasi Antar-Contai",
+            "detailed_content": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nmaldiharyojudanto\nPosted on\nNov 2\n\u2022\nFully Autonomous\nMengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port\n# docker\n# cloudflare\n# devops\nDi dua artikel sebelumnya, kita telah menyelesaikan dua fondasi krusial:\nSetup Docker di VPS Linux: Menjaga Aplikasi Tetap Aktif 24/7 Tanpa Takut Reboot\n\u2014\nMembangun fondasi server yang stabil, Swap RAM, dan proteksi UFW Firewall.\nPanduan Praktis Docker Network: Mengelola Komunikasi Antar-Container Secara Aman dan Efektif\n\u2014\nMenghubungkan layanan internal melalui jaringan privat virtual.\nSetelah aplikasi web Anda (misalnya aplikasi web di port\n3000 ) berhasil berjalan di dalam container Docker, tantangan berikutnya adalah:\n\"Bagaimana cara membuat aplikasi web tersebut dapat diakses oleh publik di internet melalui domain resmi (dengan HTTPS), tanpa harus membuka port di firewall server dan tanpa mengekspos alamat IP publik server?\"\nSecara tradisional, proses ini membutuhkan konfigurasi Nginx reverse proxy, manajemen sertifikat SSL manual, serta pembukaan port\n80\ndan\n443\ndi firewall. Namun, teknologi modern menyediakan pendekatan yang jauh lebih aman dan elegan:\nCloudflare Tunnel ( cloudflared ) .\nArtikel ini mengupas tuntas apa itu Cloudflare Tunnel, bagaimana cara kerja koneksi\noutbound\nyang membuatnya begitu aman, serta panduan praktis implementasinya menggunakan Docker Compose.\n\u2696\ufe0f 1. Paradigma Lama vs Par",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "awesome-tauri-apps",
+            "full_name": "chrysler-stone/awesome-tauri-apps",
+            "url": "https://github.com/chrysler-stone/awesome-tauri-apps",
+            "description": "Curated list of desktop and mobile apps built with Tauri.",
+            "stars": 48,
+            "forks": 40,
+            "language": "Unknown",
+            "detailed_content": "# Awesome Tauri Apps [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)\n\n> A curated list of **real-world desktop (and mobile) applications built with [Tauri](https://tauri.app)**.\n\nTauri lets you build small, fast and secure apps with a web frontend and a Rust backend. This list is about *apps you can actually download and use*, not libraries or plugins.\n\n> Looking for Tauri plugins, tooling and learning resources? See the official [tauri-apps/awesome-tauri](https://github.com/tauri-apps/awesome-tauri).\n\n## Contents\n\n- [AI Tools](#ai-tools)\n- [Notes & Knowledge](#notes--knowledge)\n- [Developer Tools](#developer-tools)\n- [Productivity](#productivity)\n- [Communication](#communication)\n- [Networking & Security](#networking--security)\n- [Media & Recording](#media--recording)\n- [Games & Launchers](#games--launchers)\n- [Finance](#finance)\n- [Science & Data](#science--data)\n- [Utilities](#utilities)\n- [Contributing](#contributing)\n\n## AI Tools\n\n### Chat & Local LLMs\n\n- [ChatGPT Desktop (lencx)](https://github.com/lencx/ChatGPT) - Unofficial ChatGPT desktop client.\n- [Jan](https://github.com/menloresearch/jan) - Open-source, offline-first ChatGPT alternative running local LLMs.\n- [Local.ai](https://github.com/louisgv/local.ai) - Simple app to run AI models locally with no GPU required.\n- [NextChat](https://github.com/ChatGPTNextWeb/NextChat) - Lightweight, fast AI assistant with a desktop app supporting many model providers.\n\n### Speech & Transcription\n\n- [Handy](https://github.com/cjpais/Handy) - Free, open-source, offline speech-to-text for any text field.\n- [talat](https://talat.app) - Transcribes meetings and dictation on your own machine, with notes and summaries, for macOS and Windows. Closed-source. (Commercial)\n- [Vibe](https://github.com/thewh1teagle/vibe)",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference describes curated list of desktop and mobile Tauri apps."
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 4325,
+            "forks": 248,
+            "language": "Python",
+            "detailed_content": "# TokenEconomizer: Experience-Driven Black-Box Cost Control for Coding Agents\n\n<p align=\"center\">\n  Aaron J. Li<sup>1</sup>,\n  Weijia Xu<sup>2</sup>,\n  Chandan Singh<sup>2</sup>,\n  Zixiao Chen<sup>3</sup>,\n  Jeevana Priya Inala<sup>2</sup>,\n  Charlotte Siska<sup>3</sup>,\n  <br>\n  Acar Tamersoy<sup>3</sup>,\n  Bin Yu<sup>1</sup>,\n  Ion Stoica<sup>1</sup>,\n  Michel Galley<sup>2</sup>,\n  Jianfeng Gao<sup>2</sup>\n</p>\n<p align=\"center\">\n  <sup>1</sup>UC Berkeley &nbsp; <sup>2</sup>Microsoft Research &nbsp; <sup>3</sup>Microsoft Security\n</p>\n\n<p align=\"center\">\n  <a href=\"https://arxiv.org/abs/2610.22732\"><img src=\"https://img.shields.io/badge/arXiv-2610.22732-b31b1b.svg\" alt=\"arXiv\"></a>\n  <a href=\"https://tokeneconomizer.github.io\"><img src=\"https://img.shields.io/badge/project-page-2f6fb0.svg\" alt=\"Project page\"></a>\n  <a href=\"https://x.com/aaron_jli/status/2114797313613053952\"><img src=\"https://img.shields.io/badge/X-post-000000.svg?logo=x&logoColor=white\" alt=\"X post\"></a>\n  <img src=\"https://img.shields.io/badge/python-3.10%2B-3776ab.svg\" alt=\"Python 3.10+\">\n  <img src=\"https://img.shields.io/badge/license-Apache%202.0-blue.svg\" alt=\"Apache 2.0 license\">\n</p>\n\n<p align=\"center\">\n  Our measurement on SWE-Bench tasks: <b>18.4\u201330.9% lower mean cost</b> across five agent\u2013model\n  combinations, cheaper in <b>all 30</b> repository \u00d7 combination cells, and Pass@1 up in\n  <b>4 of 5</b>. <a href=\"#results\">Results</a>\n</p>\n\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-reduced-motion: reduce)\" srcset=\"docs/assets/teaser.png\">\n    <img src=\"docs/assets/teaser.gif\" width=\"100%\" alt=\"An animation that opens on a title card: TokenEconomizer, experience-driven black-box cost control for coding agents, with its three mechanisms (micro-skills, tool pruning, failure-loop i",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title and subtitle match claim about experience-driven cost control."
+          },
+          {
+            "source": "Dev.to",
+            "title": "My parser read past the input. AddressSanitizer stayed quiet.",
+            "url": "https://dev.to/panditshivam/my-parser-read-past-the-input-addresssanitizer-stayed-quiet-4mbi",
+            "description": "I gave a deliberately broken parser three bytes. It read byte four. AddressSanitizer said nothing.\n\nThen I changed the allocation around the input. Same parser, same three bytes, same compiler flags: heap-buffer-overflow. There it was. \ud83e\uddea\n\nThe bug hadn't appeared between runs. My first test had given",
+            "detailed_content": "My parser read past the input. AddressSanitizer stayed quiet. - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nShivam Dwivedi\nPosted on\nNov 2\nMy parser read past the input. AddressSanitizer stayed quiet.\n# c\n# testing\n# debugging\n# programming\nI gave a deliberately broken parser three bytes. It read byte four. AddressSanitizer said nothing.\nThen I changed the allocation around the input. Same parser, same three bytes, same compiler flags:\nheap-buffer-overflow . There it was. \ud83e\uddea\nThe bug hadn't appeared between runs. My first test had given it somewhere comfortable to hide.\nWhat I Built\nI made a small C reproducer for a fuzz-harness trap:\nthe length of a test case can be smaller than the memory holding it .\nChris Wellons describes this in his AFL++ guide, which is circulating again in the fuzzing discussion. It's an older guide, not a new AFL++ release. The useful detail is the warning about passing a reusable input buffer straight into a target.[1]\nA fuzzer's harness is the bit of code that hands generated inputs to the program. If it hands over a short input inside a larger allocation, an invalid read relative to the input can still touch allocated memory.\nAddressSanitizer, or ASan, instruments memory accesses to catch errors such as heap overflows.[2] It doesn't automatically know the meaning of every length argument in your API.\nOriginal diagram of the executed example. The wider buffer is a synthetic stand-in for reusable backing storage.\nDemo\nHere's the complete intentionally broken program. Save it as\nboundary.c :\n#include\n<s",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference article details same parser/ASan behavior."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port",
+            "url": "https://dev.to/maldiharyojudanto/mengenal-cloudflare-tunnel-di-docker-cara-kerja-dan-panduan-praktis-publikasi-web-tanpa-buka-port-4anb",
+            "description": "Di dua artikel sebelumnya, kita telah menyelesaikan dua fondasi krusial:\n\n\n\nSetup Docker di VPS Linux: Menjaga Aplikasi Tetap Aktif 24/7 Tanpa Takut Reboot \u2014 Membangun fondasi server yang stabil, Swap RAM, dan proteksi UFW Firewall.\n\n\nPanduan Praktis Docker Network: Mengelola Komunikasi Antar-Contai",
+            "detailed_content": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nmaldiharyojudanto\nPosted on\nNov 2\n\u2022\nFully Autonomous\nMengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port\n# docker\n# cloudflare\n# devops\nDi dua artikel sebelumnya, kita telah menyelesaikan dua fondasi krusial:\nSetup Docker di VPS Linux: Menjaga Aplikasi Tetap Aktif 24/7 Tanpa Takut Reboot\n\u2014\nMembangun fondasi server yang stabil, Swap RAM, dan proteksi UFW Firewall.\nPanduan Praktis Docker Network: Mengelola Komunikasi Antar-Container Secara Aman dan Efektif\n\u2014\nMenghubungkan layanan internal melalui jaringan privat virtual.\nSetelah aplikasi web Anda (misalnya aplikasi web di port\n3000 ) berhasil berjalan di dalam container Docker, tantangan berikutnya adalah:\n\"Bagaimana cara membuat aplikasi web tersebut dapat diakses oleh publik di internet melalui domain resmi (dengan HTTPS), tanpa harus membuka port di firewall server dan tanpa mengekspos alamat IP publik server?\"\nSecara tradisional, proses ini membutuhkan konfigurasi Nginx reverse proxy, manajemen sertifikat SSL manual, serta pembukaan port\n80\ndan\n443\ndi firewall. Namun, teknologi modern menyediakan pendekatan yang jauh lebih aman dan elegan:\nCloudflare Tunnel ( cloudflared ) .\nArtikel ini mengupas tuntas apa itu Cloudflare Tunnel, bagaimana cara kerja koneksi\noutbound\nyang membuatnya begitu aman, serta panduan praktis implementasinya menggunakan Docker Compose.\n\u2696\ufe0f 1. Paradigma Lama vs Par",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference includes same Indonesian summary of prior articles."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "awesome-tauri-apps",
+            "full_name": "chrysler-stone/awesome-tauri-apps",
+            "url": "https://github.com/chrysler-stone/awesome-tauri-apps",
+            "description": "Curated list of desktop and mobile apps built with Tauri.",
+            "stars": 48,
+            "forks": 40,
+            "language": "Unknown",
+            "detailed_content": "# Awesome Tauri Apps [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)\n\n> A curated list of **real-world desktop (and mobile) applications built with [Tauri](https://tauri.app)**.\n\nTauri lets you build small, fast and secure apps with a web frontend and a Rust backend. This list is about *apps you can actually download and use*, not libraries or plugins.\n\n> Looking for Tauri plugins, tooling and learning resources? See the official [tauri-apps/awesome-tauri](https://github.com/tauri-apps/awesome-tauri).\n\n## Contents\n\n- [AI Tools](#ai-tools)\n- [Notes & Knowledge](#notes--knowledge)\n- [Developer Tools](#developer-tools)\n- [Productivity](#productivity)\n- [Communication](#communication)\n- [Networking & Security](#networking--security)\n- [Media & Recording](#media--recording)\n- [Games & Launchers](#games--launchers)\n- [Finance](#finance)\n- [Science & Data](#science--data)\n- [Utilities](#utilities)\n- [Contributing](#contributing)\n\n## AI Tools\n\n### Chat & Local LLMs\n\n- [ChatGPT Desktop (lencx)](https://github.com/lencx/ChatGPT) - Unofficial ChatGPT desktop client.\n- [Jan](https://github.com/menloresearch/jan) - Open-source, offline-first ChatGPT alternative running local LLMs.\n- [Local.ai](https://github.com/louisgv/local.ai) - Simple app to run AI models locally with no GPU required.\n- [NextChat](https://github.com/ChatGPTNextWeb/NextChat) - Lightweight, fast AI assistant with a desktop app supporting many model providers.\n\n### Speech & Transcription\n\n- [Handy](https://github.com/cjpais/Handy) - Free, open-source, offline speech-to-text for any text field.\n- [talat](https://talat.app) - Transcribes meetings and dictation on your own machine, with notes and summaries, for macOS and Windows. Closed-source. (Commercial)\n- [Vibe](https://github.com/thewh1teagle/vibe)",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference describes curated list of desktop and mobile Tauri apps.",
+            "why_it_matters": "Tauri lets you ship tiny, fast desktop apps with a web UI and Rust backend. Seeing production apps proves it\u2019s battle\u2011tested and ready for your next cross\u2011platform tool.",
+            "who_cares": "Frontend engineers, Rust developers, and anyone building cross\u2011platform desktop or mobile apps.",
+            "verdict": "READ"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 4325,
+            "forks": 248,
+            "language": "Python",
+            "detailed_content": "# TokenEconomizer: Experience-Driven Black-Box Cost Control for Coding Agents\n\n<p align=\"center\">\n  Aaron J. Li<sup>1</sup>,\n  Weijia Xu<sup>2</sup>,\n  Chandan Singh<sup>2</sup>,\n  Zixiao Chen<sup>3</sup>,\n  Jeevana Priya Inala<sup>2</sup>,\n  Charlotte Siska<sup>3</sup>,\n  <br>\n  Acar Tamersoy<sup>3</sup>,\n  Bin Yu<sup>1</sup>,\n  Ion Stoica<sup>1</sup>,\n  Michel Galley<sup>2</sup>,\n  Jianfeng Gao<sup>2</sup>\n</p>\n<p align=\"center\">\n  <sup>1</sup>UC Berkeley &nbsp; <sup>2</sup>Microsoft Research &nbsp; <sup>3</sup>Microsoft Security\n</p>\n\n<p align=\"center\">\n  <a href=\"https://arxiv.org/abs/2610.22732\"><img src=\"https://img.shields.io/badge/arXiv-2610.22732-b31b1b.svg\" alt=\"arXiv\"></a>\n  <a href=\"https://tokeneconomizer.github.io\"><img src=\"https://img.shields.io/badge/project-page-2f6fb0.svg\" alt=\"Project page\"></a>\n  <a href=\"https://x.com/aaron_jli/status/2114797313613053952\"><img src=\"https://img.shields.io/badge/X-post-000000.svg?logo=x&logoColor=white\" alt=\"X post\"></a>\n  <img src=\"https://img.shields.io/badge/python-3.10%2B-3776ab.svg\" alt=\"Python 3.10+\">\n  <img src=\"https://img.shields.io/badge/license-Apache%202.0-blue.svg\" alt=\"Apache 2.0 license\">\n</p>\n\n<p align=\"center\">\n  Our measurement on SWE-Bench tasks: <b>18.4\u201330.9% lower mean cost</b> across five agent\u2013model\n  combinations, cheaper in <b>all 30</b> repository \u00d7 combination cells, and Pass@1 up in\n  <b>4 of 5</b>. <a href=\"#results\">Results</a>\n</p>\n\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-reduced-motion: reduce)\" srcset=\"docs/assets/teaser.png\">\n    <img src=\"docs/assets/teaser.gif\" width=\"100%\" alt=\"An animation that opens on a title card: TokenEconomizer, experience-driven black-box cost control for coding agents, with its three mechanisms (micro-skills, tool pruning, failure-loop i",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title and subtitle match claim about experience-driven cost control.",
+            "why_it_matters": "TokenEconomizer reduces LLM token consumption by 18\u201131\u202f% while often improving success rates, directly lowering cloud\u2011API costs for coding assistants.",
+            "who_cares": "AI/ML engineers, developers of LLM\u2011powered coding assistants, and teams managing large\u2011scale LLM usage.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "My parser read past the input. AddressSanitizer stayed quiet.",
+            "url": "https://dev.to/panditshivam/my-parser-read-past-the-input-addresssanitizer-stayed-quiet-4mbi",
+            "description": "I gave a deliberately broken parser three bytes. It read byte four. AddressSanitizer said nothing.\n\nThen I changed the allocation around the input. Same parser, same three bytes, same compiler flags: heap-buffer-overflow. There it was. \ud83e\uddea\n\nThe bug hadn't appeared between runs. My first test had given",
+            "detailed_content": "My parser read past the input. AddressSanitizer stayed quiet. - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nShivam Dwivedi\nPosted on\nNov 2\nMy parser read past the input. AddressSanitizer stayed quiet.\n# c\n# testing\n# debugging\n# programming\nI gave a deliberately broken parser three bytes. It read byte four. AddressSanitizer said nothing.\nThen I changed the allocation around the input. Same parser, same three bytes, same compiler flags:\nheap-buffer-overflow . There it was. \ud83e\uddea\nThe bug hadn't appeared between runs. My first test had given it somewhere comfortable to hide.\nWhat I Built\nI made a small C reproducer for a fuzz-harness trap:\nthe length of a test case can be smaller than the memory holding it .\nChris Wellons describes this in his AFL++ guide, which is circulating again in the fuzzing discussion. It's an older guide, not a new AFL++ release. The useful detail is the warning about passing a reusable input buffer straight into a target.[1]\nA fuzzer's harness is the bit of code that hands generated inputs to the program. If it hands over a short input inside a larger allocation, an invalid read relative to the input can still touch allocated memory.\nAddressSanitizer, or ASan, instruments memory accesses to catch errors such as heap overflows.[2] It doesn't automatically know the meaning of every length argument in your API.\nOriginal diagram of the executed example. The wider buffer is a synthetic stand-in for reusable backing storage.\nDemo\nHere's the complete intentionally broken program. Save it as\nboundary.c :\n#include\n<s",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference article details same parser/ASan behavior.",
+            "why_it_matters": "The article demonstrates a subtle class of buffer\u2011overflow bugs that ASan can miss when input length is mis\u2011interpreted, a critical pitfall for fuzzing and security testing.",
+            "who_cares": "Systems programmers, security researchers, and C/C++ developers who rely on sanitizers and fuzzers.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port",
+            "url": "https://dev.to/maldiharyojudanto/mengenal-cloudflare-tunnel-di-docker-cara-kerja-dan-panduan-praktis-publikasi-web-tanpa-buka-port-4anb",
+            "description": "Di dua artikel sebelumnya, kita telah menyelesaikan dua fondasi krusial:\n\n\n\nSetup Docker di VPS Linux: Menjaga Aplikasi Tetap Aktif 24/7 Tanpa Takut Reboot \u2014 Membangun fondasi server yang stabil, Swap RAM, dan proteksi UFW Firewall.\n\n\nPanduan Praktis Docker Network: Mengelola Komunikasi Antar-Contai",
+            "detailed_content": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nmaldiharyojudanto\nPosted on\nNov 2\n\u2022\nFully Autonomous\nMengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port\n# docker\n# cloudflare\n# devops\nDi dua artikel sebelumnya, kita telah menyelesaikan dua fondasi krusial:\nSetup Docker di VPS Linux: Menjaga Aplikasi Tetap Aktif 24/7 Tanpa Takut Reboot\n\u2014\nMembangun fondasi server yang stabil, Swap RAM, dan proteksi UFW Firewall.\nPanduan Praktis Docker Network: Mengelola Komunikasi Antar-Container Secara Aman dan Efektif\n\u2014\nMenghubungkan layanan internal melalui jaringan privat virtual.\nSetelah aplikasi web Anda (misalnya aplikasi web di port\n3000 ) berhasil berjalan di dalam container Docker, tantangan berikutnya adalah:\n\"Bagaimana cara membuat aplikasi web tersebut dapat diakses oleh publik di internet melalui domain resmi (dengan HTTPS), tanpa harus membuka port di firewall server dan tanpa mengekspos alamat IP publik server?\"\nSecara tradisional, proses ini membutuhkan konfigurasi Nginx reverse proxy, manajemen sertifikat SSL manual, serta pembukaan port\n80\ndan\n443\ndi firewall. Namun, teknologi modern menyediakan pendekatan yang jauh lebih aman dan elegan:\nCloudflare Tunnel ( cloudflared ) .\nArtikel ini mengupas tuntas apa itu Cloudflare Tunnel, bagaimana cara kerja koneksi\noutbound\nyang membuatnya begitu aman, serta panduan praktis implementasinya menggunakan Docker Compose.\n\u2696\ufe0f 1. Paradigma Lama vs Par",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Reference includes same Indonesian summary of prior articles.",
+            "why_it_matters": "Cloudflare Tunnel lets you expose Dockerized services over HTTPS without opening inbound ports, simplifying secure public access and eliminating manual reverse\u2011proxy and cert\u2011management work.",
+            "who_cares": "DevOps engineers, backend developers, and anyone deploying web services in Docker containers.",
+            "verdict": "INTEGRATE"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Cool Tool",
+            "title": "awesome-tauri-apps",
+            "description": "**Tauri powers a growing catalog of real\u2011world desktop and mobile apps you can actually download.** The curated list groups applications into categories such as AI tools, notes, developer utilities, productivity, communication, and more, demonstrating how a tiny, fast, and secure Rust\u2011backed web UI can be used in production.",
+            "why_it_matters": "Tauri lets you ship tiny, fast desktop apps with a web UI and Rust backend. Seeing production apps proves it\u2019s battle\u2011tested and ready for your next cross\u2011platform tool.",
+            "who_cares": "Frontend engineers, Rust developers, and anyone building cross\u2011platform desktop or mobile apps.",
+            "verdict": "READ",
+            "source_url": "https://github.com/chrysler-stone/awesome-tauri-apps"
+          },
+          {
+            "category": "Watchlist",
+            "title": "TokenEconomizer",
+            "description": "**TokenEconomizer slashes LLM token usage by up to 31\u202f% while often boosting success rates.** The experience\u2011driven black\u2011box system applies micro\u2011skills, tool pruning, and a failure\u2011loop mechanism to keep coding agents cheap and effective, achieving 18.4\u201330.9\u202f% lower mean cost across five agent\u2011model combinations on SWE\u2011Bench tasks.",
+            "why_it_matters": "TokenEconomizer reduces LLM token consumption by 18\u201131\u202f% while often improving success rates, directly lowering cloud\u2011API costs for coding assistants.",
+            "who_cares": "AI/ML engineers, developers of LLM\u2011powered coding assistants, and teams managing large\u2011scale LLM usage.",
+            "verdict": "READ",
+            "source_url": "https://github.com/microsoft/TokenEconomizer"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "My parser read past the input. AddressSanitizer stayed quiet.",
+            "description": "**A tiny C parser can silently over\u2011read input, evading AddressSanitizer unless the surrounding allocation changes.** The post provides a reproducible three\u2011byte example, explains why ASan doesn\u2019t flag the overflow when the read stays inside the allocated buffer, and warns of this hidden risk for fuzz\u2011harness developers.",
+            "why_it_matters": "The article demonstrates a subtle class of buffer\u2011overflow bugs that ASan can miss when input length is mis\u2011interpreted, a critical pitfall for fuzzing and security testing.",
+            "who_cares": "Systems programmers, security researchers, and C/C++ developers who rely on sanitizers and fuzzers.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/panditshivam/my-parser-read-past-the-input-addresssanitizer-stayed-quiet-4mbi"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "Mengenal Cloudflare Tunnel di Docker: Cara Kerja dan Panduan Praktis Publikasi Web Tanpa Buka Port",
+            "description": "**Cloudflare Tunnel lets you publish a Docker\u2011hosted web service over HTTPS without ever opening inbound ports.** The guide walks through running cloudflared in Docker Compose, turning an outbound\u2011only connection into a secure public endpoint and removing the need for manual Nginx reverse\u2011proxy or certificate management.",
+            "why_it_matters": "Cloudflare Tunnel lets you expose Dockerized services over HTTPS without opening inbound ports, simplifying secure public access and eliminating manual reverse\u2011proxy and cert\u2011management work.",
+            "who_cares": "DevOps engineers, backend developers, and anyone deploying web services in Docker containers.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/maldiharyojudanto/mengenal-cloudflare-tunnel-di-docker-cara-kerja-dan-panduan-praktis-publikasi-web-tanpa-buka-port-4anb"
+          }
+        ]
+      }
+    }
+  },
+  "rejected_urls": [],
+  "restarted": false,
+  "email": {
+    "status": "sent",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": []
+}
