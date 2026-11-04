@@ -2374,5 +2374,47 @@
         "source_url": "https://dev.to/maldiharyojudanto/mengenal-cloudflare-tunnel-di-docker-cara-kerja-dan-panduan-praktis-publikasi-web-tanpa-buka-port-4anb"
       }
     ]
+  },
+  {
+    "date": "2026-11-04",
+    "published_at": "2026-11-04T13:15:41.661304+00:00",
+    "briefs": [
+      {
+        "category": "Cool Tool",
+        "title": "open_source_issue_contribution",
+        "description": "**A tiny Python CLI packed with 30+ beginner\u2011friendly issues lets you practice open\u2011source contributions in minutes.** The `fixit` toolbox includes a word counter, unit converter, password generator, JSON formatter and other text tools that are deliberately imperfect\u2014some have bugs, missing tests, or unfinished features. Each problem is exposed as a \u201cgood first issue\u201d you can claim, fork, fix and submit a PR, turning your GitHub contribution graph green without the pressure of a large codebase.",
+        "why_it_matters": "Provides a low\u2011risk, sandboxed environment to practice the full open\u2011source contribution workflow (fork, fix, PR) without the pressure of production codebases.",
+        "who_cares": "Junior developers and career switchers seeking their first GitHub contribution.",
+        "verdict": "READ",
+        "source_url": "https://github.com/codepiyusss/open_source_issue_contribution"
+      },
+      {
+        "category": "Watchlist",
+        "title": "bricks",
+        "description": "**Bricks gives AI coding agents implementation\u2011aware contracts for building UI components that fit your existing design system.** By installing with `npx skills add kostja94/bricks --skill component-builder`, you can ask an agent to build a real\u2011page footer, read routes, design tokens and responsive conventions, and verify keyboard access. The library defines contracts for component responsibility, context, variants, interaction states, technical boundaries and verification requirements, helping agents avoid hallucinated UI and stay consistent with project primitives.",
+        "why_it_matters": "Bridges the gap between AI coding agents and existing design systems by enforcing implementation\u2011aware contracts, reducing hallucinated UI components and ensuring consistency with project primitives.",
+        "who_cares": "Frontend engineers and tech leads integrating AI assistants into established React/Vue codebases.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://github.com/kostja94/bricks"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "A 28-Character String Freezes Your Regex for 3.6 Seconds",
+        "description": "**A 28\u2011character string can freeze a Node.js process for over three seconds due to catastrophic backtracking.** Using the pattern `/^(a+)+$/` on Node\u202f22 (V8), the runtime time grows exponentially: 20\u202fchars \u2192\u202f8.6\u202fms, 22\u202fchars \u2192\u202f34.2\u202fms, 24\u202fchars \u2192\u202f136.6\u202fms, 26\u202fchars \u2192\u202f553.7\u202fms, 27\u202fchars \u2192\u202f1,103.8\u202fms, and 28\u202fchars \u2192\u202f3,586.4\u202fms. The engine must explore every possible partition of the repeated \u201ca\u201d characters when the match fails, turning a tiny malformed input into a CPU\u2011bound stall.",
+        "why_it_matters": "Highlights a critical security and performance vulnerability where specific regex patterns cause catastrophic backtracking, freezing Node.js processes with minimal input.",
+        "who_cares": "Backend developers and security engineers working with Node.js or V8\u2011based runtimes.",
+        "verdict": "READ",
+        "source_url": "https://dev.to/zhihu_wu_dea1d82af01a04d7/a-28-character-string-freezes-your-regex-for-36-seconds-2fi9"
+      },
+      {
+        "category": "Tech Shift",
+        "title": "Why Your Mobile App Needs a Scalable Architecture From Day One",
+        "description": "**Designing a mobile app\u2019s architecture for scalability from day one prevents painful rewrites as users grow.** An app that runs fine with 100 users can hit slow loads, crashes, database bottlenecks and performance issues when it reaches 10,000 or 100,000 users. A scalable architecture handles more simultaneous sessions, higher API request volume, larger data sets and new feature integrations without a complete rebuild, keeping reliability and user experience intact as the product expands.",
+        "why_it_matters": "Emphasizes the necessity of designing for scalability from the initial architecture phase to avoid costly refactoring and performance bottlenecks during user growth.",
+        "who_cares": "Mobile app architects and startup CTOs planning long\u2011term product viability.",
+        "verdict": "READ",
+        "source_url": "https://dev.to/vasundhra/why-your-mobile-app-needs-a-scalable-architecture-from-day-one-4p93"
+      }
+    ]
   }
 ]
