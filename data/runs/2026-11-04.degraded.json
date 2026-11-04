@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-04",
+  "timestamp": "2026-11-04T11:28:13.188763+00:00",
+  "git_sha": "f633a3f4989b30aec32abf82c1c413d9619aa8df",
+  "counts": {
+    "raw_signals": 61,
+    "after_dedup": 51,
+    "skeptic_passed": 10,
+    "researched": 10,
+    "verified": 1
+  },
+  "content_sources": {
+    "https://github.com/kostja94/bricks": "readme",
+    "https://github.com/tt-a1i/archify": "readme",
+    "https://sw.kovidgoyal.net/kitty/changelog/#": "web_page",
+    "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop": "web_page",
+    "https://milkman.dev/": "web_page",
+    "https://mrdoob.github.io/codevember-2026/01/": "web_page",
+    "https://blog.nns.ee/2026/11/02/renault-hack/": "web_page",
+    "https://neufangled.com/": "web_page",
+    "https://napcakes.nekoweb.org/posts/malloc/": "web_page",
+    "https://www.interdb.jp/pg/index.html": "web_page"
+  },
+  "models_used": {
+    "openai/gpt-oss-120b": 2
+  },
+  "llm_calls": 2,
+  "durations_seconds": {
+    "skeptic": 3.97,
+    "verifier": 2.98
+  },
+  "hard_failures": [],
+  "warnings": [],
+  "final_briefs": [],
+  "failure_reasons": [
+    "verify: Verifier approved 1 of 10 candidates (minimum 3)"
+  ],
+  "status": "degraded"
+}
