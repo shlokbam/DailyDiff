@@ -1,0 +1,823 @@
+{
+  "date": "2026-11-06",
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "open_source_issue_contribution",
+            "full_name": "codepiyusss/open_source_issue_contribution",
+            "url": "https://github.com/codepiyusss/open_source_issue_contribution",
+            "description": "\ud83d\udc1b Beginner-friendly Python CLI with 30+ good first issues: planted bugs, missing tests & small features. Practice open source: fork, fix, PR, and turn your GitHub contribution graph green \ud83d\udfe9",
+            "stars": 21,
+            "forks": 28,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "WebsiteBench",
+            "full_name": "TIGER-AI-Lab/WebsiteBench",
+            "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+            "description": "Can AI agents rebuild websites through browser exploration?",
+            "stars": 74,
+            "forks": 35,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "claude-resocket-plugin",
+            "full_name": "UponNuclearastro/claude-resocket-plugin",
+            "url": "https://github.com/UponNuclearastro/claude-resocket-plugin",
+            "description": "Uiprobe plugin for Claude Code: a check Claude can run against your Figma design. It compares the built page with the frame, value by value, and Claude fixes the differences.",
+            "stars": 40,
+            "forks": 0,
+            "language": "HTML"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 4861,
+            "forks": 295,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "TwinDesk",
+            "full_name": "InukaAsith/TwinDesk",
+            "url": "https://github.com/InukaAsith/TwinDesk",
+            "description": " All your computers and your phone, working as one desk. Screens, apps, files, clipboard, calls, texts, notifications, mouse and keyboard, shared between Mac, Windows, Linux and Android. Free and open source. No account, no cloud, and now no shared network needed.",
+            "stars": 3586,
+            "forks": 277,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.5 MB binary, 4.5 MB of RAM, 10 to 60 tokens per agent reply, starts in 2 ms, zero setup.",
+            "stars": 1045,
+            "forks": 74,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "WinShun",
+            "full_name": "LingCore/WinShun",
+            "url": "https://github.com/LingCore/WinShun",
+            "description": "Win\u987a\uff1a\u514d\u8d39\u5f00\u6e90\u7684 Windows \u5feb\u901f\u641c\u7d22\u542f\u52a8\u5668\u3002\u53cc\u51fb Ctrl\uff0c\u62fc\u97f3\u79d2\u641c\u6587\u4ef6\u3001\u5168\u6587\u641c\u7d22 Word/Excel/PDF\u3001\u526a\u8d34\u677f\u5386\u53f2\uff08\u4ee3\u66ff Win+V\uff09\u3001\u5bf9\u8bdd\u6846\u641c\u7d22\u3001\u4efb\u52a1\u680f\u641c\u7d22\u3001\u63d2\u4ef6\u3001AI \u52a9\u624b MCP\u3002Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative.",
+            "stars": 891,
+            "forks": 59,
+            "language": "C++"
+          },
+          {
+            "source": "GitHub",
+            "title": "betterwispr",
+            "full_name": "opennookorg/betterwispr",
+            "url": "https://github.com/opennookorg/betterwispr",
+            "description": "Free, open-source, local-first dictation app for macOS. Hold a shortcut, speak, and text is typed into any app. On-device speech-to-text with Whisper, Parakeet and Apple speech. Private, offline, open-source Wispr Flow alternative.",
+            "stars": 512,
+            "forks": 49,
+            "language": "Swift"
+          },
+          {
+            "source": "GitHub",
+            "title": "ECC",
+            "full_name": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "stars": 298184,
+            "forks": 44091,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 143232,
+            "forks": 13697,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95807,
+            "forks": 9593,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 94058,
+            "forks": 6405,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 92795,
+            "forks": 12379,
+            "language": "TypeScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Blender's UI and Runtime: Much Faster Than GPUI",
+            "url": "https://github.com/ppmpreetham/BUI",
+            "description": "Hacker News top story (Score: 226): Blender's UI and Runtime: Much Faster Than GPUI"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
+            "url": "https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105",
+            "description": "Hacker News top story (Score: 80): Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Claude Code sends your email address to websites",
+            "url": "https://github.com/anthropics/claude-code/issues/107757",
+            "description": "Hacker News top story (Score: 1196): Claude Code sends your email address to websites"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
+            "url": "https://jhr.pensoft.net/articles.php?id=9096",
+            "description": "Hacker News top story (Score: 29): Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "sshole",
+            "url": "https://sshhole.com",
+            "description": "Hacker News top story (Score: 2737): sshole"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Kugelblitz \u2013 Mac-Native Google Earth Alternative",
+            "url": "https://apps.metaebene.me/en/kugelblitz",
+            "description": "Hacker News top story (Score: 90): Kugelblitz \u2013 Mac-Native Google Earth Alternative"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Multiplayer tanks that demolish real buildings from OpenStreetMap",
+            "url": "https://worldstrike.fun/",
+            "description": "Hacker News top story (Score: 59): Multiplayer tanks that demolish real buildings from OpenStreetMap"
+          },
+          {
+            "source": "Hacker News",
+            "title": "App Store 2026 in numbers: AI, pricing, abandoned apps",
+            "url": "https://obelisk.club/research/app-store-2026",
+            "description": "Hacker News top story (Score: 43): App Store 2026 in numbers: AI, pricing, abandoned apps"
+          },
+          {
+            "source": "Hacker News",
+            "title": "MS Paint Remote Code Execution Vulnerability",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+            "description": "Hacker News top story (Score: 563): MS Paint Remote Code Execution Vulnerability"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Pwn.college",
+            "url": "https://pwn.college/",
+            "description": "Hacker News top story (Score: 167): Pwn.college"
+          },
+          {
+            "source": "Hacker News",
+            "title": "From Linux to Wikipedia: How Volunteers Build the Internet",
+            "url": "https://thereader.mitpress.mit.edu/from-linux-to-wikipedia-how-volunteers-build-the-internet/",
+            "description": "Hacker News top story (Score: 106): From Linux to Wikipedia: How Volunteers Build the Internet"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Nvidia Kubernetes Engine (NVKE)",
+            "url": "https://github.com/dsx-ai-factory/nvke",
+            "description": "Hacker News top story (Score: 84): Nvidia Kubernetes Engine (NVKE)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Hardcoded credentials and other issues in Tata Motors App",
+            "url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0537",
+            "description": "Hacker News top story (Score: 33): Hardcoded credentials and other issues in Tata Motors App"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Inkling 2 Small",
+            "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+            "description": "Hacker News top story (Score: 212): Inkling 2 Small"
+          },
+          {
+            "source": "Hacker News",
+            "title": "The Hackintosh Reborn",
+            "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
+            "description": "Hacker News top story (Score: 320): The Hackintosh Reborn"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Quick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines",
+            "url": "https://dev.to/linkbruno/quick-tip-your-link-checker-probably-skips-mailto-and-tel-links-check-them-yourself-in-40-lines-4bjg",
+            "description": "Most link checkers do one thing: request each URL and look at the response. That works for https:// links. It doesn't work for mailto: and tel:, because there's nothing to request. So many tools quietly skip them.\n\nWhich is a shame, because they're often the most valuable links on the page. A typo i"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What osFoundry Local Model does, from picking an open model to tuning it on your own machine",
+            "url": "https://dev.to/tauchi/what-osfoundry-local-model-does-from-picking-an-open-model-to-tuning-it-on-your-own-machine-3kkj",
+            "description": "It is 4:40 on a Thursday and a contract draft sits open in one window. You want an AI to tighten the wording, but the document can't leave your laptop, and you are not sure which of the hundred open models on Hugging Face would even load on 16 GB of memory. You also don't feel like spending the even"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Case study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters",
+            "url": "https://dev.to/linkbruno/case-study-hypothetical-moving-from-windows-to-linux-hosting-broke-1900-links-all-because-of-598f",
+            "description": "This is a hypothetical case study. The company and numbers are invented to illustrate a very common migration problem.\n\n\n  \n  \n  The setup\n\n\n\"Hollow Oak Furniture\" is a small online furniture shop. For twelve years, its site ran on a Windows server: a mix of old hand-written HTML pages, a product ca"
+          },
+          {
+            "source": "Dev.to",
+            "title": "One screen in our app has eight empty states, and four of them are the same emptiness for four different reasons",
+            "url": "https://dev.to/daniel_pertu/one-screen-in-our-app-has-eight-empty-states-and-four-of-them-are-the-same-emptiness-for-four-1nk0",
+            "description": "The screen in Nakodo that shows a brand its conversations with creators has five views: Needs you, In progress, Introduced, Closed, All. It is behind the login, so you cannot look at it, which you can confirm in one line:\n\n\n\n$ curl -sI https://nakodo.app/campaigns/x/outreach | head -2\nHTTP/2 307\nloc"
+          },
+          {
+            "source": "Dev.to",
+            "title": "EMQX Authentication Chains Need Explicit Failure Semantics",
+            "url": "https://dev.to/kozhevniko/emqx-authentication-chains-need-explicit-failure-semantics-31ck",
+            "description": "EMQX Authentication Chains Need Explicit Failure Semantics\n\n\nAn authentication chain is useful when an MQTT deployment must support several client populations, such as certificate users, password devices, and JWT-bearing applications. The chain evaluates authenticators in order. The security outcome"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Does SEO Still Have Value in the Age of AI Search? A Practical Business Framework",
+            "url": "https://dev.to/_cfdee58f5421554a1747c/does-seo-still-have-value-in-the-age-of-ai-search-a-practical-business-framework-4mk1",
+            "description": "1. Google Is Still the Largest Single Entry Point, but Each Impression Is Losing Value\n\n\nGoogle still handles more than 8 billion queries per day, while ChatGPT receives more than 1 billion queries per week (LumenGEO). This is not competition on the same scale; it is an order-of-magnitude gap.\n\nUsag"
+          },
+          {
+            "source": "Dev.to",
+            "title": "ECONNREFUSED vs ETIMEDOUT vs ECONNRESET: what your monitor's error is actually telling you",
+            "url": "https://dev.to/upordownonline/econnrefused-vs-etimedout-vs-econnreset-what-your-monitors-error-is-actually-telling-you-3pi9",
+            "description": "When an uptime check fails, the alert often contains a cryptic code instead of a status: ECONNREFUSED, ETIMEDOUT, ECONNRESET. Many people treat them all as \"site down\" and start restarting things at random.\n\nThey're not the same. Each one points to a different layer, and knowing which is which can s"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Encrypted Is Not Authenticated: What PostgreSQL sslmode Really Checks",
+            "url": "https://dev.to/okoroaforvic/encrypted-is-not-authenticated-what-postgresql-sslmode-really-checks-4k30",
+            "description": "You've probably seen this line a hundred times and moved on:\n\n\n\npsql (18.6 (Debian 18.6-3))\nSSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, compression: off, ALPN: postgresql)\nType \"help\" for help.\n\n\n\n\n\n\nIt looks like the job is done. Your traffic is encrypted, and nobody sniffing"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Use shadcn/ui in React Native Applications [Full Handbook]",
+            "url": "https://www.freecodecamp.org/news/how-to-use-shadcn-ui-in-react-native-applications-full-handbook/",
+            "description": "If you've built a couple of React Native apps, the following probably feels familiar. You start with a colors.ts file and a simple Button component. Everything looks fine at first. Then the design cha"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "What a CAPTCHA Farm Attack Actually Looks Like",
+            "url": "https://www.freecodecamp.org/news/captcha-farm-attack/",
+            "description": "CAPTCHAs are something most of us have come across while browsing the internet. Sometimes we're asked to identify traffic lights in pictures, solve a small puzzle, or simply tick a box to confirm we'r"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Introducing Socrates and the New freeCodeCamp Forum",
+            "url": "https://www.freecodecamp.org/news/introducing-socrates-and-the-new-freecodecamp-forum/",
+            "description": "freeCodeCamp just turned 12 years old. And so did our beloved forum. And today I'm thrilled to say that the forum is now focused on discussions rather than Q&A. This is thanks to Socrates, a new tool"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Find and Fix Common Technical SEO Issues on Your Website",
+            "url": "https://www.freecodecamp.org/news/fix-common-technical-seo-issues/",
+            "description": "Let's say you've built a website. You've invested in the design, bought a domain, and so on. But a website isn't only what you see on the screen. A lot happens behind the scenes. You have to understan"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Automate Docker Image Creation for Postgres Using Shell Commands",
+            "url": "https://www.freecodecamp.org/news/how-to-automate-docker-image-creation-for-postgres-using-shell/",
+            "description": "If you have certain lines of code that repeat over and over again in a project, there's a pretty standard solution for it: using a function. But what about when you have the same project file setup th"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Partner with Design Studios on Client Builds: A Freelance Developer's Guide",
+            "url": "https://www.freecodecamp.org/news/freelance-developer-design-studios/",
+            "description": "Let's say a design studio gets a new client project. The branding is ready, the wireframes are approved, the Figma file is polished, and every screen looks pretty much perfect. Then the developer join"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Vector Databases for Beginners \u2013 Embeddings, Similarity Search & ChromaDB",
+            "url": "https://www.freecodecamp.org/news/learn-vector-databases-for-beginners-embeddings-similarity-search-chromadb/",
+            "description": "A vector database stores data as lists of numbers called embeddings, which lets it search by meaning instead of matching exact keywords. It's the piece behind a lot of recommendation systems, RAG apps"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Detect Financial Fraud Patterns\nwith Knowledge Graphs: A Production\nGuide",
+            "url": "https://www.freecodecamp.org/news/how-to-detect-financial-fraud-patterns-with-knowledge-graphs-a-production-guide/",
+            "description": "Most anti-fraud architectures in enterprise payment workflows evaluate transactions in isolation. When an invoice arrives, an automated rules engine checks it against static thresholds. It checks whet"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Pressure",
+            "url": "https://www.producthunt.com/products/pressure",
+            "description": "Need a second opinion? Have two agents debate your topic\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "SafeGrd",
+            "url": "https://www.producthunt.com/products/safegrd",
+            "description": "Safae database backups that AI can restore but not delete\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Plainmail",
+            "url": "https://www.producthunt.com/products/plainmail",
+            "description": "Real email on every domain you own, for $5 a month flat\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Koltrix",
+            "url": "https://www.producthunt.com/products/koltrix",
+            "description": "Your whole email stack, run by agents you control.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Royak",
+            "url": "https://www.producthunt.com/products/royak",
+            "description": "AI employees that get the work done for you\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "EdgeBar",
+            "url": "https://www.producthunt.com/products/edgebar",
+            "description": "Control your Mac\u2019s volume and brightness from the trackpad\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "TraceX",
+            "url": "https://www.producthunt.com/products/tracex",
+            "description": "The AI engineer for your production issues\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Turnstone",
+            "url": "https://www.producthunt.com/products/turnstone",
+            "description": "Grok Bot alternative that runs on your AI, completely free\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Shipnoted",
+            "url": "https://www.producthunt.com/products/shipnoted",
+            "description": "Changelog + feedback board for closing the loop on your git\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Tobira Site Agent",
+            "url": "https://www.producthunt.com/products/tobira-ai",
+            "description": "Turn your website into an AI agent that sells to AI agents\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1xl1aup/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Why can't SQLite handle more types?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xoz3t6/why_cant_sqlite_handle_more_types/",
+            "description": "I&#39;m sat here thinking it has to be a reason why it is so limited in types compared to something like postgres.   &#32; submitted by &#32;  /u/beatpaq   [link] &#32; [comments]"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Looking for an open-source E2EE browser chat with permanent rooms and invite links",
+            "url": "https://www.reddit.com/r/webdev/comments/1xp9gia/looking_for_an_opensource_e2ee_browser_chat_with/",
+            "description": "I&#39;m looking for an open-source, end-to-end encrypted (E2EE) browser chat that is simple, lightweight, and easy for non-technical people to use. I found one project: https://chat.builtwai.com/ (Vanish), but I&#39;m not entirely sure how trustworthy or secure it is. Another one I really like is ht"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "backend devs who occasionally touch frontend - how do you stay current without going down the rabbit hole",
+            "url": "https://www.reddit.com/r/webdev/comments/1xp3r9e/backend_devs_who_occasionally_touch_frontend_how/",
+            "description": "mostly work on apis and database stuff but our team is small so i end up in react code maybe once a month. every time i come back theres some new build tool or bundler drama and half the packages have breaking changes. not looking to become a frontend expert, just want to not feel completely lost wh"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "How we saved 100 terabytes of memory by optimizing 1.1.1.1\u2019s DNS cache",
+            "url": "https://www.reddit.com/r/webdev/comments/1xo91bx/how_we_saved_100_terabytes_of_memory_by/",
+            "description": "&#32; submitted by &#32;  /u/fagnerbrack   [link] &#32; [comments]"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.42",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.42",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.42. Details: ### Core Changes\n\n- Persist Request Insights session history: #97795\n- Show route module loading and preparation in Request Insights: #97362\n- Improve Request Insights request and fetch details: #96925\n- Automatically compress route handler responses if not already compressed: #101220\n- experimental..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "WebsiteBench",
+            "full_name": "TIGER-AI-Lab/WebsiteBench",
+            "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+            "description": "Can AI agents rebuild websites through browser exploration?",
+            "stars": 74,
+            "forks": 35,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "claude-resocket-plugin",
+            "full_name": "UponNuclearastro/claude-resocket-plugin",
+            "url": "https://github.com/UponNuclearastro/claude-resocket-plugin",
+            "description": "Uiprobe plugin for Claude Code: a check Claude can run against your Figma design. It compares the built page with the frame, value by value, and Claude fixes the differences.",
+            "stars": 40,
+            "forks": 0,
+            "language": "HTML"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.5 MB binary, 4.5 MB of RAM, 10 to 60 tokens per agent reply, starts in 2 ms, zero setup.",
+            "stars": 1045,
+            "forks": 74,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 94058,
+            "forks": 6405,
+            "language": "JavaScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Claude Code sends your email address to websites",
+            "url": "https://github.com/anthropics/claude-code/issues/107757",
+            "description": "Hacker News top story (Score: 1196): Claude Code sends your email address to websites"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Pwn.college",
+            "url": "https://pwn.college/",
+            "description": "Hacker News top story (Score: 167): Pwn.college"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Quick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines",
+            "url": "https://dev.to/linkbruno/quick-tip-your-link-checker-probably-skips-mailto-and-tel-links-check-them-yourself-in-40-lines-4bjg",
+            "description": "Most link checkers do one thing: request each URL and look at the response. That works for https:// links. It doesn't work for mailto: and tel:, because there's nothing to request. So many tools quietly skip them.\n\nWhich is a shame, because they're often the most valuable links on the page. A typo i"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What osFoundry Local Model does, from picking an open model to tuning it on your own machine",
+            "url": "https://dev.to/tauchi/what-osfoundry-local-model-does-from-picking-an-open-model-to-tuning-it-on-your-own-machine-3kkj",
+            "description": "It is 4:40 on a Thursday and a contract draft sits open in one window. You want an AI to tighten the wording, but the document can't leave your laptop, and you are not sure which of the hundred open models on Hugging Face would even load on 16 GB of memory. You also don't feel like spending the even"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Case study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters",
+            "url": "https://dev.to/linkbruno/case-study-hypothetical-moving-from-windows-to-linux-hosting-broke-1900-links-all-because-of-598f",
+            "description": "This is a hypothetical case study. The company and numbers are invented to illustrate a very common migration problem.\n\n\n  \n  \n  The setup\n\n\n\"Hollow Oak Furniture\" is a small online furniture shop. For twelve years, its site ran on a Windows server: a mix of old hand-written HTML pages, a product ca"
+          },
+          {
+            "source": "Dev.to",
+            "title": "One screen in our app has eight empty states, and four of them are the same emptiness for four different reasons",
+            "url": "https://dev.to/daniel_pertu/one-screen-in-our-app-has-eight-empty-states-and-four-of-them-are-the-same-emptiness-for-four-1nk0",
+            "description": "The screen in Nakodo that shows a brand its conversations with creators has five views: Needs you, In progress, Introduced, Closed, All. It is behind the login, so you cannot look at it, which you can confirm in one line:\n\n\n\n$ curl -sI https://nakodo.app/campaigns/x/outreach | head -2\nHTTP/2 307\nloc"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "WebsiteBench",
+            "full_name": "TIGER-AI-Lab/WebsiteBench",
+            "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+            "description": "Can AI agents rebuild websites through browser exploration?",
+            "stars": 74,
+            "forks": 35,
+            "language": "Python",
+            "detailed_content": "<div align=\"center\">\n\n<p>\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/wordmark-dark.svg\">\n  <img alt=\"WebsiteBench\" src=\"assets/wordmark-light.svg\">\n</picture>\n</p>\n\n<p>\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/tagline-dark.svg\">\n  <img alt=\"Can AI agents rebuild websites through browser exploration?\" src=\"assets/tagline-light.svg\">\n</picture>\n</p>\n\n[![Project Page](assets/badges/website.svg)](https://website-bench.com/) [![Leaderboard](assets/badges/results.svg)](https://website-bench.com/#results) [![Tasks](assets/badges/tasks.svg)](https://huggingface.co/datasets/TIGER-Lab/WebsiteBench) [![Harbor Hub](assets/badges/harbor-hub.svg)](https://hub.harborframework.com/datasets/websitebench/WebsiteBench) ![Paper](assets/badges/paper.svg)\n\n[Quickstart](#quickstart) \u00b7 [Evaluate](#evaluate-websitebench) \u00b7 [Tasks](docs/tasks.md) \u00b7 [Run in the cloud](docs/cloud.md) \u00b7 [Docs](docs/README.md) \u00b7 [Citation](#citation)\n\n</div>\n\nGiven a production-level website they can explore through a browser, agents must reverse-engineer a full-stack version that matches its appearance and behavior as closely as possible.\n\n## Quickstart\n\n```sh\ngit clone https://github.com/TIGER-AI-Lab/WebsiteBench.git\ncd WebsiteBench\nuv sync\nuv run python scripts/download_tasks.py --task medium\n```\n\nOr install the [PyPI package](https://pypi.org/project/websitebench/) without cloning (requires Python 3.12\u20133.14); it includes the pinned Harbor 0.25.0, so drop `uv run` from the commands below:\n\n```sh\npip install websitebench\nwebsitebench download --task medium\n```\n\nThe 70 tasks are published on [Harbor Hub](https://hub.harborframework.com/) as `websitebench/WebsiteBench@v1` and on Hugging Face as [`TIGER-Lab/WebsiteBench`](https://huggingface.co/datasets/TIGE",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "claude-resocket-plugin",
+            "full_name": "UponNuclearastro/claude-resocket-plugin",
+            "url": "https://github.com/UponNuclearastro/claude-resocket-plugin",
+            "description": "Uiprobe plugin for Claude Code: a check Claude can run against your Figma design. It compares the built page with the frame, value by value, and Claude fixes the differences.",
+            "stars": 40,
+            "forks": 0,
+            "language": "HTML",
+            "detailed_content": "Repo: claude-resocket-plugin\nDescription: Uiprobe plugin for Claude Code: a check Claude can run against your Figma design. It compares the built page with the frame, value by value, and Claude fixes the differences.\nTopics: ai-coding, ai-powered, claude-plugin, cursor, design-qa, design-systems, digital-signage, figma, frontend-development, monitoring, multi-screen, screenshot-testing, ui-ux, uiprobe, visual-engineering, visual-regression-testing, web-development",
+            "content_source": "api_fallback"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.5 MB binary, 4.5 MB of RAM, 10 to 60 tokens per agent reply, starts in 2 ms, zero setup.",
+            "stars": 1045,
+            "forks": 74,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/kanzo-dark.jpg\">\n    <img alt=\"kanzo: a tiny kanban board for you and your coding agents\" src=\"docs/img/kanzo-light.jpg\">\n  </picture>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml\"><img src=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml/badge.svg\" alt=\"CI\"></a>\n  <a href=\"https://crates.io/crates/kanzo\"><img src=\"https://img.shields.io/crates/v/kanzo\" alt=\"crates.io\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue\" alt=\"AGPL-3.0\"></a>\n</p>\n\nKanzo is a kanban board in your browser and an MCP server in one 4.7 MB program, so you and your coding agents work on the same tasks: on one computer, or on one board shared by all of them. No account, no server, no setup: run `kanzo` and it works.\n\nYou never edit a file. Everything is done in one of three places:\n\n- **the board**, in your browser, for you;\n- **MCP**, for your agents: they take tasks, move cards and comment;\n- **the `kanzo` command**, for the terminal and scripts.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/board-dark.gif\">\n  <img alt=\"The Kanzo board: agents move cards while you watch, \u2318K finds a task in any project, a task is made to wait on another, two selected tasks are dragged together, a list groups the tasks by status, the sidebar folds, Laptop A shares the board and Laptop B joins it\" src=\"docs/img/board-light.gif\">\n</picture>\n\n## Install\n\n> [!TIP]\n> **Just ask your agent:** *\"install Kanzo from github.com/emanuele-em/kanzo.\"*\n\n```sh\ncurl -LsSf https://github.com/emanuele-em/kanzo/releases/latest/download/kanzo-installer.sh | sh\n```\n\nFor macOS and Linux, including every Raspb",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 94058,
+            "forks": 6405,
+            "language": "JavaScript",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/archify-lockup-dark.svg\" />\n    <img src=\"docs/assets/archify-lockup-light.svg\" alt=\"Archify\" width=\"440\" height=\"121\" />\n  </picture>\n</p>\n<h3 align=\"center\">Turn anything you want to understand, plan, or share into an interactive visual.</h3>\n\n<p align=\"center\"><img src=\"docs/assets/archify-readme-hero.png\" alt=\"Archify \u2014 interactive diagrams\" width=\"960\" /></p>\n\n<p align=\"center\"><strong>Official channels\uff1a</strong> <a href=\"https://archify.si\">archify.si</a> \u00b7 <a href=\"https://github.com/tt-a1i/archify\">GitHub</a><br/>Archify is free and open source. Third-party online services and paid plans are operated by their respective providers and do not represent Archify. <a href=\"#official-services\">Service details \u2192</a></p>\n\n<p align=\"center\">Start with an idea, a question, or a plan. Describe it to your AI agent, and Archify turns it into an interactive HTML you can explore, customize, and share. From travel itineraries and learning maps to complex systems\u2014make it your own.</p>\n\n<p align=\"center\">See what the community is creating\u2014and imagine what you could make next.</p>\n\n<p align=\"center\">\n  <a href=\"https://archify.si/gallery.html\"><strong>Live demos</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#start\"><strong>Get started</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"https://archify.si/guide.html\"><strong>Scenario guide</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#community\"><strong>Community</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_ZH.md\"><strong>\u7b80\u4f53\u4e2d\u6587</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_JA.md\"><strong>\u65e5\u672c\u8a9e</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_KO.md\"><strong>\ud55c\uad6d\uc5b4</strong></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/31352?utm_source=repo",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Claude Code sends your email address to websites",
+            "url": "https://github.com/anthropics/claude-code/issues/107757",
+            "description": "Hacker News top story (Score: 1196): Claude Code sends your email address to websites",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nanthropics claude-code Repository navigation Code Issues 5k+ \u00a0( ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Pwn.college",
+            "url": "https://pwn.college/",
+            "description": "Hacker News top story (Score: 167): Pwn.college",
+            "detailed_content": "pwn.college\npwn . college\nDojos\nWorkspace\nHelp\nChat\nSearch\nRegister\nLogin\nHide Navbar\npwn . college\nLearn to Hack!\nYou have entered the pwn.college DOJO, an education platform for learners to develop and practice core cybersecurity skills in a hands-on fashion.\nEntering, you receive your \"white belt\"\n, signifying the beginning of your hacker life.\nFrom here, you will learn cybersecurity by diving deep into the core of computing, using that journey to absorb cybersecurity concepts.\nThis will involve melding your mind to your terminal, whispering instructions to the CPU, and strumming bits directly onto networks.\nThat terminal cursor blinking above?\nIt will be your stalwart companion through this adventure as you practice, earn your\nbelts\n, and, eventually, make perfect.\nEvery dojo has its sensei.\nThis platform is maintained by an\nawesome team\nof hackers at Arizona State University.\nIt powers much of ASU's cybersecurity curriculum, and is open, for free, to participation for interested people around the world!\nEnjoy your journey!\nIf you have questions, comments, suggestions, and feedback, please\njoin our Discord server\nor email us at\n[email\u00a0protected] !\nThe Rules\nThe challenges created for pwn.college are, first and foremost, educational material, and are used to grade students at universities around the world.\nBecause of this, we would appreciate that you\ndo not post writeups, walkthrough videos, and livestreams of challenge solutions\nto the internet.\nObviously, we can't enforce this, but we worked hard to make all of this public, and we would appreciate your help in keeping pwn.college a viable educational platform.\nPlease agree to these rules to continue to the material!\nI Agree to the Rules\nYOUR Journey \u2014 Next Steps \ud83e\udef5\nWhether you have just started, or have come far, t",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Quick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines",
+            "url": "https://dev.to/linkbruno/quick-tip-your-link-checker-probably-skips-mailto-and-tel-links-check-them-yourself-in-40-lines-4bjg",
+            "description": "Most link checkers do one thing: request each URL and look at the response. That works for https:// links. It doesn't work for mailto: and tel:, because there's nothing to request. So many tools quietly skip them.\n\nWhich is a shame, because they're often the most valuable links on the page. A typo i",
+            "detailed_content": "Quick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nlinkbruno.com\nPosted on\nNov 6\nQuick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines\n# python\n# html\n# webdev\n# tutorial\nMost link checkers do one thing: request each URL and look at the response. That works for\nhttps://\nlinks. It doesn't work for\nmailto:\nand\ntel: , because there's nothing to request. So many tools quietly skip them.\nWhich is a shame, because they're often the most valuable links on the page. A typo in the \"Email us\" link on a contact page costs real enquiries, and nothing ever returns a 404 to tell you.\nHere's a quick way to catch the obvious mistakes.\nThe script\n#!/usr/bin/env python3\n\"\"\" contact_links.py: flag suspicious mailto: and tel: links in HTML files. \"\"\"\nimport\nre ,\nsys\nfrom\nhtml.parser\nimport\nHTMLParser\nfrom\nurllib.parse\nimport\nurlparse ,\nunquote\nEMAIL\n=\nre . compile ( r \" ^[^@\\s]+@[^@\\s]+\\.[a-z]{2,}$ \" ,\nre . I )\nTEL\n=\nre . compile ( r \" ^\\+?[0-9().\\- ]{6,}$ \" )\nclass\nLinks ( HTMLParser ):\ndef\n__init__ ( self ):\nsuper (). __init__ ()\nself . links\n=\n[]\ndef\nhandle_starttag ( self ,\ntag ,\nattrs ):\nif\ntag\n==\n\" a \" :\nhref\n=\ndict ( attrs ). get ( \" href \" )\nor\n\"\"\nself . links . append (( self . getpos ()[ 0 ],\nhref . strip ()))\ndef\nproblems ( href ):\nscheme\n=\nhref . split ( \" : \" ,\n1 )[ 0 ]. lower ()\nif\nscheme\n==\n\" mailto \" :\naddrs\n=\nunquote ( urlparse ( href ). path ). split ( \" , \" )\nbad\n=\n[ a\nfor\na\nin\naddrs\nif\nno",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What osFoundry Local Model does, from picking an open model to tuning it on your own machine",
+            "url": "https://dev.to/tauchi/what-osfoundry-local-model-does-from-picking-an-open-model-to-tuning-it-on-your-own-machine-3kkj",
+            "description": "It is 4:40 on a Thursday and a contract draft sits open in one window. You want an AI to tighten the wording, but the document can't leave your laptop, and you are not sure which of the hundred open models on Hugging Face would even load on 16 GB of memory. You also don't feel like spending the even",
+            "detailed_content": "What osFoundry Local Model does, from picking an open model to tuning it on your own machine - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\ntauchiii\nPosted on\nNov 6\nWhat osFoundry Local Model does, from picking an open model to tuning it on your own machine\n# ai\n# machinelearning\n# llm\n# opensource\nIt is 4:40 on a Thursday and a contract draft sits open in one window. You want an AI to tighten the wording, but the document can't leave your laptop, and you are not sure which of the hundred open models on Hugging Face would even load on 16 GB of memory. You also don't feel like spending the evening in a terminal finding out.\nOne sidebar group for everything you do with open models\nLocal Model is the part of\nosFoundry\nthat deals with open-weight models running on hardware you control. It sits in the desktop app's sidebar as its own category, split into three sub-headings: Run (Explore, Providers, Servers, Playground, Deployments, Cloud GPU, GPU Endpoints), Build (My Models, Datasets, Training, Quantize, Notebooks) and Measure (Eval, Benchmarks, Safety). If you have used Ollama or LM Studio, the Run half will feel familiar: find a model, download it, talk to it. The difference is that the same group also lets you shrink a model, fine-tune it on your own examples and test it with your own questions, so the whole life of a model stays in one app. On-device inference uses a bundled llama.cpp server, so no separate install is needed. This guide covers the nine screens most people use: Explore, Servers, Playground, My Models, Datasets, ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Case study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters",
+            "url": "https://dev.to/linkbruno/case-study-hypothetical-moving-from-windows-to-linux-hosting-broke-1900-links-all-because-of-598f",
+            "description": "This is a hypothetical case study. The company and numbers are invented to illustrate a very common migration problem.\n\n\n  \n  \n  The setup\n\n\n\"Hollow Oak Furniture\" is a small online furniture shop. For twelve years, its site ran on a Windows server: a mix of old hand-written HTML pages, a product ca",
+            "detailed_content": "Case study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nlinkbruno.com\nPosted on\nNov 6\n\u2022\nEdited on\nNov 6\nCase study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters\n# webdev\n# linux\n# migration\n# devops\nThis is a hypothetical case study. The company and numbers are invented to illustrate a very common migration problem.\nThe setup\n\"Hollow Oak Furniture\" is a small online furniture shop. For twelve years, its site ran on a Windows server: a mix of old hand-written HTML pages, a product catalogue, and thousands of product images uploaded by different staff over the years.\nThe site is moving to a modern Linux host. The migration plan looks careful: copy all files, export the database, test the homepage, the product pages and checkout. Everything works on the staging site. The switch happens on a Tuesday morning.\nBy Tuesday afternoon, customers are emailing about missing images, and some older blog posts show broken pages.\nWhat went wrong\nWindows file systems (as typically configured) and IIS treat file and URL paths as\ncase-insensitive . On the old server, all of these returned the same file:\n/Images/Chairs/Oak-Chair.JPG\n/images/chairs/oak-chair.jpg\n/IMAGES/CHAIRS/OAK-CHAIR.JPG\nLinux file systems are\ncase-sensitive . On the new server, only the exact spelling of the file on disk works. Everything else is a 404.\nOver twelve years, nobody had been consistent:\nSome staff uploaded",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "One screen in our app has eight empty states, and four of them are the same emptiness for four different reasons",
+            "url": "https://dev.to/daniel_pertu/one-screen-in-our-app-has-eight-empty-states-and-four-of-them-are-the-same-emptiness-for-four-1nk0",
+            "description": "The screen in Nakodo that shows a brand its conversations with creators has five views: Needs you, In progress, Introduced, Closed, All. It is behind the login, so you cannot look at it, which you can confirm in one line:\n\n\n\n$ curl -sI https://nakodo.app/campaigns/x/outreach | head -2\nHTTP/2 307\nloc",
+            "detailed_content": "One screen in our app has eight empty states, and four of them are the same emptiness for four different reasons - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDaniel Pertu\nPosted on\nNov 6\nOne screen in our app has eight empty states, and four of them are the same emptiness for four different reasons\n# react\n# nextjs\n# webdev\n# ux\nThe screen in\nNakodo\nthat shows a brand its conversations with creators has five views: Needs you, In progress, Introduced, Closed, All. It is behind the login, so you cannot look at it, which you can confirm in one line:\n$\ncurl\n-sI\nhttps://nakodo.app/campaigns/x/outreach |\nhead\n-2\nHTTP/2 307\nlocation: /login?next = %2Fcampaigns%2Fx%2Foutreach\nWhat I can show you is the code, and the thing worth showing is not the table. It is the eight different ways this one screen says \"there is nothing here\", because that turned out to be where most of the thinking went.\nFive views over eight states\nA conversation has one of eight statuses, and they live in the schema with a comment each:\nexport\nconst\nOUTREACH_STATUSES\n=\n[\n\" drafting \" ,\n// the first email is being written\n\" review \" ,\n// waiting for the brand to approve the first email\n\" queued \" ,\n// approved; goes out at nextActionAt\n\" contacted \" ,\n// sent, no reply yet\n\" talking \" ,\n// the creator replied and Nakodo answered\n\" needs_you \" ,\n// the creator asked something only the brand can answer\n\" handed_off \" ,\n// the creator is interested and was introduced to the brand\n\" closed \" ,\n]\nas const ;\nThe views are a separate list, in\nsrc/lib/outreach/labels.ts ",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "WebsiteBench",
+            "full_name": "TIGER-AI-Lab/WebsiteBench",
+            "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+            "description": "Can AI agents rebuild websites through browser exploration?",
+            "stars": 74,
+            "forks": 35,
+            "language": "Python",
+            "detailed_content": "<div align=\"center\">\n\n<p>\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/wordmark-dark.svg\">\n  <img alt=\"WebsiteBench\" src=\"assets/wordmark-light.svg\">\n</picture>\n</p>\n\n<p>\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/tagline-dark.svg\">\n  <img alt=\"Can AI agents rebuild websites through browser exploration?\" src=\"assets/tagline-light.svg\">\n</picture>\n</p>\n\n[![Project Page](assets/badges/website.svg)](https://website-bench.com/) [![Leaderboard](assets/badges/results.svg)](https://website-bench.com/#results) [![Tasks](assets/badges/tasks.svg)](https://huggingface.co/datasets/TIGER-Lab/WebsiteBench) [![Harbor Hub](assets/badges/harbor-hub.svg)](https://hub.harborframework.com/datasets/websitebench/WebsiteBench) ![Paper](assets/badges/paper.svg)\n\n[Quickstart](#quickstart) \u00b7 [Evaluate](#evaluate-websitebench) \u00b7 [Tasks](docs/tasks.md) \u00b7 [Run in the cloud](docs/cloud.md) \u00b7 [Docs](docs/README.md) \u00b7 [Citation](#citation)\n\n</div>\n\nGiven a production-level website they can explore through a browser, agents must reverse-engineer a full-stack version that matches its appearance and behavior as closely as possible.\n\n## Quickstart\n\n```sh\ngit clone https://github.com/TIGER-AI-Lab/WebsiteBench.git\ncd WebsiteBench\nuv sync\nuv run python scripts/download_tasks.py --task medium\n```\n\nOr install the [PyPI package](https://pypi.org/project/websitebench/) without cloning (requires Python 3.12\u20133.14); it includes the pinned Harbor 0.25.0, so drop `uv run` from the commands below:\n\n```sh\npip install websitebench\nwebsitebench download --task medium\n```\n\nThe 70 tasks are published on [Harbor Hub](https://hub.harborframework.com/) as `websitebench/WebsiteBench@v1` and on Hugging Face as [`TIGER-Lab/WebsiteBench`](https://huggingface.co/datasets/TIGE",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Tagline and description confirm AI agents can rebuild sites via browser exploration."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Quick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines",
+            "url": "https://dev.to/linkbruno/quick-tip-your-link-checker-probably-skips-mailto-and-tel-links-check-them-yourself-in-40-lines-4bjg",
+            "description": "Most link checkers do one thing: request each URL and look at the response. That works for https:// links. It doesn't work for mailto: and tel:, because there's nothing to request. So many tools quietly skip them.\n\nWhich is a shame, because they're often the most valuable links on the page. A typo i",
+            "detailed_content": "Quick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nlinkbruno.com\nPosted on\nNov 6\nQuick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines\n# python\n# html\n# webdev\n# tutorial\nMost link checkers do one thing: request each URL and look at the response. That works for\nhttps://\nlinks. It doesn't work for\nmailto:\nand\ntel: , because there's nothing to request. So many tools quietly skip them.\nWhich is a shame, because they're often the most valuable links on the page. A typo in the \"Email us\" link on a contact page costs real enquiries, and nothing ever returns a 404 to tell you.\nHere's a quick way to catch the obvious mistakes.\nThe script\n#!/usr/bin/env python3\n\"\"\" contact_links.py: flag suspicious mailto: and tel: links in HTML files. \"\"\"\nimport\nre ,\nsys\nfrom\nhtml.parser\nimport\nHTMLParser\nfrom\nurllib.parse\nimport\nurlparse ,\nunquote\nEMAIL\n=\nre . compile ( r \" ^[^@\\s]+@[^@\\s]+\\.[a-z]{2,}$ \" ,\nre . I )\nTEL\n=\nre . compile ( r \" ^\\+?[0-9().\\- ]{6,}$ \" )\nclass\nLinks ( HTMLParser ):\ndef\n__init__ ( self ):\nsuper (). __init__ ()\nself . links\n=\n[]\ndef\nhandle_starttag ( self ,\ntag ,\nattrs ):\nif\ntag\n==\n\" a \" :\nhref\n=\ndict ( attrs ). get ( \" href \" )\nor\n\"\"\nself . links . append (( self . getpos ()[ 0 ],\nhref . strip ()))\ndef\nproblems ( href ):\nscheme\n=\nhref . split ( \" : \" ,\n1 )[ 0 ]. lower ()\nif\nscheme\n==\n\" mailto \" :\naddrs\n=\nunquote ( urlparse ( href ). path ). split ( \" , \" )\nbad\n=\n[ a\nfor\na\nin\naddrs\nif\nno",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article confirms link checkers skip mailto: and tel: links."
+          },
+          {
+            "source": "Dev.to",
+            "title": "What osFoundry Local Model does, from picking an open model to tuning it on your own machine",
+            "url": "https://dev.to/tauchi/what-osfoundry-local-model-does-from-picking-an-open-model-to-tuning-it-on-your-own-machine-3kkj",
+            "description": "It is 4:40 on a Thursday and a contract draft sits open in one window. You want an AI to tighten the wording, but the document can't leave your laptop, and you are not sure which of the hundred open models on Hugging Face would even load on 16 GB of memory. You also don't feel like spending the even",
+            "detailed_content": "What osFoundry Local Model does, from picking an open model to tuning it on your own machine - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\ntauchiii\nPosted on\nNov 6\nWhat osFoundry Local Model does, from picking an open model to tuning it on your own machine\n# ai\n# machinelearning\n# llm\n# opensource\nIt is 4:40 on a Thursday and a contract draft sits open in one window. You want an AI to tighten the wording, but the document can't leave your laptop, and you are not sure which of the hundred open models on Hugging Face would even load on 16 GB of memory. You also don't feel like spending the evening in a terminal finding out.\nOne sidebar group for everything you do with open models\nLocal Model is the part of\nosFoundry\nthat deals with open-weight models running on hardware you control. It sits in the desktop app's sidebar as its own category, split into three sub-headings: Run (Explore, Providers, Servers, Playground, Deployments, Cloud GPU, GPU Endpoints), Build (My Models, Datasets, Training, Quantize, Notebooks) and Measure (Eval, Benchmarks, Safety). If you have used Ollama or LM Studio, the Run half will feel familiar: find a model, download it, talk to it. The difference is that the same group also lets you shrink a model, fine-tune it on your own examples and test it with your own questions, so the whole life of a model stays in one app. On-device inference uses a bundled llama.cpp server, so no separate install is needed. This guide covers the nine screens most people use: Explore, Servers, Playground, My Models, Datasets, ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article opens with identical scenario about local model constraints."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Case study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters",
+            "url": "https://dev.to/linkbruno/case-study-hypothetical-moving-from-windows-to-linux-hosting-broke-1900-links-all-because-of-598f",
+            "description": "This is a hypothetical case study. The company and numbers are invented to illustrate a very common migration problem.\n\n\n  \n  \n  The setup\n\n\n\"Hollow Oak Furniture\" is a small online furniture shop. For twelve years, its site ran on a Windows server: a mix of old hand-written HTML pages, a product ca",
+            "detailed_content": "Case study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nlinkbruno.com\nPosted on\nNov 6\n\u2022\nEdited on\nNov 6\nCase study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters\n# webdev\n# linux\n# migration\n# devops\nThis is a hypothetical case study. The company and numbers are invented to illustrate a very common migration problem.\nThe setup\n\"Hollow Oak Furniture\" is a small online furniture shop. For twelve years, its site ran on a Windows server: a mix of old hand-written HTML pages, a product catalogue, and thousands of product images uploaded by different staff over the years.\nThe site is moving to a modern Linux host. The migration plan looks careful: copy all files, export the database, test the homepage, the product pages and checkout. Everything works on the staging site. The switch happens on a Tuesday morning.\nBy Tuesday afternoon, customers are emailing about missing images, and some older blog posts show broken pages.\nWhat went wrong\nWindows file systems (as typically configured) and IIS treat file and URL paths as\ncase-insensitive . On the old server, all of these returned the same file:\n/Images/Chairs/Oak-Chair.JPG\n/images/chairs/oak-chair.jpg\n/IMAGES/CHAIRS/OAK-CHAIR.JPG\nLinux file systems are\ncase-sensitive . On the new server, only the exact spelling of the file on disk works. Everything else is a 404.\nOver twelve years, nobody had been consistent:\nSome staff uploaded",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Documentation is the same hypothetical case study described."
+          },
+          {
+            "source": "Dev.to",
+            "title": "One screen in our app has eight empty states, and four of them are the same emptiness for four different reasons",
+            "url": "https://dev.to/daniel_pertu/one-screen-in-our-app-has-eight-empty-states-and-four-of-them-are-the-same-emptiness-for-four-1nk0",
+            "description": "The screen in Nakodo that shows a brand its conversations with creators has five views: Needs you, In progress, Introduced, Closed, All. It is behind the login, so you cannot look at it, which you can confirm in one line:\n\n\n\n$ curl -sI https://nakodo.app/campaigns/x/outreach | head -2\nHTTP/2 307\nloc",
+            "detailed_content": "One screen in our app has eight empty states, and four of them are the same emptiness for four different reasons - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDaniel Pertu\nPosted on\nNov 6\nOne screen in our app has eight empty states, and four of them are the same emptiness for four different reasons\n# react\n# nextjs\n# webdev\n# ux\nThe screen in\nNakodo\nthat shows a brand its conversations with creators has five views: Needs you, In progress, Introduced, Closed, All. It is behind the login, so you cannot look at it, which you can confirm in one line:\n$\ncurl\n-sI\nhttps://nakodo.app/campaigns/x/outreach |\nhead\n-2\nHTTP/2 307\nlocation: /login?next = %2Fcampaigns%2Fx%2Foutreach\nWhat I can show you is the code, and the thing worth showing is not the table. It is the eight different ways this one screen says \"there is nothing here\", because that turned out to be where most of the thinking went.\nFive views over eight states\nA conversation has one of eight statuses, and they live in the schema with a comment each:\nexport\nconst\nOUTREACH_STATUSES\n=\n[\n\" drafting \" ,\n// the first email is being written\n\" review \" ,\n// waiting for the brand to approve the first email\n\" queued \" ,\n// approved; goes out at nextActionAt\n\" contacted \" ,\n// sent, no reply yet\n\" talking \" ,\n// the creator replied and Nakodo answered\n\" needs_you \" ,\n// the creator asked something only the brand can answer\n\" handed_off \" ,\n// the creator is interested and was introduced to the brand\n\" closed \" ,\n]\nas const ;\nThe views are a separate list, in\nsrc/lib/outreach/labels.ts ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article includes same screen description and curl 307 response."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "WebsiteBench",
+            "full_name": "TIGER-AI-Lab/WebsiteBench",
+            "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+            "description": "Can AI agents rebuild websites through browser exploration?",
+            "stars": 74,
+            "forks": 35,
+            "language": "Python",
+            "detailed_content": "<div align=\"center\">\n\n<p>\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/wordmark-dark.svg\">\n  <img alt=\"WebsiteBench\" src=\"assets/wordmark-light.svg\">\n</picture>\n</p>\n\n<p>\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/tagline-dark.svg\">\n  <img alt=\"Can AI agents rebuild websites through browser exploration?\" src=\"assets/tagline-light.svg\">\n</picture>\n</p>\n\n[![Project Page](assets/badges/website.svg)](https://website-bench.com/) [![Leaderboard](assets/badges/results.svg)](https://website-bench.com/#results) [![Tasks](assets/badges/tasks.svg)](https://huggingface.co/datasets/TIGER-Lab/WebsiteBench) [![Harbor Hub](assets/badges/harbor-hub.svg)](https://hub.harborframework.com/datasets/websitebench/WebsiteBench) ![Paper](assets/badges/paper.svg)\n\n[Quickstart](#quickstart) \u00b7 [Evaluate](#evaluate-websitebench) \u00b7 [Tasks](docs/tasks.md) \u00b7 [Run in the cloud](docs/cloud.md) \u00b7 [Docs](docs/README.md) \u00b7 [Citation](#citation)\n\n</div>\n\nGiven a production-level website they can explore through a browser, agents must reverse-engineer a full-stack version that matches its appearance and behavior as closely as possible.\n\n## Quickstart\n\n```sh\ngit clone https://github.com/TIGER-AI-Lab/WebsiteBench.git\ncd WebsiteBench\nuv sync\nuv run python scripts/download_tasks.py --task medium\n```\n\nOr install the [PyPI package](https://pypi.org/project/websitebench/) without cloning (requires Python 3.12\u20133.14); it includes the pinned Harbor 0.25.0, so drop `uv run` from the commands below:\n\n```sh\npip install websitebench\nwebsitebench download --task medium\n```\n\nThe 70 tasks are published on [Harbor Hub](https://hub.harborframework.com/) as `websitebench/WebsiteBench@v1` and on Hugging Face as [`TIGER-Lab/WebsiteBench`](https://huggingface.co/datasets/TIGE",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Tagline and description confirm AI agents can rebuild sites via browser exploration.",
+            "why_it_matters": "WebsiteBench shows how AI agents can automatically reverse\u2011engineer a live site by browsing it, opening new possibilities for automated web\u2011scraping, migration, and testing of AI\u2011driven web bots.",
+            "who_cares": "Full\u2011stack engineers, AI/ML researchers building web\u2011automation agents, and devs interested in AI\u2011assisted site reconstruction.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Quick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines",
+            "url": "https://dev.to/linkbruno/quick-tip-your-link-checker-probably-skips-mailto-and-tel-links-check-them-yourself-in-40-lines-4bjg",
+            "description": "Most link checkers do one thing: request each URL and look at the response. That works for https:// links. It doesn't work for mailto: and tel:, because there's nothing to request. So many tools quietly skip them.\n\nWhich is a shame, because they're often the most valuable links on the page. A typo i",
+            "detailed_content": "Quick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nlinkbruno.com\nPosted on\nNov 6\nQuick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines\n# python\n# html\n# webdev\n# tutorial\nMost link checkers do one thing: request each URL and look at the response. That works for\nhttps://\nlinks. It doesn't work for\nmailto:\nand\ntel: , because there's nothing to request. So many tools quietly skip them.\nWhich is a shame, because they're often the most valuable links on the page. A typo in the \"Email us\" link on a contact page costs real enquiries, and nothing ever returns a 404 to tell you.\nHere's a quick way to catch the obvious mistakes.\nThe script\n#!/usr/bin/env python3\n\"\"\" contact_links.py: flag suspicious mailto: and tel: links in HTML files. \"\"\"\nimport\nre ,\nsys\nfrom\nhtml.parser\nimport\nHTMLParser\nfrom\nurllib.parse\nimport\nurlparse ,\nunquote\nEMAIL\n=\nre . compile ( r \" ^[^@\\s]+@[^@\\s]+\\.[a-z]{2,}$ \" ,\nre . I )\nTEL\n=\nre . compile ( r \" ^\\+?[0-9().\\- ]{6,}$ \" )\nclass\nLinks ( HTMLParser ):\ndef\n__init__ ( self ):\nsuper (). __init__ ()\nself . links\n=\n[]\ndef\nhandle_starttag ( self ,\ntag ,\nattrs ):\nif\ntag\n==\n\" a \" :\nhref\n=\ndict ( attrs ). get ( \" href \" )\nor\n\"\"\nself . links . append (( self . getpos ()[ 0 ],\nhref . strip ()))\ndef\nproblems ( href ):\nscheme\n=\nhref . split ( \" : \" ,\n1 )[ 0 ]. lower ()\nif\nscheme\n==\n\" mailto \" :\naddrs\n=\nunquote ( urlparse ( href ). path ). split ( \" , \" )\nbad\n=\n[ a\nfor\na\nin\naddrs\nif\nno",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article confirms link checkers skip mailto: and tel: links.",
+            "why_it_matters": "A tiny 40\u2011line Python script catches broken\u202fmailto:\u202fand\u202ftel:\u202flinks that traditional link checkers ignore, preventing lost leads and user frustration.",
+            "who_cares": "Web developers, QA engineers, and DevOps teams responsible for site health and accessibility.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What osFoundry Local Model does, from picking an open model to tuning it on your own machine",
+            "url": "https://dev.to/tauchi/what-osfoundry-local-model-does-from-picking-an-open-model-to-tuning-it-on-your-own-machine-3kkj",
+            "description": "It is 4:40 on a Thursday and a contract draft sits open in one window. You want an AI to tighten the wording, but the document can't leave your laptop, and you are not sure which of the hundred open models on Hugging Face would even load on 16 GB of memory. You also don't feel like spending the even",
+            "detailed_content": "What osFoundry Local Model does, from picking an open model to tuning it on your own machine - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\ntauchiii\nPosted on\nNov 6\nWhat osFoundry Local Model does, from picking an open model to tuning it on your own machine\n# ai\n# machinelearning\n# llm\n# opensource\nIt is 4:40 on a Thursday and a contract draft sits open in one window. You want an AI to tighten the wording, but the document can't leave your laptop, and you are not sure which of the hundred open models on Hugging Face would even load on 16 GB of memory. You also don't feel like spending the evening in a terminal finding out.\nOne sidebar group for everything you do with open models\nLocal Model is the part of\nosFoundry\nthat deals with open-weight models running on hardware you control. It sits in the desktop app's sidebar as its own category, split into three sub-headings: Run (Explore, Providers, Servers, Playground, Deployments, Cloud GPU, GPU Endpoints), Build (My Models, Datasets, Training, Quantize, Notebooks) and Measure (Eval, Benchmarks, Safety). If you have used Ollama or LM Studio, the Run half will feel familiar: find a model, download it, talk to it. The difference is that the same group also lets you shrink a model, fine-tune it on your own examples and test it with your own questions, so the whole life of a model stays in one app. On-device inference uses a bundled llama.cpp server, so no separate install is needed. This guide covers the nine screens most people use: Explore, Servers, Playground, My Models, Datasets, ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article opens with identical scenario about local model constraints.",
+            "why_it_matters": "osFoundry Local Model lets you run, quantize, and fine\u2011tune open\u2011weight LLMs on a personal machine, giving privacy, lower cost, and faster iteration without cloud dependencies.",
+            "who_cares": "Machine\u2011learning engineers, AI product developers, and data scientists who need on\u2011device inference or want to experiment with LLMs locally.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Case study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters",
+            "url": "https://dev.to/linkbruno/case-study-hypothetical-moving-from-windows-to-linux-hosting-broke-1900-links-all-because-of-598f",
+            "description": "This is a hypothetical case study. The company and numbers are invented to illustrate a very common migration problem.\n\n\n  \n  \n  The setup\n\n\n\"Hollow Oak Furniture\" is a small online furniture shop. For twelve years, its site ran on a Windows server: a mix of old hand-written HTML pages, a product ca",
+            "detailed_content": "Case study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nlinkbruno.com\nPosted on\nNov 6\n\u2022\nEdited on\nNov 6\nCase study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters\n# webdev\n# linux\n# migration\n# devops\nThis is a hypothetical case study. The company and numbers are invented to illustrate a very common migration problem.\nThe setup\n\"Hollow Oak Furniture\" is a small online furniture shop. For twelve years, its site ran on a Windows server: a mix of old hand-written HTML pages, a product catalogue, and thousands of product images uploaded by different staff over the years.\nThe site is moving to a modern Linux host. The migration plan looks careful: copy all files, export the database, test the homepage, the product pages and checkout. Everything works on the staging site. The switch happens on a Tuesday morning.\nBy Tuesday afternoon, customers are emailing about missing images, and some older blog posts show broken pages.\nWhat went wrong\nWindows file systems (as typically configured) and IIS treat file and URL paths as\ncase-insensitive . On the old server, all of these returned the same file:\n/Images/Chairs/Oak-Chair.JPG\n/images/chairs/oak-chair.jpg\n/IMAGES/CHAIRS/OAK-CHAIR.JPG\nLinux file systems are\ncase-sensitive . On the new server, only the exact spelling of the file on disk works. Everything else is a 404.\nOver twelve years, nobody had been consistent:\nSome staff uploaded",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Documentation is the same hypothetical case study described.",
+            "why_it_matters": "The case study illustrates how case\u2011sensitive file systems can silently break thousands of URLs during a Windows\u2011to\u2011Linux migration, underscoring the need for strict naming conventions and automated link validation.",
+            "who_cares": "Site reliability engineers, DevOps specialists, and web developers managing legacy migrations.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "One screen in our app has eight empty states, and four of them are the same emptiness for four different reasons",
+            "url": "https://dev.to/daniel_pertu/one-screen-in-our-app-has-eight-empty-states-and-four-of-them-are-the-same-emptiness-for-four-1nk0",
+            "description": "The screen in Nakodo that shows a brand its conversations with creators has five views: Needs you, In progress, Introduced, Closed, All. It is behind the login, so you cannot look at it, which you can confirm in one line:\n\n\n\n$ curl -sI https://nakodo.app/campaigns/x/outreach | head -2\nHTTP/2 307\nloc",
+            "detailed_content": "One screen in our app has eight empty states, and four of them are the same emptiness for four different reasons - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDaniel Pertu\nPosted on\nNov 6\nOne screen in our app has eight empty states, and four of them are the same emptiness for four different reasons\n# react\n# nextjs\n# webdev\n# ux\nThe screen in\nNakodo\nthat shows a brand its conversations with creators has five views: Needs you, In progress, Introduced, Closed, All. It is behind the login, so you cannot look at it, which you can confirm in one line:\n$\ncurl\n-sI\nhttps://nakodo.app/campaigns/x/outreach |\nhead\n-2\nHTTP/2 307\nlocation: /login?next = %2Fcampaigns%2Fx%2Foutreach\nWhat I can show you is the code, and the thing worth showing is not the table. It is the eight different ways this one screen says \"there is nothing here\", because that turned out to be where most of the thinking went.\nFive views over eight states\nA conversation has one of eight statuses, and they live in the schema with a comment each:\nexport\nconst\nOUTREACH_STATUSES\n=\n[\n\" drafting \" ,\n// the first email is being written\n\" review \" ,\n// waiting for the brand to approve the first email\n\" queued \" ,\n// approved; goes out at nextActionAt\n\" contacted \" ,\n// sent, no reply yet\n\" talking \" ,\n// the creator replied and Nakodo answered\n\" needs_you \" ,\n// the creator asked something only the brand can answer\n\" handed_off \" ,\n// the creator is interested and was introduced to the brand\n\" closed \" ,\n]\nas const ;\nThe views are a separate list, in\nsrc/lib/outreach/labels.ts ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article includes same screen description and curl 307 response.",
+            "why_it_matters": "Eight distinct empty\u2011state designs for a single screen highlight the hidden complexity of UX edge cases and the importance of consolidating and testing empty states early.",
+            "who_cares": "Frontend engineers, UI/UX designers, and product managers building data\u2011driven interfaces.",
+            "verdict": "READ"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Watchlist",
+            "title": "WebsiteBench",
+            "description": "**WebsiteBench lets AI agents rebuild a live website by browsing it.** Given a production\u2011level site, agents explore through a browser and reverse\u2011engineer a full\u2011stack version that matches appearance and behavior. The repo provides 70 tasks and quick\u2011start scripts, with data hosted on Harbor Hub and Hugging Face.",
+            "why_it_matters": "WebsiteBench shows how AI agents can automatically reverse\u2011engineer a live site by browsing it, opening new possibilities for automated web\u2011scraping, migration, and testing of AI\u2011driven web bots.",
+            "who_cares": "Full\u2011stack engineers, AI/ML researchers building web\u2011automation agents, and devs interested in AI\u2011assisted site reconstruction.",
+            "verdict": "WATCH",
+            "source_url": "https://github.com/TIGER-AI-Lab/WebsiteBench"
+          },
+          {
+            "category": "Cool Tool",
+            "title": "Quick tip: your link checker probably skips mailto: and tel: links. Check them yourself in 40 lines",
+            "description": "**A 40\u2011line Python script can validate mailto: and tel: links that most link checkers ignore.** The script parses HTML, extracts <a> tags, and uses regexes to flag malformed email addresses or phone numbers, helping catch broken contact links before they cost enquiries.",
+            "why_it_matters": "A tiny 40\u2011line Python script catches broken\u202fmailto:\u202fand\u202ftel:\u202flinks that traditional link checkers ignore, preventing lost leads and user frustration.",
+            "who_cares": "Web developers, QA engineers, and DevOps teams responsible for site health and accessibility.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/linkbruno/quick-tip-your-link-checker-probably-skips-mailto-and-tel-links-check-them-yourself-in-40-lines-4bjg"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "What osFoundry Local Model does, from picking an open model to tuning it on your own machine",
+            "description": "**osFoundry\u2019s Local Model adds a full lifecycle for open\u2011weight LLMs inside a desktop app.** It lets you explore, download, run, quantize, fine\u2011tune, and benchmark models on your own hardware via an integrated llama.cpp server, eliminating separate installations.",
+            "why_it_matters": "osFoundry Local Model lets you run, quantize, and fine\u2011tune open\u2011weight LLMs on a personal machine, giving privacy, lower cost, and faster iteration without cloud dependencies.",
+            "who_cares": "Machine\u2011learning engineers, AI product developers, and data scientists who need on\u2011device inference or want to experiment with LLMs locally.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/tauchi/what-osfoundry-local-model-does-from-picking-an-open-model-to-tuning-it-on-your-own-machine-3kkj"
+          },
+          {
+            "category": "Tech Shift",
+            "title": "Case study (hypothetical): moving from Windows to Linux hosting broke 1,900 links, all because of capital letters",
+            "description": "**A migration from Windows to Linux can silently break thousands of URLs due to case\u2011sensitivity.** The hypothetical \u201cHollow Oak Furniture\u201d site lost 1,900 links because Windows treated paths case\u2011insensitively while Linux requires exact spelling, highlighting the need for consistent naming and automated link validation.",
+            "why_it_matters": "The case study illustrates how case\u2011sensitive file systems can silently break thousands of URLs during a Windows\u2011to\u2011Linux migration, underscoring the need for strict naming conventions and automated link validation.",
+            "who_cares": "Site reliability engineers, DevOps specialists, and web developers managing legacy migrations.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/linkbruno/case-study-hypothetical-moving-from-windows-to-linux-hosting-broke-1900-links-all-because-of-598f"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "One screen in our app has eight empty states, and four of them are the same emptiness for four different reasons",
+            "description": "**Eight distinct empty\u2011state designs for a single screen reveal hidden UX complexity.** The Nakodo outreach view supports five logical statuses that expand into eight UI states, four of which display identical \u201cnothing here\u201d messages for different reasons, underscoring the importance of consolidating and testing empty states early.",
+            "why_it_matters": "Eight distinct empty\u2011state designs for a single screen highlight the hidden complexity of UX edge cases and the importance of consolidating and testing empty states early.",
+            "who_cares": "Frontend engineers, UI/UX designers, and product managers building data\u2011driven interfaces.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/daniel_pertu/one-screen-in-our-app-has-eight-empty-states-and-four-of-them-are-the-same-emptiness-for-four-1nk0"
+          }
+        ]
+      }
+    }
+  },
+  "rejected_urls": [],
+  "restarted": false,
+  "email": {
+    "status": "sent",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": []
+}
