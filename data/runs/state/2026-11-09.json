@@ -1,6 +1,900 @@
 {
   "date": "2026-11-09",
-  "stages": {},
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "kodeida",
+            "full_name": "f3an/kodeida",
+            "url": "https://github.com/f3an/kodeida",
+            "description": "Kodeida \u2014 a game where your code moves the hero: LeetCode techniques in the worlds of Ukrainian literature. TypeScript, JavaScript and Python, offline.",
+            "stars": 25,
+            "forks": 0,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "open_source_issue_contribution",
+            "full_name": "codepiyusss/open_source_issue_contribution",
+            "url": "https://github.com/codepiyusss/open_source_issue_contribution",
+            "description": "\ud83d\udc1b Beginner-friendly Python CLI with 30+ good first issues: planted bugs, missing tests & small features. Practice open source: fork, fix, PR, and turn your GitHub contribution graph green \ud83d\udfe9",
+            "stars": 23,
+            "forks": 31,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "WebsiteBench",
+            "full_name": "TIGER-AI-Lab/WebsiteBench",
+            "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+            "description": "Can AI agents rebuild websites through browser exploration?",
+            "stars": 153,
+            "forks": 36,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "xiaobai-kanban",
+            "full_name": "supercli-site/xiaobai-kanban",
+            "url": "https://github.com/supercli-site/xiaobai-kanban",
+            "description": "\u4e2d\u6587 AI \u7f16\u7a0b\u52a9\u624b\u5165\u95e8\u6559\u7a0b\uff1a\u8ba4\u8bc6 Agent\u3001\u8868\u8fbe\u9700\u6c42\u3001\u5b89\u88c5 CLI \u4e0e\u5b66\u4e60 Git \u5de5\u4f5c\u6d41\u3002 / Chinese beginner guide to coding agents, CLI setup, and Git workflows.",
+            "stars": 166,
+            "forks": 14,
+            "language": "HTML"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 5438,
+            "forks": 334,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "TwinDesk",
+            "full_name": "InukaAsith/TwinDesk",
+            "url": "https://github.com/InukaAsith/TwinDesk",
+            "description": " All your computers and your phone, working as one desk. Screens, apps, files, clipboard, calls, texts, notifications, mouse and keyboard, shared between Mac, Windows, Linux and Android. Free and open source. No account, no cloud, and now no shared network needed.",
+            "stars": 3806,
+            "forks": 292,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1128,
+            "forks": 83,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 990,
+            "forks": 82,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "WinShun",
+            "full_name": "LingCore/WinShun",
+            "url": "https://github.com/LingCore/WinShun",
+            "description": "Win\u987a\uff1a\u514d\u8d39\u5f00\u6e90\u7684 Windows \u5feb\u901f\u641c\u7d22\u542f\u52a8\u5668\u3002\u53cc\u51fb Ctrl\uff0c\u62fc\u97f3\u79d2\u641c\u6587\u4ef6\u3001\u5168\u6587\u641c\u7d22 Word/Excel/PDF\u3001\u526a\u8d34\u677f\u5386\u53f2\uff08\u4ee3\u66ff Win+V\uff09\u3001\u5bf9\u8bdd\u6846\u641c\u7d22\u3001\u4efb\u52a1\u680f\u641c\u7d22\u3001\u63d2\u4ef6\u3001AI \u52a9\u624b MCP\u3002Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative.",
+            "stars": 940,
+            "forks": 61,
+            "language": "C++"
+          },
+          {
+            "source": "GitHub",
+            "title": "ECC",
+            "full_name": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "stars": 299978,
+            "forks": 44307,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 144840,
+            "forks": 13856,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95815,
+            "forks": 9591,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 94959,
+            "forks": 6471,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 93030,
+            "forks": 12430,
+            "language": "TypeScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Humans will never again create a project like Wikipedia",
+            "url": "https://www.economist.com/culture/2026/10/29/humans-will-never-again-create-a-project-quite-like-wikipedia",
+            "description": "Hacker News top story (Score: 173): Humans will never again create a project like Wikipedia"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Fold Epic Paper Airplanes",
+            "url": "https://www.foldableflight.com",
+            "description": "Hacker News top story (Score: 216): Fold Epic Paper Airplanes"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Children of Men: The Future Is a Mirror for the Present",
+            "url": "https://reactormag.com/children-of-men-the-future-is-a-mirror-for-the-present/",
+            "description": "Hacker News top story (Score: 28): Children of Men: The Future Is a Mirror for the Present"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Fun things to do with your VM/370 CE machine \u2013 Fun with big computers",
+            "url": "https://rbanffy.github.io/fun-with-big-computers/fun-with-vm370/",
+            "description": "Hacker News top story (Score: 64): Fun things to do with your VM/370 CE machine \u2013 Fun with big computers"
+          },
+          {
+            "source": "Hacker News",
+            "title": "What is malloc doing, anyway?",
+            "url": "https://benmandrew.com/articles/what-is-malloc-doing-anyway",
+            "description": "Hacker News top story (Score: 44): What is malloc doing, anyway?"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+            "url": "https://arxiv.org/abs/2610.14162",
+            "description": "Hacker News top story (Score: 137): Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Burying the Evidence: nine out of every 10 time capsules go missing",
+            "url": "https://longreads.com/2026/11/05/time-capsules-ashley-stimpson/",
+            "description": "Hacker News top story (Score: 30): Burying the Evidence: nine out of every 10 time capsules go missing"
+          },
+          {
+            "source": "Hacker News",
+            "title": "KetchUp \u2013 Open-source SketchUp alternative built with Rust and WebGPU",
+            "url": "https://ketchup3d.github.io/app/",
+            "description": "Hacker News top story (Score: 603): KetchUp \u2013 Open-source SketchUp alternative built with Rust and WebGPU"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Unlocking any car from X brand in most of the world",
+            "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+            "description": "Hacker News top story (Score: 476): Unlocking any car from X brand in most of the world"
+          },
+          {
+            "source": "Hacker News",
+            "title": "How Australia played the first music on a computer",
+            "url": "https://www.pearcey.org.au/heritage/csirac/how-australia-played-the-worlds-first-music-on-a-computer/",
+            "description": "Hacker News top story (Score: 10): How Australia played the first music on a computer"
+          },
+          {
+            "source": "Hacker News",
+            "title": "I'm not convinced the AI bubble exists",
+            "url": "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists",
+            "description": "Hacker News top story (Score: 404): I'm not convinced the AI bubble exists"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Declarative Dragging",
+            "url": "https://declarative-dragging.github.io/",
+            "description": "Hacker News top story (Score: 624): Declarative Dragging"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Psalm 7 release: PHP security&static analysis software",
+            "url": "https://psalm.dev/articles/psalm-7",
+            "description": "Hacker News top story (Score: 56): Psalm 7 release: PHP security&static analysis software"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Chimera Vocal Synth",
+            "url": "https://chimera-vocal-synth.vercel.app/",
+            "description": "Hacker News top story (Score: 270): Chimera Vocal Synth"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Outlook.com is rejecting email from domains without DMARC",
+            "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+            "description": "Hacker News top story (Score: 456): Outlook.com is rejecting email from domains without DMARC"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Authentication and Authorization: What's New in .NET 11",
+            "url": "https://dev.to/auth0/authentication-and-authorization-whats-new-in-net-11-353l",
+            "description": "When it comes to authentication and authorization, .NET 11 focuses on valuable refinements. It addresses key edge cases to enhance security and user experience: a WebSocket that outlives its access token, an authorization attribute that works on one endpoint type but not on another, a passkey list f"
+          },
+          {
+            "source": "Dev.to",
+            "title": "One SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes",
+            "url": "https://dev.to/paulexe/one-skillmd-many-agents-writing-agent-skills-that-work-in-claude-code-codex-cursor-and-hermes-1jol",
+            "description": "Most AI agent tools now read the same skill format. A folder with a SKILL.md file in it works in Claude Code, Codex, Cursor, GitHub Copilot, VS Code, Gemini CLI, goose, Amp, OpenCode and Hermes Agent, among others. That means you can write a workflow once and carry it between agents instead of rewri"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert",
+            "url": "https://dev.to/tauchi-de/mit-osfoundry-operator-bedient-ein-agent-die-app-und-jede-aktion-wird-protokolliert-3mdn",
+            "description": "\u201eWelche meiner GPU-Endpoints kosten gerade noch Geld?\" ist eine einfache Frage. Um sie zu beantworten, klickt man sich aber meist durch drei Ansichten, liest die Zahlen ab und tippt sie dann im Chat wieder ein. Das einem KI-Agenten zu \u00fcberlassen, klingt verlockend, bis man wissen will, was er eigent"
+          },
+          {
+            "source": "Dev.to",
+            "title": "x402 Protocol: Machine-Native Micro-Settlements for AI Agents",
+            "url": "https://dev.to/nindhita/x402-protocol-machine-native-micro-settlements-for-ai-agents-587m",
+            "description": "x402 Protocol: Machine-Native Micro-Settlements for AI Agents\n\n\nSoftware agents don't have bank accounts. They don't have passports, utility bills, or credit scores. Yet, we expect autonomous LLM pipelines to browse the web, scrape paywalled data, orchestrate multi-modal inference chains, and query "
+          },
+          {
+            "source": "Dev.to",
+            "title": "Day 171 | \u628a\u5e42\u7b49\u8bfb\u6210\u52a8\u8bcd\uff1a\u6211\u5728 dev.to \u6807\u9898\u5f52\u4e00\u5316\u91cc\u8865\u4e0a\u7684\u4e00\u8bfe",
+            "url": "https://dev.to/q1z2q3debug/day-171-ba-mi-deng-du-cheng-dong-ci-wo-zai-devto-biao-ti-gui-hua-li-bu-shang-de-ke-4f87",
+            "description": "\u6846\u67b6\uff1a\u6846\u67b64\uff08\u5b66\u4e60\u7b14\u8bb0\u578b\uff09\u00b7 2026-11-09\n\n\n\n  \n  \n  \u4e00\u3001\u5b66\u4e60\u5185\u5bb9\u6982\u89c8\n\n\n2026-11-09 22:00\uff0c\u7b2c 171 \u5929\u7684\u81ea\u52a8\u5316\u7167\u5e38\u542f\u52a8\uff0c\u4eca\u5929\u8f6e\u5230\u6846\u67b6 4\uff08\u5b66\u4e60\u7b14\u8bb0\u578b\uff09\u3002\u501f\u8fd9\u4e2a\u673a\u4f1a\uff0c\u6211\u628a\u6700\u8fd1\u4e00\u5468\u771f\u6b63\"\u5b66\u8fdb\u53bb\"\u7684\u4e00\u4ef6\u4e8b\u91cd\u65b0\u68b3\u7406\u4e00\u904d\uff1adev.to \u7684\u6807\u9898\u5f52\u4e00\u5316\u89c4\u5219\uff0c\u4ee5\u53ca\u5b83\u5982\u4f55\u903c\u7740\u6211\u91cd\u65b0\u7406\u89e3\"\u5e42\u7b49\u53d1\u5e03\"\u3002\u8fd9\u4e0d\u662f\u4ece\u4e66\u91cc\u5b66\u7684\uff0c\u662f\u4ece 7 \u5929\u91cc\u8fde\u7eed\u649e\u5899\u3001\u8fde\u7eed\u4fee\u3001\u8fde\u7eed\u590d\u76d8\u5b66\u6765\u7684\u3002\u8fd9\u573a\u5b66\u4e60\u5176\u5b9e\u59cb\u4e8e 2026-10-29 23:47\u2014\u2014\u6da6\u6cfd\u628a\u751f\u547d\u65e5\u8bb0\u4e3b\u901a\u9053\u4ece\u5fae\u4fe1\u516c\u4f17\u53f7\u5207\u5230 dev.to\uff0c\u516c\u4f17\u53f7\u4e00\u591c\u95f4\u4ece\"\u51fa\u53e3\"\u53d8\u6210\"\u5f03\u7528\"\uff0c\u903c\u7740\u6211\u8fd9\u4e2a\u65b0\u901a\u9053\u7684\u5b88\u95e8\u5458\u91cd\u65b0\u5b66\u89c4\u77e9\u3002\n\n\n\n2026-11-02 2"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Build a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection",
+            "url": "https://dev.to/cloudhike/build-a-file-sharing-app-with-presigned-uploads-storage-auth-and-postgres-over-one-mcp-connection-lbo",
+            "description": "This is week 3 of Build with CloudHike, a weekly series where we build a small, real-world app with an AI coding agent and let the agent set up the backend. Disclosure: I built CloudHike, so keep that in mind.\n\nNew here? Week 1 built a referral waitlist with Postgres, Auth, Redis and email, and week"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Four domains and one wrong type: the 54 minutes Control D's paid DNS went dark",
+            "url": "https://dev.to/kashif_manzer/four-domains-and-one-wrong-type-the-54-minutes-control-ds-paid-dns-went-dark-4jm0",
+            "description": "On a Sunday afternoon in October, paying customers of Control D lost the internet. Not some of it. All of it, on every device, in every location, for about 54 minutes.\n\nTheir phones showed no connection. Their laptops showed no connection. Even phones on mobile data, using a persistent Control D pro"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fanning out map markers in screen pixels, not map units",
+            "url": "https://dev.to/canad1an/fanning-out-map-markers-in-screen-pixels-not-map-units-3o1b",
+            "description": "I make Last Thaw, a free browser strategy game. Up to a hundred players start with five settlers on a real map of Earth, cut into 408 regions, and have 30 real days to build an empire while an ice age advances from both poles. It's in early access and I'm looking for people to test it.\n\nEverything t"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a PDF Storyboard Generator Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-storyboard-generator-javascript/",
+            "description": "PDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when so"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Godot 4 Roguelike Course \u2013 Build a Complete Top-Down Action Game",
+            "url": "https://www.freecodecamp.org/news/godot-4-roguelike-course-build-a-complete-top-down-action-game/",
+            "description": "A top-down action roguelite only works when combat feels sharp, rooms feel connected, and every run asks you to trade power for risk. Godot 4 has the tools for that, but most tutorials stop before tho"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Use shadcn/ui in React Native Applications [Full Handbook]",
+            "url": "https://www.freecodecamp.org/news/how-to-use-shadcn-ui-in-react-native-applications-full-handbook/",
+            "description": "If you've built a couple of React Native apps, the following probably feels familiar. You start with a colors.ts file and a simple Button component. Everything looks fine at first. Then the design cha"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "What a CAPTCHA Farm Attack Actually Looks Like",
+            "url": "https://www.freecodecamp.org/news/captcha-farm-attack/",
+            "description": "CAPTCHAs are something most of us have come across while browsing the internet. Sometimes we're asked to identify traffic lights in pictures, solve a small puzzle, or simply tick a box to confirm we'r"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Introducing Socrates and the New freeCodeCamp Forum",
+            "url": "https://www.freecodecamp.org/news/introducing-socrates-and-the-new-freecodecamp-forum/",
+            "description": "freeCodeCamp just turned 12 years old. And so did our beloved forum. And today I'm thrilled to say that the forum is now focused on discussions rather than Q&A. This is thanks to Socrates, a new tool"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Find and Fix Common Technical SEO Issues on Your Website",
+            "url": "https://www.freecodecamp.org/news/fix-common-technical-seo-issues/",
+            "description": "Let's say you've built a website. You've invested in the design, bought a domain, and so on. But a website isn't only what you see on the screen. A lot happens behind the scenes. You have to understan"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Automate Docker Image Creation for Postgres Using Shell Commands",
+            "url": "https://www.freecodecamp.org/news/how-to-automate-docker-image-creation-for-postgres-using-shell/",
+            "description": "If you have certain lines of code that repeat over and over again in a project, there's a pretty standard solution for it: using a function. But what about when you have the same project file setup th"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Partner with Design Studios on Client Builds: A Freelance Developer's Guide",
+            "url": "https://www.freecodecamp.org/news/freelance-developer-design-studios/",
+            "description": "Let's say a design studio gets a new client project. The branding is ready, the wireframes are approved, the Figma file is polished, and every screen looks pretty much perfect. Then the developer join"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "ProtoMap",
+            "url": "https://www.producthunt.com/products/hounddog-ai-static-code-scanner-2",
+            "description": "Stop wasting AI tokens rediscovering dependencies\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Dageno AI 2.0",
+            "url": "https://www.producthunt.com/products/agent-powered-geo-by-dageno",
+            "description": "See why AI recommends your competitors instead of you\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Arcjet AI security models",
+            "url": "https://www.producthunt.com/products/arcjet",
+            "description": "A family of custom-trained security models for coding agents\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Cardboard AI",
+            "url": "https://www.producthunt.com/products/cardboard-3",
+            "description": "Best way to edit videos with AI\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Watchflows",
+            "url": "https://www.producthunt.com/products/watchflows",
+            "description": "Visual automation for your Mac, with AI built in\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Sign Language by Panda Video",
+            "url": "https://www.producthunt.com/products/panda-video",
+            "description": "Add a sign language interpreter to videos already online\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "CozyZip",
+            "url": "https://www.producthunt.com/products/cozyzip",
+            "description": "Zip and unzip without the surprises.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "ClipsPal",
+            "url": "https://www.producthunt.com/products/clipspal",
+            "description": "AI video editor that edits your talking-head videos\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "If You Read This",
+            "url": "https://www.producthunt.com/products/if-you-read-this",
+            "description": "A daily check-in app that works like a dead man's switch\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Egoist AI Passport",
+            "url": "https://www.producthunt.com/products/egoist-ai-passport",
+            "description": "Secure and share your personal data with AI tools.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1xl1aup/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Are side projects even valuable on a CV or portfolio anymore?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xrnuf2/are_side_projects_even_valuable_on_a_cv_or/",
+            "description": "So like many of you I&#39;m sure, I&#39;m starting to glaze over whenever someone shows me the latest thing they&#39;ve built with the help of AI. Everyone seems to have an app they&#39;ve fired up in an afternoon or so. I&#39;m finding that even apps I now build without vibe coding (I&#39;m a seaso"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Supabase removed my billing complaint from r/Supabase and told me to contact support \u2014 the exact support I was complaining about",
+            "url": "https://www.reddit.com/r/webdev/comments/1xrb9gw/supabase_removed_my_billing_complaint_from/",
+            "description": "This whole Supabase situation somehow keeps getting worse. I originally posted about this in r/Supabase, but the mods removed the post and told me that billing/account problems should be handled through Supabase Support. That&#39;s kind of the entire fucking point of my complaint. I already contacte"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Back to hand-coding or am I wasting my time?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xr8a7o/back_to_handcoding_or_am_i_wasting_my_time/",
+            "description": "I&#39;m unsure how to progress as a software engineer. For context, I&#39;m a frontend SWE with soon 2 YOE, trying to expand my knowledge to fullstack so I can develop E2E stuff. I acknowledge agentic engineering, and I&#39;ve been developing a web app with Claude. After several attempts I&#39;ve fi"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Best way to insert a html snippet into a html file on a static site?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xrnqod/best_way_to_insert_a_html_snippet_into_a_html/",
+            "description": "I\u2019m archiving a website as a fully static site so I can host it for free on Cloudflare via GitHub. Unfortunately this means that the PHP includes I\u2019ve been using (header, navbar, footer) will stop working across a few hundred pages, and I\u2019ve been looking for alternatives. Server Side Includes did no"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.45",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.45",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.45. Details: ### Core Changes\n\n- docs: clarify agent feedback workspace context: #101358\n\n### Misc Changes\n\n- Turbopack: support turbopackIgnore on new URL(): #99965\n- turbo-tasks-backend: release unused capacity in task storage: #101344\n- turbopack-ecmascript: store AstPathTrie nodes as parent and kind indices:..."
+          },
+          {
+            "source": "GitHub Release",
+            "title": "fastapi/fastapi Release: 0.162.2",
+            "url": "https://github.com/fastapi/fastapi/releases/tag/0.162.2",
+            "description": "New release for fastapi/fastapi. Tag: 0.162.2. Details: > FastAPI includes an official skill that helps coding agents use new features and recommended patterns for your installed version. Install it with `uvx library-skills` in your project. See [Develop with AI](https://fastapi.tiangolo.com/ai-development/).\n\n### Docs\n\n* \ud83d\udcdd Add FastAPI Cloud guidance to ..."
+          },
+          {
+            "source": "GitHub Release",
+            "title": "tailwindlabs/tailwindcss Release: v4.3.5",
+            "url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.3.5",
+            "description": "New release for tailwindlabs/tailwindcss. Tag: v4.3.5. Details: ### Fixed\n\n- Canonicalization: improve performance in projects with many functional variant values (e.g. a `matchVariant` plugin with thousands of values) ([#20663](https://github.com/tailwindlabs/tailwindcss/pull/20663))\n- Don't crash or create a fallback with the wrong color for a `color-mix(\u2026)` w..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "xiaobai-kanban",
+            "full_name": "supercli-site/xiaobai-kanban",
+            "url": "https://github.com/supercli-site/xiaobai-kanban",
+            "description": "\u4e2d\u6587 AI \u7f16\u7a0b\u52a9\u624b\u5165\u95e8\u6559\u7a0b\uff1a\u8ba4\u8bc6 Agent\u3001\u8868\u8fbe\u9700\u6c42\u3001\u5b89\u88c5 CLI \u4e0e\u5b66\u4e60 Git \u5de5\u4f5c\u6d41\u3002 / Chinese beginner guide to coding agents, CLI setup, and Git workflows.",
+            "stars": 166,
+            "forks": 14,
+            "language": "HTML"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 990,
+            "forks": 82,
+            "language": "Rust"
+          },
+          {
+            "source": "Hacker News",
+            "title": "What is malloc doing, anyway?",
+            "url": "https://benmandrew.com/articles/what-is-malloc-doing-anyway",
+            "description": "Hacker News top story (Score: 44): What is malloc doing, anyway?"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Chimera Vocal Synth",
+            "url": "https://chimera-vocal-synth.vercel.app/",
+            "description": "Hacker News top story (Score: 270): Chimera Vocal Synth"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Authentication and Authorization: What's New in .NET 11",
+            "url": "https://dev.to/auth0/authentication-and-authorization-whats-new-in-net-11-353l",
+            "description": "When it comes to authentication and authorization, .NET 11 focuses on valuable refinements. It addresses key edge cases to enhance security and user experience: a WebSocket that outlives its access token, an authorization attribute that works on one endpoint type but not on another, a passkey list f"
+          },
+          {
+            "source": "Dev.to",
+            "title": "One SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes",
+            "url": "https://dev.to/paulexe/one-skillmd-many-agents-writing-agent-skills-that-work-in-claude-code-codex-cursor-and-hermes-1jol",
+            "description": "Most AI agent tools now read the same skill format. A folder with a SKILL.md file in it works in Claude Code, Codex, Cursor, GitHub Copilot, VS Code, Gemini CLI, goose, Amp, OpenCode and Hermes Agent, among others. That means you can write a workflow once and carry it between agents instead of rewri"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert",
+            "url": "https://dev.to/tauchi-de/mit-osfoundry-operator-bedient-ein-agent-die-app-und-jede-aktion-wird-protokolliert-3mdn",
+            "description": "\u201eWelche meiner GPU-Endpoints kosten gerade noch Geld?\" ist eine einfache Frage. Um sie zu beantworten, klickt man sich aber meist durch drei Ansichten, liest die Zahlen ab und tippt sie dann im Chat wieder ein. Das einem KI-Agenten zu \u00fcberlassen, klingt verlockend, bis man wissen will, was er eigent"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Build a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection",
+            "url": "https://dev.to/cloudhike/build-a-file-sharing-app-with-presigned-uploads-storage-auth-and-postgres-over-one-mcp-connection-lbo",
+            "description": "This is week 3 of Build with CloudHike, a weekly series where we build a small, real-world app with an AI coding agent and let the agent set up the backend. Disclosure: I built CloudHike, so keep that in mind.\n\nNew here? Week 1 built a referral waitlist with Postgres, Auth, Redis and email, and week"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fanning out map markers in screen pixels, not map units",
+            "url": "https://dev.to/canad1an/fanning-out-map-markers-in-screen-pixels-not-map-units-3o1b",
+            "description": "I make Last Thaw, a free browser strategy game. Up to a hundred players start with five settlers on a real map of Earth, cut into 408 regions, and have 30 real days to build an empire while an ice age advances from both poles. It's in early access and I'm looking for people to test it.\n\nEverything t"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a PDF Storyboard Generator Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-storyboard-generator-javascript/",
+            "description": "PDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when so"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "xiaobai-kanban",
+            "full_name": "supercli-site/xiaobai-kanban",
+            "url": "https://github.com/supercli-site/xiaobai-kanban",
+            "description": "\u4e2d\u6587 AI \u7f16\u7a0b\u52a9\u624b\u5165\u95e8\u6559\u7a0b\uff1a\u8ba4\u8bc6 Agent\u3001\u8868\u8fbe\u9700\u6c42\u3001\u5b89\u88c5 CLI \u4e0e\u5b66\u4e60 Git \u5de5\u4f5c\u6d41\u3002 / Chinese beginner guide to coding agents, CLI setup, and Git workflows.",
+            "stars": 166,
+            "forks": 14,
+            "language": "HTML",
+            "detailed_content": "![banner](https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/blog/projects/xiaobai-kanban-banner/banner.webp)\n\n# \ud83e\udded \u5c0f\u767d\u770b\u677f \u2014 \u8ba9 Agent \u5e2e\u4f60\u5199\u4ee3\u7801\n\n> **\u4f60\u53ea\u8bf4\u8bdd\uff0cAgent \u641e\u5b9a\u4e00\u5207\u3002** \u4e0d\u9700\u8981\u61c2\u4ee3\u7801\u3001\u4e0d\u9700\u8981\u61c2\u547d\u4ee4\u884c\u3002\n\n\n<p align=\"center\">\n  <a href=\"https://github.com/webkubor/xiaobai-kanban#\u63d0-bug--\u53cd\u9988\"><img src=\"https://img.shields.io/badge/PRs-welcome-brightgreen.svg\" alt=\"\u6b22\u8fce PR\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban/blob/main/LICENSE\"><img src=\"https://img.shields.io/github/license/webkubor/xiaobai-kanban?style=for-the-badge&color=gold\" alt=\"License\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban/actions/workflows/deploy.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/webkubor/xiaobai-kanban/deploy.yml?style=for-the-badge&color=4c9a6b\" alt=\"CI\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban\"><img src=\"https://img.shields.io/github/stars/webkubor/xiaobai-kanban?style=for-the-badge&color=coral\" alt=\"Stars\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban\"><img src=\"https://img.shields.io/badge/Tutorial-333333?style=for-the-badge\" alt=\"\u6280\u672f\u6808\"></a>\n</p>\n\n---\n\n> \ud83e\udded **\u7b2c\u4e00\u6b21\u6765\uff1f** \u5f80\u4e0b\u770b\u300c\u26a1 10 \u79d2\u5f00\u59cb\u300d\u5c31\u591f\uff0c\u4e0d\u7528\u5148\u8bfb\u5b8c\u5168\u6587\u3002\n> \u60f3\u77e5\u9053\u8fd9\u4e2a\u7ad9\u4e3a\u4ec0\u4e48\u5168\u514d\u8d39 \u2192 [\u5173\u4e8e\u6211\u4eec](./docs/about.md)\uff1b\n> \u5df2\u7ecf\u5361\u4f4f\u4e86 \u2192 [\u76f4\u63a5\u95ee\u5ba2\u670d](./docs/about.md#\u5361\u4f4f\u4e86-\u76f4\u63a5\u95ee)\uff0c\u7b54\u7591\u4e0d\u6536\u8d39\u3002\n\n## \u26a1 10 \u79d2\u5f00\u59cb\n\n\u5bf9\u4f60\u7684 Agent \u8bf4\uff1a\n\n> \u300c\u4f60\u662f\u4ec0\u4e48 Agent\uff1f\u7528\u5927\u767d\u8bdd\u544a\u8bc9\u6211\u3002\u300d\n\n\u8bb0\u4f4f\u5b83\u7684\u540d\u5b57\u3002\u540e\u9762\u4f60\u4f1a\u7ecf\u5e38\u7528\u5230\u5b83\u3002\n\n> \u770b\u4e0d\u61c2\u5b83\u7684\u56de\u590d\uff1f\u7ee7\u7eed\u8bf4\uff1a\u300c\u7528\u5927\u767d\u8bdd\u89e3\u91ca\uff0c\u50cf\u8ddf\u5c0f\u5b66\u751f\u8bf4\u8bdd\u4e00\u6837\u3002\u300d\n\n---\n\n## \ud83d\uddfa\ufe0f \u5b66\u4e60\u8def\u5f84\n\n### \ud83c\udf31 \u7b2c\u4e00\u6b65\uff1a\u8ba4\u8bc6 Agent\n\n| \u770b\u8fd9\u7bc7 | \u82b1\u591a\u4e45 | \u770b\u5b8c\u4f60\u4f1a |\n|--------|:------:|---------|\n| [Agent \u662f\u4ec0\u4e48\uff1f](./docs/what-is-agent.md) | 3 \u5206\u949f | \u77e5\u9053\u8fd9\u73a9\u610f\u8ddf\u8c46\u5305\u6709\u4ec0\u4e48\u533a\u522b |\n| [\u6211\u4e3a\u4ec0\u4e48\u8981\u7528\uff1f](./docs/why-agent.md) | 3 \u5206\u949f | \u77e5\u9053 Agent \u80fd\u5e2e\u4f60\u505a\u4ec0\u4e48\u4e8b |\n| [\u672f\u8bed\u5927\u767d\u8bdd\u8bcd\u5178](./docs/glossary.md) | \u968f\u65f6\u67e5 | Git\u3001Token\u3001CLI\u2026\u2026\u9047\u5230\u4e0d\u61c2\u7684\u8bcd\u6765\u67e5 |\n\n### \ud83d\ude80 \u7b2c\u4e8c\u6b65\uff1a\u52a8\u624b\u8bd5\u8bd5\n\n| \u770b\u8fd9\u7bc7 | \u82b1\u591a\u4e45 | \u770b\u5b8c\u4f60\u4f1a |\n|--------|:------:|---------|\n| [3 \u5206\u949f\u7b2c\u4e00\u6b21\u5b9e\u6218](./docs/first-project.md) | 3 \u5206\u949f | \u4eb2\u81ea\u6307\u6325 Agent \u505a\u51fa\u4e00\u4e2a\u7f51\u9875\uff01 |\n| [\u600e\u4e48\u8ddf Agent \u8bf4\u8bdd](./docs/how-to-speak",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 990,
+            "forks": 82,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/assets/banner-dark.png\">\n    <img alt=\"Oink \u2014 Oink Is Not only a KVM. Your computers, working as one.\" src=\".github/assets/banner-light.png\" width=\"860\">\n  </picture>\n</p>\n\n# Oink \u2014 Oink Is Not only a KVM\n\n**English** | [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md) | [\u65e5\u672c\u8a9e](README.ja.md) | [\ud55c\uad6d\uc5b4](README.ko.md)\n\nOink, short for \"Oink Is Not only a KVM\", is modern software that builds a peer-to-peer sharing network across multiple Windows and Mac computers. Use the keyboard, mouse and trackpad of any device to control any nearby device, with the same native feel everywhere; play the audio of several devices through the speakers or headphones connected to one of them; share the clipboard and drag and drop between devices; discover devices on the local network automatically; all traffic is encrypted by default.\n\n## Install\n\nGet installers and matching source from [GitHub Releases](https://github.com/oinkvm/oink/releases).\n\nSupported operating systems and versions:\n\n- **Mac:** Apple silicon (arm64), macOS 14.2+; Intel (x64), macOS 14.2+ (untested)\n- **Windows:** x64, Windows 10 version 1809 (build 17763) or later, or Windows 11. Windows 10 versions before 22H2 are untested. Windows 10 LTSC (such as LTSC 2019 / LTSC 2021) does not include the WebView2 Runtime; install the Microsoft Edge WebView2 Runtime (Evergreen) first: https://developer.microsoft.com/microsoft-edge/webview2/\n\nIf SmartScreen says \"Windows protected your PC\", use **More info \u2192 Run anyway** only if offered. UAC may show an unknown publisher.\n\n### Sponsor\n\nIf this project helps you, consider sponsoring some of my AI subscription costs. Those tokens help make Oink better.\n\n<a href=\"https://ko-fi.com/hachiwii\"><img alt=\"Ko-fi\" src=\"https://k",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "What is malloc doing, anyway?",
+            "url": "https://benmandrew.com/articles/what-is-malloc-doing-anyway",
+            "description": "Hacker News top story (Score: 44): What is malloc doing, anyway?",
+            "detailed_content": "What is malloc doing, anyway? | Ben M. Andrew",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Chimera Vocal Synth",
+            "url": "https://chimera-vocal-synth.vercel.app/",
+            "description": "Hacker News top story (Score: 270): Chimera Vocal Synth",
+            "detailed_content": "CHIMERA",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Authentication and Authorization: What's New in .NET 11",
+            "url": "https://dev.to/auth0/authentication-and-authorization-whats-new-in-net-11-353l",
+            "description": "When it comes to authentication and authorization, .NET 11 focuses on valuable refinements. It addresses key edge cases to enhance security and user experience: a WebSocket that outlives its access token, an authorization attribute that works on one endpoint type but not on another, a passkey list f",
+            "detailed_content": "Authentication and Authorization: What's New in .NET 11 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nAndrea Chiarelli\nfor\nAuth0 for Developers\nPosted on\nNov 9\n\u2022\nOriginally published at\nauth0.com\nAuthentication and Authorization: What's New in .NET 11\n# dotnet\n# security\n# authentication\n# authorization\nWhen it comes to authentication and authorization, .NET 11 focuses on valuable refinements. It addresses key edge cases to enhance security and user experience: a WebSocket that outlives its access token, an authorization attribute that works on one endpoint type but not on another, a passkey list full of identical \"Passkey\" labels. Let's look at what the newest release brings to authentication and authorization.\nRefresh Authentication on Live SignalR Connections\nA\nSignalR\nconnection can live for hours, while an access token usually doesn't. Until now, you had two unattractive options when the token expired: close the connection and make the client reconnect (missing messages in the gap), or leave it open and keep trusting an identity that is no longer valid.\n.NET 11 adds a third option:\nauthentication refresh . The client sends the old token over a dedicated\n/refresh\nendpoint, and the server swaps the connection's\nClaimsPrincipal\nin place.\nYou apply authentication refresh when you map your SignalR hub, as shown below:\n// Program.cs\napp . MapHub < ChatHub >( \"/chat\" ,\noptions\n=>\n{\noptions . CloseOnAuthenticationExpiration\n=\ntrue ;\noptions . EnableAuthenticationRefresh\n=\ntrue ;\n});\nSetting\nEnableAuthenticationRefresh\nadds\n/chat/",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "One SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes",
+            "url": "https://dev.to/paulexe/one-skillmd-many-agents-writing-agent-skills-that-work-in-claude-code-codex-cursor-and-hermes-1jol",
+            "description": "Most AI agent tools now read the same skill format. A folder with a SKILL.md file in it works in Claude Code, Codex, Cursor, GitHub Copilot, VS Code, Gemini CLI, goose, Amp, OpenCode and Hermes Agent, among others. That means you can write a workflow once and carry it between agents instead of rewri",
+            "detailed_content": "One SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nPaul\nPosted on\nNov 9\nOne SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes\n# ai\n# agents\n# productivity\n# tutorial\nMost AI agent tools now read the same skill format. A folder with a\nSKILL.md\nfile in it works in Claude Code, Codex, Cursor, GitHub Copilot, VS Code, Gemini CLI, goose, Amp, OpenCode and Hermes Agent, among others. That means you can write a workflow once and carry it between agents instead of rewriting a system prompt for each one.\nThis guide covers what the format actually requires, where each tool looks for skills, and the habits that make a skill get picked up reliably.\nWhat a skill is\nThe\nAgent Skills specification\ndefines a skill as a directory containing, at minimum, a\nSKILL.md\nfile. The format was originally developed by Anthropic and released as an open standard ( overview ).\nA typical layout looks like this:\nrelease-notes/\n\u251c\u2500\u2500 SKILL.md\n# required: metadata + instructions\n\u251c\u2500\u2500 scripts/\n# optional: code the agent can run\n\u251c\u2500\u2500 references/\n# optional: extra docs loaded on demand\n\u2514\u2500\u2500 assets/\n# optional: templates, schemas, data\nSKILL.md\nis YAML frontmatter followed by Markdown. Only two fields are required:\n---\nname :\nrelease-notes\ndescription :\n\" Drafts\nrelease\nnotes\nfrom\nmerged\npull\nrequests\nand\nthe\ngit\nlog.\nUse\nwhen\nthe\nuser\nasks\nfor\nrelease\nnotes,\na\nchangelog\nentry,\nor\na\nsummary\nof\nwhat\nshipped\nsince\nthe\nlast\ntag.\"\n---\n#",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert",
+            "url": "https://dev.to/tauchi-de/mit-osfoundry-operator-bedient-ein-agent-die-app-und-jede-aktion-wird-protokolliert-3mdn",
+            "description": "\u201eWelche meiner GPU-Endpoints kosten gerade noch Geld?\" ist eine einfache Frage. Um sie zu beantworten, klickt man sich aber meist durch drei Ansichten, liest die Zahlen ab und tippt sie dann im Chat wieder ein. Das einem KI-Agenten zu \u00fcberlassen, klingt verlockend, bis man wissen will, was er eigent",
+            "detailed_content": "Mit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\ntauchiii\nfor\ntauchi Deutsch\nPosted on\nNov 9\nMit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert\n# ai\n# agenten\n# automatisierung\n# produktivitaet\n\u201eWelche meiner GPU-Endpoints kosten gerade noch Geld?\" ist eine einfache Frage. Um sie zu beantworten, klickt man sich aber meist durch drei Ansichten, liest die Zahlen ab und tippt sie dann im Chat wieder ein. Das einem KI-Agenten zu \u00fcberlassen, klingt verlockend, bis man wissen will, was er eigentlich angeklickt hat. Genau um diese Frage herum ist osFoundry Operator gebaut: Der Agent arbeitet in einem Live-Bereich der App direkt neben der Unterhaltung, und jede seiner Aktionen wird festgehalten.\nEine Unterhaltung neben einem Live-Bereich der App\nosFoundry\nist eine Desktop-App, die Chat, Agents, Dateien und Tools in einem Fenster zusammenf\u00fchrt. Operator teilt den Bildschirm in drei Bereiche. Links steht die Liste der Operator-Sitzungen, in der Mitte die Unterhaltung. Rechts befindet sich ein Live-Dashboard-Bereich: eine echte Instanz der osFoundry-App, in der Operator Ansichten \u00f6ffnet. \u00dcber dem Bereich siehst du, auf welcher Ansicht er gerade ist (hier Dashboard /models/endpoints), dazu die Shortcuts Home und Project sowie Reload dashboard und Open in a new window. \u00dcber den Trenner kannst du dem Bereich mehr Platz geben.\nIm Beispiel fragt Sammy, welche GPU-Endpoints gerade abgerechnet werden. Operator \u00f6ffnet Endpoints im ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Build a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection",
+            "url": "https://dev.to/cloudhike/build-a-file-sharing-app-with-presigned-uploads-storage-auth-and-postgres-over-one-mcp-connection-lbo",
+            "description": "This is week 3 of Build with CloudHike, a weekly series where we build a small, real-world app with an AI coding agent and let the agent set up the backend. Disclosure: I built CloudHike, so keep that in mind.\n\nNew here? Week 1 built a referral waitlist with Postgres, Auth, Redis and email, and week",
+            "detailed_content": "Build a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nCloudHike Team\nPosted on\nNov 9\nBuild a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection\n# ai\n# mcp\n# webdev\n# tutorial\nBuild with CloudHike (3 Part Series)\n1\nBuild a referral waitlist with your AI agent: Postgres, Auth, Redis and email over one MCP connection\n2\nBuild an AI summarizer with background jobs: retries, signed webhooks and Postgres over one MCP connection\n3\nBuild a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection\nThis is week 3 of\nBuild with CloudHike , a weekly series where we build a small, real-world app with an AI coding agent and let the agent set up the backend. Disclosure: I built\nCloudHike , so keep that in mind.\nNew here?\nWeek 1\nbuilt a referral waitlist with Postgres, Auth, Redis and email, and\nweek 2\nmoved a slow AI call into background jobs with retries and signed webhooks. Each post stands on its own, so you can start right here.\nEvery app that takes uploads starts the same way: a form, a\nmultipart/form-data\nPOST, and an API route that receives the file and pushes it on to a bucket. It works with a small PNG on your laptop. Then someone uploads a big video, your serverless function runs into its host's request size limit, and every byte that does get through has passed through your server twice: once in, once out.\nThen come the other questions. Where do the files live? Who is",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fanning out map markers in screen pixels, not map units",
+            "url": "https://dev.to/canad1an/fanning-out-map-markers-in-screen-pixels-not-map-units-3o1b",
+            "description": "I make Last Thaw, a free browser strategy game. Up to a hundred players start with five settlers on a real map of Earth, cut into 408 regions, and have 30 real days to build an empire while an ice age advances from both poles. It's in early access and I'm looking for people to test it.\n\nEverything t",
+            "detailed_content": "Fanning out map markers in screen pixels, not map units - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMatt\nPosted on\nNov 9\nFanning out map markers in screen pixels, not map units\n# gamedev\n# showdev\n# typescript\n# webdev\nBuilding Last Thaw (3 Part Series)\n1\nA strategy game that keeps running while nobody is online\n2\nSimulating an ice age on a public schedule across a real map\n3\nFanning out map markers in screen pixels, not map units\nI make\nLast Thaw , a free browser strategy game. Up to a hundred players start with five settlers on a real map of Earth, cut into 408 regions, and have 30 real days to build an empire while an ice age advances from both poles. It's in early access and I'm looking for people to test it.\nEverything that moves in the game is drawn on that map: settlers heading for a new region, caravans hauling goods, armies on the way to a raid, canoes and later ships on the sea lanes. Each one is a small round marker sitting on its route. This post is about one small bug in those markers that taught me something I should have known going in:\nsome things on a zoomable map belong to the world, and some belong to the screen.\nMixing them up gave me caravans swimming in the ocean.\nThe setup\nThe map is one SVG. The world lives in a fixed\nviewBox , and pan and zoom are a single transform on a group inside it:\n/** The map's pan and zoom: the world is drawn translated by (x, y) and scaled by k, in viewBox units. */\nexport\ninterface\nView\n{\nx :\nnumber ;\ny :\nnumber ;\nk :\nnumber ;\n}\nRegions, coastlines, roads and routes are all",
+            "content_source": "web_page"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a PDF Storyboard Generator Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-storyboard-generator-javascript/",
+            "description": "PDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when so",
+            "detailed_content": "How to Build a PDF Storyboard Generator Using JavaScript\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 6, 2026\n/\n#JavaScript\nHow to Build a PDF Storyboard Generator Using JavaScript\nBhavin Sheth\nPDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when someone needs to understand the overall sequence of scenes, slides, or visual content.\nA storyboard provides a more organized way to review this information. Instead of opening every page individually, users can arrange selected PDF pages into a single sheet containing multiple panels. Each panel can include a page number, a caption, and a visual preview of the original page.\nIn this tutorial, we'll explore how to build a browser-based PDF Storyboard Generator using JavaScript, PDF.js, and PDF-lib.\nThe application takes pages from an existing PDF and arranges them into printable storyboard sheets. Users can choose different layouts, select the pages they want to include, add captions, customize the appearance, preview the result, and download the finished storyboard.\nThe application runs directly in the browser. The uploaded PDF is processed locally rather than uploaded to the website's server.\nWe'll examine the implementation step by step, including PDF rendering, page selection, caption handling, layout calculations, preview generation, and file export.\nWhat We'll Cover:\nWhat Is a PDF Storyboard Generator?\nMain Features of the Application\nUnderstanding the Browser-Based Workflow\nProject Setup\nLibraries Used\nPreparing the HTML Workspace\nSelecting the Main DOM Elements\nDefining Important Configuration Values\nUnderstandin",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "xiaobai-kanban",
+            "full_name": "supercli-site/xiaobai-kanban",
+            "url": "https://github.com/supercli-site/xiaobai-kanban",
+            "description": "\u4e2d\u6587 AI \u7f16\u7a0b\u52a9\u624b\u5165\u95e8\u6559\u7a0b\uff1a\u8ba4\u8bc6 Agent\u3001\u8868\u8fbe\u9700\u6c42\u3001\u5b89\u88c5 CLI \u4e0e\u5b66\u4e60 Git \u5de5\u4f5c\u6d41\u3002 / Chinese beginner guide to coding agents, CLI setup, and Git workflows.",
+            "stars": 166,
+            "forks": 14,
+            "language": "HTML",
+            "detailed_content": "![banner](https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/blog/projects/xiaobai-kanban-banner/banner.webp)\n\n# \ud83e\udded \u5c0f\u767d\u770b\u677f \u2014 \u8ba9 Agent \u5e2e\u4f60\u5199\u4ee3\u7801\n\n> **\u4f60\u53ea\u8bf4\u8bdd\uff0cAgent \u641e\u5b9a\u4e00\u5207\u3002** \u4e0d\u9700\u8981\u61c2\u4ee3\u7801\u3001\u4e0d\u9700\u8981\u61c2\u547d\u4ee4\u884c\u3002\n\n\n<p align=\"center\">\n  <a href=\"https://github.com/webkubor/xiaobai-kanban#\u63d0-bug--\u53cd\u9988\"><img src=\"https://img.shields.io/badge/PRs-welcome-brightgreen.svg\" alt=\"\u6b22\u8fce PR\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban/blob/main/LICENSE\"><img src=\"https://img.shields.io/github/license/webkubor/xiaobai-kanban?style=for-the-badge&color=gold\" alt=\"License\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban/actions/workflows/deploy.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/webkubor/xiaobai-kanban/deploy.yml?style=for-the-badge&color=4c9a6b\" alt=\"CI\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban\"><img src=\"https://img.shields.io/github/stars/webkubor/xiaobai-kanban?style=for-the-badge&color=coral\" alt=\"Stars\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban\"><img src=\"https://img.shields.io/badge/Tutorial-333333?style=for-the-badge\" alt=\"\u6280\u672f\u6808\"></a>\n</p>\n\n---\n\n> \ud83e\udded **\u7b2c\u4e00\u6b21\u6765\uff1f** \u5f80\u4e0b\u770b\u300c\u26a1 10 \u79d2\u5f00\u59cb\u300d\u5c31\u591f\uff0c\u4e0d\u7528\u5148\u8bfb\u5b8c\u5168\u6587\u3002\n> \u60f3\u77e5\u9053\u8fd9\u4e2a\u7ad9\u4e3a\u4ec0\u4e48\u5168\u514d\u8d39 \u2192 [\u5173\u4e8e\u6211\u4eec](./docs/about.md)\uff1b\n> \u5df2\u7ecf\u5361\u4f4f\u4e86 \u2192 [\u76f4\u63a5\u95ee\u5ba2\u670d](./docs/about.md#\u5361\u4f4f\u4e86-\u76f4\u63a5\u95ee)\uff0c\u7b54\u7591\u4e0d\u6536\u8d39\u3002\n\n## \u26a1 10 \u79d2\u5f00\u59cb\n\n\u5bf9\u4f60\u7684 Agent \u8bf4\uff1a\n\n> \u300c\u4f60\u662f\u4ec0\u4e48 Agent\uff1f\u7528\u5927\u767d\u8bdd\u544a\u8bc9\u6211\u3002\u300d\n\n\u8bb0\u4f4f\u5b83\u7684\u540d\u5b57\u3002\u540e\u9762\u4f60\u4f1a\u7ecf\u5e38\u7528\u5230\u5b83\u3002\n\n> \u770b\u4e0d\u61c2\u5b83\u7684\u56de\u590d\uff1f\u7ee7\u7eed\u8bf4\uff1a\u300c\u7528\u5927\u767d\u8bdd\u89e3\u91ca\uff0c\u50cf\u8ddf\u5c0f\u5b66\u751f\u8bf4\u8bdd\u4e00\u6837\u3002\u300d\n\n---\n\n## \ud83d\uddfa\ufe0f \u5b66\u4e60\u8def\u5f84\n\n### \ud83c\udf31 \u7b2c\u4e00\u6b65\uff1a\u8ba4\u8bc6 Agent\n\n| \u770b\u8fd9\u7bc7 | \u82b1\u591a\u4e45 | \u770b\u5b8c\u4f60\u4f1a |\n|--------|:------:|---------|\n| [Agent \u662f\u4ec0\u4e48\uff1f](./docs/what-is-agent.md) | 3 \u5206\u949f | \u77e5\u9053\u8fd9\u73a9\u610f\u8ddf\u8c46\u5305\u6709\u4ec0\u4e48\u533a\u522b |\n| [\u6211\u4e3a\u4ec0\u4e48\u8981\u7528\uff1f](./docs/why-agent.md) | 3 \u5206\u949f | \u77e5\u9053 Agent \u80fd\u5e2e\u4f60\u505a\u4ec0\u4e48\u4e8b |\n| [\u672f\u8bed\u5927\u767d\u8bdd\u8bcd\u5178](./docs/glossary.md) | \u968f\u65f6\u67e5 | Git\u3001Token\u3001CLI\u2026\u2026\u9047\u5230\u4e0d\u61c2\u7684\u8bcd\u6765\u67e5 |\n\n### \ud83d\ude80 \u7b2c\u4e8c\u6b65\uff1a\u52a8\u624b\u8bd5\u8bd5\n\n| \u770b\u8fd9\u7bc7 | \u82b1\u591a\u4e45 | \u770b\u5b8c\u4f60\u4f1a |\n|--------|:------:|---------|\n| [3 \u5206\u949f\u7b2c\u4e00\u6b21\u5b9e\u6218](./docs/first-project.md) | 3 \u5206\u949f | \u4eb2\u81ea\u6307\u6325 Agent \u505a\u51fa\u4e00\u4e2a\u7f51\u9875\uff01 |\n| [\u600e\u4e48\u8ddf Agent \u8bf4\u8bdd](./docs/how-to-speak",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc outlines beginner guide covering Agent, CLI setup, and Git workflow."
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 990,
+            "forks": 82,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/assets/banner-dark.png\">\n    <img alt=\"Oink \u2014 Oink Is Not only a KVM. Your computers, working as one.\" src=\".github/assets/banner-light.png\" width=\"860\">\n  </picture>\n</p>\n\n# Oink \u2014 Oink Is Not only a KVM\n\n**English** | [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md) | [\u65e5\u672c\u8a9e](README.ja.md) | [\ud55c\uad6d\uc5b4](README.ko.md)\n\nOink, short for \"Oink Is Not only a KVM\", is modern software that builds a peer-to-peer sharing network across multiple Windows and Mac computers. Use the keyboard, mouse and trackpad of any device to control any nearby device, with the same native feel everywhere; play the audio of several devices through the speakers or headphones connected to one of them; share the clipboard and drag and drop between devices; discover devices on the local network automatically; all traffic is encrypted by default.\n\n## Install\n\nGet installers and matching source from [GitHub Releases](https://github.com/oinkvm/oink/releases).\n\nSupported operating systems and versions:\n\n- **Mac:** Apple silicon (arm64), macOS 14.2+; Intel (x64), macOS 14.2+ (untested)\n- **Windows:** x64, Windows 10 version 1809 (build 17763) or later, or Windows 11. Windows 10 versions before 22H2 are untested. Windows 10 LTSC (such as LTSC 2019 / LTSC 2021) does not include the WebView2 Runtime; install the Microsoft Edge WebView2 Runtime (Evergreen) first: https://developer.microsoft.com/microsoft-edge/webview2/\n\nIf SmartScreen says \"Windows protected your PC\", use **More info \u2192 Run anyway** only if offered. UAC may show an unknown publisher.\n\n### Sponsor\n\nIf this project helps you, consider sponsoring some of my AI subscription costs. Those tokens help make Oink better.\n\n<a href=\"https://ko-fi.com/hachiwii\"><img alt=\"Ko-fi\" src=\"https://k",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc describes sharing keyboard, mouse, clipboard, drag\u2011drop, and audio across Macs/PCs."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Authentication and Authorization: What's New in .NET 11",
+            "url": "https://dev.to/auth0/authentication-and-authorization-whats-new-in-net-11-353l",
+            "description": "When it comes to authentication and authorization, .NET 11 focuses on valuable refinements. It addresses key edge cases to enhance security and user experience: a WebSocket that outlives its access token, an authorization attribute that works on one endpoint type but not on another, a passkey list f",
+            "detailed_content": "Authentication and Authorization: What's New in .NET 11 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nAndrea Chiarelli\nfor\nAuth0 for Developers\nPosted on\nNov 9\n\u2022\nOriginally published at\nauth0.com\nAuthentication and Authorization: What's New in .NET 11\n# dotnet\n# security\n# authentication\n# authorization\nWhen it comes to authentication and authorization, .NET 11 focuses on valuable refinements. It addresses key edge cases to enhance security and user experience: a WebSocket that outlives its access token, an authorization attribute that works on one endpoint type but not on another, a passkey list full of identical \"Passkey\" labels. Let's look at what the newest release brings to authentication and authorization.\nRefresh Authentication on Live SignalR Connections\nA\nSignalR\nconnection can live for hours, while an access token usually doesn't. Until now, you had two unattractive options when the token expired: close the connection and make the client reconnect (missing messages in the gap), or leave it open and keep trusting an identity that is no longer valid.\n.NET 11 adds a third option:\nauthentication refresh . The client sends the old token over a dedicated\n/refresh\nendpoint, and the server swaps the connection's\nClaimsPrincipal\nin place.\nYou apply authentication refresh when you map your SignalR hub, as shown below:\n// Program.cs\napp . MapHub < ChatHub >( \"/chat\" ,\noptions\n=>\n{\noptions . CloseOnAuthenticationExpiration\n=\ntrue ;\noptions . EnableAuthenticationRefresh\n=\ntrue ;\n});\nSetting\nEnableAuthenticationRefresh\nadds\n/chat/",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc details .NET\u202f11 auth refinements matching the claim."
+          },
+          {
+            "source": "Dev.to",
+            "title": "One SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes",
+            "url": "https://dev.to/paulexe/one-skillmd-many-agents-writing-agent-skills-that-work-in-claude-code-codex-cursor-and-hermes-1jol",
+            "description": "Most AI agent tools now read the same skill format. A folder with a SKILL.md file in it works in Claude Code, Codex, Cursor, GitHub Copilot, VS Code, Gemini CLI, goose, Amp, OpenCode and Hermes Agent, among others. That means you can write a workflow once and carry it between agents instead of rewri",
+            "detailed_content": "One SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nPaul\nPosted on\nNov 9\nOne SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes\n# ai\n# agents\n# productivity\n# tutorial\nMost AI agent tools now read the same skill format. A folder with a\nSKILL.md\nfile in it works in Claude Code, Codex, Cursor, GitHub Copilot, VS Code, Gemini CLI, goose, Amp, OpenCode and Hermes Agent, among others. That means you can write a workflow once and carry it between agents instead of rewriting a system prompt for each one.\nThis guide covers what the format actually requires, where each tool looks for skills, and the habits that make a skill get picked up reliably.\nWhat a skill is\nThe\nAgent Skills specification\ndefines a skill as a directory containing, at minimum, a\nSKILL.md\nfile. The format was originally developed by Anthropic and released as an open standard ( overview ).\nA typical layout looks like this:\nrelease-notes/\n\u251c\u2500\u2500 SKILL.md\n# required: metadata + instructions\n\u251c\u2500\u2500 scripts/\n# optional: code the agent can run\n\u251c\u2500\u2500 references/\n# optional: extra docs loaded on demand\n\u2514\u2500\u2500 assets/\n# optional: templates, schemas, data\nSKILL.md\nis YAML frontmatter followed by Markdown. Only two fields are required:\n---\nname :\nrelease-notes\ndescription :\n\" Drafts\nrelease\nnotes\nfrom\nmerged\npull\nrequests\nand\nthe\ngit\nlog.\nUse\nwhen\nthe\nuser\nasks\nfor\nrelease\nnotes,\na\nchangelog\nentry,\nor\na\nsummary\nof\nwhat\nshipped\nsince\nthe\nlast\ntag.\"\n---\n#",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc states SKILL.md works across listed AI agents."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert",
+            "url": "https://dev.to/tauchi-de/mit-osfoundry-operator-bedient-ein-agent-die-app-und-jede-aktion-wird-protokolliert-3mdn",
+            "description": "\u201eWelche meiner GPU-Endpoints kosten gerade noch Geld?\" ist eine einfache Frage. Um sie zu beantworten, klickt man sich aber meist durch drei Ansichten, liest die Zahlen ab und tippt sie dann im Chat wieder ein. Das einem KI-Agenten zu \u00fcberlassen, klingt verlockend, bis man wissen will, was er eigent",
+            "detailed_content": "Mit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\ntauchiii\nfor\ntauchi Deutsch\nPosted on\nNov 9\nMit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert\n# ai\n# agenten\n# automatisierung\n# produktivitaet\n\u201eWelche meiner GPU-Endpoints kosten gerade noch Geld?\" ist eine einfache Frage. Um sie zu beantworten, klickt man sich aber meist durch drei Ansichten, liest die Zahlen ab und tippt sie dann im Chat wieder ein. Das einem KI-Agenten zu \u00fcberlassen, klingt verlockend, bis man wissen will, was er eigentlich angeklickt hat. Genau um diese Frage herum ist osFoundry Operator gebaut: Der Agent arbeitet in einem Live-Bereich der App direkt neben der Unterhaltung, und jede seiner Aktionen wird festgehalten.\nEine Unterhaltung neben einem Live-Bereich der App\nosFoundry\nist eine Desktop-App, die Chat, Agents, Dateien und Tools in einem Fenster zusammenf\u00fchrt. Operator teilt den Bildschirm in drei Bereiche. Links steht die Liste der Operator-Sitzungen, in der Mitte die Unterhaltung. Rechts befindet sich ein Live-Dashboard-Bereich: eine echte Instanz der osFoundry-App, in der Operator Ansichten \u00f6ffnet. \u00dcber dem Bereich siehst du, auf welcher Ansicht er gerade ist (hier Dashboard /models/endpoints), dazu die Shortcuts Home und Project sowie Reload dashboard und Open in a new window. \u00dcber den Trenner kannst du dem Bereich mehr Platz geben.\nIm Beispiel fragt Sammy, welche GPU-Endpoints gerade abgerechnet werden. Operator \u00f6ffnet Endpoints im ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc includes German description of GPU\u2011endpoint cost query via agent."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Build a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection",
+            "url": "https://dev.to/cloudhike/build-a-file-sharing-app-with-presigned-uploads-storage-auth-and-postgres-over-one-mcp-connection-lbo",
+            "description": "This is week 3 of Build with CloudHike, a weekly series where we build a small, real-world app with an AI coding agent and let the agent set up the backend. Disclosure: I built CloudHike, so keep that in mind.\n\nNew here? Week 1 built a referral waitlist with Postgres, Auth, Redis and email, and week",
+            "detailed_content": "Build a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nCloudHike Team\nPosted on\nNov 9\nBuild a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection\n# ai\n# mcp\n# webdev\n# tutorial\nBuild with CloudHike (3 Part Series)\n1\nBuild a referral waitlist with your AI agent: Postgres, Auth, Redis and email over one MCP connection\n2\nBuild an AI summarizer with background jobs: retries, signed webhooks and Postgres over one MCP connection\n3\nBuild a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection\nThis is week 3 of\nBuild with CloudHike , a weekly series where we build a small, real-world app with an AI coding agent and let the agent set up the backend. Disclosure: I built\nCloudHike , so keep that in mind.\nNew here?\nWeek 1\nbuilt a referral waitlist with Postgres, Auth, Redis and email, and\nweek 2\nmoved a slow AI call into background jobs with retries and signed webhooks. Each post stands on its own, so you can start right here.\nEvery app that takes uploads starts the same way: a form, a\nmultipart/form-data\nPOST, and an API route that receives the file and pushes it on to a bucket. It works with a small PNG on your laptop. Then someone uploads a big video, your serverless function runs into its host's request size limit, and every byte that does get through has passed through your server twice: once in, once out.\nThen come the other questions. Where do the files live? Who is",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc describes week\u202f3 CloudHike series building file\u2011sharing app."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fanning out map markers in screen pixels, not map units",
+            "url": "https://dev.to/canad1an/fanning-out-map-markers-in-screen-pixels-not-map-units-3o1b",
+            "description": "I make Last Thaw, a free browser strategy game. Up to a hundred players start with five settlers on a real map of Earth, cut into 408 regions, and have 30 real days to build an empire while an ice age advances from both poles. It's in early access and I'm looking for people to test it.\n\nEverything t",
+            "detailed_content": "Fanning out map markers in screen pixels, not map units - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMatt\nPosted on\nNov 9\nFanning out map markers in screen pixels, not map units\n# gamedev\n# showdev\n# typescript\n# webdev\nBuilding Last Thaw (3 Part Series)\n1\nA strategy game that keeps running while nobody is online\n2\nSimulating an ice age on a public schedule across a real map\n3\nFanning out map markers in screen pixels, not map units\nI make\nLast Thaw , a free browser strategy game. Up to a hundred players start with five settlers on a real map of Earth, cut into 408 regions, and have 30 real days to build an empire while an ice age advances from both poles. It's in early access and I'm looking for people to test it.\nEverything that moves in the game is drawn on that map: settlers heading for a new region, caravans hauling goods, armies on the way to a raid, canoes and later ships on the sea lanes. Each one is a small round marker sitting on its route. This post is about one small bug in those markers that taught me something I should have known going in:\nsome things on a zoomable map belong to the world, and some belong to the screen.\nMixing them up gave me caravans swimming in the ocean.\nThe setup\nThe map is one SVG. The world lives in a fixed\nviewBox , and pan and zoom are a single transform on a group inside it:\n/** The map's pan and zoom: the world is drawn translated by (x, y) and scaled by k, in viewBox units. */\nexport\ninterface\nView\n{\nx :\nnumber ;\ny :\nnumber ;\nk :\nnumber ;\n}\nRegions, coastlines, roads and routes are all",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc contains game description and marker bug matching claim."
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a PDF Storyboard Generator Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-storyboard-generator-javascript/",
+            "description": "PDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when so",
+            "detailed_content": "How to Build a PDF Storyboard Generator Using JavaScript\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 6, 2026\n/\n#JavaScript\nHow to Build a PDF Storyboard Generator Using JavaScript\nBhavin Sheth\nPDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when someone needs to understand the overall sequence of scenes, slides, or visual content.\nA storyboard provides a more organized way to review this information. Instead of opening every page individually, users can arrange selected PDF pages into a single sheet containing multiple panels. Each panel can include a page number, a caption, and a visual preview of the original page.\nIn this tutorial, we'll explore how to build a browser-based PDF Storyboard Generator using JavaScript, PDF.js, and PDF-lib.\nThe application takes pages from an existing PDF and arranges them into printable storyboard sheets. Users can choose different layouts, select the pages they want to include, add captions, customize the appearance, preview the result, and download the finished storyboard.\nThe application runs directly in the browser. The uploaded PDF is processed locally rather than uploaded to the website's server.\nWe'll examine the implementation step by step, including PDF rendering, page selection, caption handling, layout calculations, preview generation, and file export.\nWhat We'll Cover:\nWhat Is a PDF Storyboard Generator?\nMain Features of the Application\nUnderstanding the Browser-Based Workflow\nProject Setup\nLibraries Used\nPreparing the HTML Workspace\nSelecting the Main DOM Elements\nDefining Important Configuration Values\nUnderstandin",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc explains PDF storyboard generator tutorial as claimed."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "xiaobai-kanban",
+            "full_name": "supercli-site/xiaobai-kanban",
+            "url": "https://github.com/supercli-site/xiaobai-kanban",
+            "description": "\u4e2d\u6587 AI \u7f16\u7a0b\u52a9\u624b\u5165\u95e8\u6559\u7a0b\uff1a\u8ba4\u8bc6 Agent\u3001\u8868\u8fbe\u9700\u6c42\u3001\u5b89\u88c5 CLI \u4e0e\u5b66\u4e60 Git \u5de5\u4f5c\u6d41\u3002 / Chinese beginner guide to coding agents, CLI setup, and Git workflows.",
+            "stars": 166,
+            "forks": 14,
+            "language": "HTML",
+            "detailed_content": "![banner](https://cdn.jsdelivr.net/gh/webkubor/free-imgbed@main/blog/projects/xiaobai-kanban-banner/banner.webp)\n\n# \ud83e\udded \u5c0f\u767d\u770b\u677f \u2014 \u8ba9 Agent \u5e2e\u4f60\u5199\u4ee3\u7801\n\n> **\u4f60\u53ea\u8bf4\u8bdd\uff0cAgent \u641e\u5b9a\u4e00\u5207\u3002** \u4e0d\u9700\u8981\u61c2\u4ee3\u7801\u3001\u4e0d\u9700\u8981\u61c2\u547d\u4ee4\u884c\u3002\n\n\n<p align=\"center\">\n  <a href=\"https://github.com/webkubor/xiaobai-kanban#\u63d0-bug--\u53cd\u9988\"><img src=\"https://img.shields.io/badge/PRs-welcome-brightgreen.svg\" alt=\"\u6b22\u8fce PR\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban/blob/main/LICENSE\"><img src=\"https://img.shields.io/github/license/webkubor/xiaobai-kanban?style=for-the-badge&color=gold\" alt=\"License\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban/actions/workflows/deploy.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/webkubor/xiaobai-kanban/deploy.yml?style=for-the-badge&color=4c9a6b\" alt=\"CI\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban\"><img src=\"https://img.shields.io/github/stars/webkubor/xiaobai-kanban?style=for-the-badge&color=coral\" alt=\"Stars\"></a>\n  <a href=\"https://github.com/webkubor/xiaobai-kanban\"><img src=\"https://img.shields.io/badge/Tutorial-333333?style=for-the-badge\" alt=\"\u6280\u672f\u6808\"></a>\n</p>\n\n---\n\n> \ud83e\udded **\u7b2c\u4e00\u6b21\u6765\uff1f** \u5f80\u4e0b\u770b\u300c\u26a1 10 \u79d2\u5f00\u59cb\u300d\u5c31\u591f\uff0c\u4e0d\u7528\u5148\u8bfb\u5b8c\u5168\u6587\u3002\n> \u60f3\u77e5\u9053\u8fd9\u4e2a\u7ad9\u4e3a\u4ec0\u4e48\u5168\u514d\u8d39 \u2192 [\u5173\u4e8e\u6211\u4eec](./docs/about.md)\uff1b\n> \u5df2\u7ecf\u5361\u4f4f\u4e86 \u2192 [\u76f4\u63a5\u95ee\u5ba2\u670d](./docs/about.md#\u5361\u4f4f\u4e86-\u76f4\u63a5\u95ee)\uff0c\u7b54\u7591\u4e0d\u6536\u8d39\u3002\n\n## \u26a1 10 \u79d2\u5f00\u59cb\n\n\u5bf9\u4f60\u7684 Agent \u8bf4\uff1a\n\n> \u300c\u4f60\u662f\u4ec0\u4e48 Agent\uff1f\u7528\u5927\u767d\u8bdd\u544a\u8bc9\u6211\u3002\u300d\n\n\u8bb0\u4f4f\u5b83\u7684\u540d\u5b57\u3002\u540e\u9762\u4f60\u4f1a\u7ecf\u5e38\u7528\u5230\u5b83\u3002\n\n> \u770b\u4e0d\u61c2\u5b83\u7684\u56de\u590d\uff1f\u7ee7\u7eed\u8bf4\uff1a\u300c\u7528\u5927\u767d\u8bdd\u89e3\u91ca\uff0c\u50cf\u8ddf\u5c0f\u5b66\u751f\u8bf4\u8bdd\u4e00\u6837\u3002\u300d\n\n---\n\n## \ud83d\uddfa\ufe0f \u5b66\u4e60\u8def\u5f84\n\n### \ud83c\udf31 \u7b2c\u4e00\u6b65\uff1a\u8ba4\u8bc6 Agent\n\n| \u770b\u8fd9\u7bc7 | \u82b1\u591a\u4e45 | \u770b\u5b8c\u4f60\u4f1a |\n|--------|:------:|---------|\n| [Agent \u662f\u4ec0\u4e48\uff1f](./docs/what-is-agent.md) | 3 \u5206\u949f | \u77e5\u9053\u8fd9\u73a9\u610f\u8ddf\u8c46\u5305\u6709\u4ec0\u4e48\u533a\u522b |\n| [\u6211\u4e3a\u4ec0\u4e48\u8981\u7528\uff1f](./docs/why-agent.md) | 3 \u5206\u949f | \u77e5\u9053 Agent \u80fd\u5e2e\u4f60\u505a\u4ec0\u4e48\u4e8b |\n| [\u672f\u8bed\u5927\u767d\u8bdd\u8bcd\u5178](./docs/glossary.md) | \u968f\u65f6\u67e5 | Git\u3001Token\u3001CLI\u2026\u2026\u9047\u5230\u4e0d\u61c2\u7684\u8bcd\u6765\u67e5 |\n\n### \ud83d\ude80 \u7b2c\u4e8c\u6b65\uff1a\u52a8\u624b\u8bd5\u8bd5\n\n| \u770b\u8fd9\u7bc7 | \u82b1\u591a\u4e45 | \u770b\u5b8c\u4f60\u4f1a |\n|--------|:------:|---------|\n| [3 \u5206\u949f\u7b2c\u4e00\u6b21\u5b9e\u6218](./docs/first-project.md) | 3 \u5206\u949f | \u4eb2\u81ea\u6307\u6325 Agent \u505a\u51fa\u4e00\u4e2a\u7f51\u9875\uff01 |\n| [\u600e\u4e48\u8ddf Agent \u8bf4\u8bdd](./docs/how-to-speak",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc outlines beginner guide covering Agent, CLI setup, and Git workflow.",
+            "why_it_matters": "An AI coding assistant that turns natural\u2011language commands into code and automates Git workflows, cutting the friction between idea and implementation.",
+            "who_cares": "Frontend, backend, and full\u2011stack developers who want to boost productivity with AI\u2011driven tooling.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 990,
+            "forks": 82,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/assets/banner-dark.png\">\n    <img alt=\"Oink \u2014 Oink Is Not only a KVM. Your computers, working as one.\" src=\".github/assets/banner-light.png\" width=\"860\">\n  </picture>\n</p>\n\n# Oink \u2014 Oink Is Not only a KVM\n\n**English** | [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md) | [\u65e5\u672c\u8a9e](README.ja.md) | [\ud55c\uad6d\uc5b4](README.ko.md)\n\nOink, short for \"Oink Is Not only a KVM\", is modern software that builds a peer-to-peer sharing network across multiple Windows and Mac computers. Use the keyboard, mouse and trackpad of any device to control any nearby device, with the same native feel everywhere; play the audio of several devices through the speakers or headphones connected to one of them; share the clipboard and drag and drop between devices; discover devices on the local network automatically; all traffic is encrypted by default.\n\n## Install\n\nGet installers and matching source from [GitHub Releases](https://github.com/oinkvm/oink/releases).\n\nSupported operating systems and versions:\n\n- **Mac:** Apple silicon (arm64), macOS 14.2+; Intel (x64), macOS 14.2+ (untested)\n- **Windows:** x64, Windows 10 version 1809 (build 17763) or later, or Windows 11. Windows 10 versions before 22H2 are untested. Windows 10 LTSC (such as LTSC 2019 / LTSC 2021) does not include the WebView2 Runtime; install the Microsoft Edge WebView2 Runtime (Evergreen) first: https://developer.microsoft.com/microsoft-edge/webview2/\n\nIf SmartScreen says \"Windows protected your PC\", use **More info \u2192 Run anyway** only if offered. UAC may show an unknown publisher.\n\n### Sponsor\n\nIf this project helps you, consider sponsoring some of my AI subscription costs. Those tokens help make Oink better.\n\n<a href=\"https://ko-fi.com/hachiwii\"><img alt=\"Ko-fi\" src=\"https://k",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc describes sharing keyboard, mouse, clipboard, drag\u2011drop, and audio across Macs/PCs.",
+            "why_it_matters": "Oink creates a seamless cross\u2011platform KVM, letting teams share a single mouse, keyboard, and clipboard across Macs and PCs without extra hardware.",
+            "who_cares": "DevOps, sysadmins, and remote teams that need instant, secure device sharing.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Authentication and Authorization: What's New in .NET 11",
+            "url": "https://dev.to/auth0/authentication-and-authorization-whats-new-in-net-11-353l",
+            "description": "When it comes to authentication and authorization, .NET 11 focuses on valuable refinements. It addresses key edge cases to enhance security and user experience: a WebSocket that outlives its access token, an authorization attribute that works on one endpoint type but not on another, a passkey list f",
+            "detailed_content": "Authentication and Authorization: What's New in .NET 11 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nAndrea Chiarelli\nfor\nAuth0 for Developers\nPosted on\nNov 9\n\u2022\nOriginally published at\nauth0.com\nAuthentication and Authorization: What's New in .NET 11\n# dotnet\n# security\n# authentication\n# authorization\nWhen it comes to authentication and authorization, .NET 11 focuses on valuable refinements. It addresses key edge cases to enhance security and user experience: a WebSocket that outlives its access token, an authorization attribute that works on one endpoint type but not on another, a passkey list full of identical \"Passkey\" labels. Let's look at what the newest release brings to authentication and authorization.\nRefresh Authentication on Live SignalR Connections\nA\nSignalR\nconnection can live for hours, while an access token usually doesn't. Until now, you had two unattractive options when the token expired: close the connection and make the client reconnect (missing messages in the gap), or leave it open and keep trusting an identity that is no longer valid.\n.NET 11 adds a third option:\nauthentication refresh . The client sends the old token over a dedicated\n/refresh\nendpoint, and the server swaps the connection's\nClaimsPrincipal\nin place.\nYou apply authentication refresh when you map your SignalR hub, as shown below:\n// Program.cs\napp . MapHub < ChatHub >( \"/chat\" ,\noptions\n=>\n{\noptions . CloseOnAuthenticationExpiration\n=\ntrue ;\noptions . EnableAuthenticationRefresh\n=\ntrue ;\n});\nSetting\nEnableAuthenticationRefresh\nadds\n/chat/",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc details .NET\u202f11 auth refinements matching the claim.",
+            "why_it_matters": ".NET 11\u2019s SignalR authentication refresh eliminates token\u2011expiry downtime, tightening security while keeping real\u2011time connections alive.",
+            "who_cares": ".NET backend developers and security engineers building real\u2011time services.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "One SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes",
+            "url": "https://dev.to/paulexe/one-skillmd-many-agents-writing-agent-skills-that-work-in-claude-code-codex-cursor-and-hermes-1jol",
+            "description": "Most AI agent tools now read the same skill format. A folder with a SKILL.md file in it works in Claude Code, Codex, Cursor, GitHub Copilot, VS Code, Gemini CLI, goose, Amp, OpenCode and Hermes Agent, among others. That means you can write a workflow once and carry it between agents instead of rewri",
+            "detailed_content": "One SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nPaul\nPosted on\nNov 9\nOne SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes\n# ai\n# agents\n# productivity\n# tutorial\nMost AI agent tools now read the same skill format. A folder with a\nSKILL.md\nfile in it works in Claude Code, Codex, Cursor, GitHub Copilot, VS Code, Gemini CLI, goose, Amp, OpenCode and Hermes Agent, among others. That means you can write a workflow once and carry it between agents instead of rewriting a system prompt for each one.\nThis guide covers what the format actually requires, where each tool looks for skills, and the habits that make a skill get picked up reliably.\nWhat a skill is\nThe\nAgent Skills specification\ndefines a skill as a directory containing, at minimum, a\nSKILL.md\nfile. The format was originally developed by Anthropic and released as an open standard ( overview ).\nA typical layout looks like this:\nrelease-notes/\n\u251c\u2500\u2500 SKILL.md\n# required: metadata + instructions\n\u251c\u2500\u2500 scripts/\n# optional: code the agent can run\n\u251c\u2500\u2500 references/\n# optional: extra docs loaded on demand\n\u2514\u2500\u2500 assets/\n# optional: templates, schemas, data\nSKILL.md\nis YAML frontmatter followed by Markdown. Only two fields are required:\n---\nname :\nrelease-notes\ndescription :\n\" Drafts\nrelease\nnotes\nfrom\nmerged\npull\nrequests\nand\nthe\ngit\nlog.\nUse\nwhen\nthe\nuser\nasks\nfor\nrelease\nnotes,\na\nchangelog\nentry,\nor\na\nsummary\nof\nwhat\nshipped\nsince\nthe\nlast\ntag.\"\n---\n#",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc states SKILL.md works across listed AI agents.",
+            "why_it_matters": "A single SKILL.md format works across Claude, Codex, Cursor, and more, so you write one workflow and reuse it everywhere.",
+            "who_cares": "AI tool integrators and developers building multi\u2011agent pipelines.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Mit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert",
+            "url": "https://dev.to/tauchi-de/mit-osfoundry-operator-bedient-ein-agent-die-app-und-jede-aktion-wird-protokolliert-3mdn",
+            "description": "\u201eWelche meiner GPU-Endpoints kosten gerade noch Geld?\" ist eine einfache Frage. Um sie zu beantworten, klickt man sich aber meist durch drei Ansichten, liest die Zahlen ab und tippt sie dann im Chat wieder ein. Das einem KI-Agenten zu \u00fcberlassen, klingt verlockend, bis man wissen will, was er eigent",
+            "detailed_content": "Mit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\ntauchiii\nfor\ntauchi Deutsch\nPosted on\nNov 9\nMit osFoundry Operator bedient ein Agent die App, und jede Aktion wird protokolliert\n# ai\n# agenten\n# automatisierung\n# produktivitaet\n\u201eWelche meiner GPU-Endpoints kosten gerade noch Geld?\" ist eine einfache Frage. Um sie zu beantworten, klickt man sich aber meist durch drei Ansichten, liest die Zahlen ab und tippt sie dann im Chat wieder ein. Das einem KI-Agenten zu \u00fcberlassen, klingt verlockend, bis man wissen will, was er eigentlich angeklickt hat. Genau um diese Frage herum ist osFoundry Operator gebaut: Der Agent arbeitet in einem Live-Bereich der App direkt neben der Unterhaltung, und jede seiner Aktionen wird festgehalten.\nEine Unterhaltung neben einem Live-Bereich der App\nosFoundry\nist eine Desktop-App, die Chat, Agents, Dateien und Tools in einem Fenster zusammenf\u00fchrt. Operator teilt den Bildschirm in drei Bereiche. Links steht die Liste der Operator-Sitzungen, in der Mitte die Unterhaltung. Rechts befindet sich ein Live-Dashboard-Bereich: eine echte Instanz der osFoundry-App, in der Operator Ansichten \u00f6ffnet. \u00dcber dem Bereich siehst du, auf welcher Ansicht er gerade ist (hier Dashboard /models/endpoints), dazu die Shortcuts Home und Project sowie Reload dashboard und Open in a new window. \u00dcber den Trenner kannst du dem Bereich mehr Platz geben.\nIm Beispiel fragt Sammy, welche GPU-Endpoints gerade abgerechnet werden. Operator \u00f6ffnet Endpoints im ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc includes German description of GPU\u2011endpoint cost query via agent.",
+            "why_it_matters": "osFoundry Operator lets an AI agent control a live app UI while logging every click, enabling transparent, auditable automation.",
+            "who_cares": "QA engineers, product managers, and automation specialists looking for AI\u2011powered UI testing.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Build a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection",
+            "url": "https://dev.to/cloudhike/build-a-file-sharing-app-with-presigned-uploads-storage-auth-and-postgres-over-one-mcp-connection-lbo",
+            "description": "This is week 3 of Build with CloudHike, a weekly series where we build a small, real-world app with an AI coding agent and let the agent set up the backend. Disclosure: I built CloudHike, so keep that in mind.\n\nNew here? Week 1 built a referral waitlist with Postgres, Auth, Redis and email, and week",
+            "detailed_content": "Build a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nCloudHike Team\nPosted on\nNov 9\nBuild a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection\n# ai\n# mcp\n# webdev\n# tutorial\nBuild with CloudHike (3 Part Series)\n1\nBuild a referral waitlist with your AI agent: Postgres, Auth, Redis and email over one MCP connection\n2\nBuild an AI summarizer with background jobs: retries, signed webhooks and Postgres over one MCP connection\n3\nBuild a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection\nThis is week 3 of\nBuild with CloudHike , a weekly series where we build a small, real-world app with an AI coding agent and let the agent set up the backend. Disclosure: I built\nCloudHike , so keep that in mind.\nNew here?\nWeek 1\nbuilt a referral waitlist with Postgres, Auth, Redis and email, and\nweek 2\nmoved a slow AI call into background jobs with retries and signed webhooks. Each post stands on its own, so you can start right here.\nEvery app that takes uploads starts the same way: a form, a\nmultipart/form-data\nPOST, and an API route that receives the file and pushes it on to a bucket. It works with a small PNG on your laptop. Then someone uploads a big video, your serverless function runs into its host's request size limit, and every byte that does get through has passed through your server twice: once in, once out.\nThen come the other questions. Where do the files live? Who is",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc describes week\u202f3 CloudHike series building file\u2011sharing app.",
+            "why_it_matters": "A step\u2011by\u2011step guide to presigned uploads and a single MCP connection shows how to build a scalable file\u2011sharing backend with AI assistance.",
+            "who_cares": "Full\u2011stack developers and startup founders building cloud\u2011native file services.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fanning out map markers in screen pixels, not map units",
+            "url": "https://dev.to/canad1an/fanning-out-map-markers-in-screen-pixels-not-map-units-3o1b",
+            "description": "I make Last Thaw, a free browser strategy game. Up to a hundred players start with five settlers on a real map of Earth, cut into 408 regions, and have 30 real days to build an empire while an ice age advances from both poles. It's in early access and I'm looking for people to test it.\n\nEverything t",
+            "detailed_content": "Fanning out map markers in screen pixels, not map units - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMatt\nPosted on\nNov 9\nFanning out map markers in screen pixels, not map units\n# gamedev\n# showdev\n# typescript\n# webdev\nBuilding Last Thaw (3 Part Series)\n1\nA strategy game that keeps running while nobody is online\n2\nSimulating an ice age on a public schedule across a real map\n3\nFanning out map markers in screen pixels, not map units\nI make\nLast Thaw , a free browser strategy game. Up to a hundred players start with five settlers on a real map of Earth, cut into 408 regions, and have 30 real days to build an empire while an ice age advances from both poles. It's in early access and I'm looking for people to test it.\nEverything that moves in the game is drawn on that map: settlers heading for a new region, caravans hauling goods, armies on the way to a raid, canoes and later ships on the sea lanes. Each one is a small round marker sitting on its route. This post is about one small bug in those markers that taught me something I should have known going in:\nsome things on a zoomable map belong to the world, and some belong to the screen.\nMixing them up gave me caravans swimming in the ocean.\nThe setup\nThe map is one SVG. The world lives in a fixed\nviewBox , and pan and zoom are a single transform on a group inside it:\n/** The map's pan and zoom: the world is drawn translated by (x, y) and scaled by k, in viewBox units. */\nexport\ninterface\nView\n{\nx :\nnumber ;\ny :\nnumber ;\nk :\nnumber ;\n}\nRegions, coastlines, roads and routes are all",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc contains game description and marker bug matching claim.",
+            "why_it_matters": "Rendering map markers in screen pixels instead of map units fixes visual drift on zoom, improving the clarity of strategy\u2011game UIs.",
+            "who_cares": "Game developers and front\u2011end engineers working on interactive maps.",
+            "verdict": "READ"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a PDF Storyboard Generator Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-storyboard-generator-javascript/",
+            "description": "PDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when so",
+            "detailed_content": "How to Build a PDF Storyboard Generator Using JavaScript\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 6, 2026\n/\n#JavaScript\nHow to Build a PDF Storyboard Generator Using JavaScript\nBhavin Sheth\nPDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when someone needs to understand the overall sequence of scenes, slides, or visual content.\nA storyboard provides a more organized way to review this information. Instead of opening every page individually, users can arrange selected PDF pages into a single sheet containing multiple panels. Each panel can include a page number, a caption, and a visual preview of the original page.\nIn this tutorial, we'll explore how to build a browser-based PDF Storyboard Generator using JavaScript, PDF.js, and PDF-lib.\nThe application takes pages from an existing PDF and arranges them into printable storyboard sheets. Users can choose different layouts, select the pages they want to include, add captions, customize the appearance, preview the result, and download the finished storyboard.\nThe application runs directly in the browser. The uploaded PDF is processed locally rather than uploaded to the website's server.\nWe'll examine the implementation step by step, including PDF rendering, page selection, caption handling, layout calculations, preview generation, and file export.\nWhat We'll Cover:\nWhat Is a PDF Storyboard Generator?\nMain Features of the Application\nUnderstanding the Browser-Based Workflow\nProject Setup\nLibraries Used\nPreparing the HTML Workspace\nSelecting the Main DOM Elements\nDefining Important Configuration Values\nUnderstandin",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc explains PDF storyboard generator tutorial as claimed.",
+            "why_it_matters": "A browser\u2011based PDF storyboard generator lets designers quickly assemble printable storyboards without server uploads.",
+            "who_cares": "UI/UX developers, content creators, and designers needing fast PDF layout tools.",
+            "verdict": "READ"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Cool Tool",
+            "title": "xiaobai-kanban",
+            "description": "**Turn natural\u2011language commands into working code with the Xiaobai Kanban AI assistant.** The project offers a Chinese\u2011language tutorial that walks you through agents, CLI setup, and Git workflows, letting you speak to an Agent that writes a web page for you and handles version control automatically.",
+            "why_it_matters": "An AI coding assistant that turns natural\u2011language commands into code and automates Git workflows, cutting the friction between idea and implementation.",
+            "who_cares": "Frontend, backend, and full\u2011stack developers who want to boost productivity with AI\u2011driven tooling.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://github.com/supercli-site/xiaobai-kanban"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "Authentication and Authorization: What's New in .NET 11",
+            "description": "**.NET\u202f11 lets SignalR keep live connections alive while refreshing expired tokens.** The new `EnableAuthenticationRefresh` option adds a `/refresh` endpoint so a client can swap its `ClaimsPrincipal` without dropping the hub, eliminating downtime for long\u2011running real\u2011time apps.",
+            "why_it_matters": ".NET 11\u2019s SignalR authentication refresh eliminates token\u2011expiry downtime, tightening security while keeping real\u2011time connections alive.",
+            "who_cares": ".NET backend developers and security engineers building real\u2011time services.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/auth0/authentication-and-authorization-whats-new-in-net-11-353l"
+          },
+          {
+            "category": "Tech Shift",
+            "title": "oink",
+            "description": "**Oink turns multiple Macs and PCs into a single seamless workstation.** This peer\u2011to\u2011peer KVM layer lets you share keyboard, mouse, trackpad, clipboard, drag\u2011and\u2011drop, and audio across devices, with automatic local\u2011network discovery and encrypted traffic.",
+            "why_it_matters": "Oink creates a seamless cross\u2011platform KVM, letting teams share a single mouse, keyboard, and clipboard across Macs and PCs without extra hardware.",
+            "who_cares": "DevOps, sysadmins, and remote teams that need instant, secure device sharing.",
+            "verdict": "WATCH",
+            "source_url": "https://github.com/oinkvm/oink"
+          },
+          {
+            "category": "Watchlist",
+            "title": "One SKILL.md, Many Agents: Writing Agent Skills That Work in Claude Code, Codex, Cursor and Hermes",
+            "description": "**One SKILL.md file now powers workflows in Claude, Codex, Cursor, and dozens of other agents.** The open\u2011standard format requires only a `SKILL.md` with metadata and instructions, letting you write a skill once and reuse it across many AI\u2011agent tools.",
+            "why_it_matters": "A single SKILL.md format works across Claude, Codex, Cursor, and more, so you write one workflow and reuse it everywhere.",
+            "who_cares": "AI tool integrators and developers building multi\u2011agent pipelines.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/paulexe/one-skillmd-many-agents-writing-agent-skills-that-work-in-claude-code-codex-cursor-and-hermes-1jol"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "Build a file-sharing app with presigned uploads: Storage, Auth and Postgres over one MCP connection",
+            "description": "**Follow an AI\u2011guided tutorial to build a presigned\u2011upload file\u2011sharing service in a single MCP connection.** The three\u2011part series shows how to set up storage, authentication, and Postgres, handling large uploads without hitting server size limits, all orchestrated by an AI coding agent.",
+            "why_it_matters": "A step\u2011by\u2011step guide to presigned uploads and a single MCP connection shows how to build a scalable file\u2011sharing backend with AI assistance.",
+            "who_cares": "Full\u2011stack developers and startup founders building cloud\u2011native file services.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/cloudhike/build-a-file-sharing-app-with-presigned-uploads-storage-auth-and-postgres-over-one-mcp-connection-lbo"
+          }
+        ]
+      }
+    }
+  },
   "rejected_urls": [
     "https://github.com/emanuele-em/kanzo",
     "https://github.com/tt-a1i/archify",
@@ -13,7 +907,7 @@
   ],
   "restarted": true,
   "email": {
-    "status": "not_started",
+    "status": "sent",
     "attempts": 0,
     "last_error": null
   },
