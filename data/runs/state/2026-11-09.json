@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-09",
+  "stages": {},
+  "rejected_urls": [
+    "https://github.com/emanuele-em/kanzo",
+    "https://github.com/tt-a1i/archify",
+    "https://ketchup3d.github.io/app/",
+    "https://declarative-dragging.github.io/",
+    "https://psalm.dev/articles/psalm-7",
+    "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+    "https://github.com/OmniJev/Flide",
+    "https://duxlabs.dev/"
+  ],
+  "restarted": true,
+  "email": {
+    "status": "not_started",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": [
+    {
+      "started_at": "2026-11-09T12:00:07.114746+00:00",
+      "git_sha": "358cef216590071e3602820f08dc299ad5cf58f7",
+      "failed_stage": "verify",
+      "reason": "Verifier approved 2 of 10 candidates (minimum 3)"
+    }
+  ]
+}

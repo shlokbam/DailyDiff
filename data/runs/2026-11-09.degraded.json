@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-09",
+  "timestamp": "2026-11-09T12:00:07.116739+00:00",
+  "git_sha": "358cef216590071e3602820f08dc299ad5cf58f7",
+  "counts": {
+    "raw_signals": 65,
+    "after_dedup": 54,
+    "skeptic_passed": 10,
+    "researched": 10,
+    "verified": 2
+  },
+  "content_sources": {
+    "https://github.com/supercli-site/xiaobai-kanban": "readme",
+    "https://github.com/emanuele-em/kanzo": "readme",
+    "https://github.com/oinkvm/oink": "readme",
+    "https://github.com/tt-a1i/archify": "readme",
+    "https://ketchup3d.github.io/app/": "web_page",
+    "https://declarative-dragging.github.io/": "web_page",
+    "https://psalm.dev/articles/psalm-7": "web_page",
+    "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc": "web_page",
+    "https://github.com/OmniJev/Flide": "web_page",
+    "https://duxlabs.dev/": "web_page"
+  },
+  "models_used": {
+    "openai/gpt-oss-120b": 1,
+    "qwen/qwen3.8-27b": 1
+  },
+  "llm_calls": 2,
+  "durations_seconds": {
+    "skeptic": 4.85,
+    "verifier": 1.94
+  },
+  "hard_failures": [],
+  "warnings": [],
+  "final_briefs": [],
+  "failure_reasons": [
+    "verify: Verifier approved 2 of 10 candidates (minimum 3)"
+  ],
+  "status": "degraded"
+}
