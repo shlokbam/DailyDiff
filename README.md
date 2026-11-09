@@ -91,3 +91,7 @@ More on the incidents that shaped this: [free-tier incident report](FREE_TIER_LL
 <a href="https://shlokbam.in">shlokbam.in</a> · <a href="https://www.linkedin.com/in/shlokbam/">LinkedIn</a> · <a href="https://github.com/shlokbam">More projects</a>
 
 </div>
+
+## Live site
+
+https://dailydiff.in
