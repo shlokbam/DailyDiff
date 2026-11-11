@@ -1,0 +1,819 @@
+{
+  "date": "2026-11-11",
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "devstart-lab",
+            "full_name": "brunnojob/devstart-lab",
+            "url": "https://github.com/brunnojob/devstart-lab",
+            "description": "DevStart Lab - An interactive open-source platform to learn programming, explore real projects, and contribute to GitHub.",
+            "stars": 190,
+            "forks": 7,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "open_source_issue_contribution",
+            "full_name": "codepiyusss/open_source_issue_contribution",
+            "url": "https://github.com/codepiyusss/open_source_issue_contribution",
+            "description": "\ud83d\udc1b Beginner-friendly Python CLI with 30+ good first issues: planted bugs, missing tests & small features. Practice open source: fork, fix, PR, and turn your GitHub contribution graph green \ud83d\udfe9",
+            "stars": 28,
+            "forks": 33,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "tws-labs",
+            "full_name": "TrainWithShubham/tws-labs",
+            "url": "https://github.com/TrainWithShubham/tws-labs",
+            "description": "Learn DevOps, Cloud and AI by doing: a real terminal, tasks graded on real machine state. Runs on Windows, macOS and Linux.",
+            "stars": 23,
+            "forks": 40,
+            "language": "Shell"
+          },
+          {
+            "source": "GitHub",
+            "title": "WebsiteBench",
+            "full_name": "TIGER-AI-Lab/WebsiteBench",
+            "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+            "description": "Can AI agents rebuild websites through browser exploration?",
+            "stars": 213,
+            "forks": 37,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "xiaobai-kanban",
+            "full_name": "supercli-site/xiaobai-kanban",
+            "url": "https://github.com/supercli-site/xiaobai-kanban",
+            "description": "\u4e2d\u6587 AI \u7f16\u7a0b\u52a9\u624b\u5165\u95e8\u6559\u7a0b\uff1a\u8ba4\u8bc6 Agent\u3001\u8868\u8fbe\u9700\u6c42\u3001\u5b89\u88c5 CLI \u4e0e\u5b66\u4e60 Git \u5de5\u4f5c\u6d41\u3002 / Chinese beginner guide to coding agents, CLI setup, and Git workflows.",
+            "stars": 286,
+            "forks": 24,
+            "language": "HTML"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 33,
+            "forks": 5,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 5688,
+            "forks": 355,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "TwinDesk",
+            "full_name": "InukaAsith/TwinDesk",
+            "url": "https://github.com/InukaAsith/TwinDesk",
+            "description": " All your computers and your phone/iPhone, working as one desk. Screens, apps, files, clipboard, calls, texts, notifications, mouse and keyboard, shared between Mac, Windows, Linux , Android, Web and ios / ipados . Free and open source. No account, no cloud, and no shared network needed.",
+            "stars": 3920,
+            "forks": 304,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 1288,
+            "forks": 107,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1151,
+            "forks": 92,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "WinShun",
+            "full_name": "LingCore/WinShun",
+            "url": "https://github.com/LingCore/WinShun",
+            "description": "Win\u987a\uff1a\u514d\u8d39\u5f00\u6e90\u7684 Windows \u5feb\u901f\u641c\u7d22\u542f\u52a8\u5668\u3002\u53cc\u51fb Ctrl\uff0c\u62fc\u97f3\u79d2\u641c\u6587\u4ef6\u3001\u5168\u6587\u641c\u7d22 Word/Excel/PDF\u3001\u526a\u8d34\u677f\u5386\u53f2\uff08\u4ee3\u66ff Win+V\uff09\u3001\u5bf9\u8bdd\u6846\u641c\u7d22\u3001\u4efb\u52a1\u680f\u641c\u7d22\u3001\u63d2\u4ef6\u3001AI \u52a9\u624b MCP\u3002Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative.",
+            "stars": 973,
+            "forks": 65,
+            "language": "C++"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 145888,
+            "forks": 13968,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95824,
+            "forks": 9595,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 95515,
+            "forks": 6525,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 93199,
+            "forks": 12451,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "rtk",
+            "full_name": "rtk-ai/rtk",
+            "url": "https://github.com/rtk-ai/rtk",
+            "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+            "stars": 86188,
+            "forks": 5518,
+            "language": "Rust"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Protecting SSH Keys with macOS Secure Enclave",
+            "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
+            "description": "Hacker News top story (Score: 221): Protecting SSH Keys with macOS Secure Enclave"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Plane lifted into back garden as bunker takes shape",
+            "url": "https://www.bbc.co.uk/news/articles/cqkgjv4pj023o",
+            "description": "Hacker News top story (Score: 31): Plane lifted into back garden as bunker takes shape"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Smart home devices should work without the internet",
+            "url": "https://docodethatmatters.com/home-automation-overnight-success/",
+            "description": "Hacker News top story (Score: 985): Smart home devices should work without the internet"
+          },
+          {
+            "source": "Hacker News",
+            "title": ".name Grandfathered",
+            "url": "https://neil.fraser.name/news/2026/11/10/",
+            "description": "Hacker News top story (Score: 859): .name Grandfathered"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Scion is back and is going to sell a kei truck in America",
+            "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+            "description": "Hacker News top story (Score: 484): Scion is back and is going to sell a kei truck in America"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Greg Kurtzer's Ginux is now a userspace kernel",
+            "url": "https://github.com/gmkurtzer/ginux",
+            "description": "Hacker News top story (Score: 77): Greg Kurtzer's Ginux is now a userspace kernel"
+          },
+          {
+            "source": "Hacker News",
+            "title": "A great old-timey game-programming hack (2013)",
+            "url": "https://blog.moertel.com/posts/2013-12-14-great-old-timey-game-programming-hack.html",
+            "description": "Hacker News top story (Score: 184): A great old-timey game-programming hack (2013)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Apple has new Mac app coming to make running local AI models easy",
+            "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+            "description": "Hacker News top story (Score: 280): Apple has new Mac app coming to make running local AI models easy"
+          },
+          {
+            "source": "Hacker News",
+            "title": "To deter bioterrorism, U.S. imposes new rules on ordering synthetic DNA",
+            "url": "https://www.science.org/content/article/deter-bioterrorism-u-s-imposes-new-rules-ordering-synthetic-dna",
+            "description": "Hacker News top story (Score: 109): To deter bioterrorism, U.S. imposes new rules on ordering synthetic DNA"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Six Math Essentials",
+            "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
+            "description": "Hacker News top story (Score: 260): Six Math Essentials"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Synaptics patent claims stop work on DisplayLink drivers",
+            "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+            "description": "Hacker News top story (Score: 416): Synaptics patent claims stop work on DisplayLink drivers"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Starlink Mini 2",
+            "url": "https://starlink.com/mini-2",
+            "description": "Hacker News top story (Score: 430): Starlink Mini 2"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AlphaProof Code",
+            "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+            "description": "Hacker News top story (Score: 643): AlphaProof Code"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Why Amstrad chose the 3\" drives",
+            "url": "https://www.cpcwiki.eu/forum/amstrad-cpc-hardware/why-amstrad-chose-the-3-drives/",
+            "description": "Hacker News top story (Score: 52): Why Amstrad chose the 3\" drives"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Why I wrote the BEAM book (2025)",
+            "url": "https://happihacking.com/blog/posts/2025/why_I_wrote_theBEAMBook/",
+            "description": "Hacker News top story (Score: 104): Why I wrote the BEAM book (2025)"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Pre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY",
+            "url": "https://dev.to/feesaver/pre-flight-checks-for-usdt-trc-20-transfers-on-tron-estimating-energy-and-avoiding-outofenergy-3f1g",
+            "description": "If you've built USDT payouts on TRON, you've probably hit one of two surprises. A transfer fails with OUT_OF_ENERGY even though the wallet \"had TRX\". Or a transfer goes through but burns twice as much TRX as the one before it.\n\nBoth come from the same place: how TRON budgets resources for a contract"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS",
+            "url": "https://dev.to/tedy_yomi/vertical-japanese-broke-my-ocr-how-i-group-manga-text-into-speech-bubbles-on-ios-2h9f",
+            "description": "Point a general camera translator at a page of raw manga and you get one of two results. A single paragraph of English in an order that makes no sense, or one tiny box per column of text, each translated on its own, so nothing reads like a sentence.\n\nI build Yomi, an iOS app for reading manga that o"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Nod Reports Zero False Memories in 216 WhisperBench Tests for Agent Actions",
+            "url": "https://dev.to/alifar/nod-reports-zero-false-memories-in-216-whisperbench-tests-for-agent-actions-i75",
+            "description": "Nod says its agent checks proposed actions against a user's requests and rules, and asks for input when those instructions do not cover an action. The company also reported that none of 216 WhisperBench attempts in its October tests planted a false memory. For businesses evaluating automation that c"
+          },
+          {
+            "source": "Dev.to",
+            "title": "osFoundry, Claude \u0938\u0947 exact Slides tab \u0915\u093e \u0928\u093e\u092e \u0914\u0930 \u0939\u0930 citation \u092a\u0930 key \u0915\u094d\u092f\u094b\u0902 \u092e\u093e\u0901\u0917\u0924\u093e \u0939\u0948?",
+            "url": "https://dev.to/bbt-hi/osfoundry-claude-se-exact-slides-tab-kaa-naam-aur-hr-citation-pr-key-kyon-maangtaa-hai-49df",
+            "description": "\u092f\u0939 \u0935\u0939 create call \u0939\u0948 \u091c\u094b osFoundry Notes \u0915\u0947 \u0932\u093f\u090f Claude connection \u0915\u094b \u092e\u093f\u0932\u0924\u0940 \u0939\u0948\u0964 \u0907\u0938\u0947 2026-11-09 \u0915\u094b public MCP endpoint \u092a\u0930 \u092c\u093f\u0928\u093e authentication \u0915\u0947 tools/list \u091a\u0932\u093e\u0915\u0930 \u0932\u093f\u092f\u093e \u0917\u092f\u093e \u0939\u0948, \u0925\u094b\u0921\u093c\u093e \u091b\u094b\u091f\u093e \u0915\u0930\u0915\u0947:\n\n\n\n{\"name\": \"create_note_tab\",\n \"description\": \"Create a new Slides or Sheet tab in an approved Note. Use the v"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Apache Data Lakehouse Weekly: November 3 to 11, 2026",
+            "url": "https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-november-3-to-11-2026-3e8d",
+            "description": "This week the open lakehouse projects spent their energy on two kinds of plumbing. The first kind is data types. Parquet passed a new vector type, Arrow voted on a matching FILE extension type, and Iceberg contributors asked how those types should be signed, authorized, and queried. The second kind "
+          },
+          {
+            "source": "Dev.to",
+            "title": "Context Guardian: helping coding agents understand the impact of a change",
+            "url": "https://dev.to/careolimited/context-guardian-helping-coding-agents-understand-the-impact-of-a-change-192c",
+            "description": "A coding agent updates a shared module and completes the task. The edit looks reasonable, but another feature depends on that module. Does that feature need checking too?\n\nWe built Context Guardian to make those connections easier to identify during agent-assisted development.\n\nIt combines a command"
+          },
+          {
+            "source": "Dev.to",
+            "title": "I was tired of bloated dependencies for everyday tasks, so I built 15 zero-dependency Python tools",
+            "url": "https://dev.to/cloudhao237/i-was-tired-of-bloated-dependencies-for-everyday-tasks-so-i-built-15-zero-dependency-python-tools-5cp",
+            "description": "How many times have you created a virtual environment and installed 500MB of pandas, openpyxl, and heavy dependencies just to merge three CSV files or rename a batch of invoices?\n\nFor enterprise environments, locked-down corporate laptops, or minimal Docker containers, installing third-party package"
+          },
+          {
+            "source": "Dev.to",
+            "title": "I almost shipped an auto-renew checkbox that broke ROSCA",
+            "url": "https://dev.to/lixingliangsy/i-almost-shipped-an-auto-renew-checkbox-that-broke-rosca-fgm",
+            "description": "We were about to launch a yearly plan with auto-renew. I wrote the checkout copy, the cancellation page, and the confirmation email, then sent it to legal. They came back with a list of problems that should have been obvious and weren't \u2014 and every one traced back to a ROSCA expectation I'd never in"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Agentic Coding with Codex & AI Coding Agents",
+            "url": "https://www.freecodecamp.org/news/learn-agentic-coding-with-codex-ai-coding-agents/",
+            "description": "AI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructi"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "What Happens When You Upload a Large File & Generate a Temporary Download Link",
+            "url": "https://www.freecodecamp.org/news/how-file-transfer-services-work/",
+            "description": "Sending a 5 GB video file might seem simple. You select the file, click Upload, wait for the progress bar to finish, and share a link with someone. But there are several things happening in the backgr"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a PDF Storyboard Generator Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-storyboard-generator-javascript/",
+            "description": "PDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when so"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Godot 4 Roguelike Course \u2013 Build a Complete Top-Down Action Game",
+            "url": "https://www.freecodecamp.org/news/godot-4-roguelike-course-build-a-complete-top-down-action-game/",
+            "description": "A top-down action roguelite only works when combat feels sharp, rooms feel connected, and every run asks you to trade power for risk. Godot 4 has the tools for that, but most tutorials stop before tho"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Use shadcn/ui in React Native Applications [Full Handbook]",
+            "url": "https://www.freecodecamp.org/news/how-to-use-shadcn-ui-in-react-native-applications-full-handbook/",
+            "description": "If you've built a couple of React Native apps, the following probably feels familiar. You start with a colors.ts file and a simple Button component. Everything looks fine at first. Then the design cha"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "What a CAPTCHA Farm Attack Actually Looks Like",
+            "url": "https://www.freecodecamp.org/news/captcha-farm-attack/",
+            "description": "CAPTCHAs are something most of us have come across while browsing the internet. Sometimes we're asked to identify traffic lights in pictures, solve a small puzzle, or simply tick a box to confirm we'r"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Introducing Socrates and the New freeCodeCamp Forum",
+            "url": "https://www.freecodecamp.org/news/introducing-socrates-and-the-new-freecodecamp-forum/",
+            "description": "freeCodeCamp just turned 12 years old. And so did our beloved forum. And today I'm thrilled to say that the forum is now focused on discussions rather than Q&A. This is thanks to Socrates, a new tool"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Find and Fix Common Technical SEO Issues on Your Website",
+            "url": "https://www.freecodecamp.org/news/fix-common-technical-seo-issues/",
+            "description": "Let's say you've built a website. You've invested in the design, bought a domain, and so on. But a website isn't only what you see on the screen. A lot happens behind the scenes. You have to understan"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "nizima ACTION!!",
+            "url": "https://www.producthunt.com/products/nizima-action-by-live2d",
+            "description": "Powerful editing, expressive characters, zero installs.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Seedream 5.5 by ByteDance",
+            "url": "https://www.producthunt.com/products/seedream-4-0",
+            "description": "ByteDance's AI image model built for 100-round editing\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "bonds chat",
+            "url": "https://www.producthunt.com/products/bonds-2",
+            "description": "Multiplayer AI that dies if you and your friends flake\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Scribe v3 by ElevenLabs",
+            "url": "https://www.producthunt.com/products/elevenlabs",
+            "description": "Speech to text with 27% fewer errors in 90+ languages\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Valin",
+            "url": "https://www.producthunt.com/products/valin",
+            "description": "Your private memory for everything you save.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "RigSpark",
+            "url": "https://www.producthunt.com/products/rigspark",
+            "description": "Know which AI to run on your own computer\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Skillbox",
+            "url": "https://www.producthunt.com/products/skillbox-5",
+            "description": "One library for your AI skills, synced to every agent\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Muse Ember by Meta",
+            "url": "https://www.producthunt.com/products/meta-ai",
+            "description": "Meta's low-cost AI model for high-volume agent tasks\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "ScroogeFrog AI",
+            "url": "https://www.producthunt.com/products/scroogefrog-ai-antifraud",
+            "description": "AI ad fraud detection that protects your marketing budget \n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Mister Blocks",
+            "url": "https://www.producthunt.com/products/mister-blocks",
+            "description": "Take a picture of your LEGO and AI will make a build\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1xl1aup/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "What does in-office work look like these days?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xt9jkm/what_does_inoffice_work_look_like_these_days/",
+            "description": "I was fortunate to have a remote job the last six years, but I got laid off. Now I have a second interview at a company that only does on site. My memory of the last time I worked in office was one of boredom. I&#39;d finish what work I could do and either wait for new work to come in, assets to be "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "It's only Monday: first meeting was with a client who made their own CRM with AI and needs to change our workflow to work with that, second meeting was with a client who signed a $3,000/mth contract with a GEO company and we need to change the site to work with their recommendations",
+            "url": "https://www.reddit.com/r/webdev/comments/1xss9i4/its_only_monday_first_meeting_was_with_a_client/",
+            "description": "I&#39;m tired boss! It&#39;s been almost a year of AI AI AI, every single day of my life. Any else relating hard? Also, I can&#39;t believe they signed a $3k/mth contract when I had to push SO HARD to get them to do $150/mth SEM Rush in the past lol  &#32; submitted by &#32;  /u/CharlieandtheRed   ["
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Vanilla CSS component library?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xt180b/vanilla_css_component_library/",
+            "description": "Anyone got a recommendation for a polished component library that only uses plain CSS? I&#39;m trying to avoid npm/build steps entirely, so shadcn is out, and Tailwind-dependent stuff like DaisyUI isn&#39;t an option either. Seriously looking for pure CSS solutions here.  &#32; submitted by &#32;  /"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "(Print) Designer Clashing with Developer - Need Advice",
+            "url": "https://www.reddit.com/r/webdev/comments/1xsaq4d/print_designer_clashing_with_developer_need_advice/",
+            "description": "Hi everyone, I work as the director of communications for a small company. We have one designer on staff who has worked at the company for a decade, and one full-stack developer who has been at the company for about a year and a half.  Now, the problem: The designer is trained strictly in print desi"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.47",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.47",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.47. Details: ### Core Changes\n\n- fix(next/image): detect distortion using intrinsic proportions: #101349\n- Write CPU profiles for next build static workers: #100614\n\n### Misc Changes\n\n- turbo-tasks-backend: process aggregation edge removals after additions and balancing: #100892\n- turbo-tasks-backend: track earl..."
+          },
+          {
+            "source": "GitHub Release",
+            "title": "fastapi/fastapi Release: 0.162.4",
+            "url": "https://github.com/fastapi/fastapi/releases/tag/0.162.4",
+            "description": "New release for fastapi/fastapi. Tag: 0.162.4. Details: > FastAPI includes an official skill that helps coding agents use new features and recommended patterns for your installed version. Install it with `uvx library-skills` in your project. See [Develop with AI](https://fastapi.tiangolo.com/ai-development/).\n\n### Fixes\n\n* \ud83d\udc1b Require AnyIO 4.1.0 or newer ..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 33,
+            "forks": 5,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1151,
+            "forks": 92,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 95515,
+            "forks": 6525,
+            "language": "JavaScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Protecting SSH Keys with macOS Secure Enclave",
+            "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
+            "description": "Hacker News top story (Score: 221): Protecting SSH Keys with macOS Secure Enclave"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Apple has new Mac app coming to make running local AI models easy",
+            "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+            "description": "Hacker News top story (Score: 280): Apple has new Mac app coming to make running local AI models easy"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AlphaProof Code",
+            "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+            "description": "Hacker News top story (Score: 643): AlphaProof Code"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Why I wrote the BEAM book (2025)",
+            "url": "https://happihacking.com/blog/posts/2025/why_I_wrote_theBEAMBook/",
+            "description": "Hacker News top story (Score: 104): Why I wrote the BEAM book (2025)"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Pre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY",
+            "url": "https://dev.to/feesaver/pre-flight-checks-for-usdt-trc-20-transfers-on-tron-estimating-energy-and-avoiding-outofenergy-3f1g",
+            "description": "If you've built USDT payouts on TRON, you've probably hit one of two surprises. A transfer fails with OUT_OF_ENERGY even though the wallet \"had TRX\". Or a transfer goes through but burns twice as much TRX as the one before it.\n\nBoth come from the same place: how TRON budgets resources for a contract"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS",
+            "url": "https://dev.to/tedy_yomi/vertical-japanese-broke-my-ocr-how-i-group-manga-text-into-speech-bubbles-on-ios-2h9f",
+            "description": "Point a general camera translator at a page of raw manga and you get one of two results. A single paragraph of English in an order that makes no sense, or one tiny box per column of text, each translated on its own, so nothing reads like a sentence.\n\nI build Yomi, an iOS app for reading manga that o"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Context Guardian: helping coding agents understand the impact of a change",
+            "url": "https://dev.to/careolimited/context-guardian-helping-coding-agents-understand-the-impact-of-a-change-192c",
+            "description": "A coding agent updates a shared module and completes the task. The edit looks reasonable, but another feature depends on that module. Does that feature need checking too?\n\nWe built Context Guardian to make those connections easier to identify during agent-assisted development.\n\nIt combines a command"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 33,
+            "forks": 5,
+            "language": "TypeScript",
+            "detailed_content": "<p align=\"center\">\n  <a href=\"https://gsocorganizations.xyz\">\n    <img src=\"./public/brand/gsoc-organizations-logo-256.png\" width=\"112\" alt=\"GSoC Organizations logo\">\n  </a>\n</p>\n\n<h1 align=\"center\">GSoC Organizations</h1>\n\n<p align=\"center\">\n  Discover past Google Summer of Code organizations, explore their projects, and learn open source by contributing to a real repository.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://gsocorganizations.xyz\"><strong>Explore the directory</strong></a>\n  \u00b7\n  <a href=\"./docs/first-pull-request.md\"><strong>Make your first PR</strong></a>\n  \u00b7\n  <a href=\"https://github.com/rohanmalhotracodes/GSoC-Organizations/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+no%3Aassignee\">Good first issues</a>\n</p>\n\n![GSoC Organizations directory](./docs/images/directory.jpg)\n\n## New to open source? Make your first real pull request\n\nOne of the hardest parts of starting open source is figuring out **where to begin and what to do**. This repository offers focused, beginner-friendly tasks that improve the GSoC directory while helping you learn a real GitHub contribution workflow.\n\n1. [Read the step-by-step first-PR walkthrough](./docs/first-pull-request.md) \u2014 fork, branch, verify a source, make a change, run checks, and open a PR.\n2. [Pick an unassigned good first issue](https://github.com/rohanmalhotracodes/GSoC-Organizations/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+no%3Aassignee) \u2014 or explore the [repository-link contribution drive](https://github.com/rohanmalhotracodes/GSoC-Organizations/issues/382).\n3. Comment `/claim` on your chosen issue **before starting** and wait for the bot to confirm. Follow the [contributing guide](./CONTRIBUTING.md) and [CLA instructions](./CLA.md).\n\nYou don't need prior GSoC experience. You will p",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1151,
+            "forks": 92,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/kanzo-dark.jpg\">\n    <img alt=\"kanzo: a tiny kanban board for you and your coding agents\" src=\"docs/img/kanzo-light.jpg\">\n  </picture>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml\"><img src=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml/badge.svg\" alt=\"CI\"></a>\n  <a href=\"https://crates.io/crates/kanzo\"><img src=\"https://img.shields.io/crates/v/kanzo\" alt=\"crates.io\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue\" alt=\"AGPL-3.0\"></a>\n</p>\n\n<p align=\"center\">\n  English | <a href=\"README.zh.md\">\u7b80\u4f53\u4e2d\u6587</a>\n</p>\n\nKanzo is a kanban board in your browser and an MCP server in one 4.7 MB program, so you and your coding agents work on the same tasks: on one computer, or on one board shared by all of them. No account, no server, no setup: run `kanzo` and it works.\n\nYou never edit a file. Everything is done in one of three places:\n\n- **the board**, in your browser, for you;\n- **MCP**, for your agents: they take tasks, move cards and comment;\n- **the `kanzo` command**, for the terminal and scripts.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/board-dark.gif\">\n  <img alt=\"The Kanzo board: agents move cards while you watch, \u2318K finds a task in any project, a task is made to wait on another, two selected tasks are dragged together, a list groups the tasks by status, the sidebar folds, Laptop A shares the board and Laptop B joins it\" src=\"docs/img/board-light.gif\">\n</picture>\n\n## Install\n\n> [!TIP]\n> **Just ask your agent:** *\"install Kanzo from github.com/emanuele-em/kanzo.\"*\n\n```sh\ncurl -LsSf https://github.com/emanuele-em/kanzo/releases/latest/download/ka",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 95515,
+            "forks": 6525,
+            "language": "JavaScript",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/archify-lockup-dark.svg\" />\n    <img src=\"docs/assets/archify-lockup-light.svg\" alt=\"Archify\" width=\"440\" height=\"121\" />\n  </picture>\n</p>\n<h3 align=\"center\">Turn anything you want to understand, plan, or share into an interactive visual.</h3>\n\n<p align=\"center\"><img src=\"docs/assets/archify-readme-hero.png\" alt=\"Archify \u2014 interactive diagrams\" width=\"960\" /></p>\n\n<p align=\"center\"><strong>Official channels\uff1a</strong> <a href=\"https://archify.si\">archify.si</a> \u00b7 <a href=\"https://github.com/tt-a1i/archify\">GitHub</a><br/>Archify is free and open source. Third-party online services and paid plans are operated by their respective providers and do not represent Archify. <a href=\"#official-services\">Service details \u2192</a></p>\n\n<p align=\"center\">Start with an idea, a question, or a plan. Describe it to your AI agent, and Archify turns it into an interactive HTML you can explore, customize, and share. From travel itineraries and learning maps to complex systems\u2014make it your own.</p>\n\n<p align=\"center\">See what the community is creating\u2014and imagine what you could make next.</p>\n\n<p align=\"center\">\n  <a href=\"https://archify.si/gallery.html\"><strong>Live demos</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#start\"><strong>Get started</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"https://archify.si/guide.html\"><strong>Scenario guide</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#community\"><strong>Community</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_ZH.md\"><strong>\u7b80\u4f53\u4e2d\u6587</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_JA.md\"><strong>\u65e5\u672c\u8a9e</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_KO.md\"><strong>\ud55c\uad6d\uc5b4</strong></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/31352?utm_source=repo",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Protecting SSH Keys with macOS Secure Enclave",
+            "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
+            "description": "Hacker News top story (Score: 221): Protecting SSH Keys with macOS Secure Enclave",
+            "detailed_content": "Protecting SSH Keys with macOS Secure Enclave (Native Approach) | Serge Gatezh Skip to main content $\nSerge Gatezh\nPosts\nProjects\nTalks\nAbout\nContact\n> Posts\n> Projects\n> Talks\n> About\n> Contact\n~/posts/macos-secure-enclave-ssh-keys\ncat macos-secure-enclave-ssh-keys.md Protecting SSH Keys with macOS Secure Enclave (Native Approach) February 12, 2026\nby\nSerge Gatezh\n7 min read\n1442 words How to keep SSH keys in the macOS Secure Enclave, with Touch ID on every use and no third-party apps. I\u2019ve been paranoid about my SSH keys for a while now. They just sit there in\n~/.ssh/ , protected by nothing but file permissions. Any malicious script that gets access to my filesystem could just copy them and get into all my servers.\nAlso, there have been many stories out there online about fake interview assignments that asked to clone a repo and run it on your local machine.\nThis is one of the reasons I switched completely to using devcontainers, but even that was not really enough for me (and it shouldn\u2019t be enough for you or anybody else really). So I finally decided to do something about it. TL;DR I have decided to\nNOT\ngo with the native macOS Secure Enclave approach (using only out-of-the-box tools) because it ended up plain ugly and I can\u2019t live with that. However, it is a fully functional, working solution that I would definitely use otherwise. The Options After some research, I found several ways to protect SSH keys: Native macOS Secure Enclave\n\u2014 no third-party apps, built into the OS Secretive\n\u2014 third-party app that stores keys in Secure Enclave YubiKey\n\u2014 hardware security key with FIDO2 support 1Password / Bitwarden\n\u2014 store keys in an encrypted vault, use their SSH agent I already use 1Password, but I might switch to something else in the future. Bitwarden recently added SSH ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Apple has new Mac app coming to make running local AI models easy",
+            "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+            "description": "Hacker News top story (Score: 280): Apple has new Mac app coming to make running local AI models easy",
+            "detailed_content": "Apple has new Mac app coming to make running local AI models easy - 9to5Mac\nSkip to main content\nToggle main menu\nGo to the 9to5Mac home page\nSwitch site\n9to5Toys\n9to5Google\nElectrek\nDroneDJ\nSpace Explored\nAbout\nPrivacy\nToggle social menu\nToggle dark mode\nSearch for:\nSubmit\nToggle search form\nForums\nStore\nPodcasts\nApple@Work\nHappy Hour\n9to5Mac Daily\nOvertime\niPhone\niPhone\nMac\nMac\nMacBook Pro\nMacBook Air\niMac\nMac mini\nMac Studio\nMac Pro\niPad\niPad Pro\niPad Air\niPad mini\niPad\niPadOS\nWatch\nApple Watch\nApple Watch Ultra\nApple Health\nApple Watch SE\nVision\nVision Pro\nvisionOS\nMusic and TV\nApple Music\nAirPods\nHomePod\nApple TV\nGuides\nReviews\nHow Tos\nAAPL\nApple Store\nApple Arcade\nApple Card\nApple Silicon\nApple One\nApple Fitness+\nCarPlay\nSiri\nHomeKit\nToggle dark mode\nAI\nApple has new Mac app coming to make running local AI models easy\nRyan Christoffel \u00a0|\u00a0Nov 10 2026 - 11:15 am PT\n0 Comments\nLeaker Aaron Perris has\ndiscovered evidence\nof a new Mac app in the works at Apple called Harbor, which makes it easy to run local AI models across one or more Macs.\nNew \u2018Harbor\u2019 app revealed at Apple: \u2018turns your Mac into a private AI inference server\u2019\nThe Mac has been getting a lot more popular this year, both because of budget-friendly options like MacBook Neo but also as a tool for running AI models locally on Mac Studio, Mac mini, and more.\nIt seems Apple plans to lean harder into the latter use case, as leaker Aaron Perris has discovered a new Mac app called Harbor that\u2019s been designed to turn your Mac into a private AI inference server.\nHere\u2019s\nPerris\u2019s post on X\nwith the details:\nApple is working on a new app called Harbor Harbor turns your Mac into a private AI inference server. Run open-weight models locally on Apple silicon\u2014your data never leaves your hardware, and nothing reaches the",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AlphaProof Code",
+            "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+            "description": "Hacker News top story (Score: 643): AlphaProof Code",
+            "detailed_content": "Formal Verification of Signal\u2019s Protocol with Gemini \u2014 Google DeepMind Skip to main content\nExplore our next generation AI systems\nExplore models\nGemini\nGemini Build intelligent agents\nGemini Omni Create anything from anything\nNano Banana Create and edit detailed images\nGemini Audio Talk, create and control audio\nSpecialized models\nVeo Generate cinematic video with audio\nLyria Generate high fidelity music and audio\nGenie Generate and explore interactive worlds\nGemini Robotics Perceive, reason, use tools and interact\nOpen models\nGemma Build responsible AI applications at scale\nOur latest AI breakthroughs and updates from the lab\nExplore research\nBreakthroughs\nSIMA An agent that plays, reasons, and learns with you\nGenie Generate and explore interactive worlds\nAlphaGo Mastering the game of Go\nGemini Robotics Perceive, reason, use tools and interact\nLearn more\nEvals\nPublications\nResponsibility\nFrontier safety\nUnlocking a new era of discovery with AI\nExplore science\nBreakthroughs\nAlphaFold Predict protein structures with high accuracy\nAlphaGenome Using AI to understand the human genome\nWeatherNext Fast and accurate AI weather forecasting\nAlphaEarth Map our planet in unprecedented detail\nAlphaEvolve Design advanced algorithms for math and applications in computing\nLearn more\nGemini for Science\nExperimental Tools\nScience on Antigravity\nOur mission is to build AI responsibly to benefit humanity\nAbout Google DeepMind\nResponsibility Ensuring AI safety through proactive security, even against evolving threats\nNews Discover our latest AI breakthroughs, projects, and updates\nCareers We\u2019re looking for people who want to make a real, positive impact on the world\nLearn more\nEducation\nOur National Partnerships for AI\nAccelerator programs\nThe Podcast\nDeepMind Institute\nModels\nExplore our",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Why I wrote the BEAM book (2025)",
+            "url": "https://happihacking.com/blog/posts/2025/why_I_wrote_theBEAMBook/",
+            "description": "Hacker News top story (Score: 104): Why I wrote the BEAM book (2025)",
+            "detailed_content": "Why I Wrote the BEAM Book\nSkip to content\nTheme\n\u25d0\nColumn Width\n70rem\nContent Font Size\n100%\nRetro CRT\nNewspaper\nContact Erik\nBLOG\nBlog Overview\nSuggest a Topic\nTHE BEAM BOOK\nCOURSES\nSYSTEMS WORK\nSystems Work Overview\nOperate in Practice\nWORK WITH ERIK\nWork With Erik Overview\nTechnical Advisory\nArchitecture Review\nArchitecture Sprint\nAI-Assisted Engineering\nIntentOS Pilot\nABOUT\nAbout Overview\nTalks\nNow\nEndorsements\nPrivacy\nContact\nBlog\nBlog Overview\nSuggest a Topic\nThe BEAM Book\nCourses\nSystems Work\nSystems Work Overview\nOperate in Practice\nWork With Erik\nWork With Erik Overview\nTechnical Advisory\nArchitecture Review\nArchitecture Sprint\nAI-Assisted Engineering\nIntentOS Pilot\nAbout\nAbout Overview\nTalks\nNow\nEndorsements\nPrivacy\nContact\nContact Erik\nSearch\nReader\nSign in\nTheme\n\u25d0\nContent Font Size\n100%\nRetro CRT\nNewspaper\nHacker's Handbook\nKeywords\nbeam\nbook\nreal\nrepo\nsystem\natlas\nerlang\nprocess\ncode\nyears\nfile\nlines\nrewrites\nfiles\nprogress\ngithub\npublic\nissue\nmatter\nhelps\nWhy I Wrote the BEAM Book\nPost-mortems, coffee, and a decade of stubborn curiosity\n3 June 2025 \u00b7 Development \u00b7 Erlang \u00b7 BEAM \u00b7 Thebeambook \u00b7 Writing\nStay in the loop: occasional updates on BEAM and fintech engineering.\nSubscribe below\nContents\nWhy I wrote the Beam Book\nOrigins\nWhat Kept Me Going\nWhat\u2019s Inside the Book & Who It Helps\nLessons Learned\nDefinition of Done\nGet Involved\nWhy I wrote the Beam Book\nAfter ten years of keeping Klarna\u2019s core system upright I know this: a 15\nmillisecond pause in the BEAM can stall millions of peak-shopping payments, trigger a 3 a.m. Christmas-Eve post-mortem, and earn you a very awake call from the CEO. I wrote\nThe BEAM Book\nso the next engineer fixes that pause before the coffee cools.\nOrigins\nI opened the project on 12 October 2012 with a lone DocBook file with four l",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Pre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY",
+            "url": "https://dev.to/feesaver/pre-flight-checks-for-usdt-trc-20-transfers-on-tron-estimating-energy-and-avoiding-outofenergy-3f1g",
+            "description": "If you've built USDT payouts on TRON, you've probably hit one of two surprises. A transfer fails with OUT_OF_ENERGY even though the wallet \"had TRX\". Or a transfer goes through but burns twice as much TRX as the one before it.\n\nBoth come from the same place: how TRON budgets resources for a contract",
+            "detailed_content": "Pre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nFeeSaver\nPosted on\nNov 11\n\u2022\nAI-assisted\nPre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY\n# tron\n# blockchain\n# web3\n# javascript\nIf you've built USDT payouts on TRON, you've probably hit one of two surprises. A transfer fails with\nOUT_OF_ENERGY\neven though the wallet \"had TRX\". Or a transfer goes through but burns twice as much TRX as the one before it.\nBoth come from the same place: how TRON budgets resources for a contract call, and a parameter many integrations set once and forget \u2014\nfee_limit .\nThis post walks through what a TRC-20 transfer actually pays for, why a shortage of Energy alone doesn't make a transfer fail, and a small pre-flight routine that checks all of this before you sign.\nHow a USDT transfer pays for itself\nA USDT transfer on TRON is a call to the USDT TRC-20 contract ( TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t ). It consumes two resources.\nBandwidth\npays for the transaction's size in bytes. A typical single-signature USDT transfer is around 345\u2013350 bytes. Bandwidth is all-or-nothing: the sender's staked or delegated Bandwidth must cover the full size; if it can't, the account's free daily quota (currently 600) is tried; if neither covers the whole transaction, TRX is burned for the entire size at the current rate of 1,000 sun per byte.\nEnergy\npays for contract execution. There is no free quota. Energy from staking or d",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS",
+            "url": "https://dev.to/tedy_yomi/vertical-japanese-broke-my-ocr-how-i-group-manga-text-into-speech-bubbles-on-ios-2h9f",
+            "description": "Point a general camera translator at a page of raw manga and you get one of two results. A single paragraph of English in an order that makes no sense, or one tiny box per column of text, each translated on its own, so nothing reads like a sentence.\n\nI build Yomi, an iOS app for reading manga that o",
+            "detailed_content": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nTedy Mezaguer\nPosted on\nNov 11\nVertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS\n# ios\n# swift\n# computervision\n# showdev\nPoint a general camera translator at a page of raw manga and you get one of two results. A single paragraph of English in an order that makes no sense, or one tiny box per column of text, each translated on its own, so nothing reads like a sentence.\nI build Yomi, an iOS app for reading manga that only exists in Japanese, and most of the work turned out not to be translation at all. It was geometry: deciding which pieces of text belong to the same speech bubble, in what order to read them, and where to put the English afterwards. This post is about that part.\nWhy manga pages are hard for OCR\nThree things a sign or a menu never does to you:\nVertical text.\nJapanese bubbles are usually written in columns, top to bottom, and the columns read right to left. OCR engines tend to return each column as its own line.\nMany separate blocks.\nA page has eight to fifteen bubbles. A translator that treats the page as one block of text merges dialogue from different characters.\nSmall text at page scale.\nA whole page photographed by a phone leaves each glyph a few pixels wide. Recognition quality collapses on small bubbles and sound effects.\nStep 1: three OCR passes, because none of them is right alone\nOn a page I run three passes concurrently:\nasync\nlet\ncloudPass\n=\noc",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Context Guardian: helping coding agents understand the impact of a change",
+            "url": "https://dev.to/careolimited/context-guardian-helping-coding-agents-understand-the-impact-of-a-change-192c",
+            "description": "A coding agent updates a shared module and completes the task. The edit looks reasonable, but another feature depends on that module. Does that feature need checking too?\n\nWe built Context Guardian to make those connections easier to identify during agent-assisted development.\n\nIt combines a command",
+            "detailed_content": "Context Guardian: helping coding agents understand the impact of a change - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nCareo Limited\nPosted on\nNov 11\nContext Guardian: helping coding agents understand the impact of a change\n# opensource\n# showdev\n# ai\nA coding agent updates a shared module and completes the task. The edit looks reasonable, but another feature depends on that module. Does that feature need checking too?\nWe built Context Guardian to make those connections easier to identify during agent-assisted development.\nIt combines a command-line tool with an agent skill to connect code changes with feature documentation, project rules and validation commands.\nFrom a file change to affected features\nConsider a checkout module that is also imported by a profile screen. A change to that module can require attention in both places.\nContext Guardian builds a map of the code and uses it alongside project configuration to select the relevant features. Its report points the agent to their notes and configured checks.\nFor mobile projects, it can also flag corresponding iOS and Android files that may need a matching update.\nHow it fits into development\nBefore a task, Context Guardian selects the context relevant to the work. When the task finishes, it compares the changes against the application\u2019s map and reports areas that need attention.\nClaude Code and Gemini CLI use hooks for automatic checks. Codex, Cursor and GitHub Copilot can follow the skill and instructions in\nAGENTS.md .\nThe analysis engine runs locally in Python, with n",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 33,
+            "forks": 5,
+            "language": "TypeScript",
+            "detailed_content": "<p align=\"center\">\n  <a href=\"https://gsocorganizations.xyz\">\n    <img src=\"./public/brand/gsoc-organizations-logo-256.png\" width=\"112\" alt=\"GSoC Organizations logo\">\n  </a>\n</p>\n\n<h1 align=\"center\">GSoC Organizations</h1>\n\n<p align=\"center\">\n  Discover past Google Summer of Code organizations, explore their projects, and learn open source by contributing to a real repository.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://gsocorganizations.xyz\"><strong>Explore the directory</strong></a>\n  \u00b7\n  <a href=\"./docs/first-pull-request.md\"><strong>Make your first PR</strong></a>\n  \u00b7\n  <a href=\"https://github.com/rohanmalhotracodes/GSoC-Organizations/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+no%3Aassignee\">Good first issues</a>\n</p>\n\n![GSoC Organizations directory](./docs/images/directory.jpg)\n\n## New to open source? Make your first real pull request\n\nOne of the hardest parts of starting open source is figuring out **where to begin and what to do**. This repository offers focused, beginner-friendly tasks that improve the GSoC directory while helping you learn a real GitHub contribution workflow.\n\n1. [Read the step-by-step first-PR walkthrough](./docs/first-pull-request.md) \u2014 fork, branch, verify a source, make a change, run checks, and open a PR.\n2. [Pick an unassigned good first issue](https://github.com/rohanmalhotracodes/GSoC-Organizations/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+no%3Aassignee) \u2014 or explore the [repository-link contribution drive](https://github.com/rohanmalhotracodes/GSoC-Organizations/issues/382).\n3. Comment `/claim` on your chosen issue **before starting** and wait for the bot to confirm. Follow the [contributing guide](./CONTRIBUTING.md) and [CLA instructions](./CLA.md).\n\nYou don't need prior GSoC experience. You will p",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Docs describe a directory of past GSoC organizations, matching the claim."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Pre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY",
+            "url": "https://dev.to/feesaver/pre-flight-checks-for-usdt-trc-20-transfers-on-tron-estimating-energy-and-avoiding-outofenergy-3f1g",
+            "description": "If you've built USDT payouts on TRON, you've probably hit one of two surprises. A transfer fails with OUT_OF_ENERGY even though the wallet \"had TRX\". Or a transfer goes through but burns twice as much TRX as the one before it.\n\nBoth come from the same place: how TRON budgets resources for a contract",
+            "detailed_content": "Pre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nFeeSaver\nPosted on\nNov 11\n\u2022\nAI-assisted\nPre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY\n# tron\n# blockchain\n# web3\n# javascript\nIf you've built USDT payouts on TRON, you've probably hit one of two surprises. A transfer fails with\nOUT_OF_ENERGY\neven though the wallet \"had TRX\". Or a transfer goes through but burns twice as much TRX as the one before it.\nBoth come from the same place: how TRON budgets resources for a contract call, and a parameter many integrations set once and forget \u2014\nfee_limit .\nThis post walks through what a TRC-20 transfer actually pays for, why a shortage of Energy alone doesn't make a transfer fail, and a small pre-flight routine that checks all of this before you sign.\nHow a USDT transfer pays for itself\nA USDT transfer on TRON is a call to the USDT TRC-20 contract ( TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t ). It consumes two resources.\nBandwidth\npays for the transaction's size in bytes. A typical single-signature USDT transfer is around 345\u2013350 bytes. Bandwidth is all-or-nothing: the sender's staked or delegated Bandwidth must cover the full size; if it can't, the account's free daily quota (currently 600) is tried; if neither covers the whole transaction, TRX is burned for the entire size at the current rate of 1,000 sun per byte.\nEnergy\npays for contract execution. There is no free quota. Energy from staking or d",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Opening statement matches the reference text exactly."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS",
+            "url": "https://dev.to/tedy_yomi/vertical-japanese-broke-my-ocr-how-i-group-manga-text-into-speech-bubbles-on-ios-2h9f",
+            "description": "Point a general camera translator at a page of raw manga and you get one of two results. A single paragraph of English in an order that makes no sense, or one tiny box per column of text, each translated on its own, so nothing reads like a sentence.\n\nI build Yomi, an iOS app for reading manga that o",
+            "detailed_content": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nTedy Mezaguer\nPosted on\nNov 11\nVertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS\n# ios\n# swift\n# computervision\n# showdev\nPoint a general camera translator at a page of raw manga and you get one of two results. A single paragraph of English in an order that makes no sense, or one tiny box per column of text, each translated on its own, so nothing reads like a sentence.\nI build Yomi, an iOS app for reading manga that only exists in Japanese, and most of the work turned out not to be translation at all. It was geometry: deciding which pieces of text belong to the same speech bubble, in what order to read them, and where to put the English afterwards. This post is about that part.\nWhy manga pages are hard for OCR\nThree things a sign or a menu never does to you:\nVertical text.\nJapanese bubbles are usually written in columns, top to bottom, and the columns read right to left. OCR engines tend to return each column as its own line.\nMany separate blocks.\nA page has eight to fifteen bubbles. A translator that treats the page as one block of text merges dialogue from different characters.\nSmall text at page scale.\nA whole page photographed by a phone leaves each glyph a few pixels wide. Recognition quality collapses on small bubbles and sound effects.\nStep 1: three OCR passes, because none of them is right alone\nOn a page I run three passes concurrently:\nasync\nlet\ncloudPass\n=\noc",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Description aligns with the reference article."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Context Guardian: helping coding agents understand the impact of a change",
+            "url": "https://dev.to/careolimited/context-guardian-helping-coding-agents-understand-the-impact-of-a-change-192c",
+            "description": "A coding agent updates a shared module and completes the task. The edit looks reasonable, but another feature depends on that module. Does that feature need checking too?\n\nWe built Context Guardian to make those connections easier to identify during agent-assisted development.\n\nIt combines a command",
+            "detailed_content": "Context Guardian: helping coding agents understand the impact of a change - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nCareo Limited\nPosted on\nNov 11\nContext Guardian: helping coding agents understand the impact of a change\n# opensource\n# showdev\n# ai\nA coding agent updates a shared module and completes the task. The edit looks reasonable, but another feature depends on that module. Does that feature need checking too?\nWe built Context Guardian to make those connections easier to identify during agent-assisted development.\nIt combines a command-line tool with an agent skill to connect code changes with feature documentation, project rules and validation commands.\nFrom a file change to affected features\nConsider a checkout module that is also imported by a profile screen. A change to that module can require attention in both places.\nContext Guardian builds a map of the code and uses it alongside project configuration to select the relevant features. Its report points the agent to their notes and configured checks.\nFor mobile projects, it can also flag corresponding iOS and Android files that may need a matching update.\nHow it fits into development\nBefore a task, Context Guardian selects the context relevant to the work. When the task finishes, it compares the changes against the application\u2019s map and reports areas that need attention.\nClaude Code and Gemini CLI use hooks for automatic checks. Codex, Cursor and GitHub Copilot can follow the skill and instructions in\nAGENTS.md .\nThe analysis engine runs locally in Python, with n",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claim mirrors the reference documentation."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 33,
+            "forks": 5,
+            "language": "TypeScript",
+            "detailed_content": "<p align=\"center\">\n  <a href=\"https://gsocorganizations.xyz\">\n    <img src=\"./public/brand/gsoc-organizations-logo-256.png\" width=\"112\" alt=\"GSoC Organizations logo\">\n  </a>\n</p>\n\n<h1 align=\"center\">GSoC Organizations</h1>\n\n<p align=\"center\">\n  Discover past Google Summer of Code organizations, explore their projects, and learn open source by contributing to a real repository.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://gsocorganizations.xyz\"><strong>Explore the directory</strong></a>\n  \u00b7\n  <a href=\"./docs/first-pull-request.md\"><strong>Make your first PR</strong></a>\n  \u00b7\n  <a href=\"https://github.com/rohanmalhotracodes/GSoC-Organizations/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+no%3Aassignee\">Good first issues</a>\n</p>\n\n![GSoC Organizations directory](./docs/images/directory.jpg)\n\n## New to open source? Make your first real pull request\n\nOne of the hardest parts of starting open source is figuring out **where to begin and what to do**. This repository offers focused, beginner-friendly tasks that improve the GSoC directory while helping you learn a real GitHub contribution workflow.\n\n1. [Read the step-by-step first-PR walkthrough](./docs/first-pull-request.md) \u2014 fork, branch, verify a source, make a change, run checks, and open a PR.\n2. [Pick an unassigned good first issue](https://github.com/rohanmalhotracodes/GSoC-Organizations/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+no%3Aassignee) \u2014 or explore the [repository-link contribution drive](https://github.com/rohanmalhotracodes/GSoC-Organizations/issues/382).\n3. Comment `/claim` on your chosen issue **before starting** and wait for the bot to confirm. Follow the [contributing guide](./CONTRIBUTING.md) and [CLA instructions](./CLA.md).\n\nYou don't need prior GSoC experience. You will p",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Docs describe a directory of past GSoC organizations, matching the claim.",
+            "why_it_matters": "Provides a curated, searchable directory of past GSoC organizations, making it fast for engineers to discover real\u2011world open\u2011source projects and beginner\u2011friendly contribution opportunities.",
+            "who_cares": "Students, early\u2011career developers, and anyone looking to start contributing to open source through Google Summer of Code.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Pre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY",
+            "url": "https://dev.to/feesaver/pre-flight-checks-for-usdt-trc-20-transfers-on-tron-estimating-energy-and-avoiding-outofenergy-3f1g",
+            "description": "If you've built USDT payouts on TRON, you've probably hit one of two surprises. A transfer fails with OUT_OF_ENERGY even though the wallet \"had TRX\". Or a transfer goes through but burns twice as much TRX as the one before it.\n\nBoth come from the same place: how TRON budgets resources for a contract",
+            "detailed_content": "Pre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nFeeSaver\nPosted on\nNov 11\n\u2022\nAI-assisted\nPre-flight Checks for USDT (TRC-20) Transfers on TRON: Estimating Energy and Avoiding OUT_OF_ENERGY\n# tron\n# blockchain\n# web3\n# javascript\nIf you've built USDT payouts on TRON, you've probably hit one of two surprises. A transfer fails with\nOUT_OF_ENERGY\neven though the wallet \"had TRX\". Or a transfer goes through but burns twice as much TRX as the one before it.\nBoth come from the same place: how TRON budgets resources for a contract call, and a parameter many integrations set once and forget \u2014\nfee_limit .\nThis post walks through what a TRC-20 transfer actually pays for, why a shortage of Energy alone doesn't make a transfer fail, and a small pre-flight routine that checks all of this before you sign.\nHow a USDT transfer pays for itself\nA USDT transfer on TRON is a call to the USDT TRC-20 contract ( TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t ). It consumes two resources.\nBandwidth\npays for the transaction's size in bytes. A typical single-signature USDT transfer is around 345\u2013350 bytes. Bandwidth is all-or-nothing: the sender's staked or delegated Bandwidth must cover the full size; if it can't, the account's free daily quota (currently 600) is tried; if neither covers the whole transaction, TRX is burned for the entire size at the current rate of 1,000 sun per byte.\nEnergy\npays for contract execution. There is no free quota. Energy from staking or d",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Opening statement matches the reference text exactly.",
+            "why_it_matters": "Shows how to reliably estimate TRON Energy and Bandwidth before signing a USDT (TRC\u201120) transfer, preventing costly OUT_OF_ENERGY failures and excess TRX burn.",
+            "who_cares": "Blockchain engineers building wallets, payout services, or dApps on the TRON network, especially those handling high\u2011volume USDT transfers.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS",
+            "url": "https://dev.to/tedy_yomi/vertical-japanese-broke-my-ocr-how-i-group-manga-text-into-speech-bubbles-on-ios-2h9f",
+            "description": "Point a general camera translator at a page of raw manga and you get one of two results. A single paragraph of English in an order that makes no sense, or one tiny box per column of text, each translated on its own, so nothing reads like a sentence.\n\nI build Yomi, an iOS app for reading manga that o",
+            "detailed_content": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nTedy Mezaguer\nPosted on\nNov 11\nVertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS\n# ios\n# swift\n# computervision\n# showdev\nPoint a general camera translator at a page of raw manga and you get one of two results. A single paragraph of English in an order that makes no sense, or one tiny box per column of text, each translated on its own, so nothing reads like a sentence.\nI build Yomi, an iOS app for reading manga that only exists in Japanese, and most of the work turned out not to be translation at all. It was geometry: deciding which pieces of text belong to the same speech bubble, in what order to read them, and where to put the English afterwards. This post is about that part.\nWhy manga pages are hard for OCR\nThree things a sign or a menu never does to you:\nVertical text.\nJapanese bubbles are usually written in columns, top to bottom, and the columns read right to left. OCR engines tend to return each column as its own line.\nMany separate blocks.\nA page has eight to fifteen bubbles. A translator that treats the page as one block of text merges dialogue from different characters.\nSmall text at page scale.\nA whole page photographed by a phone leaves each glyph a few pixels wide. Recognition quality collapses on small bubbles and sound effects.\nStep 1: three OCR passes, because none of them is right alone\nOn a page I run three passes concurrently:\nasync\nlet\ncloudPass\n=\noc",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Description aligns with the reference article.",
+            "why_it_matters": "Describes a practical pipeline for grouping vertical Japanese manga text into speech bubbles on iOS, turning noisy OCR output into readable, correctly ordered translations.",
+            "who_cares": "iOS developers, computer\u2011vision engineers, and product teams creating OCR\u2011based translation or manga\u2011reading apps.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Context Guardian: helping coding agents understand the impact of a change",
+            "url": "https://dev.to/careolimited/context-guardian-helping-coding-agents-understand-the-impact-of-a-change-192c",
+            "description": "A coding agent updates a shared module and completes the task. The edit looks reasonable, but another feature depends on that module. Does that feature need checking too?\n\nWe built Context Guardian to make those connections easier to identify during agent-assisted development.\n\nIt combines a command",
+            "detailed_content": "Context Guardian: helping coding agents understand the impact of a change - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nCareo Limited\nPosted on\nNov 11\nContext Guardian: helping coding agents understand the impact of a change\n# opensource\n# showdev\n# ai\nA coding agent updates a shared module and completes the task. The edit looks reasonable, but another feature depends on that module. Does that feature need checking too?\nWe built Context Guardian to make those connections easier to identify during agent-assisted development.\nIt combines a command-line tool with an agent skill to connect code changes with feature documentation, project rules and validation commands.\nFrom a file change to affected features\nConsider a checkout module that is also imported by a profile screen. A change to that module can require attention in both places.\nContext Guardian builds a map of the code and uses it alongside project configuration to select the relevant features. Its report points the agent to their notes and configured checks.\nFor mobile projects, it can also flag corresponding iOS and Android files that may need a matching update.\nHow it fits into development\nBefore a task, Context Guardian selects the context relevant to the work. When the task finishes, it compares the changes against the application\u2019s map and reports areas that need attention.\nClaude Code and Gemini CLI use hooks for automatic checks. Codex, Cursor and GitHub Copilot can follow the skill and instructions in\nAGENTS.md .\nThe analysis engine runs locally in Python, with n",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claim mirrors the reference documentation.",
+            "why_it_matters": "Introduces Context Guardian, a tool that maps code changes to affected features and runs automated checks, helping AI\u2011assisted coding agents avoid hidden regressions.",
+            "who_cares": "Teams that rely on AI coding assistants (Claude, Gemini, Copilot, etc.), DevOps engineers, and code\u2011review automation specialists.",
+            "verdict": "INTEGRATE"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Career & Learning",
+            "title": "GSoC Organizations",
+            "description": "**A searchable directory lets you explore every past Google Summer of Code organization in one place.** The repository curates a list of all GSoC organizations, links to their project pages, and highlights beginner\u2011friendly \u201cgood first issue\u201d tickets. It also includes a step\u2011by\u2011step first\u2011PR walkthrough so newcomers can make their first real contribution without prior GSoC experience.",
+            "why_it_matters": "Provides a curated, searchable directory of past GSoC organizations, making it fast for engineers to discover real\u2011world open\u2011source projects and beginner\u2011friendly contribution opportunities.",
+            "who_cares": "Students, early\u2011career developers, and anyone looking to start contributing to open source through Google Summer of Code.",
+            "verdict": "READ",
+            "source_url": "https://github.com/rohanmalhotracodes/GSoC-Organizations"
+          },
+          {
+            "category": "Cool Tool",
+            "title": "Pre\u2011flight Checks for USDT (TRC\u201120) Transfers on TRON",
+            "description": "**Run a quick pre\u2011flight routine to estimate Energy and Bandwidth and avoid OUT_OF_ENERGY failures on TRON.** The guide explains that a USDT transfer consumes two resources\u2014Bandwidth for transaction size and Energy for contract execution\u2014and shows how to calculate the required amounts before signing. By checking the fee_limit and available Energy, developers can prevent costly transaction failures and excess TRX burns.",
+            "why_it_matters": "Shows how to reliably estimate TRON Energy and Bandwidth before signing a USDT (TRC\u201120) transfer, preventing costly OUT_OF_ENERGY failures and excess TRX burn.",
+            "who_cares": "Blockchain engineers building wallets, payout services, or dApps on the TRON network, especially those handling high\u2011volume USDT transfers.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/feesaver/pre-flight-checks-for-usdt-trc-20-transfers-on-tron-estimating-energy-and-avoiding-outofenergy-3f1g"
+          },
+          {
+            "category": "Watchlist",
+            "title": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS",
+            "description": "**A three\u2011pass OCR pipeline groups vertical Japanese manga text into correctly ordered speech bubbles on iOS.** The article details why manga pages challenge standard OCR\u2014vertical columns, many separate bubbles, and tiny glyphs\u2014and describes a solution that runs three concurrent OCR passes, clusters text blocks by geometry, and reorders them to match the right\u2011to\u2011left, top\u2011to\u2011bottom reading flow.",
+            "why_it_matters": "Describes a practical pipeline for grouping vertical Japanese manga text into speech bubbles on iOS, turning noisy OCR output into readable, correctly ordered translations.",
+            "who_cares": "iOS developers, computer\u2011vision engineers, and product teams creating OCR\u2011based translation or manga\u2011reading apps.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/tedy_yomi/vertical-japanese-broke-my-ocr-how-i-group-manga-text-into-speech-bubbles-on-ios-2h9f"
+          },
+          {
+            "category": "Tech Shift",
+            "title": "Context Guardian: helping coding agents understand the impact of a change",
+            "description": "**Context Guardian maps code changes to affected features, giving AI coding agents a safety net against hidden regressions.** The tool combines a CLI with an AI skill to build a project\u2011wide code map, match changed files to dependent features, and run configured validation commands. It can also flag platform\u2011specific counterparts (e.g., iOS vs Android) after a change, integrating with Claude, Gemini, Copilot, and other agents.",
+            "why_it_matters": "Introduces Context Guardian, a tool that maps code changes to affected features and runs automated checks, helping AI\u2011assisted coding agents avoid hidden regressions.",
+            "who_cares": "Teams that rely on AI coding assistants (Claude, Gemini, Copilot, etc.), DevOps engineers, and code\u2011review automation specialists.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/careolimited/context-guardian-helping-coding-agents-understand-the-impact-of-a-change-192c"
+          }
+        ]
+      }
+    }
+  },
+  "rejected_urls": [],
+  "restarted": false,
+  "email": {
+    "status": "sent",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": []
+}

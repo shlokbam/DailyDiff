@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-11",
+  "timestamp": "2026-11-11T11:25:18.908291+00:00",
+  "git_sha": "85e4daa7e7507023255d80b26d77883075c536bf",
+  "counts": {
+    "raw_signals": 66,
+    "after_dedup": 52,
+    "skeptic_passed": 10,
+    "researched": 10,
+    "verified": 4,
+    "analyzed": 4,
+    "final": 4
+  },
+  "content_sources": {
+    "https://github.com/rohanmalhotracodes/GSoC-Organizations": "readme",
+    "https://github.com/emanuele-em/kanzo": "readme",
+    "https://github.com/tt-a1i/archify": "readme",
+    "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/": "web_page",
+    "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/": "web_page",
+    "https://deepmind.google/blog/introducing-alphaproof-code/": "web_page",
+    "https://happihacking.com/blog/posts/2025/why_I_wrote_theBEAMBook/": "web_page",
+    "https://dev.to/feesaver/pre-flight-checks-for-usdt-trc-20-transfers-on-tron-estimating-energy-and-avoiding-outofenergy-3f1g": "web_page",
+    "https://dev.to/tedy_yomi/vertical-japanese-broke-my-ocr-how-i-group-manga-text-into-speech-bubbles-on-ios-2h9f": "web_page",
+    "https://dev.to/careolimited/context-guardian-helping-coding-agents-understand-the-impact-of-a-change-192c": "web_page"
+  },
+  "models_used": {
+    "openai/gpt-oss-120b": 4
+  },
+  "llm_calls": 4,
+  "durations_seconds": {
+    "skeptic": 4.19,
+    "verifier": 3.01,
+    "analyst": 2.01,
+    "editor": 4.0
+  },
+  "hard_failures": [],
+  "warnings": [],
+  "final_briefs": [
+    {
+      "category": "Career & Learning",
+      "title": "GSoC Organizations",
+      "description": "**A searchable directory lets you explore every past Google Summer of Code organization in one place.** The repository curates a list of all GSoC organizations, links to their project pages, and highlights beginner\u2011friendly \u201cgood first issue\u201d tickets. It also includes a step\u2011by\u2011step first\u2011PR walkthrough so newcomers can make their first real contribution without prior GSoC experience.",
+      "why_it_matters": "Provides a curated, searchable directory of past GSoC organizations, making it fast for engineers to discover real\u2011world open\u2011source projects and beginner\u2011friendly contribution opportunities.",
+      "who_cares": "Students, early\u2011career developers, and anyone looking to start contributing to open source through Google Summer of Code.",
+      "verdict": "READ",
+      "source_url": "https://github.com/rohanmalhotracodes/GSoC-Organizations"
+    },
+    {
+      "category": "Cool Tool",
+      "title": "Pre\u2011flight Checks for USDT (TRC\u201120) Transfers on TRON",
+      "description": "**Run a quick pre\u2011flight routine to estimate Energy and Bandwidth and avoid OUT_OF_ENERGY failures on TRON.** The guide explains that a USDT transfer consumes two resources\u2014Bandwidth for transaction size and Energy for contract execution\u2014and shows how to calculate the required amounts before signing. By checking the fee_limit and available Energy, developers can prevent costly transaction failures and excess TRX burns.",
+      "why_it_matters": "Shows how to reliably estimate TRON Energy and Bandwidth before signing a USDT (TRC\u201120) transfer, preventing costly OUT_OF_ENERGY failures and excess TRX burn.",
+      "who_cares": "Blockchain engineers building wallets, payout services, or dApps on the TRON network, especially those handling high\u2011volume USDT transfers.",
+      "verdict": "INTEGRATE",
+      "source_url": "https://dev.to/feesaver/pre-flight-checks-for-usdt-trc-20-transfers-on-tron-estimating-energy-and-avoiding-outofenergy-3f1g"
+    },
+    {
+      "category": "Watchlist",
+      "title": "Vertical Japanese broke my OCR: how I group manga text into speech bubbles on iOS",
+      "description": "**A three\u2011pass OCR pipeline groups vertical Japanese manga text into correctly ordered speech bubbles on iOS.** The article details why manga pages challenge standard OCR\u2014vertical columns, many separate bubbles, and tiny glyphs\u2014and describes a solution that runs three concurrent OCR passes, clusters text blocks by geometry, and reorders them to match the right\u2011to\u2011left, top\u2011to\u2011bottom reading flow.",
+      "why_it_matters": "Describes a practical pipeline for grouping vertical Japanese manga text into speech bubbles on iOS, turning noisy OCR output into readable, correctly ordered translations.",
+      "who_cares": "iOS developers, computer\u2011vision engineers, and product teams creating OCR\u2011based translation or manga\u2011reading apps.",
+      "verdict": "READ",
+      "source_url": "https://dev.to/tedy_yomi/vertical-japanese-broke-my-ocr-how-i-group-manga-text-into-speech-bubbles-on-ios-2h9f"
+    },
+    {
+      "category": "Tech Shift",
+      "title": "Context Guardian: helping coding agents understand the impact of a change",
+      "description": "**Context Guardian maps code changes to affected features, giving AI coding agents a safety net against hidden regressions.** The tool combines a CLI with an AI skill to build a project\u2011wide code map, match changed files to dependent features, and run configured validation commands. It can also flag platform\u2011specific counterparts (e.g., iOS vs Android) after a change, integrating with Claude, Gemini, Copilot, and other agents.",
+      "why_it_matters": "Introduces Context Guardian, a tool that maps code changes to affected features and runs automated checks, helping AI\u2011assisted coding agents avoid hidden regressions.",
+      "who_cares": "Teams that rely on AI coding assistants (Claude, Gemini, Copilot, etc.), DevOps engineers, and code\u2011review automation specialists.",
+      "verdict": "INTEGRATE",
+      "source_url": "https://dev.to/careolimited/context-guardian-helping-coding-agents-understand-the-impact-of-a-change-192c"
+    }
+  ],
+  "status": "healthy"
+}
