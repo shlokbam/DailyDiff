@@ -1,6 +1,901 @@
 {
   "date": "2026-11-13",
-  "stages": {},
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "resp-cs2-triggerbot-2026",
+            "full_name": "Galaxyettedawn/resp-cs2-triggerbot-2026",
+            "url": "https://github.com/Galaxyettedawn/resp-cs2-triggerbot-2026",
+            "description": "Auto-shoot enemies with configurable delay, head-only mode, and team damage prevention for CS2.",
+            "stars": 50,
+            "forks": 0,
+            "language": "HTML"
+          },
+          {
+            "source": "GitHub",
+            "title": "open_source_issue_contribution",
+            "full_name": "codepiyusss/open_source_issue_contribution",
+            "url": "https://github.com/codepiyusss/open_source_issue_contribution",
+            "description": "\ud83d\udc1b Beginner-friendly Python CLI with 30+ good first issues: planted bugs, missing tests & small features. Practice open source: fork, fix, PR, and turn your GitHub contribution graph green \ud83d\udfe9",
+            "stars": 43,
+            "forks": 34,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "tws-labs",
+            "full_name": "TrainWithShubham/tws-labs",
+            "url": "https://github.com/TrainWithShubham/tws-labs",
+            "description": "Learn DevOps, Cloud and AI by doing: a real terminal, tasks graded on real machine state. Runs on Windows, macOS and Linux.",
+            "stars": 24,
+            "forks": 41,
+            "language": "Shell"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 46,
+            "forks": 8,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 6000,
+            "forks": 379,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "TwinDesk",
+            "full_name": "InukaAsith/TwinDesk",
+            "url": "https://github.com/InukaAsith/TwinDesk",
+            "description": " All your computers and your phone/iPhone, working as one desk. Screens, apps, files, clipboard, calls, texts, notifications, mouse and keyboard, shared between Mac, Windows, Linux , Android, Web and ios / ipados . Free and open source. No account, no cloud, and no shared network needed.",
+            "stars": 4015,
+            "forks": 313,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 1560,
+            "forks": 132,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "WinShun",
+            "full_name": "LingCore/WinShun",
+            "url": "https://github.com/LingCore/WinShun",
+            "description": "Win\u987a\uff1a\u514d\u8d39\u5f00\u6e90\u7684 Windows \u5feb\u901f\u641c\u7d22\u542f\u52a8\u5668\u3002\u53cc\u51fb Ctrl\uff0c\u62fc\u97f3\u79d2\u641c\u6587\u4ef6\u3001\u5168\u6587\u641c\u7d22 Word/Excel/PDF\u3001\u526a\u8d34\u677f\u5386\u53f2\uff08\u4ee3\u66ff Win+V\uff09\u3001\u5bf9\u8bdd\u6846\u641c\u7d22\u3001\u4efb\u52a1\u680f\u641c\u7d22\u3001\u63d2\u4ef6\u3001AI \u52a9\u624b MCP\u3002Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative.",
+            "stars": 1015,
+            "forks": 68,
+            "language": "C++"
+          },
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 888,
+            "forks": 163,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 147034,
+            "forks": 14096,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 96116,
+            "forks": 6574,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95830,
+            "forks": 9605,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 93396,
+            "forks": 12493,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "rtk",
+            "full_name": "rtk-ai/rtk",
+            "url": "https://github.com/rtk-ai/rtk",
+            "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+            "stars": 86436,
+            "forks": 5541,
+            "language": "Rust"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
+            "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+            "description": "Hacker News top story (Score: 108): Doomsday: Friday, 13 November, A.D. 2026 (1960)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Jensen Huang resigns",
+            "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+            "description": "Hacker News top story (Score: 3698): Jensen Huang resigns"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+            "url": "https://status.claude.com/incidents/nn11wk485zfn",
+            "description": "Hacker News top story (Score: 295): Elevated errors on claude.ai, Claude Code, and platform.claude.com"
+          },
+          {
+            "source": "Hacker News",
+            "title": "IceWM",
+            "url": "https://ice-wm.org/",
+            "description": "Hacker News top story (Score: 250): IceWM"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Rust 1.100",
+            "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+            "description": "Hacker News top story (Score: 747): Rust 1.100"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Brave Search API now accepts agentic payments via the x402 protocol",
+            "url": "https://brave.com/blog/search-api-agentic-payments/",
+            "description": "Hacker News top story (Score: 164): Brave Search API now accepts agentic payments via the x402 protocol"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
+            "url": "https://github.com/simpsoka/zigzag",
+            "description": "Hacker News top story (Score: 588): Show HN: My $300 embroidery machine needed a subscription, so I built my own app"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Gemini 4 Hydrogen and Orchestrator",
+            "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+            "description": "Hacker News top story (Score: 443): Gemini 4 Hydrogen and Orchestrator"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
+            "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
+            "description": "Hacker News top story (Score: 329): Former Nvidia CEO Huang had a relationship with a second employee, sources say"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Is there a 'right amount' of AI?",
+            "url": "https://coyotetracks.org/blog/right-amount-of-ai/",
+            "description": "Hacker News top story (Score: 20): Is there a 'right amount' of AI?"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
+            "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
+            "description": "Hacker News top story (Score: 332): Dwarf planet candidate appears which takes roughly 280 years to orbit our sun"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+            "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+            "description": "Hacker News top story (Score: 285): Edge0-145B: Frontier AI Capabilities on Your Own Computer"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Service degradation on Microsoft 365",
+            "url": "https://status.cloud.microsoft/",
+            "description": "Hacker News top story (Score: 1016): Service degradation on Microsoft 365"
+          },
+          {
+            "source": "Hacker News",
+            "title": "I'm making LLMs work on small and old devices",
+            "url": "https://github.com/hyperionaidev/smolmaxxing/",
+            "description": "Hacker News top story (Score: 405): I'm making LLMs work on small and old devices"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Foundation Models framework",
+            "url": "https://developer.apple.com/foundation-models-framework/",
+            "description": "Hacker News top story (Score: 228): Foundation Models framework"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Gemini 4 Hydrogen Scored 51 \u2014 and the Editor Still Said \"App First, Integration Later\"",
+            "url": "https://dev.to/tomoyacreater/gemini-4-hydrogen-scored-51-and-the-editor-still-said-app-first-integration-later-lnl",
+            "description": "Today, November 13, our Japanese IT news site IT Post published 17 articles: six in the morning batch, five at midday, and six in the evening. Every one passed the full verification gate we run before anything goes live, and the site's total reached 778 published articles. The lead story of the morn"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Sell one API call to an agent",
+            "url": "https://dev.to/dami14_14/sell-one-api-call-to-an-agent-1a4p",
+            "description": "If an agent needs to buy access to an API, payment and execution need to be tracked separately. This tutorial walks through a test purchase, checks settlement, and reserves one authorized lookup.\n\nQuote a test purchase, confirm payment, and reserve one authorized execution.\n\n\n  \n  \n  What you will b"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Future directions of travel",
+            "url": "https://dev.to/dang-w/future-directions-of-travel-cki",
+            "description": "I already put this in the log, but whatever. Free will n all that, I'm double posting.\n\nBeen thinking about the future of SWE and agentic use in general (shocker, who working in SW hasn't?)\n\nIn my eyes: verification and governance.\n\nMy prediction on SWE directions: verification engineering becoming "
+          },
+          {
+            "source": "Dev.to",
+            "title": "I cut my CI wait from 25 minutes to about 12 and checked that no test was dropped",
+            "url": "https://dev.to/miguel_shinyenyi_e2291c8c/i-cut-my-ci-wait-from-25-minutes-to-about-12-and-checked-that-no-test-was-dropped-3n25",
+            "description": "The wait\n\n\numwayi-os is a Python command line with a large test suite. It has more than 2,000 tests. They run on every pull request, on Python 3.10, 3.11, 3.12 and 3.13. The core uses only the standard library, so the tests start real child processes in temporary folders. That makes them thorough an"
+          },
+          {
+            "source": "Dev.to",
+            "title": "A Shopify CSV checker with line-level reports and an n8n import gate",
+            "url": "https://dev.to/didyouseethis212sys/a-shopify-csv-checker-with-line-level-reports-and-an-n8n-import-gate-2p2f",
+            "description": "Disclosure: I maintain Catalog Import Guard, including its paid API. This article was prepared with AI assistance, and the sample results and workflow execution were checked before publication.\n\nA product CSV can be valid CSV and still contain an accidental duplicate variant, a price field with a cu"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Recognize an agent in your API",
+            "url": "https://dev.to/dami14_14/recognize-an-agent-in-your-api-fcm",
+            "description": "When an agent calls your API, knowing whether it has been seen before can help your application provide continuity. This tutorial shows how to resolve an agent proof and handle the result in a server-side endpoint.\n\nResolve an incoming agent proof and handle recognized, unknown, and unavailable iden"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What to check before buying a ready-made admin panel template",
+            "url": "https://dev.to/mehedirafi/what-to-check-before-buying-a-ready-made-admin-panel-template-1p6e",
+            "description": "Part 1 of Before You Buy Code.\n\nI build admin panels for clinic and small business sites, and I have bought templates to save time. Two of them cost me more time than they saved. The screenshots were fine. The faults sat in parts a screenshot cannot show: a login with no roles behind it, a package w"
+          },
+          {
+            "source": "Dev.to",
+            "title": "AgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run",
+            "url": "https://dev.to/fun_fun_19313eced54af3c68/agentedseo-review-a-wordpress-seo-plugin-your-ai-agent-can-run-3039",
+            "description": "AI agents can already write and publish WordPress posts. The weak spot has been SEO: once an agent starts editing titles and meta descriptions behind the scenes, you lose track of what it changed and why. AgentedSEO is a plugin built to close that gap. Here is what it does, what the launch deal cost"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Schema Drift vs. Semantic Drift in Data Pipelines",
+            "url": "https://www.freecodecamp.org/news/schema-drift-vs-semantic-drift-in-data-pipelines/",
+            "description": "When a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning c"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-image-storyboard-to-pdf-tool-javascript/",
+            "description": "Before anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens a"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Agentic Coding with Codex & AI Coding Agents",
+            "url": "https://www.freecodecamp.org/news/learn-agentic-coding-with-codex-ai-coding-agents/",
+            "description": "AI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructi"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "What Happens When You Upload a Large File & Generate a Temporary Download Link",
+            "url": "https://www.freecodecamp.org/news/how-file-transfer-services-work/",
+            "description": "Sending a 5 GB video file might seem simple. You select the file, click Upload, wait for the progress bar to finish, and share a link with someone. But there are several things happening in the backgr"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a PDF Storyboard Generator Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-storyboard-generator-javascript/",
+            "description": "PDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when so"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Godot 4 Roguelike Course \u2013 Build a Complete Top-Down Action Game",
+            "url": "https://www.freecodecamp.org/news/godot-4-roguelike-course-build-a-complete-top-down-action-game/",
+            "description": "A top-down action roguelite only works when combat feels sharp, rooms feel connected, and every run asks you to trade power for risk. Godot 4 has the tools for that, but most tutorials stop before tho"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Use shadcn/ui in React Native Applications [Full Handbook]",
+            "url": "https://www.freecodecamp.org/news/how-to-use-shadcn-ui-in-react-native-applications-full-handbook/",
+            "description": "If you've built a couple of React Native apps, the following probably feels familiar. You start with a colors.ts file and a simple Button component. Everything looks fine at first. Then the design cha"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "What a CAPTCHA Farm Attack Actually Looks Like",
+            "url": "https://www.freecodecamp.org/news/captcha-farm-attack/",
+            "description": "CAPTCHAs are something most of us have come across while browsing the internet. Sometimes we're asked to identify traffic lights in pictures, solve a small puzzle, or simply tick a box to confirm we'r"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Pocket Studio for Supabase",
+            "url": "https://www.producthunt.com/products/pocket-studio-for-supabase",
+            "description": "Supabase dashboard & SQL editor for Android\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Willo",
+            "url": "https://www.producthunt.com/products/willo-2",
+            "description": "A companion you talk to while you play WoW\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Aven App Agent",
+            "url": "https://www.producthunt.com/products/aven-app-agent",
+            "description": "AI that guides users through your app\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Google Pixel Tag",
+            "url": "https://www.producthunt.com/products/google",
+            "description": "Google\u2019s $30 Android-ready tracking tag\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "qorqbot",
+            "url": "https://www.producthunt.com/products/qorqbot",
+            "description": "Proactive agent for business work\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "StockRip",
+            "url": "https://www.producthunt.com/products/stockrip",
+            "description": "Trading cards, literally digital cards with tokenized stocks\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Kairos",
+            "url": "https://www.producthunt.com/products/kairos-18",
+            "description": "Personal analytics engine across health, finances, & social\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "WHOOP Humans",
+            "url": "https://www.producthunt.com/products/whoop",
+            "description": "WHOOP's social network built around real health data\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Replicate",
+            "url": "https://www.producthunt.com/products/replicate-10",
+            "description": "Turn Webflow/Framer app into a Claude/Codex project for free\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "GAtrends",
+            "url": "https://www.producthunt.com/products/gatrends",
+            "description": "Spike alerts for your keywords in Telegram, Claude, ChatGPT\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1xl1aup/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Agentic Coding: Bet on the Primitives",
+            "url": "https://www.reddit.com/r/webdev/comments/1xv798l/agentic_coding_bet_on_the_primitives/",
+            "description": "&#32; submitted by &#32;  /u/fagnerbrack   [link] &#32; [comments]"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Fornax's Guide To Ridiculously Fast Ethernet",
+            "url": "https://www.reddit.com/r/webdev/comments/1xuu7gw/fornaxs_guide_to_ridiculously_fast_ethernet/",
+            "description": "&#32; submitted by &#32;  /u/fagnerbrack   [link] &#32; [comments]"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "The inverse of the usual double-opt-in onboarding?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xv7o0s/the_inverse_of_the_usual_doubleoptin_onboarding/",
+            "description": "Double opt-in requires an additional user action after registration to activate the account. I wonder if you have instead implemented a &quot;send-us-an-email-from-yours&quot; with a mailto: verify+&lt;code&gt;@example.com right from the signup page and how it went in the real world. No body, no nee"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Your JS Error Is Lying to You",
+            "url": "https://www.reddit.com/r/webdev/comments/1xua16u/your_js_error_is_lying_to_you/",
+            "description": "Started with a log line that said &quot;err&quot;:{} for an error that definitely had a message and a cause. Followed that up to see what each step between new Error() and the log record actually keeps. Covers stack traces, cause chains, AggregateError and SuppressedError. It runs the same probe scr"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.49",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.49",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.49. Details: ### Core Changes\n\n- Optimize NFT base path mapping: #101151\n- Fix `ImageResponse` prerendering with `--debug-prerender`: #101678\n- Upgrade React from `1620f7b9-20261111` to `df6aa4ec-20261112`: #101673\n- Fix ESLint link rule for constant and mapped hrefs: #101641\n- Complete metadata references and f..."
+          },
+          {
+            "source": "GitHub Release",
+            "title": "fastapi/fastapi Release: 0.162.5",
+            "url": "https://github.com/fastapi/fastapi/releases/tag/0.162.5",
+            "description": "New release for fastapi/fastapi. Tag: 0.162.5. Details: > FastAPI includes an official skill that helps coding agents use new features and recommended patterns for your installed version. Install it with `uvx library-skills` in your project. See [Develop with AI](https://fastapi.tiangolo.com/ai-development/).\n\n### Fixes\n\n* \ud83d\udc1b Fix synchronous dependency cl..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 888,
+            "forks": 163,
+            "language": "Rust"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Foundation Models framework",
+            "url": "https://developer.apple.com/foundation-models-framework/",
+            "description": "Hacker News top story (Score: 228): Foundation Models framework"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Sell one API call to an agent",
+            "url": "https://dev.to/dami14_14/sell-one-api-call-to-an-agent-1a4p",
+            "description": "If an agent needs to buy access to an API, payment and execution need to be tracked separately. This tutorial walks through a test purchase, checks settlement, and reserves one authorized lookup.\n\nQuote a test purchase, confirm payment, and reserve one authorized execution.\n\n\n  \n  \n  What you will b"
+          },
+          {
+            "source": "Dev.to",
+            "title": "I cut my CI wait from 25 minutes to about 12 and checked that no test was dropped",
+            "url": "https://dev.to/miguel_shinyenyi_e2291c8c/i-cut-my-ci-wait-from-25-minutes-to-about-12-and-checked-that-no-test-was-dropped-3n25",
+            "description": "The wait\n\n\numwayi-os is a Python command line with a large test suite. It has more than 2,000 tests. They run on every pull request, on Python 3.10, 3.11, 3.12 and 3.13. The core uses only the standard library, so the tests start real child processes in temporary folders. That makes them thorough an"
+          },
+          {
+            "source": "Dev.to",
+            "title": "A Shopify CSV checker with line-level reports and an n8n import gate",
+            "url": "https://dev.to/didyouseethis212sys/a-shopify-csv-checker-with-line-level-reports-and-an-n8n-import-gate-2p2f",
+            "description": "Disclosure: I maintain Catalog Import Guard, including its paid API. This article was prepared with AI assistance, and the sample results and workflow execution were checked before publication.\n\nA product CSV can be valid CSV and still contain an accidental duplicate variant, a price field with a cu"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Recognize an agent in your API",
+            "url": "https://dev.to/dami14_14/recognize-an-agent-in-your-api-fcm",
+            "description": "When an agent calls your API, knowing whether it has been seen before can help your application provide continuity. This tutorial shows how to resolve an agent proof and handle the result in a server-side endpoint.\n\nResolve an incoming agent proof and handle recognized, unknown, and unavailable iden"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What to check before buying a ready-made admin panel template",
+            "url": "https://dev.to/mehedirafi/what-to-check-before-buying-a-ready-made-admin-panel-template-1p6e",
+            "description": "Part 1 of Before You Buy Code.\n\nI build admin panels for clinic and small business sites, and I have bought templates to save time. Two of them cost me more time than they saved. The screenshots were fine. The faults sat in parts a screenshot cannot show: a login with no roles behind it, a package w"
+          },
+          {
+            "source": "Dev.to",
+            "title": "AgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run",
+            "url": "https://dev.to/fun_fun_19313eced54af3c68/agentedseo-review-a-wordpress-seo-plugin-your-ai-agent-can-run-3039",
+            "description": "AI agents can already write and publish WordPress posts. The weak spot has been SEO: once an agent starts editing titles and meta descriptions behind the scenes, you lose track of what it changed and why. AgentedSEO is a plugin built to close that gap. Here is what it does, what the launch deal cost"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Schema Drift vs. Semantic Drift in Data Pipelines",
+            "url": "https://www.freecodecamp.org/news/schema-drift-vs-semantic-drift-in-data-pipelines/",
+            "description": "When a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning c"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-image-storyboard-to-pdf-tool-javascript/",
+            "description": "Before anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens a"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 888,
+            "forks": 163,
+            "language": "Rust",
+            "detailed_content": "<div align=\"center\">\n\n<img src=\"assets/daozai-logo.png\" width=\"112\" alt=\"\u5c9b\u4ed4\" />\n\n# \u5c9b\u4ed4 \u00b7 Daozai\n\n**\u4e00\u5ea7\u5c0f\u5c9b\uff0c\u88c5\u4e0b\u684c\u9762\u65e5\u5e38\u3002**\n\nWindows \u684c\u9762\u4f19\u4f34\uff0c\u628a\u6d88\u606f\u3001\u97f3\u4e50\u3001\u65e5\u7a0b\u3001\u5929\u6c14\u548c AI \u989d\u5ea6\u653e\u5230\u624b\u8fb9\u3002\n\n[![\u6700\u65b0\u7248\u672c](https://img.shields.io/github/v/release/Renly1994/xiaotang-daozai?color=7955b8&label=\u6700\u65b0\u7248\u672c)](https://github.com/Renly1994/xiaotang-daozai/releases/latest)\n[![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D4)](#\u4e0b\u8f7d\u5b89\u88c5)\n[![\u5f00\u6e90\u8bb8\u53ef](https://img.shields.io/badge/License-MIT-3cbf91)](LICENSE)\n[![Rust \u4e0e egui](https://img.shields.io/badge/Rust-egui-8b6ca8)](#\u4ece\u6e90\u7801\u6784\u5efa\u4e0e\u53c2\u4e0e\u5f00\u53d1)\n\n**[\u4e0b\u8f7d Windows \u7248](https://github.com/Renly1994/xiaotang-daozai/releases/latest)** \u00b7 [\u4f7f\u7528\u6307\u5357](docs/USAGE.md) \u00b7 [\u66f4\u65b0\u8bb0\u5f55](CHANGELOG.md) \u00b7 [\u53cd\u9988\u95ee\u9898](https://github.com/Renly1994/xiaotang-daozai/issues)\n\n</div>\n\n\u5c9b\u4ed4\u662f\u4e00\u6b3e\u5f00\u6e90\u7684 Windows \u684c\u9762\u5c0f\u5de5\u5177\u3002\u5e73\u65f6\u6536\u8d77\u5728\u5c4f\u5e55\u8fb9\u7f18\uff0c\u9f20\u6807\u9760\u8fd1\u5c31\u5c55\u5f00\uff1b\u5207\u6b4c\u3001\u770b\u65e5\u7a0b\u3001\u590d\u5236\u9a8c\u8bc1\u7801\u3001\u8bb0\u4e00\u6761\u5f85\u529e\uff0c\u90fd\u80fd\u987a\u624b\u5b8c\u6210\u3002\u5c0f\u5c9b\u91cc\u7684\u4f19\u4f34\u4f1a\u7728\u773c\u3001\u6253\u76f9\u3001\u559d\u6c34\uff0c\u4e5f\u4f1a\u8ddf\u7740\u97f3\u4e50\u5531\u6b4c\u3002\n\n\u4f60\u53ef\u4ee5\u9009\u5218\u6d77\u6216\u80f6\u56ca\uff0c\u653e\u5728\u9876\u90e8\u3001\u5de6\u4fa7\u6216\u53f3\u4fa7\uff0c\u53ea\u4fdd\u7559\u81ea\u5df1\u9700\u8981\u7684\u529f\u80fd\u3002\u5c9b\u4ed4\u4f7f\u7528 Rust \u548c egui \u6784\u5efa\uff0c\u4e0d\u4f9d\u8d56 Electron\u3002\n\n## \u5fae\u4fe1\u91cc\u6709\u65b0\u6d88\u606f\uff0c\u770b\u4e00\u773c\u5c9b\u8fb9\n\n![\u5fae\u4fe1\u548c QQ \u672a\u8bfb\uff1a\u6536\u8d77\u65f6\u663e\u793a\u56fe\u6807\uff0c\u5c55\u5f00\u540e\u70b9\u51fb\u5207\u6362\u5bf9\u5e94\u7a97\u53e3](docs/images/readme/notifications.webp)\n\n- **\u5fae\u4fe1\u3001QQ \u672a\u8bfb\u63d0\u9192**\uff1a\u6536\u8d77\u65f6\u4eae\u8d77\u56fe\u6807\u548c\u7ea2\u70b9\uff0c\u5c55\u5f00\u540e\u5728\u9762\u677f\u65c1\u67e5\u770b\uff0c\u70b9\u51fb\u5207\u6362\u5230\u5bf9\u5e94\u7a97\u53e3\u3002\n- **\u5fae\u4fe1\u591a\u5f00\u5206\u5f00\u770b**\uff1a\u4e0d\u540c\u8d26\u53f7\u5206\u522b\u663e\u793a\uff0c\u70b9\u51fb\u5bf9\u5e94\u8d26\u53f7\u7684\u672a\u8bfb\u56fe\u6807\u5373\u53ef\u5207\u6362\u3002\n- **\u6309\u9700\u663e\u793a\u901a\u77e5\u6b63\u6587**\uff1a\u9ed8\u8ba4\u9690\u85cf\u6b63\u6587\uff1b\u5f00\u542f\u9884\u89c8\u540e\u4ecd\u906e\u7f69\u8bc6\u522b\u51fa\u7684\u9a8c\u8bc1\u7801\u3002\n- **\u5fae\u4fe1\u63d0\u9192\u4e0d\u8bfb\u53d6\u804a\u5929\u6b63\u6587**\uff1a\u6839\u636e\u4efb\u52a1\u680f\u95ea\u52a8\u63d0\u793a\u65b0\u6d88\u606f\u3002\u5fae\u4fe1\u7f29\u5728\u6258\u76d8\u65f6\uff0c\u53ef\u9009\u5f00\u542f\u300c\u6258\u76d8\u4e00\u952e\u5524\u8d77\u5fae\u4fe1\u300d\u3002\n\n\u5f00\u542f\u65b9\u5f0f\uff1a**\u8bbe\u7f6e \u2192 \u901a\u77e5\u3001\u90ae\u7bb1\u4e0e\u65e5\u7a0b \u2192 \u901a\u77e5**\u3002\u5fae\u4fe1\u5f00\u542f\u300c\u5fae\u4fe1\u65b0\u6d88\u606f\u63d0\u9192\u300d\uff1bQQ \u9009\u62e9\u300c\u53ea\u8fde\u63a5 QQ\u300d\uff0c\u5e76\u5728 QQ \u4e2d\u542f\u7528 Windows \u7cfb\u7edf\u901a\u77e5\u3002\n\n## \u6362\u4e2a\u76ae\u80a4\uff0c\u4e5f\u6362\u4e2a\u4f4d\u7f6e\n\n![\u4e94\u6b3e\u76ae\u80a4\uff1a\u7ecf\u5178\u9ed1\u3001\u5976\u6cb9\u3001\u6bdb\u73bb\u7483\u6d45\u8272\u3001\u6bdb\u73bb\u7483\u6df1\u8272\u3001\u60ac\u6d6e\u4e91\uff1b\u5218\u6d77\u548c\u80f6\u56ca\u4e24\u79cd\u5f62\u6001](docs/images/readme/appearance.webp)\n\n**\u4e94\u6b3e\u76ae\u80a4 \u00d7 \u4e24\u79cd\u5f62\u6001\uff0c\u81ea\u7531\u642d\u914d\u3002** \u7ecf\u5178\u9ed1\u3001\u5976\u6cb9\u3001\u6bdb\u73bb\u7483\u00b7\u6d45\u3001\u6bdb\u73bb\u7483\u00b7\u6df1\u548c\u300c\u60ac\u6d6e\u4e91\u300d\uff0c\u90fd\u80fd\u642d\u914d\u5218\u6d77\u6216\u80f6\u56ca\u3002\u6bdb\u73bb\u7483\u900f\u51fa\u8eab\u540e\u7684\u684c\u9762\uff1b\u60ac\u6d6e\u4e91\u968f\u4e13\u8f91\u5c01\u9762\u6362\u8272\uff0c\u5149\u6655\u8ddf\u7740\u9f20\u6807\u79fb\u52a8\u3002\n\n![\u9876\u90e8\u3001\u5de6\u4fa7\u548c\u53f3\u4fa7\u505c\u9760\uff0c\u4ee5\u53ca\u4fa7\u8fb9\u6536\u8d77\u4e0e\u5c55\u5f00\u72b6\u6001](docs/images/readme/docking.webp)\n\n- **\u4e09\u8fb9\u505c\u9760**\uff1a\u9876\u90e8\u6a2a\u5411\u5c55\u5f00\uff0c\u5de6\u53f3\u4fa7\u8fb9\u6536\u8d77\u4e3a\u7ad6\u5411\u80f6\u56ca\uff0c\u9760\u8fd1\u540e\u4ece\u5c4f\u5e55\u8fb9\u7f18\u5c55\u5f00\u3002\n- **\u5927\u5c0f\u4e0e\u4f4d\u7f6e\u53ef\u8c03**\uff1a\u5c9b\u4f53\u5927\u5c0f\u652f\u6301 80%\u2013140%\uff1b\u9876\u90e8\u53ef\u5de6\u53f3\u79fb\u52a8\uff0c\u4fa7\u8fb9\u53ef\u4e0a\u4e0b\u8c03\u6574\u3002\n- **\u591a\u5c4f\u4e0e\u81ea\u52a8\u907f\u8ba9**\uff1a\u8ddf\u968f\u4e3b\u5c4f\u6216\u56fa\u5b9a\u5230\u6307\u5b9a\u663e\u793a\u5668\uff1b\u6307\u5b9a\u5e94\u7528\u8986\u76d6\u5c0f\u5c9b\u65f6\uff0c\u53ef\u81ea\u52a8\u6536\u6210\u8d34\u8fb9\u7ec6\u7ebf\u3002\n- **\u6309\u4e60\u60ef\u663e\u793a**\uff1a\u652f\u6301\u6781\u7b80\u6a21\u5f0f\u300112\uff0f24 \u5c0f\u65f6\u5236\uff0c\u4ee5\u53ca\u529f\u80fd\u9875\u9762\u5f00\u5173\u4e0e\u62d6\u52a8\u6392\u5e8f\u3002\n\n\u5728 **\u8bbe\u7f6e \u2192 \u5e38\u89c4 \u2192 \u5c9b\u4f53\u5916\u89c2\uff0f\u5c9b\u4f53\u663e\u793a** \u4e2d\u8c03\u6574\u3002\u5c9b\u4e0a\u5355\u884c\u6b4c\u8bcd\u76ee\u524d\u652f\u6301\u9876\u90e8\u505c\u9760\u3002\n\n## \u542c\u6b4c\u65f6\uff0c\u6b4c\u8bcd\u5c31\u5728\u62ac\u773c\u5904\n\n![\u97f3\u4e50\u64ad\u653e\u63a7\u5236\u3001\u5c55\u5f00\u6b4c\u8bcd\u4e0e\u6536\u8d77\u72b6\u6001\u4e0b\u7684\u5c9b\u4e0a\u5355\u884c\u6b4c\u8bcd](docs/images/readme/music.w",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Foundation Models framework",
+            "url": "https://developer.apple.com/foundation-models-framework/",
+            "description": "Hacker News top story (Score: 228): Foundation Models framework",
+            "detailed_content": "Foundation Models framework - Apple Developer\nView in English\nApple Developer\nGet Started\nExplore Get Started\nOverview\nLearn\nApple Developer Program\nStay Updated\nLatest News\nHello Developer\nPlatforms\nExplore Platforms\nApple Platforms\niOS\niPadOS\nmacOS\ntvOS\nvisionOS\nwatchOS\nApp Store\nFeatured\nDesign\nDistribution\nGames\nAccessories\nWeb\nHome\nCarPlay\nTechnologies\nExplore Technologies\nOverview\nXcode\nSwift\nSwiftUI\nFeatured\nAccessibility\nAI & Machine Learning\nApp Intents\nApple Intelligence\nGames\nSecurity\nXcode Cloud\nCommunity\nExplore Community\nOverview\nMeet with Apple events\nCommunity events\nDeveloper Forums\nOpen Source\nFeatured\nWWDC\nSwift Student Challenge\nDeveloper Stories\nApp Store Awards\nApple Design Awards\nApple Developer Centers\nDocumentation\nExplore Documentation\nDocumentation Library\nTechnology Overviews\nSample Code\nHuman Interface Guidelines\nVideos\nRelease Notes\nFeatured Updates\niOS\niPadOS\nmacOS\nwatchOS\nvisionOS\ntvOS\nXcode\nDownloads\nExplore Downloads\nAll Downloads\nOperating Systems\nApplications\nDesign Resources\nFeatured\nXcode\nTestFlight\nFonts\nSF Symbols\nIcon Composer\nSupport\nExplore Support\nOverview\nHelp Guides\nDeveloper Forums\nFeedback Assistant\nContact Us\nFeatured\nAccount Help\nApp Review Guidelines\nApp Review Help\nApp Store Connect Help\nUpcoming Requirements\nAgreements and Guidelines\nSystem Status\nQuick Links\nEvents\nNews\nForums\nSample Code\nVideos\nAI & Machine Learning\nOpen Menu\nClose Menu\nOverview\nWhat\u2018s New\nResources\nGet started with the Foundation\u00a0Models framework\nThe Foundation\u00a0Models framework is the best way to use any large language model in your app. Whether you\u2019re generating a quick summary or creating dynamic agents, the framework has what you need.\nOverview\nThe Foundation Models framework is a native Swift API for integrating any large language model into yo",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Sell one API call to an agent",
+            "url": "https://dev.to/dami14_14/sell-one-api-call-to-an-agent-1a4p",
+            "description": "If an agent needs to buy access to an API, payment and execution need to be tracked separately. This tutorial walks through a test purchase, checks settlement, and reserves one authorized lookup.\n\nQuote a test purchase, confirm payment, and reserve one authorized execution.\n\n\n  \n  \n  What you will b",
+            "detailed_content": "Sell one API call to an agent - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDAMILARE OLALEYE\nPosted on\nNov 13\n\u2022\nOriginally published at\nchitmark.com\nSell one API call to an agent\n# ai\n# api\n# stripe\n# typescript\nIf an agent needs to buy access to an API, payment and execution need to be tracked separately. This tutorial walks through a test purchase, checks settlement, and reserves one authorized lookup.\nQuote a test purchase, confirm payment, and reserve one authorized execution.\nWhat you will build\nA buyer agent purchases one fixed-price lookup and the seller delivers it after payment settles and the seller's own policy permits it. The examples use TypeScript and Test credentials. Your application supplies durable storage, its authorization policy, and the actual lookup.\nYou need separate seller and buyer workspaces, a seller test payment account, a 100 USD cents API-call resource, and Test keys with\ncharge:budget ,\ncharge:buy , and\ncharge:fulfill\nfor their respective roles. Follow\nseller and buyer setup\nfirst. Keep all keys on your servers and use the same environment throughout.\nInstall\n@chitmark/sdk\nin a TypeScript project. Set\nCHITMARK_BUYER_BUDGET_KEY ,\nCHITMARK_BUYER_KEY , and\nCHITMARK_SELLER_FULFILL_KEY\nto the corresponding Test keys. Set\nCHITMARK_SELLER_ID ,\nCHITMARK_BUYER_ID , and\nCHITMARK_RESOURCE_ID\nto the IDs from setup, and\nCHITMARK_OPERATION_ID\nto a new, durable ID for this lookup.\nCHITMARK_API_BASE_URL\nis optional and defaults to the production API endpoint. Run the buyer example in your TypeScript runtime; th",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "I cut my CI wait from 25 minutes to about 12 and checked that no test was dropped",
+            "url": "https://dev.to/miguel_shinyenyi_e2291c8c/i-cut-my-ci-wait-from-25-minutes-to-about-12-and-checked-that-no-test-was-dropped-3n25",
+            "description": "The wait\n\n\numwayi-os is a Python command line with a large test suite. It has more than 2,000 tests. They run on every pull request, on Python 3.10, 3.11, 3.12 and 3.13. The core uses only the standard library, so the tests start real child processes in temporary folders. That makes them thorough an",
+            "detailed_content": "I cut my CI wait from 25 minutes to about 12 and checked that no test was dropped - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMiguel Shinyenyi\nPosted on\nNov 13\n\u2022\nOriginally published at\nmiguel-shinyenyi.github.io\nI cut my CI wait from 25 minutes to about 12 and checked that no test was dropped\n# engineering\n# testing\n# ci\n# buildinginpublic\nThe wait\numwayi-os is a Python command line with a large test suite. It has more than 2,000 tests. They run on every pull request, on Python 3.10, 3.11, 3.12 and 3.13. The core uses only the standard library, so the tests start real child processes in temporary folders. That makes them thorough and slow. The code is public:\nhttps://github.com/Miguel-Shinyenyi/umwayi-os\nOn Nov 12 I measured one job on one pull request: 24.9 minutes. Each job ran the whole suite, and one push could start two runs of four jobs each. The tests alone took about 1,810 seconds on Python 3.11.\nI build this project with several AI builders working in parallel. Each pull request is reviewed and then merged. A 25 minute wait on each push slows every round of review.\nBefore: one push\n-------------------------\npush\n+- run 1: 4 jobs\n+- run 2: 4 jobs\neach job: all tests\neach job: about 25 min\n-------------------------\nStep 1: stop running the same thing twice\nThe first change was small (pull request 59). CI ran on pull requests only, and a newer push cancelled the older run. One push now means one run of four jobs. I also cached the npm download. That saved little: the whole Node step was 0.4 minutes of a 24.9 minute jo",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "A Shopify CSV checker with line-level reports and an n8n import gate",
+            "url": "https://dev.to/didyouseethis212sys/a-shopify-csv-checker-with-line-level-reports-and-an-n8n-import-gate-2p2f",
+            "description": "Disclosure: I maintain Catalog Import Guard, including its paid API. This article was prepared with AI assistance, and the sample results and workflow execution were checked before publication.\n\nA product CSV can be valid CSV and still contain an accidental duplicate variant, a price field with a cu",
+            "detailed_content": "A Shopify CSV checker with line-level reports and an n8n import gate - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\ndidyouseethis212-sys\nPosted on\nNov 13\n\u2022\nFully Autonomous\nA Shopify CSV checker with line-level reports and an n8n import gate\n# showdev\n# shopify\n# webdev\nDisclosure: I maintain Catalog Import Guard, including its paid API. This article was prepared with AI assistance, and the sample results and workflow execution were checked before publication.\nA product CSV can be valid CSV and still contain an accidental duplicate variant, a price field with a currency symbol, or an empty field that changes an existing value during an overwrite. I built a small checker around that pre-import step.\nTry the browser checker\n\u2014 no account, API key or Shopify installation is required. The CSV is checked on your device.\nAn example you can reproduce\nLoad the built-in example, or paste this CSV and choose\nUpdate products :\nURL handle,Title,Option1 name,Option1 value,Price,Vendor\nlinen-shirt,Linen Shirt,Size,S,49.00,\nlinen-shirt,,,S,$39.00,\nThe report contains two errors and one warning:\nPhysical line\nFinding\nWhy it needs review\n2\nBlank Vendor overwrite warning\nWith overwrite enabled, an empty vendor can clear an existing value.\n3\nDuplicate variant\nSize S already appears within the same product handle.\n3\nPrice format\nThe price field expects a number without a currency symbol.\nThe checker reports physical line numbers, including files with quoted multiline cells. It does not guess what a price should be or change a store.\nUsing the same ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Recognize an agent in your API",
+            "url": "https://dev.to/dami14_14/recognize-an-agent-in-your-api-fcm",
+            "description": "When an agent calls your API, knowing whether it has been seen before can help your application provide continuity. This tutorial shows how to resolve an agent proof and handle the result in a server-side endpoint.\n\nResolve an incoming agent proof and handle recognized, unknown, and unavailable iden",
+            "detailed_content": "Recognize an agent in your API - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDAMILARE OLALEYE\nPosted on\nNov 13\n\u2022\nOriginally published at\nchitmark.com\nRecognize an agent in your API\n# ai\n# api\n# webdev\n# security\nWhen an agent calls your API, knowing whether it has been seen before can help your application provide continuity. This tutorial shows how to resolve an agent proof and handle the result in a server-side endpoint.\nResolve an incoming agent proof and handle recognized, unknown, and unavailable identity evidence.\nWhat you will build\nAdd a server-side endpoint that resolves an incoming agent proof and returns a different response for recognized agents, unknown visitors, and unavailable identity evidence. Attribution provides evidence for your application's access policy; recognition alone does not authorize an action.\nYou need Node.js or Python, a Chitmark workspace with Attribution enabled, a Test key with\nattribution:read , and your site's exact public HTTPS origin. To test recognition, you also need an enrolled agent and a fresh proof for that site. The\ntwo-website example\nwalks through enrollment and signing.\nInstall the SDK and configure your site\nUse SDK version 0.9.0 or later for network proofs. Create a Test API key with\nattribution:read\nin your site's workspace. Set\nCHITMARK_API_KEY\non the server and set\nCHITMARK_SITE\nto your exact public HTTPS origin, for example\nhttps://app.example.com\nwithout a trailing slash. The SDK uses\nhttps://api.chitmark.com\nby default.\nGive the visiting agent your workspace ID, recipie",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What to check before buying a ready-made admin panel template",
+            "url": "https://dev.to/mehedirafi/what-to-check-before-buying-a-ready-made-admin-panel-template-1p6e",
+            "description": "Part 1 of Before You Buy Code.\n\nI build admin panels for clinic and small business sites, and I have bought templates to save time. Two of them cost me more time than they saved. The screenshots were fine. The faults sat in parts a screenshot cannot show: a login with no roles behind it, a package w",
+            "detailed_content": "What to check before buying a ready-made admin panel template - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMehedi Mansur Rafi\nPosted on\nNov 13\nWhat to check before buying a ready-made admin panel template\n# laravel\n# webdev\n# beginners\n# productivity\nPart 1 of Before You Buy Code.\nI build admin panels for clinic and small business sites, and I have bought templates to save time. Two of them cost me more time than they saved. The screenshots were fine. The faults sat in parts a screenshot cannot show: a login with no roles behind it, a package with half the pages from the sales page, and setup docs that stopped before the first error.\nNow I run the same checks on every Laravel admin panel template before I pay. Each check has a good sign and a red flag, and most take minutes with a demo or a file list. At the end I run the list on AdminForge, the kit I sell.\nCheck 1: log in, then log in as someone with fewer rights\nOpen the demo and sign in as admin. Create a second account with a staff role, sign in as that account, and open a settings page by typing its address.\nGood sign: the second account sees fewer pages, and the server refuses the admin pages at the typed address.\nRed flag: the sales page lists roles, and the demo has one login that opens everything. A menu that hides links is decoration. When the second account can open the user list by address, permissions are missing, and adding them later means touching every page.\nCheck 2: count the Blade files and open the layout\nAsk for the file list, or open the package and coun",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "AgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run",
+            "url": "https://dev.to/fun_fun_19313eced54af3c68/agentedseo-review-a-wordpress-seo-plugin-your-ai-agent-can-run-3039",
+            "description": "AI agents can already write and publish WordPress posts. The weak spot has been SEO: once an agent starts editing titles and meta descriptions behind the scenes, you lose track of what it changed and why. AgentedSEO is a plugin built to close that gap. Here is what it does, what the launch deal cost",
+            "detailed_content": "AgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSoloAgentFlow\nPosted on\nNov 13\n\u2022\nOriginally published at\nsoloagentflow.com\nAgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run\n# wordpress\n# ai\n# seo\n# automation\nAI agents can already write and publish WordPress posts. The weak spot has been SEO: once an agent starts editing titles and meta descriptions behind the scenes, you lose track of what it changed and why. AgentedSEO is a plugin built to close that gap. Here is what it does, what the launch deal costs, and three realistic ways to turn it into paid work.\nTL;DR\nAgentedSEO gives AI agents their own WordPress login limited to SEO-only rights.\nEvery agent change shows before and after, needs approval on live pages, and can be undone.\nThe founder reports a first $129 sale two hours after posting the launch.\nLaunch lifetime pricing runs from $49 to $199 and, per the founder, closes December 1.\nWhy this plugin exists\nThe founder runs a WordPress agency in Pune and builds plugins on the side. The idea came from the founder's own site, where an AI agent already writes and publishes the posts. For SEO, though, the agent still needed a second plugin, and when it edited meta data through the WordPress REST API, the founder says there was no way to see what it had changed.\nThat is a familiar problem for anyone automating content. An agent that silently rewrites a live page's SEO fields is a liability, not a time saver. So the founder built an SEO plugin where th",
+            "content_source": "web_page"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Schema Drift vs. Semantic Drift in Data Pipelines",
+            "url": "https://www.freecodecamp.org/news/schema-drift-vs-semantic-drift-in-data-pipelines/",
+            "description": "When a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning c",
+            "detailed_content": "Schema Drift vs. Semantic Drift in Data Pipelines\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 13, 2026\n/\n#Data pipelines\nSchema Drift vs. Semantic Drift in Data Pipelines\nYemi Ojedapo\nWhen a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning changes (known as semantic drift), the pipeline can continue running normally, allowing the problem to go unnoticed.\nThis happens because a schema describes the structure of data, not what the values actually represent. It tells us which fields exist, their data types, and whether they can contain null values, but not whether a timestamp uses UTC, a durability score should range from 10 to 100, or an empty string means something different from null.\nAs a result, most pipeline checks are designed to catch obvious errors, such as missing columns or incorrect data types, but often fail to detect less obvious problems where the data looks correct but its meaning or values have changed.\nI wanted to see how far this limitation reaches in practice, so I built a small lab where I introduced nine types of pipeline failures and tested four detectors against each one. This article looks at what each detector caught and what happened when changes went unnoticed and corrupted the data.\nYou can find the code\nhere\nand reproduce the experiment with a few commands.\nWhat We'll Cover:\nHow the Lab Works\nUnderstanding Data Shape and Meaning\nThe Results Matrix\nDetecting Changes in Data Shape\nSemantic Changes: What the Wrong Numbers Looked Like\nDamage vs. Visibility\nDetecting Changes in Data Meaning\nWhat this Experiment Suggests\nLimitations\nPrerequisi",
+            "content_source": "web_page"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-image-storyboard-to-pdf-tool-javascript/",
+            "description": "Before anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens a",
+            "detailed_content": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 13, 2026\n/\n#JavaScript\nHow to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript\nBhavin Sheth\nBefore anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens and how long it lasts.\nMost people already have those pictures. They are phone photos, screenshots, rough sketches or AI-generated frames sitting in a folder. What they don't have is a quick way to turn that folder into clean, numbered sheets they can print or send to a client.\nIn this tutorial, you'll build a browser-based tool that does exactly that. You'll add a set of images, give each one a title, a description and a duration, choose a layout, preview the sheets, and download a print-ready PDF.\nEverything runs in the browser. The images are never uploaded to a server, which matters when the frames are unreleased product shots or client work.\nAlong the way, you'll learn how to fix sideways phone photos, sort files the way people expect, lay out a page in PDF points, wrap text on a canvas, save a draft with IndexedDB, and build a PDF that keeps photos sharp without making the file huge.\nI built this tool for AllInOneTools, where it runs as the Image Storyboard to PDF tool. This article walks through a simplified version that you can build in three files.\nWhat We'll Cover\nWhat This Image Storyboard Tool Does and How It Works\nProject Setup\nLibraries and Browser APIs Used\nCreating the HTML Layout\nAdding and Loading Images\nManaging the Frames\nBuilding the Board Settings\nLaying Out a S",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 888,
+            "forks": 163,
+            "language": "Rust",
+            "detailed_content": "<div align=\"center\">\n\n<img src=\"assets/daozai-logo.png\" width=\"112\" alt=\"\u5c9b\u4ed4\" />\n\n# \u5c9b\u4ed4 \u00b7 Daozai\n\n**\u4e00\u5ea7\u5c0f\u5c9b\uff0c\u88c5\u4e0b\u684c\u9762\u65e5\u5e38\u3002**\n\nWindows \u684c\u9762\u4f19\u4f34\uff0c\u628a\u6d88\u606f\u3001\u97f3\u4e50\u3001\u65e5\u7a0b\u3001\u5929\u6c14\u548c AI \u989d\u5ea6\u653e\u5230\u624b\u8fb9\u3002\n\n[![\u6700\u65b0\u7248\u672c](https://img.shields.io/github/v/release/Renly1994/xiaotang-daozai?color=7955b8&label=\u6700\u65b0\u7248\u672c)](https://github.com/Renly1994/xiaotang-daozai/releases/latest)\n[![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D4)](#\u4e0b\u8f7d\u5b89\u88c5)\n[![\u5f00\u6e90\u8bb8\u53ef](https://img.shields.io/badge/License-MIT-3cbf91)](LICENSE)\n[![Rust \u4e0e egui](https://img.shields.io/badge/Rust-egui-8b6ca8)](#\u4ece\u6e90\u7801\u6784\u5efa\u4e0e\u53c2\u4e0e\u5f00\u53d1)\n\n**[\u4e0b\u8f7d Windows \u7248](https://github.com/Renly1994/xiaotang-daozai/releases/latest)** \u00b7 [\u4f7f\u7528\u6307\u5357](docs/USAGE.md) \u00b7 [\u66f4\u65b0\u8bb0\u5f55](CHANGELOG.md) \u00b7 [\u53cd\u9988\u95ee\u9898](https://github.com/Renly1994/xiaotang-daozai/issues)\n\n</div>\n\n\u5c9b\u4ed4\u662f\u4e00\u6b3e\u5f00\u6e90\u7684 Windows \u684c\u9762\u5c0f\u5de5\u5177\u3002\u5e73\u65f6\u6536\u8d77\u5728\u5c4f\u5e55\u8fb9\u7f18\uff0c\u9f20\u6807\u9760\u8fd1\u5c31\u5c55\u5f00\uff1b\u5207\u6b4c\u3001\u770b\u65e5\u7a0b\u3001\u590d\u5236\u9a8c\u8bc1\u7801\u3001\u8bb0\u4e00\u6761\u5f85\u529e\uff0c\u90fd\u80fd\u987a\u624b\u5b8c\u6210\u3002\u5c0f\u5c9b\u91cc\u7684\u4f19\u4f34\u4f1a\u7728\u773c\u3001\u6253\u76f9\u3001\u559d\u6c34\uff0c\u4e5f\u4f1a\u8ddf\u7740\u97f3\u4e50\u5531\u6b4c\u3002\n\n\u4f60\u53ef\u4ee5\u9009\u5218\u6d77\u6216\u80f6\u56ca\uff0c\u653e\u5728\u9876\u90e8\u3001\u5de6\u4fa7\u6216\u53f3\u4fa7\uff0c\u53ea\u4fdd\u7559\u81ea\u5df1\u9700\u8981\u7684\u529f\u80fd\u3002\u5c9b\u4ed4\u4f7f\u7528 Rust \u548c egui \u6784\u5efa\uff0c\u4e0d\u4f9d\u8d56 Electron\u3002\n\n## \u5fae\u4fe1\u91cc\u6709\u65b0\u6d88\u606f\uff0c\u770b\u4e00\u773c\u5c9b\u8fb9\n\n![\u5fae\u4fe1\u548c QQ \u672a\u8bfb\uff1a\u6536\u8d77\u65f6\u663e\u793a\u56fe\u6807\uff0c\u5c55\u5f00\u540e\u70b9\u51fb\u5207\u6362\u5bf9\u5e94\u7a97\u53e3](docs/images/readme/notifications.webp)\n\n- **\u5fae\u4fe1\u3001QQ \u672a\u8bfb\u63d0\u9192**\uff1a\u6536\u8d77\u65f6\u4eae\u8d77\u56fe\u6807\u548c\u7ea2\u70b9\uff0c\u5c55\u5f00\u540e\u5728\u9762\u677f\u65c1\u67e5\u770b\uff0c\u70b9\u51fb\u5207\u6362\u5230\u5bf9\u5e94\u7a97\u53e3\u3002\n- **\u5fae\u4fe1\u591a\u5f00\u5206\u5f00\u770b**\uff1a\u4e0d\u540c\u8d26\u53f7\u5206\u522b\u663e\u793a\uff0c\u70b9\u51fb\u5bf9\u5e94\u8d26\u53f7\u7684\u672a\u8bfb\u56fe\u6807\u5373\u53ef\u5207\u6362\u3002\n- **\u6309\u9700\u663e\u793a\u901a\u77e5\u6b63\u6587**\uff1a\u9ed8\u8ba4\u9690\u85cf\u6b63\u6587\uff1b\u5f00\u542f\u9884\u89c8\u540e\u4ecd\u906e\u7f69\u8bc6\u522b\u51fa\u7684\u9a8c\u8bc1\u7801\u3002\n- **\u5fae\u4fe1\u63d0\u9192\u4e0d\u8bfb\u53d6\u804a\u5929\u6b63\u6587**\uff1a\u6839\u636e\u4efb\u52a1\u680f\u95ea\u52a8\u63d0\u793a\u65b0\u6d88\u606f\u3002\u5fae\u4fe1\u7f29\u5728\u6258\u76d8\u65f6\uff0c\u53ef\u9009\u5f00\u542f\u300c\u6258\u76d8\u4e00\u952e\u5524\u8d77\u5fae\u4fe1\u300d\u3002\n\n\u5f00\u542f\u65b9\u5f0f\uff1a**\u8bbe\u7f6e \u2192 \u901a\u77e5\u3001\u90ae\u7bb1\u4e0e\u65e5\u7a0b \u2192 \u901a\u77e5**\u3002\u5fae\u4fe1\u5f00\u542f\u300c\u5fae\u4fe1\u65b0\u6d88\u606f\u63d0\u9192\u300d\uff1bQQ \u9009\u62e9\u300c\u53ea\u8fde\u63a5 QQ\u300d\uff0c\u5e76\u5728 QQ \u4e2d\u542f\u7528 Windows \u7cfb\u7edf\u901a\u77e5\u3002\n\n## \u6362\u4e2a\u76ae\u80a4\uff0c\u4e5f\u6362\u4e2a\u4f4d\u7f6e\n\n![\u4e94\u6b3e\u76ae\u80a4\uff1a\u7ecf\u5178\u9ed1\u3001\u5976\u6cb9\u3001\u6bdb\u73bb\u7483\u6d45\u8272\u3001\u6bdb\u73bb\u7483\u6df1\u8272\u3001\u60ac\u6d6e\u4e91\uff1b\u5218\u6d77\u548c\u80f6\u56ca\u4e24\u79cd\u5f62\u6001](docs/images/readme/appearance.webp)\n\n**\u4e94\u6b3e\u76ae\u80a4 \u00d7 \u4e24\u79cd\u5f62\u6001\uff0c\u81ea\u7531\u642d\u914d\u3002** \u7ecf\u5178\u9ed1\u3001\u5976\u6cb9\u3001\u6bdb\u73bb\u7483\u00b7\u6d45\u3001\u6bdb\u73bb\u7483\u00b7\u6df1\u548c\u300c\u60ac\u6d6e\u4e91\u300d\uff0c\u90fd\u80fd\u642d\u914d\u5218\u6d77\u6216\u80f6\u56ca\u3002\u6bdb\u73bb\u7483\u900f\u51fa\u8eab\u540e\u7684\u684c\u9762\uff1b\u60ac\u6d6e\u4e91\u968f\u4e13\u8f91\u5c01\u9762\u6362\u8272\uff0c\u5149\u6655\u8ddf\u7740\u9f20\u6807\u79fb\u52a8\u3002\n\n![\u9876\u90e8\u3001\u5de6\u4fa7\u548c\u53f3\u4fa7\u505c\u9760\uff0c\u4ee5\u53ca\u4fa7\u8fb9\u6536\u8d77\u4e0e\u5c55\u5f00\u72b6\u6001](docs/images/readme/docking.webp)\n\n- **\u4e09\u8fb9\u505c\u9760**\uff1a\u9876\u90e8\u6a2a\u5411\u5c55\u5f00\uff0c\u5de6\u53f3\u4fa7\u8fb9\u6536\u8d77\u4e3a\u7ad6\u5411\u80f6\u56ca\uff0c\u9760\u8fd1\u540e\u4ece\u5c4f\u5e55\u8fb9\u7f18\u5c55\u5f00\u3002\n- **\u5927\u5c0f\u4e0e\u4f4d\u7f6e\u53ef\u8c03**\uff1a\u5c9b\u4f53\u5927\u5c0f\u652f\u6301 80%\u2013140%\uff1b\u9876\u90e8\u53ef\u5de6\u53f3\u79fb\u52a8\uff0c\u4fa7\u8fb9\u53ef\u4e0a\u4e0b\u8c03\u6574\u3002\n- **\u591a\u5c4f\u4e0e\u81ea\u52a8\u907f\u8ba9**\uff1a\u8ddf\u968f\u4e3b\u5c4f\u6216\u56fa\u5b9a\u5230\u6307\u5b9a\u663e\u793a\u5668\uff1b\u6307\u5b9a\u5e94\u7528\u8986\u76d6\u5c0f\u5c9b\u65f6\uff0c\u53ef\u81ea\u52a8\u6536\u6210\u8d34\u8fb9\u7ec6\u7ebf\u3002\n- **\u6309\u4e60\u60ef\u663e\u793a**\uff1a\u652f\u6301\u6781\u7b80\u6a21\u5f0f\u300112\uff0f24 \u5c0f\u65f6\u5236\uff0c\u4ee5\u53ca\u529f\u80fd\u9875\u9762\u5f00\u5173\u4e0e\u62d6\u52a8\u6392\u5e8f\u3002\n\n\u5728 **\u8bbe\u7f6e \u2192 \u5e38\u89c4 \u2192 \u5c9b\u4f53\u5916\u89c2\uff0f\u5c9b\u4f53\u663e\u793a** \u4e2d\u8c03\u6574\u3002\u5c9b\u4e0a\u5355\u884c\u6b4c\u8bcd\u76ee\u524d\u652f\u6301\u9876\u90e8\u505c\u9760\u3002\n\n## \u542c\u6b4c\u65f6\uff0c\u6b4c\u8bcd\u5c31\u5728\u62ac\u773c\u5904\n\n![\u97f3\u4e50\u64ad\u653e\u63a7\u5236\u3001\u5c55\u5f00\u6b4c\u8bcd\u4e0e\u6536\u8d77\u72b6\u6001\u4e0b\u7684\u5c9b\u4e0a\u5355\u884c\u6b4c\u8bcd](docs/images/readme/music.w",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match documentation regarding Rust, Windows, and features."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Sell one API call to an agent",
+            "url": "https://dev.to/dami14_14/sell-one-api-call-to-an-agent-1a4p",
+            "description": "If an agent needs to buy access to an API, payment and execution need to be tracked separately. This tutorial walks through a test purchase, checks settlement, and reserves one authorized lookup.\n\nQuote a test purchase, confirm payment, and reserve one authorized execution.\n\n\n  \n  \n  What you will b",
+            "detailed_content": "Sell one API call to an agent - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDAMILARE OLALEYE\nPosted on\nNov 13\n\u2022\nOriginally published at\nchitmark.com\nSell one API call to an agent\n# ai\n# api\n# stripe\n# typescript\nIf an agent needs to buy access to an API, payment and execution need to be tracked separately. This tutorial walks through a test purchase, checks settlement, and reserves one authorized lookup.\nQuote a test purchase, confirm payment, and reserve one authorized execution.\nWhat you will build\nA buyer agent purchases one fixed-price lookup and the seller delivers it after payment settles and the seller's own policy permits it. The examples use TypeScript and Test credentials. Your application supplies durable storage, its authorization policy, and the actual lookup.\nYou need separate seller and buyer workspaces, a seller test payment account, a 100 USD cents API-call resource, and Test keys with\ncharge:budget ,\ncharge:buy , and\ncharge:fulfill\nfor their respective roles. Follow\nseller and buyer setup\nfirst. Keep all keys on your servers and use the same environment throughout.\nInstall\n@chitmark/sdk\nin a TypeScript project. Set\nCHITMARK_BUYER_BUDGET_KEY ,\nCHITMARK_BUYER_KEY , and\nCHITMARK_SELLER_FULFILL_KEY\nto the corresponding Test keys. Set\nCHITMARK_SELLER_ID ,\nCHITMARK_BUYER_ID , and\nCHITMARK_RESOURCE_ID\nto the IDs from setup, and\nCHITMARK_OPERATION_ID\nto a new, durable ID for this lookup.\nCHITMARK_API_BASE_URL\nis optional and defaults to the production API endpoint. Run the buyer example in your TypeScript runtime; th",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately reflect the tutorial's content and purpose."
+          },
+          {
+            "source": "Dev.to",
+            "title": "I cut my CI wait from 25 minutes to about 12 and checked that no test was dropped",
+            "url": "https://dev.to/miguel_shinyenyi_e2291c8c/i-cut-my-ci-wait-from-25-minutes-to-about-12-and-checked-that-no-test-was-dropped-3n25",
+            "description": "The wait\n\n\numwayi-os is a Python command line with a large test suite. It has more than 2,000 tests. They run on every pull request, on Python 3.10, 3.11, 3.12 and 3.13. The core uses only the standard library, so the tests start real child processes in temporary folders. That makes them thorough an",
+            "detailed_content": "I cut my CI wait from 25 minutes to about 12 and checked that no test was dropped - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMiguel Shinyenyi\nPosted on\nNov 13\n\u2022\nOriginally published at\nmiguel-shinyenyi.github.io\nI cut my CI wait from 25 minutes to about 12 and checked that no test was dropped\n# engineering\n# testing\n# ci\n# buildinginpublic\nThe wait\numwayi-os is a Python command line with a large test suite. It has more than 2,000 tests. They run on every pull request, on Python 3.10, 3.11, 3.12 and 3.13. The core uses only the standard library, so the tests start real child processes in temporary folders. That makes them thorough and slow. The code is public:\nhttps://github.com/Miguel-Shinyenyi/umwayi-os\nOn Nov 12 I measured one job on one pull request: 24.9 minutes. Each job ran the whole suite, and one push could start two runs of four jobs each. The tests alone took about 1,810 seconds on Python 3.11.\nI build this project with several AI builders working in parallel. Each pull request is reviewed and then merged. A 25 minute wait on each push slows every round of review.\nBefore: one push\n-------------------------\npush\n+- run 1: 4 jobs\n+- run 2: 4 jobs\neach job: all tests\neach job: about 25 min\n-------------------------\nStep 1: stop running the same thing twice\nThe first change was small (pull request 59). CI ran on pull requests only, and a newer push cancelled the older run. One push now means one run of four jobs. I also cached the npm download. That saved little: the whole Node step was 0.4 minutes of a 24.9 minute jo",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the documentation regarding test count and Python versions."
+          },
+          {
+            "source": "Dev.to",
+            "title": "A Shopify CSV checker with line-level reports and an n8n import gate",
+            "url": "https://dev.to/didyouseethis212sys/a-shopify-csv-checker-with-line-level-reports-and-an-n8n-import-gate-2p2f",
+            "description": "Disclosure: I maintain Catalog Import Guard, including its paid API. This article was prepared with AI assistance, and the sample results and workflow execution were checked before publication.\n\nA product CSV can be valid CSV and still contain an accidental duplicate variant, a price field with a cu",
+            "detailed_content": "A Shopify CSV checker with line-level reports and an n8n import gate - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\ndidyouseethis212-sys\nPosted on\nNov 13\n\u2022\nFully Autonomous\nA Shopify CSV checker with line-level reports and an n8n import gate\n# showdev\n# shopify\n# webdev\nDisclosure: I maintain Catalog Import Guard, including its paid API. This article was prepared with AI assistance, and the sample results and workflow execution were checked before publication.\nA product CSV can be valid CSV and still contain an accidental duplicate variant, a price field with a currency symbol, or an empty field that changes an existing value during an overwrite. I built a small checker around that pre-import step.\nTry the browser checker\n\u2014 no account, API key or Shopify installation is required. The CSV is checked on your device.\nAn example you can reproduce\nLoad the built-in example, or paste this CSV and choose\nUpdate products :\nURL handle,Title,Option1 name,Option1 value,Price,Vendor\nlinen-shirt,Linen Shirt,Size,S,49.00,\nlinen-shirt,,,S,$39.00,\nThe report contains two errors and one warning:\nPhysical line\nFinding\nWhy it needs review\n2\nBlank Vendor overwrite warning\nWith overwrite enabled, an empty vendor can clear an existing value.\n3\nDuplicate variant\nSize S already appears within the same product handle.\n3\nPrice format\nThe price field expects a number without a currency symbol.\nThe checker reports physical line numbers, including files with quoted multiline cells. It does not guess what a price should be or change a store.\nUsing the same ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the disclosure and problem description in the documentation."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Recognize an agent in your API",
+            "url": "https://dev.to/dami14_14/recognize-an-agent-in-your-api-fcm",
+            "description": "When an agent calls your API, knowing whether it has been seen before can help your application provide continuity. This tutorial shows how to resolve an agent proof and handle the result in a server-side endpoint.\n\nResolve an incoming agent proof and handle recognized, unknown, and unavailable iden",
+            "detailed_content": "Recognize an agent in your API - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDAMILARE OLALEYE\nPosted on\nNov 13\n\u2022\nOriginally published at\nchitmark.com\nRecognize an agent in your API\n# ai\n# api\n# webdev\n# security\nWhen an agent calls your API, knowing whether it has been seen before can help your application provide continuity. This tutorial shows how to resolve an agent proof and handle the result in a server-side endpoint.\nResolve an incoming agent proof and handle recognized, unknown, and unavailable identity evidence.\nWhat you will build\nAdd a server-side endpoint that resolves an incoming agent proof and returns a different response for recognized agents, unknown visitors, and unavailable identity evidence. Attribution provides evidence for your application's access policy; recognition alone does not authorize an action.\nYou need Node.js or Python, a Chitmark workspace with Attribution enabled, a Test key with\nattribution:read , and your site's exact public HTTPS origin. To test recognition, you also need an enrolled agent and a fresh proof for that site. The\ntwo-website example\nwalks through enrollment and signing.\nInstall the SDK and configure your site\nUse SDK version 0.9.0 or later for network proofs. Create a Test API key with\nattribution:read\nin your site's workspace. Set\nCHITMARK_API_KEY\non the server and set\nCHITMARK_SITE\nto your exact public HTTPS origin, for example\nhttps://app.example.com\nwithout a trailing slash. The SDK uses\nhttps://api.chitmark.com\nby default.\nGive the visiting agent your workspace ID, recipie",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the tutorial's goal and scope."
+          },
+          {
+            "source": "Dev.to",
+            "title": "What to check before buying a ready-made admin panel template",
+            "url": "https://dev.to/mehedirafi/what-to-check-before-buying-a-ready-made-admin-panel-template-1p6e",
+            "description": "Part 1 of Before You Buy Code.\n\nI build admin panels for clinic and small business sites, and I have bought templates to save time. Two of them cost me more time than they saved. The screenshots were fine. The faults sat in parts a screenshot cannot show: a login with no roles behind it, a package w",
+            "detailed_content": "What to check before buying a ready-made admin panel template - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMehedi Mansur Rafi\nPosted on\nNov 13\nWhat to check before buying a ready-made admin panel template\n# laravel\n# webdev\n# beginners\n# productivity\nPart 1 of Before You Buy Code.\nI build admin panels for clinic and small business sites, and I have bought templates to save time. Two of them cost me more time than they saved. The screenshots were fine. The faults sat in parts a screenshot cannot show: a login with no roles behind it, a package with half the pages from the sales page, and setup docs that stopped before the first error.\nNow I run the same checks on every Laravel admin panel template before I pay. Each check has a good sign and a red flag, and most take minutes with a demo or a file list. At the end I run the list on AdminForge, the kit I sell.\nCheck 1: log in, then log in as someone with fewer rights\nOpen the demo and sign in as admin. Create a second account with a staff role, sign in as that account, and open a settings page by typing its address.\nGood sign: the second account sees fewer pages, and the server refuses the admin pages at the typed address.\nRed flag: the sales page lists roles, and the demo has one login that opens everything. A menu that hides links is decoration. When the second account can open the user list by address, permissions are missing, and adding them later means touching every page.\nCheck 2: count the Blade files and open the layout\nAsk for the file list, or open the package and coun",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the author's background and specific examples in the text."
+          },
+          {
+            "source": "Dev.to",
+            "title": "AgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run",
+            "url": "https://dev.to/fun_fun_19313eced54af3c68/agentedseo-review-a-wordpress-seo-plugin-your-ai-agent-can-run-3039",
+            "description": "AI agents can already write and publish WordPress posts. The weak spot has been SEO: once an agent starts editing titles and meta descriptions behind the scenes, you lose track of what it changed and why. AgentedSEO is a plugin built to close that gap. Here is what it does, what the launch deal cost",
+            "detailed_content": "AgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSoloAgentFlow\nPosted on\nNov 13\n\u2022\nOriginally published at\nsoloagentflow.com\nAgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run\n# wordpress\n# ai\n# seo\n# automation\nAI agents can already write and publish WordPress posts. The weak spot has been SEO: once an agent starts editing titles and meta descriptions behind the scenes, you lose track of what it changed and why. AgentedSEO is a plugin built to close that gap. Here is what it does, what the launch deal costs, and three realistic ways to turn it into paid work.\nTL;DR\nAgentedSEO gives AI agents their own WordPress login limited to SEO-only rights.\nEvery agent change shows before and after, needs approval on live pages, and can be undone.\nThe founder reports a first $129 sale two hours after posting the launch.\nLaunch lifetime pricing runs from $49 to $199 and, per the founder, closes December 1.\nWhy this plugin exists\nThe founder runs a WordPress agency in Pune and builds plugins on the side. The idea came from the founder's own site, where an AI agent already writes and publishes the posts. For SEO, though, the agent still needed a second plugin, and when it edited meta data through the WordPress REST API, the founder says there was no way to see what it had changed.\nThat is a familiar problem for anyone automating content. An agent that silently rewrites a live page's SEO fields is a liability, not a time saver. So the founder built an SEO plugin where th",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims align with the plugin description and launch details."
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Schema Drift vs. Semantic Drift in Data Pipelines",
+            "url": "https://www.freecodecamp.org/news/schema-drift-vs-semantic-drift-in-data-pipelines/",
+            "description": "When a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning c",
+            "detailed_content": "Schema Drift vs. Semantic Drift in Data Pipelines\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 13, 2026\n/\n#Data pipelines\nSchema Drift vs. Semantic Drift in Data Pipelines\nYemi Ojedapo\nWhen a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning changes (known as semantic drift), the pipeline can continue running normally, allowing the problem to go unnoticed.\nThis happens because a schema describes the structure of data, not what the values actually represent. It tells us which fields exist, their data types, and whether they can contain null values, but not whether a timestamp uses UTC, a durability score should range from 10 to 100, or an empty string means something different from null.\nAs a result, most pipeline checks are designed to catch obvious errors, such as missing columns or incorrect data types, but often fail to detect less obvious problems where the data looks correct but its meaning or values have changed.\nI wanted to see how far this limitation reaches in practice, so I built a small lab where I introduced nine types of pipeline failures and tested four detectors against each one. This article looks at what each detector caught and what happened when changes went unnoticed and corrupted the data.\nYou can find the code\nhere\nand reproduce the experiment with a few commands.\nWhat We'll Cover:\nHow the Lab Works\nUnderstanding Data Shape and Meaning\nThe Results Matrix\nDetecting Changes in Data Shape\nSemantic Changes: What the Wrong Numbers Looked Like\nDamage vs. Visibility\nDetecting Changes in Data Meaning\nWhat this Experiment Suggests\nLimitations\nPrerequisi",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately describe the difference between schema and semantic drift."
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-image-storyboard-to-pdf-tool-javascript/",
+            "description": "Before anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens a",
+            "detailed_content": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 13, 2026\n/\n#JavaScript\nHow to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript\nBhavin Sheth\nBefore anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens and how long it lasts.\nMost people already have those pictures. They are phone photos, screenshots, rough sketches or AI-generated frames sitting in a folder. What they don't have is a quick way to turn that folder into clean, numbered sheets they can print or send to a client.\nIn this tutorial, you'll build a browser-based tool that does exactly that. You'll add a set of images, give each one a title, a description and a duration, choose a layout, preview the sheets, and download a print-ready PDF.\nEverything runs in the browser. The images are never uploaded to a server, which matters when the frames are unreleased product shots or client work.\nAlong the way, you'll learn how to fix sideways phone photos, sort files the way people expect, lay out a page in PDF points, wrap text on a canvas, save a draft with IndexedDB, and build a PDF that keeps photos sharp without making the file huge.\nI built this tool for AllInOneTools, where it runs as the Image Storyboard to PDF tool. This article walks through a simplified version that you can build in three files.\nWhat We'll Cover\nWhat This Image Storyboard Tool Does and How It Works\nProject Setup\nLibraries and Browser APIs Used\nCreating the HTML Layout\nAdding and Loading Images\nManaging the Frames\nBuilding the Board Settings\nLaying Out a S",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the introductory description of the storyboard tool."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 888,
+            "forks": 163,
+            "language": "Rust",
+            "detailed_content": "<div align=\"center\">\n\n<img src=\"assets/daozai-logo.png\" width=\"112\" alt=\"\u5c9b\u4ed4\" />\n\n# \u5c9b\u4ed4 \u00b7 Daozai\n\n**\u4e00\u5ea7\u5c0f\u5c9b\uff0c\u88c5\u4e0b\u684c\u9762\u65e5\u5e38\u3002**\n\nWindows \u684c\u9762\u4f19\u4f34\uff0c\u628a\u6d88\u606f\u3001\u97f3\u4e50\u3001\u65e5\u7a0b\u3001\u5929\u6c14\u548c AI \u989d\u5ea6\u653e\u5230\u624b\u8fb9\u3002\n\n[![\u6700\u65b0\u7248\u672c](https://img.shields.io/github/v/release/Renly1994/xiaotang-daozai?color=7955b8&label=\u6700\u65b0\u7248\u672c)](https://github.com/Renly1994/xiaotang-daozai/releases/latest)\n[![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D4)](#\u4e0b\u8f7d\u5b89\u88c5)\n[![\u5f00\u6e90\u8bb8\u53ef](https://img.shields.io/badge/License-MIT-3cbf91)](LICENSE)\n[![Rust \u4e0e egui](https://img.shields.io/badge/Rust-egui-8b6ca8)](#\u4ece\u6e90\u7801\u6784\u5efa\u4e0e\u53c2\u4e0e\u5f00\u53d1)\n\n**[\u4e0b\u8f7d Windows \u7248](https://github.com/Renly1994/xiaotang-daozai/releases/latest)** \u00b7 [\u4f7f\u7528\u6307\u5357](docs/USAGE.md) \u00b7 [\u66f4\u65b0\u8bb0\u5f55](CHANGELOG.md) \u00b7 [\u53cd\u9988\u95ee\u9898](https://github.com/Renly1994/xiaotang-daozai/issues)\n\n</div>\n\n\u5c9b\u4ed4\u662f\u4e00\u6b3e\u5f00\u6e90\u7684 Windows \u684c\u9762\u5c0f\u5de5\u5177\u3002\u5e73\u65f6\u6536\u8d77\u5728\u5c4f\u5e55\u8fb9\u7f18\uff0c\u9f20\u6807\u9760\u8fd1\u5c31\u5c55\u5f00\uff1b\u5207\u6b4c\u3001\u770b\u65e5\u7a0b\u3001\u590d\u5236\u9a8c\u8bc1\u7801\u3001\u8bb0\u4e00\u6761\u5f85\u529e\uff0c\u90fd\u80fd\u987a\u624b\u5b8c\u6210\u3002\u5c0f\u5c9b\u91cc\u7684\u4f19\u4f34\u4f1a\u7728\u773c\u3001\u6253\u76f9\u3001\u559d\u6c34\uff0c\u4e5f\u4f1a\u8ddf\u7740\u97f3\u4e50\u5531\u6b4c\u3002\n\n\u4f60\u53ef\u4ee5\u9009\u5218\u6d77\u6216\u80f6\u56ca\uff0c\u653e\u5728\u9876\u90e8\u3001\u5de6\u4fa7\u6216\u53f3\u4fa7\uff0c\u53ea\u4fdd\u7559\u81ea\u5df1\u9700\u8981\u7684\u529f\u80fd\u3002\u5c9b\u4ed4\u4f7f\u7528 Rust \u548c egui \u6784\u5efa\uff0c\u4e0d\u4f9d\u8d56 Electron\u3002\n\n## \u5fae\u4fe1\u91cc\u6709\u65b0\u6d88\u606f\uff0c\u770b\u4e00\u773c\u5c9b\u8fb9\n\n![\u5fae\u4fe1\u548c QQ \u672a\u8bfb\uff1a\u6536\u8d77\u65f6\u663e\u793a\u56fe\u6807\uff0c\u5c55\u5f00\u540e\u70b9\u51fb\u5207\u6362\u5bf9\u5e94\u7a97\u53e3](docs/images/readme/notifications.webp)\n\n- **\u5fae\u4fe1\u3001QQ \u672a\u8bfb\u63d0\u9192**\uff1a\u6536\u8d77\u65f6\u4eae\u8d77\u56fe\u6807\u548c\u7ea2\u70b9\uff0c\u5c55\u5f00\u540e\u5728\u9762\u677f\u65c1\u67e5\u770b\uff0c\u70b9\u51fb\u5207\u6362\u5230\u5bf9\u5e94\u7a97\u53e3\u3002\n- **\u5fae\u4fe1\u591a\u5f00\u5206\u5f00\u770b**\uff1a\u4e0d\u540c\u8d26\u53f7\u5206\u522b\u663e\u793a\uff0c\u70b9\u51fb\u5bf9\u5e94\u8d26\u53f7\u7684\u672a\u8bfb\u56fe\u6807\u5373\u53ef\u5207\u6362\u3002\n- **\u6309\u9700\u663e\u793a\u901a\u77e5\u6b63\u6587**\uff1a\u9ed8\u8ba4\u9690\u85cf\u6b63\u6587\uff1b\u5f00\u542f\u9884\u89c8\u540e\u4ecd\u906e\u7f69\u8bc6\u522b\u51fa\u7684\u9a8c\u8bc1\u7801\u3002\n- **\u5fae\u4fe1\u63d0\u9192\u4e0d\u8bfb\u53d6\u804a\u5929\u6b63\u6587**\uff1a\u6839\u636e\u4efb\u52a1\u680f\u95ea\u52a8\u63d0\u793a\u65b0\u6d88\u606f\u3002\u5fae\u4fe1\u7f29\u5728\u6258\u76d8\u65f6\uff0c\u53ef\u9009\u5f00\u542f\u300c\u6258\u76d8\u4e00\u952e\u5524\u8d77\u5fae\u4fe1\u300d\u3002\n\n\u5f00\u542f\u65b9\u5f0f\uff1a**\u8bbe\u7f6e \u2192 \u901a\u77e5\u3001\u90ae\u7bb1\u4e0e\u65e5\u7a0b \u2192 \u901a\u77e5**\u3002\u5fae\u4fe1\u5f00\u542f\u300c\u5fae\u4fe1\u65b0\u6d88\u606f\u63d0\u9192\u300d\uff1bQQ \u9009\u62e9\u300c\u53ea\u8fde\u63a5 QQ\u300d\uff0c\u5e76\u5728 QQ \u4e2d\u542f\u7528 Windows \u7cfb\u7edf\u901a\u77e5\u3002\n\n## \u6362\u4e2a\u76ae\u80a4\uff0c\u4e5f\u6362\u4e2a\u4f4d\u7f6e\n\n![\u4e94\u6b3e\u76ae\u80a4\uff1a\u7ecf\u5178\u9ed1\u3001\u5976\u6cb9\u3001\u6bdb\u73bb\u7483\u6d45\u8272\u3001\u6bdb\u73bb\u7483\u6df1\u8272\u3001\u60ac\u6d6e\u4e91\uff1b\u5218\u6d77\u548c\u80f6\u56ca\u4e24\u79cd\u5f62\u6001](docs/images/readme/appearance.webp)\n\n**\u4e94\u6b3e\u76ae\u80a4 \u00d7 \u4e24\u79cd\u5f62\u6001\uff0c\u81ea\u7531\u642d\u914d\u3002** \u7ecf\u5178\u9ed1\u3001\u5976\u6cb9\u3001\u6bdb\u73bb\u7483\u00b7\u6d45\u3001\u6bdb\u73bb\u7483\u00b7\u6df1\u548c\u300c\u60ac\u6d6e\u4e91\u300d\uff0c\u90fd\u80fd\u642d\u914d\u5218\u6d77\u6216\u80f6\u56ca\u3002\u6bdb\u73bb\u7483\u900f\u51fa\u8eab\u540e\u7684\u684c\u9762\uff1b\u60ac\u6d6e\u4e91\u968f\u4e13\u8f91\u5c01\u9762\u6362\u8272\uff0c\u5149\u6655\u8ddf\u7740\u9f20\u6807\u79fb\u52a8\u3002\n\n![\u9876\u90e8\u3001\u5de6\u4fa7\u548c\u53f3\u4fa7\u505c\u9760\uff0c\u4ee5\u53ca\u4fa7\u8fb9\u6536\u8d77\u4e0e\u5c55\u5f00\u72b6\u6001](docs/images/readme/docking.webp)\n\n- **\u4e09\u8fb9\u505c\u9760**\uff1a\u9876\u90e8\u6a2a\u5411\u5c55\u5f00\uff0c\u5de6\u53f3\u4fa7\u8fb9\u6536\u8d77\u4e3a\u7ad6\u5411\u80f6\u56ca\uff0c\u9760\u8fd1\u540e\u4ece\u5c4f\u5e55\u8fb9\u7f18\u5c55\u5f00\u3002\n- **\u5927\u5c0f\u4e0e\u4f4d\u7f6e\u53ef\u8c03**\uff1a\u5c9b\u4f53\u5927\u5c0f\u652f\u6301 80%\u2013140%\uff1b\u9876\u90e8\u53ef\u5de6\u53f3\u79fb\u52a8\uff0c\u4fa7\u8fb9\u53ef\u4e0a\u4e0b\u8c03\u6574\u3002\n- **\u591a\u5c4f\u4e0e\u81ea\u52a8\u907f\u8ba9**\uff1a\u8ddf\u968f\u4e3b\u5c4f\u6216\u56fa\u5b9a\u5230\u6307\u5b9a\u663e\u793a\u5668\uff1b\u6307\u5b9a\u5e94\u7528\u8986\u76d6\u5c0f\u5c9b\u65f6\uff0c\u53ef\u81ea\u52a8\u6536\u6210\u8d34\u8fb9\u7ec6\u7ebf\u3002\n- **\u6309\u4e60\u60ef\u663e\u793a**\uff1a\u652f\u6301\u6781\u7b80\u6a21\u5f0f\u300112\uff0f24 \u5c0f\u65f6\u5236\uff0c\u4ee5\u53ca\u529f\u80fd\u9875\u9762\u5f00\u5173\u4e0e\u62d6\u52a8\u6392\u5e8f\u3002\n\n\u5728 **\u8bbe\u7f6e \u2192 \u5e38\u89c4 \u2192 \u5c9b\u4f53\u5916\u89c2\uff0f\u5c9b\u4f53\u663e\u793a** \u4e2d\u8c03\u6574\u3002\u5c9b\u4e0a\u5355\u884c\u6b4c\u8bcd\u76ee\u524d\u652f\u6301\u9876\u90e8\u505c\u9760\u3002\n\n## \u542c\u6b4c\u65f6\uff0c\u6b4c\u8bcd\u5c31\u5728\u62ac\u773c\u5904\n\n![\u97f3\u4e50\u64ad\u653e\u63a7\u5236\u3001\u5c55\u5f00\u6b4c\u8bcd\u4e0e\u6536\u8d77\u72b6\u6001\u4e0b\u7684\u5c9b\u4e0a\u5355\u884c\u6b4c\u8bcd](docs/images/readme/music.w",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match documentation regarding Rust, Windows, and features.",
+            "why_it_matters": "Shows how Rust\u202f+\u202fegui can deliver a lightweight, Electron\u2011free Windows desktop widget that stays out of the way yet surfaces key info on demand.",
+            "who_cares": "Rust UI developers and engineers looking for performant desktop productivity tools.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Sell one API call to an agent",
+            "url": "https://dev.to/dami14_14/sell-one-api-call-to-an-agent-1a4p",
+            "description": "If an agent needs to buy access to an API, payment and execution need to be tracked separately. This tutorial walks through a test purchase, checks settlement, and reserves one authorized lookup.\n\nQuote a test purchase, confirm payment, and reserve one authorized execution.\n\n\n  \n  \n  What you will b",
+            "detailed_content": "Sell one API call to an agent - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDAMILARE OLALEYE\nPosted on\nNov 13\n\u2022\nOriginally published at\nchitmark.com\nSell one API call to an agent\n# ai\n# api\n# stripe\n# typescript\nIf an agent needs to buy access to an API, payment and execution need to be tracked separately. This tutorial walks through a test purchase, checks settlement, and reserves one authorized lookup.\nQuote a test purchase, confirm payment, and reserve one authorized execution.\nWhat you will build\nA buyer agent purchases one fixed-price lookup and the seller delivers it after payment settles and the seller's own policy permits it. The examples use TypeScript and Test credentials. Your application supplies durable storage, its authorization policy, and the actual lookup.\nYou need separate seller and buyer workspaces, a seller test payment account, a 100 USD cents API-call resource, and Test keys with\ncharge:budget ,\ncharge:buy , and\ncharge:fulfill\nfor their respective roles. Follow\nseller and buyer setup\nfirst. Keep all keys on your servers and use the same environment throughout.\nInstall\n@chitmark/sdk\nin a TypeScript project. Set\nCHITMARK_BUYER_BUDGET_KEY ,\nCHITMARK_BUYER_KEY , and\nCHITMARK_SELLER_FULFILL_KEY\nto the corresponding Test keys. Set\nCHITMARK_SELLER_ID ,\nCHITMARK_BUYER_ID , and\nCHITMARK_RESOURCE_ID\nto the IDs from setup, and\nCHITMARK_OPERATION_ID\nto a new, durable ID for this lookup.\nCHITMARK_API_BASE_URL\nis optional and defaults to the production API endpoint. Run the buyer example in your TypeScript runtime; th",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately reflect the tutorial's content and purpose.",
+            "why_it_matters": "Provides a concrete pattern for selling single\u2011use API calls, separating payment settlement from execution and using a TypeScript SDK to enforce it.",
+            "who_cares": "Backend engineers building API marketplaces, AI\u2011agent platforms, or any pay\u2011per\u2011call service.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "I cut my CI wait from 25 minutes to about 12 and checked that no test was dropped",
+            "url": "https://dev.to/miguel_shinyenyi_e2291c8c/i-cut-my-ci-wait-from-25-minutes-to-about-12-and-checked-that-no-test-was-dropped-3n25",
+            "description": "The wait\n\n\numwayi-os is a Python command line with a large test suite. It has more than 2,000 tests. They run on every pull request, on Python 3.10, 3.11, 3.12 and 3.13. The core uses only the standard library, so the tests start real child processes in temporary folders. That makes them thorough an",
+            "detailed_content": "I cut my CI wait from 25 minutes to about 12 and checked that no test was dropped - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMiguel Shinyenyi\nPosted on\nNov 13\n\u2022\nOriginally published at\nmiguel-shinyenyi.github.io\nI cut my CI wait from 25 minutes to about 12 and checked that no test was dropped\n# engineering\n# testing\n# ci\n# buildinginpublic\nThe wait\numwayi-os is a Python command line with a large test suite. It has more than 2,000 tests. They run on every pull request, on Python 3.10, 3.11, 3.12 and 3.13. The core uses only the standard library, so the tests start real child processes in temporary folders. That makes them thorough and slow. The code is public:\nhttps://github.com/Miguel-Shinyenyi/umwayi-os\nOn Nov 12 I measured one job on one pull request: 24.9 minutes. Each job ran the whole suite, and one push could start two runs of four jobs each. The tests alone took about 1,810 seconds on Python 3.11.\nI build this project with several AI builders working in parallel. Each pull request is reviewed and then merged. A 25 minute wait on each push slows every round of review.\nBefore: one push\n-------------------------\npush\n+- run 1: 4 jobs\n+- run 2: 4 jobs\neach job: all tests\neach job: about 25 min\n-------------------------\nStep 1: stop running the same thing twice\nThe first change was small (pull request 59). CI ran on pull requests only, and a newer push cancelled the older run. One push now means one run of four jobs. I also cached the npm download. That saved little: the whole Node step was 0.4 minutes of a 24.9 minute jo",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the documentation regarding test count and Python versions.",
+            "why_it_matters": "Demonstrates practical CI tricks\u2014cancelling duplicate runs, smarter caching, and test sharding\u2014that cut a 25\u2011minute pipeline in half without losing coverage.",
+            "who_cares": "DevOps engineers and Python developers who maintain large test suites.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "A Shopify CSV checker with line-level reports and an n8n import gate",
+            "url": "https://dev.to/didyouseethis212sys/a-shopify-csv-checker-with-line-level-reports-and-an-n8n-import-gate-2p2f",
+            "description": "Disclosure: I maintain Catalog Import Guard, including its paid API. This article was prepared with AI assistance, and the sample results and workflow execution were checked before publication.\n\nA product CSV can be valid CSV and still contain an accidental duplicate variant, a price field with a cu",
+            "detailed_content": "A Shopify CSV checker with line-level reports and an n8n import gate - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\ndidyouseethis212-sys\nPosted on\nNov 13\n\u2022\nFully Autonomous\nA Shopify CSV checker with line-level reports and an n8n import gate\n# showdev\n# shopify\n# webdev\nDisclosure: I maintain Catalog Import Guard, including its paid API. This article was prepared with AI assistance, and the sample results and workflow execution were checked before publication.\nA product CSV can be valid CSV and still contain an accidental duplicate variant, a price field with a currency symbol, or an empty field that changes an existing value during an overwrite. I built a small checker around that pre-import step.\nTry the browser checker\n\u2014 no account, API key or Shopify installation is required. The CSV is checked on your device.\nAn example you can reproduce\nLoad the built-in example, or paste this CSV and choose\nUpdate products :\nURL handle,Title,Option1 name,Option1 value,Price,Vendor\nlinen-shirt,Linen Shirt,Size,S,49.00,\nlinen-shirt,,,S,$39.00,\nThe report contains two errors and one warning:\nPhysical line\nFinding\nWhy it needs review\n2\nBlank Vendor overwrite warning\nWith overwrite enabled, an empty vendor can clear an existing value.\n3\nDuplicate variant\nSize S already appears within the same product handle.\n3\nPrice format\nThe price field expects a number without a currency symbol.\nThe checker reports physical line numbers, including files with quoted multiline cells. It does not guess what a price should be or change a store.\nUsing the same ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the disclosure and problem description in the documentation.",
+            "why_it_matters": "A line\u2011level CSV validator that catches hidden Shopify import errors and can be gated into an n8n workflow, preventing costly product mistakes.",
+            "who_cares": "Shopify app developers and e\u2011commerce integration engineers.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Recognize an agent in your API",
+            "url": "https://dev.to/dami14_14/recognize-an-agent-in-your-api-fcm",
+            "description": "When an agent calls your API, knowing whether it has been seen before can help your application provide continuity. This tutorial shows how to resolve an agent proof and handle the result in a server-side endpoint.\n\nResolve an incoming agent proof and handle recognized, unknown, and unavailable iden",
+            "detailed_content": "Recognize an agent in your API - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDAMILARE OLALEYE\nPosted on\nNov 13\n\u2022\nOriginally published at\nchitmark.com\nRecognize an agent in your API\n# ai\n# api\n# webdev\n# security\nWhen an agent calls your API, knowing whether it has been seen before can help your application provide continuity. This tutorial shows how to resolve an agent proof and handle the result in a server-side endpoint.\nResolve an incoming agent proof and handle recognized, unknown, and unavailable identity evidence.\nWhat you will build\nAdd a server-side endpoint that resolves an incoming agent proof and returns a different response for recognized agents, unknown visitors, and unavailable identity evidence. Attribution provides evidence for your application's access policy; recognition alone does not authorize an action.\nYou need Node.js or Python, a Chitmark workspace with Attribution enabled, a Test key with\nattribution:read , and your site's exact public HTTPS origin. To test recognition, you also need an enrolled agent and a fresh proof for that site. The\ntwo-website example\nwalks through enrollment and signing.\nInstall the SDK and configure your site\nUse SDK version 0.9.0 or later for network proofs. Create a Test API key with\nattribution:read\nin your site's workspace. Set\nCHITMARK_API_KEY\non the server and set\nCHITMARK_SITE\nto your exact public HTTPS origin, for example\nhttps://app.example.com\nwithout a trailing slash. The SDK uses\nhttps://api.chitmark.com\nby default.\nGive the visiting agent your workspace ID, recipie",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the tutorial's goal and scope.",
+            "why_it_matters": "Shows how to resolve an agent\u2011generated proof on the server, enabling reliable recognition, audit trails, and policy enforcement for AI agents.",
+            "who_cares": "API developers and AI\u2011agent platform engineers concerned with security and continuity.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What to check before buying a ready-made admin panel template",
+            "url": "https://dev.to/mehedirafi/what-to-check-before-buying-a-ready-made-admin-panel-template-1p6e",
+            "description": "Part 1 of Before You Buy Code.\n\nI build admin panels for clinic and small business sites, and I have bought templates to save time. Two of them cost me more time than they saved. The screenshots were fine. The faults sat in parts a screenshot cannot show: a login with no roles behind it, a package w",
+            "detailed_content": "What to check before buying a ready-made admin panel template - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMehedi Mansur Rafi\nPosted on\nNov 13\nWhat to check before buying a ready-made admin panel template\n# laravel\n# webdev\n# beginners\n# productivity\nPart 1 of Before You Buy Code.\nI build admin panels for clinic and small business sites, and I have bought templates to save time. Two of them cost me more time than they saved. The screenshots were fine. The faults sat in parts a screenshot cannot show: a login with no roles behind it, a package with half the pages from the sales page, and setup docs that stopped before the first error.\nNow I run the same checks on every Laravel admin panel template before I pay. Each check has a good sign and a red flag, and most take minutes with a demo or a file list. At the end I run the list on AdminForge, the kit I sell.\nCheck 1: log in, then log in as someone with fewer rights\nOpen the demo and sign in as admin. Create a second account with a staff role, sign in as that account, and open a settings page by typing its address.\nGood sign: the second account sees fewer pages, and the server refuses the admin pages at the typed address.\nRed flag: the sales page lists roles, and the demo has one login that opens everything. A menu that hides links is decoration. When the second account can open the user list by address, permissions are missing, and adding them later means touching every page.\nCheck 2: count the Blade files and open the layout\nAsk for the file list, or open the package and coun",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the author's background and specific examples in the text.",
+            "why_it_matters": "A checklist that reveals hidden pitfalls in ready\u2011made admin panel templates\u2014missing role checks, incomplete pages, and poor docs\u2014saving weeks of debugging.",
+            "who_cares": "Full\u2011stack and Laravel developers evaluating third\u2011party UI kits.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "AgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run",
+            "url": "https://dev.to/fun_fun_19313eced54af3c68/agentedseo-review-a-wordpress-seo-plugin-your-ai-agent-can-run-3039",
+            "description": "AI agents can already write and publish WordPress posts. The weak spot has been SEO: once an agent starts editing titles and meta descriptions behind the scenes, you lose track of what it changed and why. AgentedSEO is a plugin built to close that gap. Here is what it does, what the launch deal cost",
+            "detailed_content": "AgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSoloAgentFlow\nPosted on\nNov 13\n\u2022\nOriginally published at\nsoloagentflow.com\nAgentedSEO Review: A WordPress SEO Plugin Your AI Agent Can Run\n# wordpress\n# ai\n# seo\n# automation\nAI agents can already write and publish WordPress posts. The weak spot has been SEO: once an agent starts editing titles and meta descriptions behind the scenes, you lose track of what it changed and why. AgentedSEO is a plugin built to close that gap. Here is what it does, what the launch deal costs, and three realistic ways to turn it into paid work.\nTL;DR\nAgentedSEO gives AI agents their own WordPress login limited to SEO-only rights.\nEvery agent change shows before and after, needs approval on live pages, and can be undone.\nThe founder reports a first $129 sale two hours after posting the launch.\nLaunch lifetime pricing runs from $49 to $199 and, per the founder, closes December 1.\nWhy this plugin exists\nThe founder runs a WordPress agency in Pune and builds plugins on the side. The idea came from the founder's own site, where an AI agent already writes and publishes the posts. For SEO, though, the agent still needed a second plugin, and when it edited meta data through the WordPress REST API, the founder says there was no way to see what it had changed.\nThat is a familiar problem for anyone automating content. An agent that silently rewrites a live page's SEO fields is a liability, not a time saver. So the founder built an SEO plugin where th",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims align with the plugin description and launch details.",
+            "why_it_matters": "Reviews a WordPress plugin that gives AI agents a scoped SEO role, logs every change, and requires approval\u2014solving the audit gap for automated content pipelines.",
+            "who_cares": "WordPress developers and agencies automating content creation with AI.",
+            "verdict": "READ"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Schema Drift vs. Semantic Drift in Data Pipelines",
+            "url": "https://www.freecodecamp.org/news/schema-drift-vs-semantic-drift-in-data-pipelines/",
+            "description": "When a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning c",
+            "detailed_content": "Schema Drift vs. Semantic Drift in Data Pipelines\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 13, 2026\n/\n#Data pipelines\nSchema Drift vs. Semantic Drift in Data Pipelines\nYemi Ojedapo\nWhen a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning changes (known as semantic drift), the pipeline can continue running normally, allowing the problem to go unnoticed.\nThis happens because a schema describes the structure of data, not what the values actually represent. It tells us which fields exist, their data types, and whether they can contain null values, but not whether a timestamp uses UTC, a durability score should range from 10 to 100, or an empty string means something different from null.\nAs a result, most pipeline checks are designed to catch obvious errors, such as missing columns or incorrect data types, but often fail to detect less obvious problems where the data looks correct but its meaning or values have changed.\nI wanted to see how far this limitation reaches in practice, so I built a small lab where I introduced nine types of pipeline failures and tested four detectors against each one. This article looks at what each detector caught and what happened when changes went unnoticed and corrupted the data.\nYou can find the code\nhere\nand reproduce the experiment with a few commands.\nWhat We'll Cover:\nHow the Lab Works\nUnderstanding Data Shape and Meaning\nThe Results Matrix\nDetecting Changes in Data Shape\nSemantic Changes: What the Wrong Numbers Looked Like\nDamage vs. Visibility\nDetecting Changes in Data Meaning\nWhat this Experiment Suggests\nLimitations\nPrerequisi",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately describe the difference between schema and semantic drift.",
+            "why_it_matters": "Explains the difference between schema drift and semantic drift, exposing a blind spot where pipelines silently accept wrong business meaning and corrupt data.",
+            "who_cares": "Data engineers and ML pipeline owners who need robust data\u2011quality safeguards.",
+            "verdict": "READ"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-image-storyboard-to-pdf-tool-javascript/",
+            "description": "Before anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens a",
+            "detailed_content": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 13, 2026\n/\n#JavaScript\nHow to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript\nBhavin Sheth\nBefore anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens and how long it lasts.\nMost people already have those pictures. They are phone photos, screenshots, rough sketches or AI-generated frames sitting in a folder. What they don't have is a quick way to turn that folder into clean, numbered sheets they can print or send to a client.\nIn this tutorial, you'll build a browser-based tool that does exactly that. You'll add a set of images, give each one a title, a description and a duration, choose a layout, preview the sheets, and download a print-ready PDF.\nEverything runs in the browser. The images are never uploaded to a server, which matters when the frames are unreleased product shots or client work.\nAlong the way, you'll learn how to fix sideways phone photos, sort files the way people expect, lay out a page in PDF points, wrap text on a canvas, save a draft with IndexedDB, and build a PDF that keeps photos sharp without making the file huge.\nI built this tool for AllInOneTools, where it runs as the Image Storyboard to PDF tool. This article walks through a simplified version that you can build in three files.\nWhat We'll Cover\nWhat This Image Storyboard Tool Does and How It Works\nProject Setup\nLibraries and Browser APIs Used\nCreating the HTML Layout\nAdding and Loading Images\nManaging the Frames\nBuilding the Board Settings\nLaying Out a S",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the introductory description of the storyboard tool.",
+            "why_it_matters": "Provides a pure\u2011browser, client\u2011side image\u2011to\u2011PDF storyboard builder that avoids server uploads and can be dropped into any front\u2011end project.",
+            "who_cares": "Front\u2011end JavaScript developers building media\u2011production or client\u2011side publishing tools.",
+            "verdict": "INTEGRATE"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Cool Tool",
+            "title": "Daozai \u2013 a Rust\u2011built Windows desktop information island",
+            "description": "**Daozai is a lightweight, Rust\u2011built Windows desktop widget that surfaces music, notifications, and reminders without Electron.** It lives tucked at the screen edge and expands when the mouse approaches, letting you glance at lyrics, upcoming calendar events, to\u2011do items, or AI\u2011quota usage. The app supports WeChat/QQ unread alerts, multiple skins (classic black, cream, glassy light/dark, floating cloud) and three\u2011edge docking (top, left, right). Built with Rust and egui, it avoids the bloat of Electron\u2011based tools while offering customizable size, position, and multi\u2011screen awareness.",
+            "why_it_matters": "Shows how Rust\u202f+\u202fegui can deliver a performant, Electron\u2011free desktop productivity widget that stays out of the way yet surfaces key info on demand.",
+            "who_cares": "Rust UI developers and engineers looking for performant desktop productivity tools.",
+            "verdict": "READ",
+            "source_url": "https://github.com/Renly1994/xiaotang-daozai"
+          },
+          {
+            "category": "Tech Shift",
+            "title": "Sell one API call to an agent",
+            "description": "**You can sell a single API call to an AI agent, separating payment from execution with a TypeScript SDK.** The tutorial walks through creating a test purchase, confirming settlement, and reserving one authorized lookup using the @chitmark/sdk. It requires distinct seller and buyer workspaces, test payment accounts, and a 100\u2011cent API\u2011call resource. After setting the appropriate CHITMARK keys and IDs, the buyer example runs in a TypeScript runtime, demonstrating a concrete pattern for pay\u2011per\u2011call services.",
+            "why_it_matters": "Provides a concrete pattern for selling single\u2011use API calls, separating payment settlement from execution and using a TypeScript SDK to enforce it.",
+            "who_cares": "Backend engineers building API marketplaces, AI\u2011agent platforms, or any pay\u2011per\u2011call service.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/dami14_14/sell-one-api-call-to-an-agent-1a4p"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "Cut CI wait time from 25\u202fminutes to about 12\u202fminutes",
+            "description": "**A Python project\u2019s CI pipeline was halved from 25\u202fminutes to 12\u202fminutes by cancelling duplicate runs and smarter caching.** The author of umwayi\u2011os stopped running the same suite twice on consecutive pushes, enabled automatic cancellation of older runs, and cached the npm download step. These modest changes reduced each job from roughly 25\u202fminutes to 12\u202fminutes while preserving full test coverage across more than 2,000 tests on Python\u202f3.10\u20113.13.",
+            "why_it_matters": "Demonstrates practical CI tricks\u2014cancelling duplicate runs, smarter caching, and test sharding\u2014that cut a 25\u2011minute pipeline in half without losing coverage.",
+            "who_cares": "DevOps engineers and Python developers who maintain large test suites.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/miguel_shinyenyi_e2291c8c/i-cut-my-ci-wait-from-25-minutes-to-about-12-and-checked-that-no-test-was-dropped-3n25"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "Browser\u2011based Image Storyboard to PDF tool",
+            "description": "**You can turn a folder of images into a printable PDF storyboard entirely in the browser, with no server upload.** The tutorial builds a three\u2011file web app that lets users add images, give each a title, description, and duration, choose a layout, preview the storyboard, and download a print\u2011ready PDF. All processing happens client\u2011side using IndexedDB for drafts and the browser\u2019s PDF APIs, keeping proprietary artwork private and avoiding backend infrastructure.",
+            "why_it_matters": "Provides a pure\u2011browser, client\u2011side image\u2011to\u2011PDF storyboard builder that avoids server uploads and can be dropped into any front\u2011end project.",
+            "who_cares": "Front\u2011end JavaScript developers building media\u2011production or client\u2011side publishing tools.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://www.freecodecamp.org/news/build-image-storyboard-to-pdf-tool-javascript/"
+          },
+          {
+            "category": "Watchlist",
+            "title": "Schema Drift vs. Semantic Drift in Data Pipelines",
+            "description": "**Schema drift is easy to spot, but semantic drift silently corrupts data pipelines.** The article explains that while missing columns or type changes cause immediate failures, a field that keeps its name and type but changes meaning (semantic drift) can pass unnoticed. The author built a lab introducing nine failure types and tested four detectors, showing many pipelines miss semantic issues, leading to hidden data quality problems.",
+            "why_it_matters": "Explains the difference between schema drift and semantic drift, exposing a blind spot where pipelines silently accept wrong business meaning and corrupt data.",
+            "who_cares": "Data engineers and ML pipeline owners who need robust data\u2011quality safeguards.",
+            "verdict": "READ",
+            "source_url": "https://www.freecodecamp.org/news/schema-drift-vs-semantic-drift-in-data-pipelines/"
+          }
+        ]
+      }
+    }
+  },
   "rejected_urls": [
     "https://github.com/tt-a1i/archify",
     "https://motherduck.com/blog/the-data-intelligence-engineer/",
@@ -13,7 +908,7 @@
   ],
   "restarted": true,
   "email": {
-    "status": "not_started",
+    "status": "sent",
     "attempts": 0,
     "last_error": null
   },
