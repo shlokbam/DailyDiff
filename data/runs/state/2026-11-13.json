@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-13",
+  "stages": {},
+  "rejected_urls": [
+    "https://github.com/tt-a1i/archify",
+    "https://motherduck.com/blog/the-data-intelligence-engineer/",
+    "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+    "https://brave.com/blog/search-api-agentic-payments/",
+    "https://github.com/simpsoka/zigzag",
+    "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+    "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+    "https://github.com/hyperionaidev/smolmaxxing/"
+  ],
+  "restarted": true,
+  "email": {
+    "status": "not_started",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": [
+    {
+      "started_at": "2026-11-13T11:27:17.799874+00:00",
+      "git_sha": "243232e17af3ba15713a1742bf7d3eccc72c78d8",
+      "failed_stage": "verify",
+      "reason": "Verifier approved 2 of 10 candidates (minimum 3)"
+    }
+  ]
+}

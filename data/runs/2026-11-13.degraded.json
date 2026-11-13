@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-13",
+  "timestamp": "2026-11-13T11:27:17.802282+00:00",
+  "git_sha": "243232e17af3ba15713a1742bf7d3eccc72c78d8",
+  "counts": {
+    "raw_signals": 64,
+    "after_dedup": 52,
+    "skeptic_passed": 10,
+    "researched": 10,
+    "verified": 2
+  },
+  "content_sources": {
+    "https://github.com/Renly1994/xiaotang-daozai": "readme",
+    "https://github.com/tt-a1i/archify": "readme",
+    "https://motherduck.com/blog/the-data-intelligence-engineer/": "web_page",
+    "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/": "web_page",
+    "https://brave.com/blog/search-api-agentic-payments/": "web_page",
+    "https://github.com/simpsoka/zigzag": "web_page",
+    "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/": "web_page",
+    "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer": "web_page",
+    "https://github.com/hyperionaidev/smolmaxxing/": "web_page",
+    "https://dev.to/webdeveloper0123/when-a-hybrid-app-needs-a-native-module-defining-the-boundary-without-creating-two-applications-to-2ifl": "web_page"
+  },
+  "models_used": {
+    "openai/gpt-oss-120b": 2
+  },
+  "llm_calls": 2,
+  "durations_seconds": {
+    "skeptic": 4.14,
+    "verifier": 3.71
+  },
+  "hard_failures": [],
+  "warnings": [],
+  "final_briefs": [],
+  "failure_reasons": [
+    "verify: Verifier approved 2 of 10 candidates (minimum 3)"
+  ],
+  "status": "degraded"
+}
