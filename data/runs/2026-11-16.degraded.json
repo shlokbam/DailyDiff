@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-16",
+  "timestamp": "2026-11-16T11:57:33.653877+00:00",
+  "git_sha": "a5b41b7f57656023e816e929bd80295b521d452a",
+  "counts": {
+    "raw_signals": 65,
+    "after_dedup": 51,
+    "skeptic_passed": 10,
+    "researched": 10,
+    "verified": 2
+  },
+  "content_sources": {
+    "https://github.com/Wolflakechip39019/claude-resocket-plugin": "api_fallback",
+    "https://github.com/emanuele-em/kanzo": "readme",
+    "https://github.com/tt-a1i/archify": "readme",
+    "https://iter.ca/post/ubo-uxss/": "web_page",
+    "https://qwen.ai/blog?id=qwen4-max": "web_page",
+    "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/": "web_page",
+    "https://forum.torproject.org/t/security-release-0-4-9-17/22454": "web_page",
+    "https://bruceroettgers.eu/blog/protomaps/": "web_page",
+    "https://dev.to/chinayi/i-built-a-multi-tenant-booking-system-with-spring-boot-vue-3-heres-how-it-works-4098": "web_page",
+    "https://dev.to/pythona/the-fix-only-existed-in-kernel612-switching-kernel-streams-on-amazon-linux-2023-27pa": "web_page"
+  },
+  "models_used": {
+    "openai/gpt-oss-120b": 1,
+    "qwen/qwen3.8-27b": 1
+  },
+  "llm_calls": 2,
+  "durations_seconds": {
+    "skeptic": 4.89,
+    "verifier": 1.57
+  },
+  "hard_failures": [],
+  "warnings": [
+    "Verifier dropped unverifiable candidate: claude-resocket-plugin"
+  ],
+  "final_briefs": [],
+  "failure_reasons": [
+    "verify: Verifier approved 2 of 10 candidates (minimum 3)"
+  ],
+  "status": "degraded"
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-16",
+  "stages": {},
+  "rejected_urls": [
+    "https://github.com/Wolflakechip39019/claude-resocket-plugin",
+    "https://github.com/emanuele-em/kanzo",
+    "https://github.com/tt-a1i/archify",
+    "https://iter.ca/post/ubo-uxss/",
+    "https://qwen.ai/blog?id=qwen4-max",
+    "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
+    "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
+    "https://bruceroettgers.eu/blog/protomaps/"
+  ],
+  "restarted": true,
+  "email": {
+    "status": "not_started",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": [
+    {
+      "started_at": "2026-11-16T11:57:33.651760+00:00",
+      "git_sha": "a5b41b7f57656023e816e929bd80295b521d452a",
+      "failed_stage": "verify",
+      "reason": "Verifier approved 2 of 10 candidates (minimum 3)"
+    }
+  ]
+}
