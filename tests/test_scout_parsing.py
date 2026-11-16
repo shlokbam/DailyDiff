@@ -1,7 +1,7 @@
 from datetime import datetime, timezone, timedelta
 import pytest
 from unittest.mock import patch, MagicMock
-from app.agents.scout import parse_feed_content, scout_github_releases, scout_github
+from app.agents.scout import parse_feed_content, scout_github_releases, scout_github, scout_hacker_news
 
 SAMPLE_ATOM_FEED = b"""<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -99,3 +99,17 @@ def test_github_signal_has_full_name_and_created_filter():
         called_urls = [call.args[0] for call in client_instance.get.call_args_list if call.args]
         assert any("created:" in url for url in called_urls)
 
+
+
+def test_hacker_news_description_has_no_unverifiable_score_claim():
+    """The Verifier rejects 'top story (Score: N)' because the linked page never states it; describe HN items by title."""
+    top = MagicMock(status_code=200)
+    top.json.return_value = [101]
+    item = MagicMock(status_code=200)
+    item.json.return_value = {"title": "Protecting SSH Keys with macOS Secure Enclave", "url": "https://example.com/ssh", "score": 221}
+    with patch("httpx.Client") as mock_client_cls:
+        client_instance = mock_client_cls.return_value.__enter__.return_value
+        client_instance.get.side_effect = [top, item]
+        stories = scout_hacker_news()
+    assert stories[0]["description"] == "Protecting SSH Keys with macOS Secure Enclave"
+    assert "Score" not in stories[0]["description"]

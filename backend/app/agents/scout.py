@@ -107,7 +107,9 @@ def scout_hacker_news() -> List[Dict[str, Any]]:
                     if item_resp.status_code == 200:
                         d = item_resp.json() or {}
                         if d.get("title") and d.get("url"):
-                            stories.append({"source": "Hacker News", "title": d["title"], "url": d["url"], "description": f"Hacker News top story (Score: {d.get('score', 0)}): {d['title']}"})
+                            # Description is the title only: the Verifier rejects claims like "top story (Score: N)"
+                            # because the linked page never states them
+                            stories.append({"source": "Hacker News", "title": d["title"], "url": d["url"], "description": d["title"]})
     except Exception as e:
         logger.warning(f"Hacker News scouting error: {e}")
     return stories
