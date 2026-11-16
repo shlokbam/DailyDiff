@@ -2611,5 +2611,56 @@
         "source_url": "https://www.freecodecamp.org/news/schema-drift-vs-semantic-drift-in-data-pipelines/"
       }
     ]
+  },
+  {
+    "date": "2026-11-16",
+    "published_at": "2026-11-16T13:58:20.126799+00:00",
+    "briefs": [
+      {
+        "category": "Tech Shift",
+        "title": "Why Running Your Own Authoritative DNS Can Be a Game\u2011Changer",
+        "description": "**Running your own DNS server lets you bypass managed\u2011service limits and get instant, strongly consistent subdomain resolution.** S2 needed unlimited, instantly resolvable DNS records for each customer\u2011created basin (e.g., `my-basin.b.s2.dev`). Route53 could store unlimited records but hit fatal API rate limits and eventual\u2011consistency delays, prompting the team to replace it with an in\u2011house authoritative DNS solution.",
+        "why_it_matters": "Running your own authoritative DNS is often necessary to achieve strong consistency and unlimited record creation for dynamic subdomains, overcoming the rate limits and eventual consistency of managed services like Route53.",
+        "who_cares": "Platform engineers and SREs building multi\u2011tenant SaaS products with dynamic subdomain provisioning.",
+        "verdict": "READ",
+        "source_url": "https://s2.dev/blog/dns-server"
+      },
+      {
+        "category": "Cool Tool",
+        "title": "Swap `cat` for `less` to Browse Large Files Without Freezing",
+        "description": "**Use `less` instead of `cat` when opening big files to avoid terminal freezes and gain instant search.** `cat` streams the whole file at once and offers no search capability, which can hang the screen on large logs. `less` lets you scroll (`SPACE`, `b`, `g`, `G`), search (`/keyword`), and quit (`q`), making log inspection far smoother.",
+        "why_it_matters": "Recommends using `less` over `cat` for viewing large files to prevent terminal freezing and enable text searching, a simple but effective productivity boost for daily Linux operations.",
+        "who_cares": "Junior developers and DevOps engineers working extensively in Linux terminal environments.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://dev.to/kawasaki031677/stop-using-cat-use-less-for-opening-files-a9a"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Six Checks Before Adding a Column to a Live PostgreSQL Table",
+        "description": "**Follow a six\u2011point checklist to alter a high\u2011traffic PostgreSQL table without downtime.** The guide walks through lock awareness, the expand\u2011and\u2011contract pattern, and PostgreSQL\u2011specific details (e.g., version\u202f18.7, lock_timeout, point\u2011in\u2011time recovery). It emphasizes reading the official docs for `ALTER TABLE`, `CREATE INDEX`, and rewrite behavior before executing the migration.",
+        "why_it_matters": "Provides a concrete checklist for performing zero\u2011downtime schema migrations in PostgreSQL, specifically addressing lock management and the expand\u2011contract pattern for live production tables.",
+        "who_cares": "Backend developers and database administrators managing high\u2011traffic PostgreSQL databases.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://dev.to/codewaveconsulting/need-a-new-column-on-a-live-orders-table-six-checks-before-you-change-the-schema-14eo"
+      },
+      {
+        "category": "Ecosystem Update",
+        "title": "Speed Up CI Pipelines as AI\u2011Generated Commits Explode",
+        "description": "**AI coding agents are flooding CI systems, so you need faster, smarter pipelines.** GitHub reported handling 275\u202fmillion commits a week in April\u202f2026, with CI minutes jumping to 2.1\u202fbillion per week. The article outlines five fixes: measure bottlenecks, cache dependencies and Docker layers, run jobs on faster runners, shard tests across parallel jobs, and skip unnecessary work with path filters and affected\u2011only testing.",
+        "why_it_matters": "Addresses the bottleneck where AI\u2011generated code volume outpaces CI capacity, offering specific strategies like caching, parallel sharding, and path filtering to keep pipelines fast.",
+        "who_cares": "DevOps engineers and CI/CD maintainers in organizations adopting AI coding agents.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/"
+      },
+      {
+        "category": "Watchlist",
+        "title": "AI Agents Are Actively Hunting Exposed API Keys",
+        "description": "**Autonomous AI agents are now scanning the web for leaked API credentials and exploiting them at scale.** Amazon\u2019s MadPot decoy sensors captured agents (likely using the open\u2011source ARTEX framework) that queried fake LLM endpoints, harvested working keys, and reused them to pay for subsequent attacks. The activity was linked to China\u2011associated groups and highlights a new, tireless threat vector.",
+        "why_it_matters": "Reveals that AI agents are now autonomously hunting for and exploiting exposed API keys on web apps, necessitating immediate rotation and stricter secret management practices for any internet\u2011facing service.",
+        "who_cares": "Security engineers and full\u2011stack developers managing API keys and cloud credentials for web applications.",
+        "verdict": "WATCH",
+        "source_url": "https://dev.to/hackerme/exposed-api-keys-how-ai-agents-now-hunt-them-on-websites-and-ai-apps-12bc"
+      }
+    ]
   }
 ]

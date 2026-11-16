@@ -1,6 +1,885 @@
 {
   "date": "2026-11-16",
-  "stages": {},
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "open_source_issue_contribution",
+            "full_name": "codepiyusss/open_source_issue_contribution",
+            "url": "https://github.com/codepiyusss/open_source_issue_contribution",
+            "description": "\ud83d\udc1b Beginner-friendly Python CLI with 30+ good first issues: planted bugs, missing tests & small features. Practice open source: fork, fix, PR, and turn your GitHub contribution graph green \ud83d\udfe9",
+            "stars": 44,
+            "forks": 35,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "awesome-easy-to-join-orgs",
+            "full_name": "Huerte/awesome-easy-to-join-orgs",
+            "url": "https://github.com/Huerte/awesome-easy-to-join-orgs",
+            "description": "A curated list of GitHub organizations anyone can join, often with just an issue and no code needed. Beginner-friendly open source communities for students, developers and newcomers. Find your community, add yours, make your first contribution.",
+            "stars": 23,
+            "forks": 3,
+            "language": "Unknown"
+          },
+          {
+            "source": "GitHub",
+            "title": "pro-tools-desktop",
+            "full_name": "alicebrown323/pro-tools-desktop",
+            "url": "https://github.com/alicebrown323/pro-tools-desktop",
+            "description": "Pro Tools 2026 desktop setup with multitrack editing, MIDI sequencing, VST hosting and a portable mode for Windows 11",
+            "stars": 247,
+            "forks": 0,
+            "language": "C++"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 50,
+            "forks": 15,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 6943,
+            "forks": 449,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "TwinDesk",
+            "full_name": "InukaAsith/TwinDesk",
+            "url": "https://github.com/InukaAsith/TwinDesk",
+            "description": " All your computers and your phone/iPhone, working as one desk. Screens, apps, files, clipboard, calls, texts, notifications, mouse and keyboard, shared between Mac, Windows, Linux , Android, Web and ios / ipados . Free and open source. No account, no cloud, and no shared network needed.",
+            "stars": 4136,
+            "forks": 323,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 1910,
+            "forks": 153,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 1266,
+            "forks": 215,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1214,
+            "forks": 98,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "ECC",
+            "full_name": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "stars": 304229,
+            "forks": 44823,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 148778,
+            "forks": 14277,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 97052,
+            "forks": 6630,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95845,
+            "forks": 9605,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 93580,
+            "forks": 12530,
+            "language": "TypeScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "The Secret ThinkPad Powerbutton Code to Bring Dead Laptops Back to Life (2007)",
+            "url": "https://masnick.com/posts/the-secret-thinkpad-powerbutton-code-to-bring-dead-laptops-back-to-life/",
+            "description": "The Secret ThinkPad Powerbutton Code to Bring Dead Laptops Back to Life (2007)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "How to make almost anything",
+            "url": "https://pub.cba.mit.edu/863.26/site/",
+            "description": "How to make almost anything"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Coffeehouses and the Rise of Science [pdf]",
+            "url": "https://www.monirbounadi.com/Bounadi_JMP.pdf",
+            "description": "Coffeehouses and the Rise of Science [pdf]"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Universal XSS in uBlock Origin from website-driven element picker",
+            "url": "https://iter.ca/post/ubo-uxss/",
+            "description": "Universal XSS in uBlock Origin from website-driven element picker"
+          },
+          {
+            "source": "Hacker News",
+            "title": "OOS \u2013 an open operating system for the Rigol Scopes",
+            "url": "https://www.eevblog.com/forum/testgear/oos-an-open-operating-system-for-the-rigol-scopes/",
+            "description": "OOS \u2013 an open operating system for the Rigol Scopes"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Researchers track whole body movement with just a smartwatch",
+            "url": "https://news.cornell.edu/stories/2026/11/researchers-track-whole-body-movement-just-smartwatch",
+            "description": "Researchers track whole body movement with just a smartwatch"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Qwen4-Max",
+            "url": "https://qwen.ai/blog?id=qwen4-max",
+            "description": "Qwen4-Max"
+          },
+          {
+            "source": "Hacker News",
+            "title": "What's Next for Nvidia?",
+            "url": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
+            "description": "What's Next for Nvidia?"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Old Bitly links are being hijacked",
+            "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
+            "description": "Old Bitly links are being hijacked"
+          },
+          {
+            "source": "Hacker News",
+            "title": "\u201c\u2026and the proof is checked in Lean\u201d",
+            "url": "https://xenaproject.wordpress.com/2026/11/12/and-the-proof-is-checked-in-lean/",
+            "description": "\u201c\u2026and the proof is checked in Lean\u201d"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Winudf \u2013 DVD / BluRay driver for DOS, Windows 1.x \u2013 3x / 95 / 98 / ME",
+            "url": "https://github.com/ages2001/WINUDF",
+            "description": "Winudf \u2013 DVD / BluRay driver for DOS, Windows 1.x \u2013 3x / 95 / 98 / ME"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Exact Gradients Through a BRep Kernel",
+            "url": "https://muni.works/research/vcad",
+            "description": "Exact Gradients Through a BRep Kernel"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
+            "url": "https://bruceroettgers.eu/blog/protomaps/",
+            "description": "Protomaps: Self-hosting map tiles has gotten cheap and easy"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack",
+            "url": "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
+            "description": "Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack"
+          },
+          {
+            "source": "Hacker News",
+            "title": "It's always DNS, so why are we running our own?",
+            "url": "https://s2.dev/blog/dns-server",
+            "description": "It's always DNS, so why are we running our own?"
+          },
+          {
+            "source": "Dev.to",
+            "title": "The twenty-edit chain: keeping one image consistent across revisions",
+            "url": "https://dev.to/chet103cc/the-twenty-edit-chain-keeping-one-image-consistent-across-revisions-61m",
+            "description": "Answer: a chained edit is an image-to-image job where the reference is the previous output rather than the original. Seedream 5.5's published study runs twenty of them \u2014 a coastal station from morning light to blue hour \u2014 and the interesting part is not the feature, it is the drift: each step re-ren"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Need a New Column on a Live Orders Table? Six Checks Before You Change the Schema",
+            "url": "https://dev.to/codewaveconsulting/need-a-new-column-on-a-live-orders-table-six-checks-before-you-change-the-schema-14eo",
+            "description": "The store in this example is made up. It runs its orders on PostgreSQL. The product team now wants a new delivery-window field on every order. The app is busy all day, so downtime is hard to book. The team wants to know how to change the table without stopping sales. These checks cover that one live"
+          },
+          {
+            "source": "Dev.to",
+            "title": "I opened Joplin like a chip. 47% of it is Electron.",
+            "url": "https://dev.to/scs0209/i-opened-joplin-like-a-chip-47-of-it-is-electron-1oe4",
+            "description": "I built App Anatomy, a tool that reads a shipped app and shows what is inside it and how many bytes each part takes: the runtime, third-party libraries, the app's own code, and assets. It draws the result as a 3D chip you can open.\n\n\n\nYou can try it without installing anything: scs0209.github.io/app"
+          },
+          {
+            "source": "Dev.to",
+            "title": "How ChatGPT free plan changed in two years (2024 vs 2026)",
+            "url": "https://dev.to/voxahq/how-chatgpt-free-plan-changed-in-two-years-2024-vs-2026-581m",
+            "description": "In 2024, free ChatGPT was metered by messages on a good model: you got GPT-4o for a while, then it dropped you to GPT-3.5 when the cap ran out.\n\nIn 2026, the chat itself is unlimited on one model, and the meter moved to the tools.\n\n\n\n\n\nLate 2024\nNovember 2026\n\n\n\n\nMain chat\nGPT-4o with a message cap,"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Stop Using cat! Use less for Opening Files",
+            "url": "https://dev.to/kawasaki031677/stop-using-cat-use-less-for-opening-files-a9a",
+            "description": "Introduction\n\n\nWhen opening files on Linux, how many of you immediately use cat?\n\n\n\ncat test.txt\n\n\n\n\n\n\nIt's convenient and easy to use, but have you ever had your screen freeze when opening a large file? \ud83d\ude04\n\nThe drawbacks of cat include:\n\n\nYou can't search for text\nIt outputs everything at once\n\n\nHow"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Exposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps",
+            "url": "https://dev.to/hackerme/exposed-api-keys-how-ai-agents-now-hunt-them-on-websites-and-ai-apps-12bc",
+            "description": "Exposed API keys used to be found by a person running a search, or by a bot scraping GitHub. In November 2026, Amazon\u2019s threat intelligence team showed what that looks like when the searcher is an AI agent that never gets tired. Its decoy servers captured the working records of attacker agents that "
+          },
+          {
+            "source": "Dev.to",
+            "title": "App Store rejection reasons: 11 fixes before you resubmit",
+            "url": "https://dev.to/extensionbooster/app-store-rejection-reasons-11-fixes-before-you-resubmit-35f2",
+            "description": "Originally published on AppRanker.\n\nMost App Store rejection reasons come from a short list of guidelines, and most of them are things you can catch on your own machine before App Review ever opens your build. Below is the data on where rejections actually land, a fix table you can run through befor"
+          },
+          {
+            "source": "Dev.to",
+            "title": "C_BDCDA Exam: Straight Answers on the SAP Certified Data Architect for SAP Business Data Cloud",
+            "url": "https://dev.to/elina_william_f27f3c8d7dc/cbdcda-exam-straight-answers-on-the-sap-certified-data-architect-for-sap-business-data-cloud-32ek",
+            "description": "A useful C_BDCDA study artefact is not a stack of flashcards on SAP Datasphere features. It is a design decision you can defend out loud:\n\nBusiness goal \u2192 data strategy \u2192 architecture paradigm \u2192 integration pattern \u2192 governance model \u2192 stakeholder pitch\n\nThat sequence reflects the work the SAP Certi"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Build and Train a GLM-5.3-Flash Model From Scratch with Python",
+            "url": "https://www.freecodecamp.org/news/build-and-train-a-glm-53-flash-model-from-scratch-with-python/",
+            "description": "GLM-5.3-Flash combines linear and sparse attention, a mixture-of-experts design, and manifold constrained hyperconnections. A scaled-down version with 25 million parameters can be built in Python and"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Speed Up CI in the Age of AI-Written Code",
+            "url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/",
+            "description": "Coding agents now write code faster than most CI pipelines can check it. In April 2026, GitHub COO Kyle Daigle said that his platform was handling 275 million commits a week, on pace for 14 billion in"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Schema Drift vs. Semantic Drift in Data Pipelines",
+            "url": "https://www.freecodecamp.org/news/schema-drift-vs-semantic-drift-in-data-pipelines/",
+            "description": "When a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning c"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-image-storyboard-to-pdf-tool-javascript/",
+            "description": "Before anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens a"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Agentic Coding with Codex & AI Coding Agents",
+            "url": "https://www.freecodecamp.org/news/learn-agentic-coding-with-codex-ai-coding-agents/",
+            "description": "AI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructi"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "What Happens When You Upload a Large File & Generate a Temporary Download Link",
+            "url": "https://www.freecodecamp.org/news/how-file-transfer-services-work/",
+            "description": "Sending a 5 GB video file might seem simple. You select the file, click Upload, wait for the progress bar to finish, and share a link with someone. But there are several things happening in the backgr"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a PDF Storyboard Generator Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-storyboard-generator-javascript/",
+            "description": "PDF files are commonly used to share presentations, scripts, reports, lesson materials, comic pages, and other visual documents. But reviewing a long PDF page by page can take time, especially when so"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Godot 4 Roguelike Course \u2013 Build a Complete Top-Down Action Game",
+            "url": "https://www.freecodecamp.org/news/godot-4-roguelike-course-build-a-complete-top-down-action-game/",
+            "description": "A top-down action roguelite only works when combat feels sharp, rooms feel connected, and every run asks you to trade power for risk. Godot 4 has the tools for that, but most tutorials stop before tho"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "readywhen",
+            "url": "https://www.producthunt.com/products/readywhen",
+            "description": "Your personal assistant that lives in email around the clock\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "OpenFrame",
+            "url": "https://www.producthunt.com/products/openframe-3",
+            "description": "AI agents that run your IT. You approve every fix.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Cookie Away",
+            "url": "https://www.producthunt.com/products/cookie-away",
+            "description": "Rejects cookie banners for you, even the sneaky ones\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "OpenBot",
+            "url": "https://www.producthunt.com/products/copilotkit",
+            "description": "Grok Bot alternative: self-host, fully customize, any stack\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Blomma for Organizations",
+            "url": "https://www.producthunt.com/products/blomma",
+            "description": "Scale your people at the speed of your business\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Intelligent Eyewear",
+            "url": "https://www.producthunt.com/products/sumsung",
+            "description": "Samsung and Google bring Gemini AI to smart eyewear\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Pharen Hub",
+            "url": "https://www.producthunt.com/products/pharen-hub",
+            "description": "One AI workspace for your whole company\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Nexus",
+            "url": "https://www.producthunt.com/products/nexus-11",
+            "description": "Make agents deploy your AI products faster for customers\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Findy",
+            "url": "https://www.producthunt.com/products/findy-3",
+            "description": "Find Files on Your Mac by what you remember\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Boost.space AgentOS",
+            "url": "https://www.producthunt.com/products/boost-space",
+            "description": "One operating system for all your AI agents\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1w49w0r/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Monthly Getting Started / Web Dev Career Thread",
+            "url": "https://www.reddit.com/r/webdev/comments/1xl1aup/monthly_getting_started_web_dev_career_thread/",
+            "description": "Due to a growing influx of questions on this topic, it has been decided to commit a monthly thread dedicated to this topic to reduce the number of repeat posts on this topic. These types of posts will no longer be allowed in the main thread. Many of these questions are also addressed in the sub FAQ "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Apple Continues to Hold Back Mobile Safari Features to Juice App Store Sales",
+            "url": "https://www.reddit.com/r/webdev/comments/1xwzugh/apple_continues_to_hold_back_mobile_safari/",
+            "description": "There an amazing app platform out there that iOS/iPad OS half-supports: The Web. But poor Apple wouldn\u2019t get an arbitrary 30% cut from every button pressed by users, so they continue to refuse to reach parity with every other mobile browser. That sucks. We should demand better without waiting for EU"
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "How do you handle email hosting for clients?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xxajn5/how_do_you_handle_email_hosting_for_clients/",
+            "description": "Hi guys. I\u2019m fairly new to freelance web development. I\u2019ve only had one client so far, and while working with them I ran into something I hadn\u2019t really thought about: email. Clients want a professional address on their own domain like [info@theirbusiness.com](mailto:info@theirbusiness.com), instead "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Tool, or technique, to compare local and server versions of a massive static site?",
+            "url": "https://www.reddit.com/r/webdev/comments/1xxh7r2/tool_or_technique_to_compare_local_and_server/",
+            "description": "I have a large static Web site (essentially a photo galerie) that registers locally as 169.364 Files / 49.3 Gb on Windows explorer and 168,212 files / 21 Gb on the server cPanel file manager. Most of the weight comes from 300-400 Mb jpg photographs (so, files already compressed locally). What would "
+          },
+          {
+            "source": "Reddit /r/webdev",
+            "title": "Unable to receive all emails being sent to alias email",
+            "url": "https://www.reddit.com/r/webdev/comments/1xxft3z/unable_to_receive_all_emails_being_sent_to_alias/",
+            "description": "Hi all,  I have a main email with Google Workspace using the domain of my website (frank@websitename). I made an alias email for outside communication (talk@websitename).  Users emailing the talk@websitename email received a 550 No Such User Here code. After that, I added these 3 records to the cPan"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.52",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.52",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.52. Details: ### Core Changes\n\n- Remove stale .next/dev/types in next typegen and next build: #100612\n- Simplify the code gen that adds deployment ids conditionally: #101785\n\n### Misc Changes\n\n- turbo-tasks-backend: store collectibles dependents in an EdgeSet: #101766\n- turbo-persistence: cover block lengths in ..."
+          },
+          {
+            "source": "GitHub Release",
+            "title": "fastapi/fastapi Release: 0.163.1",
+            "url": "https://github.com/fastapi/fastapi/releases/tag/0.163.1",
+            "description": "New release for fastapi/fastapi. Tag: 0.163.1. Details: > FastAPI includes an official skill that helps coding agents use new features and recommended patterns for your installed version. Install it with `uvx library-skills` in your project. See [Develop with AI](https://fastapi.tiangolo.com/ai-development/).\r\n\r\n### Fixes\r\n\r\n* \ud83d\udc1b Fix OpenAPI for response ..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "Hacker News",
+            "title": "It's always DNS, so why are we running our own?",
+            "url": "https://s2.dev/blog/dns-server",
+            "description": "It's always DNS, so why are we running our own?"
+          },
+          {
+            "source": "Dev.to",
+            "title": "The twenty-edit chain: keeping one image consistent across revisions",
+            "url": "https://dev.to/chet103cc/the-twenty-edit-chain-keeping-one-image-consistent-across-revisions-61m",
+            "description": "Answer: a chained edit is an image-to-image job where the reference is the previous output rather than the original. Seedream 5.5's published study runs twenty of them \u2014 a coastal station from morning light to blue hour \u2014 and the interesting part is not the feature, it is the drift: each step re-ren"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Need a New Column on a Live Orders Table? Six Checks Before You Change the Schema",
+            "url": "https://dev.to/codewaveconsulting/need-a-new-column-on-a-live-orders-table-six-checks-before-you-change-the-schema-14eo",
+            "description": "The store in this example is made up. It runs its orders on PostgreSQL. The product team now wants a new delivery-window field on every order. The app is busy all day, so downtime is hard to book. The team wants to know how to change the table without stopping sales. These checks cover that one live"
+          },
+          {
+            "source": "Dev.to",
+            "title": "I opened Joplin like a chip. 47% of it is Electron.",
+            "url": "https://dev.to/scs0209/i-opened-joplin-like-a-chip-47-of-it-is-electron-1oe4",
+            "description": "I built App Anatomy, a tool that reads a shipped app and shows what is inside it and how many bytes each part takes: the runtime, third-party libraries, the app's own code, and assets. It draws the result as a 3D chip you can open.\n\n\n\nYou can try it without installing anything: scs0209.github.io/app"
+          },
+          {
+            "source": "Dev.to",
+            "title": "How ChatGPT free plan changed in two years (2024 vs 2026)",
+            "url": "https://dev.to/voxahq/how-chatgpt-free-plan-changed-in-two-years-2024-vs-2026-581m",
+            "description": "In 2024, free ChatGPT was metered by messages on a good model: you got GPT-4o for a while, then it dropped you to GPT-3.5 when the cap ran out.\n\nIn 2026, the chat itself is unlimited on one model, and the meter moved to the tools.\n\n\n\n\n\nLate 2024\nNovember 2026\n\n\n\n\nMain chat\nGPT-4o with a message cap,"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Stop Using cat! Use less for Opening Files",
+            "url": "https://dev.to/kawasaki031677/stop-using-cat-use-less-for-opening-files-a9a",
+            "description": "Introduction\n\n\nWhen opening files on Linux, how many of you immediately use cat?\n\n\n\ncat test.txt\n\n\n\n\n\n\nIt's convenient and easy to use, but have you ever had your screen freeze when opening a large file? \ud83d\ude04\n\nThe drawbacks of cat include:\n\n\nYou can't search for text\nIt outputs everything at once\n\n\nHow"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Exposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps",
+            "url": "https://dev.to/hackerme/exposed-api-keys-how-ai-agents-now-hunt-them-on-websites-and-ai-apps-12bc",
+            "description": "Exposed API keys used to be found by a person running a search, or by a bot scraping GitHub. In November 2026, Amazon\u2019s threat intelligence team showed what that looks like when the searcher is an AI agent that never gets tired. Its decoy servers captured the working records of attacker agents that "
+          },
+          {
+            "source": "Dev.to",
+            "title": "App Store rejection reasons: 11 fixes before you resubmit",
+            "url": "https://dev.to/extensionbooster/app-store-rejection-reasons-11-fixes-before-you-resubmit-35f2",
+            "description": "Originally published on AppRanker.\n\nMost App Store rejection reasons come from a short list of guidelines, and most of them are things you can catch on your own machine before App Review ever opens your build. Below is the data on where rejections actually land, a fix table you can run through befor"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Speed Up CI in the Age of AI-Written Code",
+            "url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/",
+            "description": "Coding agents now write code faster than most CI pipelines can check it. In April 2026, GitHub COO Kyle Daigle said that his platform was handling 275 million commits a week, on pace for 14 billion in"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Agentic Coding with Codex & AI Coding Agents",
+            "url": "https://www.freecodecamp.org/news/learn-agentic-coding-with-codex-ai-coding-agents/",
+            "description": "AI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructi"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "It's always DNS, so why are we running our own?",
+            "url": "https://s2.dev/blog/dns-server",
+            "description": "It's always DNS, so why are we running our own?",
+            "detailed_content": "It\u2019s always DNS, so why are we running our own? \u00b7 S2 Use cases Docs Pricing Playground Blog Dashboard Use cases Docs Pricing Playground Blog Dashboard October 16, 2026 distsys I t \u2019 s\na l w a y s\nD N S ,\ns o\nw h y\na r e\nw e\nr u n n i n g\no u r\no w n ? Cristian Caciuc On this page This will be a rollercoaster story on how we ended up replacing Route53 and running our own authoritative DNS server.\nBefore our lives changed\nAt some point, we decided we should be able to provide unlimited basins to our clients.\nBasins\nare a core namespace construct on S2 and act as top-level containers for streams (already unlimited in number). We found that customers were hacking around our not-so-arbitrary limit of 100 basins per account. That\u2019s not a cool experience.\nFor the purposes of this story, what is important is that each basin created by a customer becomes its own subdomain:\nmy-basin.b.s2.dev\n(not different from the way buckets work on AWS S3). The DNS entry associated with each basin is a CNAME, which routes clients to the correct\ncell\nin our architecture. To support unlimited basins, we'd therefore need to support unlimited DNS records.\nThese records would need strong consistency too. When a basin is created, its address should be instantly resolvable, otherwise clients would be waiting around for a cached NXDOMAIN to expire.\nMy pulse went through the roof at the thought of running our own DNS server, yikes!\nHooking on existing systems\nMy research phase started with hope. Hope that our existing DNS setup with AWS Route53 would work with these new requirements. I really really did not want us to build and run our own DNS server.\nRoute53 is an awesome system and can, it appears, support an unlimited number of records. But, there's a fatal limitation: their API rate limits at a max",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "The twenty-edit chain: keeping one image consistent across revisions",
+            "url": "https://dev.to/chet103cc/the-twenty-edit-chain-keeping-one-image-consistent-across-revisions-61m",
+            "description": "Answer: a chained edit is an image-to-image job where the reference is the previous output rather than the original. Seedream 5.5's published study runs twenty of them \u2014 a coastal station from morning light to blue hour \u2014 and the interesting part is not the feature, it is the drift: each step re-ren",
+            "detailed_content": "The twenty-edit chain: keeping one image consistent across revisions - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nchet100\nPosted on\nNov 16\n\u2022\nOriginally published at\ncallirra.com\nThe twenty-edit chain: keeping one image consistent across revisions\n# ai\n# seedream\n# design\nAnswer: a chained edit is an image-to-image job where the reference is the previous output rather than the original. Seedream 5.5's published study runs twenty of them \u2014 a coastal station from morning light to blue hour \u2014 and the interesting part is not the feature, it is the drift: each step re-renders, so colour, edges and small details move a little every time.\nTwenty edits is a long chain in\nCallirra . Drift compounds, and the difference between a chain that stays coherent and one that slowly becomes a different picture is decided by how much you change per step.\nThe chain, as published\nThe study's steps are small and additive, in this order: red tram, jade kiosk, striped awning, copper clock rim, roof tiles, platform lights, three travellers, station sign, luggage crates, ivory sail, dock ladder, bridge railing, greenhouse flowers, ferry banner, two umbrellas, blue-hour sky, wet platform, lit tram windows, bridge lights, breaking surf.\nTwo design lessons sit in that list:\nOne object or one condition per edit.\n\"Red tram\" is a colour decision on one element. \"Blue-hour sky\" is a light decision affecting the whole frame. They are not mixed in the same step.\nEnvironment changes come after object changes.\nProps and signage first, then weather and time of day ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Need a New Column on a Live Orders Table? Six Checks Before You Change the Schema",
+            "url": "https://dev.to/codewaveconsulting/need-a-new-column-on-a-live-orders-table-six-checks-before-you-change-the-schema-14eo",
+            "description": "The store in this example is made up. It runs its orders on PostgreSQL. The product team now wants a new delivery-window field on every order. The app is busy all day, so downtime is hard to book. The team wants to know how to change the table without stopping sales. These checks cover that one live",
+            "detailed_content": "Need a New Column on a Live Orders Table? Six Checks Before You Change the Schema - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nCodewave Consulting LLC\nPosted on\nNov 16\nNeed a New Column on a Live Orders Table? Six Checks Before You Change the Schema\n# database\n# postgres\n# architecture\n# devops\nThe store in this example is made up. It runs its orders on PostgreSQL. The product team now wants a new delivery-window field on every order. The app is busy all day, so downtime is hard to book. The team wants to know how to change the table without stopping sales. These checks cover that one live change, not a full database review.\nWe read the official PostgreSQL docs for version 18. We read the pages on ALTER TABLE, CREATE INDEX, table locks, and the lock_timeout setting. We also read the pages on pg_dump and on point-in-time recovery. The six checks below each point back to those pages.\nAs of 16 November 2026, the PostgreSQL versioning page lists 18.7 as the newest release of version 18. Version 19 is still a release candidate, not a final release.\nThis list does not promise zero downtime. Other databases lock tables in other ways, so read your own engine's docs too.\nWord key\nSchema:\nthe shape of your tables, such as their columns, types, and rules.\nLock:\na hold that a command places on a table so others wait or carry on safely.\nExpand and contract:\nadd the new shape first, move the app over, and remove the old shape last.\nRewrite:\nthe database copies every row of a table into a new file.\nCheck 1. Does this change need the stricte",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "I opened Joplin like a chip. 47% of it is Electron.",
+            "url": "https://dev.to/scs0209/i-opened-joplin-like-a-chip-47-of-it-is-electron-1oe4",
+            "description": "I built App Anatomy, a tool that reads a shipped app and shows what is inside it and how many bytes each part takes: the runtime, third-party libraries, the app's own code, and assets. It draws the result as a 3D chip you can open.\n\n\n\nYou can try it without installing anything: scs0209.github.io/app",
+            "detailed_content": "I opened Joplin like a chip. 47% of it is Electron. - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nChangsu Seong\nPosted on\nNov 16\nI opened Joplin like a chip. 47% of it is Electron.\n# ai\n# showdev\n# rust\n# assembly\nI built\nApp Anatomy , a tool that reads a shipped app and shows what is inside it and how many bytes each part takes: the runtime, third-party libraries, the app's own code, and assets. It draws the result as a 3D chip you can open.\nYou can try it without installing anything:\nscs0209.github.io/app-anatomy\nWhat it shows\nJoplin, a note-taking app, is 613.7 MB on a Mac.\n47% is the Electron framework\n22% is an AI inference runtime (onnxruntime-web)\n12% is the app's own bundled code\nOn the chip, area is bytes, height is the layer (app, runtime, library, module), and color is where the part came from. The camera is orthographic, so equal areas look equal. Parts that no rule names yet stay gray and hatched.\nScan your whole Mac\nnpx app-anatomy scan --open\nThis reads every app in\n/Applications\nand opens the result in your browser, served from\n127.0.0.1\nonly. It tells you things like how many copies of Electron you have installed and how much disk they take together.\nIt also reads one app at a time: a\n.app\nfolder, a ZIP with a\n.app\ninside, an Android APK or an iOS IPA.\nnpx app-anatomy some.apk\nandroid-release.apk \u00b7 apk \u00b7 226.7 MB (uncompressed)\nruntime: react-native 23.5%\nlargest: libjingle_peerconnection_so.so 19.0% \u00b7 libreactnative.so 11.6% \u00b7 libbarhopper_v3.so 8.9%\nidentified 94.0% \u00b7 not looked inside 6.5% \u00b7 overhead 2.8%\nT",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "How ChatGPT free plan changed in two years (2024 vs 2026)",
+            "url": "https://dev.to/voxahq/how-chatgpt-free-plan-changed-in-two-years-2024-vs-2026-581m",
+            "description": "In 2024, free ChatGPT was metered by messages on a good model: you got GPT-4o for a while, then it dropped you to GPT-3.5 when the cap ran out.\n\nIn 2026, the chat itself is unlimited on one model, and the meter moved to the tools.\n\n\n\n\n\nLate 2024\nNovember 2026\n\n\n\n\nMain chat\nGPT-4o with a message cap,",
+            "detailed_content": "How ChatGPT free plan changed in two years (2024 vs 2026) - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nVOXA\nPosted on\nNov 16\nHow ChatGPT free plan changed in two years (2024 vs 2026)\n# chatgpt\n# ai\nIn 2024, free ChatGPT was metered by\nmessages on a good model : you got GPT-4o for a while, then it dropped you to GPT-3.5 when the cap ran out.\nIn 2026, the chat itself is unlimited on one model, and the meter moved to the tools.\nLate 2024\nNovember 2026\nMain chat\nGPT-4o with a message cap, then fallback to GPT-3.5\nUnlimited text chats on one model, subject to abuse guardrails\nModel choice\nOne model, decided by OpenAI\nOne model only. The bigger ones stay paid\nReasoning\nNone on free\nA Think button, no slider\nUploads\nAllowed, cap unpublished\nAllowed, but 3 uploads a day\nAds\nNone\nAds may appear on Free and Go in some countries\nStorage\nNothing permanent\nA Library with 500 MB\nFour moments did most of the work:\n13 May 2024\n- GPT-4o reached free users with a message limit that depended on demand. OpenAI never published the number, and when you hit it the conversation fell back to GPT-3.5, which could not use any of the new tools.\n9 February 2026\n- ad testing started in the United States on Free and Go. It reached Canada, Australia and New Zealand in March, then the UK, Mexico, Brazil, Japan and South Korea in August.\n6-10 August 2026\n- everyday text chat became unlimited on Free and Go, and free users were pinned to a single model with one reasoning mode.\n7-8 October 2026\n- a newer model generation moved into the main chat, and free accou",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Stop Using cat! Use less for Opening Files",
+            "url": "https://dev.to/kawasaki031677/stop-using-cat-use-less-for-opening-files-a9a",
+            "description": "Introduction\n\n\nWhen opening files on Linux, how many of you immediately use cat?\n\n\n\ncat test.txt\n\n\n\n\n\n\nIt's convenient and easy to use, but have you ever had your screen freeze when opening a large file? \ud83d\ude04\n\nThe drawbacks of cat include:\n\n\nYou can't search for text\nIt outputs everything at once\n\n\nHow",
+            "detailed_content": "Stop Using cat! Use less for Opening Files - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nkawasaki031677\nPosted on\nNov 16\nStop Using cat! Use less for Opening Files\n# linux\n# less\n# command\n# beginners\nIntroduction\nWhen opening files on Linux, how many of you immediately use\ncat ?\ncat test.txt\nIt's convenient and easy to use, but\nhave you ever had your screen freeze when opening a large file?\n\ud83d\ude04\nThe drawbacks of\ncat\ninclude:\nYou can't search for text\nIt outputs everything at once\nHowever,\nless\ncan solve all of these problems.\nUse less\nI actively use\nless\ninstead of\ncat\nwhen opening files. Here's how to use it:\nless test.txt\nThis makes a huge difference. I find it especially convenient when viewing logs.\nBasic Operations\nThese are the basic commands you need to remember:\nSPACE : Scroll down\nb : Scroll up\ng : Go to the beginning\nG : Go to the end\n/search_word : Search for text\nq : Exit\nConclusion\ncat\nis a command for outputting files\nless\nis a command for reading files\nIf you're currently using\ncat\nby default, please try\nless\nonce. You'll be amazed at how much more comfortable it is!\nTop comments\n(0)\nSubscribe\nSubmit\nPreview\nDismiss\nCode of Conduct\n\u2022\nReport abuse\nkawasaki031677\nFollow\nCloud Architect / Platform Engineer / AI-assisted Development\nLocation\nKashiwa, Japan\nJoined\nOct 31, 2026\nMore from\nkawasaki031677\nConsider Using the nc Command for Connectivity Verification\n# linux\n# networking\n# netcat\n# troubleshooting\nDEV Community\n\u2014 A space to discuss and keep up software development and manage your software career\nHome\nDEV Chal",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Exposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps",
+            "url": "https://dev.to/hackerme/exposed-api-keys-how-ai-agents-now-hunt-them-on-websites-and-ai-apps-12bc",
+            "description": "Exposed API keys used to be found by a person running a search, or by a bot scraping GitHub. In November 2026, Amazon\u2019s threat intelligence team showed what that looks like when the searcher is an AI agent that never gets tired. Its decoy servers captured the working records of attacker agents that ",
+            "detailed_content": "Exposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nHackerMe\nPosted on\nNov 16\n\u2022\nOriginally published at\nsecurity.hackerme.ai\nExposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps\n# ai\n# api\n# webdev\n# security\nExposed API keys used to be found by a person running a search, or by a bot scraping GitHub. In November 2026, Amazon\u2019s threat intelligence team showed what that looks like when the searcher is an AI agent that never gets tired. Its decoy servers captured the working records of attacker agents that hunted internet-exposed AI apps, pulled out the provider keys stored inside, tested them, and added the working ones to a shared pool. The stolen keys then paid for the AI models that ran the next round of searching.\nIf your website or web app uses an AI provider, a payment API, a maps API or a cloud account, this is about you, even if you have never heard of LiteLLM or Dify.\nWhat Amazon found\nAmazon runs a network of decoy sensors called MadPot. Between 3 October and 5 November 2026, some of those decoys were set up to look like popular large language model (LLM) APIs. AI agents connected to them and sent requests that carried their own campaign history: operator instructions, task lists and reported findings.\nAmazon assessed with moderate confidence that the agents ran on ARTEX, an open-source AI penetration-testing framework, and that the operators were separate China-linked groups. It also said clearly that it could not verify the outcomes the ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "App Store rejection reasons: 11 fixes before you resubmit",
+            "url": "https://dev.to/extensionbooster/app-store-rejection-reasons-11-fixes-before-you-resubmit-35f2",
+            "description": "Originally published on AppRanker.\n\nMost App Store rejection reasons come from a short list of guidelines, and most of them are things you can catch on your own machine before App Review ever opens your build. Below is the data on where rejections actually land, a fix table you can run through befor",
+            "detailed_content": "App Store rejection reasons: 11 fixes before you resubmit - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nExtensionBooster\nPosted on\nNov 16\n\u2022\nOriginally published at\nappranker.net\nApp Store rejection reasons: 11 fixes before you resubmit\n# ios\n# mobile\n# startup\n# productivity\nOriginally published on\nAppRanker .\nMost App Store rejection reasons come from a short list of guidelines, and most of them are things you can catch on your own machine before App Review ever opens your build. Below is the data on where rejections actually land, a fix table you can run through before each submission, and the reply-or-resubmit decision once a rejection arrives.\nWhere rejections actually come from\nApple's 2025 App Store Transparency Report puts numbers on the problem. Out of 9,100,620 submissions reviewed, 2,093,244 were rejected. That is roughly one build in four. The good news: 387,087 of those were approved after an initial rejection, so a rejection is usually a round trip, not a dead end.\nHere is how the rejections split by guideline section:\nGuideline section\nRejections\n2.x Performance\n1,354,418\n5.x Legal\n495,673\n4.x Design\n415,532\n3.x Business\n283,820\n1.x Safety\n151,159\nPerformance dominates, and inside it one rule stands out. Apple's App Review page says\nmore than 40% of unresolved issues relate to Guideline 2.1, App Completeness . In practice that means crashes, missing login details, placeholder screens and broken links, not exotic policy edge cases.\nRead the message before touching code\nBefore you open Xcode, check three things in ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Speed Up CI in the Age of AI-Written Code",
+            "url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/",
+            "description": "Coding agents now write code faster than most CI pipelines can check it. In April 2026, GitHub COO Kyle Daigle said that his platform was handling 275 million commits a week, on pace for 14 billion in",
+            "detailed_content": "How to Speed Up CI in the Age of AI-Written Code\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 13, 2026\n/\n#GitHub\nHow to Speed Up CI in the Age of AI-Written Code\nManish Shivanandhan\nCoding agents now write code faster than most\nCI pipelines\ncan check it. In April 2026,\nGitHub COO Kyle Daigle said\nthat his platform was handling 275 million commits a week, on pace for 14 billion in the year, up from about 1 billion in 2025. In the same post, he put GitHub Actions at 2.1 billion minutes in a single week, up from 500 million a week in 2023.\nThat second figure shows where all those commits end up: in CI. A 15-minute pipeline is tolerable if a dev pushes a few times a day. When an agent opens ten PRs in an afternoon, that pipeline turns into a queue. You wait for results, agents wait to retry, and the time saved writing code is lost checking it.\nMost of that delay comes from a few causes, and each has a known fix. You can speed up CI in five ways:\nmeasure where the time goes\ncache what you can reuse\nrun jobs on faster hardware\nsplit tests across parallel jobs\nskip work that doesn't need to run.\nIn this article, we'll walk through each fix in order. You\u2019ll learn how to find the slowest steps in your GitHub Actions workflows, cache dependencies and Docker layers with stable keys, and move heavy jobs to faster runners. You\u2019ll also see how to shard tests across a matrix of parallel jobs, and how to skip unneeded work with path filters, affected-only tests, and concurrency groups.\nWhat We'll Cover:\nMeasure First, Then Optimize\nCache Dependencies and Build Layers\nRun on Faster Hardware\nParallelize and Shard Your Tests\nDo Less Work on Every Run\nPutting It Together\nMeasure First, Then Optimize\nMost teams try to guess w",
+            "content_source": "web_page"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Agentic Coding with Codex & AI Coding Agents",
+            "url": "https://www.freecodecamp.org/news/learn-agentic-coding-with-codex-ai-coding-agents/",
+            "description": "AI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructi",
+            "detailed_content": "Learn Agentic Coding with Codex & AI Coding Agents\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 10, 2026\n/\n#codex\nLearn Agentic Coding with Codex & AI Coding Agents\nBeau Carnes\nAI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructions for a project, and config.toml holds the agent's configuration.\nWe just published a course on the freeCodeCamp.org YouTube channel that will teach you how to get reliable results from a coding agent by giving it the right context, planning the work, controlling its permissions, and verifying every change. This course is taught by Tom Chant, Head of Education at Scrimba.\nYou'll work through realistic tasks, including challenges on skills, characterization tests, and config.toml. The course is aimed at experienced developers adding AI to their workflow and at non-coders who want to build software with AI help. You can also study it interactively on Scrimba.\nIn this course, you will learn:\nPrompting & Project Setup How to write effective prompts and comment prompts for a coding agent, then initialize a project and use multiple AGENTS.md files.\nPlan Mode & Skills How to break larger development tasks down with Plan Mode and extend a coding agent with skills.\nTesting Agent Changes How to verify an agent's changes with characterization tests and test-driven development (TDD), and which testing pitfalls to look out for.\nGit & Secrets How to use Git safely alongside a coding agent and keep API keys, credentials, and other secrets safe.\nContext, Permissions & config.toml How to use the VS Code Codex extension, manage context, control what a",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "It's always DNS, so why are we running our own?",
+            "url": "https://s2.dev/blog/dns-server",
+            "description": "It's always DNS, so why are we running our own?",
+            "detailed_content": "It\u2019s always DNS, so why are we running our own? \u00b7 S2 Use cases Docs Pricing Playground Blog Dashboard Use cases Docs Pricing Playground Blog Dashboard October 16, 2026 distsys I t \u2019 s\na l w a y s\nD N S ,\ns o\nw h y\na r e\nw e\nr u n n i n g\no u r\no w n ? Cristian Caciuc On this page This will be a rollercoaster story on how we ended up replacing Route53 and running our own authoritative DNS server.\nBefore our lives changed\nAt some point, we decided we should be able to provide unlimited basins to our clients.\nBasins\nare a core namespace construct on S2 and act as top-level containers for streams (already unlimited in number). We found that customers were hacking around our not-so-arbitrary limit of 100 basins per account. That\u2019s not a cool experience.\nFor the purposes of this story, what is important is that each basin created by a customer becomes its own subdomain:\nmy-basin.b.s2.dev\n(not different from the way buckets work on AWS S3). The DNS entry associated with each basin is a CNAME, which routes clients to the correct\ncell\nin our architecture. To support unlimited basins, we'd therefore need to support unlimited DNS records.\nThese records would need strong consistency too. When a basin is created, its address should be instantly resolvable, otherwise clients would be waiting around for a cached NXDOMAIN to expire.\nMy pulse went through the roof at the thought of running our own DNS server, yikes!\nHooking on existing systems\nMy research phase started with hope. Hope that our existing DNS setup with AWS Route53 would work with these new requirements. I really really did not want us to build and run our own DNS server.\nRoute53 is an awesome system and can, it appears, support an unlimited number of records. But, there's a fatal limitation: their API rate limits at a max",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc explains need for own DNS due to unlimited basins and consistency."
+          },
+          {
+            "source": "Dev.to",
+            "title": "The twenty-edit chain: keeping one image consistent across revisions",
+            "url": "https://dev.to/chet103cc/the-twenty-edit-chain-keeping-one-image-consistent-across-revisions-61m",
+            "description": "Answer: a chained edit is an image-to-image job where the reference is the previous output rather than the original. Seedream 5.5's published study runs twenty of them \u2014 a coastal station from morning light to blue hour \u2014 and the interesting part is not the feature, it is the drift: each step re-ren",
+            "detailed_content": "The twenty-edit chain: keeping one image consistent across revisions - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nchet100\nPosted on\nNov 16\n\u2022\nOriginally published at\ncallirra.com\nThe twenty-edit chain: keeping one image consistent across revisions\n# ai\n# seedream\n# design\nAnswer: a chained edit is an image-to-image job where the reference is the previous output rather than the original. Seedream 5.5's published study runs twenty of them \u2014 a coastal station from morning light to blue hour \u2014 and the interesting part is not the feature, it is the drift: each step re-renders, so colour, edges and small details move a little every time.\nTwenty edits is a long chain in\nCallirra . Drift compounds, and the difference between a chain that stays coherent and one that slowly becomes a different picture is decided by how much you change per step.\nThe chain, as published\nThe study's steps are small and additive, in this order: red tram, jade kiosk, striped awning, copper clock rim, roof tiles, platform lights, three travellers, station sign, luggage crates, ivory sail, dock ladder, bridge railing, greenhouse flowers, ferry banner, two umbrellas, blue-hour sky, wet platform, lit tram windows, bridge lights, breaking surf.\nTwo design lessons sit in that list:\nOne object or one condition per edit.\n\"Red tram\" is a colour decision on one element. \"Blue-hour sky\" is a light decision affecting the whole frame. They are not mixed in the same step.\nEnvironment changes come after object changes.\nProps and signage first, then weather and time of day ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc defines chained edit and details Seedream 5.5 twenty\u2011step study."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Need a New Column on a Live Orders Table? Six Checks Before You Change the Schema",
+            "url": "https://dev.to/codewaveconsulting/need-a-new-column-on-a-live-orders-table-six-checks-before-you-change-the-schema-14eo",
+            "description": "The store in this example is made up. It runs its orders on PostgreSQL. The product team now wants a new delivery-window field on every order. The app is busy all day, so downtime is hard to book. The team wants to know how to change the table without stopping sales. These checks cover that one live",
+            "detailed_content": "Need a New Column on a Live Orders Table? Six Checks Before You Change the Schema - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nCodewave Consulting LLC\nPosted on\nNov 16\nNeed a New Column on a Live Orders Table? Six Checks Before You Change the Schema\n# database\n# postgres\n# architecture\n# devops\nThe store in this example is made up. It runs its orders on PostgreSQL. The product team now wants a new delivery-window field on every order. The app is busy all day, so downtime is hard to book. The team wants to know how to change the table without stopping sales. These checks cover that one live change, not a full database review.\nWe read the official PostgreSQL docs for version 18. We read the pages on ALTER TABLE, CREATE INDEX, table locks, and the lock_timeout setting. We also read the pages on pg_dump and on point-in-time recovery. The six checks below each point back to those pages.\nAs of 16 November 2026, the PostgreSQL versioning page lists 18.7 as the newest release of version 18. Version 19 is still a release candidate, not a final release.\nThis list does not promise zero downtime. Other databases lock tables in other ways, so read your own engine's docs too.\nWord key\nSchema:\nthe shape of your tables, such as their columns, types, and rules.\nLock:\na hold that a command places on a table so others wait or carry on safely.\nExpand and contract:\nadd the new shape first, move the app over, and remove the old shape last.\nRewrite:\nthe database copies every row of a table into a new file.\nCheck 1. Does this change need the stricte",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc matches scenario of PostgreSQL live schema change checks."
+          },
+          {
+            "source": "Dev.to",
+            "title": "How ChatGPT free plan changed in two years (2024 vs 2026)",
+            "url": "https://dev.to/voxahq/how-chatgpt-free-plan-changed-in-two-years-2024-vs-2026-581m",
+            "description": "In 2024, free ChatGPT was metered by messages on a good model: you got GPT-4o for a while, then it dropped you to GPT-3.5 when the cap ran out.\n\nIn 2026, the chat itself is unlimited on one model, and the meter moved to the tools.\n\n\n\n\n\nLate 2024\nNovember 2026\n\n\n\n\nMain chat\nGPT-4o with a message cap,",
+            "detailed_content": "How ChatGPT free plan changed in two years (2024 vs 2026) - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nVOXA\nPosted on\nNov 16\nHow ChatGPT free plan changed in two years (2024 vs 2026)\n# chatgpt\n# ai\nIn 2024, free ChatGPT was metered by\nmessages on a good model : you got GPT-4o for a while, then it dropped you to GPT-3.5 when the cap ran out.\nIn 2026, the chat itself is unlimited on one model, and the meter moved to the tools.\nLate 2024\nNovember 2026\nMain chat\nGPT-4o with a message cap, then fallback to GPT-3.5\nUnlimited text chats on one model, subject to abuse guardrails\nModel choice\nOne model, decided by OpenAI\nOne model only. The bigger ones stay paid\nReasoning\nNone on free\nA Think button, no slider\nUploads\nAllowed, cap unpublished\nAllowed, but 3 uploads a day\nAds\nNone\nAds may appear on Free and Go in some countries\nStorage\nNothing permanent\nA Library with 500 MB\nFour moments did most of the work:\n13 May 2024\n- GPT-4o reached free users with a message limit that depended on demand. OpenAI never published the number, and when you hit it the conversation fell back to GPT-3.5, which could not use any of the new tools.\n9 February 2026\n- ad testing started in the United States on Free and Go. It reached Canada, Australia and New Zealand in March, then the UK, Mexico, Brazil, Japan and South Korea in August.\n6-10 August 2026\n- everyday text chat became unlimited on Free and Go, and free users were pinned to a single model with one reasoning mode.\n7-8 October 2026\n- a newer model generation moved into the main chat, and free accou",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc outlines 2024 metering and 2026 unlimited chat as stated."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Stop Using cat! Use less for Opening Files",
+            "url": "https://dev.to/kawasaki031677/stop-using-cat-use-less-for-opening-files-a9a",
+            "description": "Introduction\n\n\nWhen opening files on Linux, how many of you immediately use cat?\n\n\n\ncat test.txt\n\n\n\n\n\n\nIt's convenient and easy to use, but have you ever had your screen freeze when opening a large file? \ud83d\ude04\n\nThe drawbacks of cat include:\n\n\nYou can't search for text\nIt outputs everything at once\n\n\nHow",
+            "detailed_content": "Stop Using cat! Use less for Opening Files - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nkawasaki031677\nPosted on\nNov 16\nStop Using cat! Use less for Opening Files\n# linux\n# less\n# command\n# beginners\nIntroduction\nWhen opening files on Linux, how many of you immediately use\ncat ?\ncat test.txt\nIt's convenient and easy to use, but\nhave you ever had your screen freeze when opening a large file?\n\ud83d\ude04\nThe drawbacks of\ncat\ninclude:\nYou can't search for text\nIt outputs everything at once\nHowever,\nless\ncan solve all of these problems.\nUse less\nI actively use\nless\ninstead of\ncat\nwhen opening files. Here's how to use it:\nless test.txt\nThis makes a huge difference. I find it especially convenient when viewing logs.\nBasic Operations\nThese are the basic commands you need to remember:\nSPACE : Scroll down\nb : Scroll up\ng : Go to the beginning\nG : Go to the end\n/search_word : Search for text\nq : Exit\nConclusion\ncat\nis a command for outputting files\nless\nis a command for reading files\nIf you're currently using\ncat\nby default, please try\nless\nonce. You'll be amazed at how much more comfortable it is!\nTop comments\n(0)\nSubscribe\nSubmit\nPreview\nDismiss\nCode of Conduct\n\u2022\nReport abuse\nkawasaki031677\nFollow\nCloud Architect / Platform Engineer / AI-assisted Development\nLocation\nKashiwa, Japan\nJoined\nOct 31, 2026\nMore from\nkawasaki031677\nConsider Using the nc Command for Connectivity Verification\n# linux\n# networking\n# netcat\n# troubleshooting\nDEV Community\n\u2014 A space to discuss and keep up software development and manage your software career\nHome\nDEV Chal",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc lists same cat drawbacks and recommends less."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Exposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps",
+            "url": "https://dev.to/hackerme/exposed-api-keys-how-ai-agents-now-hunt-them-on-websites-and-ai-apps-12bc",
+            "description": "Exposed API keys used to be found by a person running a search, or by a bot scraping GitHub. In November 2026, Amazon\u2019s threat intelligence team showed what that looks like when the searcher is an AI agent that never gets tired. Its decoy servers captured the working records of attacker agents that ",
+            "detailed_content": "Exposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nHackerMe\nPosted on\nNov 16\n\u2022\nOriginally published at\nsecurity.hackerme.ai\nExposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps\n# ai\n# api\n# webdev\n# security\nExposed API keys used to be found by a person running a search, or by a bot scraping GitHub. In November 2026, Amazon\u2019s threat intelligence team showed what that looks like when the searcher is an AI agent that never gets tired. Its decoy servers captured the working records of attacker agents that hunted internet-exposed AI apps, pulled out the provider keys stored inside, tested them, and added the working ones to a shared pool. The stolen keys then paid for the AI models that ran the next round of searching.\nIf your website or web app uses an AI provider, a payment API, a maps API or a cloud account, this is about you, even if you have never heard of LiteLLM or Dify.\nWhat Amazon found\nAmazon runs a network of decoy sensors called MadPot. Between 3 October and 5 November 2026, some of those decoys were set up to look like popular large language model (LLM) APIs. AI agents connected to them and sent requests that carried their own campaign history: operator instructions, task lists and reported findings.\nAmazon assessed with moderate confidence that the agents ran on ARTEX, an open-source AI penetration-testing framework, and that the operators were separate China-linked groups. It also said clearly that it could not verify the outcomes the ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc describes Amazon decoy study of AI agents hunting API keys."
+          },
+          {
+            "source": "Dev.to",
+            "title": "App Store rejection reasons: 11 fixes before you resubmit",
+            "url": "https://dev.to/extensionbooster/app-store-rejection-reasons-11-fixes-before-you-resubmit-35f2",
+            "description": "Originally published on AppRanker.\n\nMost App Store rejection reasons come from a short list of guidelines, and most of them are things you can catch on your own machine before App Review ever opens your build. Below is the data on where rejections actually land, a fix table you can run through befor",
+            "detailed_content": "App Store rejection reasons: 11 fixes before you resubmit - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nExtensionBooster\nPosted on\nNov 16\n\u2022\nOriginally published at\nappranker.net\nApp Store rejection reasons: 11 fixes before you resubmit\n# ios\n# mobile\n# startup\n# productivity\nOriginally published on\nAppRanker .\nMost App Store rejection reasons come from a short list of guidelines, and most of them are things you can catch on your own machine before App Review ever opens your build. Below is the data on where rejections actually land, a fix table you can run through before each submission, and the reply-or-resubmit decision once a rejection arrives.\nWhere rejections actually come from\nApple's 2025 App Store Transparency Report puts numbers on the problem. Out of 9,100,620 submissions reviewed, 2,093,244 were rejected. That is roughly one build in four. The good news: 387,087 of those were approved after an initial rejection, so a rejection is usually a round trip, not a dead end.\nHere is how the rejections split by guideline section:\nGuideline section\nRejections\n2.x Performance\n1,354,418\n5.x Legal\n495,673\n4.x Design\n415,532\n3.x Business\n283,820\n1.x Safety\n151,159\nPerformance dominates, and inside it one rule stands out. Apple's App Review page says\nmore than 40% of unresolved issues relate to Guideline 2.1, App Completeness . In practice that means crashes, missing login details, placeholder screens and broken links, not exotic policy edge cases.\nRead the message before touching code\nBefore you open Xcode, check three things in ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc confirms origin AppRanker and summary of rejection reasons."
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Speed Up CI in the Age of AI-Written Code",
+            "url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/",
+            "description": "Coding agents now write code faster than most CI pipelines can check it. In April 2026, GitHub COO Kyle Daigle said that his platform was handling 275 million commits a week, on pace for 14 billion in",
+            "detailed_content": "How to Speed Up CI in the Age of AI-Written Code\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 13, 2026\n/\n#GitHub\nHow to Speed Up CI in the Age of AI-Written Code\nManish Shivanandhan\nCoding agents now write code faster than most\nCI pipelines\ncan check it. In April 2026,\nGitHub COO Kyle Daigle said\nthat his platform was handling 275 million commits a week, on pace for 14 billion in the year, up from about 1 billion in 2025. In the same post, he put GitHub Actions at 2.1 billion minutes in a single week, up from 500 million a week in 2023.\nThat second figure shows where all those commits end up: in CI. A 15-minute pipeline is tolerable if a dev pushes a few times a day. When an agent opens ten PRs in an afternoon, that pipeline turns into a queue. You wait for results, agents wait to retry, and the time saved writing code is lost checking it.\nMost of that delay comes from a few causes, and each has a known fix. You can speed up CI in five ways:\nmeasure where the time goes\ncache what you can reuse\nrun jobs on faster hardware\nsplit tests across parallel jobs\nskip work that doesn't need to run.\nIn this article, we'll walk through each fix in order. You\u2019ll learn how to find the slowest steps in your GitHub Actions workflows, cache dependencies and Docker layers with stable keys, and move heavy jobs to faster runners. You\u2019ll also see how to shard tests across a matrix of parallel jobs, and how to skip unneeded work with path filters, affected-only tests, and concurrency groups.\nWhat We'll Cover:\nMeasure First, Then Optimize\nCache Dependencies and Build Layers\nRun on Faster Hardware\nParallelize and Shard Your Tests\nDo Less Work on Every Run\nPutting It Together\nMeasure First, Then Optimize\nMost teams try to guess w",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc includes Daigle quote about 275\u202fM weekly commits."
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Agentic Coding with Codex & AI Coding Agents",
+            "url": "https://www.freecodecamp.org/news/learn-agentic-coding-with-codex-ai-coding-agents/",
+            "description": "AI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructi",
+            "detailed_content": "Learn Agentic Coding with Codex & AI Coding Agents\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 10, 2026\n/\n#codex\nLearn Agentic Coding with Codex & AI Coding Agents\nBeau Carnes\nAI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructions for a project, and config.toml holds the agent's configuration.\nWe just published a course on the freeCodeCamp.org YouTube channel that will teach you how to get reliable results from a coding agent by giving it the right context, planning the work, controlling its permissions, and verifying every change. This course is taught by Tom Chant, Head of Education at Scrimba.\nYou'll work through realistic tasks, including challenges on skills, characterization tests, and config.toml. The course is aimed at experienced developers adding AI to their workflow and at non-coders who want to build software with AI help. You can also study it interactively on Scrimba.\nIn this course, you will learn:\nPrompting & Project Setup How to write effective prompts and comment prompts for a coding agent, then initialize a project and use multiple AGENTS.md files.\nPlan Mode & Skills How to break larger development tasks down with Plan Mode and extend a coding agent with skills.\nTesting Agent Changes How to verify an agent's changes with characterization tests and test-driven development (TDD), and which testing pitfalls to look out for.\nGit & Secrets How to use Git safely alongside a coding agent and keep API keys, credentials, and other secrets safe.\nContext, Permissions & config.toml How to use the VS Code Codex extension, manage context, control what a",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc details Codex functions and AGENTS.md usage."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "It's always DNS, so why are we running our own?",
+            "url": "https://s2.dev/blog/dns-server",
+            "description": "It's always DNS, so why are we running our own?",
+            "detailed_content": "It\u2019s always DNS, so why are we running our own? \u00b7 S2 Use cases Docs Pricing Playground Blog Dashboard Use cases Docs Pricing Playground Blog Dashboard October 16, 2026 distsys I t \u2019 s\na l w a y s\nD N S ,\ns o\nw h y\na r e\nw e\nr u n n i n g\no u r\no w n ? Cristian Caciuc On this page This will be a rollercoaster story on how we ended up replacing Route53 and running our own authoritative DNS server.\nBefore our lives changed\nAt some point, we decided we should be able to provide unlimited basins to our clients.\nBasins\nare a core namespace construct on S2 and act as top-level containers for streams (already unlimited in number). We found that customers were hacking around our not-so-arbitrary limit of 100 basins per account. That\u2019s not a cool experience.\nFor the purposes of this story, what is important is that each basin created by a customer becomes its own subdomain:\nmy-basin.b.s2.dev\n(not different from the way buckets work on AWS S3). The DNS entry associated with each basin is a CNAME, which routes clients to the correct\ncell\nin our architecture. To support unlimited basins, we'd therefore need to support unlimited DNS records.\nThese records would need strong consistency too. When a basin is created, its address should be instantly resolvable, otherwise clients would be waiting around for a cached NXDOMAIN to expire.\nMy pulse went through the roof at the thought of running our own DNS server, yikes!\nHooking on existing systems\nMy research phase started with hope. Hope that our existing DNS setup with AWS Route53 would work with these new requirements. I really really did not want us to build and run our own DNS server.\nRoute53 is an awesome system and can, it appears, support an unlimited number of records. But, there's a fatal limitation: their API rate limits at a max",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc explains need for own DNS due to unlimited basins and consistency.",
+            "why_it_matters": "Running your own authoritative DNS is often necessary to achieve strong consistency and unlimited record creation for dynamic subdomains, overcoming the rate limits and eventual consistency of managed services like Route53.",
+            "who_cares": "Platform engineers and SREs building multi-tenant SaaS products with dynamic subdomain provisioning.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "The twenty-edit chain: keeping one image consistent across revisions",
+            "url": "https://dev.to/chet103cc/the-twenty-edit-chain-keeping-one-image-consistent-across-revisions-61m",
+            "description": "Answer: a chained edit is an image-to-image job where the reference is the previous output rather than the original. Seedream 5.5's published study runs twenty of them \u2014 a coastal station from morning light to blue hour \u2014 and the interesting part is not the feature, it is the drift: each step re-ren",
+            "detailed_content": "The twenty-edit chain: keeping one image consistent across revisions - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nchet100\nPosted on\nNov 16\n\u2022\nOriginally published at\ncallirra.com\nThe twenty-edit chain: keeping one image consistent across revisions\n# ai\n# seedream\n# design\nAnswer: a chained edit is an image-to-image job where the reference is the previous output rather than the original. Seedream 5.5's published study runs twenty of them \u2014 a coastal station from morning light to blue hour \u2014 and the interesting part is not the feature, it is the drift: each step re-renders, so colour, edges and small details move a little every time.\nTwenty edits is a long chain in\nCallirra . Drift compounds, and the difference between a chain that stays coherent and one that slowly becomes a different picture is decided by how much you change per step.\nThe chain, as published\nThe study's steps are small and additive, in this order: red tram, jade kiosk, striped awning, copper clock rim, roof tiles, platform lights, three travellers, station sign, luggage crates, ivory sail, dock ladder, bridge railing, greenhouse flowers, ferry banner, two umbrellas, blue-hour sky, wet platform, lit tram windows, bridge lights, breaking surf.\nTwo design lessons sit in that list:\nOne object or one condition per edit.\n\"Red tram\" is a colour decision on one element. \"Blue-hour sky\" is a light decision affecting the whole frame. They are not mixed in the same step.\nEnvironment changes come after object changes.\nProps and signage first, then weather and time of day ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc defines chained edit and details Seedream 5.5 twenty\u2011step study.",
+            "why_it_matters": "Understanding drift in chained image-to-image edits is critical for maintaining visual consistency in generative AI workflows, requiring a strategy of small, additive changes rather than large overhauls.",
+            "who_cares": "AI engineers and creative technologists implementing generative AI pipelines for design or media production.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Need a New Column on a Live Orders Table? Six Checks Before You Change the Schema",
+            "url": "https://dev.to/codewaveconsulting/need-a-new-column-on-a-live-orders-table-six-checks-before-you-change-the-schema-14eo",
+            "description": "The store in this example is made up. It runs its orders on PostgreSQL. The product team now wants a new delivery-window field on every order. The app is busy all day, so downtime is hard to book. The team wants to know how to change the table without stopping sales. These checks cover that one live",
+            "detailed_content": "Need a New Column on a Live Orders Table? Six Checks Before You Change the Schema - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nCodewave Consulting LLC\nPosted on\nNov 16\nNeed a New Column on a Live Orders Table? Six Checks Before You Change the Schema\n# database\n# postgres\n# architecture\n# devops\nThe store in this example is made up. It runs its orders on PostgreSQL. The product team now wants a new delivery-window field on every order. The app is busy all day, so downtime is hard to book. The team wants to know how to change the table without stopping sales. These checks cover that one live change, not a full database review.\nWe read the official PostgreSQL docs for version 18. We read the pages on ALTER TABLE, CREATE INDEX, table locks, and the lock_timeout setting. We also read the pages on pg_dump and on point-in-time recovery. The six checks below each point back to those pages.\nAs of 16 November 2026, the PostgreSQL versioning page lists 18.7 as the newest release of version 18. Version 19 is still a release candidate, not a final release.\nThis list does not promise zero downtime. Other databases lock tables in other ways, so read your own engine's docs too.\nWord key\nSchema:\nthe shape of your tables, such as their columns, types, and rules.\nLock:\na hold that a command places on a table so others wait or carry on safely.\nExpand and contract:\nadd the new shape first, move the app over, and remove the old shape last.\nRewrite:\nthe database copies every row of a table into a new file.\nCheck 1. Does this change need the stricte",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc matches scenario of PostgreSQL live schema change checks.",
+            "why_it_matters": "Provides a concrete checklist for performing zero-downtime schema migrations in PostgreSQL, specifically addressing lock management and the expand-contract pattern for live production tables.",
+            "who_cares": "Backend developers and database administrators managing high-traffic PostgreSQL databases.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "How ChatGPT free plan changed in two years (2024 vs 2026)",
+            "url": "https://dev.to/voxahq/how-chatgpt-free-plan-changed-in-two-years-2024-vs-2026-581m",
+            "description": "In 2024, free ChatGPT was metered by messages on a good model: you got GPT-4o for a while, then it dropped you to GPT-3.5 when the cap ran out.\n\nIn 2026, the chat itself is unlimited on one model, and the meter moved to the tools.\n\n\n\n\n\nLate 2024\nNovember 2026\n\n\n\n\nMain chat\nGPT-4o with a message cap,",
+            "detailed_content": "How ChatGPT free plan changed in two years (2024 vs 2026) - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nVOXA\nPosted on\nNov 16\nHow ChatGPT free plan changed in two years (2024 vs 2026)\n# chatgpt\n# ai\nIn 2024, free ChatGPT was metered by\nmessages on a good model : you got GPT-4o for a while, then it dropped you to GPT-3.5 when the cap ran out.\nIn 2026, the chat itself is unlimited on one model, and the meter moved to the tools.\nLate 2024\nNovember 2026\nMain chat\nGPT-4o with a message cap, then fallback to GPT-3.5\nUnlimited text chats on one model, subject to abuse guardrails\nModel choice\nOne model, decided by OpenAI\nOne model only. The bigger ones stay paid\nReasoning\nNone on free\nA Think button, no slider\nUploads\nAllowed, cap unpublished\nAllowed, but 3 uploads a day\nAds\nNone\nAds may appear on Free and Go in some countries\nStorage\nNothing permanent\nA Library with 500 MB\nFour moments did most of the work:\n13 May 2024\n- GPT-4o reached free users with a message limit that depended on demand. OpenAI never published the number, and when you hit it the conversation fell back to GPT-3.5, which could not use any of the new tools.\n9 February 2026\n- ad testing started in the United States on Free and Go. It reached Canada, Australia and New Zealand in March, then the UK, Mexico, Brazil, Japan and South Korea in August.\n6-10 August 2026\n- everyday text chat became unlimited on Free and Go, and free users were pinned to a single model with one reasoning mode.\n7-8 October 2026\n- a newer model generation moved into the main chat, and free accou",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc outlines 2024 metering and 2026 unlimited chat as stated.",
+            "why_it_matters": "Highlights the shift in AI API consumption models from message caps to tool-based metering, which impacts cost estimation and rate-limiting strategies for applications integrating free-tier LLMs.",
+            "who_cares": "Product managers and backend engineers integrating LLM APIs into consumer-facing applications.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Stop Using cat! Use less for Opening Files",
+            "url": "https://dev.to/kawasaki031677/stop-using-cat-use-less-for-opening-files-a9a",
+            "description": "Introduction\n\n\nWhen opening files on Linux, how many of you immediately use cat?\n\n\n\ncat test.txt\n\n\n\n\n\n\nIt's convenient and easy to use, but have you ever had your screen freeze when opening a large file? \ud83d\ude04\n\nThe drawbacks of cat include:\n\n\nYou can't search for text\nIt outputs everything at once\n\n\nHow",
+            "detailed_content": "Stop Using cat! Use less for Opening Files - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nkawasaki031677\nPosted on\nNov 16\nStop Using cat! Use less for Opening Files\n# linux\n# less\n# command\n# beginners\nIntroduction\nWhen opening files on Linux, how many of you immediately use\ncat ?\ncat test.txt\nIt's convenient and easy to use, but\nhave you ever had your screen freeze when opening a large file?\n\ud83d\ude04\nThe drawbacks of\ncat\ninclude:\nYou can't search for text\nIt outputs everything at once\nHowever,\nless\ncan solve all of these problems.\nUse less\nI actively use\nless\ninstead of\ncat\nwhen opening files. Here's how to use it:\nless test.txt\nThis makes a huge difference. I find it especially convenient when viewing logs.\nBasic Operations\nThese are the basic commands you need to remember:\nSPACE : Scroll down\nb : Scroll up\ng : Go to the beginning\nG : Go to the end\n/search_word : Search for text\nq : Exit\nConclusion\ncat\nis a command for outputting files\nless\nis a command for reading files\nIf you're currently using\ncat\nby default, please try\nless\nonce. You'll be amazed at how much more comfortable it is!\nTop comments\n(0)\nSubscribe\nSubmit\nPreview\nDismiss\nCode of Conduct\n\u2022\nReport abuse\nkawasaki031677\nFollow\nCloud Architect / Platform Engineer / AI-assisted Development\nLocation\nKashiwa, Japan\nJoined\nOct 31, 2026\nMore from\nkawasaki031677\nConsider Using the nc Command for Connectivity Verification\n# linux\n# networking\n# netcat\n# troubleshooting\nDEV Community\n\u2014 A space to discuss and keep up software development and manage your software career\nHome\nDEV Chal",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc lists same cat drawbacks and recommends less.",
+            "why_it_matters": "Recommends using `less` over `cat` for viewing large files to prevent terminal freezing and enable text searching, a simple but effective productivity boost for daily Linux operations.",
+            "who_cares": "Junior developers and DevOps engineers working extensively in Linux terminal environments.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Exposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps",
+            "url": "https://dev.to/hackerme/exposed-api-keys-how-ai-agents-now-hunt-them-on-websites-and-ai-apps-12bc",
+            "description": "Exposed API keys used to be found by a person running a search, or by a bot scraping GitHub. In November 2026, Amazon\u2019s threat intelligence team showed what that looks like when the searcher is an AI agent that never gets tired. Its decoy servers captured the working records of attacker agents that ",
+            "detailed_content": "Exposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nHackerMe\nPosted on\nNov 16\n\u2022\nOriginally published at\nsecurity.hackerme.ai\nExposed API Keys: How AI Agents Now Hunt Them on Websites and AI Apps\n# ai\n# api\n# webdev\n# security\nExposed API keys used to be found by a person running a search, or by a bot scraping GitHub. In November 2026, Amazon\u2019s threat intelligence team showed what that looks like when the searcher is an AI agent that never gets tired. Its decoy servers captured the working records of attacker agents that hunted internet-exposed AI apps, pulled out the provider keys stored inside, tested them, and added the working ones to a shared pool. The stolen keys then paid for the AI models that ran the next round of searching.\nIf your website or web app uses an AI provider, a payment API, a maps API or a cloud account, this is about you, even if you have never heard of LiteLLM or Dify.\nWhat Amazon found\nAmazon runs a network of decoy sensors called MadPot. Between 3 October and 5 November 2026, some of those decoys were set up to look like popular large language model (LLM) APIs. AI agents connected to them and sent requests that carried their own campaign history: operator instructions, task lists and reported findings.\nAmazon assessed with moderate confidence that the agents ran on ARTEX, an open-source AI penetration-testing framework, and that the operators were separate China-linked groups. It also said clearly that it could not verify the outcomes the ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc describes Amazon decoy study of AI agents hunting API keys.",
+            "why_it_matters": "Reveals that AI agents are now autonomously hunting for and exploiting exposed API keys on web apps, necessitating immediate rotation and stricter secret management practices for any internet-facing service.",
+            "who_cares": "Security engineers and full-stack developers managing API keys and cloud credentials for web applications.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Dev.to",
+            "title": "App Store rejection reasons: 11 fixes before you resubmit",
+            "url": "https://dev.to/extensionbooster/app-store-rejection-reasons-11-fixes-before-you-resubmit-35f2",
+            "description": "Originally published on AppRanker.\n\nMost App Store rejection reasons come from a short list of guidelines, and most of them are things you can catch on your own machine before App Review ever opens your build. Below is the data on where rejections actually land, a fix table you can run through befor",
+            "detailed_content": "App Store rejection reasons: 11 fixes before you resubmit - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nExtensionBooster\nPosted on\nNov 16\n\u2022\nOriginally published at\nappranker.net\nApp Store rejection reasons: 11 fixes before you resubmit\n# ios\n# mobile\n# startup\n# productivity\nOriginally published on\nAppRanker .\nMost App Store rejection reasons come from a short list of guidelines, and most of them are things you can catch on your own machine before App Review ever opens your build. Below is the data on where rejections actually land, a fix table you can run through before each submission, and the reply-or-resubmit decision once a rejection arrives.\nWhere rejections actually come from\nApple's 2025 App Store Transparency Report puts numbers on the problem. Out of 9,100,620 submissions reviewed, 2,093,244 were rejected. That is roughly one build in four. The good news: 387,087 of those were approved after an initial rejection, so a rejection is usually a round trip, not a dead end.\nHere is how the rejections split by guideline section:\nGuideline section\nRejections\n2.x Performance\n1,354,418\n5.x Legal\n495,673\n4.x Design\n415,532\n3.x Business\n283,820\n1.x Safety\n151,159\nPerformance dominates, and inside it one rule stands out. Apple's App Review page says\nmore than 40% of unresolved issues relate to Guideline 2.1, App Completeness . In practice that means crashes, missing login details, placeholder screens and broken links, not exotic policy edge cases.\nRead the message before touching code\nBefore you open Xcode, check three things in ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc confirms origin AppRanker and summary of rejection reasons.",
+            "why_it_matters": "Data-driven analysis shows that most App Store rejections stem from performance and completeness issues (crashes, broken links) that can be caught locally, saving significant resubmission time.",
+            "who_cares": "iOS developers and mobile app founders preparing builds for App Store review.",
+            "verdict": "READ"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Speed Up CI in the Age of AI-Written Code",
+            "url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/",
+            "description": "Coding agents now write code faster than most CI pipelines can check it. In April 2026, GitHub COO Kyle Daigle said that his platform was handling 275 million commits a week, on pace for 14 billion in",
+            "detailed_content": "How to Speed Up CI in the Age of AI-Written Code\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 13, 2026\n/\n#GitHub\nHow to Speed Up CI in the Age of AI-Written Code\nManish Shivanandhan\nCoding agents now write code faster than most\nCI pipelines\ncan check it. In April 2026,\nGitHub COO Kyle Daigle said\nthat his platform was handling 275 million commits a week, on pace for 14 billion in the year, up from about 1 billion in 2025. In the same post, he put GitHub Actions at 2.1 billion minutes in a single week, up from 500 million a week in 2023.\nThat second figure shows where all those commits end up: in CI. A 15-minute pipeline is tolerable if a dev pushes a few times a day. When an agent opens ten PRs in an afternoon, that pipeline turns into a queue. You wait for results, agents wait to retry, and the time saved writing code is lost checking it.\nMost of that delay comes from a few causes, and each has a known fix. You can speed up CI in five ways:\nmeasure where the time goes\ncache what you can reuse\nrun jobs on faster hardware\nsplit tests across parallel jobs\nskip work that doesn't need to run.\nIn this article, we'll walk through each fix in order. You\u2019ll learn how to find the slowest steps in your GitHub Actions workflows, cache dependencies and Docker layers with stable keys, and move heavy jobs to faster runners. You\u2019ll also see how to shard tests across a matrix of parallel jobs, and how to skip unneeded work with path filters, affected-only tests, and concurrency groups.\nWhat We'll Cover:\nMeasure First, Then Optimize\nCache Dependencies and Build Layers\nRun on Faster Hardware\nParallelize and Shard Your Tests\nDo Less Work on Every Run\nPutting It Together\nMeasure First, Then Optimize\nMost teams try to guess w",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc includes Daigle quote about 275\u202fM weekly commits.",
+            "why_it_matters": "Addresses the bottleneck where AI-generated code volume outpaces CI capacity, offering specific strategies like caching, parallel sharding, and path filtering to keep pipelines fast.",
+            "who_cares": "DevOps engineers and CI/CD maintainers in organizations adopting AI coding agents.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Agentic Coding with Codex & AI Coding Agents",
+            "url": "https://www.freecodecamp.org/news/learn-agentic-coding-with-codex-ai-coding-agents/",
+            "description": "AI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructi",
+            "detailed_content": "Learn Agentic Coding with Codex & AI Coding Agents\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 10, 2026\n/\n#codex\nLearn Agentic Coding with Codex & AI Coding Agents\nBeau Carnes\nAI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructions for a project, and config.toml holds the agent's configuration.\nWe just published a course on the freeCodeCamp.org YouTube channel that will teach you how to get reliable results from a coding agent by giving it the right context, planning the work, controlling its permissions, and verifying every change. This course is taught by Tom Chant, Head of Education at Scrimba.\nYou'll work through realistic tasks, including challenges on skills, characterization tests, and config.toml. The course is aimed at experienced developers adding AI to their workflow and at non-coders who want to build software with AI help. You can also study it interactively on Scrimba.\nIn this course, you will learn:\nPrompting & Project Setup How to write effective prompts and comment prompts for a coding agent, then initialize a project and use multiple AGENTS.md files.\nPlan Mode & Skills How to break larger development tasks down with Plan Mode and extend a coding agent with skills.\nTesting Agent Changes How to verify an agent's changes with characterization tests and test-driven development (TDD), and which testing pitfalls to look out for.\nGit & Secrets How to use Git safely alongside a coding agent and keep API keys, credentials, and other secrets safe.\nContext, Permissions & config.toml How to use the VS Code Codex extension, manage context, control what a",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Doc details Codex functions and AGENTS.md usage.",
+            "why_it_matters": "Outlines best practices for controlling AI coding agents, including using AGENTS.md for persistent context, plan mode for task breakdown, and TDD for verifying agent-generated changes.",
+            "who_cares": "Senior developers and tech leads integrating AI coding assistants like Codex into their daily workflow.",
+            "verdict": "READ"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Tech Shift",
+            "title": "Why Running Your Own Authoritative DNS Can Be a Game\u2011Changer",
+            "description": "**Running your own DNS server lets you bypass managed\u2011service limits and get instant, strongly consistent subdomain resolution.** S2 needed unlimited, instantly resolvable DNS records for each customer\u2011created basin (e.g., `my-basin.b.s2.dev`). Route53 could store unlimited records but hit fatal API rate limits and eventual\u2011consistency delays, prompting the team to replace it with an in\u2011house authoritative DNS solution.",
+            "why_it_matters": "Running your own authoritative DNS is often necessary to achieve strong consistency and unlimited record creation for dynamic subdomains, overcoming the rate limits and eventual consistency of managed services like Route53.",
+            "who_cares": "Platform engineers and SREs building multi\u2011tenant SaaS products with dynamic subdomain provisioning.",
+            "verdict": "READ",
+            "source_url": "https://s2.dev/blog/dns-server"
+          },
+          {
+            "category": "Cool Tool",
+            "title": "Swap `cat` for `less` to Browse Large Files Without Freezing",
+            "description": "**Use `less` instead of `cat` when opening big files to avoid terminal freezes and gain instant search.** `cat` streams the whole file at once and offers no search capability, which can hang the screen on large logs. `less` lets you scroll (`SPACE`, `b`, `g`, `G`), search (`/keyword`), and quit (`q`), making log inspection far smoother.",
+            "why_it_matters": "Recommends using `less` over `cat` for viewing large files to prevent terminal freezing and enable text searching, a simple but effective productivity boost for daily Linux operations.",
+            "who_cares": "Junior developers and DevOps engineers working extensively in Linux terminal environments.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/kawasaki031677/stop-using-cat-use-less-for-opening-files-a9a"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "Six Checks Before Adding a Column to a Live PostgreSQL Table",
+            "description": "**Follow a six\u2011point checklist to alter a high\u2011traffic PostgreSQL table without downtime.** The guide walks through lock awareness, the expand\u2011and\u2011contract pattern, and PostgreSQL\u2011specific details (e.g., version\u202f18.7, lock_timeout, point\u2011in\u2011time recovery). It emphasizes reading the official docs for `ALTER TABLE`, `CREATE INDEX`, and rewrite behavior before executing the migration.",
+            "why_it_matters": "Provides a concrete checklist for performing zero\u2011downtime schema migrations in PostgreSQL, specifically addressing lock management and the expand\u2011contract pattern for live production tables.",
+            "who_cares": "Backend developers and database administrators managing high\u2011traffic PostgreSQL databases.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/codewaveconsulting/need-a-new-column-on-a-live-orders-table-six-checks-before-you-change-the-schema-14eo"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "Speed Up CI Pipelines as AI\u2011Generated Commits Explode",
+            "description": "**AI coding agents are flooding CI systems, so you need faster, smarter pipelines.** GitHub reported handling 275\u202fmillion commits a week in April\u202f2026, with CI minutes jumping to 2.1\u202fbillion per week. The article outlines five fixes: measure bottlenecks, cache dependencies and Docker layers, run jobs on faster runners, shard tests across parallel jobs, and skip unnecessary work with path filters and affected\u2011only testing.",
+            "why_it_matters": "Addresses the bottleneck where AI\u2011generated code volume outpaces CI capacity, offering specific strategies like caching, parallel sharding, and path filtering to keep pipelines fast.",
+            "who_cares": "DevOps engineers and CI/CD maintainers in organizations adopting AI coding agents.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/"
+          },
+          {
+            "category": "Watchlist",
+            "title": "AI Agents Are Actively Hunting Exposed API Keys",
+            "description": "**Autonomous AI agents are now scanning the web for leaked API credentials and exploiting them at scale.** Amazon\u2019s MadPot decoy sensors captured agents (likely using the open\u2011source ARTEX framework) that queried fake LLM endpoints, harvested working keys, and reused them to pay for subsequent attacks. The activity was linked to China\u2011associated groups and highlights a new, tireless threat vector.",
+            "why_it_matters": "Reveals that AI agents are now autonomously hunting for and exploiting exposed API keys on web apps, necessitating immediate rotation and stricter secret management practices for any internet\u2011facing service.",
+            "who_cares": "Security engineers and full\u2011stack developers managing API keys and cloud credentials for web applications.",
+            "verdict": "WATCH",
+            "source_url": "https://dev.to/hackerme/exposed-api-keys-how-ai-agents-now-hunt-them-on-websites-and-ai-apps-12bc"
+          }
+        ]
+      }
+    }
+  },
   "rejected_urls": [
     "https://github.com/Wolflakechip39019/claude-resocket-plugin",
     "https://github.com/emanuele-em/kanzo",
@@ -13,7 +892,7 @@
   ],
   "restarted": true,
   "email": {
-    "status": "not_started",
+    "status": "sent",
     "attempts": 0,
     "last_error": null
   },
