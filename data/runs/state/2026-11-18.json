@@ -1,0 +1,838 @@
+{
+  "date": "2026-11-18",
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "WebsiteBench",
+            "full_name": "TIGER-AI-Lab/WebsiteBench",
+            "url": "https://github.com/TIGER-AI-Lab/WebsiteBench",
+            "description": "Can AI agents rebuild websites through browser exploration?",
+            "stars": 525,
+            "forks": 48,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "pro-tools-desktop",
+            "full_name": "alicebrown323/pro-tools-desktop",
+            "url": "https://github.com/alicebrown323/pro-tools-desktop",
+            "description": "Pro Tools 2026 desktop setup with multitrack editing, MIDI sequencing, VST hosting and a portable mode for Windows 11",
+            "stars": 302,
+            "forks": 0,
+            "language": "C++"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 51,
+            "forks": 16,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 7603,
+            "forks": 519,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "TwinDesk",
+            "full_name": "InukaAsith/TwinDesk",
+            "url": "https://github.com/InukaAsith/TwinDesk",
+            "description": " All your computers and your phone/iPhone, working as one desk. Screens, apps, files, clipboard, calls, texts, notifications, mouse and keyboard, shared between Mac, Windows, Linux , Android, Web and ios / ipados . Free and open source. No account, no cloud, and no shared network needed.",
+            "stars": 4207,
+            "forks": 331,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 2094,
+            "forks": 172,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 1431,
+            "forks": 247,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1230,
+            "forks": 102,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "ECC",
+            "full_name": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "stars": 306038,
+            "forks": 45043,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 149911,
+            "forks": 14404,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 97635,
+            "forks": 6665,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95858,
+            "forks": 9610,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 93726,
+            "forks": 12551,
+            "language": "TypeScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Energy-Based Reasoners: 385x more efficient inference",
+            "url": "https://energy-based-reasoners.github.io/",
+            "description": "Energy-Based Reasoners: 385x more efficient inference"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+            "url": "https://calif.io/java4shell/",
+            "description": "Java4Shell: RCE in OpenJDK when processing Base64"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Google's AI answers reducing search traffic by 40%",
+            "url": "https://revscope.co/blog/search-seo-geo-2026/",
+            "description": "Google's AI answers reducing search traffic by 40%"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Codeberg.org Not Reachable",
+            "url": "https://social.anoxinon.de/@codebergstatus/117636437840688845",
+            "description": "Codeberg.org Not Reachable"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Quad9's withdrawal from France: A canary in the coal mine",
+            "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/",
+            "description": "Quad9's withdrawal from France: A canary in the coal mine"
+          },
+          {
+            "source": "Hacker News",
+            "title": "ID.me terms required for IRS sign-in",
+            "url": "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in",
+            "description": "ID.me terms required for IRS sign-in"
+          },
+          {
+            "source": "Hacker News",
+            "title": "I had AI read my entire field, Theoretical Astrophysics",
+            "url": "https://science.caseyhandmer.com/physics/",
+            "description": "I had AI read my entire field, Theoretical Astrophysics"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Talos Linux",
+            "url": "https://www.siderolabs.com/talos-linux",
+            "description": "Talos Linux"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Nvidia stopped disclosing Singapore sales as revenues hit $104B",
+            "url": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
+            "description": "Nvidia stopped disclosing Singapore sales as revenues hit $104B"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Why is Gemini 4 Carbon taking so long?",
+            "url": "https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long/",
+            "description": "Why is Gemini 4 Carbon taking so long?"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Microsoft's ONNX Runtime has disappeared from GitHub",
+            "url": "https://github.com/microsoft/onnxruntime",
+            "description": "Microsoft's ONNX Runtime has disappeared from GitHub"
+          },
+          {
+            "source": "Hacker News",
+            "title": "My Emacs 31 contributions",
+            "url": "https://xenodium.com/my-emacs-31-contributions",
+            "description": "My Emacs 31 contributions"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Highly classified US national security communications network goes down",
+            "url": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down",
+            "description": "Highly classified US national security communications network goes down"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Archive Team is archiving the Apple Support Community",
+            "url": "https://wiki.archiveteam.org/index.php/Apple_Discussions",
+            "description": "Archive Team is archiving the Apple Support Community"
+          },
+          {
+            "source": "Hacker News",
+            "title": "MAI Code 2 and Code 2 Flash",
+            "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+            "description": "MAI Code 2 and Code 2 Flash"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Agentic exploitation frameworks are compressing the patch window at machine speed",
+            "url": "https://dev.to/ioneyrezende/agentic-exploitation-frameworks-are-compressing-the-patch-window-at-machine-speed-lee",
+            "description": "Agentic exploitation frameworks are compressing the patch window at machine speed\n\n\nGoogle Threat Intelligence Group's November 16 update describes a change in the economics of exploitation. Threat actors are moving from chat-assisted research to multi-agent frameworks that scan, reason, generate pa"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Self-Host Memos with Docker Compose: A Production Setup Guide",
+            "url": "https://dev.to/gongkang/self-host-memos-with-docker-compose-a-production-setup-guide-1m33",
+            "description": "This tutorial was written with AI assistance from the project's official documentation. Verification status is stated at the end of the article.\n\n\n\n  \n  \n  What Memos does and what it needs\n\n\nMemos is a self-hosted note-taking app built around a personal timeline. Each memo is timestamped, Markdown-"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix WordPress Critical Error After Update",
+            "url": "https://dev.to/zubaer/fix-wordpress-critical-error-after-update-3fkh",
+            "description": "A WordPress critical error after update is rarely a mystery for long, but the screen itself tells you nothing. Since WordPress 5.2 the core fatal error handler catches the PHP crash, prints a polite white page, and emails the admin a recovery link, deliberately withholding the file and line that wou"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Moodle cron from the browser is a leftover attack surface",
+            "url": "https://dev.to/luukverhoeven/moodle-cron-from-the-browser-is-a-leftover-attack-surface-1jg1",
+            "description": "Moodle\u2122 still ships a web entry for scheduled tasks: /admin/cron.php. Operators who upgraded the code and left the vhost alone still have it. The homepage can look fine. Cron from a browser is a different question.\n\nThe setting that closes it is $CFG-&gt;cronclionly. The proof is a GET from the publ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "How to Prepare Your Odoo ERP System for High-Traffic Sales Events",
+            "url": "https://dev.to/rizwan_ali_555bce1b42448f_43/how-to-prepare-your-odoo-erp-system-for-high-traffic-sales-events-22jj",
+            "description": "High-traffic sales events can generate significant revenue for ecommerce businesses, but they also put considerable pressure on the systems managing their operations.\n\nWhether it is Black Friday, Cyber Monday, a seasonal promotion, a product launch, or a limited-time flash sale, businesses need more"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews",
+            "url": "https://dev.to/delimitter/openai-ships-gpt-62-astra-and-sol-cheaper-tokens-mixed-reviews-4725",
+            "description": "\ud83d\udcc5 17 November 2026 \u2022 OpenAI\n\nOpenAI shipped two new models on 17 November 2026: GPT-6.2 Astra, a frontier model for the hardest tasks, and GPT-6.2 Sol, an efficient everyday model. Per OpenAI, both deliver better results on demanding work with fewer output tokens, which in practice means more tasks "
+          },
+          {
+            "source": "Dev.to",
+            "title": "Cloudflare Block AI Bots: What to Block, What to Allow",
+            "url": "https://dev.to/kausarraza/cloudflare-block-ai-bots-what-to-block-what-to-allow-lg4",
+            "description": "Cloudflare will happily block AI bots for you. The question is which ones. \"AI bot\" covers three different jobs: crawlers that collect text to train future models, crawlers that build an AI search index, and fetchers that open one page because a person just asked ChatGPT or Claude about it. Block al"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Kubernetes FinOps 2026: Cost Optimization in the Container Age",
+            "url": "https://dev.to/saaro_net/kubernetes-finops-2026-cost-optimization-in-the-container-age-1fa0",
+            "description": "In November 2026, Kubernetes is indispensable in production \u2013 yet operations are increasingly becoming a cost trap. A study by Wozz published in January 2026, which analyzed over 3,042 production clusters with more than 847,000 pods, revealed alarming figures: 68 percent of all pods reserve three to"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build an NLP Pipeline in Python to Analyze Therapy Progress Notes",
+            "url": "https://www.freecodecamp.org/news/build-nlp-pipeline-python-therapy-notes/",
+            "description": "Therapy progress notes are written records of what happened during a therapy session. They may include what a client said, what the therapist observed, the topics discussed, and plans for the next ses"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Translator with Chrome\u2019s Built-In AI",
+            "url": "https://www.freecodecamp.org/news/how-to-build-a-translator-with-chrome-s-built-in-ai/",
+            "description": "Most translation features work the same way. The user types text, your app sends it to a translation API, and the API sends a translation back. That works, but every request adds cost and latency, and"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Build and Train a GLM-5.3-Flash Model From Scratch with Python",
+            "url": "https://www.freecodecamp.org/news/build-and-train-a-glm-53-flash-model-from-scratch-with-python/",
+            "description": "GLM-5.3-Flash combines linear and sparse attention, a mixture-of-experts design, and manifold constrained hyperconnections. A scaled-down version with 25 million parameters can be built in Python and"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Speed Up CI in the Age of AI-Written Code",
+            "url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/",
+            "description": "Coding agents now write code faster than most CI pipelines can check it. In April 2026, GitHub COO Kyle Daigle said that his platform was handling 275 million commits a week, on pace for 14 billion in"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Schema Drift vs. Semantic Drift in Data Pipelines",
+            "url": "https://www.freecodecamp.org/news/schema-drift-vs-semantic-drift-in-data-pipelines/",
+            "description": "When a column is removed from a source database or dataset, the next pipeline run usually fails, making the problem easy to detect. But when a field keeps the same name and data type but its meaning c"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Browser-Based Image Storyboard to PDF Tool Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-image-storyboard-to-pdf-tool-javascript/",
+            "description": "Before anyone films a video, shoots an ad or draws the final pages of a comic, someone usually sketches the plan as a storyboard: one picture per shot, in order, with a short note about what happens a"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Agentic Coding with Codex & AI Coding Agents",
+            "url": "https://www.freecodecamp.org/news/learn-agentic-coding-with-codex-ai-coding-agents/",
+            "description": "AI coding agents such as Codex read your codebase, edit multiple files, and run commands and tests while they work through larger tasks with you. In Codex, an AGENTS.md file holds persistent instructi"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "What Happens When You Upload a Large File & Generate a Temporary Download Link",
+            "url": "https://www.freecodecamp.org/news/how-file-transfer-services-work/",
+            "description": "Sending a 5 GB video file might seem simple. You select the file, click Upload, wait for the progress bar to finish, and share a link with someone. But there are several things happening in the backgr"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "lepoly",
+            "url": "https://www.producthunt.com/products/lepoly",
+            "description": "One place for all your 3D assets\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Bluedot Phone Calls",
+            "url": "https://www.producthunt.com/products/bluedot-2",
+            "description": "AI note taker for phone calls\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Ody Ai Business Phone",
+            "url": "https://www.producthunt.com/products/ody-ai-business-phone",
+            "description": "Shared workspace + manageable AI agents\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "kwatch",
+            "url": "https://www.producthunt.com/products/kwatch",
+            "description": "Kubernetes alerts that name the root cause\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Introzy",
+            "url": "https://www.producthunt.com/products/introzy",
+            "description": "Track referrals from intro to commission\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Mermaid Flow",
+            "url": "https://www.producthunt.com/products/mermaid-chart",
+            "description": "The visual builder for agentic workflows\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Toone",
+            "url": "https://www.producthunt.com/products/toone",
+            "description": "Grokbot meets n8n/zapier\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Review Box",
+            "url": "https://www.producthunt.com/products/review-box",
+            "description": "A fast desktop app for reviewing GitHub pull requests\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Dippr",
+            "url": "https://www.producthunt.com/products/dippr",
+            "description": "A data platform served to your agents, with one prompt\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "dusk bot",
+            "url": "https://www.producthunt.com/products/dusk-bot",
+            "description": "free open source Grok bot alternative\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.54",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.54",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.54. Details: ### Core Changes\n\n- Reject the experimental testing API opt-in without Cache Components: #101952\n- Preserve CSP nonces on static fallback bootstrap scripts: #101953\n- Turbopack: separate file tracing from NFT manifest emission, add dev flag: #101941\n- Clarify the agent handoff for worktree upgrades:..."
+          },
+          {
+            "source": "GitHub Release",
+            "title": "fastapi/fastapi Release: 0.163.2",
+            "url": "https://github.com/fastapi/fastapi/releases/tag/0.163.2",
+            "description": "New release for fastapi/fastapi. Tag: 0.163.2. Details: > FastAPI includes an official skill that helps coding agents use new features and recommended patterns for your installed version. Install it with `uvx library-skills` in your project. See [Develop with AI](https://fastapi.tiangolo.com/ai-development/).\n\n### Refactors\n\n* \u267b\ufe0f Refactor query, header, ..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1230,
+            "forks": 102,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 97635,
+            "forks": 6665,
+            "language": "JavaScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+            "url": "https://calif.io/java4shell/",
+            "description": "Java4Shell: RCE in OpenJDK when processing Base64"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Talos Linux",
+            "url": "https://www.siderolabs.com/talos-linux",
+            "description": "Talos Linux"
+          },
+          {
+            "source": "Hacker News",
+            "title": "MAI Code 2 and Code 2 Flash",
+            "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+            "description": "MAI Code 2 and Code 2 Flash"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Agentic exploitation frameworks are compressing the patch window at machine speed",
+            "url": "https://dev.to/ioneyrezende/agentic-exploitation-frameworks-are-compressing-the-patch-window-at-machine-speed-lee",
+            "description": "Agentic exploitation frameworks are compressing the patch window at machine speed\n\n\nGoogle Threat Intelligence Group's November 16 update describes a change in the economics of exploitation. Threat actors are moving from chat-assisted research to multi-agent frameworks that scan, reason, generate pa"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Self-Host Memos with Docker Compose: A Production Setup Guide",
+            "url": "https://dev.to/gongkang/self-host-memos-with-docker-compose-a-production-setup-guide-1m33",
+            "description": "This tutorial was written with AI assistance from the project's official documentation. Verification status is stated at the end of the article.\n\n\n\n  \n  \n  What Memos does and what it needs\n\n\nMemos is a self-hosted note-taking app built around a personal timeline. Each memo is timestamped, Markdown-"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix WordPress Critical Error After Update",
+            "url": "https://dev.to/zubaer/fix-wordpress-critical-error-after-update-3fkh",
+            "description": "A WordPress critical error after update is rarely a mystery for long, but the screen itself tells you nothing. Since WordPress 5.2 the core fatal error handler catches the PHP crash, prints a polite white page, and emails the admin a recovery link, deliberately withholding the file and line that wou"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews",
+            "url": "https://dev.to/delimitter/openai-ships-gpt-62-astra-and-sol-cheaper-tokens-mixed-reviews-4725",
+            "description": "\ud83d\udcc5 17 November 2026 \u2022 OpenAI\n\nOpenAI shipped two new models on 17 November 2026: GPT-6.2 Astra, a frontier model for the hardest tasks, and GPT-6.2 Sol, an efficient everyday model. Per OpenAI, both deliver better results on demanding work with fewer output tokens, which in practice means more tasks "
+          },
+          {
+            "source": "Dev.to",
+            "title": "Cloudflare Block AI Bots: What to Block, What to Allow",
+            "url": "https://dev.to/kausarraza/cloudflare-block-ai-bots-what-to-block-what-to-allow-lg4",
+            "description": "Cloudflare will happily block AI bots for you. The question is which ones. \"AI bot\" covers three different jobs: crawlers that collect text to train future models, crawlers that build an AI search index, and fetchers that open one page because a person just asked ChatGPT or Claude about it. Block al"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1230,
+            "forks": 102,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/kanzo-dark.jpg\">\n    <img alt=\"kanzo: a tiny kanban board for you and your coding agents\" src=\"docs/img/kanzo-light.jpg\">\n  </picture>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml\"><img src=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml/badge.svg\" alt=\"CI\"></a>\n  <a href=\"https://crates.io/crates/kanzo\"><img src=\"https://img.shields.io/crates/v/kanzo\" alt=\"crates.io\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue\" alt=\"AGPL-3.0\"></a>\n</p>\n\n<p align=\"center\">\n  English | <a href=\"README.zh.md\">\u7b80\u4f53\u4e2d\u6587</a>\n</p>\n\nKanzo is a kanban board in your browser and an MCP server in one 4.7 MB program, so you and your coding agents work on the same tasks: on one computer, or on one board shared by all of them. No account, no server, no setup: run `kanzo` and it works.\n\nYou never edit a file. Everything is done in one of three places:\n\n- **the board**, in your browser, for you;\n- **MCP**, for your agents: they take tasks, move cards and comment;\n- **the `kanzo` command**, for the terminal and scripts.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/board-dark.gif\">\n  <img alt=\"The Kanzo board: agents move cards while you watch, \u2318K finds a task in any project, a task is made to wait on another, two selected tasks are dragged together, a list groups the tasks by status, the sidebar folds, Laptop A shares the board and Laptop B joins it\" src=\"docs/img/board-light.gif\">\n</picture>\n\n## Install\n\n> [!TIP]\n> **Just ask your agent:** *\"install Kanzo from github.com/emanuele-em/kanzo.\"*\n\n```sh\ncurl -LsSf https://github.com/emanuele-em/kanzo/releases/latest/download/ka",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 97635,
+            "forks": 6665,
+            "language": "JavaScript",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/archify-lockup-dark.svg\" />\n    <img src=\"docs/assets/archify-lockup-light.svg\" alt=\"Archify\" width=\"440\" height=\"121\" />\n  </picture>\n</p>\n<h3 align=\"center\">Turn anything you want to understand, plan, or share into an interactive visual.</h3>\n\n<p align=\"center\"><img src=\"docs/assets/archify-readme-hero.png\" alt=\"Archify \u2014 interactive diagrams\" width=\"960\" /></p>\n\n<p align=\"center\"><strong>Official channels\uff1a</strong> <a href=\"https://archify.si\">archify.si</a> \u00b7 <a href=\"https://github.com/tt-a1i/archify\">GitHub</a><br/>Archify is free and open source. Third-party online services and paid plans are operated by their respective providers and do not represent Archify. <a href=\"#official-services\">Service details \u2192</a></p>\n\n<p align=\"center\">Start with an idea, a question, or a plan. Describe it to your AI agent, and Archify turns it into an interactive HTML you can explore, customize, and share. From travel itineraries and learning maps to complex systems\u2014make it your own.</p>\n\n<p align=\"center\">See what the community is creating\u2014and imagine what you could make next.</p>\n\n<p align=\"center\">\n  <a href=\"https://archify.si/gallery.html\"><strong>Live demos</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#start\"><strong>Get started</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"https://archify.si/guide.html\"><strong>Scenario guide</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#community\"><strong>Community</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_ZH.md\"><strong>\u7b80\u4f53\u4e2d\u6587</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_JA.md\"><strong>\u65e5\u672c\u8a9e</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_KO.md\"><strong>\ud55c\uad6d\uc5b4</strong></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/31352?utm_source=repo",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+            "url": "https://calif.io/java4shell/",
+            "description": "Java4Shell: RCE in OpenJDK when processing Base64",
+            "detailed_content": "Java4Shell: Write once, RCE everywhere\nSkip to content\ncalif .io\nCalif Research\n\u2197\nCVE-2026-114938\nJava4Shell\nWrite once, RCE everywhere\nStory by\nthe New York Times\nA memory-corruption vulnerability in OpenJDK's Base64 decoder. A remote attacker with no credentials can overwrite heap memory, read it in the style of Heartbleed, and reach remote code execution.\nBegin\n\u2193\nTechnical write-up\n\u2198\nCheck your servers\n\u2198\nRecommendations\n\u2198\nThe Story\n01 Overview\n02 Write once, RCE everywhere\n03 Wait, Java has a memory-corruption vulnerability, in Base64?!\n04 Era of the centaur hacker\n05 The tragedy of the commons\n06 A call for vibe-uncoding\nAfter we disclosed\nPHP2Shell , we realized many people didn't know what PHP was. So we decided to go after something a little more familiar: Java.\nToday, we are disclosing Java4Shell (CVE-2026-114938), a memory-corruption vulnerability in OpenJDK's Base64 decoder. OpenJDK is the most popular Java runtime. Under CVSS 4.0, this vulnerability scores 9.2 out of 10 (CRITICAL).\nWhile PHP is a high-level web technology, Java sits much deeper. Java is the world's\nthird most popular programming language , powering\n90% of Fortune 500 companies . It is the beating heart of the modern economy. Banking, aviation, telecommunications, nearly every critical sector runs on Java, including national security systems.\nBase64 is a very common way of representing binary data as text. It is used in authentication protocols, to encode file uploads, and to deliver network messages. To decode Base64 faster, OpenJDK uses specialized x86-64 CPU instructions to process many bytes at once. We discovered a bug in that optimized machine-level code that lets malformed input overwrite neighboring memory. With careful exploitation, the corruption can reveal sensitive memory, as\nHeart",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Talos Linux",
+            "url": "https://www.siderolabs.com/talos-linux",
+            "description": "Talos Linux",
+            "detailed_content": "Linux OS for Kubernetes Skip to content New Talos Enterprise Linux is here.\nThe same open-source OS with 24/7 support, built for NIS2 & CRA. \u00b7 See what\u2019s included\n\u2192 Products Customers Pricing Blog Docs TalosCon \u2197 Start trial Get demo \u2192 Kubernetes \u00b7 Talos Linux Kubernetes infrastructure that can\u2019t drift and won\u2019t fail an audit. Talos Linux is the immutable, API-driven operating system purpose-built for Kubernetes. No SSH, no shell, no package manager. Just the binaries needed to run your fleet, from bare metal to the edge. Read the docs Go to repo\n\u2192 See Talos Enterprise Linux\n\u2192 By the numbers <50 OS binaries 100MB OS footprint ~1 min boot time <5 min to cluster 0 package managers Free & Enterprise One codebase.\nTwo ways to run it. Talos Linux is free and open source under MPL-2.0. Talos Enterprise Linux is the same OS. What the enterprise tier adds is proof, indemnity, and someone to call: the assurance, compliance evidence, and support that security and procurement teams need to sign off. Shared foundation The only difference is that the Enterprise build enables FIPS 140-3 compliance, and adds the security artifacts, indemnity, CVE SLAs, and support. \u2022\nOpen source \u00b7 MPL-2.0 Talos Linux Free, forever Immutable, API-driven OS for Kubernetes No SSH, no shell, no package manager Minimal attack surface, minimal CVEs CIS-hardened, mTLS, SELinux, trusted boot Community support \u00b7 10,200+ GitHub stars Get started\n\u2192 \u2022\nEnterprise license \u00b7 MPL-2.0 New Talos Enterprise Linux $1,000 per node per year \u00b7 10-node minimum Fleet management with Omni, included 24/7/365 support with CVE SLAs FIPS 140-3 compliant builds Schematic-specific SBOMs & curated VEX, for your exact build Signed build attestation Commercial IP indemnity Built for NIS2 & CRA compliance Talk to us\n\u2192 Open stays open.\nE",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "MAI Code 2 and Code 2 Flash",
+            "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+            "description": "MAI Code 2 and Code 2 Flash",
+            "detailed_content": "Skip to main content\nSource\nSignal blog\nOfficial Microsoft Blog\nCommand Line\nMicrosoft On The Issues\nAsia\nCanada\nEurope, Middle East and Africa\nLatin America\nThe Code of Us\nWhat's new\nAI\nInnovation\nDigital Transformation\nSustainability\nSecurity\nWork & Life\nDiversity & Inclusion\nUnlocked\nMicrosoft 365\nAzure\nCopilot\nWindows\nSurface\nXBOX\nDeals\nSmall Business\nSupport\nWindows Apps\nOutlook\nOneDrive\nMicrosoft Teams\nOneNote\nMicrosoft Edge\nMoving from Skype to Teams\nComputers\nShop XBOX\nAccessories\nVR & mixed reality\nCertified Refurbished\nTrade-in for cash\nXBOX Game Pass Ultimate\nPC Game Pass\nXBOX games\nPC games\nMicrosoft AI\nMicrosoft Security\nDynamics 365\nMicrosoft 365 for business\nMicrosoft Power Platform\nWindows 365\nSmall Business\nDigital Sovereignty\nAzure\nMicrosoft Developer\nMicrosoft Learn\nSupport for AI marketplace apps\nMicrosoft Tech Community\nMicrosoft Marketplace\nSoftware companies\nVisual Studio\nMicrosoft Rewards\nFree downloads & security\nEducation\nGift cards\nLicensing\nUnlocked stories\nView Sitemap\nModels\nTranscribe\nTurn audio into precise transcripts\nVoice\nGenerate custom voice from text\nRealtime\nNatural speech-to-speech conversations\nImage\nGenerate images from text\nCode\nFast, lightweight agentic coding\nCyber\nAgentic defense at codebase scale\nThinking\nExpert reasoning for complex problems\nCustom Models\nModels tuned for your needs\nNews\nCareers\nAbout\nLabs\nLog in\nSigned in as\nAbout Microsoft AI\nTerms of Use\nPrivacy Statement\nReport a Concern\nData & privacy\nLog out\nPrivacy & Cookies Terms Trademarks Microsoft.com\nLinkedIn Instagram X\nOff\nAccessibility Mode\nLog in\nSigned in as\nAbout Microsoft AI\nTerms of Use\nPrivacy Statement\nReport a Concern\nData & privacy\nLog out\nOff\nAccessibility Mode\nMAI Code 2 and Code 2 Flash: Everyday coding at scalable prices\nNov 17, 2026\n\u00b7 Ignite\n\u00b7 ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Agentic exploitation frameworks are compressing the patch window at machine speed",
+            "url": "https://dev.to/ioneyrezende/agentic-exploitation-frameworks-are-compressing-the-patch-window-at-machine-speed-lee",
+            "description": "Agentic exploitation frameworks are compressing the patch window at machine speed\n\n\nGoogle Threat Intelligence Group's November 16 update describes a change in the economics of exploitation. Threat actors are moving from chat-assisted research to multi-agent frameworks that scan, reason, generate pa",
+            "detailed_content": "Agentic exploitation frameworks are compressing the patch window at machine speed - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nIoneyrezende\nPosted on\nNov 18\nAgentic exploitation frameworks are compressing the patch window at machine speed\n# security\n# ai\n# threatintelligence\n# exploitation\nAgentic exploitation frameworks are compressing the patch window at machine speed\nGoogle Threat Intelligence Group's November 16 update describes a change in the economics of exploitation. Threat actors are moving from chat-assisted research to multi-agent frameworks that scan, reason, generate payloads, execute tools, and react to results. The claim is not that every intrusion is fully autonomous. GTIG reports that several multi-agent offensive frameworks were used in live activity and that it observed one framework performing continuous vulnerability research and weaponization without a human in the loop.\nThe named tools include ARTEX, CAIRN, CyberStrikeAI, PentAGI, and HexStrike AI. They differ in design, but GTIG groups them around shared capabilities: low-complexity vulnerability discovery, single-use payload generation, tool execution, and feedback-driven adjustment. CAIRN uses an Observe, Orient, Decide, Act loop with agents sharing a blackboard. CyberStrikeAI connects models to security tools and attack recipes. HexStrike AI exposes many offensive utilities through Model Context Protocol integration.\nN-days become the fast path\nThe report emphasizes patch diffing. Comparing a vulnerable release with a fixed release is a concrete res",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Self-Host Memos with Docker Compose: A Production Setup Guide",
+            "url": "https://dev.to/gongkang/self-host-memos-with-docker-compose-a-production-setup-guide-1m33",
+            "description": "This tutorial was written with AI assistance from the project's official documentation. Verification status is stated at the end of the article.\n\n\n\n  \n  \n  What Memos does and what it needs\n\n\nMemos is a self-hosted note-taking app built around a personal timeline. Each memo is timestamped, Markdown-",
+            "detailed_content": "Self-Host Memos with Docker Compose: A Production Setup Guide - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nkonsongong\nPosted on\nNov 18\n\u2022\nOriginally published at\nbenchrun.pages.dev\nSelf-Host Memos with Docker Compose: A Production Setup Guide\n# memos\n# docker\n# selfhosting\n# notetaking\nThis tutorial was written with AI assistance from the project's official documentation. Verification status is stated at the end of the article.\nWhat Memos does and what it needs\nMemos is a self-hosted note-taking app built around a personal timeline. Each memo is timestamped, Markdown-capable, and taggable, so short thoughts and longer entries live in one searchable stream. You control visibility per memo: private, shared with specific users, or public on the web. The app ships as a single Go binary with an embedded SQLite store by default, which makes it one of the lighter services to run on a VPS.\nThe upstream project does not publish a minimum RAM figure. Practical sizing depends on workload: an idle instance with a handful of users and a few thousand memos runs comfortably in a small container, while heavy attachment uploads, large media libraries, and many concurrent users push memory and disk usage up. Watch the volume size more than the RAM line.\nEverything Memos keeps lives under\n/var/opt/memos\ninside the container. That directory holds the SQLite database, uploaded attachments, and generated thumbnails. Back it up as a unit.\nPrerequisites, ports, and volume constraints\nDocker Engine 24+ and the Compose v2 plugin ( docker compose versio",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix WordPress Critical Error After Update",
+            "url": "https://dev.to/zubaer/fix-wordpress-critical-error-after-update-3fkh",
+            "description": "A WordPress critical error after update is rarely a mystery for long, but the screen itself tells you nothing. Since WordPress 5.2 the core fatal error handler catches the PHP crash, prints a polite white page, and emails the admin a recovery link, deliberately withholding the file and line that wou",
+            "detailed_content": "Fix WordPress Critical Error After Update - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMd. Zubaer Ahammed\nPosted on\nNov 18\n\u2022\nOriginally published at\nwptutshub.com\nFix WordPress Critical Error After Update\n# wordpress\n# php\n# webdev\n# tutorial\nA WordPress critical error after update is rarely a mystery for long, but the screen itself tells you nothing. Since WordPress 5.2 the core fatal error handler catches the PHP crash, prints a polite white page, and emails the admin a recovery link, deliberately withholding the file and line that would identify the culprit. This tutorial compares the three realistic recovery routes, then implements the one worth keeping: read the fatal from\nwp-content/debug.log , get back into\nwp-admin\nthrough recovery mode, and roll the offending plugin or theme back with WP-CLI. It finishes with a small mu-plugin that emails you the file and line the moment the next update fails.\nYou need file or SSH access to the install (SFTP covers the first half), WP-CLI 2.7 or newer for the rollback, and access to the admin email inbox on that site.\nThe critical error screen is a symptom, not a diagnosis\nWhen PHP hits an uncaught fatal, WordPress runs\nWP_Fatal_Error_Handler\non shutdown. That handler checks whether the error came from a plugin or theme file, pauses the offending extension for the current session, sends the recovery-mode email, and renders the generic template. The message is suppressed on purpose: a raw stack trace on a live site leaks absolute paths, plugin versions and occasionally database creden",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews",
+            "url": "https://dev.to/delimitter/openai-ships-gpt-62-astra-and-sol-cheaper-tokens-mixed-reviews-4725",
+            "description": "\ud83d\udcc5 17 November 2026 \u2022 OpenAI\n\nOpenAI shipped two new models on 17 November 2026: GPT-6.2 Astra, a frontier model for the hardest tasks, and GPT-6.2 Sol, an efficient everyday model. Per OpenAI, both deliver better results on demanding work with fewer output tokens, which in practice means more tasks ",
+            "detailed_content": "OpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nNews\nPosted on\nNov 18\n\u2022\nEdited on\nNov 18\nOpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews\n# ai\n# llm\n# automation\n# openai\n\ud83d\udcc5 17 November 2026 \u2022 OpenAI\nOpenAI shipped two new models on 17 November 2026:\nGPT-6.2 Astra , a frontier model for the hardest tasks, and\nGPT-6.2 Sol , an efficient everyday model. Per OpenAI, both deliver better results on demanding work with fewer output tokens, which in practice means more tasks finished inside the same subscription limits. Both are available via API right now as gpt-6.2-astra and gpt-6.2-sol, and Simon Willison has already shipped LLM 0.38 with support for the pair.\nPer OpenAI,\nAstra scores 5.2 points above GPT-6 Astra\non Agents' Last Exam at under a third of the cost, and leads Claude Fable 5.2 by 5.5 points at 5% of its cost. On Terminal-Bench-Science 0.1 and the Vals Science Index the model sets new highs, with OpenAI calling it the best in the world for scientists. Pricing, per OpenAI and confirmed by Simon Willison: $8/$40 per million tokens, 20% cheaper than GPT-6 Astra, cached input at $0.40 after a 60% discount, while Sol keeps GPT-6.1 pricing at $2/$10.\nFor agent builders , the 60% cache discount is the quiet headline: per Simon Willison, cheap cached input is good news for long agent sessions, where the same context gets paid for over and over. Sol is the other practical story, per OpenAI, many OpenAI employees already use it as their default model",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Cloudflare Block AI Bots: What to Block, What to Allow",
+            "url": "https://dev.to/kausarraza/cloudflare-block-ai-bots-what-to-block-what-to-allow-lg4",
+            "description": "Cloudflare will happily block AI bots for you. The question is which ones. \"AI bot\" covers three different jobs: crawlers that collect text to train future models, crawlers that build an AI search index, and fetchers that open one page because a person just asked ChatGPT or Claude about it. Block al",
+            "detailed_content": "Cloudflare Block AI Bots: What to Block, What to Allow - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nKausar Raza\nPosted on\nNov 18\n\u2022\nOriginally published at\nknowledgemarkg.com\nCloudflare Block AI Bots: What to Block, What to Allow\n# cloudflare\n# seo\n# ai\n# webdev\nCloudflare will happily block AI bots for you. The question is which ones. \"AI bot\" covers three different jobs: crawlers that collect text to train future models, crawlers that build an AI search index, and fetchers that open one page because a person just asked ChatGPT or Claude about it. Block all three and you're out of the training sets, but you've also vanished from the AI answers that now send real visitors.\nI ran the same request against two sites behind Cloudflare, changing only the bot name, to see what each setting actually does. Below are the results, the current dashboard path (it moved in 2026), and what I'd pick for a business site or a blog.\nThe short answer\nBlock training bots\n(GPTBot, ClaudeBot, CCBot, Bytespider, Google-Extended) if you don't want your content in future models. They send you no visitors.\nAllow AI search bots\n(OAI-SearchBot, Claude-SearchBot, PerplexityBot). OpenAI's docs say sites that opt out of OAI-SearchBot \"will not be shown in ChatGPT search answers\".\nAllow user agents\n(ChatGPT-User, Claude-User, Perplexity-User). Block them and \"summarise this link\" fails for anyone who pastes your URL.\nIn Cloudflare that's\nTraining: Block, Search: Allow, Agent: Allow . New domains start with all three on Allow, so nothing is blocked until you ",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+            "url": "https://calif.io/java4shell/",
+            "description": "Java4Shell: RCE in OpenJDK when processing Base64",
+            "detailed_content": "Java4Shell: Write once, RCE everywhere\nSkip to content\ncalif .io\nCalif Research\n\u2197\nCVE-2026-114938\nJava4Shell\nWrite once, RCE everywhere\nStory by\nthe New York Times\nA memory-corruption vulnerability in OpenJDK's Base64 decoder. A remote attacker with no credentials can overwrite heap memory, read it in the style of Heartbleed, and reach remote code execution.\nBegin\n\u2193\nTechnical write-up\n\u2198\nCheck your servers\n\u2198\nRecommendations\n\u2198\nThe Story\n01 Overview\n02 Write once, RCE everywhere\n03 Wait, Java has a memory-corruption vulnerability, in Base64?!\n04 Era of the centaur hacker\n05 The tragedy of the commons\n06 A call for vibe-uncoding\nAfter we disclosed\nPHP2Shell , we realized many people didn't know what PHP was. So we decided to go after something a little more familiar: Java.\nToday, we are disclosing Java4Shell (CVE-2026-114938), a memory-corruption vulnerability in OpenJDK's Base64 decoder. OpenJDK is the most popular Java runtime. Under CVSS 4.0, this vulnerability scores 9.2 out of 10 (CRITICAL).\nWhile PHP is a high-level web technology, Java sits much deeper. Java is the world's\nthird most popular programming language , powering\n90% of Fortune 500 companies . It is the beating heart of the modern economy. Banking, aviation, telecommunications, nearly every critical sector runs on Java, including national security systems.\nBase64 is a very common way of representing binary data as text. It is used in authentication protocols, to encode file uploads, and to deliver network messages. To decode Base64 faster, OpenJDK uses specialized x86-64 CPU instructions to process many bytes at once. We discovered a bug in that optimized machine-level code that lets malformed input overwrite neighboring memory. With careful exploitation, the corruption can reveal sensitive memory, as\nHeart",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the documentation title exactly."
+          },
+          {
+            "source": "Hacker News",
+            "title": "Talos Linux",
+            "url": "https://www.siderolabs.com/talos-linux",
+            "description": "Talos Linux",
+            "detailed_content": "Linux OS for Kubernetes Skip to content New Talos Enterprise Linux is here.\nThe same open-source OS with 24/7 support, built for NIS2 & CRA. \u00b7 See what\u2019s included\n\u2192 Products Customers Pricing Blog Docs TalosCon \u2197 Start trial Get demo \u2192 Kubernetes \u00b7 Talos Linux Kubernetes infrastructure that can\u2019t drift and won\u2019t fail an audit. Talos Linux is the immutable, API-driven operating system purpose-built for Kubernetes. No SSH, no shell, no package manager. Just the binaries needed to run your fleet, from bare metal to the edge. Read the docs Go to repo\n\u2192 See Talos Enterprise Linux\n\u2192 By the numbers <50 OS binaries 100MB OS footprint ~1 min boot time <5 min to cluster 0 package managers Free & Enterprise One codebase.\nTwo ways to run it. Talos Linux is free and open source under MPL-2.0. Talos Enterprise Linux is the same OS. What the enterprise tier adds is proof, indemnity, and someone to call: the assurance, compliance evidence, and support that security and procurement teams need to sign off. Shared foundation The only difference is that the Enterprise build enables FIPS 140-3 compliance, and adds the security artifacts, indemnity, CVE SLAs, and support. \u2022\nOpen source \u00b7 MPL-2.0 Talos Linux Free, forever Immutable, API-driven OS for Kubernetes No SSH, no shell, no package manager Minimal attack surface, minimal CVEs CIS-hardened, mTLS, SELinux, trusted boot Community support \u00b7 10,200+ GitHub stars Get started\n\u2192 \u2022\nEnterprise license \u00b7 MPL-2.0 New Talos Enterprise Linux $1,000 per node per year \u00b7 10-node minimum Fleet management with Omni, included 24/7/365 support with CVE SLAs FIPS 140-3 compliant builds Schematic-specific SBOMs & curated VEX, for your exact build Signed build attestation Commercial IP indemnity Built for NIS2 & CRA compliance Talk to us\n\u2192 Open stays open.\nE",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the documentation title exactly."
+          },
+          {
+            "source": "Hacker News",
+            "title": "MAI Code 2 and Code 2 Flash",
+            "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+            "description": "MAI Code 2 and Code 2 Flash",
+            "detailed_content": "Skip to main content\nSource\nSignal blog\nOfficial Microsoft Blog\nCommand Line\nMicrosoft On The Issues\nAsia\nCanada\nEurope, Middle East and Africa\nLatin America\nThe Code of Us\nWhat's new\nAI\nInnovation\nDigital Transformation\nSustainability\nSecurity\nWork & Life\nDiversity & Inclusion\nUnlocked\nMicrosoft 365\nAzure\nCopilot\nWindows\nSurface\nXBOX\nDeals\nSmall Business\nSupport\nWindows Apps\nOutlook\nOneDrive\nMicrosoft Teams\nOneNote\nMicrosoft Edge\nMoving from Skype to Teams\nComputers\nShop XBOX\nAccessories\nVR & mixed reality\nCertified Refurbished\nTrade-in for cash\nXBOX Game Pass Ultimate\nPC Game Pass\nXBOX games\nPC games\nMicrosoft AI\nMicrosoft Security\nDynamics 365\nMicrosoft 365 for business\nMicrosoft Power Platform\nWindows 365\nSmall Business\nDigital Sovereignty\nAzure\nMicrosoft Developer\nMicrosoft Learn\nSupport for AI marketplace apps\nMicrosoft Tech Community\nMicrosoft Marketplace\nSoftware companies\nVisual Studio\nMicrosoft Rewards\nFree downloads & security\nEducation\nGift cards\nLicensing\nUnlocked stories\nView Sitemap\nModels\nTranscribe\nTurn audio into precise transcripts\nVoice\nGenerate custom voice from text\nRealtime\nNatural speech-to-speech conversations\nImage\nGenerate images from text\nCode\nFast, lightweight agentic coding\nCyber\nAgentic defense at codebase scale\nThinking\nExpert reasoning for complex problems\nCustom Models\nModels tuned for your needs\nNews\nCareers\nAbout\nLabs\nLog in\nSigned in as\nAbout Microsoft AI\nTerms of Use\nPrivacy Statement\nReport a Concern\nData & privacy\nLog out\nPrivacy & Cookies Terms Trademarks Microsoft.com\nLinkedIn Instagram X\nOff\nAccessibility Mode\nLog in\nSigned in as\nAbout Microsoft AI\nTerms of Use\nPrivacy Statement\nReport a Concern\nData & privacy\nLog out\nOff\nAccessibility Mode\nMAI Code 2 and Code 2 Flash: Everyday coding at scalable prices\nNov 17, 2026\n\u00b7 Ignite\n\u00b7 ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the documentation title exactly."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Agentic exploitation frameworks are compressing the patch window at machine speed",
+            "url": "https://dev.to/ioneyrezende/agentic-exploitation-frameworks-are-compressing-the-patch-window-at-machine-speed-lee",
+            "description": "Agentic exploitation frameworks are compressing the patch window at machine speed\n\n\nGoogle Threat Intelligence Group's November 16 update describes a change in the economics of exploitation. Threat actors are moving from chat-assisted research to multi-agent frameworks that scan, reason, generate pa",
+            "detailed_content": "Agentic exploitation frameworks are compressing the patch window at machine speed - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nIoneyrezende\nPosted on\nNov 18\nAgentic exploitation frameworks are compressing the patch window at machine speed\n# security\n# ai\n# threatintelligence\n# exploitation\nAgentic exploitation frameworks are compressing the patch window at machine speed\nGoogle Threat Intelligence Group's November 16 update describes a change in the economics of exploitation. Threat actors are moving from chat-assisted research to multi-agent frameworks that scan, reason, generate payloads, execute tools, and react to results. The claim is not that every intrusion is fully autonomous. GTIG reports that several multi-agent offensive frameworks were used in live activity and that it observed one framework performing continuous vulnerability research and weaponization without a human in the loop.\nThe named tools include ARTEX, CAIRN, CyberStrikeAI, PentAGI, and HexStrike AI. They differ in design, but GTIG groups them around shared capabilities: low-complexity vulnerability discovery, single-use payload generation, tool execution, and feedback-driven adjustment. CAIRN uses an Observe, Orient, Decide, Act loop with agents sharing a blackboard. CyberStrikeAI connects models to security tools and attack recipes. HexStrike AI exposes many offensive utilities through Model Context Protocol integration.\nN-days become the fast path\nThe report emphasizes patch diffing. Comparing a vulnerable release with a fixed release is a concrete res",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Self-Host Memos with Docker Compose: A Production Setup Guide",
+            "url": "https://dev.to/gongkang/self-host-memos-with-docker-compose-a-production-setup-guide-1m33",
+            "description": "This tutorial was written with AI assistance from the project's official documentation. Verification status is stated at the end of the article.\n\n\n\n  \n  \n  What Memos does and what it needs\n\n\nMemos is a self-hosted note-taking app built around a personal timeline. Each memo is timestamped, Markdown-",
+            "detailed_content": "Self-Host Memos with Docker Compose: A Production Setup Guide - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nkonsongong\nPosted on\nNov 18\n\u2022\nOriginally published at\nbenchrun.pages.dev\nSelf-Host Memos with Docker Compose: A Production Setup Guide\n# memos\n# docker\n# selfhosting\n# notetaking\nThis tutorial was written with AI assistance from the project's official documentation. Verification status is stated at the end of the article.\nWhat Memos does and what it needs\nMemos is a self-hosted note-taking app built around a personal timeline. Each memo is timestamped, Markdown-capable, and taggable, so short thoughts and longer entries live in one searchable stream. You control visibility per memo: private, shared with specific users, or public on the web. The app ships as a single Go binary with an embedded SQLite store by default, which makes it one of the lighter services to run on a VPS.\nThe upstream project does not publish a minimum RAM figure. Practical sizing depends on workload: an idle instance with a handful of users and a few thousand memos runs comfortably in a small container, while heavy attachment uploads, large media libraries, and many concurrent users push memory and disk usage up. Watch the volume size more than the RAM line.\nEverything Memos keeps lives under\n/var/opt/memos\ninside the container. That directory holds the SQLite database, uploaded attachments, and generated thumbnails. Back it up as a unit.\nPrerequisites, ports, and volume constraints\nDocker Engine 24+ and the Compose v2 plugin ( docker compose versio",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix WordPress Critical Error After Update",
+            "url": "https://dev.to/zubaer/fix-wordpress-critical-error-after-update-3fkh",
+            "description": "A WordPress critical error after update is rarely a mystery for long, but the screen itself tells you nothing. Since WordPress 5.2 the core fatal error handler catches the PHP crash, prints a polite white page, and emails the admin a recovery link, deliberately withholding the file and line that wou",
+            "detailed_content": "Fix WordPress Critical Error After Update - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMd. Zubaer Ahammed\nPosted on\nNov 18\n\u2022\nOriginally published at\nwptutshub.com\nFix WordPress Critical Error After Update\n# wordpress\n# php\n# webdev\n# tutorial\nA WordPress critical error after update is rarely a mystery for long, but the screen itself tells you nothing. Since WordPress 5.2 the core fatal error handler catches the PHP crash, prints a polite white page, and emails the admin a recovery link, deliberately withholding the file and line that would identify the culprit. This tutorial compares the three realistic recovery routes, then implements the one worth keeping: read the fatal from\nwp-content/debug.log , get back into\nwp-admin\nthrough recovery mode, and roll the offending plugin or theme back with WP-CLI. It finishes with a small mu-plugin that emails you the file and line the moment the next update fails.\nYou need file or SSH access to the install (SFTP covers the first half), WP-CLI 2.7 or newer for the rollback, and access to the admin email inbox on that site.\nThe critical error screen is a symptom, not a diagnosis\nWhen PHP hits an uncaught fatal, WordPress runs\nWP_Fatal_Error_Handler\non shutdown. That handler checks whether the error came from a plugin or theme file, pauses the offending extension for the current session, sends the recovery-mode email, and renders the generic template. The message is suppressed on purpose: a raw stack trace on a live site leaks absolute paths, plugin versions and occasionally database creden",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text."
+          },
+          {
+            "source": "Dev.to",
+            "title": "OpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews",
+            "url": "https://dev.to/delimitter/openai-ships-gpt-62-astra-and-sol-cheaper-tokens-mixed-reviews-4725",
+            "description": "\ud83d\udcc5 17 November 2026 \u2022 OpenAI\n\nOpenAI shipped two new models on 17 November 2026: GPT-6.2 Astra, a frontier model for the hardest tasks, and GPT-6.2 Sol, an efficient everyday model. Per OpenAI, both deliver better results on demanding work with fewer output tokens, which in practice means more tasks ",
+            "detailed_content": "OpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nNews\nPosted on\nNov 18\n\u2022\nEdited on\nNov 18\nOpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews\n# ai\n# llm\n# automation\n# openai\n\ud83d\udcc5 17 November 2026 \u2022 OpenAI\nOpenAI shipped two new models on 17 November 2026:\nGPT-6.2 Astra , a frontier model for the hardest tasks, and\nGPT-6.2 Sol , an efficient everyday model. Per OpenAI, both deliver better results on demanding work with fewer output tokens, which in practice means more tasks finished inside the same subscription limits. Both are available via API right now as gpt-6.2-astra and gpt-6.2-sol, and Simon Willison has already shipped LLM 0.38 with support for the pair.\nPer OpenAI,\nAstra scores 5.2 points above GPT-6 Astra\non Agents' Last Exam at under a third of the cost, and leads Claude Fable 5.2 by 5.5 points at 5% of its cost. On Terminal-Bench-Science 0.1 and the Vals Science Index the model sets new highs, with OpenAI calling it the best in the world for scientists. Pricing, per OpenAI and confirmed by Simon Willison: $8/$40 per million tokens, 20% cheaper than GPT-6 Astra, cached input at $0.40 after a 60% discount, while Sol keeps GPT-6.1 pricing at $2/$10.\nFor agent builders , the 60% cache discount is the quiet headline: per Simon Willison, cheap cached input is good news for long agent sessions, where the same context gets paid for over and over. Sol is the other practical story, per OpenAI, many OpenAI employees already use it as their default model",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Cloudflare Block AI Bots: What to Block, What to Allow",
+            "url": "https://dev.to/kausarraza/cloudflare-block-ai-bots-what-to-block-what-to-allow-lg4",
+            "description": "Cloudflare will happily block AI bots for you. The question is which ones. \"AI bot\" covers three different jobs: crawlers that collect text to train future models, crawlers that build an AI search index, and fetchers that open one page because a person just asked ChatGPT or Claude about it. Block al",
+            "detailed_content": "Cloudflare Block AI Bots: What to Block, What to Allow - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nKausar Raza\nPosted on\nNov 18\n\u2022\nOriginally published at\nknowledgemarkg.com\nCloudflare Block AI Bots: What to Block, What to Allow\n# cloudflare\n# seo\n# ai\n# webdev\nCloudflare will happily block AI bots for you. The question is which ones. \"AI bot\" covers three different jobs: crawlers that collect text to train future models, crawlers that build an AI search index, and fetchers that open one page because a person just asked ChatGPT or Claude about it. Block all three and you're out of the training sets, but you've also vanished from the AI answers that now send real visitors.\nI ran the same request against two sites behind Cloudflare, changing only the bot name, to see what each setting actually does. Below are the results, the current dashboard path (it moved in 2026), and what I'd pick for a business site or a blog.\nThe short answer\nBlock training bots\n(GPTBot, ClaudeBot, CCBot, Bytespider, Google-Extended) if you don't want your content in future models. They send you no visitors.\nAllow AI search bots\n(OAI-SearchBot, Claude-SearchBot, PerplexityBot). OpenAI's docs say sites that opt out of OAI-SearchBot \"will not be shown in ChatGPT search answers\".\nAllow user agents\n(ChatGPT-User, Claude-User, Perplexity-User). Block them and \"summarise this link\" fails for anyone who pastes your URL.\nIn Cloudflare that's\nTraining: Block, Search: Allow, Agent: Allow . New domains start with all three on Allow, so nothing is blocked until you ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+            "url": "https://calif.io/java4shell/",
+            "description": "Java4Shell: RCE in OpenJDK when processing Base64",
+            "detailed_content": "Java4Shell: Write once, RCE everywhere\nSkip to content\ncalif .io\nCalif Research\n\u2197\nCVE-2026-114938\nJava4Shell\nWrite once, RCE everywhere\nStory by\nthe New York Times\nA memory-corruption vulnerability in OpenJDK's Base64 decoder. A remote attacker with no credentials can overwrite heap memory, read it in the style of Heartbleed, and reach remote code execution.\nBegin\n\u2193\nTechnical write-up\n\u2198\nCheck your servers\n\u2198\nRecommendations\n\u2198\nThe Story\n01 Overview\n02 Write once, RCE everywhere\n03 Wait, Java has a memory-corruption vulnerability, in Base64?!\n04 Era of the centaur hacker\n05 The tragedy of the commons\n06 A call for vibe-uncoding\nAfter we disclosed\nPHP2Shell , we realized many people didn't know what PHP was. So we decided to go after something a little more familiar: Java.\nToday, we are disclosing Java4Shell (CVE-2026-114938), a memory-corruption vulnerability in OpenJDK's Base64 decoder. OpenJDK is the most popular Java runtime. Under CVSS 4.0, this vulnerability scores 9.2 out of 10 (CRITICAL).\nWhile PHP is a high-level web technology, Java sits much deeper. Java is the world's\nthird most popular programming language , powering\n90% of Fortune 500 companies . It is the beating heart of the modern economy. Banking, aviation, telecommunications, nearly every critical sector runs on Java, including national security systems.\nBase64 is a very common way of representing binary data as text. It is used in authentication protocols, to encode file uploads, and to deliver network messages. To decode Base64 faster, OpenJDK uses specialized x86-64 CPU instructions to process many bytes at once. We discovered a bug in that optimized machine-level code that lets malformed input overwrite neighboring memory. With careful exploitation, the corruption can reveal sensitive memory, as\nHeart",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the documentation title exactly.",
+            "why_it_matters": "A critical memory\u2011corruption bug in OpenJDK\u2019s Base64 decoder lets attackers achieve remote code execution, exposing any Java\u2011based service that decodes untrusted data.",
+            "who_cares": "Java backend engineers, security teams, and DevOps responsible for JVM runtime updates.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Talos Linux",
+            "url": "https://www.siderolabs.com/talos-linux",
+            "description": "Talos Linux",
+            "detailed_content": "Linux OS for Kubernetes Skip to content New Talos Enterprise Linux is here.\nThe same open-source OS with 24/7 support, built for NIS2 & CRA. \u00b7 See what\u2019s included\n\u2192 Products Customers Pricing Blog Docs TalosCon \u2197 Start trial Get demo \u2192 Kubernetes \u00b7 Talos Linux Kubernetes infrastructure that can\u2019t drift and won\u2019t fail an audit. Talos Linux is the immutable, API-driven operating system purpose-built for Kubernetes. No SSH, no shell, no package manager. Just the binaries needed to run your fleet, from bare metal to the edge. Read the docs Go to repo\n\u2192 See Talos Enterprise Linux\n\u2192 By the numbers <50 OS binaries 100MB OS footprint ~1 min boot time <5 min to cluster 0 package managers Free & Enterprise One codebase.\nTwo ways to run it. Talos Linux is free and open source under MPL-2.0. Talos Enterprise Linux is the same OS. What the enterprise tier adds is proof, indemnity, and someone to call: the assurance, compliance evidence, and support that security and procurement teams need to sign off. Shared foundation The only difference is that the Enterprise build enables FIPS 140-3 compliance, and adds the security artifacts, indemnity, CVE SLAs, and support. \u2022\nOpen source \u00b7 MPL-2.0 Talos Linux Free, forever Immutable, API-driven OS for Kubernetes No SSH, no shell, no package manager Minimal attack surface, minimal CVEs CIS-hardened, mTLS, SELinux, trusted boot Community support \u00b7 10,200+ GitHub stars Get started\n\u2192 \u2022\nEnterprise license \u00b7 MPL-2.0 New Talos Enterprise Linux $1,000 per node per year \u00b7 10-node minimum Fleet management with Omni, included 24/7/365 support with CVE SLAs FIPS 140-3 compliant builds Schematic-specific SBOMs & curated VEX, for your exact build Signed build attestation Commercial IP indemnity Built for NIS2 & CRA compliance Talk to us\n\u2192 Open stays open.\nE",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the documentation title exactly.",
+            "why_it_matters": "Talos Linux offers an immutable, API\u2011driven OS with no shell or package manager, dramatically reducing attack surface for Kubernetes clusters.",
+            "who_cares": "Platform engineers, SREs, and DevOps teams building hardened Kubernetes fleets.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Hacker News",
+            "title": "MAI Code 2 and Code 2 Flash",
+            "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+            "description": "MAI Code 2 and Code 2 Flash",
+            "detailed_content": "Skip to main content\nSource\nSignal blog\nOfficial Microsoft Blog\nCommand Line\nMicrosoft On The Issues\nAsia\nCanada\nEurope, Middle East and Africa\nLatin America\nThe Code of Us\nWhat's new\nAI\nInnovation\nDigital Transformation\nSustainability\nSecurity\nWork & Life\nDiversity & Inclusion\nUnlocked\nMicrosoft 365\nAzure\nCopilot\nWindows\nSurface\nXBOX\nDeals\nSmall Business\nSupport\nWindows Apps\nOutlook\nOneDrive\nMicrosoft Teams\nOneNote\nMicrosoft Edge\nMoving from Skype to Teams\nComputers\nShop XBOX\nAccessories\nVR & mixed reality\nCertified Refurbished\nTrade-in for cash\nXBOX Game Pass Ultimate\nPC Game Pass\nXBOX games\nPC games\nMicrosoft AI\nMicrosoft Security\nDynamics 365\nMicrosoft 365 for business\nMicrosoft Power Platform\nWindows 365\nSmall Business\nDigital Sovereignty\nAzure\nMicrosoft Developer\nMicrosoft Learn\nSupport for AI marketplace apps\nMicrosoft Tech Community\nMicrosoft Marketplace\nSoftware companies\nVisual Studio\nMicrosoft Rewards\nFree downloads & security\nEducation\nGift cards\nLicensing\nUnlocked stories\nView Sitemap\nModels\nTranscribe\nTurn audio into precise transcripts\nVoice\nGenerate custom voice from text\nRealtime\nNatural speech-to-speech conversations\nImage\nGenerate images from text\nCode\nFast, lightweight agentic coding\nCyber\nAgentic defense at codebase scale\nThinking\nExpert reasoning for complex problems\nCustom Models\nModels tuned for your needs\nNews\nCareers\nAbout\nLabs\nLog in\nSigned in as\nAbout Microsoft AI\nTerms of Use\nPrivacy Statement\nReport a Concern\nData & privacy\nLog out\nPrivacy & Cookies Terms Trademarks Microsoft.com\nLinkedIn Instagram X\nOff\nAccessibility Mode\nLog in\nSigned in as\nAbout Microsoft AI\nTerms of Use\nPrivacy Statement\nReport a Concern\nData & privacy\nLog out\nOff\nAccessibility Mode\nMAI Code 2 and Code 2 Flash: Everyday coding at scalable prices\nNov 17, 2026\n\u00b7 Ignite\n\u00b7 ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the documentation title exactly.",
+            "why_it_matters": "MAI Code\u202f2 and Code\u202f2\u202fFlash promise AI\u2011assisted coding at \u201cscalable prices,\u201d a new option for developers looking to augment productivity.",
+            "who_cares": "Full\u2011stack developers and engineering managers evaluating AI coding assistants.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Agentic exploitation frameworks are compressing the patch window at machine speed",
+            "url": "https://dev.to/ioneyrezende/agentic-exploitation-frameworks-are-compressing-the-patch-window-at-machine-speed-lee",
+            "description": "Agentic exploitation frameworks are compressing the patch window at machine speed\n\n\nGoogle Threat Intelligence Group's November 16 update describes a change in the economics of exploitation. Threat actors are moving from chat-assisted research to multi-agent frameworks that scan, reason, generate pa",
+            "detailed_content": "Agentic exploitation frameworks are compressing the patch window at machine speed - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nIoneyrezende\nPosted on\nNov 18\nAgentic exploitation frameworks are compressing the patch window at machine speed\n# security\n# ai\n# threatintelligence\n# exploitation\nAgentic exploitation frameworks are compressing the patch window at machine speed\nGoogle Threat Intelligence Group's November 16 update describes a change in the economics of exploitation. Threat actors are moving from chat-assisted research to multi-agent frameworks that scan, reason, generate payloads, execute tools, and react to results. The claim is not that every intrusion is fully autonomous. GTIG reports that several multi-agent offensive frameworks were used in live activity and that it observed one framework performing continuous vulnerability research and weaponization without a human in the loop.\nThe named tools include ARTEX, CAIRN, CyberStrikeAI, PentAGI, and HexStrike AI. They differ in design, but GTIG groups them around shared capabilities: low-complexity vulnerability discovery, single-use payload generation, tool execution, and feedback-driven adjustment. CAIRN uses an Observe, Orient, Decide, Act loop with agents sharing a blackboard. CyberStrikeAI connects models to security tools and attack recipes. HexStrike AI exposes many offensive utilities through Model Context Protocol integration.\nN-days become the fast path\nThe report emphasizes patch diffing. Comparing a vulnerable release with a fixed release is a concrete res",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text.",
+            "why_it_matters": "Multi\u2011agent exploitation frameworks can discover, weaponize, and execute exploits without human input, shrinking the patch window to machine speed.",
+            "who_cares": "Application security engineers, threat\u2011intel analysts, and security\u2011focused product teams.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Self-Host Memos with Docker Compose: A Production Setup Guide",
+            "url": "https://dev.to/gongkang/self-host-memos-with-docker-compose-a-production-setup-guide-1m33",
+            "description": "This tutorial was written with AI assistance from the project's official documentation. Verification status is stated at the end of the article.\n\n\n\n  \n  \n  What Memos does and what it needs\n\n\nMemos is a self-hosted note-taking app built around a personal timeline. Each memo is timestamped, Markdown-",
+            "detailed_content": "Self-Host Memos with Docker Compose: A Production Setup Guide - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nkonsongong\nPosted on\nNov 18\n\u2022\nOriginally published at\nbenchrun.pages.dev\nSelf-Host Memos with Docker Compose: A Production Setup Guide\n# memos\n# docker\n# selfhosting\n# notetaking\nThis tutorial was written with AI assistance from the project's official documentation. Verification status is stated at the end of the article.\nWhat Memos does and what it needs\nMemos is a self-hosted note-taking app built around a personal timeline. Each memo is timestamped, Markdown-capable, and taggable, so short thoughts and longer entries live in one searchable stream. You control visibility per memo: private, shared with specific users, or public on the web. The app ships as a single Go binary with an embedded SQLite store by default, which makes it one of the lighter services to run on a VPS.\nThe upstream project does not publish a minimum RAM figure. Practical sizing depends on workload: an idle instance with a handful of users and a few thousand memos runs comfortably in a small container, while heavy attachment uploads, large media libraries, and many concurrent users push memory and disk usage up. Watch the volume size more than the RAM line.\nEverything Memos keeps lives under\n/var/opt/memos\ninside the container. That directory holds the SQLite database, uploaded attachments, and generated thumbnails. Back it up as a unit.\nPrerequisites, ports, and volume constraints\nDocker Engine 24+ and the Compose v2 plugin ( docker compose versio",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text.",
+            "why_it_matters": "A step\u2011by\u2011step Docker\u2011Compose deployment makes it trivial to run the lightweight, self\u2011hosted Memos note\u2011taking service in production.",
+            "who_cares": "Developers and hobbyists who want a personal, self\u2011hosted knowledge base.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix WordPress Critical Error After Update",
+            "url": "https://dev.to/zubaer/fix-wordpress-critical-error-after-update-3fkh",
+            "description": "A WordPress critical error after update is rarely a mystery for long, but the screen itself tells you nothing. Since WordPress 5.2 the core fatal error handler catches the PHP crash, prints a polite white page, and emails the admin a recovery link, deliberately withholding the file and line that wou",
+            "detailed_content": "Fix WordPress Critical Error After Update - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nMd. Zubaer Ahammed\nPosted on\nNov 18\n\u2022\nOriginally published at\nwptutshub.com\nFix WordPress Critical Error After Update\n# wordpress\n# php\n# webdev\n# tutorial\nA WordPress critical error after update is rarely a mystery for long, but the screen itself tells you nothing. Since WordPress 5.2 the core fatal error handler catches the PHP crash, prints a polite white page, and emails the admin a recovery link, deliberately withholding the file and line that would identify the culprit. This tutorial compares the three realistic recovery routes, then implements the one worth keeping: read the fatal from\nwp-content/debug.log , get back into\nwp-admin\nthrough recovery mode, and roll the offending plugin or theme back with WP-CLI. It finishes with a small mu-plugin that emails you the file and line the moment the next update fails.\nYou need file or SSH access to the install (SFTP covers the first half), WP-CLI 2.7 or newer for the rollback, and access to the admin email inbox on that site.\nThe critical error screen is a symptom, not a diagnosis\nWhen PHP hits an uncaught fatal, WordPress runs\nWP_Fatal_Error_Handler\non shutdown. That handler checks whether the error came from a plugin or theme file, pauses the offending extension for the current session, sends the recovery-mode email, and renders the generic template. The message is suppressed on purpose: a raw stack trace on a live site leaks absolute paths, plugin versions and occasionally database creden",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text.",
+            "why_it_matters": "Provides a concrete recovery workflow for WordPress \u201ccritical error\u201d screens, letting you pinpoint and roll back the offending plugin or theme via WP\u2011CLI.",
+            "who_cares": "WordPress developers, site administrators, and agencies maintaining client sites.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews",
+            "url": "https://dev.to/delimitter/openai-ships-gpt-62-astra-and-sol-cheaper-tokens-mixed-reviews-4725",
+            "description": "\ud83d\udcc5 17 November 2026 \u2022 OpenAI\n\nOpenAI shipped two new models on 17 November 2026: GPT-6.2 Astra, a frontier model for the hardest tasks, and GPT-6.2 Sol, an efficient everyday model. Per OpenAI, both deliver better results on demanding work with fewer output tokens, which in practice means more tasks ",
+            "detailed_content": "OpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nNews\nPosted on\nNov 18\n\u2022\nEdited on\nNov 18\nOpenAI ships GPT-6.2 Astra and Sol: cheaper tokens, mixed reviews\n# ai\n# llm\n# automation\n# openai\n\ud83d\udcc5 17 November 2026 \u2022 OpenAI\nOpenAI shipped two new models on 17 November 2026:\nGPT-6.2 Astra , a frontier model for the hardest tasks, and\nGPT-6.2 Sol , an efficient everyday model. Per OpenAI, both deliver better results on demanding work with fewer output tokens, which in practice means more tasks finished inside the same subscription limits. Both are available via API right now as gpt-6.2-astra and gpt-6.2-sol, and Simon Willison has already shipped LLM 0.38 with support for the pair.\nPer OpenAI,\nAstra scores 5.2 points above GPT-6 Astra\non Agents' Last Exam at under a third of the cost, and leads Claude Fable 5.2 by 5.5 points at 5% of its cost. On Terminal-Bench-Science 0.1 and the Vals Science Index the model sets new highs, with OpenAI calling it the best in the world for scientists. Pricing, per OpenAI and confirmed by Simon Willison: $8/$40 per million tokens, 20% cheaper than GPT-6 Astra, cached input at $0.40 after a 60% discount, while Sol keeps GPT-6.1 pricing at $2/$10.\nFor agent builders , the 60% cache discount is the quiet headline: per Simon Willison, cheap cached input is good news for long agent sessions, where the same context gets paid for over and over. Sol is the other practical story, per OpenAI, many OpenAI employees already use it as their default model",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text.",
+            "why_it_matters": "OpenAI\u2019s GPT\u20116.2 Astra and Sol models deliver higher performance at lower token costs, reshaping cost\u2011benefit calculations for LLM\u2011powered applications.",
+            "who_cares": "Machine\u2011learning engineers, AI product builders, and data scientists planning next\u2011gen LLM integrations.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Cloudflare Block AI Bots: What to Block, What to Allow",
+            "url": "https://dev.to/kausarraza/cloudflare-block-ai-bots-what-to-block-what-to-allow-lg4",
+            "description": "Cloudflare will happily block AI bots for you. The question is which ones. \"AI bot\" covers three different jobs: crawlers that collect text to train future models, crawlers that build an AI search index, and fetchers that open one page because a person just asked ChatGPT or Claude about it. Block al",
+            "detailed_content": "Cloudflare Block AI Bots: What to Block, What to Allow - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nKausar Raza\nPosted on\nNov 18\n\u2022\nOriginally published at\nknowledgemarkg.com\nCloudflare Block AI Bots: What to Block, What to Allow\n# cloudflare\n# seo\n# ai\n# webdev\nCloudflare will happily block AI bots for you. The question is which ones. \"AI bot\" covers three different jobs: crawlers that collect text to train future models, crawlers that build an AI search index, and fetchers that open one page because a person just asked ChatGPT or Claude about it. Block all three and you're out of the training sets, but you've also vanished from the AI answers that now send real visitors.\nI ran the same request against two sites behind Cloudflare, changing only the bot name, to see what each setting actually does. Below are the results, the current dashboard path (it moved in 2026), and what I'd pick for a business site or a blog.\nThe short answer\nBlock training bots\n(GPTBot, ClaudeBot, CCBot, Bytespider, Google-Extended) if you don't want your content in future models. They send you no visitors.\nAllow AI search bots\n(OAI-SearchBot, Claude-SearchBot, PerplexityBot). OpenAI's docs say sites that opt out of OAI-SearchBot \"will not be shown in ChatGPT search answers\".\nAllow user agents\n(ChatGPT-User, Claude-User, Perplexity-User). Block them and \"summarise this link\" fails for anyone who pastes your URL.\nIn Cloudflare that's\nTraining: Block, Search: Allow, Agent: Allow . New domains start with all three on Allow, so nothing is blocked until you ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims accurately summarize the provided reference documentation text.",
+            "why_it_matters": "Shows how to configure Cloudflare to block training bots while allowing search and user agents, protecting content from being scraped for future models without losing traffic.",
+            "who_cares": "Web developers, SEO specialists, and site\u2011ops teams managing public-facing domains.",
+            "verdict": "INTEGRATE"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Tech Shift",
+            "title": "Java4Shell: Critical RCE in OpenJDK\u2019s Base64 Decoder (CVE\u20112026\u2011114938)",
+            "description": "**A memory\u2011corruption bug in OpenJDK\u2019s Base64 decoder lets an unauthenticated attacker execute code on any Java service that decodes untrusted data.** The flaw, tracked as CVE\u20112026\u2011114938, corrupts heap memory when malformed Base64 input is processed with the optimized x86\u201164 instruction path. Exploitation can read memory (a \u201cHeartbleed\u2011style\u201d leak) and achieve remote code execution, earning a CVSS\u202f9.2\u202fcritical rating. Because OpenJDK powers the majority of Java workloads\u2014including 90\u202f% of Fortune\u202f500 companies\u2014any backend that decodes Base64 is at risk until the runtime is patched.",
+            "why_it_matters": "A critical memory\u2011corruption bug in OpenJDK\u2019s Base64 decoder lets attackers achieve remote code execution, exposing any Java\u2011based service that decodes untrusted data.",
+            "who_cares": "Java backend engineers, security teams, and DevOps responsible for JVM runtime updates.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://calif.io/java4shell/"
+          },
+          {
+            "category": "Cool Tool",
+            "title": "Talos Linux \u2013 Immutable, API\u2011Driven OS for Kubernetes",
+            "description": "**Talos Linux delivers a minimal, immutable operating system built specifically for Kubernetes clusters, eliminating shells, package managers, and SSH access.** The distro ships with fewer than 50 binaries, a 100\u202fMB footprint, and boots in about a minute. All configuration is performed via a clean API, giving you a \u201cdrift\u2011free\u201d fleet that can be provisioned from bare metal to the edge in under five minutes. The open\u2011source edition is MPL\u20112.0, while Talos Enterprise adds FIPS\u202f140\u20113 compliance, CVE SLAs, and indemnity for regulated environments.",
+            "why_it_matters": "Talos Linux offers an immutable, API\u2011driven OS with no shell or package manager, dramatically reducing attack surface for Kubernetes clusters.",
+            "who_cares": "Platform engineers, SREs, and DevOps teams building hardened Kubernetes fleets.",
+            "verdict": "WATCH",
+            "source_url": "https://www.siderolabs.com/talos-linux"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "Self\u2011Host Memos with Docker Compose \u2013 Production\u2011Ready Guide",
+            "description": "**A step\u2011by\u2011step Docker\u2011Compose tutorial makes it trivial to run the lightweight Memos note\u2011taking service in production.** Memos is a single Go binary with an embedded SQLite store, so it fits comfortably in a small container. The guide walks you through prerequisites (Docker\u202fEngine\u202f24+ and Compose\u202fv2), volume layout under\u202f/var/opt/memos, backup strategy, and exposing the service securely. By the end you have a reproducible, version\u2011controlled deployment you can run on any VPS or on\u2011prem server.",
+            "why_it_matters": "A step\u2011by\u2011step Docker\u2011Compose deployment makes it trivial to run the lightweight, self\u2011hosted Memos note\u2011taking service in production.",
+            "who_cares": "Developers and hobbyists who want a personal, self\u2011hosted knowledge base.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/gongkang/self-host-memos-with-docker-compose-a-production-setup-guide-1m33"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "Cloudflare Settings to Block Training Bots While Allowing Search and User Agents",
+            "description": "**Configure Cloudflare to block AI training crawlers but keep search\u2011engine bots and user\u2011facing agents alive, protecting your content from being scraped for future models.** The guide lists the three bot families (training, search, user) and shows the exact Cloudflare toggles: block GPTBot, ClaudeBot, CCBot, Bytespider, Google\u2011Extended; allow OAI\u2011SearchBot, Claude\u2011SearchBot, PerplexityBot; and allow ChatGPT\u2011User, Claude\u2011User, Perplexity\u2011User. This keeps your site out of training datasets without losing traffic from AI\u2011enhanced search results.",
+            "why_it_matters": "Shows how to configure Cloudflare to block training bots while allowing search and user agents, protecting content from being scraped for future models without losing traffic.",
+            "who_cares": "Web developers, SEO specialists, and site\u2011ops teams managing public\u2011facing domains.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/kausarraza/cloudflare-block-ai-bots-what-to-block-what-to-allow-lg4"
+          },
+          {
+            "category": "Watchlist",
+            "title": "Agentic Exploitation Frameworks \u2013 Shrinking the Patch Window to Machine Speed",
+            "description": "**Multi\u2011agent offensive frameworks are now able to discover, weaponize, and execute exploits without human intervention, compressing the vulnerability\u2011to\u2011patch cycle to near\u2011real\u2011time.** Google Threat Intelligence Group reported tools such as ARTEX, CAIRN, CyberStrikeAI, PentAGI, and HexStrike\u202fAI that combine low\u2011complexity vulnerability discovery, payload generation, tool execution, and feedback\u2011driven adjustment. One observed framework performed continuous vulnerability research and weaponization autonomously, turning N\u2011day exploits into a fast\u2011path threat.",
+            "why_it_matters": "Multi\u2011agent exploitation frameworks can discover, weaponize, and execute exploits without human input, shrinking the patch window to machine speed.",
+            "who_cares": "Application security engineers, threat\u2011intel analysts, and security\u2011focused product teams.",
+            "verdict": "WATCH",
+            "source_url": "https://dev.to/ioneyrezende/agentic-exploitation-frameworks-are-compressing-the-patch-window-at-machine-speed-lee"
+          }
+        ]
+      }
+    }
+  },
+  "rejected_urls": [],
+  "restarted": false,
+  "email": {
+    "status": "sent",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": []
+}

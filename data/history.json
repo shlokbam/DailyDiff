@@ -2662,5 +2662,56 @@
         "source_url": "https://dev.to/hackerme/exposed-api-keys-how-ai-agents-now-hunt-them-on-websites-and-ai-apps-12bc"
       }
     ]
+  },
+  {
+    "date": "2026-11-18",
+    "published_at": "2026-11-18T12:09:56.312168+00:00",
+    "briefs": [
+      {
+        "category": "Tech Shift",
+        "title": "Java4Shell: Critical RCE in OpenJDK\u2019s Base64 Decoder (CVE\u20112026\u2011114938)",
+        "description": "**A memory\u2011corruption bug in OpenJDK\u2019s Base64 decoder lets an unauthenticated attacker execute code on any Java service that decodes untrusted data.** The flaw, tracked as CVE\u20112026\u2011114938, corrupts heap memory when malformed Base64 input is processed with the optimized x86\u201164 instruction path. Exploitation can read memory (a \u201cHeartbleed\u2011style\u201d leak) and achieve remote code execution, earning a CVSS\u202f9.2\u202fcritical rating. Because OpenJDK powers the majority of Java workloads\u2014including 90\u202f% of Fortune\u202f500 companies\u2014any backend that decodes Base64 is at risk until the runtime is patched.",
+        "why_it_matters": "A critical memory\u2011corruption bug in OpenJDK\u2019s Base64 decoder lets attackers achieve remote code execution, exposing any Java\u2011based service that decodes untrusted data.",
+        "who_cares": "Java backend engineers, security teams, and DevOps responsible for JVM runtime updates.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://calif.io/java4shell/"
+      },
+      {
+        "category": "Cool Tool",
+        "title": "Talos Linux \u2013 Immutable, API\u2011Driven OS for Kubernetes",
+        "description": "**Talos Linux delivers a minimal, immutable operating system built specifically for Kubernetes clusters, eliminating shells, package managers, and SSH access.** The distro ships with fewer than 50 binaries, a 100\u202fMB footprint, and boots in about a minute. All configuration is performed via a clean API, giving you a \u201cdrift\u2011free\u201d fleet that can be provisioned from bare metal to the edge in under five minutes. The open\u2011source edition is MPL\u20112.0, while Talos Enterprise adds FIPS\u202f140\u20113 compliance, CVE SLAs, and indemnity for regulated environments.",
+        "why_it_matters": "Talos Linux offers an immutable, API\u2011driven OS with no shell or package manager, dramatically reducing attack surface for Kubernetes clusters.",
+        "who_cares": "Platform engineers, SREs, and DevOps teams building hardened Kubernetes fleets.",
+        "verdict": "WATCH",
+        "source_url": "https://www.siderolabs.com/talos-linux"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Self\u2011Host Memos with Docker Compose \u2013 Production\u2011Ready Guide",
+        "description": "**A step\u2011by\u2011step Docker\u2011Compose tutorial makes it trivial to run the lightweight Memos note\u2011taking service in production.** Memos is a single Go binary with an embedded SQLite store, so it fits comfortably in a small container. The guide walks you through prerequisites (Docker\u202fEngine\u202f24+ and Compose\u202fv2), volume layout under\u202f/var/opt/memos, backup strategy, and exposing the service securely. By the end you have a reproducible, version\u2011controlled deployment you can run on any VPS or on\u2011prem server.",
+        "why_it_matters": "A step\u2011by\u2011step Docker\u2011Compose deployment makes it trivial to run the lightweight, self\u2011hosted Memos note\u2011taking service in production.",
+        "who_cares": "Developers and hobbyists who want a personal, self\u2011hosted knowledge base.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://dev.to/gongkang/self-host-memos-with-docker-compose-a-production-setup-guide-1m33"
+      },
+      {
+        "category": "Ecosystem Update",
+        "title": "Cloudflare Settings to Block Training Bots While Allowing Search and User Agents",
+        "description": "**Configure Cloudflare to block AI training crawlers but keep search\u2011engine bots and user\u2011facing agents alive, protecting your content from being scraped for future models.** The guide lists the three bot families (training, search, user) and shows the exact Cloudflare toggles: block GPTBot, ClaudeBot, CCBot, Bytespider, Google\u2011Extended; allow OAI\u2011SearchBot, Claude\u2011SearchBot, PerplexityBot; and allow ChatGPT\u2011User, Claude\u2011User, Perplexity\u2011User. This keeps your site out of training datasets without losing traffic from AI\u2011enhanced search results.",
+        "why_it_matters": "Shows how to configure Cloudflare to block training bots while allowing search and user agents, protecting content from being scraped for future models without losing traffic.",
+        "who_cares": "Web developers, SEO specialists, and site\u2011ops teams managing public\u2011facing domains.",
+        "verdict": "INTEGRATE",
+        "source_url": "https://dev.to/kausarraza/cloudflare-block-ai-bots-what-to-block-what-to-allow-lg4"
+      },
+      {
+        "category": "Watchlist",
+        "title": "Agentic Exploitation Frameworks \u2013 Shrinking the Patch Window to Machine Speed",
+        "description": "**Multi\u2011agent offensive frameworks are now able to discover, weaponize, and execute exploits without human intervention, compressing the vulnerability\u2011to\u2011patch cycle to near\u2011real\u2011time.** Google Threat Intelligence Group reported tools such as ARTEX, CAIRN, CyberStrikeAI, PentAGI, and HexStrike\u202fAI that combine low\u2011complexity vulnerability discovery, payload generation, tool execution, and feedback\u2011driven adjustment. One observed framework performed continuous vulnerability research and weaponization autonomously, turning N\u2011day exploits into a fast\u2011path threat.",
+        "why_it_matters": "Multi\u2011agent exploitation frameworks can discover, weaponize, and execute exploits without human input, shrinking the patch window to machine speed.",
+        "who_cares": "Application security engineers, threat\u2011intel analysts, and security\u2011focused product teams.",
+        "verdict": "WATCH",
+        "source_url": "https://dev.to/ioneyrezende/agentic-exploitation-frameworks-are-compressing-the-patch-window-at-machine-speed-lee"
+      }
+    ]
   }
 ]
