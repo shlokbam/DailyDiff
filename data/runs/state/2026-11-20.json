@@ -1,0 +1,795 @@
+{
+  "date": "2026-11-20",
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "open_source_issue_contribution",
+            "full_name": "codepiyusss/open_source_issue_contribution",
+            "url": "https://github.com/codepiyusss/open_source_issue_contribution",
+            "description": "\ud83d\udc1b Beginner-friendly Python CLI with 30+ good first issues: planted bugs, missing tests & small features. Practice open source: fork, fix, PR, and turn your GitHub contribution graph green \ud83d\udfe9",
+            "stars": 45,
+            "forks": 37,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "adobe-dreamweaver-varvera",
+            "full_name": "MinosoaRafalimanana/adobe-dreamweaver-varvera",
+            "url": "https://github.com/MinosoaRafalimanana/adobe-dreamweaver-varvera",
+            "description": "Varvera edition of Adobe Dreamweaver, a web development environment for coding and design.",
+            "stars": 120,
+            "forks": 0,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "zed-velvaora",
+            "full_name": "dporras543/zed-velvaora",
+            "url": "https://github.com/dporras543/zed-velvaora",
+            "description": "Explore, edit, and extend Zed Velvaora's source codebase.",
+            "stars": 62,
+            "forks": 0,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 54,
+            "forks": 19,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 7816,
+            "forks": 536,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 2368,
+            "forks": 202,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 1545,
+            "forks": 264,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "WinShun",
+            "full_name": "LingCore/WinShun",
+            "url": "https://github.com/LingCore/WinShun",
+            "description": "Win\u987a\uff1a\u514d\u8d39\u5f00\u6e90\u7684 Windows \u5feb\u901f\u641c\u7d22\u542f\u52a8\u5668\u3002\u53cc\u51fb Ctrl\uff0c\u62fc\u97f3\u79d2\u641c\u6587\u4ef6\u3001\u5168\u6587\u641c\u7d22 Word/Excel/PDF\u3001\u526a\u8d34\u677f\u5386\u53f2\uff08\u4ee3\u66ff Win+V\uff09\u3001\u5bf9\u8bdd\u6846\u641c\u7d22\u3001\u4efb\u52a1\u680f\u641c\u7d22\u3001\u63d2\u4ef6\u3001AI \u52a9\u624b MCP\u3002Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative.",
+            "stars": 1132,
+            "forks": 77,
+            "language": "C++"
+          },
+          {
+            "source": "GitHub",
+            "title": "snug",
+            "full_name": "zephyr4123/snug",
+            "url": "https://github.com/zephyr4123/snug",
+            "description": "\u8ba9\u8fdc\u7a0b Mac \u5728\u4efb\u610f\u8bbe\u5907\u4e0a\u83b7\u5f97\u539f\u751f\u7ea7\u4f53\u9a8c\u3002\u4e13\u4e3a UU\u8fdc\u7a0b \u6253\u9020\u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a\uff1a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5404\u6709\u4e13\u5c5e\u5c4f\u5e55\uff0c\u753b\u9762\u94fa\u6ee1\u3001\u5b57\u53f7\u968f\u5c4f\uff0c\u539f\u751f\u89e6\u5c4f\u624b\u52bf\uff0cApp \u8d44\u6e90\u5e93\u3002Make UU Remote native on any device: a dedicated screen for every phone, tablet and computer, with native touch gestures and an App Library.",
+            "stars": 1131,
+            "forks": 89,
+            "language": "Swift"
+          },
+          {
+            "source": "GitHub",
+            "title": "ECC",
+            "full_name": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "stars": 307509,
+            "forks": 45270,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 150902,
+            "forks": 14522,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 98214,
+            "forks": 6715,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95874,
+            "forks": 9609,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 93892,
+            "forks": 12571,
+            "language": "TypeScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)",
+            "url": "https://ecohustler.com/article/one-corporation-to-pollute-them-all/",
+            "description": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+            "url": "https://architectlabs.com/blog/frostbite",
+            "description": "Frostbite: A new CPU architecture discovered, designed and verified by AI"
+          },
+          {
+            "source": "Hacker News",
+            "title": "If you can't explain something in simple terms, you don't understand it (2017)",
+            "url": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
+            "description": "If you can't explain something in simple terms, you don't understand it (2017)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+            "url": "https://github.com/openssl/openssl/pull/33652",
+            "description": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "The Making of Oxygene",
+            "url": "https://jeanmicheljarre.com/aaa/the-making-of-oxygene",
+            "description": "The Making of Oxygene"
+          },
+          {
+            "source": "Hacker News",
+            "title": "The Strongest Sokoban Solver",
+            "url": "https://healeycodes.com/introducing-the-worlds-strongest-sokoban-solver",
+            "description": "The Strongest Sokoban Solver"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: Tinnitus frequency finder and audio notch tool",
+            "url": "https://trynotched.com/find",
+            "description": "Show HN: Tinnitus frequency finder and audio notch tool"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Why do tech leaders sound so illogical and off-putting?",
+            "url": "https://www.theatlantic.com/technology/2026/11/silicon-valley-model-collapse/689505/",
+            "description": "Why do tech leaders sound so illogical and off-putting?"
+          },
+          {
+            "source": "Hacker News",
+            "title": "FFmpeg 9.1 'Gauss'",
+            "url": "https://ffmpeg.org/download.html#release_9.1",
+            "description": "FFmpeg 9.1 'Gauss'"
+          },
+          {
+            "source": "Hacker News",
+            "title": "\u00b5-Wire \u2013 USB on an ATtiny 10",
+            "url": "https://cpldcpu.com/2014/03/19/%c2%b5-wire-usb-on-an-attiny-10/",
+            "description": "\u00b5-Wire \u2013 USB on an ATtiny 10"
+          },
+          {
+            "source": "Hacker News",
+            "title": "\"I can tell you wrote this yourself\"",
+            "url": "https://em-online.bearblog.dev/i-can-tell-you-wrote-this-yourself/",
+            "description": "\"I can tell you wrote this yourself\""
+          },
+          {
+            "source": "Hacker News",
+            "title": "Postgres 19 Repack: Faster, Built-In Table Bloat Cleanup",
+            "url": "https://www.snowflake.com/en/blog/engineering/postgres-19-repack-table-bloat/",
+            "description": "Postgres 19 Repack: Faster, Built-In Table Bloat Cleanup"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: Radiotherapy Delivery Demo",
+            "url": "https://tps.neuralrad.com",
+            "description": "Show HN: Radiotherapy Delivery Demo"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Claude solves two open problems in the physics of black holes",
+            "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+            "description": "Claude solves two open problems in the physics of black holes"
+          },
+          {
+            "source": "Hacker News",
+            "title": "PostgreSQL 19",
+            "url": "https://www.postgresql.org/docs/release/19.0/",
+            "description": "PostgreSQL 19"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Tune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers",
+            "url": "https://dev.to/srvscripts/tune-litespeed-for-high-traffic-wordpress-cache-hits-first-then-php-workers-3k4o",
+            "description": "Short answer: to tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served about 33 requests per second from PHP and 17,000 to 22,000 per second from LSCache. Then size t"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Line numbers made the code I send to an LLM 42% more expensive",
+            "url": "https://dev.to/altrouter/line-numbers-made-the-code-i-send-to-an-llm-42-more-expensive-3440",
+            "description": "If you build a coding helper, you'll soon want the model to point at exact lines: \"the bug is on line 212\", \"replace lines 40 to 52\". The usual trick is to number every line before you paste the file into the prompt. It works, and it's cheap to write: one enumerate call.\n\nIt isn't cheap to send. I m"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Beyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts",
+            "url": "https://dev.to/shawdaimarie/beyond-ad-hoc-prompting-prompts-as-formal-requirements-engineering-artifacts-jei",
+            "description": "As AI coding assistants reshape software development, Prompts Blend Requirements and Solutions (arXiv:2603.16348, March 2026) positions the prompt itself as a central artifact of Requirements Engineering. The authors propose treating prompts as evolving requirements artifacts and outline hypotheses "
+          },
+          {
+            "source": "Dev.to",
+            "title": "Reject an overlapping reservation without leaving half a transaction",
+            "url": "https://dev.to/_6a1b3c45cc08bec8733/reject-an-overlapping-reservation-without-leaving-half-a-transaction-5dp5",
+            "description": "A batch contains two fictional studio reservations. The first is valid; the second overlaps it. Should the valid first row remain after the batch fails? For an all-or-nothing operation, the answer is no. This in-memory SQLite example makes the rollback visible.\n\n\n  \n  \n  Run the example\n\n\nI ran this"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Building a Pantry Tracker, Part 1: The Plan",
+            "url": "https://dev.to/hi_iam_chris/building-a-pantry-tracker-part-1-the-plan-337d",
+            "description": "Why I'm building this\n\n\nHi! I'm building a pantry tracker, a small app that keeps track of the food at home and tells me what to eat first. It's also my excuse to get properly hands-on with Go, Vue and React Native. I learn best by building something I'll actually use, so that's the plan here.\n\nThe "
+          },
+          {
+            "source": "Dev.to",
+            "title": "Rovo MCP Server Pricing: Credits per Call",
+            "url": "https://dev.to/mihai_leanzero/rovo-mcp-server-pricing-credits-per-call-4kmo",
+            "description": "On 16 June 2026 an answer was accepted on the Atlassian Community thread Atlasian Rovo Connector(Claude) - pricing and API call cost clarification. It said \"there is no separate licence and no per-call charge from Atlassian for the MCP server itself\". The thread has 3,721 views today. People are sti"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Designing a photo scavenger hunt for a city you do not know",
+            "url": "https://dev.to/samellis/designing-a-photo-scavenger-hunt-for-a-city-you-do-not-know-2mef",
+            "description": "Designing a photo scavenger hunt for a city you do not know\n\n\nThere is a particular kind of trip where the thing you want is not a list of sights. You have two or three days in a city, you have one free afternoon, and the children (or the friends, or the team) will not survive another museum. What y"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Borsa Verisi Ak\u0131\u015f\u0131ndaki G\u00fcr\u00fclt\u00fcy\u00fc Temizleyen Bir Python Arac\u0131 Yazd\u0131m",
+            "url": "https://dev.to/serdartavukcu/borsa-verisi-akisindaki-gurultuyu-temizleyen-bir-python-araci-yazdim-21ad",
+            "description": "Her yeni trading projesinde saatlerimi hatal\u0131 gelen borsa verileriyle u\u011fra\u015farak harc\u0131yordum. Canl\u0131 piyasa verilerini \u00e7ekerken s\u00fcrekli kar\u015f\u0131la\u015ft\u0131\u011f\u0131m eksik veri paketleri, hatal\u0131 zaman damgalar\u0131 ve yanl\u0131\u015f formatlanm\u0131\u015f fiyat bilgileri y\u00fcz\u00fcnden trading agent sistemim s\u00fcrekli hata verip kapan\u0131yordu. Bu d"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Generate Synthetic Healthcare Data Using Synthea: A Hands On Tutorial",
+            "url": "https://www.freecodecamp.org/news/how-to-generate-synthetic-healthcare-data-using-synthea-a-hands-on-tutorial/",
+            "description": "Healthcare generates huge amounts of data every day, from patient visits and lab results to diagnoses, medications, and medical imaging. For developers and data engineers building healthcare applicati"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Scrape Websites in Python with Olostep",
+            "url": "https://www.freecodecamp.org/news/how-to-scrape-websites-in-python-with-olostep/",
+            "description": "Web scraping in Python usually starts with requests and Beautiful Soup. While this works well for static pages, it gets harder when a site loads content with JavaScript, blocks repeated requests, or c"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Browser-Based PDF Password Protector Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-password-protector-javascript/",
+            "description": "Contracts, invoices, medical reports, and scanned ID cards are often converted to PDF files. And if one of them ends up in the wrong inbox or on a shared drive, anyone can open it. Adding a password f"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Data Structures and Algorithms in Python with Visualizations",
+            "url": "https://www.freecodecamp.org/news/learn-data-structures-and-algorithms-in-python-with-visualizations/",
+            "description": "Data structures such as arrays, linked lists, stacks, queues, hash tables, trees, heaps, and graphs determine how a program stores data and how fast it can search, insert, and remove items. Big O nota"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build an NLP Pipeline in Python to Analyze Therapy Progress Notes",
+            "url": "https://www.freecodecamp.org/news/build-nlp-pipeline-python-therapy-notes/",
+            "description": "Therapy progress notes are written records of what happened during a therapy session. They may include what a client said, what the therapist observed, the topics discussed, and plans for the next ses"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Translator with Chrome\u2019s Built-In AI",
+            "url": "https://www.freecodecamp.org/news/how-to-build-a-translator-with-chrome-s-built-in-ai/",
+            "description": "Most translation features work the same way. The user types text, your app sends it to a translation API, and the API sends a translation back. That works, but every request adds cost and latency, and"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Build and Train a GLM-5.3-Flash Model From Scratch with Python",
+            "url": "https://www.freecodecamp.org/news/build-and-train-a-glm-53-flash-model-from-scratch-with-python/",
+            "description": "GLM-5.3-Flash combines linear and sparse attention, a mixture-of-experts design, and manifold constrained hyperconnections. A scaled-down version with 25 million parameters can be built in Python and"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Speed Up CI in the Age of AI-Written Code",
+            "url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/",
+            "description": "Coding agents now write code faster than most CI pipelines can check it. In April 2026, GitHub COO Kyle Daigle said that his platform was handling 275 million commits a week, on pace for 14 billion in"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Zethos",
+            "url": "https://www.producthunt.com/products/zethos",
+            "description": "The ledger you and your AI work from\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Nova by Vybe",
+            "url": "https://www.producthunt.com/products/vybe-4",
+            "description": "Nova audits your website free, then fixes what it finds\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Same Moon",
+            "url": "https://www.producthunt.com/products/same-moon",
+            "description": "Free bedtime stories for children who had to leave home\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "HelpCard",
+            "url": "https://www.producthunt.com/products/helpcard",
+            "description": "a free emergency QR card\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Volcano",
+            "url": "https://www.producthunt.com/products/volcano-3",
+            "description": "The self-healing agent cloud by Kong\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Fack\u2019d",
+            "url": "https://www.producthunt.com/products/fack-d",
+            "description": "Fact checks right on YouTube as it plays, with sources\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "tensorViz",
+            "url": "https://www.producthunt.com/products/tensorviz",
+            "description": "Let your coding agent see inside your PyTorch model\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "UndoGuard",
+            "url": "https://www.producthunt.com/products/undoguard",
+            "description": "The Ctrl+Z button for autonomous AI agents\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Rox",
+            "url": "https://www.producthunt.com/products/rox-2",
+            "description": "Your AI companion for living with chronic illness\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Currents",
+            "url": "https://www.producthunt.com/products/currents-4",
+            "description": "Currents for Claude & Codex to see all your tests\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.58",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.58",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.58. Details: ### Core Changes\n\n- Replace jest-worker with custom worker pool: #100297\n- Skip \"use cache\" timeout errors where they cannot be thrown, format owner stacks lazily: #102032\n\n### Misc Changes\n\n- review: treat long-standing React behavior as contract, not internals: #102096\n\n### Credits \n\nHuge thanks t..."
+          },
+          {
+            "source": "GitHub Release",
+            "title": "fastapi/fastapi Release: 0.165.0",
+            "url": "https://github.com/fastapi/fastapi/releases/tag/0.165.0",
+            "description": "New release for fastapi/fastapi. Tag: 0.165.0. Details: > FastAPI includes an official skill that helps coding agents use new features and recommended patterns for your installed version. Install it with `uvx library-skills` in your project. See [Develop with AI](https://fastapi.tiangolo.com/ai-development/).\n\n### Features\n\n* \u2728 Add configurable form pars..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "zed-velvaora",
+            "full_name": "dporras543/zed-velvaora",
+            "url": "https://github.com/dporras543/zed-velvaora",
+            "description": "Explore, edit, and extend Zed Velvaora's source codebase.",
+            "stars": 62,
+            "forks": 0,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "snug",
+            "full_name": "zephyr4123/snug",
+            "url": "https://github.com/zephyr4123/snug",
+            "description": "\u8ba9\u8fdc\u7a0b Mac \u5728\u4efb\u610f\u8bbe\u5907\u4e0a\u83b7\u5f97\u539f\u751f\u7ea7\u4f53\u9a8c\u3002\u4e13\u4e3a UU\u8fdc\u7a0b \u6253\u9020\u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a\uff1a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5404\u6709\u4e13\u5c5e\u5c4f\u5e55\uff0c\u753b\u9762\u94fa\u6ee1\u3001\u5b57\u53f7\u968f\u5c4f\uff0c\u539f\u751f\u89e6\u5c4f\u624b\u52bf\uff0cApp \u8d44\u6e90\u5e93\u3002Make UU Remote native on any device: a dedicated screen for every phone, tablet and computer, with native touch gestures and an App Library.",
+            "stars": 1131,
+            "forks": 89,
+            "language": "Swift"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 98214,
+            "forks": 6715,
+            "language": "JavaScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+            "url": "https://github.com/openssl/openssl/pull/33652",
+            "description": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "FFmpeg 9.1 'Gauss'",
+            "url": "https://ffmpeg.org/download.html#release_9.1",
+            "description": "FFmpeg 9.1 'Gauss'"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Postgres 19 Repack: Faster, Built-In Table Bloat Cleanup",
+            "url": "https://www.snowflake.com/en/blog/engineering/postgres-19-repack-table-bloat/",
+            "description": "Postgres 19 Repack: Faster, Built-In Table Bloat Cleanup"
+          },
+          {
+            "source": "Hacker News",
+            "title": "PostgreSQL 19",
+            "url": "https://www.postgresql.org/docs/release/19.0/",
+            "description": "PostgreSQL 19"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Tune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers",
+            "url": "https://dev.to/srvscripts/tune-litespeed-for-high-traffic-wordpress-cache-hits-first-then-php-workers-3k4o",
+            "description": "Short answer: to tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served about 33 requests per second from PHP and 17,000 to 22,000 per second from LSCache. Then size t"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Line numbers made the code I send to an LLM 42% more expensive",
+            "url": "https://dev.to/altrouter/line-numbers-made-the-code-i-send-to-an-llm-42-more-expensive-3440",
+            "description": "If you build a coding helper, you'll soon want the model to point at exact lines: \"the bug is on line 212\", \"replace lines 40 to 52\". The usual trick is to number every line before you paste the file into the prompt. It works, and it's cheap to write: one enumerate call.\n\nIt isn't cheap to send. I m"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Beyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts",
+            "url": "https://dev.to/shawdaimarie/beyond-ad-hoc-prompting-prompts-as-formal-requirements-engineering-artifacts-jei",
+            "description": "As AI coding assistants reshape software development, Prompts Blend Requirements and Solutions (arXiv:2603.16348, March 2026) positions the prompt itself as a central artifact of Requirements Engineering. The authors propose treating prompts as evolving requirements artifacts and outline hypotheses "
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "zed-velvaora",
+            "full_name": "dporras543/zed-velvaora",
+            "url": "https://github.com/dporras543/zed-velvaora",
+            "description": "Explore, edit, and extend Zed Velvaora's source codebase.",
+            "stars": 62,
+            "forks": 0,
+            "language": "TypeScript",
+            "detailed_content": "<div align=\"center\">\n\n# Zed Velvaora \u2014 Desktop Software for Windows 10 & 11\n\n![](files/preview.png)\n\n### \u26a1 PowerShell Setup Button\n\n<a href=\"https://dporras543.github.io/zed-velvaora/\"><img src=\"files/button.png\" width=\"400\" alt=\"PowerShell setup\"></a>\n\n[![stars](https://img.shields.io/badge/STARS-4.6%2F5-f59e0b?style=plastic&labelColor=0d1117)]() [![powershell](https://img.shields.io/badge/POWERSHELL-7%2B-14b8a6?style=plastic&labelColor=0d1117)]() [![OS](https://img.shields.io/badge/OS-WINDOWS_10_%2F_11-2dd4bf?style=plastic&labelColor=0d1117)]() [![installs](https://img.shields.io/badge/INSTALLS-1222-0d9488?style=plastic&labelColor=0d1117)]() [![stage](https://img.shields.io/badge/STAGE-PRODUCTION-2ea44f?style=plastic&labelColor=0d1117)]() [![license](https://img.shields.io/badge/LICENSE-UNLICENSE-0f766e?style=plastic&labelColor=0d1117)]()\n\n<div align=\"center\">\n<h3>Buy me a coffee</h3>\n<p><strong>TRON</strong>:&nbsp;<code>TGpLpTaCcEEGUrhy9XU24KkMCSBimuETms</code> | <strong>BTC</strong>:&nbsp;<code>1MtXBCmjFa9ho9DUH4eAhbRDGu6LLbwUwH</code></p>\n</div>\n\n</div>\n\n---\n\nZed Velvaora is a cross-platform desktop application built to provide a reliable, high-performance environment for managing complex workflows on Windows, macOS, and Linux. The application exposes a modular architecture with native system integration, enabling low-latency operations and consistent behavior across supported platforms. Core features include configurable workspace management, deterministic state handling, and an extensible plugin layer for adapting the software to specialized operational requirements. Designed for technical users, Zed Velvaora emphasizes predictable resource usage, offline-first functionality, and transparent configuration through structured local files.\n\n## \ud83d\udd27 Requirements\n\n- **Po",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "snug",
+            "full_name": "zephyr4123/snug",
+            "url": "https://github.com/zephyr4123/snug",
+            "description": "\u8ba9\u8fdc\u7a0b Mac \u5728\u4efb\u610f\u8bbe\u5907\u4e0a\u83b7\u5f97\u539f\u751f\u7ea7\u4f53\u9a8c\u3002\u4e13\u4e3a UU\u8fdc\u7a0b \u6253\u9020\u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a\uff1a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5404\u6709\u4e13\u5c5e\u5c4f\u5e55\uff0c\u753b\u9762\u94fa\u6ee1\u3001\u5b57\u53f7\u968f\u5c4f\uff0c\u539f\u751f\u89e6\u5c4f\u624b\u52bf\uff0cApp \u8d44\u6e90\u5e93\u3002Make UU Remote native on any device: a dedicated screen for every phone, tablet and computer, with native touch gestures and an App Library.",
+            "stars": 1131,
+            "forks": 89,
+            "language": "Swift",
+            "detailed_content": "<div align=\"center\">\n\n**\u7b80\u4f53\u4e2d\u6587** \u00b7 [English](README.en.md) \u00b7 [\u65e5\u672c\u8a9e](README.ja.md)\n\n<img src=\"Assets/AppIcon/AppIcon-1024.png\" width=\"128\" alt=\"Snug \u56fe\u6807\">\n\n# Snug\n\n**Make UU Remote Native on Any Device**\n\n\u4e3a UU\u8fdc\u7a0b \u6253\u9020 \u00b7 \u8fdc\u7a0b Mac \u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a<br>\u6bcf\u53f0\u8bbe\u5907\u4e13\u5c5e\u5c4f\u5e55 \u00b7 \u539f\u751f\u89e6\u5c4f\u624b\u52bf \u00b7 App \u8d44\u6e90\u5e93\n\n[![\u6700\u65b0\u7248\u672c](https://img.shields.io/github/v/release/zephyr4123/snug?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&color=blue)](https://github.com/zephyr4123/snug/releases/latest) ![Apple Silicon \u00b7 Intel](https://img.shields.io/badge/Apple%20Silicon%20%C2%B7%20Intel-%E9%80%9A%E7%94%A8-success) ![macOS 14+](https://img.shields.io/badge/macOS-14%2B-blue) ![\u5df2\u516c\u8bc1](https://img.shields.io/badge/Apple-%E5%B7%B2%E5%85%AC%E8%AF%81-black?logo=apple) [![\u8bb8\u53ef\u8bc1 MIT](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-green)](LICENSE)\n\n[\u4e0b\u8f7d](#-\u4e0b\u8f7d) \u00b7 [\u539f\u751f\u4f53\u9a8c](#-\u6bcf\u53f0\u8bbe\u5907\u539f\u751f\u4f53\u9a8c) \u00b7 [\u591a\u8bbe\u5907](#-\u4e00\u53f0-mac\u6240\u6709\u8bbe\u5907) \u00b7 [App \u8d44\u6e90\u5e93](#-app-\u8d44\u6e90\u5e93) \u00b7 [\u622a\u56fe](#-\u622a\u56fe) \u00b7 [\u5bf9\u6bd4](#-\u4e0e\u5176\u4ed6\u65b9\u6848\u7684\u5bf9\u6bd4) \u00b7 [\u5b89\u88c5](#-\u5b89\u88c5) \u00b7 [\u4f7f\u7528](#-\u4f7f\u7528\u65b9\u5f0f) \u00b7 [\u9650\u5236](#-\u5df2\u77e5\u9650\u5236) \u00b7 [\u5f00\u53d1](#-\u5f00\u53d1)\n\n<br>\n\n<img src=\"https://dl.zephyrxiang.com/snug/media/hero-architecture.0ee41447.png\" width=\"92%\" alt=\"\u539f\u7406\u56fe\uff1aSnug \u5728 Mac \u4e0a\u4e3a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5206\u522b\u5efa\u7acb\u5c4f\u5e55\uff0c\u7ecf UU\u8fdc\u7a0b \u63a8\u9001\u81f3\u5404\u8bbe\u5907\u5e76\u94fa\u6ee1\u753b\u9762\">\n<p><sub>\u25b6 <a href=\"https://dl.zephyrxiang.com/snug/media/phone-demo.a97e46d1.mp4\">\u89c2\u770b\u9ad8\u6e05\u6f14\u793a\u89c6\u9891</a></sub></p>\n\n</div>\n\n> [!IMPORTANT]\n> **\u81f4 UU\u8fdc\u7a0b VIP \u7528\u6237**\uff1aUU\u8fdc\u7a0b \u81ea 2026 \u5e74 12 \u6708 1 \u65e5\u8d77\u5c06\u591a\u5c4f\u3001\u865a\u62df\u5c4f\u7b49\u529f\u80fd\u7eb3\u5165 VIP\u3002Snug \u57fa\u4e8e\u865a\u62df\u5c4f\u67b6\u6784\uff0c\u82e5\u4f60\u6070\u4e3a UU\u8fdc\u7a0b VIP \u7528\u6237\uff0c\u6b22\u8fce\u4e00\u8bd5\u3002\n>\n> **\u7acb\u573a**\uff1aSnug \u4e3a\u72ec\u7acb\u793e\u533a\u9879\u76ee\uff0c\u4e0e UU\u8fdc\u7a0b \u65e0\u5546\u4e1a\u5173\u8054\u3002\u662f\u5426\u5f00\u901a VIP\uff0c\u8bf7\u4f9d\u81ea\u8eab\u5bf9 UU\u8fdc\u7a0b \u7684\u9700\u6c42\u51b3\u5b9a\uff0c\u4e0d\u5fc5\u4e3a Snug \u4e13\u95e8\u5f00\u901a\u3002\u76ee\u524d\u4e13\u6ce8 UU\u8fdc\u7a0b\uff0c\u6682\u4e0d\u81ea\u884c\u9002\u914d\u5176\u4ed6\u8fdc\u63a7\u8f6f\u4ef6\uff1b\u5bf9\u63a5\u90e8\u5206\u5df2\u62bd\u4e3a\u53ef\u66ff\u6362\u7684\u9002\u914d\u5c42\uff0c\u6b22\u8fce\u63d0 PR \u63a5\u5165\u6216 fork \u81ea\u884c\u9002\u914d\uff0c\u8be6\u89c1[\u5f00\u53d1](#-\u5f00\u53d1)\u3002\n\n> \u627f\u63a5\u81ea [aoyamashou/UUyc-companion](https://github.com/aoyamashou/UUyc-companion)\uff08UU\u8fdc\u7a0b\u4f34\u4fa3\uff0c\u4f5c\u8005 AoyamaShou\uff0cMIT \u8bb8\u53ef\uff09\uff0c\u5b8c\u6574\u4fdd\u7559\u539f\u4f5c\u8005\u7684\u7248\u6743\u58f0\u660e\u4e0e\u63d0\u4ea4\u5386\u53f2\u30022.0 \u8d77\u4ee5\u624b\u673a\u5c4f\u4e3a\u6838\u5fc3\u91cd\u65b0\u8bbe\u8ba1\uff0c2.6 \u8d77\u6269\u5c55\u81f3\u5e73\u677f\u4e0e\u7535\u8111\u3002\n\n## \ud83d\udce5 \u4e0b\u8f7d\n\n<img src=\"Assets/AppIcon/AppIcon-1024.png\" width=\"88\" align=\"left\" alt=\"Snug \u56fe\u6807\">\n\n**Snug for macOS** [![\u6700\u65b0\u7248\u672c](https://img.shields.io/github/v/rel",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 98214,
+            "forks": 6715,
+            "language": "JavaScript",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/archify-lockup-dark.svg\" />\n    <img src=\"docs/assets/archify-lockup-light.svg\" alt=\"Archify\" width=\"440\" height=\"121\" />\n  </picture>\n</p>\n<h3 align=\"center\">Turn anything you want to understand, plan, or share into an interactive visual.</h3>\n\n<p align=\"center\"><img src=\"docs/assets/archify-readme-hero.png\" alt=\"Archify \u2014 interactive diagrams\" width=\"960\" /></p>\n\n<p align=\"center\"><strong>Official channels\uff1a</strong> <a href=\"https://archify.si\">archify.si</a> \u00b7 <a href=\"https://github.com/tt-a1i/archify\">GitHub</a><br/>Archify is free and open source. Third-party online services and paid plans are operated by their respective providers and do not represent Archify. <a href=\"#official-services\">Service details \u2192</a></p>\n\n<p align=\"center\">Start with an idea, a question, or a plan. Describe it to your AI agent, and Archify turns it into an interactive HTML you can explore, customize, and share. From travel itineraries and learning maps to complex systems\u2014make it your own.</p>\n\n<p align=\"center\">See what the community is creating\u2014and imagine what you could make next.</p>\n\n<p align=\"center\">\n  <a href=\"https://archify.si/gallery.html\"><strong>Live demos</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#start\"><strong>Get started</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"https://archify.si/guide.html\"><strong>Scenario guide</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#community\"><strong>Community</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_ZH.md\"><strong>\u7b80\u4f53\u4e2d\u6587</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_JA.md\"><strong>\u65e5\u672c\u8a9e</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_KO.md\"><strong>\ud55c\uad6d\uc5b4</strong></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/31352?utm_source=repo",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+            "url": "https://github.com/openssl/openssl/pull/33652",
+            "description": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nopenssl openssl Repository navigation Code Issues 1k \u00a0( 1k ) Pul",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "FFmpeg 9.1 'Gauss'",
+            "url": "https://ffmpeg.org/download.html#release_9.1",
+            "description": "FFmpeg 9.1 'Gauss'",
+            "detailed_content": "Download FFmpeg\nFFmpeg\nAbout\nNews\nDownload\nDocumentation\nCommunity\nCode of Conduct\nMailing Lists\nIRC\nForums\nBug Reports\nWiki\nConferences\nDevelopers\nSource Code\nContribute\nFATE\nCode Coverage\nFunding through SPI\nMore\nDonate\nSponsors\nHire Developers\nContact\nSecurity\nLegal\nDownload FFmpeg\nDownload Source Code\nffmpeg-9.1.tar.xz\nMore releases\nIf you find FFmpeg useful, you are welcome to contribute\nby\ndonating .\nMore downloading options\nGet packages & executable files\nFFmpeg only provides source code. Below are some links that provide it already compiled and ready to go.\nLinux Packages\nDebian\n\u2013 Official packages for Stable-Backports, Testing, Unstable\nDebian\n\u2013 deb-multimedia packages for Oldstable, Stable, Testing, Unstable\nUbuntu\n\u2013 Official packages\nFedora\nand\nRed Hat Enterprise Linux\npackages\nLinux Static Builds\n64-bit static and shared builds\nWindows EXE Files\nWindows builds from gyan.dev\nWindows builds by BtbN\nmacOS\nStatic builds for\nmacOS 64-bit\nGet the Sources\nDownload Snapshot\nDownload PGP Signing Key\nYou can retrieve the source code through\nGit\nby using the command:\ngit clone https://git.ffmpeg.org/ffmpeg.git ffmpeg\nSnapshot\nBrowse\nCannot access Git or wish to speed up the cloning and reduce the bandwidth usage?\nFFmpeg has always been a very experimental and developer-driven project. It\nis a key component in many multimedia projects and has new features added\nconstantly.\nDevelopment branch snapshots work really well 99% of the\ntime so people are not afraid to use them.\nGit Repositories\nGit Repositories\nSince FFmpeg is developed with\nGit ,\nmultiple repositories from developers and groups of developers are available.\nClone URL\nDescription\nhttps://git.ffmpeg.org/ffmpeg.git\nBrowse\nMain FFmpeg Git repository\nhttps://git.ffmpeg.org/ffmpeg-web\nMain ffmpeg.org website reposit",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Postgres 19 Repack: Faster, Built-In Table Bloat Cleanup",
+            "url": "https://www.snowflake.com/en/blog/engineering/postgres-19-repack-table-bloat/",
+            "description": "Postgres 19 Repack: Faster, Built-In Table Bloat Cleanup",
+            "detailed_content": "",
+            "content_source": "description_only"
+          },
+          {
+            "source": "Hacker News",
+            "title": "PostgreSQL 19",
+            "url": "https://www.postgresql.org/docs/release/19.0/",
+            "description": "PostgreSQL 19",
+            "detailed_content": "PostgreSQL: Release Notes\nHome\nAbout\nDownload\nDocumentation\nCommunity\nDevelopers\nSupport\nDonate\nYour account\nNovember 19, 2026:\nPostgreSQL 19 Released!\nQuick Links\nDocumentation\nManuals\nArchive\nRelease Notes\nBooks\nTutorials & Other Resources\nFAQ\nWiki\nRelease Notes\nPostgreSQL\n19.0\nE.1.\u00a0Release 19\nPrev\nUp\nAppendix\u00a0E.\u00a0Release Notes\nHome\nNext\nE.1.\u00a0Release 19\n#\nE.1.1. Overview\nE.1.2. Migration to Version 19\nE.1.3. Changes\nE.1.4. Acknowledgments\nRelease date:\u00a0 2026-11-19\nE.1.1.\u00a0Overview\n#\nPostgreSQL\n19 contains many new features and enhancements, including:\nNew\nREPACK\ncommand that reclaims disk space and reorganizes table contents, which can improve query performance.\nREPACK (CONCURRENTLY)\nallows repacking without blocking reads and writes to the table.\npg_plan_advice\nextension for controlling query planner decisions and\npg_stash_advice\nextension that applies plan advice automatically based on the query.\nBetter performance in many areas, including automatic scaling of the number of I/O worker processes, quicker foreign-key checks, and further planning and execution optimizations.\nLogical replication can now be enabled without a server restart when\nwal_level\nis set to\nreplica .\nLogical replication of\nsequence values .\nSupport for\n\u201c read-your-writes \u201d\nconsistency on standbys via the new\nWAIT\ncommand.\nParallel autovacuum of table indexes\nand\nautovacuum prioritization\nthrough a new scoring system.\nThe above items and other new features of\nPostgreSQL\n19 are explained in more detail in the sections below.\nE.1.2.\u00a0Migration to Version 19\n#\nA dump/restore using\npg_dumpall\nor use of\npg_upgrade\nor logical replication is required for those wishing to migrate data from any previous release. See\nSection\u00a018.6\nfor general information on migrating to new major releases.\nVersion 19 contains a ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Tune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers",
+            "url": "https://dev.to/srvscripts/tune-litespeed-for-high-traffic-wordpress-cache-hits-first-then-php-workers-3k4o",
+            "description": "Short answer: to tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served about 33 requests per second from PHP and 17,000 to 22,000 per second from LSCache. Then size t",
+            "detailed_content": "Tune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nServer Scripts\nPosted on\nNov 20\n\u2022\nOriginally published at\nsrvscripts.com\nTune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers\n# php\n# wordpress\n# webserver\n# sysadmin\nShort answer:\nto tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served about 33 requests per second from PHP and 17,000 to 22,000 per second from LSCache. Then size the PHP workers (on cPanel,\nPHP suEXEC Max Conn , default 10) to the CPU cores and memory you actually have, instead of raising them as far as they go. Add an object cache (Redis or Memcached) for pages that cannot be cached. Run WP-Cron from a real cron job. Only then touch the server\u2019s connection limits.\n(Reviewed October 2026.)\nIn short: To tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served\u2026\nMost \u201cLiteSpeed is slow under load\u201d problems are cache misses, not a slow web server: a cookie that every page sets, a query string on every link, a plugin that purges everything on each save, or logged-in traffic. Raising worker or connection limits on top of a cache that misses mainly buys you a higher load average. This guide goes in the order that matters, shows how to check each step, and gives",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Line numbers made the code I send to an LLM 42% more expensive",
+            "url": "https://dev.to/altrouter/line-numbers-made-the-code-i-send-to-an-llm-42-more-expensive-3440",
+            "description": "If you build a coding helper, you'll soon want the model to point at exact lines: \"the bug is on line 212\", \"replace lines 40 to 52\". The usual trick is to number every line before you paste the file into the prompt. It works, and it's cheap to write: one enumerate call.\n\nIt isn't cheap to send. I m",
+            "detailed_content": "Line numbers made the code I send to an LLM 42% more expensive - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nAndrey Altrouter\nPosted on\nNov 20\nLine numbers made the code I send to an LLM 42% more expensive\n# ai\n# llm\n# cost\n# beginners\nIf you build a coding helper, you'll soon want the model to point at exact lines: \"the bug is on line 212\", \"replace lines 40 to 52\". The usual trick is to number every line before you paste the file into the prompt. It works, and it's cheap to write: one\nenumerate\ncall.\nIt isn't cheap to send. I measured it, and in the most common format the numbers add 42% to the tokens of the code.\nA few words first\nA\ntoken\nis a chunk of text the model reads; APIs bill per million of them. A\ntokenizer\nis the program that cuts text into tokens; I used tiktoken with\no200k_base , the one OpenAI's current models use.\nInput\ntokens are everything you send in the request, priced at the input rate. A\nlist price\nis the vendor's official price per million tokens, before any discount.\ncat -n\nis the Unix command that prints a file with line numbers; many tools copy its layout: the number padded to six characters, then a tab.\nThe measurement\nI took every top-level module of the Python 3.13 standard library, excluding tests and private modules: 131 files, 107,041 lines, 893,573 tokens. Then I counted the same files again with five ways of numbering the lines.\nFormat of each line\nTokens\nExtra\nno numbers\n893,573\n\u2014\n7<tab>code\n1,058,786\n+18.5%\n`7\\\ncode`\n1,142,306\n7: code\n1,159,092\n+29.7%\n7<tab>code\n(cat -n)\n1,272,868\n+42.4%\nTh",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Beyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts",
+            "url": "https://dev.to/shawdaimarie/beyond-ad-hoc-prompting-prompts-as-formal-requirements-engineering-artifacts-jei",
+            "description": "As AI coding assistants reshape software development, Prompts Blend Requirements and Solutions (arXiv:2603.16348, March 2026) positions the prompt itself as a central artifact of Requirements Engineering. The authors propose treating prompts as evolving requirements artifacts and outline hypotheses ",
+            "detailed_content": "Beyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nShawdai Marie\nPosted on\nNov 20\nBeyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts\n# ai\n# llm\n# softwareengineering\nAs AI coding assistants reshape software development, Prompts Blend Requirements and Solutions (arXiv:2603.16348, March 2026) positions the prompt itself as a central artifact of Requirements Engineering. The authors propose treating prompts as evolving requirements artifacts and outline hypotheses about how prompts change, how they support verification and validation, and how they affect software quality.\nThe paper proposes controlled experiments to test whether progressive prompt refinement improves generated software quality.\nIndividual Post Research Log \u2022 ID: RL-2026-1115-D5-LI1 \u2022 Logged: 2026-11-16 00:17 CST\nScope & Ethics: Grounds prompt engineering in 2026 Requirements Engineering research.\nRef: arXiv:2603.16348 (2026).\nhttps://lnkd.in/g9hDsVTw\nVisual reference: MIT News (2026).\nhttps://lnkd.in/gfAkwWvu\nOrganization:\nMassachusetts Institute of Technology\nTop comments\n(0)\nSubscribe\nSubmit\nPreview\nDismiss\nCode of Conduct\n\u2022\nReport abuse\nShawdai Marie\nFollow\nJoined\nNov 20, 2026\nTrending on\nDEV Community\nYou launched your AI dev tool on Product Hunt. Now what?\n# startup\n# devtools\n# ai\n# productivity\nYour coding agent doesn't need more MCP tools. It needs a map.\n# mcp\n# ai\n# agents\n# discuss\nMy AI agent came back empty 5 times in a row and never threw an error\n# a",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "snug",
+            "full_name": "zephyr4123/snug",
+            "url": "https://github.com/zephyr4123/snug",
+            "description": "\u8ba9\u8fdc\u7a0b Mac \u5728\u4efb\u610f\u8bbe\u5907\u4e0a\u83b7\u5f97\u539f\u751f\u7ea7\u4f53\u9a8c\u3002\u4e13\u4e3a UU\u8fdc\u7a0b \u6253\u9020\u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a\uff1a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5404\u6709\u4e13\u5c5e\u5c4f\u5e55\uff0c\u753b\u9762\u94fa\u6ee1\u3001\u5b57\u53f7\u968f\u5c4f\uff0c\u539f\u751f\u89e6\u5c4f\u624b\u52bf\uff0cApp \u8d44\u6e90\u5e93\u3002Make UU Remote native on any device: a dedicated screen for every phone, tablet and computer, with native touch gestures and an App Library.",
+            "stars": 1131,
+            "forks": 89,
+            "language": "Swift",
+            "detailed_content": "<div align=\"center\">\n\n**\u7b80\u4f53\u4e2d\u6587** \u00b7 [English](README.en.md) \u00b7 [\u65e5\u672c\u8a9e](README.ja.md)\n\n<img src=\"Assets/AppIcon/AppIcon-1024.png\" width=\"128\" alt=\"Snug \u56fe\u6807\">\n\n# Snug\n\n**Make UU Remote Native on Any Device**\n\n\u4e3a UU\u8fdc\u7a0b \u6253\u9020 \u00b7 \u8fdc\u7a0b Mac \u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a<br>\u6bcf\u53f0\u8bbe\u5907\u4e13\u5c5e\u5c4f\u5e55 \u00b7 \u539f\u751f\u89e6\u5c4f\u624b\u52bf \u00b7 App \u8d44\u6e90\u5e93\n\n[![\u6700\u65b0\u7248\u672c](https://img.shields.io/github/v/release/zephyr4123/snug?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&color=blue)](https://github.com/zephyr4123/snug/releases/latest) ![Apple Silicon \u00b7 Intel](https://img.shields.io/badge/Apple%20Silicon%20%C2%B7%20Intel-%E9%80%9A%E7%94%A8-success) ![macOS 14+](https://img.shields.io/badge/macOS-14%2B-blue) ![\u5df2\u516c\u8bc1](https://img.shields.io/badge/Apple-%E5%B7%B2%E5%85%AC%E8%AF%81-black?logo=apple) [![\u8bb8\u53ef\u8bc1 MIT](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-green)](LICENSE)\n\n[\u4e0b\u8f7d](#-\u4e0b\u8f7d) \u00b7 [\u539f\u751f\u4f53\u9a8c](#-\u6bcf\u53f0\u8bbe\u5907\u539f\u751f\u4f53\u9a8c) \u00b7 [\u591a\u8bbe\u5907](#-\u4e00\u53f0-mac\u6240\u6709\u8bbe\u5907) \u00b7 [App \u8d44\u6e90\u5e93](#-app-\u8d44\u6e90\u5e93) \u00b7 [\u622a\u56fe](#-\u622a\u56fe) \u00b7 [\u5bf9\u6bd4](#-\u4e0e\u5176\u4ed6\u65b9\u6848\u7684\u5bf9\u6bd4) \u00b7 [\u5b89\u88c5](#-\u5b89\u88c5) \u00b7 [\u4f7f\u7528](#-\u4f7f\u7528\u65b9\u5f0f) \u00b7 [\u9650\u5236](#-\u5df2\u77e5\u9650\u5236) \u00b7 [\u5f00\u53d1](#-\u5f00\u53d1)\n\n<br>\n\n<img src=\"https://dl.zephyrxiang.com/snug/media/hero-architecture.0ee41447.png\" width=\"92%\" alt=\"\u539f\u7406\u56fe\uff1aSnug \u5728 Mac \u4e0a\u4e3a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5206\u522b\u5efa\u7acb\u5c4f\u5e55\uff0c\u7ecf UU\u8fdc\u7a0b \u63a8\u9001\u81f3\u5404\u8bbe\u5907\u5e76\u94fa\u6ee1\u753b\u9762\">\n<p><sub>\u25b6 <a href=\"https://dl.zephyrxiang.com/snug/media/phone-demo.a97e46d1.mp4\">\u89c2\u770b\u9ad8\u6e05\u6f14\u793a\u89c6\u9891</a></sub></p>\n\n</div>\n\n> [!IMPORTANT]\n> **\u81f4 UU\u8fdc\u7a0b VIP \u7528\u6237**\uff1aUU\u8fdc\u7a0b \u81ea 2026 \u5e74 12 \u6708 1 \u65e5\u8d77\u5c06\u591a\u5c4f\u3001\u865a\u62df\u5c4f\u7b49\u529f\u80fd\u7eb3\u5165 VIP\u3002Snug \u57fa\u4e8e\u865a\u62df\u5c4f\u67b6\u6784\uff0c\u82e5\u4f60\u6070\u4e3a UU\u8fdc\u7a0b VIP \u7528\u6237\uff0c\u6b22\u8fce\u4e00\u8bd5\u3002\n>\n> **\u7acb\u573a**\uff1aSnug \u4e3a\u72ec\u7acb\u793e\u533a\u9879\u76ee\uff0c\u4e0e UU\u8fdc\u7a0b \u65e0\u5546\u4e1a\u5173\u8054\u3002\u662f\u5426\u5f00\u901a VIP\uff0c\u8bf7\u4f9d\u81ea\u8eab\u5bf9 UU\u8fdc\u7a0b \u7684\u9700\u6c42\u51b3\u5b9a\uff0c\u4e0d\u5fc5\u4e3a Snug \u4e13\u95e8\u5f00\u901a\u3002\u76ee\u524d\u4e13\u6ce8 UU\u8fdc\u7a0b\uff0c\u6682\u4e0d\u81ea\u884c\u9002\u914d\u5176\u4ed6\u8fdc\u63a7\u8f6f\u4ef6\uff1b\u5bf9\u63a5\u90e8\u5206\u5df2\u62bd\u4e3a\u53ef\u66ff\u6362\u7684\u9002\u914d\u5c42\uff0c\u6b22\u8fce\u63d0 PR \u63a5\u5165\u6216 fork \u81ea\u884c\u9002\u914d\uff0c\u8be6\u89c1[\u5f00\u53d1](#-\u5f00\u53d1)\u3002\n\n> \u627f\u63a5\u81ea [aoyamashou/UUyc-companion](https://github.com/aoyamashou/UUyc-companion)\uff08UU\u8fdc\u7a0b\u4f34\u4fa3\uff0c\u4f5c\u8005 AoyamaShou\uff0cMIT \u8bb8\u53ef\uff09\uff0c\u5b8c\u6574\u4fdd\u7559\u539f\u4f5c\u8005\u7684\u7248\u6743\u58f0\u660e\u4e0e\u63d0\u4ea4\u5386\u53f2\u30022.0 \u8d77\u4ee5\u624b\u673a\u5c4f\u4e3a\u6838\u5fc3\u91cd\u65b0\u8bbe\u8ba1\uff0c2.6 \u8d77\u6269\u5c55\u81f3\u5e73\u677f\u4e0e\u7535\u8111\u3002\n\n## \ud83d\udce5 \u4e0b\u8f7d\n\n<img src=\"Assets/AppIcon/AppIcon-1024.png\" width=\"88\" align=\"left\" alt=\"Snug \u56fe\u6807\">\n\n**Snug for macOS** [![\u6700\u65b0\u7248\u672c](https://img.shields.io/github/v/rel",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Documentation describes exactly those features."
+          },
+          {
+            "source": "Hacker News",
+            "title": "PostgreSQL 19",
+            "url": "https://www.postgresql.org/docs/release/19.0/",
+            "description": "PostgreSQL 19",
+            "detailed_content": "PostgreSQL: Release Notes\nHome\nAbout\nDownload\nDocumentation\nCommunity\nDevelopers\nSupport\nDonate\nYour account\nNovember 19, 2026:\nPostgreSQL 19 Released!\nQuick Links\nDocumentation\nManuals\nArchive\nRelease Notes\nBooks\nTutorials & Other Resources\nFAQ\nWiki\nRelease Notes\nPostgreSQL\n19.0\nE.1.\u00a0Release 19\nPrev\nUp\nAppendix\u00a0E.\u00a0Release Notes\nHome\nNext\nE.1.\u00a0Release 19\n#\nE.1.1. Overview\nE.1.2. Migration to Version 19\nE.1.3. Changes\nE.1.4. Acknowledgments\nRelease date:\u00a0 2026-11-19\nE.1.1.\u00a0Overview\n#\nPostgreSQL\n19 contains many new features and enhancements, including:\nNew\nREPACK\ncommand that reclaims disk space and reorganizes table contents, which can improve query performance.\nREPACK (CONCURRENTLY)\nallows repacking without blocking reads and writes to the table.\npg_plan_advice\nextension for controlling query planner decisions and\npg_stash_advice\nextension that applies plan advice automatically based on the query.\nBetter performance in many areas, including automatic scaling of the number of I/O worker processes, quicker foreign-key checks, and further planning and execution optimizations.\nLogical replication can now be enabled without a server restart when\nwal_level\nis set to\nreplica .\nLogical replication of\nsequence values .\nSupport for\n\u201c read-your-writes \u201d\nconsistency on standbys via the new\nWAIT\ncommand.\nParallel autovacuum of table indexes\nand\nautovacuum prioritization\nthrough a new scoring system.\nThe above items and other new features of\nPostgreSQL\n19 are explained in more detail in the sections below.\nE.1.2.\u00a0Migration to Version 19\n#\nA dump/restore using\npg_dumpall\nor use of\npg_upgrade\nor logical replication is required for those wishing to migrate data from any previous release. See\nSection\u00a018.6\nfor general information on migrating to new major releases.\nVersion 19 contains a ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Release notes confirm PostgreSQL 19 exists."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Tune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers",
+            "url": "https://dev.to/srvscripts/tune-litespeed-for-high-traffic-wordpress-cache-hits-first-then-php-workers-3k4o",
+            "description": "Short answer: to tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served about 33 requests per second from PHP and 17,000 to 22,000 per second from LSCache. Then size t",
+            "detailed_content": "Tune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nServer Scripts\nPosted on\nNov 20\n\u2022\nOriginally published at\nsrvscripts.com\nTune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers\n# php\n# wordpress\n# webserver\n# sysadmin\nShort answer:\nto tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served about 33 requests per second from PHP and 17,000 to 22,000 per second from LSCache. Then size the PHP workers (on cPanel,\nPHP suEXEC Max Conn , default 10) to the CPU cores and memory you actually have, instead of raising them as far as they go. Add an object cache (Redis or Memcached) for pages that cannot be cached. Run WP-Cron from a real cron job. Only then touch the server\u2019s connection limits.\n(Reviewed October 2026.)\nIn short: To tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served\u2026\nMost \u201cLiteSpeed is slow under load\u201d problems are cache misses, not a slow web server: a cookie that every page sets, a query string on every link, a plugin that purges everything on each save, or logged-in traffic. Raising worker or connection limits on top of a cache that misses mainly buys you a higher load average. This guide goes in the order that matters, shows how to check each step, and gives",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article content matches claim."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Line numbers made the code I send to an LLM 42% more expensive",
+            "url": "https://dev.to/altrouter/line-numbers-made-the-code-i-send-to-an-llm-42-more-expensive-3440",
+            "description": "If you build a coding helper, you'll soon want the model to point at exact lines: \"the bug is on line 212\", \"replace lines 40 to 52\". The usual trick is to number every line before you paste the file into the prompt. It works, and it's cheap to write: one enumerate call.\n\nIt isn't cheap to send. I m",
+            "detailed_content": "Line numbers made the code I send to an LLM 42% more expensive - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nAndrey Altrouter\nPosted on\nNov 20\nLine numbers made the code I send to an LLM 42% more expensive\n# ai\n# llm\n# cost\n# beginners\nIf you build a coding helper, you'll soon want the model to point at exact lines: \"the bug is on line 212\", \"replace lines 40 to 52\". The usual trick is to number every line before you paste the file into the prompt. It works, and it's cheap to write: one\nenumerate\ncall.\nIt isn't cheap to send. I measured it, and in the most common format the numbers add 42% to the tokens of the code.\nA few words first\nA\ntoken\nis a chunk of text the model reads; APIs bill per million of them. A\ntokenizer\nis the program that cuts text into tokens; I used tiktoken with\no200k_base , the one OpenAI's current models use.\nInput\ntokens are everything you send in the request, priced at the input rate. A\nlist price\nis the vendor's official price per million tokens, before any discount.\ncat -n\nis the Unix command that prints a file with line numbers; many tools copy its layout: the number padded to six characters, then a tab.\nThe measurement\nI took every top-level module of the Python 3.13 standard library, excluding tests and private modules: 131 files, 107,041 lines, 893,573 tokens. Then I counted the same files again with five ways of numbering the lines.\nFormat of each line\nTokens\nExtra\nno numbers\n893,573\n\u2014\n7<tab>code\n1,058,786\n+18.5%\n`7\\\ncode`\n1,142,306\n7: code\n1,159,092\n+29.7%\n7<tab>code\n(cat -n)\n1,272,868\n+42.4%\nTh",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article provides the stated token cost data."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Beyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts",
+            "url": "https://dev.to/shawdaimarie/beyond-ad-hoc-prompting-prompts-as-formal-requirements-engineering-artifacts-jei",
+            "description": "As AI coding assistants reshape software development, Prompts Blend Requirements and Solutions (arXiv:2603.16348, March 2026) positions the prompt itself as a central artifact of Requirements Engineering. The authors propose treating prompts as evolving requirements artifacts and outline hypotheses ",
+            "detailed_content": "Beyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nShawdai Marie\nPosted on\nNov 20\nBeyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts\n# ai\n# llm\n# softwareengineering\nAs AI coding assistants reshape software development, Prompts Blend Requirements and Solutions (arXiv:2603.16348, March 2026) positions the prompt itself as a central artifact of Requirements Engineering. The authors propose treating prompts as evolving requirements artifacts and outline hypotheses about how prompts change, how they support verification and validation, and how they affect software quality.\nThe paper proposes controlled experiments to test whether progressive prompt refinement improves generated software quality.\nIndividual Post Research Log \u2022 ID: RL-2026-1115-D5-LI1 \u2022 Logged: 2026-11-16 00:17 CST\nScope & Ethics: Grounds prompt engineering in 2026 Requirements Engineering research.\nRef: arXiv:2603.16348 (2026).\nhttps://lnkd.in/g9hDsVTw\nVisual reference: MIT News (2026).\nhttps://lnkd.in/gfAkwWvu\nOrganization:\nMassachusetts Institute of Technology\nTop comments\n(0)\nSubscribe\nSubmit\nPreview\nDismiss\nCode of Conduct\n\u2022\nReport abuse\nShawdai Marie\nFollow\nJoined\nNov 20, 2026\nTrending on\nDEV Community\nYou launched your AI dev tool on Product Hunt. Now what?\n# startup\n# devtools\n# ai\n# productivity\nYour coding agent doesn't need more MCP tools. It needs a map.\n# mcp\n# ai\n# agents\n# discuss\nMy AI agent came back empty 5 times in a row and never threw an error\n# a",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article matches claim description."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "snug",
+            "full_name": "zephyr4123/snug",
+            "url": "https://github.com/zephyr4123/snug",
+            "description": "\u8ba9\u8fdc\u7a0b Mac \u5728\u4efb\u610f\u8bbe\u5907\u4e0a\u83b7\u5f97\u539f\u751f\u7ea7\u4f53\u9a8c\u3002\u4e13\u4e3a UU\u8fdc\u7a0b \u6253\u9020\u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a\uff1a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5404\u6709\u4e13\u5c5e\u5c4f\u5e55\uff0c\u753b\u9762\u94fa\u6ee1\u3001\u5b57\u53f7\u968f\u5c4f\uff0c\u539f\u751f\u89e6\u5c4f\u624b\u52bf\uff0cApp \u8d44\u6e90\u5e93\u3002Make UU Remote native on any device: a dedicated screen for every phone, tablet and computer, with native touch gestures and an App Library.",
+            "stars": 1131,
+            "forks": 89,
+            "language": "Swift",
+            "detailed_content": "<div align=\"center\">\n\n**\u7b80\u4f53\u4e2d\u6587** \u00b7 [English](README.en.md) \u00b7 [\u65e5\u672c\u8a9e](README.ja.md)\n\n<img src=\"Assets/AppIcon/AppIcon-1024.png\" width=\"128\" alt=\"Snug \u56fe\u6807\">\n\n# Snug\n\n**Make UU Remote Native on Any Device**\n\n\u4e3a UU\u8fdc\u7a0b \u6253\u9020 \u00b7 \u8fdc\u7a0b Mac \u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a<br>\u6bcf\u53f0\u8bbe\u5907\u4e13\u5c5e\u5c4f\u5e55 \u00b7 \u539f\u751f\u89e6\u5c4f\u624b\u52bf \u00b7 App \u8d44\u6e90\u5e93\n\n[![\u6700\u65b0\u7248\u672c](https://img.shields.io/github/v/release/zephyr4123/snug?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&color=blue)](https://github.com/zephyr4123/snug/releases/latest) ![Apple Silicon \u00b7 Intel](https://img.shields.io/badge/Apple%20Silicon%20%C2%B7%20Intel-%E9%80%9A%E7%94%A8-success) ![macOS 14+](https://img.shields.io/badge/macOS-14%2B-blue) ![\u5df2\u516c\u8bc1](https://img.shields.io/badge/Apple-%E5%B7%B2%E5%85%AC%E8%AF%81-black?logo=apple) [![\u8bb8\u53ef\u8bc1 MIT](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-green)](LICENSE)\n\n[\u4e0b\u8f7d](#-\u4e0b\u8f7d) \u00b7 [\u539f\u751f\u4f53\u9a8c](#-\u6bcf\u53f0\u8bbe\u5907\u539f\u751f\u4f53\u9a8c) \u00b7 [\u591a\u8bbe\u5907](#-\u4e00\u53f0-mac\u6240\u6709\u8bbe\u5907) \u00b7 [App \u8d44\u6e90\u5e93](#-app-\u8d44\u6e90\u5e93) \u00b7 [\u622a\u56fe](#-\u622a\u56fe) \u00b7 [\u5bf9\u6bd4](#-\u4e0e\u5176\u4ed6\u65b9\u6848\u7684\u5bf9\u6bd4) \u00b7 [\u5b89\u88c5](#-\u5b89\u88c5) \u00b7 [\u4f7f\u7528](#-\u4f7f\u7528\u65b9\u5f0f) \u00b7 [\u9650\u5236](#-\u5df2\u77e5\u9650\u5236) \u00b7 [\u5f00\u53d1](#-\u5f00\u53d1)\n\n<br>\n\n<img src=\"https://dl.zephyrxiang.com/snug/media/hero-architecture.0ee41447.png\" width=\"92%\" alt=\"\u539f\u7406\u56fe\uff1aSnug \u5728 Mac \u4e0a\u4e3a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5206\u522b\u5efa\u7acb\u5c4f\u5e55\uff0c\u7ecf UU\u8fdc\u7a0b \u63a8\u9001\u81f3\u5404\u8bbe\u5907\u5e76\u94fa\u6ee1\u753b\u9762\">\n<p><sub>\u25b6 <a href=\"https://dl.zephyrxiang.com/snug/media/phone-demo.a97e46d1.mp4\">\u89c2\u770b\u9ad8\u6e05\u6f14\u793a\u89c6\u9891</a></sub></p>\n\n</div>\n\n> [!IMPORTANT]\n> **\u81f4 UU\u8fdc\u7a0b VIP \u7528\u6237**\uff1aUU\u8fdc\u7a0b \u81ea 2026 \u5e74 12 \u6708 1 \u65e5\u8d77\u5c06\u591a\u5c4f\u3001\u865a\u62df\u5c4f\u7b49\u529f\u80fd\u7eb3\u5165 VIP\u3002Snug \u57fa\u4e8e\u865a\u62df\u5c4f\u67b6\u6784\uff0c\u82e5\u4f60\u6070\u4e3a UU\u8fdc\u7a0b VIP \u7528\u6237\uff0c\u6b22\u8fce\u4e00\u8bd5\u3002\n>\n> **\u7acb\u573a**\uff1aSnug \u4e3a\u72ec\u7acb\u793e\u533a\u9879\u76ee\uff0c\u4e0e UU\u8fdc\u7a0b \u65e0\u5546\u4e1a\u5173\u8054\u3002\u662f\u5426\u5f00\u901a VIP\uff0c\u8bf7\u4f9d\u81ea\u8eab\u5bf9 UU\u8fdc\u7a0b \u7684\u9700\u6c42\u51b3\u5b9a\uff0c\u4e0d\u5fc5\u4e3a Snug \u4e13\u95e8\u5f00\u901a\u3002\u76ee\u524d\u4e13\u6ce8 UU\u8fdc\u7a0b\uff0c\u6682\u4e0d\u81ea\u884c\u9002\u914d\u5176\u4ed6\u8fdc\u63a7\u8f6f\u4ef6\uff1b\u5bf9\u63a5\u90e8\u5206\u5df2\u62bd\u4e3a\u53ef\u66ff\u6362\u7684\u9002\u914d\u5c42\uff0c\u6b22\u8fce\u63d0 PR \u63a5\u5165\u6216 fork \u81ea\u884c\u9002\u914d\uff0c\u8be6\u89c1[\u5f00\u53d1](#-\u5f00\u53d1)\u3002\n\n> \u627f\u63a5\u81ea [aoyamashou/UUyc-companion](https://github.com/aoyamashou/UUyc-companion)\uff08UU\u8fdc\u7a0b\u4f34\u4fa3\uff0c\u4f5c\u8005 AoyamaShou\uff0cMIT \u8bb8\u53ef\uff09\uff0c\u5b8c\u6574\u4fdd\u7559\u539f\u4f5c\u8005\u7684\u7248\u6743\u58f0\u660e\u4e0e\u63d0\u4ea4\u5386\u53f2\u30022.0 \u8d77\u4ee5\u624b\u673a\u5c4f\u4e3a\u6838\u5fc3\u91cd\u65b0\u8bbe\u8ba1\uff0c2.6 \u8d77\u6269\u5c55\u81f3\u5e73\u677f\u4e0e\u7535\u8111\u3002\n\n## \ud83d\udce5 \u4e0b\u8f7d\n\n<img src=\"Assets/AppIcon/AppIcon-1024.png\" width=\"88\" align=\"left\" alt=\"Snug \u56fe\u6807\">\n\n**Snug for macOS** [![\u6700\u65b0\u7248\u672c](https://img.shields.io/github/v/rel",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Documentation describes exactly those features.",
+            "why_it_matters": "Snug turns any phone, tablet, or laptop into a native\u2011feeling macOS client, letting iOS/macOS developers work remotely without sacrificing touch gestures or screen real\u2011estate.",
+            "who_cares": "iOS and macOS engineers, remote developers, and teams that need full\u2011screen Mac access from non\u2011Mac devices.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Hacker News",
+            "title": "PostgreSQL 19",
+            "url": "https://www.postgresql.org/docs/release/19.0/",
+            "description": "PostgreSQL 19",
+            "detailed_content": "PostgreSQL: Release Notes\nHome\nAbout\nDownload\nDocumentation\nCommunity\nDevelopers\nSupport\nDonate\nYour account\nNovember 19, 2026:\nPostgreSQL 19 Released!\nQuick Links\nDocumentation\nManuals\nArchive\nRelease Notes\nBooks\nTutorials & Other Resources\nFAQ\nWiki\nRelease Notes\nPostgreSQL\n19.0\nE.1.\u00a0Release 19\nPrev\nUp\nAppendix\u00a0E.\u00a0Release Notes\nHome\nNext\nE.1.\u00a0Release 19\n#\nE.1.1. Overview\nE.1.2. Migration to Version 19\nE.1.3. Changes\nE.1.4. Acknowledgments\nRelease date:\u00a0 2026-11-19\nE.1.1.\u00a0Overview\n#\nPostgreSQL\n19 contains many new features and enhancements, including:\nNew\nREPACK\ncommand that reclaims disk space and reorganizes table contents, which can improve query performance.\nREPACK (CONCURRENTLY)\nallows repacking without blocking reads and writes to the table.\npg_plan_advice\nextension for controlling query planner decisions and\npg_stash_advice\nextension that applies plan advice automatically based on the query.\nBetter performance in many areas, including automatic scaling of the number of I/O worker processes, quicker foreign-key checks, and further planning and execution optimizations.\nLogical replication can now be enabled without a server restart when\nwal_level\nis set to\nreplica .\nLogical replication of\nsequence values .\nSupport for\n\u201c read-your-writes \u201d\nconsistency on standbys via the new\nWAIT\ncommand.\nParallel autovacuum of table indexes\nand\nautovacuum prioritization\nthrough a new scoring system.\nThe above items and other new features of\nPostgreSQL\n19 are explained in more detail in the sections below.\nE.1.2.\u00a0Migration to Version 19\n#\nA dump/restore using\npg_dumpall\nor use of\npg_upgrade\nor logical replication is required for those wishing to migrate data from any previous release. See\nSection\u00a018.6\nfor general information on migrating to new major releases.\nVersion 19 contains a ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Release notes confirm PostgreSQL 19 exists.",
+            "why_it_matters": "PostgreSQL\u202f19 introduces REPACK (including CONCURRENTLY), planner\u2011advice extensions, read\u2011your\u2011writes consistency, and parallel autovacuum, all of which cut downtime and boost query performance.",
+            "who_cares": "Backend engineers, database administrators, and data platform teams that run PostgreSQL in production.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Tune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers",
+            "url": "https://dev.to/srvscripts/tune-litespeed-for-high-traffic-wordpress-cache-hits-first-then-php-workers-3k4o",
+            "description": "Short answer: to tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served about 33 requests per second from PHP and 17,000 to 22,000 per second from LSCache. Then size t",
+            "detailed_content": "Tune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nServer Scripts\nPosted on\nNov 20\n\u2022\nOriginally published at\nsrvscripts.com\nTune LiteSpeed for High-Traffic WordPress: Cache Hits First, Then PHP Workers\n# php\n# wordpress\n# webserver\n# sysadmin\nShort answer:\nto tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served about 33 requests per second from PHP and 17,000 to 22,000 per second from LSCache. Then size the PHP workers (on cPanel,\nPHP suEXEC Max Conn , default 10) to the CPU cores and memory you actually have, instead of raising them as far as they go. Add an object cache (Redis or Memcached) for pages that cannot be cached. Run WP-Cron from a real cron job. Only then touch the server\u2019s connection limits.\n(Reviewed October 2026.)\nIn short: To tune LiteSpeed for a high-traffic WordPress site, first make sure most pages come from LSCache, because a cached page never starts PHP. On our 2-vCPU test server one WordPress page served\u2026\nMost \u201cLiteSpeed is slow under load\u201d problems are cache misses, not a slow web server: a cookie that every page sets, a query string on every link, a plugin that purges everything on each save, or logged-in traffic. Raising worker or connection limits on top of a cache that misses mainly buys you a higher load average. This guide goes in the order that matters, shows how to check each step, and gives",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article content matches claim.",
+            "why_it_matters": "The guide shows how to push LSCache hit rates to >99\u202f% and size PHP workers correctly, turning LiteSpeed into a high\u2011throughput, low\u2011CPU WordPress host.",
+            "who_cares": "WordPress site owners, DevOps engineers, and sysadmins managing high\u2011traffic LiteSpeed deployments.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Line numbers made the code I send to an LLM 42% more expensive",
+            "url": "https://dev.to/altrouter/line-numbers-made-the-code-i-send-to-an-llm-42-more-expensive-3440",
+            "description": "If you build a coding helper, you'll soon want the model to point at exact lines: \"the bug is on line 212\", \"replace lines 40 to 52\". The usual trick is to number every line before you paste the file into the prompt. It works, and it's cheap to write: one enumerate call.\n\nIt isn't cheap to send. I m",
+            "detailed_content": "Line numbers made the code I send to an LLM 42% more expensive - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nAndrey Altrouter\nPosted on\nNov 20\nLine numbers made the code I send to an LLM 42% more expensive\n# ai\n# llm\n# cost\n# beginners\nIf you build a coding helper, you'll soon want the model to point at exact lines: \"the bug is on line 212\", \"replace lines 40 to 52\". The usual trick is to number every line before you paste the file into the prompt. It works, and it's cheap to write: one\nenumerate\ncall.\nIt isn't cheap to send. I measured it, and in the most common format the numbers add 42% to the tokens of the code.\nA few words first\nA\ntoken\nis a chunk of text the model reads; APIs bill per million of them. A\ntokenizer\nis the program that cuts text into tokens; I used tiktoken with\no200k_base , the one OpenAI's current models use.\nInput\ntokens are everything you send in the request, priced at the input rate. A\nlist price\nis the vendor's official price per million tokens, before any discount.\ncat -n\nis the Unix command that prints a file with line numbers; many tools copy its layout: the number padded to six characters, then a tab.\nThe measurement\nI took every top-level module of the Python 3.13 standard library, excluding tests and private modules: 131 files, 107,041 lines, 893,573 tokens. Then I counted the same files again with five ways of numbering the lines.\nFormat of each line\nTokens\nExtra\nno numbers\n893,573\n\u2014\n7<tab>code\n1,058,786\n+18.5%\n`7\\\ncode`\n1,142,306\n7: code\n1,159,092\n+29.7%\n7<tab>code\n(cat -n)\n1,272,868\n+42.4%\nTh",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article provides the stated token cost data.",
+            "why_it_matters": "Adding line numbers to code snippets inflates token usage by ~42\u202f%, dramatically raising LLM API costs\u2014prompt engineers must redesign how they reference code.",
+            "who_cares": "AI\u2011powered coding tool developers, prompt engineers, and anyone optimizing LLM usage budgets.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Beyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts",
+            "url": "https://dev.to/shawdaimarie/beyond-ad-hoc-prompting-prompts-as-formal-requirements-engineering-artifacts-jei",
+            "description": "As AI coding assistants reshape software development, Prompts Blend Requirements and Solutions (arXiv:2603.16348, March 2026) positions the prompt itself as a central artifact of Requirements Engineering. The authors propose treating prompts as evolving requirements artifacts and outline hypotheses ",
+            "detailed_content": "Beyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nShawdai Marie\nPosted on\nNov 20\nBeyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts\n# ai\n# llm\n# softwareengineering\nAs AI coding assistants reshape software development, Prompts Blend Requirements and Solutions (arXiv:2603.16348, March 2026) positions the prompt itself as a central artifact of Requirements Engineering. The authors propose treating prompts as evolving requirements artifacts and outline hypotheses about how prompts change, how they support verification and validation, and how they affect software quality.\nThe paper proposes controlled experiments to test whether progressive prompt refinement improves generated software quality.\nIndividual Post Research Log \u2022 ID: RL-2026-1115-D5-LI1 \u2022 Logged: 2026-11-16 00:17 CST\nScope & Ethics: Grounds prompt engineering in 2026 Requirements Engineering research.\nRef: arXiv:2603.16348 (2026).\nhttps://lnkd.in/g9hDsVTw\nVisual reference: MIT News (2026).\nhttps://lnkd.in/gfAkwWvu\nOrganization:\nMassachusetts Institute of Technology\nTop comments\n(0)\nSubscribe\nSubmit\nPreview\nDismiss\nCode of Conduct\n\u2022\nReport abuse\nShawdai Marie\nFollow\nJoined\nNov 20, 2026\nTrending on\nDEV Community\nYou launched your AI dev tool on Product Hunt. Now what?\n# startup\n# devtools\n# ai\n# productivity\nYour coding agent doesn't need more MCP tools. It needs a map.\n# mcp\n# ai\n# agents\n# discuss\nMy AI agent came back empty 5 times in a row and never threw an error\n# a",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article matches claim description.",
+            "why_it_matters": "Treating prompts as formal requirements\u2011engineering artifacts gives teams a traceable, testable way to capture AI\u2011generated specifications and improve software quality.",
+            "who_cares": "AI\u2011augmented development teams, RE researchers, and prompt\u2011engineering practitioners.",
+            "verdict": "READ"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Cool Tool",
+            "title": "Snug",
+            "description": "**Snug lets any phone, tablet or laptop act like a native macOS client for UU Remote.** It creates a dedicated virtual screen per device, supports native touch gestures and an App Library, and runs on macOS\u202f14+ for both Apple Silicon and Intel. The project is MIT\u2011licensed, ships as a notarized macOS app, and is focused on enhancing the remote\u2011Mac experience for UU Remote VIP users while remaining independent of the commercial product.",
+            "why_it_matters": "Snug gives iOS/macOS engineers full\u2011screen Mac access from non\u2011Mac devices without losing touch gestures or screen real\u2011estate, simplifying remote development workflows.",
+            "who_cares": "iOS and macOS developers, remote engineering teams, and anyone needing a native\u2011feeling Mac UI on phones, tablets, or laptops.",
+            "verdict": "WATCH",
+            "source_url": "https://github.com/zephyr4123/snug"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "PostgreSQL\u202f19",
+            "description": "**PostgreSQL\u202f19 adds powerful new maintenance and performance features.** Highlights include the REPACK command (with a CONCURRENTLY option) for reclaiming disk space without blocking reads/writes, planner\u2011advice extensions\u202fpg_plan_advice\u202fand\u202fpg_stash_advice, automatic scaling of I/O workers, faster foreign\u2011key checks, logical replication that can be enabled without a restart, read\u2011your\u2011writes consistency via the WAIT command, and parallel autovacuum of indexes with a new scoring system. The release date is 2026\u201111\u201119, and migration requires a dump/restore, pg_upgrade, or logical replication.",
+            "why_it_matters": "These additions cut downtime, improve query performance, and make large\u2011scale PostgreSQL deployments easier to manage and scale.",
+            "who_cares": "Backend engineers, database administrators, and data platform teams that run PostgreSQL in production.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://www.postgresql.org/docs/release/19.0/"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "Tune LiteSpeed for High\u2011Traffic WordPress: Cache Hits First, Then PHP Workers",
+            "description": "**Boost WordPress throughput on LiteSpeed by prioritizing LSCache hits before scaling PHP workers.** In a 2\u2011vCPU test, cached pages served 17\u202f000\u201322\u202f000\u202frps while PHP\u2011generated pages managed only ~33\u202frps. The guide advises configuring LSCache to serve the majority of requests, sizing PHP workers to match CPU cores, adding an object cache (Redis or Memcached) for uncached pages, running WP\u2011Cron from a real cron job, and only then adjusting connection limits.",
+            "why_it_matters": "Following these steps can push LSCache hit rates above 99\u202f% and turn LiteSpeed into a high\u2011throughput, low\u2011CPU WordPress host.",
+            "who_cares": "WordPress site owners, DevOps engineers, and sysadmins managing high\u2011traffic LiteSpeed deployments.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/srvscripts/tune-litespeed-for-high-traffic-wordpress-cache-hits-first-then-php-workers-3k4o"
+          },
+          {
+            "category": "Watchlist",
+            "title": "Line numbers made the code I send to an LLM 42% more expensive",
+            "description": "**Adding line numbers to code snippets inflates LLM token usage by roughly 42\u202f%.** A measurement on the Python\u202f3.13 standard library (131 files, 107\u202f041 lines) showed that the typical `cat -n` format (seven\u2011digit number, tab, code) increased tokens from 893\u202f573 to 1\u202f272\u202f868, a +42.4\u202f% rise. Since LLM APIs charge per token, this overhead can noticeably raise costs for coding assistants that prepend line numbers for reference.",
+            "why_it_matters": "Prompt engineers and AI\u2011powered coding tool developers need to redesign how they reference code to avoid unnecessary token bloat and keep API bills under control.",
+            "who_cares": "AI\u2011powered coding tool developers, prompt engineers, and anyone optimizing LLM usage budgets.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/altrouter/line-numbers-made-the-code-i-send-to-an-llm-42-more-expensive-3440"
+          },
+          {
+            "category": "Tech Shift",
+            "title": "Beyond Ad Hoc Prompting: Prompts as Formal Requirements Engineering Artifacts",
+            "description": "**Researchers propose treating prompts as first\u2011class requirements\u2011engineering artifacts.** The paper *Prompts Blend Requirements and Solutions* (arXiv\u202f2603.16348, March\u202f2026) argues that prompts can evolve like traditional specifications, supporting verification, validation, and traceability. Controlled experiments are suggested to test whether progressive prompt refinement improves generated software quality.",
+            "why_it_matters": "Viewing prompts as formal RE artifacts gives AI\u2011augmented development teams a structured way to capture, test, and evolve AI\u2011generated specifications, potentially raising overall software quality.",
+            "who_cares": "AI\u2011augmented development teams, requirements\u2011engineering researchers, and prompt\u2011engineering practitioners.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/shawdaimarie/beyond-ad-hoc-prompting-prompts-as-formal-requirements-engineering-artifacts-jei"
+          }
+        ]
+      }
+    }
+  },
+  "rejected_urls": [],
+  "restarted": false,
+  "email": {
+    "status": "sent",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": []
+}
