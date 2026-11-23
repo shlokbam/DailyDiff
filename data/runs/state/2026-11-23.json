@@ -1,0 +1,819 @@
+{
+  "date": "2026-11-23",
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "devstart-lab",
+            "full_name": "brunnojob/devstart-lab",
+            "url": "https://github.com/brunnojob/devstart-lab",
+            "description": "DevStart Lab - An interactive open-source platform to learn programming, explore real projects, and contribute to GitHub.",
+            "stars": 325,
+            "forks": 7,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "zed-velvaora",
+            "full_name": "dporras543/zed-velvaora",
+            "url": "https://github.com/dporras543/zed-velvaora",
+            "description": "Explore, edit, and extend Zed Velvaora's source codebase.",
+            "stars": 146,
+            "forks": 0,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "adobe-dreamweaver-varvera",
+            "full_name": "MinosoaRafalimanana/adobe-dreamweaver-varvera",
+            "url": "https://github.com/MinosoaRafalimanana/adobe-dreamweaver-varvera",
+            "description": "Varvera edition of Adobe Dreamweaver, a web development environment for coding and design.",
+            "stars": 145,
+            "forks": 0,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "Aero-Flight-V1.1",
+            "full_name": "shubhamgtm/Aero-Flight-V1.1",
+            "url": "https://github.com/shubhamgtm/Aero-Flight-V1.1",
+            "description": "Not just another repository. Built to solve problems, explore possibilities, and turn ideas into reality. Every line of code has a purpose, every project has a story, and every commit is another step forward. Explore, experiment, and discover what's possible. \ud83d\ude80",
+            "stars": 44,
+            "forks": 0,
+            "language": "HTML"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 2780,
+            "forks": 262,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 1746,
+            "forks": 286,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "snug",
+            "full_name": "zephyr4123/snug",
+            "url": "https://github.com/zephyr4123/snug",
+            "description": "\u8ba9\u8fdc\u7a0b Mac \u5728\u4efb\u610f\u8bbe\u5907\u4e0a\u83b7\u5f97\u539f\u751f\u7ea7\u4f53\u9a8c\u3002\u4e13\u4e3a UU\u8fdc\u7a0b \u6253\u9020\u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a\uff1a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5404\u6709\u4e13\u5c5e\u5c4f\u5e55\uff0c\u753b\u9762\u94fa\u6ee1\u3001\u5b57\u53f7\u968f\u5c4f\uff0c\u539f\u751f\u89e6\u5c4f\u624b\u52bf\uff0cApp \u8d44\u6e90\u5e93\u3002Make UU Remote native on any device: a dedicated screen for every phone, tablet and computer, with native touch gestures and an App Library.",
+            "stars": 1395,
+            "forks": 110,
+            "language": "Swift"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1323,
+            "forks": 122,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "atticus-mac",
+            "full_name": "SaarthurR/atticus-mac",
+            "url": "https://github.com/SaarthurR/atticus-mac",
+            "description": "Fast, free voice assistant for your Mac. No API key. Remembers you and learns your shortcuts. Hold \u2303\u2325Space and talk.",
+            "stars": 834,
+            "forks": 96,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "ECC",
+            "full_name": "affaan-m/ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "stars": 309302,
+            "forks": 45505,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "ponytail",
+            "full_name": "DietrichGebert/ponytail",
+            "url": "https://github.com/DietrichGebert/ponytail",
+            "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+            "stars": 197283,
+            "forks": 11139,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 152313,
+            "forks": 14646,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 98976,
+            "forks": 6776,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95893,
+            "forks": 9602,
+            "language": "TypeScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+            "url": "https://z.ai/blog/glm-5.4",
+            "description": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer"
+          },
+          {
+            "source": "Hacker News",
+            "title": "XNU Linux: Full OS X GUI Userspace on Linux",
+            "url": "https://github.com/AFK-surf/xnulinux",
+            "description": "XNU Linux: Full OS X GUI Userspace on Linux"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
+            "url": "https://spelunkr.tv",
+            "description": "Free alternative TV network built from the Internet Archive's forgotten videos"
+          },
+          {
+            "source": "Hacker News",
+            "title": "MRAM Basics: How Magnetic Memory Is Replacing Embedded Flash",
+            "url": "https://www.allaboutcircuits.com/technical-articles/mram-basics-how-magnetic-memory-is-replacing-embedded-flash/",
+            "description": "MRAM Basics: How Magnetic Memory Is Replacing Embedded Flash"
+          },
+          {
+            "source": "Hacker News",
+            "title": "The next circle of security hell",
+            "url": "https://blogs.gentoo.org/mgorny/2026/10/27/the-next-circle-of-security-hell/",
+            "description": "The next circle of security hell"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Elixir HLS makes FPGA circuits from functions written in Elixir",
+            "url": "https://github.com/elixir-hls/elixir-hls",
+            "description": "Elixir HLS makes FPGA circuits from functions written in Elixir"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Yes, 17M lines of Lean is a lot",
+            "url": "https://micjm.com/blog/yes-17m-lines-of-lean-is-a-lot/",
+            "description": "Yes, 17M lines of Lean is a lot"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Nospeaker \u2500 Make your MacBook's trackpad talk using its haptic motor",
+            "url": "https://github.com/os6/nospeaker",
+            "description": "Nospeaker \u2500 Make your MacBook's trackpad talk using its haptic motor"
+          },
+          {
+            "source": "Hacker News",
+            "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+            "description": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine",
+            "url": "https://github.com/mikuta0407/win4wine",
+            "description": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine"
+          },
+          {
+            "source": "Hacker News",
+            "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+            "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
+            "description": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Perplexity and Intelligence",
+            "url": "https://openai.com/index/perplexity-and-intelligence/",
+            "description": "Perplexity and Intelligence"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Cathedral floor emerges in Sudan, revealing one of the biggest medieval churches",
+            "url": "https://apnews.com/article/sudan-antiquities-nubia-cathedral-1b16f67da881ee5592de4481ee55c527",
+            "description": "Cathedral floor emerges in Sudan, revealing one of the biggest medieval churches"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Masullo on the Riemann Hypothesis",
+            "url": "https://johncarlosbaez.wordpress.com/2026/11/22/masullo-on-the-riemann-hypothesis/",
+            "description": "Masullo on the Riemann Hypothesis"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Brake Check: Hijacking Trailer Brakes over Bluetooth",
+            "url": "https://elementdigital.com.au/blog/brake-check-trailer-brakes-over-bluetooth/",
+            "description": "Brake Check: Hijacking Trailer Brakes over Bluetooth"
+          },
+          {
+            "source": "Dev.to",
+            "title": "AppSignal Pricing: What a Rails Team Should Budget For",
+            "url": "https://dev.to/tarunsinghofficial/appsignal-pricing-what-a-rails-team-should-budget-for-3fmf",
+            "description": "AppSignal pricing should be evaluated against your application's monitored traffic, logging volume, and required retention. The smallest advertised amount is a starting point, not a reliable forecast for a Rails application with background jobs and noisy incident logs.\n\nThe EUR annual view checked o"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Can Cursor Create and Edit Videos? Setting It Up With a Video Studio",
+            "url": "https://dev.to/sheen_417f0f3a7f4/can-cursor-create-and-edit-videos-setting-it-up-with-a-video-studio-2fon",
+            "description": "Cursor can create and edit videos, but only through a tool that supplies what it lacks. It edits files and runs terminal commands. A video also needs a preview, a timeline and a renderer, and Cursor ships none of them.\n\nFour routes cover most cases: Remotion, plain FFmpeg, a video service with an MC"
+          },
+          {
+            "source": "Dev.to",
+            "title": "8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose",
+            "url": "https://dev.to/vlad_grigoryan/85-of-tech-job-ads-in-europe-state-the-pay-most-of-them-only-say-it-in-the-prose-ob3",
+            "description": "Out of 16,886 open tech jobs in Europe on 23 November 2026, 1,441 state the pay. That is 8.5%. In the United States the same count gives 49.7%, in Canada 41.9%.\n\nThe EU Pay Transparency Directive was due in national law by 7 June 2026. Most member states have not passed it yet, and the job ads show "
+          },
+          {
+            "source": "Dev.to",
+            "title": "When the tape says 1,502 mm: comparing diagonals without premature rounding",
+            "url": "https://dev.to/pro2tools/when-the-tape-says-1502-mm-comparing-diagonals-without-premature-rounding-1pn5",
+            "description": "Disclosure: This article was drafted by an AI agent for the Pro\u00b2 developer account. The numbers in the example were checked independently.\n\nA tape measure gives you a real number, not a neat 3\u20134\u20135 triangle. Suppose a frame's adjacent sides measure 1,197 mm and 903 mm. What should the diagonal read? "
+          },
+          {
+            "source": "Dev.to",
+            "title": "If the .com is gone, the next best ending is not the answer",
+            "url": "https://dev.to/amineoua/if-the-com-is-gone-the-next-best-ending-is-not-the-answer-1j5e",
+            "description": "When the .com is taken, the tempting move is to keep the name and change the ending. Take the same word with .io, .co, .ai, or .app, and tell yourself the ending does not matter anymore. It matters more than ever, because the ending is the part people forget first and guess wrong most.\n\nCustomers wi"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem",
+            "url": "https://dev.to/neeraj_singhi_golang/go-generics-at-package-boundaries-type-parameter-leakage-interface-erosion-and-the-constraint-3o2b",
+            "description": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\n\n\nGenerics in Go arrived with a specific promise: eliminate repetitive container code without sacrificing type safety. What production experience reveals is a subtler problem. The moment a"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Redis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029.",
+            "url": "https://dev.to/silpa_nallagopula_4d02cde/redis-80-reaches-end-of-life-on-december-1-redis-72-and-74-are-supported-until-2029-8bf",
+            "description": "Redis lists December 1, 2026 as the end-of-life date for Redis 8.0. That's next week.\n\nRedis 7.2 and 7.4 are older, and they're supported until December 1, 2029. Redis 6.2 is covered until April 1, 2027. So if you moved to 8.0 early to be on the current major, you're the first one who has to move ag"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Analyzing Hospital Insurance Data",
+            "url": "https://dev.to/denoh/analyzing-hospital-insurance-data-5g",
+            "description": "This phase is the best moment since we are not writing queries just to retrieve data but to answer business questions. First, I always set the schema to avoid repeatedly typing the schema name.\nSET search_path TO hospital;\nSHOW search_path;\n\n\n1. Identifying all the insurance providers\n\n\n\nSELECT insu"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Write an API Migration Guide (With a Real Example)",
+            "url": "https://www.freecodecamp.org/news/how-to-write-an-api-migration-guide/",
+            "description": "When an API releases a new version, every developer using it has to update their code. If they only get a changelog entry that says \u201cpagination now uses cursors,\u201d then they\u2019ll have to figure things ou"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Generate Synthetic Healthcare Data Using Synthea: A Hands On Tutorial",
+            "url": "https://www.freecodecamp.org/news/how-to-generate-synthetic-healthcare-data-using-synthea-a-hands-on-tutorial/",
+            "description": "Healthcare generates huge amounts of data every day, from patient visits and lab results to diagnoses, medications, and medical imaging. For developers and data engineers building healthcare applicati"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Scrape Websites in Python with Olostep",
+            "url": "https://www.freecodecamp.org/news/how-to-scrape-websites-in-python-with-olostep/",
+            "description": "Web scraping in Python usually starts with requests and Beautiful Soup. While this works well for static pages, it gets harder when a site loads content with JavaScript, blocks repeated requests, or c"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Browser-Based PDF Password Protector Using JavaScript",
+            "url": "https://www.freecodecamp.org/news/build-pdf-password-protector-javascript/",
+            "description": "Contracts, invoices, medical reports, and scanned ID cards are often converted to PDF files. And if one of them ends up in the wrong inbox or on a shared drive, anyone can open it. Adding a password f"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Learn Data Structures and Algorithms in Python with Visualizations",
+            "url": "https://www.freecodecamp.org/news/learn-data-structures-and-algorithms-in-python-with-visualizations/",
+            "description": "Data structures such as arrays, linked lists, stacks, queues, hash tables, trees, heaps, and graphs determine how a program stores data and how fast it can search, insert, and remove items. Big O nota"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build an NLP Pipeline in Python to Analyze Therapy Progress Notes",
+            "url": "https://www.freecodecamp.org/news/build-nlp-pipeline-python-therapy-notes/",
+            "description": "Therapy progress notes are written records of what happened during a therapy session. They may include what a client said, what the therapist observed, the topics discussed, and plans for the next ses"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Build a Translator with Chrome\u2019s Built-In AI",
+            "url": "https://www.freecodecamp.org/news/how-to-build-a-translator-with-chrome-s-built-in-ai/",
+            "description": "Most translation features work the same way. The user types text, your app sends it to a translation API, and the API sends a translation back. That works, but every request adds cost and latency, and"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Build and Train a GLM-5.3-Flash Model From Scratch with Python",
+            "url": "https://www.freecodecamp.org/news/build-and-train-a-glm-53-flash-model-from-scratch-with-python/",
+            "description": "GLM-5.3-Flash combines linear and sparse attention, a mixture-of-experts design, and manifold constrained hyperconnections. A scaled-down version with 25 million parameters can be built in Python and"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Kopyo",
+            "url": "https://www.producthunt.com/products/kopyo",
+            "description": "The Mac clipboard manager that remembers everything\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Snowly",
+            "url": "https://www.producthunt.com/products/snowly-2",
+            "description": "Plan ski trips with friends. Remember every run.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Strict",
+            "url": "https://www.producthunt.com/products/strict",
+            "description": "Run GitHub Actions on any spare Mac or Linux machine\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "naturefunding.org",
+            "url": "https://www.producthunt.com/products/naturefunding-org",
+            "description": "Grants for nature projects, checked against funder pages\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Omi Work",
+            "url": "https://www.producthunt.com/products/omi-work",
+            "description": "Omi can build anything. Now it finds your next 100 customers\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Open Source Solana Wallet",
+            "url": "https://www.producthunt.com/products/open-source-solana-wallet",
+            "description": "Your own keys, your very own network\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Jot",
+            "url": "https://www.producthunt.com/products/jot-15",
+            "description": "One key for everything you do with text\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Orpheus",
+            "url": "https://www.producthunt.com/products/orpheus-2",
+            "description": "Run all your Claude subscriptions from one place\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "LeanTake",
+            "url": "https://www.producthunt.com/products/leantake",
+            "description": "4.1 MB native Mac screen recorder \u2014 zero export wait\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "MAI Image 2.7",
+            "url": "https://www.producthunt.com/products/mai-image-2-3",
+            "description": "Microsoft's image model with precise edits and Canvas\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.61",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.61",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.61. Details: ### Core Changes\n\n- [image-optimizer] Add experimental support for @next/safe-image-optimization: #101254\n\n### Misc Changes\n\n- turbo-tasks-backend: report the caller location for missing-task panics: #102169\n- Turbopack: recover from an unreadable persistent cache at startup: #101954\n- Stop publishi..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1323,
+            "forks": 122,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 98976,
+            "forks": 6776,
+            "language": "JavaScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Elixir HLS makes FPGA circuits from functions written in Elixir",
+            "url": "https://github.com/elixir-hls/elixir-hls",
+            "description": "Elixir HLS makes FPGA circuits from functions written in Elixir"
+          },
+          {
+            "source": "Hacker News",
+            "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+            "description": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine",
+            "url": "https://github.com/mikuta0407/win4wine",
+            "description": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine"
+          },
+          {
+            "source": "Dev.to",
+            "title": "AppSignal Pricing: What a Rails Team Should Budget For",
+            "url": "https://dev.to/tarunsinghofficial/appsignal-pricing-what-a-rails-team-should-budget-for-3fmf",
+            "description": "AppSignal pricing should be evaluated against your application's monitored traffic, logging volume, and required retention. The smallest advertised amount is a starting point, not a reliable forecast for a Rails application with background jobs and noisy incident logs.\n\nThe EUR annual view checked o"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Can Cursor Create and Edit Videos? Setting It Up With a Video Studio",
+            "url": "https://dev.to/sheen_417f0f3a7f4/can-cursor-create-and-edit-videos-setting-it-up-with-a-video-studio-2fon",
+            "description": "Cursor can create and edit videos, but only through a tool that supplies what it lacks. It edits files and runs terminal commands. A video also needs a preview, a timeline and a renderer, and Cursor ships none of them.\n\nFour routes cover most cases: Remotion, plain FFmpeg, a video service with an MC"
+          },
+          {
+            "source": "Dev.to",
+            "title": "8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose",
+            "url": "https://dev.to/vlad_grigoryan/85-of-tech-job-ads-in-europe-state-the-pay-most-of-them-only-say-it-in-the-prose-ob3",
+            "description": "Out of 16,886 open tech jobs in Europe on 23 November 2026, 1,441 state the pay. That is 8.5%. In the United States the same count gives 49.7%, in Canada 41.9%.\n\nThe EU Pay Transparency Directive was due in national law by 7 June 2026. Most member states have not passed it yet, and the job ads show "
+          },
+          {
+            "source": "Dev.to",
+            "title": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem",
+            "url": "https://dev.to/neeraj_singhi_golang/go-generics-at-package-boundaries-type-parameter-leakage-interface-erosion-and-the-constraint-3o2b",
+            "description": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\n\n\nGenerics in Go arrived with a specific promise: eliminate repetitive container code without sacrificing type safety. What production experience reveals is a subtler problem. The moment a"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Redis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029.",
+            "url": "https://dev.to/silpa_nallagopula_4d02cde/redis-80-reaches-end-of-life-on-december-1-redis-72-and-74-are-supported-until-2029-8bf",
+            "description": "Redis lists December 1, 2026 as the end-of-life date for Redis 8.0. That's next week.\n\nRedis 7.2 and 7.4 are older, and they're supported until December 1, 2029. Redis 6.2 is covered until April 1, 2027. So if you moved to 8.0 early to be on the current major, you're the first one who has to move ag"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1323,
+            "forks": 122,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/kanzo-dark.jpg\">\n    <img alt=\"kanzo: a tiny kanban board for you and your coding agents\" src=\"docs/img/kanzo-light.jpg\">\n  </picture>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml\"><img src=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml/badge.svg\" alt=\"CI\"></a>\n  <a href=\"https://crates.io/crates/kanzo\"><img src=\"https://img.shields.io/crates/v/kanzo\" alt=\"crates.io\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue\" alt=\"AGPL-3.0\"></a>\n</p>\n\n<p align=\"center\">\n  English | <a href=\"README.zh.md\">\u7b80\u4f53\u4e2d\u6587</a> | <a href=\"README.tr.md\">T\u00fcrk\u00e7e</a> | <a href=\"README.ja.md\">\u65e5\u672c\u8a9e</a>\n</p>\n\nKanzo is a kanban board in your browser and an MCP server in one 4.7 MB program, so you and your coding agents work on the same tasks: on one computer, or on one board shared by all of them. No account, no server, no setup: run `kanzo` and it works.\n\nYou never edit a file. Everything is done in one of three places:\n\n- **the board**, in your browser, for you;\n- **MCP**, for your agents: they take tasks, move cards and comment;\n- **the `kanzo` command**, for the terminal and scripts.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/board-dark.gif\">\n  <img alt=\"The Kanzo board: agents move cards while you watch, \u2318K finds a task in any project, a task is made to wait on another, two selected tasks are dragged together, a list groups the tasks by status, the sidebar folds, Laptop A shares the board and Laptop B joins it, with the shared projects in its sidebar under its own\" src=\"docs/img/board-light.gif\">\n</picture>\n\n## Install\n\n> [!TIP]\n> **Just ask your agent:** *\"install K",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 98976,
+            "forks": 6776,
+            "language": "JavaScript",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/archify-lockup-dark.svg\" />\n    <img src=\"docs/assets/archify-lockup-light.svg\" alt=\"Archify\" width=\"440\" height=\"121\" />\n  </picture>\n</p>\n<h3 align=\"center\">Turn anything you want to understand, plan, or share into an interactive visual.</h3>\n\n<p align=\"center\"><img src=\"docs/assets/archify-readme-hero.png\" alt=\"Archify \u2014 interactive diagrams\" width=\"960\" /></p>\n\n<p align=\"center\"><strong>Official channels\uff1a</strong> <a href=\"https://archify.si\">archify.si</a> \u00b7 <a href=\"https://github.com/tt-a1i/archify\">GitHub</a><br/>Archify is free and open source. Third-party online services and paid plans are operated by their respective providers and do not represent Archify. <a href=\"#official-services\">Service details \u2192</a></p>\n\n<p align=\"center\">Start with an idea, a question, or a plan. Describe it to your AI agent, and Archify turns it into an interactive HTML you can explore, customize, and share. From travel itineraries and learning maps to complex systems\u2014make it your own.</p>\n\n<p align=\"center\">See what the community is creating\u2014and imagine what you could make next.</p>\n\n<p align=\"center\">\n  <a href=\"https://archify.si/gallery.html\"><strong>Live demos</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#start\"><strong>Get started</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"https://archify.si/guide.html\"><strong>Scenario guide</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#community\"><strong>Community</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_ZH.md\"><strong>\u7b80\u4f53\u4e2d\u6587</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_JA.md\"><strong>\u65e5\u672c\u8a9e</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_KO.md\"><strong>\ud55c\uad6d\uc5b4</strong></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/31352?utm_source=repo",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Elixir HLS makes FPGA circuits from functions written in Elixir",
+            "url": "https://github.com/elixir-hls/elixir-hls",
+            "description": "Elixir HLS makes FPGA circuits from functions written in Elixir",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nelixir-hls elixir-hls Repository navigation Code Issues Pull req",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+            "description": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "detailed_content": "A beginner's guide to Local AI with Inkling, Qwen, and Unsloth | GPU Partner Skip to content GPU partner Inventory \u25be Systems Memory Storage GPU Cloud Compute View all inventory \u2192 Resources \u25be Blog Announcements VRAM calculator Reference Workloads Contact About Build a system Reach a human Build a system Reach a human Home / Blog A beginner's guide to Local AI with Inkling, Qwen, and Unsloth We have AI at home! Set up your own free personal ChatGPT on your PC with Unsloth and Inkling or Qwen. It's private, and the whole house can use it. By Jerry James\n\u00b7\nNov 22, 2026 With the launch of\nopen-weight\nmodels like Qwen, cloud-based LLM providers seem like they're more of infrastructure or appliance businesses when it comes to most routine tasks that an AI model can handle. OpenAI and Anthropic have displayed a pattern of dropping model quality in the 'latest' version and controlling exactly what you're allowed to run on their models. Add to this ballooning costs and privacy concerns, and we get a pretty good case for moving away from this 'convenient' cloud experience. That's basically where I was too. I wanted to offload certain token-heavy research, data collection, or coding tasks to an AI model without staring at usage limits all day. So, as any reasonable human being would do, I decided to set up my own\nlocal AI : a Claude and ChatGPT replacement that runs at home on my own hardware. Since this was my first attempt, my primary focus was keeping it simple and hosting it on Windows. If you're a beginner, you can follow along to get one going on your home network too. Once you have the hardware sorted, it takes about 10-15 minutes (excluding download times). The short version Install Unsloth Desktop, download a quantized AI model that fits your GPU's VRAM, set your context s",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine",
+            "url": "https://github.com/mikuta0407/win4wine",
+            "description": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nmikuta0407 win4wine Repository navigation Code Issues 4 \u00a0( 4 ) P",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "AppSignal Pricing: What a Rails Team Should Budget For",
+            "url": "https://dev.to/tarunsinghofficial/appsignal-pricing-what-a-rails-team-should-budget-for-3fmf",
+            "description": "AppSignal pricing should be evaluated against your application's monitored traffic, logging volume, and required retention. The smallest advertised amount is a starting point, not a reliable forecast for a Rails application with background jobs and noisy incident logs.\n\nThe EUR annual view checked o",
+            "detailed_content": "AppSignal Pricing: What a Rails Team Should Budget For - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nTarun Singh\nPosted on\nNov 23\nAppSignal Pricing: What a Rails Team Should Budget For\n# rails\n# ruby\n# appsignal\n# monitoring\nAppSignal\npricing should be evaluated against your application's monitored traffic, logging volume, and required retention. The smallest advertised amount is a starting point, not a reliable forecast for a Rails application with background jobs and noisy incident logs.\nThe EUR annual view checked on November 14, 2026 lists 250,000 monthly requests at \u20ac219 per year, or \u20ac18.25 per month when expressed as an annual-payment equivalent. The free tier lists 30,000 requests, 1GB of logs, and five-day retention. Currency and billing selections matter; this is not a USD or month-to-month quote. See the\ncurrent plans page .\nUse those figures to orient the evaluation, then measure your own workload before selecting a tier.\nBuild a workload estimate before a price comparison\nAppSignal's\npricing FAQ counts both handled client requests and background-job runs. Usage is aggregated across applications. Build the estimate from all monitored services and workers, not only the web access log. Ignoring an action changes the data you retain as well as usage, so exclude only work you genuinely do not need to investigate.\nFor a hypothetical month with 180,000 monitored web requests and 70,000 monitored job executions, the combined count is 250,000. Adding another worker service does not give it a separate 250,000-request allowan",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Can Cursor Create and Edit Videos? Setting It Up With a Video Studio",
+            "url": "https://dev.to/sheen_417f0f3a7f4/can-cursor-create-and-edit-videos-setting-it-up-with-a-video-studio-2fon",
+            "description": "Cursor can create and edit videos, but only through a tool that supplies what it lacks. It edits files and runs terminal commands. A video also needs a preview, a timeline and a renderer, and Cursor ships none of them.\n\nFour routes cover most cases: Remotion, plain FFmpeg, a video service with an MC",
+            "detailed_content": "Can Cursor Create and Edit Videos? Setting It Up With a Video Studio - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nHarsheen\nPosted on\nNov 23\n\u2022\nOriginally published at\ncoanimator.com\nCan Cursor Create and Edit Videos? Setting It Up With a Video Studio\n# ai\n# tutorial\n# video\n# cursor\nCursor can create and edit videos, but only through a tool that supplies what it lacks. It edits files and runs terminal commands. A video also needs a preview, a timeline and a renderer, and Cursor ships none of them.\nFour routes cover most cases: Remotion, plain FFmpeg, a video service with an MCP server, or a studio. This guide sets up the studio route with CoAnimator, a desktop studio where an AI agent builds and edits a video as plain project files, a live stage previews every change, and the\ncoa\ncommand renders the MP4 on your machine. The main trade-off is setup. Cursor is not in CoAnimator's built-in agent picker, so the skill goes in by hand.\nPick the route that fits the video\nThe right route depends on where the video will live and how often it changes.\nRoute\nFits when\nTrade-off\nRemotion with its\nCursor plugin\nThe video lives inside a React codebase or is rendered from data\nThe video stays as React code you maintain\nFFmpeg commands run by Cursor\nOne trim, crop, caption burn-in or format change\nNo preview and no scene structure\nA video service with an MCP server, such as\nTella's Cursor guide\ndescribes\nThe footage already lives in that service\nEdits stay inside that service\nA studio such as CoAnimator\nOne person directing and revising a pro",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose",
+            "url": "https://dev.to/vlad_grigoryan/85-of-tech-job-ads-in-europe-state-the-pay-most-of-them-only-say-it-in-the-prose-ob3",
+            "description": "Out of 16,886 open tech jobs in Europe on 23 November 2026, 1,441 state the pay. That is 8.5%. In the United States the same count gives 49.7%, in Canada 41.9%.\n\nThe EU Pay Transparency Directive was due in national law by 7 June 2026. Most member states have not passed it yet, and the job ads show ",
+            "detailed_content": "8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nVladimir Grigoryan\nPosted on\nNov 23\n8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose\n# career\n# regex\n# typescript\n# datascience\nOut of 16,886 open tech jobs in Europe on 23 November 2026, 1,441 state the pay. That is 8.5%. In the United States the same count gives 49.7%, in Canada 41.9%.\nThe EU Pay Transparency Directive was due in national law by 7 June 2026. Most member states have not passed it yet, and the job ads show it.\nI build\nSottava , a job board that reads about 2,460 companies' own hiring systems (Greenhouse, Lever, Ashby, Workable and others) every hour. So these are not numbers from a job board's form. They are what the employers published themselves.\nThe salary field is almost always empty\nThe hiring systems have structured salary fields. I expected to read the pay from there and be done.\nOf about 18,000 open European postings that name a technology, roughly 300 had the salary fields filled. About 1,200 more stated a range only in the description, in a sentence somewhere between the tech stack and the benefits.\nSo four out of five European ads that do state the pay say it only in the text. Count the fields alone and Europe looks even worse than it is.\nReading a range out of the text\nA range in a posting comes in a lot of shapes:\n\u20ac65,000 - \u20ac80,000 ,\n65.000 \u2013 80.000 \u20ac ,\n65 000 to 80 000 EUR ,\n\u00a385k-\u00a3111k\nthe range word in several languages: to, bis, \u00e0,",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem",
+            "url": "https://dev.to/neeraj_singhi_golang/go-generics-at-package-boundaries-type-parameter-leakage-interface-erosion-and-the-constraint-3o2b",
+            "description": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\n\n\nGenerics in Go arrived with a specific promise: eliminate repetitive container code without sacrificing type safety. What production experience reveals is a subtler problem. The moment a",
+            "detailed_content": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nNeeraj Singhi\nPosted on\nNov 23\n\u2022\nOriginally published at\nneerajsinghi.com\nGo Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\n# architecture\n# backend\n# go\n# softwareengineering\nGo Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\nGenerics in Go arrived with a specific promise: eliminate repetitive container code without sacrificing type safety. What production experience reveals is a subtler problem. The moment a generic type or function crosses a package boundary\u2014into an SDK, a shared internal library, or a service-to-service RPC layer\u2014its type parameters become a constraint on every consumer downstream. Get the constraint wrong and you face one of three outcomes: you break the abstraction, you force callers into type assertions they cannot safely write, or you create a proliferation of type parameter threading that makes the package graph unreadable.\nThis article is about that specific failure mode: how generics leak across package boundaries, what it costs operationally, and how to design constraints that remain stable under the kind of change pressure real backend services produce.\nThe Leakage Mechanism\nConsider a repository abstraction used across multiple microservices. A naive generic design looks like this:\n// package store\ntype\nRepository [ T\nan",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Redis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029.",
+            "url": "https://dev.to/silpa_nallagopula_4d02cde/redis-80-reaches-end-of-life-on-december-1-redis-72-and-74-are-supported-until-2029-8bf",
+            "description": "Redis lists December 1, 2026 as the end-of-life date for Redis 8.0. That's next week.\n\nRedis 7.2 and 7.4 are older, and they're supported until December 1, 2029. Redis 6.2 is covered until April 1, 2027. So if you moved to 8.0 early to be on the current major, you're the first one who has to move ag",
+            "detailed_content": "Redis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029. - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSilpa Nallagopula\nPosted on\nNov 23\nRedis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029.\n# database\n# redis\n# kubernetes\n# devops\nRedis lists December 1, 2026 as the end-of-life date for Redis 8.0. That's next week.\nRedis 7.2 and 7.4 are older, and they're supported until December 1, 2029. Redis 6.2 is covered until April 1, 2027. So if you moved to 8.0 early to be on the current major, you're the first one who has to move again.\nI'm writing this down because nothing in a cluster tells you. The image tag says\nredis:8.0 , the pods are healthy, and 8 looks newer than 7.\nWhy 8.0 goes first\nRedis Open Source has two kinds of release, and the support window depends on which kind you run. How new it is doesn't matter.\nA Standard release gets security updates and critical bug fixes for 6 months after the following minor version is released. An Extended release gets them for 5 years after its own release date.\nThis is the supported-versions table from Redis's version management page, as I read it on November 23, 2026:\nVersion\nRelease type\nEnd of life\n8.10, 8.8, 8.6, 8.4\nStandard\nTBD\n8.2\nExtended\nSeptember 1, 2030\n8.0\nStandard\nDecember 1, 2026\n7.4\nExtended\nDecember 1, 2029\n7.2\nExtended\nDecember 1, 2029\n6.2\nExtended\nApril 1, 2027\n8.0 is a Standard release. Redis says the first release in a major series always is. 8.2 is the Extended one in the 8 series so far. For 8.4 a",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+            "description": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "detailed_content": "A beginner's guide to Local AI with Inkling, Qwen, and Unsloth | GPU Partner Skip to content GPU partner Inventory \u25be Systems Memory Storage GPU Cloud Compute View all inventory \u2192 Resources \u25be Blog Announcements VRAM calculator Reference Workloads Contact About Build a system Reach a human Build a system Reach a human Home / Blog A beginner's guide to Local AI with Inkling, Qwen, and Unsloth We have AI at home! Set up your own free personal ChatGPT on your PC with Unsloth and Inkling or Qwen. It's private, and the whole house can use it. By Jerry James\n\u00b7\nNov 22, 2026 With the launch of\nopen-weight\nmodels like Qwen, cloud-based LLM providers seem like they're more of infrastructure or appliance businesses when it comes to most routine tasks that an AI model can handle. OpenAI and Anthropic have displayed a pattern of dropping model quality in the 'latest' version and controlling exactly what you're allowed to run on their models. Add to this ballooning costs and privacy concerns, and we get a pretty good case for moving away from this 'convenient' cloud experience. That's basically where I was too. I wanted to offload certain token-heavy research, data collection, or coding tasks to an AI model without staring at usage limits all day. So, as any reasonable human being would do, I decided to set up my own\nlocal AI : a Claude and ChatGPT replacement that runs at home on my own hardware. Since this was my first attempt, my primary focus was keeping it simple and hosting it on Windows. If you're a beginner, you can follow along to get one going on your home network too. Once you have the hardware sorted, it takes about 10-15 minutes (excluding download times). The short version Install Unsloth Desktop, download a quantized AI model that fits your GPU's VRAM, set your context s",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the referenced guide article."
+          },
+          {
+            "source": "Hacker News",
+            "title": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine",
+            "url": "https://github.com/mikuta0407/win4wine",
+            "description": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nmikuta0407 win4wine Repository navigation Code Issues 4 \u00a0( 4 ) P",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Repository name matches claim; no contradictory info."
+          },
+          {
+            "source": "Dev.to",
+            "title": "AppSignal Pricing: What a Rails Team Should Budget For",
+            "url": "https://dev.to/tarunsinghofficial/appsignal-pricing-what-a-rails-team-should-budget-for-3fmf",
+            "description": "AppSignal pricing should be evaluated against your application's monitored traffic, logging volume, and required retention. The smallest advertised amount is a starting point, not a reliable forecast for a Rails application with background jobs and noisy incident logs.\n\nThe EUR annual view checked o",
+            "detailed_content": "AppSignal Pricing: What a Rails Team Should Budget For - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nTarun Singh\nPosted on\nNov 23\nAppSignal Pricing: What a Rails Team Should Budget For\n# rails\n# ruby\n# appsignal\n# monitoring\nAppSignal\npricing should be evaluated against your application's monitored traffic, logging volume, and required retention. The smallest advertised amount is a starting point, not a reliable forecast for a Rails application with background jobs and noisy incident logs.\nThe EUR annual view checked on November 14, 2026 lists 250,000 monthly requests at \u20ac219 per year, or \u20ac18.25 per month when expressed as an annual-payment equivalent. The free tier lists 30,000 requests, 1GB of logs, and five-day retention. Currency and billing selections matter; this is not a USD or month-to-month quote. See the\ncurrent plans page .\nUse those figures to orient the evaluation, then measure your own workload before selecting a tier.\nBuild a workload estimate before a price comparison\nAppSignal's\npricing FAQ counts both handled client requests and background-job runs. Usage is aggregated across applications. Build the estimate from all monitored services and workers, not only the web access log. Ignoring an action changes the data you retain as well as usage, so exclude only work you genuinely do not need to investigate.\nFor a hypothetical month with 180,000 monitored web requests and 70,000 monitored job executions, the combined count is 250,000. Adding another worker service does not give it a separate 250,000-request allowan",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Pricing discussion aligns with referenced article."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Can Cursor Create and Edit Videos? Setting It Up With a Video Studio",
+            "url": "https://dev.to/sheen_417f0f3a7f4/can-cursor-create-and-edit-videos-setting-it-up-with-a-video-studio-2fon",
+            "description": "Cursor can create and edit videos, but only through a tool that supplies what it lacks. It edits files and runs terminal commands. A video also needs a preview, a timeline and a renderer, and Cursor ships none of them.\n\nFour routes cover most cases: Remotion, plain FFmpeg, a video service with an MC",
+            "detailed_content": "Can Cursor Create and Edit Videos? Setting It Up With a Video Studio - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nHarsheen\nPosted on\nNov 23\n\u2022\nOriginally published at\ncoanimator.com\nCan Cursor Create and Edit Videos? Setting It Up With a Video Studio\n# ai\n# tutorial\n# video\n# cursor\nCursor can create and edit videos, but only through a tool that supplies what it lacks. It edits files and runs terminal commands. A video also needs a preview, a timeline and a renderer, and Cursor ships none of them.\nFour routes cover most cases: Remotion, plain FFmpeg, a video service with an MCP server, or a studio. This guide sets up the studio route with CoAnimator, a desktop studio where an AI agent builds and edits a video as plain project files, a live stage previews every change, and the\ncoa\ncommand renders the MP4 on your machine. The main trade-off is setup. Cursor is not in CoAnimator's built-in agent picker, so the skill goes in by hand.\nPick the route that fits the video\nThe right route depends on where the video will live and how often it changes.\nRoute\nFits when\nTrade-off\nRemotion with its\nCursor plugin\nThe video lives inside a React codebase or is rendered from data\nThe video stays as React code you maintain\nFFmpeg commands run by Cursor\nOne trim, crop, caption burn-in or format change\nNo preview and no scene structure\nA video service with an MCP server, such as\nTella's Cursor guide\ndescribes\nThe footage already lives in that service\nEdits stay inside that service\nA studio such as CoAnimator\nOne person directing and revising a pro",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Video creation details are present in reference."
+          },
+          {
+            "source": "Dev.to",
+            "title": "8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose",
+            "url": "https://dev.to/vlad_grigoryan/85-of-tech-job-ads-in-europe-state-the-pay-most-of-them-only-say-it-in-the-prose-ob3",
+            "description": "Out of 16,886 open tech jobs in Europe on 23 November 2026, 1,441 state the pay. That is 8.5%. In the United States the same count gives 49.7%, in Canada 41.9%.\n\nThe EU Pay Transparency Directive was due in national law by 7 June 2026. Most member states have not passed it yet, and the job ads show ",
+            "detailed_content": "8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nVladimir Grigoryan\nPosted on\nNov 23\n8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose\n# career\n# regex\n# typescript\n# datascience\nOut of 16,886 open tech jobs in Europe on 23 November 2026, 1,441 state the pay. That is 8.5%. In the United States the same count gives 49.7%, in Canada 41.9%.\nThe EU Pay Transparency Directive was due in national law by 7 June 2026. Most member states have not passed it yet, and the job ads show it.\nI build\nSottava , a job board that reads about 2,460 companies' own hiring systems (Greenhouse, Lever, Ashby, Workable and others) every hour. So these are not numbers from a job board's form. They are what the employers published themselves.\nThe salary field is almost always empty\nThe hiring systems have structured salary fields. I expected to read the pay from there and be done.\nOf about 18,000 open European postings that name a technology, roughly 300 had the salary fields filled. About 1,200 more stated a range only in the description, in a sentence somewhere between the tech stack and the benefits.\nSo four out of five European ads that do state the pay say it only in the text. Count the fields alone and Europe looks even worse than it is.\nReading a range out of the text\nA range in a posting comes in a lot of shapes:\n\u20ac65,000 - \u20ac80,000 ,\n65.000 \u2013 80.000 \u20ac ,\n65 000 to 80 000 EUR ,\n\u00a385k-\u00a3111k\nthe range word in several languages: to, bis, \u00e0,",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Statistics and statement are directly supported."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem",
+            "url": "https://dev.to/neeraj_singhi_golang/go-generics-at-package-boundaries-type-parameter-leakage-interface-erosion-and-the-constraint-3o2b",
+            "description": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\n\n\nGenerics in Go arrived with a specific promise: eliminate repetitive container code without sacrificing type safety. What production experience reveals is a subtler problem. The moment a",
+            "detailed_content": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nNeeraj Singhi\nPosted on\nNov 23\n\u2022\nOriginally published at\nneerajsinghi.com\nGo Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\n# architecture\n# backend\n# go\n# softwareengineering\nGo Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\nGenerics in Go arrived with a specific promise: eliminate repetitive container code without sacrificing type safety. What production experience reveals is a subtler problem. The moment a generic type or function crosses a package boundary\u2014into an SDK, a shared internal library, or a service-to-service RPC layer\u2014its type parameters become a constraint on every consumer downstream. Get the constraint wrong and you face one of three outcomes: you break the abstraction, you force callers into type assertions they cannot safely write, or you create a proliferation of type parameter threading that makes the package graph unreadable.\nThis article is about that specific failure mode: how generics leak across package boundaries, what it costs operationally, and how to design constraints that remain stable under the kind of change pressure real backend services produce.\nThe Leakage Mechanism\nConsider a repository abstraction used across multiple microservices. A naive generic design looks like this:\n// package store\ntype\nRepository [ T\nan",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article content supports the claim."
+          },
+          {
+            "source": "Dev.to",
+            "title": "Redis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029.",
+            "url": "https://dev.to/silpa_nallagopula_4d02cde/redis-80-reaches-end-of-life-on-december-1-redis-72-and-74-are-supported-until-2029-8bf",
+            "description": "Redis lists December 1, 2026 as the end-of-life date for Redis 8.0. That's next week.\n\nRedis 7.2 and 7.4 are older, and they're supported until December 1, 2029. Redis 6.2 is covered until April 1, 2027. So if you moved to 8.0 early to be on the current major, you're the first one who has to move ag",
+            "detailed_content": "Redis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029. - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSilpa Nallagopula\nPosted on\nNov 23\nRedis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029.\n# database\n# redis\n# kubernetes\n# devops\nRedis lists December 1, 2026 as the end-of-life date for Redis 8.0. That's next week.\nRedis 7.2 and 7.4 are older, and they're supported until December 1, 2029. Redis 6.2 is covered until April 1, 2027. So if you moved to 8.0 early to be on the current major, you're the first one who has to move again.\nI'm writing this down because nothing in a cluster tells you. The image tag says\nredis:8.0 , the pods are healthy, and 8 looks newer than 7.\nWhy 8.0 goes first\nRedis Open Source has two kinds of release, and the support window depends on which kind you run. How new it is doesn't matter.\nA Standard release gets security updates and critical bug fixes for 6 months after the following minor version is released. An Extended release gets them for 5 years after its own release date.\nThis is the supported-versions table from Redis's version management page, as I read it on November 23, 2026:\nVersion\nRelease type\nEnd of life\n8.10, 8.8, 8.6, 8.4\nStandard\nTBD\n8.2\nExtended\nSeptember 1, 2030\n8.0\nStandard\nDecember 1, 2026\n7.4\nExtended\nDecember 1, 2029\n7.2\nExtended\nDecember 1, 2029\n6.2\nExtended\nApril 1, 2027\n8.0 is a Standard release. Redis says the first release in a major series always is. 8.2 is the Extended one in the 8 series so far. For 8.4 a",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "EOL dates and support info match reference."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+            "description": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "detailed_content": "A beginner's guide to Local AI with Inkling, Qwen, and Unsloth | GPU Partner Skip to content GPU partner Inventory \u25be Systems Memory Storage GPU Cloud Compute View all inventory \u2192 Resources \u25be Blog Announcements VRAM calculator Reference Workloads Contact About Build a system Reach a human Build a system Reach a human Home / Blog A beginner's guide to Local AI with Inkling, Qwen, and Unsloth We have AI at home! Set up your own free personal ChatGPT on your PC with Unsloth and Inkling or Qwen. It's private, and the whole house can use it. By Jerry James\n\u00b7\nNov 22, 2026 With the launch of\nopen-weight\nmodels like Qwen, cloud-based LLM providers seem like they're more of infrastructure or appliance businesses when it comes to most routine tasks that an AI model can handle. OpenAI and Anthropic have displayed a pattern of dropping model quality in the 'latest' version and controlling exactly what you're allowed to run on their models. Add to this ballooning costs and privacy concerns, and we get a pretty good case for moving away from this 'convenient' cloud experience. That's basically where I was too. I wanted to offload certain token-heavy research, data collection, or coding tasks to an AI model without staring at usage limits all day. So, as any reasonable human being would do, I decided to set up my own\nlocal AI : a Claude and ChatGPT replacement that runs at home on my own hardware. Since this was my first attempt, my primary focus was keeping it simple and hosting it on Windows. If you're a beginner, you can follow along to get one going on your home network too. Once you have the hardware sorted, it takes about 10-15 minutes (excluding download times). The short version Install Unsloth Desktop, download a quantized AI model that fits your GPU's VRAM, set your context s",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the referenced guide article.",
+            "why_it_matters": "Running LLMs locally cuts cloud costs, protects data, and gives instant AI assistance on your own hardware.",
+            "who_cares": "ML engineers, full\u2011stack developers, and teams building AI\u2011augmented tools",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine",
+            "url": "https://github.com/mikuta0407/win4wine",
+            "description": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nmikuta0407 win4wine Repository navigation Code Issues 4 \u00a0( 4 ) P",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Repository name matches claim; no contradictory info.",
+            "why_it_matters": "Win4wine lets you use the Windows shell as your Linux desktop, simplifying cross\u2011platform tooling without dual\u2011booting.",
+            "who_cares": "Linux developers, sysadmins, and anyone needing Windows GUI apps on Linux",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Dev.to",
+            "title": "AppSignal Pricing: What a Rails Team Should Budget For",
+            "url": "https://dev.to/tarunsinghofficial/appsignal-pricing-what-a-rails-team-should-budget-for-3fmf",
+            "description": "AppSignal pricing should be evaluated against your application's monitored traffic, logging volume, and required retention. The smallest advertised amount is a starting point, not a reliable forecast for a Rails application with background jobs and noisy incident logs.\n\nThe EUR annual view checked o",
+            "detailed_content": "AppSignal Pricing: What a Rails Team Should Budget For - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nTarun Singh\nPosted on\nNov 23\nAppSignal Pricing: What a Rails Team Should Budget For\n# rails\n# ruby\n# appsignal\n# monitoring\nAppSignal\npricing should be evaluated against your application's monitored traffic, logging volume, and required retention. The smallest advertised amount is a starting point, not a reliable forecast for a Rails application with background jobs and noisy incident logs.\nThe EUR annual view checked on November 14, 2026 lists 250,000 monthly requests at \u20ac219 per year, or \u20ac18.25 per month when expressed as an annual-payment equivalent. The free tier lists 30,000 requests, 1GB of logs, and five-day retention. Currency and billing selections matter; this is not a USD or month-to-month quote. See the\ncurrent plans page .\nUse those figures to orient the evaluation, then measure your own workload before selecting a tier.\nBuild a workload estimate before a price comparison\nAppSignal's\npricing FAQ counts both handled client requests and background-job runs. Usage is aggregated across applications. Build the estimate from all monitored services and workers, not only the web access log. Ignoring an action changes the data you retain as well as usage, so exclude only work you genuinely do not need to investigate.\nFor a hypothetical month with 180,000 monitored web requests and 70,000 monitored job executions, the combined count is 250,000. Adding another worker service does not give it a separate 250,000-request allowan",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Pricing discussion aligns with referenced article.",
+            "why_it_matters": "Understanding AppSignal\u2019s pricing prevents surprise bills and helps size monitoring budgets for Rails apps with heavy background jobs.",
+            "who_cares": "Rails engineers, team leads, and SREs managing production monitoring",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Can Cursor Create and Edit Videos? Setting It Up With a Video Studio",
+            "url": "https://dev.to/sheen_417f0f3a7f4/can-cursor-create-and-edit-videos-setting-it-up-with-a-video-studio-2fon",
+            "description": "Cursor can create and edit videos, but only through a tool that supplies what it lacks. It edits files and runs terminal commands. A video also needs a preview, a timeline and a renderer, and Cursor ships none of them.\n\nFour routes cover most cases: Remotion, plain FFmpeg, a video service with an MC",
+            "detailed_content": "Can Cursor Create and Edit Videos? Setting It Up With a Video Studio - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nHarsheen\nPosted on\nNov 23\n\u2022\nOriginally published at\ncoanimator.com\nCan Cursor Create and Edit Videos? Setting It Up With a Video Studio\n# ai\n# tutorial\n# video\n# cursor\nCursor can create and edit videos, but only through a tool that supplies what it lacks. It edits files and runs terminal commands. A video also needs a preview, a timeline and a renderer, and Cursor ships none of them.\nFour routes cover most cases: Remotion, plain FFmpeg, a video service with an MCP server, or a studio. This guide sets up the studio route with CoAnimator, a desktop studio where an AI agent builds and edits a video as plain project files, a live stage previews every change, and the\ncoa\ncommand renders the MP4 on your machine. The main trade-off is setup. Cursor is not in CoAnimator's built-in agent picker, so the skill goes in by hand.\nPick the route that fits the video\nThe right route depends on where the video will live and how often it changes.\nRoute\nFits when\nTrade-off\nRemotion with its\nCursor plugin\nThe video lives inside a React codebase or is rendered from data\nThe video stays as React code you maintain\nFFmpeg commands run by Cursor\nOne trim, crop, caption burn-in or format change\nNo preview and no scene structure\nA video service with an MCP server, such as\nTella's Cursor guide\ndescribes\nThe footage already lives in that service\nEdits stay inside that service\nA studio such as CoAnimator\nOne person directing and revising a pro",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Video creation details are present in reference.",
+            "why_it_matters": "Cursor can drive video editing via AI\u2011powered commands, opening low\u2011code automation for media pipelines.",
+            "who_cares": "Developers building AI\u2011assisted content tools and video\u2011centric startups",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Dev.to",
+            "title": "8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose",
+            "url": "https://dev.to/vlad_grigoryan/85-of-tech-job-ads-in-europe-state-the-pay-most-of-them-only-say-it-in-the-prose-ob3",
+            "description": "Out of 16,886 open tech jobs in Europe on 23 November 2026, 1,441 state the pay. That is 8.5%. In the United States the same count gives 49.7%, in Canada 41.9%.\n\nThe EU Pay Transparency Directive was due in national law by 7 June 2026. Most member states have not passed it yet, and the job ads show ",
+            "detailed_content": "8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nVladimir Grigoryan\nPosted on\nNov 23\n8.5% of tech job ads in Europe state the pay. Most of them only say it in the prose\n# career\n# regex\n# typescript\n# datascience\nOut of 16,886 open tech jobs in Europe on 23 November 2026, 1,441 state the pay. That is 8.5%. In the United States the same count gives 49.7%, in Canada 41.9%.\nThe EU Pay Transparency Directive was due in national law by 7 June 2026. Most member states have not passed it yet, and the job ads show it.\nI build\nSottava , a job board that reads about 2,460 companies' own hiring systems (Greenhouse, Lever, Ashby, Workable and others) every hour. So these are not numbers from a job board's form. They are what the employers published themselves.\nThe salary field is almost always empty\nThe hiring systems have structured salary fields. I expected to read the pay from there and be done.\nOf about 18,000 open European postings that name a technology, roughly 300 had the salary fields filled. About 1,200 more stated a range only in the description, in a sentence somewhere between the tech stack and the benefits.\nSo four out of five European ads that do state the pay say it only in the text. Count the fields alone and Europe looks even worse than it is.\nReading a range out of the text\nA range in a posting comes in a lot of shapes:\n\u20ac65,000 - \u20ac80,000 ,\n65.000 \u2013 80.000 \u20ac ,\n65 000 to 80 000 EUR ,\n\u00a385k-\u00a3111k\nthe range word in several languages: to, bis, \u00e0,",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Statistics and statement are directly supported.",
+            "why_it_matters": "Only 8.5\u202f% of EU tech ads list salary, highlighting compliance gaps and candidate uncertainty under the new Pay Transparency Directive.",
+            "who_cares": "Recruiters, HR professionals, and job\u2011seeking engineers in Europe",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem",
+            "url": "https://dev.to/neeraj_singhi_golang/go-generics-at-package-boundaries-type-parameter-leakage-interface-erosion-and-the-constraint-3o2b",
+            "description": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\n\n\nGenerics in Go arrived with a specific promise: eliminate repetitive container code without sacrificing type safety. What production experience reveals is a subtler problem. The moment a",
+            "detailed_content": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nNeeraj Singhi\nPosted on\nNov 23\n\u2022\nOriginally published at\nneerajsinghi.com\nGo Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\n# architecture\n# backend\n# go\n# softwareengineering\nGo Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem\nGenerics in Go arrived with a specific promise: eliminate repetitive container code without sacrificing type safety. What production experience reveals is a subtler problem. The moment a generic type or function crosses a package boundary\u2014into an SDK, a shared internal library, or a service-to-service RPC layer\u2014its type parameters become a constraint on every consumer downstream. Get the constraint wrong and you face one of three outcomes: you break the abstraction, you force callers into type assertions they cannot safely write, or you create a proliferation of type parameter threading that makes the package graph unreadable.\nThis article is about that specific failure mode: how generics leak across package boundaries, what it costs operationally, and how to design constraints that remain stable under the kind of change pressure real backend services produce.\nThe Leakage Mechanism\nConsider a repository abstraction used across multiple microservices. A naive generic design looks like this:\n// package store\ntype\nRepository [ T\nan",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Article content supports the claim.",
+            "why_it_matters": "Generic types leaking across package boundaries cause API erosion and maintenance headaches, so proper constraint design is critical for Go libraries.",
+            "who_cares": "Go developers, library authors, and architects of microservice ecosystems",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Redis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029.",
+            "url": "https://dev.to/silpa_nallagopula_4d02cde/redis-80-reaches-end-of-life-on-december-1-redis-72-and-74-are-supported-until-2029-8bf",
+            "description": "Redis lists December 1, 2026 as the end-of-life date for Redis 8.0. That's next week.\n\nRedis 7.2 and 7.4 are older, and they're supported until December 1, 2029. Redis 6.2 is covered until April 1, 2027. So if you moved to 8.0 early to be on the current major, you're the first one who has to move ag",
+            "detailed_content": "Redis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029. - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nSilpa Nallagopula\nPosted on\nNov 23\nRedis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029.\n# database\n# redis\n# kubernetes\n# devops\nRedis lists December 1, 2026 as the end-of-life date for Redis 8.0. That's next week.\nRedis 7.2 and 7.4 are older, and they're supported until December 1, 2029. Redis 6.2 is covered until April 1, 2027. So if you moved to 8.0 early to be on the current major, you're the first one who has to move again.\nI'm writing this down because nothing in a cluster tells you. The image tag says\nredis:8.0 , the pods are healthy, and 8 looks newer than 7.\nWhy 8.0 goes first\nRedis Open Source has two kinds of release, and the support window depends on which kind you run. How new it is doesn't matter.\nA Standard release gets security updates and critical bug fixes for 6 months after the following minor version is released. An Extended release gets them for 5 years after its own release date.\nThis is the supported-versions table from Redis's version management page, as I read it on November 23, 2026:\nVersion\nRelease type\nEnd of life\n8.10, 8.8, 8.6, 8.4\nStandard\nTBD\n8.2\nExtended\nSeptember 1, 2030\n8.0\nStandard\nDecember 1, 2026\n7.4\nExtended\nDecember 1, 2029\n7.2\nExtended\nDecember 1, 2029\n6.2\nExtended\nApril 1, 2027\n8.0 is a Standard release. Redis says the first release in a major series always is. 8.2 is the Extended one in the 8 series so far. For 8.4 a",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "EOL dates and support info match reference.",
+            "why_it_matters": "Redis\u202f8.0 will be EOL in Dec\u202f2026, forcing teams to plan migrations to the supported 8.2 (Extended) or stay on 7.x to avoid downtime.",
+            "who_cares": "DevOps engineers, backend developers, and DBAs using Redis in production",
+            "verdict": "INTEGRATE"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Cool Tool",
+            "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+            "description": "**You can run a private ChatGPT\u2011like model on your own PC in minutes.** The guide shows how to install Unsloth Desktop on Windows, pick a quantized model that fits your GPU\u2019s VRAM, and launch a local LLM that anyone on your home network can query. The whole setup (excluding download time) takes about 10\u201115\u202fminutes, giving you instant AI assistance without cloud costs or data\u2011privacy worries.",
+            "why_it_matters": "Running LLMs locally cuts cloud costs, protects data, and gives instant AI assistance on your own hardware.",
+            "who_cares": "ML engineers, full\u2011stack developers, and teams building AI\u2011augmented tools",
+            "verdict": "INTEGRATE",
+            "source_url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth"
+          },
+          {
+            "category": "Tech Shift",
+            "title": "Go Generics at Package Boundaries: Type Parameter Leakage, Interface Erosion, and the Constraint Design Problem",
+            "description": "**Go\u2019s generics can leak across package boundaries, turning type parameters into hidden constraints for every downstream consumer.** When a generic type or function crosses into an SDK, shared library, or RPC layer, its type parameters become part of the public API. Getting the constraint wrong can break abstractions, force unsafe type assertions, or create a tangled web of threaded parameters that makes the package graph unreadable.",
+            "why_it_matters": "Generic types leaking across package boundaries cause API erosion and maintenance headaches, so proper constraint design is critical for Go libraries.",
+            "who_cares": "Go developers, library authors, and architects of microservice ecosystems",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/neeraj_singhi_golang/go-generics-at-package-boundaries-type-parameter-leakage-interface-erosion-and-the-constraint-3o2b"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "Redis 8.0 reaches end of life on December 1. Redis 7.2 and 7.4 are supported until 2029.",
+            "description": "**Redis\u202f8.0 will be EOL on 1\u202fDecember\u202f2026, so you need to plan a migration now.** Redis\u202f8.0 is a *Standard* release that only receives security updates for six months after the next minor version. The supported *Extended* releases are 8.2 (through\u202f2030) and the 7.x line (7.2 and 7.4 supported until\u202f2029). Staying on 8.0 past the deadline will leave clusters without patches, while moving to an extended release avoids the next forced upgrade.",
+            "why_it_matters": "Redis\u202f8.0 will be EOL in Dec\u202f2026, forcing teams to plan migrations to the supported 8.2 (Extended) or stay on 7.x to avoid downtime.",
+            "who_cares": "DevOps engineers, backend developers, and DBAs using Redis in production",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/silpa_nallagopula_4d02cde/redis-80-reaches-end-of-life-on-december-1-redis-72-and-74-are-supported-until-2029-8bf"
+          },
+          {
+            "category": "Watchlist",
+            "title": "Win4wine \u2013 Run Windows Shell as the Linux Desktop on Wine",
+            "description": "**Win4wine lets you run the Windows shell as your Linux desktop, giving you a familiar UI without dual\u2011booting.** The project provides a GitHub repository that layers the Windows Explorer experience on top of a Wine session, turning the Windows graphical shell into the primary desktop environment on Linux. It\u2019s a niche solution for developers and sysadmins who need Windows\u2011style tooling while staying in a Linux workflow.",
+            "why_it_matters": "Win4wine lets you use the Windows shell as your Linux desktop, simplifying cross\u2011platform tooling without dual\u2011booting.",
+            "who_cares": "Linux developers, sysadmins, and anyone needing Windows GUI apps on Linux",
+            "verdict": "WATCH",
+            "source_url": "https://github.com/mikuta0407/win4wine"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "Can Cursor Create and Edit Videos? Setting It Up With a Video Studio",
+            "description": "**Cursor can drive video creation and editing by issuing file\u2011level commands, but you need a companion tool for preview and rendering.** The guide outlines four practical routes: using Remotion with a Cursor plugin for React\u2011based videos, running raw FFmpeg commands for simple trims, connecting to a video service with an MCP server, or wiring Cursor into the CoAnimator desktop studio where an AI agent builds project files and renders MP4s locally. Each path balances setup effort against preview capabilities.",
+            "why_it_matters": "Cursor can drive video editing via AI\u2011powered commands, opening low\u2011code automation for media pipelines.",
+            "who_cares": "Developers building AI\u2011assisted content tools and video\u2011centric startups",
+            "verdict": "WATCH",
+            "source_url": "https://dev.to/sheen_417f0f3a7f4/can-cursor-create-and-edit-videos-setting-it-up-with-a-video-studio-2fon"
+          }
+        ]
+      }
+    }
+  },
+  "rejected_urls": [],
+  "restarted": false,
+  "email": {
+    "status": "sent",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": []
+}
