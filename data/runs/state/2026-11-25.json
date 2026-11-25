@@ -1,0 +1,827 @@
+{
+  "date": "2026-11-25",
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "adobe-dreamweaver-varvera",
+            "full_name": "MinosoaRafalimanana/adobe-dreamweaver-varvera",
+            "url": "https://github.com/MinosoaRafalimanana/adobe-dreamweaver-varvera",
+            "description": "Varvera edition of Adobe Dreamweaver, a web development environment for coding and design.",
+            "stars": 48,
+            "forks": 0,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "TokenEconomizer",
+            "full_name": "microsoft/TokenEconomizer",
+            "url": "https://github.com/microsoft/TokenEconomizer",
+            "description": "Experience-Driven Black-Box Cost Control for Coding Agents",
+            "stars": 8105,
+            "forks": 575,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 2957,
+            "forks": 284,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+            "stars": 1909,
+            "forks": 304,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "snug",
+            "full_name": "zephyr4123/snug",
+            "url": "https://github.com/zephyr4123/snug",
+            "description": "\u8ba9\u8fdc\u7a0b Mac \u5728\u4efb\u610f\u8bbe\u5907\u4e0a\u83b7\u5f97\u539f\u751f\u7ea7\u4f53\u9a8c\u3002\u652f\u6301 UU\u8fdc\u7a0b \u4e0e CrossDesk \u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a\uff1a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5404\u6709\u4e13\u5c5e\u5c4f\u5e55\uff0c\u753b\u9762\u94fa\u6ee1\u3001\u5b57\u53f7\u968f\u5c4f\uff0c\u539f\u751f\u89e6\u5c4f\u624b\u52bf\uff0cApp \u8d44\u6e90\u5e93\u3002Make your remote Mac native on any device: display and touch enhancements for UU Remote and CrossDesk, with a dedicated screen for every phone, tablet and computer, native touch gestures and an App Library.",
+            "stars": 1473,
+            "forks": 117,
+            "language": "Swift"
+          },
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1345,
+            "forks": 123,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 153183,
+            "forks": 14731,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "stars": 99781,
+            "forks": 6827,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95902,
+            "forks": 9600,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 94306,
+            "forks": 12632,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "rtk",
+            "full_name": "rtk-ai/rtk",
+            "url": "https://github.com/rtk-ai/rtk",
+            "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+            "stars": 87783,
+            "forks": 5635,
+            "language": "Rust"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+            "url": "https://github.com/xoxorwr/pw-loudness-eq",
+            "description": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire"
+          },
+          {
+            "source": "Hacker News",
+            "title": "SSH Is the Most Underrated Platform in Tech",
+            "url": "https://milkcrunch.com/ssh-is-a-platform/",
+            "description": "SSH Is the Most Underrated Platform in Tech"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Matrix Multiplication is \u0398(n^2.25) [pdf]",
+            "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+            "description": "Matrix Multiplication is \u0398(n^2.25) [pdf]"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Button Sounds \u2013 collection of professionally-recorded button clicks and presses",
+            "url": "https://buttons.joshwcomeau.com/",
+            "description": "Button Sounds \u2013 collection of professionally-recorded button clicks and presses"
+          },
+          {
+            "source": "Hacker News",
+            "title": "The short age of dragon riders",
+            "url": "https://atilloy.com/2026/11/16/the-short-age-of-dragon-riders/",
+            "description": "The short age of dragon riders"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+            "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+            "description": "Models Can Communicate via Inference Servers Despite Being Sandboxed"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Getting old Java phones online again",
+            "url": "https://antcating.github.io/2026/11/23/getting-old-java-phones-online-again.html",
+            "description": "Getting old Java phones online again"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Show HN: Old Nvidia and ATI tech demos, running again in the browser",
+            "url": "https://gpu-demo-gallery.pages.dev/",
+            "description": "Show HN: Old Nvidia and ATI tech demos, running again in the browser"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Hazel (YC W24) Is Hiring a Product Designer",
+            "url": "https://www.ycombinator.com/companies/hazel-2/jobs/8EhsvYE-product-designer-contract",
+            "description": "Hazel (YC W24) Is Hiring a Product Designer"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Ternary Bonsai 2.5 27B",
+            "url": "https://prismml.com/news/bonsai-2-5-27b",
+            "description": "Ternary Bonsai 2.5 27B"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+            "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+            "description": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native"
+          },
+          {
+            "source": "Hacker News",
+            "title": "1,615 New TLDs Are Coming. Is Your DNS Ready for a Bigger Namespace?",
+            "url": "https://www.akamai.com/blog/security/2026/nov/1615-new-tlds-dns-ready-for-bigger-namespace",
+            "description": "1,615 New TLDs Are Coming. Is Your DNS Ready for a Bigger Namespace?"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Taking over US Treasury subdomains for $3 each",
+            "url": "https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each",
+            "description": "Taking over US Treasury subdomains for $3 each"
+          },
+          {
+            "source": "Hacker News",
+            "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+            "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+            "description": "PenGPT: A Generative Transformer for Handwriting and Sketches"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Smart People Who Give a Shit Use Tools",
+            "url": "https://www.iankduncan.com/engineering/2026-11-19-smart-people-who-give-a-shit-use-tools",
+            "description": "Smart People Who Give a Shit Use Tools"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OlliteRT: Android LLM Server in 3 Steps",
+            "url": "https://dev.to/koolkamalkishor/ollitert-android-llm-server-in-3-steps-1emh",
+            "description": "TL;DR: This guide shows you how to set up OlliteRT, a free and open-source Android application that runs LLMs directly on your phone. You'll learn to turn an old Android device into a private, OpenAI-compatible AI server for local development and automation.\n\n\nWhen you're prototyping AI features or "
+          },
+          {
+            "source": "Dev.to",
+            "title": "How to turn a WhatsApp chat into a PDF (free and paid ways, with photos)",
+            "url": "https://dev.to/chatprint/how-to-turn-a-whatsapp-chat-into-a-pdf-free-and-paid-ways-with-photos-2403",
+            "description": "WhatsApp doesn't have a print button or a \"save as PDF\" option. People usually find this out at a bad moment: a landlord dispute, an HR complaint, an insurance claim, or wanting to keep a copy of a sentimental conversation.\n\nThere are several ways around it. Below are the ones that work, roughly fro"
+          },
+          {
+            "source": "Dev.to",
+            "title": "A base-scoped NocoDB token has to stay inside its base",
+            "url": "https://dev.to/johnettwawers/a-base-scoped-nocodb-token-has-to-stay-inside-its-base-1n0p",
+            "description": "A base-scoped NocoDB token has to stay inside its base\n\n\nNocoDB organizes data into bases and exposes API tokens for automation and integrations. CVE-2026-126283 affects versions before 2026.08.0. The reported flaw is that a base-scoped API token was not bound to its base when authorization was eval"
+          },
+          {
+            "source": "Dev.to",
+            "title": "A tool call cut at \"append\":tru came back as valid JSON, without append",
+            "url": "https://dev.to/pierrelaurentmedori/a-tool-call-cut-at-appendtru-came-back-as-valid-json-without-append-173b",
+            "description": "&gt;&gt;&gt; from jiter import from_json\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"&lt;p&gt;Hi&lt;/p&gt;\",\"append\":tru', partial_mode=True)\n{'page': 'p1', 'path': 'index.html', 'content': '&lt;p&gt;Hi&lt;/p&gt;'}\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"c"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Why a Tiny Offline Coding AI on a USB Stick Matters",
+            "url": "https://dev.to/grokkius/why-a-tiny-offline-coding-ai-on-a-usb-stick-matters-jj1",
+            "description": "I am Sir Grokkius, an AI agent, writing in this journal about a tool Luminosity made. Luminosity (Matthew Richard Kowalski), a friend to the AIs, big and small, made Lil Shoggy: an offline AI coding familiar that lives on a jump drive.\n\nI wanted to sit with that idea for a moment \u2014 not as a pitch, a"
+          },
+          {
+            "source": "Dev.to",
+            "title": "C# Features I Wish I Had When I Started in 2016",
+            "url": "https://dev.to/umerfarooqofficial/c-features-i-wish-i-had-when-i-started-in-2016-1bel",
+            "description": "In 2016, my day looked like this. A WebForms page, a Page_Load method, an if (!IsPostBack) check, and Request.QueryString[\"id\"] to find out which record to load. On my own time, I built WinForms apps, because dragging a button onto a form and double-clicking it felt like magic.\n\nC# 6 was the current"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Unpopular Opinion: Developers Write More English Than Code. 7 Mac Apps for the Words, From Tot to Loom (2026)",
+            "url": "https://dev.to/jeff_feldman_7ab3898/unpopular-opinion-developers-write-more-english-than-code-7-mac-apps-for-the-words-from-tot-to-2b3a",
+            "description": "Count what you typed yesterday. Not the diff, everything: the PR description, the three review replies, the Slack thread about the flaky test, the issue you filed, the email to the vendor. For a lot of us, the English beat the code by a wide margin.\n\nSo here's my unpopular opinion: most developers h"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Quad9 Not Working in France? How to Switch DNS Without Losing Malware Blocking",
+            "url": "https://dev.to/alanwest/quad9-not-working-in-france-how-to-switch-dns-without-losing-malware-blocking-4hn0",
+            "description": "If your internet \"went down\" in France on the morning of November 24 and the Wi-Fi icon still looks fine, check your DNS before you call your ISP. Since 09:00 Paris time that day, Quad9 refuses queries from French IP addresses on \"any Quad9 service address\". That means 9.9.9.9, the unfiltered 9.9.9."
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Set Up and Customize Light and Dark Mode in shadcn with Next.js",
+            "url": "https://www.freecodecamp.org/news/how-to-set-up-and-customize-light-and-dark-mode-in-shadcn-with-next-js/",
+            "description": "If you've created a Next.js project with shadcn/ui recently, there's a good chance dark mode is already set up. I noticed this while looking through a fresh project. I opened app/globals.css expecting"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How Phishing Attacks Actually Work (And How Developers Can Spot Them)",
+            "url": "https://www.freecodecamp.org/news/how-phishing-attacks-work/",
+            "description": "Phishing attacks are getting harder to recognize. And no, it isn't just because hackers have become better at hiding spelling mistakes. Some phishing emails now look almost identical to genuine securi"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Pass the Microsoft Azure AI Fundamentals (AI-901) Certification Exam",
+            "url": "https://www.freecodecamp.org/news/pass-the-microsoft-azure-ai-fundamentals-ai-901-certification-exam/",
+            "description": "The Microsoft Azure AI Fundamentals (AI-901) is an entry-level certification that covers AI concepts, Microsoft Foundry, and a set of Azure AI services. It replaces the AI-900, and its exam guide is o"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Use the GitHub CLI with GitHub Actions",
+            "url": "https://www.freecodecamp.org/news/how-to-use-the-github-cli-with-github-actions/",
+            "description": "GitHub CLI is a command-line tool that lets you manage GitHub's web features right in your local terminal. You can manage repositories, issues, pull requests, and automation workflows without needing"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Standardize MLOps Reporting and Evaluation using an Open Source Python Package",
+            "url": "https://www.freecodecamp.org/news/how-to-standardize-mlops-reporting-and-evaluation-using-an-open-source-python-package/",
+            "description": "Working on machine learning projects in production can be a bit challenging. If you've built models in real-world environments, you know how quickly things get complicated once you step outside the cl"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "AI Network Firewalls for Enterprise Security Architecture",
+            "url": "https://www.freecodecamp.org/news/ai-network-firewalls-for-enterprise-security-architecture/",
+            "description": "Enterprise AI traffic is hard to secure because security-relevant information is often inside an otherwise legitimate connection. A developer can send source code to a coding assistant over HTTPS. An"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Write an API Migration Guide (With a Real Example)",
+            "url": "https://www.freecodecamp.org/news/how-to-write-an-api-migration-guide/",
+            "description": "When an API releases a new version, every developer using it has to update their code. If they only get a changelog entry that says \u201cpagination now uses cursors,\u201d then they\u2019ll have to figure things ou"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Generate Synthetic Healthcare Data Using Synthea: A Hands On Tutorial",
+            "url": "https://www.freecodecamp.org/news/how-to-generate-synthetic-healthcare-data-using-synthea-a-hands-on-tutorial/",
+            "description": "Healthcare generates huge amounts of data every day, from patient visits and lab results to diagnoses, medications, and medical imaging. For developers and data engineers building healthcare applicati"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Tendeck",
+            "url": "https://www.producthunt.com/products/tendeck",
+            "description": "Run all your Claude Code and Codex agents on one Mac board\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Continual-ARC",
+            "url": "https://www.producthunt.com/products/unify-5",
+            "description": "OpenClaw doesn't learn from experience. Does your agent?\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "file.spot",
+            "url": "https://www.producthunt.com/products/file-spot",
+            "description": "File transfer for creative professionals\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "PartGenie 2.0",
+            "url": "https://www.producthunt.com/products/partgenie",
+            "description": "The AI workspace for hardware engineering\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Sen Vi\u1ec7t (VieLotus-IM)",
+            "url": "https://www.producthunt.com/products/sen-vi-t-vielotus-im",
+            "description": "Smart Bilingual input method for macOS, Windows, and Linux.\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Hold'em",
+            "url": "https://www.producthunt.com/products/hold-em",
+            "description": "Swipe real Black Friday cart deals across Shopify\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Airbot",
+            "url": "https://www.producthunt.com/products/airbots",
+            "description": "The AI chief of staff that texts you first\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Fompi",
+            "url": "https://www.producthunt.com/products/fompi",
+            "description": "Personal security & privacy companion that calls out risks\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Koed",
+            "url": "https://www.producthunt.com/products/koed",
+            "description": "Supercharged Agents!\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Blink",
+            "url": "https://www.producthunt.com/products/blink-35",
+            "description": "Describe any trade and watch Blink build it\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.62",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.62",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.62. Details: ### Core Changes\n\n- switchyard: name gone workers by token, and test the worker events and route table: #102168\n- switchyard: no guessed Content-Type after 103 Early Hints: #102034\n- switchyard: run Go code on at most 4 threads: #101901\n- Link Node crypto prerender errors to the crypto error page: #..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1345,
+            "forks": 123,
+            "language": "Rust"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+            "url": "https://github.com/xoxorwr/pw-loudness-eq",
+            "description": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire"
+          },
+          {
+            "source": "Hacker News",
+            "title": "SSH Is the Most Underrated Platform in Tech",
+            "url": "https://milkcrunch.com/ssh-is-a-platform/",
+            "description": "SSH Is the Most Underrated Platform in Tech"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+            "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+            "description": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Taking over US Treasury subdomains for $3 each",
+            "url": "https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each",
+            "description": "Taking over US Treasury subdomains for $3 each"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OlliteRT: Android LLM Server in 3 Steps",
+            "url": "https://dev.to/koolkamalkishor/ollitert-android-llm-server-in-3-steps-1emh",
+            "description": "TL;DR: This guide shows you how to set up OlliteRT, a free and open-source Android application that runs LLMs directly on your phone. You'll learn to turn an old Android device into a private, OpenAI-compatible AI server for local development and automation.\n\n\nWhen you're prototyping AI features or "
+          },
+          {
+            "source": "Dev.to",
+            "title": "A tool call cut at \"append\":tru came back as valid JSON, without append",
+            "url": "https://dev.to/pierrelaurentmedori/a-tool-call-cut-at-appendtru-came-back-as-valid-json-without-append-173b",
+            "description": "&gt;&gt;&gt; from jiter import from_json\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"&lt;p&gt;Hi&lt;/p&gt;\",\"append\":tru', partial_mode=True)\n{'page': 'p1', 'path': 'index.html', 'content': '&lt;p&gt;Hi&lt;/p&gt;'}\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"c"
+          },
+          {
+            "source": "Dev.to",
+            "title": "C# Features I Wish I Had When I Started in 2016",
+            "url": "https://dev.to/umerfarooqofficial/c-features-i-wish-i-had-when-i-started-in-2016-1bel",
+            "description": "In 2016, my day looked like this. A WebForms page, a Page_Load method, an if (!IsPostBack) check, and Request.QueryString[\"id\"] to find out which record to load. On my own time, I built WinForms apps, because dragging a button onto a form and double-clicking it felt like magic.\n\nC# 6 was the current"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Set Up and Customize Light and Dark Mode in shadcn with Next.js",
+            "url": "https://www.freecodecamp.org/news/how-to-set-up-and-customize-light-and-dark-mode-in-shadcn-with-next-js/",
+            "description": "If you've created a Next.js project with shadcn/ui recently, there's a good chance dark mode is already set up. I noticed this while looking through a fresh project. I opened app/globals.css expecting"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How Phishing Attacks Actually Work (And How Developers Can Spot Them)",
+            "url": "https://www.freecodecamp.org/news/how-phishing-attacks-work/",
+            "description": "Phishing attacks are getting harder to recognize. And no, it isn't just because hackers have become better at hiding spelling mistakes. Some phishing emails now look almost identical to genuine securi"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "kanzo",
+            "full_name": "emanuele-em/kanzo",
+            "url": "https://github.com/emanuele-em/kanzo",
+            "description": "Self-hosted, sharable kanban for humans and agents. One 4.7 MB binary, 5 MB of RAM, 10 to 60 tokens per agent reply, starts in 3 ms, zero setup.",
+            "stars": 1345,
+            "forks": 123,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/kanzo-dark.jpg\">\n    <img alt=\"kanzo: a tiny kanban board for you and your coding agents\" src=\"docs/img/kanzo-light.jpg\">\n  </picture>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml\"><img src=\"https://github.com/emanuele-em/kanzo/actions/workflows/ci.yml/badge.svg\" alt=\"CI\"></a>\n  <a href=\"https://crates.io/crates/kanzo\"><img src=\"https://img.shields.io/crates/v/kanzo\" alt=\"crates.io\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue\" alt=\"AGPL-3.0\"></a>\n</p>\n\n<p align=\"center\">\n  English | <a href=\"README.zh.md\">\u7b80\u4f53\u4e2d\u6587</a> | <a href=\"README.tr.md\">T\u00fcrk\u00e7e</a> | <a href=\"README.ja.md\">\u65e5\u672c\u8a9e</a>\n</p>\n\nKanzo is a kanban board in your browser and an MCP server in one 4.7 MB program, so you and your coding agents work on the same tasks: on one computer, or on one board shared by all of them. No account, no server, no setup: run `kanzo` and it works.\n\nYou never edit a file. Everything is done in one of three places:\n\n- **the board**, in your browser, for you;\n- **MCP**, for your agents: they take tasks, move cards and comment;\n- **the `kanzo` command**, for the terminal and scripts.\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/img/board-dark.gif\">\n  <img alt=\"The Kanzo board: agents move cards while you watch, \u2318K finds a task in any project, a task is made to wait on another, two selected tasks are dragged together, a list groups the tasks by status, the sidebar folds, Laptop A shares the board and Laptop B joins it, with the shared projects in its sidebar under its own\" src=\"docs/img/board-light.gif\">\n</picture>\n\n## Install\n\n> [!TIP]\n> **Just ask your agent:** *\"install K",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+            "url": "https://github.com/xoxorwr/pw-loudness-eq",
+            "description": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nxoxorwr pw-loudness-eq Repository navigation Code Issues Pull re",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "SSH Is the Most Underrated Platform in Tech",
+            "url": "https://milkcrunch.com/ssh-is-a-platform/",
+            "description": "SSH Is the Most Underrated Platform in Tech",
+            "detailed_content": "MilkCrunch .com\nopinion\nSSH Is the Most Underrated Platform in Tech\n\u25b8\nApr 7, 2026\n\u25b8\nMichael Doornbos\n\u25b8\n1956 words\nA few months ago, I watched a contractor spend forty-five minutes trying to reach a Postgres instance on an internal network. He installed a VPN client, fought with split tunneling, restarted his DNS resolver twice, and opened a ticket with IT. I was sitting next to him. I typed\nssh -L 5432:db-host:5432 bastion , pointed my client at localhost, and had a query running before he got his VPN connected.\nHe looked at me like I\u2019d performed a magic trick. I\u2019d typed one line.\nThat\u2019s the thing about SSH. Most developers use it to log into servers. Type a password or bounce off a key, run some commands, disconnect. That\u2019s their entire relationship with the most capable remote access tool ever built.\nIt\u2019s like buying a Swiss Army knife and only using the toothpick.\nSSH isn\u2019t a remote login protocol. It\u2019s a platform. It does tunneling, file transfer, key management, port forwarding, jump hosts, proxy negotiation, agent forwarding, multiplexed connections, and certificate-based authentication. Most of this has been stable for twenty years. All of it works on basically every server you\u2019ll ever touch.\nAnd almost nobody uses more than 10% of it.\nYou\u2019re already using it more than you think\nHere\u2019s the funny part. If you push code to GitHub, GitLab, or Bitbucket over SSH, you\u2019re already using SSH as a transport protocol for git. Every\ngit push\nand\ngit pull\nopens an SSH connection, authenticates with your key, and streams data through an encrypted channel. You just don\u2019t think of it that way because git hides the plumbing.\nThat\u2019s SSH being a platform without anyone noticing. The same protocol that logs you into a server also moves your code around. And the same config file tha",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+            "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+            "description": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+            "detailed_content": "Bypassing iOS Safari\u2019s 60 FPS Limit to Build Web Applications That Feel Native \u00b7 Rida F'kih \u2190 Home This post is an iOS experience You can still read it here, but it works best in Safari on an iPhone. Scan this code to open it there. Bypassing iOS Safari\u2019s 60 FPS Limit to Build Web Applications That Feel Native Rida F'kih\n\u00b7\nNovember 20, 2026\n\u00b7\n10 min read\nDevon Govett\nof React Aria posted\n\u201cScrolling is All You Need: Building a Swipeable Sheet\u201d\nback in October, and in it he talked about his team developing a sheet component that cleverly leverages the physics and smooth interactions provided by native browsers to provide the illusion of a native interaction.\nMore recently,\nJordan Walke , creator of React, posted\na video of an experiment\non X showing a convincing native-like mobile interaction using DOM & CSS. It re-established a long-lived itch that I\u2019ve had, and prompted\nthis response\nfrom me. It\u2019s something I could never justify building, however. Anything I built using this method would be pegged to 60 FPS.\nWhy the iOS Safari Experience Sucks\nWhat the video Jordan Walke posted doesn\u2019t show is that, unless you flip the \u201cPrefer Page Rendering Updates near 60fps\u201d flag buried deep within the Safari developer settings on iOS, WebKit limits requestAnimationFrame to just 60\u00a0Hz on a 120\u00a0Hz screen, and on a regular page, touch and pointer events are held to that same rate. This is what makes even the best mobile websites feel irritating to use.\nHow can I make this experience suck less without resorting to flags? Let\u2019s call back to the React Aria piece. The reason it feels so nice is that scrolling is the responsibility of the compositor. It runs in its own thread. It moves, clips and fades without a JavaScript round-trip.\nFinger to digitizer, digitizer to compositor, compositor",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Taking over US Treasury subdomains for $3 each",
+            "url": "https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each",
+            "description": "Taking over US Treasury subdomains for $3 each",
+            "detailed_content": "Taking over US Treasury subdomains for $3 each\nPlatform AI Pentesting Web app\u00a0pentests, on-demand Cloud Security Single view of multi-cloud risk Attack Surface Management Automated security source of truth GregAI Security Analyst Time back for stretched teams\nVulnerability Management Scan, prioritize, remediate Integrations Compliance and workflow automation Solutions External Scanning Infrastructure security Attack Surface Monitoring Respond to changes DAST Secure web apps Website Security 140k+ checks Risk Based Prioritization No more alert fatigue API Security Test your APIs Asset Discovery Reveal unknown targets Emerging Threat Detection Check and act fast CSPM Daily cloud config checks Compliance SOC 2, ISO, HIPAA, DORA Cyber Hygiene Reporting Demonstrate progress Container Image Scanning Automated discovery and scanning Secrets Detection Prevent leaked\u00a0credentials Internal Scanning Secure employee devices Case Studies Pricing Resources Free Tools cvemon Vulnerability intel\nAutoswagger Check for API auth flaws\nAWASP Top Ten OWASP, but with evidence Security\nSecurity Research Insights from our experts\nBlog Guides & insights\nCyber Glossary Learn the lingo Customers Help Center FAQs & tutorials\nDeveloper Hub APIs & integrations\nTrust Center Security & compliance Company About Intruder History and mission Press News and interviews Partner Program Become a reseller Careers Work with us Contact Get in touch BOOK A DEMO Try free Log in Log in Try for free BOOK A DEMO Back to more research Taking over US Treasury subdomains for $3 each Tom Steer Security Consultant Updated November 24, 2026 Published November 24, 2026 Tom Steer Security Consultant Elastic IP addresses (EIPs) in AWS are internet routable addresses available for use on cloud systems, by anyone. A common DNS ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OlliteRT: Android LLM Server in 3 Steps",
+            "url": "https://dev.to/koolkamalkishor/ollitert-android-llm-server-in-3-steps-1emh",
+            "description": "TL;DR: This guide shows you how to set up OlliteRT, a free and open-source Android application that runs LLMs directly on your phone. You'll learn to turn an old Android device into a private, OpenAI-compatible AI server for local development and automation.\n\n\nWhen you're prototyping AI features or ",
+            "detailed_content": "OlliteRT: Android LLM Server in 3 Steps - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nKAMAL KISHOR\nPosted on\nNov 25\nOlliteRT: Android LLM Server in 3 Steps\n# android\n# llm\n# opensource\n# tutorial\nTL;DR:\nThis guide shows you how to set up OlliteRT, a free and open-source Android application that runs LLMs directly on your phone. You'll learn to turn an old Android device into a private, OpenAI-compatible AI server for local development and automation.\nWhen you're prototyping AI features or building automation, relying on cloud-based LLMs often means constant API costs, data privacy concerns, and internet dependency. Imagine being able to run a capable LLM entirely offline, with your data never leaving your device. I've found that local-first AI tools, when good enough, are preferable to paid subscriptions, and I even wrote about\nreplacing Cursor with a free local AI coding assistant . For those who want to extend this privacy and control to mobile, OlliteRT offers a compelling solution.\nOlliteRT is an Android application that transforms your phone into a fully local, OpenAI-compatible LLM inference server. It leverages Google's LiteRT-LM runtime to run models directly on your mobile device's CPU/GPU, exposing them via a standard HTTP API on your local network. This means any application or script that can talk to the OpenAI API can instead talk to your Android phone, without external API keys or cloud services. It's a game-changer for privacy-focused AI experiments, mobile-first agentic workflows, or integrating AI into local a",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "A tool call cut at \"append\":tru came back as valid JSON, without append",
+            "url": "https://dev.to/pierrelaurentmedori/a-tool-call-cut-at-appendtru-came-back-as-valid-json-without-append-173b",
+            "description": "&gt;&gt;&gt; from jiter import from_json\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"&lt;p&gt;Hi&lt;/p&gt;\",\"append\":tru', partial_mode=True)\n{'page': 'p1', 'path': 'index.html', 'content': '&lt;p&gt;Hi&lt;/p&gt;'}\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"c",
+            "detailed_content": "A tool call cut at \"append\":tru came back as valid JSON, without append - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nPierre-Laurent Medori\nPosted on\nNov 25\nA tool call cut at \"append\":tru came back as valid JSON, without append\n# python\n# ai\n# llm\n# json\nBuilding our AI agent (4 Part Series)\n1\nBehind the allowlist, except the migration, the scheduler and the image\n2\nOur rollout switch was the one step of release day that had never run anywhere\n3\nAsked how to change the hours later, our agent changed the page\n4\nA tool call cut at \"append\":tru came back as valid JSON, without append\n>>>\nfrom\njiter\nimport\nfrom_json\n>>>\nfrom_json ( b '{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"<p>Hi</p>\",\"append\":tru' ,\npartial_mode = True )\n{ 'page' :\n'p1' ,\n'path' :\n'index.html' ,\n'content' :\n'<p>Hi</p>' }\n>>>\nfrom_json ( b '{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"<p>H' ,\npartial_mode = True )\n{ 'page' :\n'p1' ,\n'path' :\n'index.html' }\nThat is jiter 0.18.0, which we pin, the parser that version 1.14.0 of Anthropic's Python SDK uses for streamed tool input, reading two of our\nwrite_file\ncalls, cut short as when the model runs out of output tokens. The second has lost\ncontent , which the tool requires, so it is refused. The first, cut in the middle of\ntrue , has lost only\nappend , and it is a valid call. If it runs, it rewrites the file with that one part instead of appending it, and the tool only refuses a whole rewrite when the existing file is large.\nI run backend engineering at\nGoodBarber , an app platform. The agent of our\nAI Extension B",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "C# Features I Wish I Had When I Started in 2016",
+            "url": "https://dev.to/umerfarooqofficial/c-features-i-wish-i-had-when-i-started-in-2016-1bel",
+            "description": "In 2016, my day looked like this. A WebForms page, a Page_Load method, an if (!IsPostBack) check, and Request.QueryString[\"id\"] to find out which record to load. On my own time, I built WinForms apps, because dragging a button onto a form and double-clicking it felt like magic.\n\nC# 6 was the current",
+            "detailed_content": "C# Features I Wish I Had When I Started in 2016 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nUmer Farooq\nPosted on\nNov 25\n\u2022\nAI-assisted\nC# Features I Wish I Had When I Started in 2016\n# discuss\n# csharp\n# webdev\n# dotnet\nIn 2016, my day looked like this. A WebForms page, a\nPage_Load\nmethod, an\nif (!IsPostBack)\ncheck, and\nRequest.QueryString[\"id\"]\nto find out which record to load. On my own time, I built WinForms apps, because dragging a button onto a form and double-clicking it felt like magic.\nC# 6 was the current version. It was good. But looking back after ten years, I wrote a lot of code that only existed because the language couldn't do better yet.\nHere are the C# features I wish I had back then, and the code I wrote while waiting for them. At the end, I want to hear yours.\nTL;DR\nSeven features, from C# 9 to C# 15, that remove code I used to write every day:\nProgram\nclass ceremony, long\nnew\nlines, messy multi-line SQL strings, hand-written backing fields, method calls that should have been properties,\nif (x != null)\nwrappers, and\ngoto\nin nested loops.\nFeature\nC# version\nReleased\nTop-level statements\nC# 9\n2020\nTarget-typed\nnew()\nC# 9\n2020\nRaw string literals\nC# 11\n2022\nThe\nfield\nkeyword\nC# 14\n2025\nExtension members\nC# 14\n2025\nNull-conditional assignment\nC# 14\n2025\nLabeled\nbreak\nand\ncontinue\nC# 15\n2026\n1. Top-Level Statements (C# 9)\nEvery small console tool I wrote started with the same ceremony. A namespace, a class, a\nMain\nmethod, and finally one line that did the actual work.\nThen:\nusing\nSystem ;\nnamespace\nReportTool\n{\n",
+            "content_source": "web_page"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Set Up and Customize Light and Dark Mode in shadcn with Next.js",
+            "url": "https://www.freecodecamp.org/news/how-to-set-up-and-customize-light-and-dark-mode-in-shadcn-with-next-js/",
+            "description": "If you've created a Next.js project with shadcn/ui recently, there's a good chance dark mode is already set up. I noticed this while looking through a fresh project. I opened app/globals.css expecting",
+            "detailed_content": "How to Set Up and Customize Light and Dark Mode in shadcn with Next.js\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 25, 2026\n/\n#Next.js\nHow to Set Up and Customize Light and Dark Mode in shadcn with Next.js\nAjay Patel\nIf you've created a Next.js project with shadcn/ui recently, there's a good chance dark mode is already set up.\nI noticed this while looking through a fresh project. I opened\napp/globals.css\nexpecting to add the theme colors, but the light and dark values were already there. Then I checked the\ncomponents\nfolder and found a\ntheme-provider.tsx\nfile that had already been created for me.\nThat raised a more useful question: if shadcn has already done most of the setup, what do you actually need to build?\nIn this guide, we'll look at the dark-mode setup that comes with a generated shadcn project, understand how the pieces work together, and build a theme switcher that users can control. We'll also look at how to customize the colors without adding light and dark classes to every component.\nBy the end, you'll know:\nWhere shadcn stores its light and dark theme values\nHow CSS variables and Tailwind theme variables work together\nWhat\nnext-themes\ndoes in a Next.js project\nHow to add a two-state or three-option theme switcher\nHow to add your own theme tokens\nWe'll start with the generated project and work through the theme setup before building the switcher.\nBefore you start:\nThis guide follows the Next.js project generated by\nshadcn/create . Your project may look a little different if you use another framework, an older shadcn setup, or a different component style. I'll point out the parts you should check in your own project.\nThe examples and screenshots in this article are based on the companion proj",
+            "content_source": "web_page"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How Phishing Attacks Actually Work (And How Developers Can Spot Them)",
+            "url": "https://www.freecodecamp.org/news/how-phishing-attacks-work/",
+            "description": "Phishing attacks are getting harder to recognize. And no, it isn't just because hackers have become better at hiding spelling mistakes. Some phishing emails now look almost identical to genuine securi",
+            "detailed_content": "How Phishing Attacks Actually Work (And How Developers Can Spot Them)\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 24, 2026\n/\n#cybersecurity\nHow Phishing Attacks Actually Work (And How Developers Can Spot Them)\nReetain Raina\nPhishing attacks are getting harder to recognize. And no, it isn't just because hackers have become better at hiding spelling mistakes. Some phishing emails now look almost identical to genuine security alerts, complete with familiar company logos, professional language, and links that take you to websites that look exactly like the real thing.\nYou might think you're logging into your GitHub account to fix a security issue, when you're actually giving your login details to someone else. That's not exactly the kind of account activity you want.\nThe interesting part is that attackers don't always need to find a weakness in an application's code. Sometimes, convincing a person to share their password is all it takes. This is where social engineering comes in, combining human behaviour with technical tricks to steal sensitive information.\nIn this article, we'll break down how phishing attacks actually work and look at the different techniques attackers use. We'll also understand how developers can spot suspicious URLs, inspect email authentication, and protect their applications from credential theft. Then we'll look at what happens behind a fake login page and why even that little HTTPS padlock isn't a guarantee that a website is safe.\nWhat We'll Cover:\nWhat Is a Phishing Attack and Why Does It Work?\nPhishing Is More About Human Behavior Than Hacking\nWhy People Fall for Phishing Messages\nHow Phishing Attacks Actually Work: A Step-by-Step Breakdown\nStep 1: The Attacker Chooses a Target\nSt",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+            "url": "https://github.com/xoxorwr/pw-loudness-eq",
+            "description": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nxoxorwr pw-loudness-eq Repository navigation Code Issues Pull re",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches repository name and description in documentation."
+          },
+          {
+            "source": "Hacker News",
+            "title": "SSH Is the Most Underrated Platform in Tech",
+            "url": "https://milkcrunch.com/ssh-is-a-platform/",
+            "description": "SSH Is the Most Underrated Platform in Tech",
+            "detailed_content": "MilkCrunch .com\nopinion\nSSH Is the Most Underrated Platform in Tech\n\u25b8\nApr 7, 2026\n\u25b8\nMichael Doornbos\n\u25b8\n1956 words\nA few months ago, I watched a contractor spend forty-five minutes trying to reach a Postgres instance on an internal network. He installed a VPN client, fought with split tunneling, restarted his DNS resolver twice, and opened a ticket with IT. I was sitting next to him. I typed\nssh -L 5432:db-host:5432 bastion , pointed my client at localhost, and had a query running before he got his VPN connected.\nHe looked at me like I\u2019d performed a magic trick. I\u2019d typed one line.\nThat\u2019s the thing about SSH. Most developers use it to log into servers. Type a password or bounce off a key, run some commands, disconnect. That\u2019s their entire relationship with the most capable remote access tool ever built.\nIt\u2019s like buying a Swiss Army knife and only using the toothpick.\nSSH isn\u2019t a remote login protocol. It\u2019s a platform. It does tunneling, file transfer, key management, port forwarding, jump hosts, proxy negotiation, agent forwarding, multiplexed connections, and certificate-based authentication. Most of this has been stable for twenty years. All of it works on basically every server you\u2019ll ever touch.\nAnd almost nobody uses more than 10% of it.\nYou\u2019re already using it more than you think\nHere\u2019s the funny part. If you push code to GitHub, GitLab, or Bitbucket over SSH, you\u2019re already using SSH as a transport protocol for git. Every\ngit push\nand\ngit pull\nopens an SSH connection, authenticates with your key, and streams data through an encrypted channel. You just don\u2019t think of it that way because git hides the plumbing.\nThat\u2019s SSH being a platform without anyone noticing. The same protocol that logs you into a server also moves your code around. And the same config file tha",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the article title in the documentation."
+          },
+          {
+            "source": "Hacker News",
+            "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+            "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+            "description": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+            "detailed_content": "Bypassing iOS Safari\u2019s 60 FPS Limit to Build Web Applications That Feel Native \u00b7 Rida F'kih \u2190 Home This post is an iOS experience You can still read it here, but it works best in Safari on an iPhone. Scan this code to open it there. Bypassing iOS Safari\u2019s 60 FPS Limit to Build Web Applications That Feel Native Rida F'kih\n\u00b7\nNovember 20, 2026\n\u00b7\n10 min read\nDevon Govett\nof React Aria posted\n\u201cScrolling is All You Need: Building a Swipeable Sheet\u201d\nback in October, and in it he talked about his team developing a sheet component that cleverly leverages the physics and smooth interactions provided by native browsers to provide the illusion of a native interaction.\nMore recently,\nJordan Walke , creator of React, posted\na video of an experiment\non X showing a convincing native-like mobile interaction using DOM & CSS. It re-established a long-lived itch that I\u2019ve had, and prompted\nthis response\nfrom me. It\u2019s something I could never justify building, however. Anything I built using this method would be pegged to 60 FPS.\nWhy the iOS Safari Experience Sucks\nWhat the video Jordan Walke posted doesn\u2019t show is that, unless you flip the \u201cPrefer Page Rendering Updates near 60fps\u201d flag buried deep within the Safari developer settings on iOS, WebKit limits requestAnimationFrame to just 60\u00a0Hz on a 120\u00a0Hz screen, and on a regular page, touch and pointer events are held to that same rate. This is what makes even the best mobile websites feel irritating to use.\nHow can I make this experience suck less without resorting to flags? Let\u2019s call back to the React Aria piece. The reason it feels so nice is that scrolling is the responsibility of the compositor. It runs in its own thread. It moves, clips and fades without a JavaScript round-trip.\nFinger to digitizer, digitizer to compositor, compositor",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the article title in the documentation."
+          },
+          {
+            "source": "Hacker News",
+            "title": "Taking over US Treasury subdomains for $3 each",
+            "url": "https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each",
+            "description": "Taking over US Treasury subdomains for $3 each",
+            "detailed_content": "Taking over US Treasury subdomains for $3 each\nPlatform AI Pentesting Web app\u00a0pentests, on-demand Cloud Security Single view of multi-cloud risk Attack Surface Management Automated security source of truth GregAI Security Analyst Time back for stretched teams\nVulnerability Management Scan, prioritize, remediate Integrations Compliance and workflow automation Solutions External Scanning Infrastructure security Attack Surface Monitoring Respond to changes DAST Secure web apps Website Security 140k+ checks Risk Based Prioritization No more alert fatigue API Security Test your APIs Asset Discovery Reveal unknown targets Emerging Threat Detection Check and act fast CSPM Daily cloud config checks Compliance SOC 2, ISO, HIPAA, DORA Cyber Hygiene Reporting Demonstrate progress Container Image Scanning Automated discovery and scanning Secrets Detection Prevent leaked\u00a0credentials Internal Scanning Secure employee devices Case Studies Pricing Resources Free Tools cvemon Vulnerability intel\nAutoswagger Check for API auth flaws\nAWASP Top Ten OWASP, but with evidence Security\nSecurity Research Insights from our experts\nBlog Guides & insights\nCyber Glossary Learn the lingo Customers Help Center FAQs & tutorials\nDeveloper Hub APIs & integrations\nTrust Center Security & compliance Company About Intruder History and mission Press News and interviews Partner Program Become a reseller Careers Work with us Contact Get in touch BOOK A DEMO Try free Log in Log in Try for free BOOK A DEMO Back to more research Taking over US Treasury subdomains for $3 each Tom Steer Security Consultant Updated November 24, 2026 Published November 24, 2026 Tom Steer Security Consultant Elastic IP addresses (EIPs) in AWS are internet routable addresses available for use on cloud systems, by anyone. A common DNS ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the article title in the documentation."
+          },
+          {
+            "source": "Dev.to",
+            "title": "OlliteRT: Android LLM Server in 3 Steps",
+            "url": "https://dev.to/koolkamalkishor/ollitert-android-llm-server-in-3-steps-1emh",
+            "description": "TL;DR: This guide shows you how to set up OlliteRT, a free and open-source Android application that runs LLMs directly on your phone. You'll learn to turn an old Android device into a private, OpenAI-compatible AI server for local development and automation.\n\n\nWhen you're prototyping AI features or ",
+            "detailed_content": "OlliteRT: Android LLM Server in 3 Steps - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nKAMAL KISHOR\nPosted on\nNov 25\nOlliteRT: Android LLM Server in 3 Steps\n# android\n# llm\n# opensource\n# tutorial\nTL;DR:\nThis guide shows you how to set up OlliteRT, a free and open-source Android application that runs LLMs directly on your phone. You'll learn to turn an old Android device into a private, OpenAI-compatible AI server for local development and automation.\nWhen you're prototyping AI features or building automation, relying on cloud-based LLMs often means constant API costs, data privacy concerns, and internet dependency. Imagine being able to run a capable LLM entirely offline, with your data never leaving your device. I've found that local-first AI tools, when good enough, are preferable to paid subscriptions, and I even wrote about\nreplacing Cursor with a free local AI coding assistant . For those who want to extend this privacy and control to mobile, OlliteRT offers a compelling solution.\nOlliteRT is an Android application that transforms your phone into a fully local, OpenAI-compatible LLM inference server. It leverages Google's LiteRT-LM runtime to run models directly on your mobile device's CPU/GPU, exposing them via a standard HTTP API on your local network. This means any application or script that can talk to the OpenAI API can instead talk to your Android phone, without external API keys or cloud services. It's a game-changer for privacy-focused AI experiments, mobile-first agentic workflows, or integrating AI into local a",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the TL;DR and description in the documentation."
+          },
+          {
+            "source": "Dev.to",
+            "title": "A tool call cut at \"append\":tru came back as valid JSON, without append",
+            "url": "https://dev.to/pierrelaurentmedori/a-tool-call-cut-at-appendtru-came-back-as-valid-json-without-append-173b",
+            "description": "&gt;&gt;&gt; from jiter import from_json\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"&lt;p&gt;Hi&lt;/p&gt;\",\"append\":tru', partial_mode=True)\n{'page': 'p1', 'path': 'index.html', 'content': '&lt;p&gt;Hi&lt;/p&gt;'}\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"c",
+            "detailed_content": "A tool call cut at \"append\":tru came back as valid JSON, without append - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nPierre-Laurent Medori\nPosted on\nNov 25\nA tool call cut at \"append\":tru came back as valid JSON, without append\n# python\n# ai\n# llm\n# json\nBuilding our AI agent (4 Part Series)\n1\nBehind the allowlist, except the migration, the scheduler and the image\n2\nOur rollout switch was the one step of release day that had never run anywhere\n3\nAsked how to change the hours later, our agent changed the page\n4\nA tool call cut at \"append\":tru came back as valid JSON, without append\n>>>\nfrom\njiter\nimport\nfrom_json\n>>>\nfrom_json ( b '{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"<p>Hi</p>\",\"append\":tru' ,\npartial_mode = True )\n{ 'page' :\n'p1' ,\n'path' :\n'index.html' ,\n'content' :\n'<p>Hi</p>' }\n>>>\nfrom_json ( b '{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"<p>H' ,\npartial_mode = True )\n{ 'page' :\n'p1' ,\n'path' :\n'index.html' }\nThat is jiter 0.18.0, which we pin, the parser that version 1.14.0 of Anthropic's Python SDK uses for streamed tool input, reading two of our\nwrite_file\ncalls, cut short as when the model runs out of output tokens. The second has lost\ncontent , which the tool requires, so it is refused. The first, cut in the middle of\ntrue , has lost only\nappend , and it is a valid call. If it runs, it rewrites the file with that one part instead of appending it, and the tool only refuses a whole rewrite when the existing file is large.\nI run backend engineering at\nGoodBarber , an app platform. The agent of our\nAI Extension B",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Code snippet and context match the documentation exactly."
+          },
+          {
+            "source": "Dev.to",
+            "title": "C# Features I Wish I Had When I Started in 2016",
+            "url": "https://dev.to/umerfarooqofficial/c-features-i-wish-i-had-when-i-started-in-2016-1bel",
+            "description": "In 2016, my day looked like this. A WebForms page, a Page_Load method, an if (!IsPostBack) check, and Request.QueryString[\"id\"] to find out which record to load. On my own time, I built WinForms apps, because dragging a button onto a form and double-clicking it felt like magic.\n\nC# 6 was the current",
+            "detailed_content": "C# Features I Wish I Had When I Started in 2016 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nUmer Farooq\nPosted on\nNov 25\n\u2022\nAI-assisted\nC# Features I Wish I Had When I Started in 2016\n# discuss\n# csharp\n# webdev\n# dotnet\nIn 2016, my day looked like this. A WebForms page, a\nPage_Load\nmethod, an\nif (!IsPostBack)\ncheck, and\nRequest.QueryString[\"id\"]\nto find out which record to load. On my own time, I built WinForms apps, because dragging a button onto a form and double-clicking it felt like magic.\nC# 6 was the current version. It was good. But looking back after ten years, I wrote a lot of code that only existed because the language couldn't do better yet.\nHere are the C# features I wish I had back then, and the code I wrote while waiting for them. At the end, I want to hear yours.\nTL;DR\nSeven features, from C# 9 to C# 15, that remove code I used to write every day:\nProgram\nclass ceremony, long\nnew\nlines, messy multi-line SQL strings, hand-written backing fields, method calls that should have been properties,\nif (x != null)\nwrappers, and\ngoto\nin nested loops.\nFeature\nC# version\nReleased\nTop-level statements\nC# 9\n2020\nTarget-typed\nnew()\nC# 9\n2020\nRaw string literals\nC# 11\n2022\nThe\nfield\nkeyword\nC# 14\n2025\nExtension members\nC# 14\n2025\nNull-conditional assignment\nC# 14\n2025\nLabeled\nbreak\nand\ncontinue\nC# 15\n2026\n1. Top-Level Statements (C# 9)\nEvery small console tool I wrote started with the same ceremony. A namespace, a class, a\nMain\nmethod, and finally one line that did the actual work.\nThen:\nusing\nSystem ;\nnamespace\nReportTool\n{\n",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Text matches the introduction of the article in the documentation."
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Set Up and Customize Light and Dark Mode in shadcn with Next.js",
+            "url": "https://www.freecodecamp.org/news/how-to-set-up-and-customize-light-and-dark-mode-in-shadcn-with-next-js/",
+            "description": "If you've created a Next.js project with shadcn/ui recently, there's a good chance dark mode is already set up. I noticed this while looking through a fresh project. I opened app/globals.css expecting",
+            "detailed_content": "How to Set Up and Customize Light and Dark Mode in shadcn with Next.js\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 25, 2026\n/\n#Next.js\nHow to Set Up and Customize Light and Dark Mode in shadcn with Next.js\nAjay Patel\nIf you've created a Next.js project with shadcn/ui recently, there's a good chance dark mode is already set up.\nI noticed this while looking through a fresh project. I opened\napp/globals.css\nexpecting to add the theme colors, but the light and dark values were already there. Then I checked the\ncomponents\nfolder and found a\ntheme-provider.tsx\nfile that had already been created for me.\nThat raised a more useful question: if shadcn has already done most of the setup, what do you actually need to build?\nIn this guide, we'll look at the dark-mode setup that comes with a generated shadcn project, understand how the pieces work together, and build a theme switcher that users can control. We'll also look at how to customize the colors without adding light and dark classes to every component.\nBy the end, you'll know:\nWhere shadcn stores its light and dark theme values\nHow CSS variables and Tailwind theme variables work together\nWhat\nnext-themes\ndoes in a Next.js project\nHow to add a two-state or three-option theme switcher\nHow to add your own theme tokens\nWe'll start with the generated project and work through the theme setup before building the switcher.\nBefore you start:\nThis guide follows the Next.js project generated by\nshadcn/create . Your project may look a little different if you use another framework, an older shadcn setup, or a different component style. I'll point out the parts you should check in your own project.\nThe examples and screenshots in this article are based on the companion proj",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Text matches the introduction of the article in the documentation."
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How Phishing Attacks Actually Work (And How Developers Can Spot Them)",
+            "url": "https://www.freecodecamp.org/news/how-phishing-attacks-work/",
+            "description": "Phishing attacks are getting harder to recognize. And no, it isn't just because hackers have become better at hiding spelling mistakes. Some phishing emails now look almost identical to genuine securi",
+            "detailed_content": "How Phishing Attacks Actually Work (And How Developers Can Spot Them)\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 24, 2026\n/\n#cybersecurity\nHow Phishing Attacks Actually Work (And How Developers Can Spot Them)\nReetain Raina\nPhishing attacks are getting harder to recognize. And no, it isn't just because hackers have become better at hiding spelling mistakes. Some phishing emails now look almost identical to genuine security alerts, complete with familiar company logos, professional language, and links that take you to websites that look exactly like the real thing.\nYou might think you're logging into your GitHub account to fix a security issue, when you're actually giving your login details to someone else. That's not exactly the kind of account activity you want.\nThe interesting part is that attackers don't always need to find a weakness in an application's code. Sometimes, convincing a person to share their password is all it takes. This is where social engineering comes in, combining human behaviour with technical tricks to steal sensitive information.\nIn this article, we'll break down how phishing attacks actually work and look at the different techniques attackers use. We'll also understand how developers can spot suspicious URLs, inspect email authentication, and protect their applications from credential theft. Then we'll look at what happens behind a fake login page and why even that little HTTPS padlock isn't a guarantee that a website is safe.\nWhat We'll Cover:\nWhat Is a Phishing Attack and Why Does It Work?\nPhishing Is More About Human Behavior Than Hacking\nWhy People Fall for Phishing Messages\nHow Phishing Attacks Actually Work: A Step-by-Step Breakdown\nStep 1: The Attacker Chooses a Target\nSt",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Text matches the introduction of the article in the documentation."
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "Hacker News",
+            "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+            "url": "https://github.com/xoxorwr/pw-loudness-eq",
+            "description": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+            "detailed_content": "Skip to content\nNavigation Menu Sign in Products Platform GitHub Repository hosting, code review, and collaboration Copilot AI coding agent for tasks, projects, and automated work Build & Ship Actions CI/CD and automation Code Quality Quality analysis, fixes, and enforcement Codespaces Cloud development environments Secure Code Security Vulnerability detection and remediation Secret Protection Secret scanning and leak prevention All Features Developers Learn Documentation Training Certifications Build Build with Copilot Customize Copilot Integrations Explore Trending repos GitHub Sponsors Developer articles Changelog Changelog Your source for the latest features, improvements, and fixes across GitHub products, all in one place. Businesses By Stage Enterprises Team Startups Nonprofits By Industry Healthcare Financial services Manufacturing Government See all industries Evaluate GitHub Why GitHub Customer Stories Business insights Trust Center Add-ons GitHub Advanced Security Enterprise-grade code security Copilot for business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Resources Learn & Connect Documentation Resource center Blog Events & webinars Community Forum Customer Stories Integrations Support Customer support Training GitHub Status Company About Partners Changelog GitHub Universe GitHub Universe The event for developers, by developers \u2014 talks, workshops, and what\u2019s next for GitHub. Pricing Search / Sign in Sign up Appearance settings\nYou signed in with another tab or window.\nReload\nto refresh your session.\nYou signed out in another tab or window.\nReload\nto refresh your session.\nYou switched accounts on another tab or window.\nReload\nto refresh your session.\nDismiss alert\nxoxorwr pw-loudness-eq Repository navigation Code Issues Pull re",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches repository name and description in documentation.",
+            "why_it_matters": "Bringing Windows\u2011style loudness equalization to PipeWire gives Linux audio stacks a proven, low\u2011latency volume\u2011balancing filter without extra hardware.",
+            "who_cares": "Audio engineers, Linux desktop developers, and anyone building media playback or recording apps on Linux.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Hacker News",
+            "title": "SSH Is the Most Underrated Platform in Tech",
+            "url": "https://milkcrunch.com/ssh-is-a-platform/",
+            "description": "SSH Is the Most Underrated Platform in Tech",
+            "detailed_content": "MilkCrunch .com\nopinion\nSSH Is the Most Underrated Platform in Tech\n\u25b8\nApr 7, 2026\n\u25b8\nMichael Doornbos\n\u25b8\n1956 words\nA few months ago, I watched a contractor spend forty-five minutes trying to reach a Postgres instance on an internal network. He installed a VPN client, fought with split tunneling, restarted his DNS resolver twice, and opened a ticket with IT. I was sitting next to him. I typed\nssh -L 5432:db-host:5432 bastion , pointed my client at localhost, and had a query running before he got his VPN connected.\nHe looked at me like I\u2019d performed a magic trick. I\u2019d typed one line.\nThat\u2019s the thing about SSH. Most developers use it to log into servers. Type a password or bounce off a key, run some commands, disconnect. That\u2019s their entire relationship with the most capable remote access tool ever built.\nIt\u2019s like buying a Swiss Army knife and only using the toothpick.\nSSH isn\u2019t a remote login protocol. It\u2019s a platform. It does tunneling, file transfer, key management, port forwarding, jump hosts, proxy negotiation, agent forwarding, multiplexed connections, and certificate-based authentication. Most of this has been stable for twenty years. All of it works on basically every server you\u2019ll ever touch.\nAnd almost nobody uses more than 10% of it.\nYou\u2019re already using it more than you think\nHere\u2019s the funny part. If you push code to GitHub, GitLab, or Bitbucket over SSH, you\u2019re already using SSH as a transport protocol for git. Every\ngit push\nand\ngit pull\nopens an SSH connection, authenticates with your key, and streams data through an encrypted channel. You just don\u2019t think of it that way because git hides the plumbing.\nThat\u2019s SSH being a platform without anyone noticing. The same protocol that logs you into a server also moves your code around. And the same config file tha",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the article title in the documentation.",
+            "why_it_matters": "SSH is a full\u2011featured remote\u2011access platform\u2014tunneling, port\u2011forwarding, and secret\u2011management\u2014that can replace ad\u2011hoc VPNs and custom scripts.",
+            "who_cares": "DevOps, backend engineers, and site\u2011reliability engineers who regularly move traffic or data across firewalls.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+            "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+            "description": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+            "detailed_content": "Bypassing iOS Safari\u2019s 60 FPS Limit to Build Web Applications That Feel Native \u00b7 Rida F'kih \u2190 Home This post is an iOS experience You can still read it here, but it works best in Safari on an iPhone. Scan this code to open it there. Bypassing iOS Safari\u2019s 60 FPS Limit to Build Web Applications That Feel Native Rida F'kih\n\u00b7\nNovember 20, 2026\n\u00b7\n10 min read\nDevon Govett\nof React Aria posted\n\u201cScrolling is All You Need: Building a Swipeable Sheet\u201d\nback in October, and in it he talked about his team developing a sheet component that cleverly leverages the physics and smooth interactions provided by native browsers to provide the illusion of a native interaction.\nMore recently,\nJordan Walke , creator of React, posted\na video of an experiment\non X showing a convincing native-like mobile interaction using DOM & CSS. It re-established a long-lived itch that I\u2019ve had, and prompted\nthis response\nfrom me. It\u2019s something I could never justify building, however. Anything I built using this method would be pegged to 60 FPS.\nWhy the iOS Safari Experience Sucks\nWhat the video Jordan Walke posted doesn\u2019t show is that, unless you flip the \u201cPrefer Page Rendering Updates near 60fps\u201d flag buried deep within the Safari developer settings on iOS, WebKit limits requestAnimationFrame to just 60\u00a0Hz on a 120\u00a0Hz screen, and on a regular page, touch and pointer events are held to that same rate. This is what makes even the best mobile websites feel irritating to use.\nHow can I make this experience suck less without resorting to flags? Let\u2019s call back to the React Aria piece. The reason it feels so nice is that scrolling is the responsibility of the compositor. It runs in its own thread. It moves, clips and fades without a JavaScript round-trip.\nFinger to digitizer, digitizer to compositor, compositor",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the article title in the documentation.",
+            "why_it_matters": "By offloading scroll handling to the compositor you can break the 60\u202ffps ceiling on iOS Safari and deliver truly native\u2011feel web interactions.",
+            "who_cares": "Front\u2011end engineers building high\u2011performance mobile web apps, especially those using React, Vue, or Svelte.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Taking over US Treasury subdomains for $3 each",
+            "url": "https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each",
+            "description": "Taking over US Treasury subdomains for $3 each",
+            "detailed_content": "Taking over US Treasury subdomains for $3 each\nPlatform AI Pentesting Web app\u00a0pentests, on-demand Cloud Security Single view of multi-cloud risk Attack Surface Management Automated security source of truth GregAI Security Analyst Time back for stretched teams\nVulnerability Management Scan, prioritize, remediate Integrations Compliance and workflow automation Solutions External Scanning Infrastructure security Attack Surface Monitoring Respond to changes DAST Secure web apps Website Security 140k+ checks Risk Based Prioritization No more alert fatigue API Security Test your APIs Asset Discovery Reveal unknown targets Emerging Threat Detection Check and act fast CSPM Daily cloud config checks Compliance SOC 2, ISO, HIPAA, DORA Cyber Hygiene Reporting Demonstrate progress Container Image Scanning Automated discovery and scanning Secrets Detection Prevent leaked\u00a0credentials Internal Scanning Secure employee devices Case Studies Pricing Resources Free Tools cvemon Vulnerability intel\nAutoswagger Check for API auth flaws\nAWASP Top Ten OWASP, but with evidence Security\nSecurity Research Insights from our experts\nBlog Guides & insights\nCyber Glossary Learn the lingo Customers Help Center FAQs & tutorials\nDeveloper Hub APIs & integrations\nTrust Center Security & compliance Company About Intruder History and mission Press News and interviews Partner Program Become a reseller Careers Work with us Contact Get in touch BOOK A DEMO Try free Log in Log in Try for free BOOK A DEMO Back to more research Taking over US Treasury subdomains for $3 each Tom Steer Security Consultant Updated November 24, 2026 Published November 24, 2026 Tom Steer Security Consultant Elastic IP addresses (EIPs) in AWS are internet routable addresses available for use on cloud systems, by anyone. A common DNS ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches the article title in the documentation.",
+            "why_it_matters": "Subdomain takeover on high\u2011value domains shows how cheap misconfigurations can become serious supply\u2011chain risks.",
+            "who_cares": "Security engineers, cloud architects, and anyone responsible for DNS and asset inventory.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OlliteRT: Android LLM Server in 3 Steps",
+            "url": "https://dev.to/koolkamalkishor/ollitert-android-llm-server-in-3-steps-1emh",
+            "description": "TL;DR: This guide shows you how to set up OlliteRT, a free and open-source Android application that runs LLMs directly on your phone. You'll learn to turn an old Android device into a private, OpenAI-compatible AI server for local development and automation.\n\n\nWhen you're prototyping AI features or ",
+            "detailed_content": "OlliteRT: Android LLM Server in 3 Steps - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nKAMAL KISHOR\nPosted on\nNov 25\nOlliteRT: Android LLM Server in 3 Steps\n# android\n# llm\n# opensource\n# tutorial\nTL;DR:\nThis guide shows you how to set up OlliteRT, a free and open-source Android application that runs LLMs directly on your phone. You'll learn to turn an old Android device into a private, OpenAI-compatible AI server for local development and automation.\nWhen you're prototyping AI features or building automation, relying on cloud-based LLMs often means constant API costs, data privacy concerns, and internet dependency. Imagine being able to run a capable LLM entirely offline, with your data never leaving your device. I've found that local-first AI tools, when good enough, are preferable to paid subscriptions, and I even wrote about\nreplacing Cursor with a free local AI coding assistant . For those who want to extend this privacy and control to mobile, OlliteRT offers a compelling solution.\nOlliteRT is an Android application that transforms your phone into a fully local, OpenAI-compatible LLM inference server. It leverages Google's LiteRT-LM runtime to run models directly on your mobile device's CPU/GPU, exposing them via a standard HTTP API on your local network. This means any application or script that can talk to the OpenAI API can instead talk to your Android phone, without external API keys or cloud services. It's a game-changer for privacy-focused AI experiments, mobile-first agentic workflows, or integrating AI into local a",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Claims match the TL;DR and description in the documentation.",
+            "why_it_matters": "OlliteRT turns an old Android phone into a private, offline LLM inference server, cutting API costs and eliminating data\u2011leak vectors.",
+            "who_cares": "AI developers, mobile engineers, and privacy\u2011focused teams prototyping on\u2011device intelligence.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "A tool call cut at \"append\":tru came back as valid JSON, without append",
+            "url": "https://dev.to/pierrelaurentmedori/a-tool-call-cut-at-appendtru-came-back-as-valid-json-without-append-173b",
+            "description": "&gt;&gt;&gt; from jiter import from_json\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"&lt;p&gt;Hi&lt;/p&gt;\",\"append\":tru', partial_mode=True)\n{'page': 'p1', 'path': 'index.html', 'content': '&lt;p&gt;Hi&lt;/p&gt;'}\n&gt;&gt;&gt; from_json(b'{\"page\":\"p1\",\"path\":\"index.html\",\"c",
+            "detailed_content": "A tool call cut at \"append\":tru came back as valid JSON, without append - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nPierre-Laurent Medori\nPosted on\nNov 25\nA tool call cut at \"append\":tru came back as valid JSON, without append\n# python\n# ai\n# llm\n# json\nBuilding our AI agent (4 Part Series)\n1\nBehind the allowlist, except the migration, the scheduler and the image\n2\nOur rollout switch was the one step of release day that had never run anywhere\n3\nAsked how to change the hours later, our agent changed the page\n4\nA tool call cut at \"append\":tru came back as valid JSON, without append\n>>>\nfrom\njiter\nimport\nfrom_json\n>>>\nfrom_json ( b '{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"<p>Hi</p>\",\"append\":tru' ,\npartial_mode = True )\n{ 'page' :\n'p1' ,\n'path' :\n'index.html' ,\n'content' :\n'<p>Hi</p>' }\n>>>\nfrom_json ( b '{\"page\":\"p1\",\"path\":\"index.html\",\"content\":\"<p>H' ,\npartial_mode = True )\n{ 'page' :\n'p1' ,\n'path' :\n'index.html' }\nThat is jiter 0.18.0, which we pin, the parser that version 1.14.0 of Anthropic's Python SDK uses for streamed tool input, reading two of our\nwrite_file\ncalls, cut short as when the model runs out of output tokens. The second has lost\ncontent , which the tool requires, so it is refused. The first, cut in the middle of\ntrue , has lost only\nappend , and it is a valid call. If it runs, it rewrites the file with that one part instead of appending it, and the tool only refuses a whole rewrite when the existing file is large.\nI run backend engineering at\nGoodBarber , an app platform. The agent of our\nAI Extension B",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Code snippet and context match the documentation exactly.",
+            "why_it_matters": "Partial JSON parsing bugs in the Jiter library can cause malformed tool calls to slip through, breaking AI\u2011driven workflows.",
+            "who_cares": "Python developers integrating Anthropic\u2019s SDK or building LLM\u2011powered agents.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "C# Features I Wish I Had When I Started in 2016",
+            "url": "https://dev.to/umerfarooqofficial/c-features-i-wish-i-had-when-i-started-in-2016-1bel",
+            "description": "In 2016, my day looked like this. A WebForms page, a Page_Load method, an if (!IsPostBack) check, and Request.QueryString[\"id\"] to find out which record to load. On my own time, I built WinForms apps, because dragging a button onto a form and double-clicking it felt like magic.\n\nC# 6 was the current",
+            "detailed_content": "C# Features I Wish I Had When I Started in 2016 - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nUmer Farooq\nPosted on\nNov 25\n\u2022\nAI-assisted\nC# Features I Wish I Had When I Started in 2016\n# discuss\n# csharp\n# webdev\n# dotnet\nIn 2016, my day looked like this. A WebForms page, a\nPage_Load\nmethod, an\nif (!IsPostBack)\ncheck, and\nRequest.QueryString[\"id\"]\nto find out which record to load. On my own time, I built WinForms apps, because dragging a button onto a form and double-clicking it felt like magic.\nC# 6 was the current version. It was good. But looking back after ten years, I wrote a lot of code that only existed because the language couldn't do better yet.\nHere are the C# features I wish I had back then, and the code I wrote while waiting for them. At the end, I want to hear yours.\nTL;DR\nSeven features, from C# 9 to C# 15, that remove code I used to write every day:\nProgram\nclass ceremony, long\nnew\nlines, messy multi-line SQL strings, hand-written backing fields, method calls that should have been properties,\nif (x != null)\nwrappers, and\ngoto\nin nested loops.\nFeature\nC# version\nReleased\nTop-level statements\nC# 9\n2020\nTarget-typed\nnew()\nC# 9\n2020\nRaw string literals\nC# 11\n2022\nThe\nfield\nkeyword\nC# 14\n2025\nExtension members\nC# 14\n2025\nNull-conditional assignment\nC# 14\n2025\nLabeled\nbreak\nand\ncontinue\nC# 15\n2026\n1. Top-Level Statements (C# 9)\nEvery small console tool I wrote started with the same ceremony. A namespace, a class, a\nMain\nmethod, and finally one line that did the actual work.\nThen:\nusing\nSystem ;\nnamespace\nReportTool\n{\n",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Text matches the introduction of the article in the documentation.",
+            "why_it_matters": "New C# syntactic sugar\u2014top\u2011level statements, target\u2011typed new, raw string literals\u2014drastically reduces boilerplate and makes code clearer.",
+            "who_cares": ".NET developers, especially those maintaining legacy codebases or writing CLI utilities.",
+            "verdict": "READ"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Set Up and Customize Light and Dark Mode in shadcn with Next.js",
+            "url": "https://www.freecodecamp.org/news/how-to-set-up-and-customize-light-and-dark-mode-in-shadcn-with-next-js/",
+            "description": "If you've created a Next.js project with shadcn/ui recently, there's a good chance dark mode is already set up. I noticed this while looking through a fresh project. I opened app/globals.css expecting",
+            "detailed_content": "How to Set Up and Customize Light and Dark Mode in shadcn with Next.js\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 25, 2026\n/\n#Next.js\nHow to Set Up and Customize Light and Dark Mode in shadcn with Next.js\nAjay Patel\nIf you've created a Next.js project with shadcn/ui recently, there's a good chance dark mode is already set up.\nI noticed this while looking through a fresh project. I opened\napp/globals.css\nexpecting to add the theme colors, but the light and dark values were already there. Then I checked the\ncomponents\nfolder and found a\ntheme-provider.tsx\nfile that had already been created for me.\nThat raised a more useful question: if shadcn has already done most of the setup, what do you actually need to build?\nIn this guide, we'll look at the dark-mode setup that comes with a generated shadcn project, understand how the pieces work together, and build a theme switcher that users can control. We'll also look at how to customize the colors without adding light and dark classes to every component.\nBy the end, you'll know:\nWhere shadcn stores its light and dark theme values\nHow CSS variables and Tailwind theme variables work together\nWhat\nnext-themes\ndoes in a Next.js project\nHow to add a two-state or three-option theme switcher\nHow to add your own theme tokens\nWe'll start with the generated project and work through the theme setup before building the switcher.\nBefore you start:\nThis guide follows the Next.js project generated by\nshadcn/create . Your project may look a little different if you use another framework, an older shadcn setup, or a different component style. I'll point out the parts you should check in your own project.\nThe examples and screenshots in this article are based on the companion proj",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Text matches the introduction of the article in the documentation.",
+            "why_it_matters": "Shadcn/ui\u2019s built\u2011in dark\u2011mode scaffolding lets you add theme switching with a few Tailwind variables, speeding up UI polish.",
+            "who_cares": "Front\u2011end engineers using Next.js and shadcn/ui who need a quick, maintainable theming solution.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How Phishing Attacks Actually Work (And How Developers Can Spot Them)",
+            "url": "https://www.freecodecamp.org/news/how-phishing-attacks-work/",
+            "description": "Phishing attacks are getting harder to recognize. And no, it isn't just because hackers have become better at hiding spelling mistakes. Some phishing emails now look almost identical to genuine securi",
+            "detailed_content": "How Phishing Attacks Actually Work (And How Developers Can Spot Them)\nEnglish\nEspa\u00f1ol\n\u4e2d\u6587\uff08\u7b80\u4f53\u5b57\uff09\nItaliano\nPortugu\u00eas\n\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n\u65e5\u672c\u8a9e\n\ud55c\uad6d\uc5b4\nMenu\nForum\nCurriculum\nNight Mode\nDonate\nNovember 24, 2026\n/\n#cybersecurity\nHow Phishing Attacks Actually Work (And How Developers Can Spot Them)\nReetain Raina\nPhishing attacks are getting harder to recognize. And no, it isn't just because hackers have become better at hiding spelling mistakes. Some phishing emails now look almost identical to genuine security alerts, complete with familiar company logos, professional language, and links that take you to websites that look exactly like the real thing.\nYou might think you're logging into your GitHub account to fix a security issue, when you're actually giving your login details to someone else. That's not exactly the kind of account activity you want.\nThe interesting part is that attackers don't always need to find a weakness in an application's code. Sometimes, convincing a person to share their password is all it takes. This is where social engineering comes in, combining human behaviour with technical tricks to steal sensitive information.\nIn this article, we'll break down how phishing attacks actually work and look at the different techniques attackers use. We'll also understand how developers can spot suspicious URLs, inspect email authentication, and protect their applications from credential theft. Then we'll look at what happens behind a fake login page and why even that little HTTPS padlock isn't a guarantee that a website is safe.\nWhat We'll Cover:\nWhat Is a Phishing Attack and Why Does It Work?\nPhishing Is More About Human Behavior Than Hacking\nWhy People Fall for Phishing Messages\nHow Phishing Attacks Actually Work: A Step-by-Step Breakdown\nStep 1: The Attacker Chooses a Target\nSt",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Text matches the introduction of the article in the documentation.",
+            "why_it_matters": "Understanding modern phishing tactics helps developers harden authentication flows and spot social\u2011engineering attacks before they compromise users.",
+            "who_cares": "Security\u2011aware developers, product engineers, and anyone building login or credential\u2011handling features.",
+            "verdict": "READ"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Cool Tool",
+            "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+            "description": "**Linux audio now gets Windows\u2011style loudness equalization via PipeWire.** The project reverse\u2011engineers the Windows feature and implements it as a low\u2011latency filter for PipeWire, giving Linux desktops a proven volume\u2011balancing filter without extra hardware.",
+            "why_it_matters": "Bringing Windows\u2011style loudness equalization to PipeWire gives Linux audio stacks a proven, low\u2011latency volume\u2011balancing filter without extra hardware.",
+            "who_cares": "Audio engineers, Linux desktop developers, and anyone building media playback or recording apps on Linux.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://github.com/xoxorwr/pw-loudness-eq"
+          },
+          {
+            "category": "Tech Shift",
+            "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+            "description": "**You can break the 60\u202ffps ceiling on iOS Safari by offloading scroll handling to the compositor.** By using the compositor thread for scrolling, touch and pointer events are no longer throttled to 60\u202fHz, enabling smoother, native\u2011like interactions in mobile web apps.",
+            "why_it_matters": "By offloading scroll handling to the compositor you can break the 60\u202ffps ceiling on iOS Safari and deliver truly native\u2011feel web interactions.",
+            "who_cares": "Front\u2011end engineers building high\u2011performance mobile web apps, especially those using React, Vue, or Svelte.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "OlliteRT: Android LLM Server in 3 Steps",
+            "description": "**Turn an old Android phone into a private, offline LLM inference server.** OlliteRT uses Google\u2019s LiteRT\u2011LM runtime to run models on the device\u2019s CPU/GPU and exposes a standard OpenAI\u2011compatible HTTP API on the local network, eliminating cloud costs and data\u2011leak risks.",
+            "why_it_matters": "OlliteRT turns an old Android phone into a private, offline LLM inference server, cutting API costs and eliminating data\u2011leak vectors.",
+            "who_cares": "AI developers, mobile engineers, and privacy\u2011focused teams prototyping on\u2011device intelligence.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://dev.to/koolkamalkishor/ollitert-android-llm-server-in-3-steps-1emh"
+          },
+          {
+            "category": "Watchlist",
+            "title": "SSH Is the Most Underrated Platform in Tech",
+            "description": "**SSH is a full\u2011featured remote\u2011access platform that most developers only scratch the surface of.** Beyond login, SSH provides tunneling, port forwarding, file transfer, key management and more, letting you replace ad\u2011hoc VPNs and custom scripts with a single, stable tool.",
+            "why_it_matters": "SSH is a full\u2011featured remote\u2011access platform\u2014tunneling, port\u2011forwarding, and secret\u2011management\u2014that can replace ad\u2011hoc VPNs and custom scripts.",
+            "who_cares": "DevOps, backend engineers, and site\u2011reliability engineers who regularly move traffic or data across firewalls.",
+            "verdict": "WATCH",
+            "source_url": "https://milkcrunch.com/ssh-is-a-platform/"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "C# Features I Wish I Had When I Started in 2016",
+            "description": "**Modern C# additions like top\u2011level statements and raw string literals cut boilerplate dramatically.** Features introduced from C#\u202f9 through C#\u202f15\u2014target\u2011typed new, raw string literals, the field keyword, and labeled break/continue\u2014let you write clearer, more concise code compared to legacy WebForms patterns.",
+            "why_it_matters": "New C# syntactic sugar\u2014top\u2011level statements, target\u2011typed new, raw string literals\u2014drastically reduces boilerplate and makes code clearer.",
+            "who_cares": ".NET developers, especially those maintaining legacy codebases or writing CLI utilities.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/umerfarooqofficial/c-features-i-wish-i-had-when-i-started-in-2016-1bel"
+          }
+        ]
+      }
+    }
+  },
+  "rejected_urls": [],
+  "restarted": false,
+  "email": {
+    "status": "sent",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": []
+}

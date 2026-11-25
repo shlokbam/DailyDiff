@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-25",
+  "timestamp": "2026-11-25T13:24:57.260775+00:00",
+  "git_sha": "15363175486d523ea6e7c9fd21552dd3d3870535",
+  "counts": {
+    "raw_signals": 54,
+    "after_dedup": 45,
+    "skeptic_passed": 10,
+    "researched": 10,
+    "verified": 9,
+    "analyzed": 9,
+    "final": 5
+  },
+  "content_sources": {
+    "https://github.com/emanuele-em/kanzo": "readme",
+    "https://github.com/xoxorwr/pw-loudness-eq": "web_page",
+    "https://milkcrunch.com/ssh-is-a-platform/": "web_page",
+    "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit": "web_page",
+    "https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each": "web_page",
+    "https://dev.to/koolkamalkishor/ollitert-android-llm-server-in-3-steps-1emh": "web_page",
+    "https://dev.to/pierrelaurentmedori/a-tool-call-cut-at-appendtru-came-back-as-valid-json-without-append-173b": "web_page",
+    "https://dev.to/umerfarooqofficial/c-features-i-wish-i-had-when-i-started-in-2016-1bel": "web_page",
+    "https://www.freecodecamp.org/news/how-to-set-up-and-customize-light-and-dark-mode-in-shadcn-with-next-js/": "web_page",
+    "https://www.freecodecamp.org/news/how-phishing-attacks-work/": "web_page"
+  },
+  "models_used": {
+    "qwen/qwen3.8-27b": 2,
+    "openai/gpt-oss-120b": 2
+  },
+  "llm_calls": 4,
+  "durations_seconds": {
+    "skeptic": 1.12,
+    "verifier": 1.34,
+    "analyst": 3.08,
+    "editor": 5.42
+  },
+  "hard_failures": [],
+  "warnings": [],
+  "final_briefs": [
+    {
+      "category": "Cool Tool",
+      "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+      "description": "**Linux audio now gets Windows\u2011style loudness equalization via PipeWire.** The project reverse\u2011engineers the Windows feature and implements it as a low\u2011latency filter for PipeWire, giving Linux desktops a proven volume\u2011balancing filter without extra hardware.",
+      "why_it_matters": "Bringing Windows\u2011style loudness equalization to PipeWire gives Linux audio stacks a proven, low\u2011latency volume\u2011balancing filter without extra hardware.",
+      "who_cares": "Audio engineers, Linux desktop developers, and anyone building media playback or recording apps on Linux.",
+      "verdict": "INTEGRATE",
+      "source_url": "https://github.com/xoxorwr/pw-loudness-eq"
+    },
+    {
+      "category": "Tech Shift",
+      "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+      "description": "**You can break the 60\u202ffps ceiling on iOS Safari by offloading scroll handling to the compositor.** By using the compositor thread for scrolling, touch and pointer events are no longer throttled to 60\u202fHz, enabling smoother, native\u2011like interactions in mobile web apps.",
+      "why_it_matters": "By offloading scroll handling to the compositor you can break the 60\u202ffps ceiling on iOS Safari and deliver truly native\u2011feel web interactions.",
+      "who_cares": "Front\u2011end engineers building high\u2011performance mobile web apps, especially those using React, Vue, or Svelte.",
+      "verdict": "INTEGRATE",
+      "source_url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit"
+    },
+    {
+      "category": "Ecosystem Update",
+      "title": "OlliteRT: Android LLM Server in 3 Steps",
+      "description": "**Turn an old Android phone into a private, offline LLM inference server.** OlliteRT uses Google\u2019s LiteRT\u2011LM runtime to run models on the device\u2019s CPU/GPU and exposes a standard OpenAI\u2011compatible HTTP API on the local network, eliminating cloud costs and data\u2011leak risks.",
+      "why_it_matters": "OlliteRT turns an old Android phone into a private, offline LLM inference server, cutting API costs and eliminating data\u2011leak vectors.",
+      "who_cares": "AI developers, mobile engineers, and privacy\u2011focused teams prototyping on\u2011device intelligence.",
+      "verdict": "INTEGRATE",
+      "source_url": "https://dev.to/koolkamalkishor/ollitert-android-llm-server-in-3-steps-1emh"
+    },
+    {
+      "category": "Watchlist",
+      "title": "SSH Is the Most Underrated Platform in Tech",
+      "description": "**SSH is a full\u2011featured remote\u2011access platform that most developers only scratch the surface of.** Beyond login, SSH provides tunneling, port forwarding, file transfer, key management and more, letting you replace ad\u2011hoc VPNs and custom scripts with a single, stable tool.",
+      "why_it_matters": "SSH is a full\u2011featured remote\u2011access platform\u2014tunneling, port\u2011forwarding, and secret\u2011management\u2014that can replace ad\u2011hoc VPNs and custom scripts.",
+      "who_cares": "DevOps, backend engineers, and site\u2011reliability engineers who regularly move traffic or data across firewalls.",
+      "verdict": "WATCH",
+      "source_url": "https://milkcrunch.com/ssh-is-a-platform/"
+    },
+    {
+      "category": "Career & Learning",
+      "title": "C# Features I Wish I Had When I Started in 2016",
+      "description": "**Modern C# additions like top\u2011level statements and raw string literals cut boilerplate dramatically.** Features introduced from C#\u202f9 through C#\u202f15\u2014target\u2011typed new, raw string literals, the field keyword, and labeled break/continue\u2014let you write clearer, more concise code compared to legacy WebForms patterns.",
+      "why_it_matters": "New C# syntactic sugar\u2014top\u2011level statements, target\u2011typed new, raw string literals\u2014drastically reduces boilerplate and makes code clearer.",
+      "who_cares": ".NET developers, especially those maintaining legacy codebases or writing CLI utilities.",
+      "verdict": "READ",
+      "source_url": "https://dev.to/umerfarooqofficial/c-features-i-wish-i-had-when-i-started-in-2016-1bel"
+    }
+  ],
+  "status": "healthy"
+}
