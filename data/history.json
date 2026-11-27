@@ -2866,5 +2866,47 @@
         "source_url": "https://dev.to/umerfarooqofficial/c-features-i-wish-i-had-when-i-started-in-2016-1bel"
       }
     ]
+  },
+  {
+    "date": "2026-11-27",
+    "published_at": "2026-11-27T13:01:49.330376+00:00",
+    "briefs": [
+      {
+        "category": "Cool Tool",
+        "title": "rustyfiles",
+        "description": "**rustyfiles delivers a fast, never\u2011freezing file manager for Windows and macOS, built in Rust.** It offers tabs, dual panes, archive\u2011as\u2011folder support and Quick\u2011Look\u2011style previews. The README shows a folder of 100\u202f000 files opening in 281\u202fms, and the project ships binaries for Windows\u202f11 (x64\u202f|\u202fARM64) and macOS\u202f26 on Apple silicon (beta).",
+        "why_it_matters": "A Rust\u2011written file manager that stays responsive even with massive directories, showing how systems\u2011level Rust can replace native Explorer/Finder for power users.",
+        "who_cares": "Desktop application developers, Rust enthusiasts, and power users who need a fast, reliable file manager on Windows or macOS.",
+        "verdict": "WATCH",
+        "source_url": "https://github.com/gelenmedya/rustyfiles"
+      },
+      {
+        "category": "Tech Shift",
+        "title": "AI made self\u2011hosting fun again",
+        "description": "**AI coding assistants are lowering the friction of tweaking Docker\u2011Compose and scripts, reigniting enthusiasm for self\u2011hosting.** The author keeps infrastructure as code in Git (Docker Compose files, scripts) and now lets AI agents edit configurations, add services, or automate tasks, turning ideas that once required an evening of reading changelogs into quick, executable changes.",
+        "why_it_matters": "Shows how AI coding assistants can cut the friction of tweaking Docker\u2011Compose, scripts, and other infra code, reigniting enthusiasm for self\u2011hosting.",
+        "who_cares": "DevOps engineers, SREs, hobbyist sysadmins, and anyone maintaining self\u2011hosted services.",
+        "verdict": "READ",
+        "source_url": "https://janlukas.blog/posts/ai-self-hosting"
+      },
+      {
+        "category": "Career & Learning",
+        "title": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error",
+        "description": "**A practical workaround shows that a persistent 403 when sharing transcripts in Claude Code is an account\u2011side issue, not a local bug.** The suggested steps are to re\u2011run `/login` to confirm a fresh session; if the 403 remains, treat it as an Anthropic account/permission problem and copy the transcript manually as a temporary solution.",
+        "why_it_matters": "Provides a concrete workaround for a 403 error when sharing transcripts in Claude Code, saving time for developers relying on Anthropic\u2019s CLI.",
+        "who_cares": "Developers using Claude Code or other Anthropic tools in their workflow.",
+        "verdict": "READ",
+        "source_url": "https://dev.to/debugradar/fix-claude-code-couldnt-share-transcript-403-error-2oho"
+      },
+      {
+        "category": "Watchlist",
+        "title": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction",
+        "description": "**Understanding the difference between OCR and ICR helps you choose the right engine for passport data extraction in onboarding pipelines.** OCR converts printed text (including the MRZ) into machine\u2011readable characters, while ICR is designed for handwriting and more variable styles. The guide walks through the typical OCR workflow\u2014capture, preprocess, recognize, structure\u2014and explains where ICR might be needed.",
+        "why_it_matters": "Clarifies the trade\u2011offs between OCR and ICR for passport data extraction, guiding engineers to pick the right technology for identity\u2011verification pipelines.",
+        "who_cares": "Engineers building digital onboarding, KYC, or any document\u2011processing system that must read passports or similar IDs.",
+        "verdict": "READ",
+        "source_url": "https://dev.to/pixldm_c9bb7dd20f35b92525/ocr-vs-icr-a-developers-guide-to-passport-data-extraction-1pj5"
+      }
+    ]
   }
 ]

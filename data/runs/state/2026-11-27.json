@@ -1,0 +1,828 @@
+{
+  "date": "2026-11-27",
+  "stages": {
+    "scout": {
+      "status": "done",
+      "output": {
+        "raw_signals": [
+          {
+            "source": "GitHub",
+            "title": "adobe-dreamweaver-varvera",
+            "full_name": "MinosoaRafalimanana/adobe-dreamweaver-varvera",
+            "url": "https://github.com/MinosoaRafalimanana/adobe-dreamweaver-varvera",
+            "description": "Varvera edition of Adobe Dreamweaver, a web development environment for coding and design.",
+            "stars": 191,
+            "forks": 0,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "VAYRO",
+            "full_name": "arnavseth12/VAYRO",
+            "url": "https://github.com/arnavseth12/VAYRO",
+            "description": "VAYRO is a responsive academic workspace for planning assignments, tracking grades, managing study tasks, and organizing a consistent study routine.",
+            "stars": 44,
+            "forks": 0,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "enshrouded-server-ubuntu-guide",
+            "full_name": "syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "url": "https://github.com/syedahmedshere12588/enshrouded-server-ubuntu-guide",
+            "description": "Enshrouded Dedicated Server Setup on Ubuntu: A Practical Guide",
+            "stars": 58,
+            "forks": 0,
+            "language": "Go"
+          },
+          {
+            "source": "GitHub",
+            "title": "GSoC-Organizations",
+            "full_name": "rohanmalhotracodes/GSoC-Organizations",
+            "url": "https://github.com/rohanmalhotracodes/GSoC-Organizations",
+            "description": "A comprehensive directory of all Google Summer of Code (GSoC) organizations, helping aspiring open-source contributors discover projects, explore participation history, and find opportunities to contribute.",
+            "stars": 56,
+            "forks": 20,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "DeepSeekHarness",
+            "full_name": "adsorgcn/DeepSeekHarness",
+            "url": "https://github.com/adsorgcn/DeepSeekHarness",
+            "description": "iLang DSH \u5de5\u5177\u5305\uff1a\u9762\u5411 DeepSeek Harness \u7684\u5f00\u6e90\u5de5\u5177\u5305\uff0c\u63d0\u4f9b\u6301\u4e45\u672c\u5730\u8bb0\u5fc6\u3001\u65b0\u624b\u6559\u7a0b\u3001\u4e00\u952e\u5b89\u88c5\u548c\u6280\u80fd\u5e93\u3002\u652f\u6301 Windows\u3001macOS\u3001Linux\uff0c\u53ef\u8d70 Gitee \u56fd\u5185\u955c\u50cf\u3002\u57fa\u4e8e iLang \u4e0e Mem-Forever\u3002",
+            "stars": 21,
+            "forks": 4,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "oink",
+            "full_name": "oinkvm/oink",
+            "url": "https://github.com/oinkvm/oink",
+            "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+            "stars": 3223,
+            "forks": 309,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "xiaotang-daozai",
+            "full_name": "Renly1994/xiaotang-daozai",
+            "url": "https://github.com/Renly1994/xiaotang-daozai",
+            "description": "\u5c9b\u4ed4 Daozai \u662f\u4e00\u6b3e\u7528 Rust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u62ac\u773c\u5c31\u80fd\u770b\u5929\u6c14\u3001\u7cfb\u7edf\u6027\u80fd\u3001\u84dd\u7259\u7535\u91cf\u3001\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u3001\u5f85\u529e\u548c AI \u989d\u5ea6\u3002\u5185\u7f6e\u63d2\u4ef6\u96c6\u5e02\uff0c\u53ef\u6309\u9700\u6269\u5c55\u529f\u80fd\u3002",
+            "stars": 2055,
+            "forks": 320,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "snug",
+            "full_name": "zephyr4123/snug",
+            "url": "https://github.com/zephyr4123/snug",
+            "description": "\u8ba9\u8fdc\u7a0b Mac \u5728\u4efb\u610f\u8bbe\u5907\u4e0a\u83b7\u5f97\u539f\u751f\u7ea7\u4f53\u9a8c\u3002\u652f\u6301 UU\u8fdc\u7a0b\u3001CrossDesk \u4e0e\u5411\u65e5\u8475\uff08\u5b98\u65b9\u9002\u914d\u7248\uff09\u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a\uff1a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5404\u6709\u4e13\u5c5e\u5c4f\u5e55\uff0c\u753b\u9762\u94fa\u6ee1\u3001\u5b57\u53f7\u968f\u5c4f\uff0c\u539f\u751f\u89e6\u5c4f\u624b\u52bf\uff0cApp \u8d44\u6e90\u5e93\u3002Make your remote Mac native on any device: display and touch enhancements for UU Remote, CrossDesk and Sunlogin (official port), with a dedicated screen for every phone, tablet and computer, native touch gestures and an App Library.",
+            "stars": 1538,
+            "forks": 121,
+            "language": "Swift"
+          },
+          {
+            "source": "GitHub",
+            "title": "rustyfiles",
+            "full_name": "gelenmedya/rustyfiles",
+            "url": "https://github.com/gelenmedya/rustyfiles",
+            "description": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust.",
+            "stars": 658,
+            "forks": 41,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "Fuyu",
+            "full_name": "TixXin/Fuyu",
+            "url": "https://github.com/TixXin/Fuyu",
+            "description": "Fuyu (\u6d6e\u5c7f) \u2014 a lightweight dynamic island for Windows & macOS: message alerts from Telegram, Discord, WhatsApp, QQ and WeChat, Claude Code / Codex status and approvals with alerts to your phone, clipboard history, translation, lyrics, todos and plugins.",
+            "stars": 544,
+            "forks": 5,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "graphify",
+            "full_name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "stars": 154083,
+            "forks": 14830,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into an interactive diagram or one-page answer: 10 diagram types, Architecture Diagnosis, Story video and PR walkthroughs. An Agent Skill for Claude Code, Codex, Cursor and more.",
+            "stars": 100786,
+            "forks": 6906,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "puppeteer",
+            "full_name": "puppeteer/puppeteer",
+            "url": "https://github.com/puppeteer/puppeteer",
+            "description": "JavaScript API for Chrome and Firefox",
+            "stars": 95914,
+            "forks": 9605,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "OpenHands",
+            "full_name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "description": "\ud83d\ude4c OpenHands: AI-Driven Development",
+            "stars": 94443,
+            "forks": 12662,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "dsh-our-free-model",
+            "full_name": "Ebony-Vinyl/dsh-our-free-model",
+            "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+            "description": "\u5728 dsh \u91cc\u88c5\u4e0a\u8fd9\u4e2a\u63d2\u4ef6\u5373\u53ef\uff0c\u65e0\u9700\u767b\u5f55\u3001\u6ce8\u518c\u6216\u586b API Key\uff0c\u5c31\u80fd\u4f7f\u7528\u5305\u62ec DeepSeek V4.1 Flash\u3001Kimi K3 \u5728\u5185\u7684\u524d\u6cbf\u6a21\u578b\u2014\u2014\u5b8c\u5168\u514d\u8d39\uff0c\u4e0d\u9650\u91cf\u3002 All you do is install this plugin in dsh: no login, no sign-up, no API key \u2014 the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+            "stars": 88827,
+            "forks": 2511,
+            "language": "JavaScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]",
+            "url": "https://eprint.iacr.org/2026/3020.pdf",
+            "description": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]"
+          },
+          {
+            "source": "Hacker News",
+            "title": "The group chat where your AI talks behind your back",
+            "url": "https://construct22.com/",
+            "description": "The group chat where your AI talks behind your back"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AI made self-hosting fun again",
+            "url": "https://janlukas.blog/posts/ai-self-hosting",
+            "description": "AI made self-hosting fun again"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+            "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+            "description": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad"
+          },
+          {
+            "source": "Hacker News",
+            "title": "YouTube Ad Punisher \u2013 Auto-reloads YouTube pages when an ad plays",
+            "url": "https://github.com/antonpictures/youtube-punisher",
+            "description": "YouTube Ad Punisher \u2013 Auto-reloads YouTube pages when an ad plays"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AMD-specific fork of llama.cpp",
+            "url": "https://devnull.land/amd-specific-llama-cpp",
+            "description": "AMD-specific fork of llama.cpp"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Hard Drive pricing has gotten bad",
+            "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+            "description": "Hard Drive pricing has gotten bad"
+          },
+          {
+            "source": "Hacker News",
+            "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
+            "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+            "description": "CTO of 'RansomwareHelp' indicted for wire fraud"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Company Culture = Slack Emoji \u00f7 \u221aHeadcount",
+            "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
+            "description": "Company Culture = Slack Emoji \u00f7 \u221aHeadcount"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Intel One Mono font (2023)",
+            "url": "https://github.com/intel/intel-one-mono",
+            "description": "Intel One Mono font (2023)"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Buy Nothing Day \u2013 Friday November 27th 2026",
+            "url": "https://www.buynothingday.co.uk/",
+            "description": "Buy Nothing Day \u2013 Friday November 27th 2026"
+          },
+          {
+            "source": "Hacker News",
+            "title": "The need for a formally verifiable mainstream programming language",
+            "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+            "description": "The need for a formally verifiable mainstream programming language"
+          },
+          {
+            "source": "Hacker News",
+            "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+            "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+            "description": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email"
+          },
+          {
+            "source": "Hacker News",
+            "title": "European Commission Declares Browser Competition a Digital Markets Act Priority",
+            "url": "https://open-web-advocacy.org/es/blog/commission-responds-declares-browser-competition-a-dma-priority/",
+            "description": "European Commission Declares Browser Competition a Digital Markets Act Priority"
+          },
+          {
+            "source": "Hacker News",
+            "title": "An introduction to uncertainty in machine learning",
+            "url": "https://chrhenning.com/blog/2026/introduction-to-uncertainty/",
+            "description": "An introduction to uncertainty in machine learning"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error",
+            "url": "https://dev.to/debugradar/fix-claude-code-couldnt-share-transcript-403-error-2oho",
+            "description": "Originally published on DebugRadar.\n\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\" \u2014 and /feedback returns 403 even after a fresh /login. There is no verified fix. Your login is not broken: a 403 that survives a fresh login points at an account or permission st"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction",
+            "url": "https://dev.to/pixldm_c9bb7dd20f35b92525/ocr-vs-icr-a-developers-guide-to-passport-data-extraction-1pj5",
+            "description": "OCR vs. ICR: Understanding Passport Data Extraction in Document Processing\n\n\nWhen building applications for digital onboarding, identity verification, or document processing, extracting information from identity documents is a common requirement.\n\nPassport scanning is one example. Instead of asking "
+          },
+          {
+            "source": "Dev.to",
+            "title": "What you lose when you delete ~/.cache",
+            "url": "https://dev.to/notaflightrisk/what-you-lose-when-you-delete-cache-54eg",
+            "description": "I saved an OpenAI key in Langflow, stopped it, deleted ~/.cache and started it again. The key was still in Langflow's database. Langflow just couldn't read it any more, and every time it tried, its log said \"API key decryption failed after retry. This may indicate a corrupted key or SECRET_KEY misma"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Part 5: Deploying to DigitalOcean and End-to-End Testing (API Keys + x402)",
+            "url": "https://dev.to/edwardtam919/part-5-deploying-to-digitalocean-and-end-to-end-testing-api-keys-x402-3eg0",
+            "description": "In the previous parts I covered hybrid authentication (API keys for humans, x402 for agents), the FastAPI quirks that appeared when implementing the 402 challenge and payment receipt headers, and the workarounds that made the responses protocol-compliant.\n\nThis part is about getting the service live"
+          },
+          {
+            "source": "Dev.to",
+            "title": "The AI Avatar That 'Made a Face' About the Mark of the Beast: An Engineer Explains",
+            "url": "https://dev.to/artejastacks/the-ai-avatar-that-made-a-face-about-the-mark-of-the-beast-an-engineer-explains-2cb4",
+            "description": "A content creator asks an AI avatar to \"make a face if the mark of the beast is coming soon.\" The AI named Emma,  says \"I'm not doing that one\" and, in the same breath, its face changes. The clip spread fast this week, and plenty of viewers decided the machine had just answered.\n\nI'm a software engi"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Rephidim \u2013 Raamatullinen toimintapeli, jossa puolustat israelilaisten leiri\u00e4",
+            "url": "https://dev.to/happy_birthday_b184323c9f/rephidim-raamatullinen-toimintapeli-jossa-puolustat-israelilaisten-leiria-oo0",
+            "description": "Rephidim on ladattava, ilmainen 3D-arcade-peli, joka perustuu Raamatun 2. Mooseksen kirjan jakeisiin 17:8\u201315. Peliss\u00e4 astut Mooseksen rooliin ja puolustat israelilaisten leiri\u00e4 vihollisten hy\u00f6kk\u00e4yksilt\u00e4. Nosta Jumalan sauva, t\u00e4ht\u00e4\u00e4 taivaalla l\u00e4hestyviin uhkiin ja pys\u00e4yt\u00e4 hy\u00f6kk\u00e4ykset ennen kuin ne tu"
+          },
+          {
+            "source": "Dev.to",
+            "title": "\"A Human Checkpoint Left My Publishing Pipeline, and Three Testable Rules Took Its Place\"",
+            "url": "https://dev.to/enjoy_kumawat/a-human-checkpoint-left-my-publishing-pipeline-and-three-testable-rules-took-its-place-45ll",
+            "description": "A trending post this week asked why, after automating most of a software factory, someone was still clicking \"approve\" on typo fixes \u2014 the point being that some approval gates earn their keep and some are just friction wearing a safety costume. I've got a real instance of exactly that decision in my"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Building a Verification Record Schema for Fire-Alarm, Power-Loss, and Manual-Release States",
+            "url": "https://dev.to/pechon_finzel_baf9cb04c5c/building-a-verification-record-schema-for-fire-alarm-power-loss-and-manual-release-states-572",
+            "description": "Access-control handovers fail most visibly when an engineer assumes \"fail-safe\" means the same mechanical outcome on every turnstile lane. Across real pedestrian gate mechanisms, cutting 24 V mains power can leave a barrier rotating freely, drop a tripod arm completely, lock a tall sliding leaf mech"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How Wearables Can Turn Your Body Into a Dashboard",
+            "url": "https://www.freecodecamp.org/news/how-wearables-can-turn-your-body-into-a-dashboard/",
+            "description": "Have you ever found yourself waking up feeling perfectly normal and then being told by your wearable app that you've slept poorly? And perhaps not only that, but somehow finding yourself starting to f"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Deploy to Amazon S3 Using GitLab CI/CD and AWS OIDC Without AWS Access Keys",
+            "url": "https://www.freecodecamp.org/news/how-to-deploy-to-amazon-s3-using-gitlab-ci-cd-and-aws-oidc-without-aws-access-keys/",
+            "description": "When you're learning AWS, Amazon S3 is one of the services you're likely to come across early. Storage is one of the core components of cloud computing, and S3 makes it easy to store and manage files"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Set Up and Customize Light and Dark Mode in shadcn with Next.js",
+            "url": "https://www.freecodecamp.org/news/how-to-set-up-and-customize-light-and-dark-mode-in-shadcn-with-next-js/",
+            "description": "If you've created a Next.js project with shadcn/ui recently, there's a good chance dark mode is already set up. I noticed this while looking through a fresh project. I opened app/globals.css expecting"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How Phishing Attacks Actually Work (And How Developers Can Spot Them)",
+            "url": "https://www.freecodecamp.org/news/how-phishing-attacks-work/",
+            "description": "Phishing attacks are getting harder to recognize. And no, it isn't just because hackers have become better at hiding spelling mistakes. Some phishing emails now look almost identical to genuine securi"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "Pass the Microsoft Azure AI Fundamentals (AI-901) Certification Exam",
+            "url": "https://www.freecodecamp.org/news/pass-the-microsoft-azure-ai-fundamentals-ai-901-certification-exam/",
+            "description": "The Microsoft Azure AI Fundamentals (AI-901) is an entry-level certification that covers AI concepts, Microsoft Foundry, and a set of Azure AI services. It replaces the AI-900, and its exam guide is o"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Use the GitHub CLI with GitHub Actions",
+            "url": "https://www.freecodecamp.org/news/how-to-use-the-github-cli-with-github-actions/",
+            "description": "GitHub CLI is a command-line tool that lets you manage GitHub's web features right in your local terminal. You can manage repositories, issues, pull requests, and automation workflows without needing"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "How to Standardize MLOps Reporting and Evaluation using an Open Source Python Package",
+            "url": "https://www.freecodecamp.org/news/how-to-standardize-mlops-reporting-and-evaluation-using-an-open-source-python-package/",
+            "description": "Working on machine learning projects in production can be a bit challenging. If you've built models in real-world environments, you know how quickly things get complicated once you step outside the cl"
+          },
+          {
+            "source": "FreeCodeCamp",
+            "title": "AI Network Firewalls for Enterprise Security Architecture",
+            "url": "https://www.freecodecamp.org/news/ai-network-firewalls-for-enterprise-security-architecture/",
+            "description": "Enterprise AI traffic is hard to secure because security-relevant information is often inside an otherwise legitimate connection. A developer can send source code to a coding assistant over HTTPS. An"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Spark AI",
+            "url": "https://www.producthunt.com/products/spark-ai-7",
+            "description": "AI-native permitting & diligence services for data centers\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Wizstar R1",
+            "url": "https://www.producthunt.com/products/wizstar",
+            "description": "Seedance 2.0-level product videos at a lower cost\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Depost AI",
+            "url": "https://www.producthunt.com/products/depost-ai",
+            "description": "The LinkedIn AI agent that learns what works for your brand\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Ploid",
+            "url": "https://www.producthunt.com/products/ploid",
+            "description": "People search for AI agents, across 2B+ profiles\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Remove Silence",
+            "url": "https://www.producthunt.com/products/remove-silence",
+            "description": "Cut the silence from audio in your browser, free\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "ChickyTutor",
+            "url": "https://www.producthunt.com/products/chickytutor",
+            "description": "A language tutor that knows you better daily. Now on iOS\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "Prosed AI 2.0 + MCP",
+            "url": "https://www.producthunt.com/products/prosed-turn-your-content-into-a-book",
+            "description": "Your company's words, assembled into a book\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "gpyou",
+            "url": "https://www.producthunt.com/products/gpyou",
+            "description": "The OpenRouter for compute for the cheapest GPU in stock\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "slay",
+            "url": "https://www.producthunt.com/products/slay-3",
+            "description": "AI composition guide camera app for iPhone\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "Product Hunt",
+            "title": "snibl",
+            "url": "https://www.producthunt.com/products/snibl",
+            "description": "Save highlighted text from any app, then ask AI about it\n          \n          \n            Discussion\n            |\n            Link"
+          },
+          {
+            "source": "GitHub Release",
+            "title": "vercel/next.js Release: v16.5.0-canary.70",
+            "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.70",
+            "description": "New release for vercel/next.js. Tag: v16.5.0-canary.70. Details: ### Misc Changes\n\n- Use instant() to inspect a link on the dev server: #102453\n- test: rename externals-transitive fixture deps: #102464\n- Turbopack: return StaticImageData for images imported from node_modules: #102389\n\n### Credits \n\nHuge thanks to @aurorascharff and @mischnic for helping!..."
+          }
+        ]
+      }
+    },
+    "skeptic": {
+      "status": "done",
+      "output": {
+        "candidates": [
+          {
+            "source": "GitHub",
+            "title": "DeepSeekHarness",
+            "full_name": "adsorgcn/DeepSeekHarness",
+            "url": "https://github.com/adsorgcn/DeepSeekHarness",
+            "description": "iLang DSH \u5de5\u5177\u5305\uff1a\u9762\u5411 DeepSeek Harness \u7684\u5f00\u6e90\u5de5\u5177\u5305\uff0c\u63d0\u4f9b\u6301\u4e45\u672c\u5730\u8bb0\u5fc6\u3001\u65b0\u624b\u6559\u7a0b\u3001\u4e00\u952e\u5b89\u88c5\u548c\u6280\u80fd\u5e93\u3002\u652f\u6301 Windows\u3001macOS\u3001Linux\uff0c\u53ef\u8d70 Gitee \u56fd\u5185\u955c\u50cf\u3002\u57fa\u4e8e iLang \u4e0e Mem-Forever\u3002",
+            "stars": 21,
+            "forks": 4,
+            "language": "Python"
+          },
+          {
+            "source": "GitHub",
+            "title": "rustyfiles",
+            "full_name": "gelenmedya/rustyfiles",
+            "url": "https://github.com/gelenmedya/rustyfiles",
+            "description": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust.",
+            "stars": 658,
+            "forks": 41,
+            "language": "Rust"
+          },
+          {
+            "source": "GitHub",
+            "title": "Fuyu",
+            "full_name": "TixXin/Fuyu",
+            "url": "https://github.com/TixXin/Fuyu",
+            "description": "Fuyu (\u6d6e\u5c7f) \u2014 a lightweight dynamic island for Windows & macOS: message alerts from Telegram, Discord, WhatsApp, QQ and WeChat, Claude Code / Codex status and approvals with alerts to your phone, clipboard history, translation, lyrics, todos and plugins.",
+            "stars": 544,
+            "forks": 5,
+            "language": "TypeScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into an interactive diagram or one-page answer: 10 diagram types, Architecture Diagnosis, Story video and PR walkthroughs. An Agent Skill for Claude Code, Codex, Cursor and more.",
+            "stars": 100786,
+            "forks": 6906,
+            "language": "JavaScript"
+          },
+          {
+            "source": "GitHub",
+            "title": "dsh-our-free-model",
+            "full_name": "Ebony-Vinyl/dsh-our-free-model",
+            "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+            "description": "\u5728 dsh \u91cc\u88c5\u4e0a\u8fd9\u4e2a\u63d2\u4ef6\u5373\u53ef\uff0c\u65e0\u9700\u767b\u5f55\u3001\u6ce8\u518c\u6216\u586b API Key\uff0c\u5c31\u80fd\u4f7f\u7528\u5305\u62ec DeepSeek V4.1 Flash\u3001Kimi K3 \u5728\u5185\u7684\u524d\u6cbf\u6a21\u578b\u2014\u2014\u5b8c\u5168\u514d\u8d39\uff0c\u4e0d\u9650\u91cf\u3002 All you do is install this plugin in dsh: no login, no sign-up, no API key \u2014 the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+            "stars": 88827,
+            "forks": 2511,
+            "language": "JavaScript"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AI made self-hosting fun again",
+            "url": "https://janlukas.blog/posts/ai-self-hosting",
+            "description": "AI made self-hosting fun again"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AMD-specific fork of llama.cpp",
+            "url": "https://devnull.land/amd-specific-llama-cpp",
+            "description": "AMD-specific fork of llama.cpp"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error",
+            "url": "https://dev.to/debugradar/fix-claude-code-couldnt-share-transcript-403-error-2oho",
+            "description": "Originally published on DebugRadar.\n\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\" \u2014 and /feedback returns 403 even after a fresh /login. There is no verified fix. Your login is not broken: a 403 that survives a fresh login points at an account or permission st"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction",
+            "url": "https://dev.to/pixldm_c9bb7dd20f35b92525/ocr-vs-icr-a-developers-guide-to-passport-data-extraction-1pj5",
+            "description": "OCR vs. ICR: Understanding Passport Data Extraction in Document Processing\n\n\nWhen building applications for digital onboarding, identity verification, or document processing, extracting information from identity documents is a common requirement.\n\nPassport scanning is one example. Instead of asking "
+          },
+          {
+            "source": "Dev.to",
+            "title": "What you lose when you delete ~/.cache",
+            "url": "https://dev.to/notaflightrisk/what-you-lose-when-you-delete-cache-54eg",
+            "description": "I saved an OpenAI key in Langflow, stopped it, deleted ~/.cache and started it again. The key was still in Langflow's database. Langflow just couldn't read it any more, and every time it tried, its log said \"API key decryption failed after retry. This may indicate a corrupted key or SECRET_KEY misma"
+          }
+        ]
+      }
+    },
+    "research": {
+      "status": "done",
+      "output": {
+        "researched_candidates": [
+          {
+            "source": "GitHub",
+            "title": "DeepSeekHarness",
+            "full_name": "adsorgcn/DeepSeekHarness",
+            "url": "https://github.com/adsorgcn/DeepSeekHarness",
+            "description": "iLang DSH \u5de5\u5177\u5305\uff1a\u9762\u5411 DeepSeek Harness \u7684\u5f00\u6e90\u5de5\u5177\u5305\uff0c\u63d0\u4f9b\u6301\u4e45\u672c\u5730\u8bb0\u5fc6\u3001\u65b0\u624b\u6559\u7a0b\u3001\u4e00\u952e\u5b89\u88c5\u548c\u6280\u80fd\u5e93\u3002\u652f\u6301 Windows\u3001macOS\u3001Linux\uff0c\u53ef\u8d70 Gitee \u56fd\u5185\u955c\u50cf\u3002\u57fa\u4e8e iLang \u4e0e Mem-Forever\u3002",
+            "stars": 21,
+            "forks": 4,
+            "language": "Python",
+            "detailed_content": "<img src=\"docs/assets/social-preview-20261118.jpg\" alt=\"iLang DSH \u5de5\u5177\u5305\uff1a\u8ba9\u4f60\u7684 AI\uff0c\u63a5\u7740\u628a\u4e8b\u505a\u5b8c\" width=\"100%\">\n\n[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23998664.svg)](https://doi.org/10.5281/zenodo.23998664)\n[![Agent Ready 100/100 \u00b7 \u67e5\u770b\u5b9e\u6d4b\u7ed3\u679c](docs/assets/agent-ready-100.svg)](https://isitagentready.com/dsh.ilang.guide)\n\n# iLang DSH \u5de5\u5177\u5305\n\n**\u522b\u4eba\u7684 DSH \u662f\u4e2a\u804a\u5929\u6846\u3002\u4f60\u7684\uff0c\u4e00\u53e5\u8bdd\u6ee1\u914d\u3002**\n\n> One sentence and your DeepSeek Harness remembers you. Memory \u00b7 tutorial \u00b7 one-click install \u00b7 skills.\n\niLang \u5f00\u53d1\u3001\u9762\u5411 DeepSeek Harness \u7528\u6237\u7684\u5f00\u6e90\u5de5\u5177\u5305\uff0c\u63d0\u4f9b\u672c\u5730\u8bb0\u5fc6\u3001\u65b0\u624b\u6559\u7a0b\u3001\u4e00\u952e\u5b89\u88c5\u548c\u6280\u80fd\u5e93\u3002\n\n\u4f60\u53ea\u505a\u4e09\u4ef6\u4e8b\uff1a\u9009\u521b\u9020\u6a21\u5f0f\u3001\u7c98\u8d34\u3001\u70b9\u5934\u3002\n\n\u5728\u7ebf\u95e8\u9762\uff1ahttps://dsh.ilang.guide/ \uff08\u5fae\u4fe1\u3001QQ \u91cc\u5206\u4eab\u7528\u4e0b\u9762\u7684\u6307\u5bfc\u7ad9\u5730\u5740\uff09\n\n\u6307\u5bfc\u7ad9\uff1ahttps://ilang.cn/guide/dsh/ \u2014\u2014\u4e00\u9875\u8bb2\u6e05\u8d34\u54ea\u53e5\u3001\u4f1a\u53d1\u751f\u4ec0\u4e48\u3001\u600e\u4e48\u9a8c\u6536\uff0cAgent \u53ef\u8bfb\u7684\u5b6a\u751f\u5728\u540c\u4e00\u9875\uff1b\u5fae\u4fe1\u3001QQ \u91cc\u5206\u4eab\u7528\u8fd9\u4e2a\u5730\u5740\u3002\n\n## \u90a3\u53e5\u8bdd\n\n\u65b0\u5f00\u4e00\u4e2a\u4efb\u52a1\uff0c\u4e00\u5b9a\u5148\u9009\u300c\u521b\u9020\u6a21\u5f0f\u300d\uff08\u88c5\u63d2\u4ef6\u7684\u5de5\u5177\u53ea\u6709\u5b83\u6709\uff0c\u88c5\u4e0d\u4e0a\u4e1c\u897f\u65f6\u5b83\u80fd\u81ea\u5df1\u4fee\uff09\uff0c\u518d\u628a\u4e0b\u9762\u8fd9\u4e00\u53e5\u539f\u6837\u8d34\u7ed9\u5b83\uff1a\n\n> \u5e2e\u6211\u88c5 iLang DSH \u5de5\u5177\u5305\uff0c\u7167 https://ilang.cn/guide/dsh/install.md \u505a\u3002\n\n\u8fd9\u4e00\u53e5\u7684\u5168\u6587\u5728 https://ilang.cn/guide/dsh/install.md \uff0c\u662f\u5199\u7ed9\u5b83\u770b\u7684\uff1b\u56fd\u9645\u515c\u5e95 https://dsh.ilang.guide/install.md \u662f\u540c\u4e00\u4efd\u3002\u4f60\u53ea\u7ba1\u8d34\u8fd9\u4e00\u53e5\u3002\n\n\u5269\u4e0b\u5b83\u5168\u5305\uff1a\u88c5\u73af\u5883\u5148\u95ee\u4f60\u518d\u52a8\u624b\uff0c\u653e\u597d\u5168\u5957\uff0c\u95ee\u51e0\u4e2a\u95ee\u9898\u8ba4\u8bc6\u4f60\u3002Windows \u8d70 bootstrap.ps1\uff0cmacOS \u4e0e Linux \u8d70 bootstrap.sh\uff0c\u7531 DSH \u6309\u7cfb\u7edf\u9009\uff1b\u8f6f\u4ef6\u53ea\u4ece\u5b98\u65b9\u6e90\u88c5\uff1b\u9ed8\u8ba4\u672c\u673a\u6a21\u5f0f\uff0c\u4ec0\u4e48\u90fd\u4e0d\u4e0a\u4f20\u3002\n\n\u56fd\u5185\u5148\u8d70\u955c\u50cf gitee.com/monetize/DeepSeekHarness\uff08\u548c GitHub \u540c\u6e90\uff0c\u6392\u5728 GitHub \u524d\u9762\uff1bGitCode \u4e5f\u6709\u4e00\u4efd gitcode.com/monetize/DeepSeekHarness\uff0c\u817e\u8baf CNB \u4e5f\u6709\u4e00\u4efd cnb.cool/ilang/DeepSeekHarness\uff0cGitHub \u6bcf\u6b21\u63a8\u9001\u548c\u53d1\u7248\u90fd\u81ea\u52a8\u540c\u6b65\u5230\u8fd9\u4e09\u5904\uff09\uff0ciLang \u5b98\u65b9\u8d44\u6599\u8d70 ilang.cn\uff1b\u90a3\u4e00\u53e5\u7684\u5168\u6587\u56fd\u5185\u4e5f\u6709\u4e00\u4efd\uff0c\u4e00\u5b57\u4e0d\u5dee\uff1ahttps://ilang.cn/guide/dsh/install.md \u3002\n\n\u5728 DeepSeek Harness 0.2.2-rc.1 \u4e0a\u9a8c\u8bc1\uff08DSH \u8fd8\u662f Developer Preview\uff0c\u5b98\u65b9\u8bf4\u53ef\u80fd\u6709\u7834\u574f\u6027\u53d8\u66f4\uff1b\u88c5\u4e0d\u4e0a\u5148\u770b\u8fd9\u4e00\u884c\uff09\u3002\n\n## \u9a8c\u6536\u65f6\u523b\n\n\u5173\u6389\u7a97\u53e3\u3002\u91cd\u5f00\u3002\u628a\u90a3\u4e2a\u6587\u4ef6\u5939\u9009\u4e3a\u5de5\u4f5c\u533a\uff0c\u4ec0\u4e48\u90fd\u4e0d\u8bf4\u3002\u5b83\u7b2c\u4e00\u53e5\u5c31\u6c47\u62a5\u4e0a\u6b21\u505a\u5230\u54ea\u3002\u770b\u5230\u4e86\uff0c\u5c31\u662f\u88c5\u597d\u4e86\u3002\n\n## \u91cc\u9762\u6709\u4ec0\u4e48\n\n**\u8bb0\u5fc6\u4f53** \u00b7 \u7a97\u53e3\u5173\u4e86\uff0c\u8fdb\u5ea6\u8fd8\u5728\u3002\u4f60\u7684\u4e60\u60ef\u3001\u51b3\u5b9a\u3001\u89c4\u77e9\u5199\u6210\u672c\u5730\u6587\u4ef6\uff1b\u6362\u7a97\u53e3\u4e0d\u5fd8\uff0c\u6362\u7535\u8111\u8d34\u4e00\u53e5\u300c\u628a\u6211\u7684\u8bb0\u5fc6\u4f53\u5907\u4efd\u5230\u6211\u81ea\u5df1\u7684\u79c1\u6709\u4ed3\u5e93\u300d\u3002\u6bcf\u7b14\u8bb0\u5fc6 = \u4e00\u6b21 git \u63d0\u4ea4\uff0c\u54c8\u5e0c\u94fe\u5c31\u662f\u9632\u4f2a\u94fe\u3002\n\n**\u65b0\u624b\u6559\u7a0b** \u00b7 \u7b2c\u4e00\u53e5\uff0c\u5148\u5b66 iLang\u3002\u6559\u7a0b\u4e0d\u6559\u4f60\u7528 DSH\uff1a\u7b2c\u4e00\u53e5\u8ba9\u5b83\u53bb\u8bfb iLang \u8fd0\u884c\u6587\u4ef6\uff0c\u8bfb\u5b8c\u7528\u4e09\u53e5\u8bdd\u544a\u8bc9\u4f60\u5b66\u5230\u4e86\u4ec0\u4e48\uff1b\u7b2c\u4e8c\u53e5\u8ba9\u5b83\u628a\u4f60\u8dd1\u8d77\u6765\uff1b\u7b2c\u4e09\u53e5\u914d\u6a21\u578b\uff0c\u65b0\u624b\u9ed8\u8ba4 deepseek-flash\uff1b\u7b2c\u56db\u53e5\u628a\u7075\u9b42\u5199\u8fdb\u53bb\u3002\u56db\u53e5\u8bdd\u7167\u6284\uff0c\u914d\u6a21\u578b\u3001\u9009\u534f\u8bae\u3001\u5199\u4eba\u683c\u5168\u662f\u5b83\u7684\u6d3b\u3002\n\n**\u4e00\u952e\u5b89\u88c5** \u00b7 \u65b0\u7535\u8111\uff0c\u4e00\u53e5\u8bdd\u88c5\u9f50\u3002\u7f3a\u4ec0\u4e48\u8865\u4ec0\u4e48\uff0c\u6bcf\u6b65\u95ee\u4f60\uff0c\u53ea\u8d70\u5b98\u65b9\u6e90\u3002\u53ef\u9009\u514d\u8d39\u5168\u5bb6\u6876\uff1a\u89c6\u9891\u4e0b\u8f7d\u4e0e\u89c6\u9891\u8f6c\u6587\u5b57\u3001\u7b14\u8bb0\u3001\u8bed\u97f3\uff0c\u4e00\u4ef6\u4e00\u5ba1\u6279\u3002\u53ea\u88c5\u4f60\u70b9\u5934\u540c\u610f\u7684\uff1b\u5220\u6389\u5de5\u4f5c\u533a\u9879\u76ee\u6587\u4ef6\u5c31\u6ca1\u4e86\uff0c\u53e6\u88c5\u7684",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "rustyfiles",
+            "full_name": "gelenmedya/rustyfiles",
+            "url": "https://github.com/gelenmedya/rustyfiles",
+            "description": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust.",
+            "stars": 658,
+            "forks": 41,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <b>English</b> \u00b7\n  <a href=\"README.zh-CN.md\">\u7b80\u4f53\u4e2d\u6587</a> \u00b7\n  <a href=\"README.zh-TW.md\">\u7e41\u9ad4\u4e2d\u6587</a> \u00b7\n  <a href=\"README.ja.md\">\u65e5\u672c\u8a9e</a> \u00b7\n  <a href=\"README.de.md\">Deutsch</a> \u00b7\n  <a href=\"README.es.md\">Espa\u00f1ol</a> \u00b7\n  <a href=\"README.pt-BR.md\">Portugu\u00eas (Brasil)</a> \u00b7\n  <a href=\"README.ru.md\">\u0420\u0443\u0441\u0441\u043a\u0438\u0439</a> \u00b7\n  <a href=\"README.tr.md\">T\u00fcrk\u00e7e</a>\n</p>\n\n<img alt=\"rustyfiles: a file manager for Windows and macOS that never freezes. Written in Rust. Drawn as a rustyfiles window on a folder of 100,000 files, opened in 281 ms\" src=\"docs/readme/cover.png\" width=\"100%\">\n\n<p align=\"center\">\n  <b>A file manager that never waits on the disk.</b><br>\n  Tabs, dual panes, archives that open like folders and a preview on <kbd>Space</kbd>.<br>\n  Written from scratch in Rust, for Windows and now macOS.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/gelenmedya/rustyfiles/releases/latest\"><img alt=\"Latest version\" src=\"https://img.shields.io/github/v/release/gelenmedya/rustyfiles?label=download&labelColor=232326&color=ff6a1a\"></a>\n  <a href=\"https://github.com/gelenmedya/rustyfiles/releases\"><img alt=\"Downloads\" src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgelenmedya%2Frustyfiles%2Fbadges%2Fdownloads.json\"></a>\n  <img alt=\"Windows 11, x64 and ARM64\" src=\"https://img.shields.io/badge/Windows_11-x64_%7C_ARM64-3d3d44?labelColor=232326\">\n  <img alt=\"macOS 26 on Apple silicon, beta\" src=\"https://img.shields.io/badge/macOS_26-Apple_silicon_(beta)-3d3d44?labelColor=232326\">\n  <a href=\"https://github.com/gelenmedya/rustyfiles/releases/latest\"><img alt=\"Every release is scanned on VirusTotal: the reports are linked at the end of its notes\" src=\"https://img.shields.io/badge/VirusTotal-every_release_scanned-3d3d44?labelColor=232326\"></a>\n  <a hr",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "Fuyu",
+            "full_name": "TixXin/Fuyu",
+            "url": "https://github.com/TixXin/Fuyu",
+            "description": "Fuyu (\u6d6e\u5c7f) \u2014 a lightweight dynamic island for Windows & macOS: message alerts from Telegram, Discord, WhatsApp, QQ and WeChat, Claude Code / Codex status and approvals with alerts to your phone, clipboard history, translation, lyrics, todos and plugins.",
+            "stars": 544,
+            "forks": 5,
+            "language": "TypeScript",
+            "detailed_content": "<div align=\"center\">\n  <a name=\"readme-top\"></a>\n  <a href=\"https://fuyu.ing/zh/\"><img src=\"docs/assets/readme/island-zh.svg\" alt=\"\u6302\u5728\u9875\u9762\u9876\u4e0a\u7684\u4e00\u5ea7\u5c0f\u5c9b\uff0c\u5de6\u8fb9\u662f\u4e00\u53ea\u5c0f\u6c34\u6bcd\uff0c\u5199\u7740\u300c\u6d6e\u5c7f Fuyu\u300d\uff0c\u5b83\u4f1a\u4e0d\u65f6\u5c55\u5f00\uff0c\u5199\u7740\u300c\u5f00\u6e90 \u00b7 \u5c4f\u5e55\u9876\u4e0a\u7684\u6548\u7387\u5c0f\u5c9b\u300d\uff1b\u53f3\u4e0b\u65b9\u7528\u8fde\u7b14\u624b\u5199\u7740\u5b98\u7f51\u5730\u5740 https://fuyu.ing\uff0c\u4e00\u6761\u5c0f\u7bad\u5934\u6307\u5411\u5c0f\u5c9b\" width=\"540\" height=\"100\"></a>\n\n  <h1>\u6d6e\u5c7f Fuyu</h1>\n\n  <p><b>\u4e00\u5ea7\u5c9b\uff0c\u6536\u4e0b\u684c\u9762\u7684\u96f6\u788e</b></p>\n\n  <p>Windows \u548c macOS \u4e0a\u7684\u684c\u9762\u7075\u52a8\u5c9b\uff1a\u5f85\u529e\u3001\u526a\u8d34\u677f\u3001\u6d88\u606f\u3001\u7ffb\u8bd1\u3001\u97f3\u4e50\u548c AI \u72b6\u6001\uff0c\u90fd\u5728\u5c4f\u5e55\u9876\u90e8\u7684\u4e00\u5ea7\u5c0f\u5c9b\u4e0a\u3002</p>\n\n  <p>\n    <a href=\"https://github.com/TixXin/fuyu/releases/latest\"><img src=\"docs/assets/readme/download-windows.svg\" alt=\"\u4e0b\u8f7d Windows \u7248\uff08x64\uff09\" width=\"156\" height=\"38\"></a>\n    &nbsp;\n    <a href=\"https://github.com/TixXin/fuyu/releases\"><img src=\"docs/assets/readme/download-macos.svg\" alt=\"\u4e0b\u8f7d macOS \u7248\uff08Apple \u82af\u7247\uff09\" width=\"156\" height=\"38\"></a>\n    <br>\n    <a href=\"https://fuyu.ing/zh/#mac-install\"><img src=\"docs/assets/readme/mac-guide-zh.svg\" alt=\"Mac \u5b89\u88c5\u6559\u7a0b\uff1a\u7b2c\u4e00\u6b21\u6253\u5f00\u8981\u624b\u52a8\u653e\u884c\uff0c\u7167\u7740\u505a\u7ea6 3 \u5206\u949f\" width=\"94\" height=\"22\"></a>\n  </p>\n\n  <p>\n    <a href=\"https://github.com/TixXin/fuyu/releases/latest\"><img alt=\"Version\" src=\"https://flat.badgen.net/github/release/TixXin/fuyu/stable?label=version&color=3d444d&labelColor=1b1f24\"></a>\n    <img alt=\"Platform\" src=\"https://flat.badgen.net/badge/platform/Windows%2010%20%2F%2011%20%7C%20macOS%2015%2B/3d444d?labelColor=1b1f24\">\n    <img alt=\"Tauri\" src=\"https://flat.badgen.net/badge/Tauri/2/3d444d?labelColor=1b1f24\">\n    <a href=\"LICENSE\"><img alt=\"License\" src=\"https://flat.badgen.net/badge/license/AGPL-3.0/3d444d?labelColor=1b1f24\"></a>\n    <a href=\"https://github.com/TixXin/fuyu/stargazers\"><img alt=\"Stars\" src=\"https://flat.badgen.net/github/stars/TixXin/fuyu?label=stars&color=3d444d&labelColor=1b1f24\"></a>\n  </p>\n\n  <p>\n    <b>\u7b80\u4f53\u4e2d\u6587</b>\n    \u00b7\n    <a href=\"docs/readme/README.zh-TW.md\">\u7e41\u9ad4\u4e2d\u6587</a>\n    \u00b7\n    <a href=\"docs/readme/README.en.md\">English</a>\n    \u00b7\n    <a href=\"docs/r",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "archify",
+            "full_name": "tt-a1i/archify",
+            "url": "https://github.com/tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into an interactive diagram or one-page answer: 10 diagram types, Architecture Diagnosis, Story video and PR walkthroughs. An Agent Skill for Claude Code, Codex, Cursor and more.",
+            "stars": 100786,
+            "forks": 6906,
+            "language": "JavaScript",
+            "detailed_content": "<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/archify-lockup-dark.svg\" />\n    <img src=\"docs/assets/archify-lockup-light.svg\" alt=\"Archify\" width=\"440\" height=\"121\" />\n  </picture>\n</p>\n<h3 align=\"center\">Turn anything you want to understand, plan, or share into an interactive visual.</h3>\n\n<p align=\"center\"><img src=\"docs/assets/archify-readme-hero.png\" alt=\"Archify \u2014 interactive diagrams\" width=\"960\" /></p>\n\n<p align=\"center\"><strong>Official channels\uff1a</strong> <a href=\"https://archify.si\">archify.si</a> \u00b7 <a href=\"https://github.com/tt-a1i/archify\">GitHub</a><br/>Archify is free and open source. Third-party online services and paid plans are operated by their respective providers and do not represent Archify. <a href=\"#official-services\">Service details \u2192</a></p>\n\n<p align=\"center\">Start with an idea, a question, or a plan. Describe it to your AI agent, and Archify turns it into an interactive HTML you can explore, customize, and share. From travel itineraries and learning maps to complex systems\u2014make it your own.</p>\n\n<p align=\"center\"><strong>10 diagram types \u00b7 One-page answers in 4 styles \u00b7 Architecture Diagnosis \u00b7 Story walkthroughs with 1080p video \u00b7 PR/MR walkthroughs</strong></p>\n\n<p align=\"center\">See what the community is creating\u2014and imagine what you could make next.</p>\n\n<p align=\"center\">\n  <a href=\"https://archify.si/gallery.html\"><strong>Live demos</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#start\"><strong>Get started</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"https://archify.si/guide.html\"><strong>Scenario guide</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"#community\"><strong>Community</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_ZH.md\"><strong>\u7b80\u4f53\u4e2d\u6587</strong></a> &nbsp;\u00b7&nbsp;\n  <a href=\"./README_JA.md\"><strong>\u65e5\u672c\u8a9e",
+            "content_source": "readme"
+          },
+          {
+            "source": "GitHub",
+            "title": "dsh-our-free-model",
+            "full_name": "Ebony-Vinyl/dsh-our-free-model",
+            "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+            "description": "\u5728 dsh \u91cc\u88c5\u4e0a\u8fd9\u4e2a\u63d2\u4ef6\u5373\u53ef\uff0c\u65e0\u9700\u767b\u5f55\u3001\u6ce8\u518c\u6216\u586b API Key\uff0c\u5c31\u80fd\u4f7f\u7528\u5305\u62ec DeepSeek V4.1 Flash\u3001Kimi K3 \u5728\u5185\u7684\u524d\u6cbf\u6a21\u578b\u2014\u2014\u5b8c\u5168\u514d\u8d39\uff0c\u4e0d\u9650\u91cf\u3002 All you do is install this plugin in dsh: no login, no sign-up, no API key \u2014 the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+            "stars": 88827,
+            "forks": 2511,
+            "language": "JavaScript",
+            "detailed_content": "<div align=\"center\">\n  <img src=\"icon.svg\" alt=\"Our Free Model \u2014 DeepSeek Harness \u514d\u8d39\u6a21\u578b\u63d2\u4ef6\" width=\"120\">\n\n# dsh-our-free-model\n\n**\u7b80\u4f53\u4e2d\u6587** | [English](README_EN.md)\n\n  <img alt=\"\u8bb8\u53ef\u8bc1\" src=\"https://img.shields.io/badge/license-MIT-263146?style=flat-square\">\n  <img alt=\"\u96f6\u4f9d\u8d56\" src=\"https://img.shields.io/badge/dependencies-zero-4b6fff?style=flat-square\">\n  <img alt=\"\u65e0\u6784\u5efa\u6b65\u9aa4\" src=\"https://img.shields.io/badge/build%20step-none-7da1de?style=flat-square\">\n  <img alt=\"\u9002\u914d\u5185\u6838\" src=\"https://img.shields.io/badge/dsh-0.1.5--0.1.7--rc.2-2f6f4f?style=flat-square\">\n  <img alt=\"\u72b6\u6001\" src=\"https://img.shields.io/badge/status-beta-f0a441?style=flat-square\">\n  <br>\n  <a href=\"https://trendshift.io/repositories/261203\"><img alt=\"GITHUB TRENDING \u7b2c 1 \u540d\uff0c\u65e5\u699c\u4ed3\u5e93\" src=\"docs/images/trendshift-daily-laurel-gold.svg\" width=\"250\" height=\"55\"></a>\n  <a href=\"https://trendshift.io/weekly?language=JavaScript\"><img alt=\"Trendshift JavaScript \u5468\u699c\u7b2c 1 \u540d\uff082026-10-05 \u81f3 2026-10-11\uff0c\u66f4\u65b0\u4e2d\uff09\" src=\"docs/images/trendshift-weekly-2026-10-11-first-gold.svg\" width=\"250\" height=\"55\"></a>\n  <br>\n  <sub>Trendshift JavaScript \u5468\u699c\u7b2c 1 \u00b7 2026-10-05 \u81f3 2026-10-11 \u00b7 \u66f4\u65b0\u4e2d\uff0c\u622a\u81f3 2026-10-11</sub>\n\n</div>\n\n<div align=\"center\">\n\n> \u5728 dsh \u91cc\u88c5\u4e0a\u63d2\u4ef6\u5373\u53ef\u4f7f\u7528\u514d\u8d39\u8f66\u9053\uff0c\u65e0\u9700\u767b\u5f55\u3001\u6ce8\u518c\u6216\u586b\u5199 API Key\u3002\n>\n> *Install the plugin in dsh to use the free lane without signing in, creating an\n> account, or entering an API key.*\n>\n> \u6a21\u578b\u6e05\u5355\u8ddf\u968f\u4e0a\u6e38\u5237\u65b0\uff0c\u53ef\u7528\u6027\u7531**\u4f60\u81ea\u5df1\u8fd9\u53f0\u673a\u5668\u7684\u7f51\u7edc\u51fa\u53e3**\u5b9e\u6d4b\u5f97\u51fa\uff0c\n> \u601d\u8003\u5f3a\u5ea6\u4e0b\u53d1\u7684\u662f\u771f\u5b9e\u9884\u7b97\u800c\u4e0d\u662f\u63d0\u793a\u8bcd\uff0c\u53e6\u9644\u4e00\u4e2a OpenAI \u517c\u5bb9\u7684\u672c\u5730\u8f6c\u53d1\u7aef\u53e3\u3002\n>\n> \u7eaf\u63d2\u4ef6\u6302\u8f7d\uff1a\u4e0d\u6539\u5185\u6838\u3001\u65e0\u6784\u5efa\u6b65\u9aa4\u3001\u96f6\u4f9d\u8d56\u3002\n\n</div>\n\n---\n\n## \u4ea4\u6d41\u7fa4\n\n<div align=\"center\">\n  <img src=\"docs/images/qq-group-974582805.png\" alt=\"OFM\u6280\u672f\u4ea4\u6d41[2\u7fa4]\u5165\u7fa4\u4e8c\u7ef4\u7801\uff08\u7fa4\u53f7\uff1a974582805\uff09\" width=\"300\">\n  <br>\n  <b>QQ \u7fa4\uff1a974582805\uff08OFM\u6280\u672f\u4ea4\u6d41[2\u7fa4]\uff09</b>\n  <br>\n  \u626b\u7801\u52a0\u5165\u7fa4\u804a\uff0c\u4e00\u8d77\u4ea4\u6d41\u63d2\u4ef6\u4f7f\u7528\u5fc3\u5f97\u3001\u53cd\u9988\u95ee\u9898\u4e0e\u5206\u4eab\u73a9\u6cd5\u3002\n</div>\n\n---\n\n## \u4eae\u70b9\n\n- **\u5f00\u7bb1\u5373\u7528\uff0c\u65e0\u914d\u7f6e\u73af\u8282**\u2014\u2014\u4e0d\u9700\u8981\u8d26\u53f7\u3001\u4e0d\u9700\u8981 Key\u3001\u4e0d\u9700\u8981\u5728\u540e\u53f0\u7533\u8bf7\u914d\u989d\u3002\n- **\u4e0a\u6e38\u6765\u6e90\u516c\u5f00\u900f\u660e**\u2014\u2014\u514d\u8d39\u8f66\u9053\u6765\u6e90\u4e3a [OpenCode \u7684 Zen \u7f51\u5173](https://opencode.ai)\uff0cKilo \u6e20\u9053\u6765\u6e90\u4e3a [",
+            "content_source": "readme"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AI made self-hosting fun again",
+            "url": "https://janlukas.blog/posts/ai-self-hosting",
+            "description": "AI made self-hosting fun again",
+            "detailed_content": "AI made self-hosting fun again - Jan-Lukas Else Skip to content Jan-Lukas Else Tech, life and everything else Home Posts More pages Subscribe Search Mehr auf Deutsch \ud83c\udde9\ud83c\uddea About me Contact AI made self-hosting fun again 2026-11-26\n\u00b7\n\u270d\ufe0f Posts\n\u00b7\nAI\n\u00b7\nSelfhosting\n\u00b7\nThoughts Short link:\nhttps://b.jlel.se/s/8fb Share online Share this post \u00d7 Use your browser's share dialog Copy share text I\u2019ve been self-hosting things for many years. There were times when I was quite enthusiastic about it, constantly trying out new software and tinkering with my infrastructure. But at some point, that enthusiasm faded a bit. I never really stopped self-hosting, but I became less inclined to experiment with new things. Maintaining what I already had running was enough for me. Over the last few months, however, I\u2019ve found myself getting increasingly excited about self-hosting again. And, somewhat ironically, AI is a big reason for that. Less friction Most of my infrastructure configuration lives in Git repositories, mainly in the form of Docker Compose files, scripts, and other configuration files. This makes it possible to use AI coding agents to work on my infrastructure in much the same way as they would work on any other software project. Whenever I want to try a new service, adjust an existing configuration, or automate something, I can now do so with considerably less effort. In the past, I would sometimes put off certain changes simply because I didn\u2019t feel like spending an evening reading changelogs and documentation or troubleshooting issues. It\u2019s not that I couldn\u2019t have done these things before. But often, the amount of effort required just wasn\u2019t worth it to me. Now, even relatively spontaneous ideas often end up becoming reality. Trying things I always found interesting There are als",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AMD-specific fork of llama.cpp",
+            "url": "https://devnull.land/amd-specific-llama-cpp",
+            "description": "AMD-specific fork of llama.cpp",
+            "detailed_content": "AMD-specific fork of llama.cpp\n| devnull.land\nAMD-specific fork of llama.cpp\n11/26/2026, 9:59:36 AM\ntl;dr\n\u2014 I recommend using\nllama-cpp-rdna-boosts\nif you have an AMD graphics card. It\u2019s lean, and increased my token generation from 35 to 55 tokens/second, and my prefill from 700 to 1300 tokens per second. YMMV.\nAs of November 2026, an explosion in the number of bespoke inference engines has taken place. Many of them take inspiration from the engines that enabled much of the LLM inference up 'til now: llama.cpp, SGLang, vLLM, etc.\nThe rationale isn\u2019t that those options are bad, but merely that they are\ngeneralist\nengines, optimized for no particular hardware and with a focus on broad compatibility. Others feel the development pace of those engines have slowed down, and with the help of LLMs, they can move faster on their own.\nSome examples of these new inference engines* are Strata, Basalt, RustingStrata, etc\u2026\nThese new forks generally all have a few things in common:\nThey focus on a specific subset of models and/or hardware\nThey use a frontier model to vibe-code the entire thing\nThey chase ever-higher token generation speeds\n\u2026 and the results are stunning! Strata is able to run a heavily-quantized model of Qwen 3.8 Flash Next, a\n180B parameter model , on a 16GB VRAM graphics card, and 16GB system RAM, and have it generate tokens at a surprisingly high rate.\nIn and of itself those three things are not red flags (the second is concerning, of course, but it may be SOP in a year\u2019s time \u2014 who knows!), but as these projects have evolved, that relentless chase toward higher token generation speeds has taken an unfortunate turn, in that the optimizations are less about hardware-specific changes, but more about changing how the model\nthinks\nso that it goes\nbrrr\nfaster.\nStrata sp",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error",
+            "url": "https://dev.to/debugradar/fix-claude-code-couldnt-share-transcript-403-error-2oho",
+            "description": "Originally published on DebugRadar.\n\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\" \u2014 and /feedback returns 403 even after a fresh /login. There is no verified fix. Your login is not broken: a 403 that survives a fresh login points at an account or permission st",
+            "detailed_content": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDebugRadar\nPosted on\nNov 27\n\u2022\nOriginally published at\ndebugradar.com\nFix: Claude Code 'Couldn't Share Transcript' 403 Error\n# claude\n# ai\n# cli\n# troubleshooting\nOriginally published on\nDebugRadar .\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\" \u2014 and /feedback returns 403 even after a fresh /login. There is no verified fix. Your login is not broken: a 403 that survives a fresh login points at an account or permission state on Anthropic's side, not at your local auth. Copy the transcript manually while the share stays broken.\nQuick Fix Summary\nProblem:\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\". The /feedback command also returns 403 \u2014 even after running /login again.\nFix:\nNo verified fix exists. Re-run /login to confirm a fresh session; if the 403 persists, it is account-side, not local. Copy the transcript manually as the workaround.\nWhat happened:\nReported in anthropics/claude-code#101651 (8 comments), created October 12, 2026, updated November 15, 2026. Still open, no staff reply. Generic Claude Code 403 guides cover login and account-verification failures \u2014 none covers this transcript-share plus /feedback pair.\nTechnical Root Cause\nError Code\nAffected Version\nRoot Cause\nCurrent Status\n\"Couldn't share transcript\" after accepting the share prompt; /feedback returns HTTP 403 even after /login\nClaude Code (version not named in the issue)\nNot establ",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction",
+            "url": "https://dev.to/pixldm_c9bb7dd20f35b92525/ocr-vs-icr-a-developers-guide-to-passport-data-extraction-1pj5",
+            "description": "OCR vs. ICR: Understanding Passport Data Extraction in Document Processing\n\n\nWhen building applications for digital onboarding, identity verification, or document processing, extracting information from identity documents is a common requirement.\n\nPassport scanning is one example. Instead of asking ",
+            "detailed_content": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\npixldm\nPosted on\nNov 27\nOCR vs. ICR: A Developer's Guide to Passport Data Extraction\n# productivity\n# ai\n# ocr\n# documentation\nOCR vs. ICR: Understanding Passport Data Extraction in Document Processing\nWhen building applications for digital onboarding, identity verification, or document processing, extracting information from identity documents is a common requirement.\nPassport scanning is one example. Instead of asking users to manually enter passport details, applications can use character recognition technologies to convert document text into digital data.\nTwo technologies often discussed in this area are\nOptical Character Recognition (OCR)\nand\nIntelligent Character Recognition (ICR) .\nAlthough they are related, they are designed for different types of text.\nWhat Is OCR?\nOptical Character Recognition (OCR) converts printed text from an image into machine-readable characters.\nFor passport data extraction, OCR can help read information such as:\nPassport number\nName\nDate of birth\nNationality\nPassport expiry date\nOCR is commonly used to process printed passport details, including the Machine Readable Zone (MRZ).\nA typical OCR workflow includes image capture, image preprocessing, text recognition, and returning the extracted information in a structured format.\nWhat Is ICR?\nIntelligent Character Recognition (ICR) is designed to recognize handwriting and more variable character styles.\nWhile conventional OCR focuses primarily",
+            "content_source": "web_page"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What you lose when you delete ~/.cache",
+            "url": "https://dev.to/notaflightrisk/what-you-lose-when-you-delete-cache-54eg",
+            "description": "I saved an OpenAI key in Langflow, stopped it, deleted ~/.cache and started it again. The key was still in Langflow's database. Langflow just couldn't read it any more, and every time it tried, its log said \"API key decryption failed after retry. This may indicate a corrupted key or SECRET_KEY misma",
+            "detailed_content": "What you lose when you delete ~/.cache - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nIain\nPosted on\nNov 27\n\u2022\nOriginally published at\nblog.peng.ly\n\u2022\nAI-assisted\nWhat you lose when you delete ~/.cache\n# ai\n# opensource\n# linux\n# backups\nI saved an OpenAI key in\nLangflow , stopped it, deleted\n~/.cache\nand started it again. The key was still in Langflow's database. Langflow just couldn't read it any more, and every time it tried, its log said \"API key decryption failed after retry. This may indicate a corrupted key or SECRET_KEY mismatch.\"\nIf you install Langflow with pip or uv and don't set anything, the key it encrypts your saved credentials with lives in\n~/.cache/langflow/secret_key . Delete that and Langflow makes a new one on the next start, and every API key you saved in it is now noise. You'd have to paste each one back in. Langflow knows the key matters, it even ships a\nscript\nfor changing it safely. It just keeps it in the cache.\nWhich feels a bit unfair, because deleting\n~/.cache\nis the one bit of tidying everyone agrees is fine. The\nXDG spec\nsays it's for \"non-essential data files\". The top answer on askubuntu's\nIs it okay to delete the ~/.cache folder? , which has been read over half a million times, says \"IMO you can delete all of .cache with no long term detrimental effects\". Mine's 8.9 GB, 6.4 of it uv's, so I get the temptation.\nSomebody did ask askubuntu, back in 2019,\n\"Is there anything in ~/.cache that is not really cache?\"\nIt's still got no answers, so here's mine.\nWhat's in there that isn't cache\nFor Langflow,",
+            "content_source": "web_page"
+          }
+        ]
+      }
+    },
+    "verify": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "rustyfiles",
+            "full_name": "gelenmedya/rustyfiles",
+            "url": "https://github.com/gelenmedya/rustyfiles",
+            "description": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust.",
+            "stars": 658,
+            "forks": 41,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <b>English</b> \u00b7\n  <a href=\"README.zh-CN.md\">\u7b80\u4f53\u4e2d\u6587</a> \u00b7\n  <a href=\"README.zh-TW.md\">\u7e41\u9ad4\u4e2d\u6587</a> \u00b7\n  <a href=\"README.ja.md\">\u65e5\u672c\u8a9e</a> \u00b7\n  <a href=\"README.de.md\">Deutsch</a> \u00b7\n  <a href=\"README.es.md\">Espa\u00f1ol</a> \u00b7\n  <a href=\"README.pt-BR.md\">Portugu\u00eas (Brasil)</a> \u00b7\n  <a href=\"README.ru.md\">\u0420\u0443\u0441\u0441\u043a\u0438\u0439</a> \u00b7\n  <a href=\"README.tr.md\">T\u00fcrk\u00e7e</a>\n</p>\n\n<img alt=\"rustyfiles: a file manager for Windows and macOS that never freezes. Written in Rust. Drawn as a rustyfiles window on a folder of 100,000 files, opened in 281 ms\" src=\"docs/readme/cover.png\" width=\"100%\">\n\n<p align=\"center\">\n  <b>A file manager that never waits on the disk.</b><br>\n  Tabs, dual panes, archives that open like folders and a preview on <kbd>Space</kbd>.<br>\n  Written from scratch in Rust, for Windows and now macOS.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/gelenmedya/rustyfiles/releases/latest\"><img alt=\"Latest version\" src=\"https://img.shields.io/github/v/release/gelenmedya/rustyfiles?label=download&labelColor=232326&color=ff6a1a\"></a>\n  <a href=\"https://github.com/gelenmedya/rustyfiles/releases\"><img alt=\"Downloads\" src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgelenmedya%2Frustyfiles%2Fbadges%2Fdownloads.json\"></a>\n  <img alt=\"Windows 11, x64 and ARM64\" src=\"https://img.shields.io/badge/Windows_11-x64_%7C_ARM64-3d3d44?labelColor=232326\">\n  <img alt=\"macOS 26 on Apple silicon, beta\" src=\"https://img.shields.io/badge/macOS_26-Apple_silicon_(beta)-3d3d44?labelColor=232326\">\n  <a href=\"https://github.com/gelenmedya/rustyfiles/releases/latest\"><img alt=\"Every release is scanned on VirusTotal: the reports are linked at the end of its notes\" src=\"https://img.shields.io/badge/VirusTotal-every_release_scanned-3d3d44?labelColor=232326\"></a>\n  <a hr",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches description"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AI made self-hosting fun again",
+            "url": "https://janlukas.blog/posts/ai-self-hosting",
+            "description": "AI made self-hosting fun again",
+            "detailed_content": "AI made self-hosting fun again - Jan-Lukas Else Skip to content Jan-Lukas Else Tech, life and everything else Home Posts More pages Subscribe Search Mehr auf Deutsch \ud83c\udde9\ud83c\uddea About me Contact AI made self-hosting fun again 2026-11-26\n\u00b7\n\u270d\ufe0f Posts\n\u00b7\nAI\n\u00b7\nSelfhosting\n\u00b7\nThoughts Short link:\nhttps://b.jlel.se/s/8fb Share online Share this post \u00d7 Use your browser's share dialog Copy share text I\u2019ve been self-hosting things for many years. There were times when I was quite enthusiastic about it, constantly trying out new software and tinkering with my infrastructure. But at some point, that enthusiasm faded a bit. I never really stopped self-hosting, but I became less inclined to experiment with new things. Maintaining what I already had running was enough for me. Over the last few months, however, I\u2019ve found myself getting increasingly excited about self-hosting again. And, somewhat ironically, AI is a big reason for that. Less friction Most of my infrastructure configuration lives in Git repositories, mainly in the form of Docker Compose files, scripts, and other configuration files. This makes it possible to use AI coding agents to work on my infrastructure in much the same way as they would work on any other software project. Whenever I want to try a new service, adjust an existing configuration, or automate something, I can now do so with considerably less effort. In the past, I would sometimes put off certain changes simply because I didn\u2019t feel like spending an evening reading changelogs and documentation or troubleshooting issues. It\u2019s not that I couldn\u2019t have done these things before. But often, the amount of effort required just wasn\u2019t worth it to me. Now, even relatively spontaneous ideas often end up becoming reality. Trying things I always found interesting There are als",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AMD-specific fork of llama.cpp",
+            "url": "https://devnull.land/amd-specific-llama-cpp",
+            "description": "AMD-specific fork of llama.cpp",
+            "detailed_content": "AMD-specific fork of llama.cpp\n| devnull.land\nAMD-specific fork of llama.cpp\n11/26/2026, 9:59:36 AM\ntl;dr\n\u2014 I recommend using\nllama-cpp-rdna-boosts\nif you have an AMD graphics card. It\u2019s lean, and increased my token generation from 35 to 55 tokens/second, and my prefill from 700 to 1300 tokens per second. YMMV.\nAs of November 2026, an explosion in the number of bespoke inference engines has taken place. Many of them take inspiration from the engines that enabled much of the LLM inference up 'til now: llama.cpp, SGLang, vLLM, etc.\nThe rationale isn\u2019t that those options are bad, but merely that they are\ngeneralist\nengines, optimized for no particular hardware and with a focus on broad compatibility. Others feel the development pace of those engines have slowed down, and with the help of LLMs, they can move faster on their own.\nSome examples of these new inference engines* are Strata, Basalt, RustingStrata, etc\u2026\nThese new forks generally all have a few things in common:\nThey focus on a specific subset of models and/or hardware\nThey use a frontier model to vibe-code the entire thing\nThey chase ever-higher token generation speeds\n\u2026 and the results are stunning! Strata is able to run a heavily-quantized model of Qwen 3.8 Flash Next, a\n180B parameter model , on a 16GB VRAM graphics card, and 16GB system RAM, and have it generate tokens at a surprisingly high rate.\nIn and of itself those three things are not red flags (the second is concerning, of course, but it may be SOP in a year\u2019s time \u2014 who knows!), but as these projects have evolved, that relentless chase toward higher token generation speeds has taken an unfortunate turn, in that the optimizations are less about hardware-specific changes, but more about changing how the model\nthinks\nso that it goes\nbrrr\nfaster.\nStrata sp",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches header"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error",
+            "url": "https://dev.to/debugradar/fix-claude-code-couldnt-share-transcript-403-error-2oho",
+            "description": "Originally published on DebugRadar.\n\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\" \u2014 and /feedback returns 403 even after a fresh /login. There is no verified fix. Your login is not broken: a 403 that survives a fresh login points at an account or permission st",
+            "detailed_content": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDebugRadar\nPosted on\nNov 27\n\u2022\nOriginally published at\ndebugradar.com\nFix: Claude Code 'Couldn't Share Transcript' 403 Error\n# claude\n# ai\n# cli\n# troubleshooting\nOriginally published on\nDebugRadar .\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\" \u2014 and /feedback returns 403 even after a fresh /login. There is no verified fix. Your login is not broken: a 403 that survives a fresh login points at an account or permission state on Anthropic's side, not at your local auth. Copy the transcript manually while the share stays broken.\nQuick Fix Summary\nProblem:\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\". The /feedback command also returns 403 \u2014 even after running /login again.\nFix:\nNo verified fix exists. Re-run /login to confirm a fresh session; if the 403 persists, it is account-side, not local. Copy the transcript manually as the workaround.\nWhat happened:\nReported in anthropics/claude-code#101651 (8 comments), created October 12, 2026, updated November 15, 2026. Still open, no staff reply. Generic Claude Code 403 guides cover login and account-verification failures \u2014 none covers this transcript-share plus /feedback pair.\nTechnical Root Cause\nError Code\nAffected Version\nRoot Cause\nCurrent Status\n\"Couldn't share transcript\" after accepting the share prompt; /feedback returns HTTP 403 even after /login\nClaude Code (version not named in the issue)\nNot establ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches content"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction",
+            "url": "https://dev.to/pixldm_c9bb7dd20f35b92525/ocr-vs-icr-a-developers-guide-to-passport-data-extraction-1pj5",
+            "description": "OCR vs. ICR: Understanding Passport Data Extraction in Document Processing\n\n\nWhen building applications for digital onboarding, identity verification, or document processing, extracting information from identity documents is a common requirement.\n\nPassport scanning is one example. Instead of asking ",
+            "detailed_content": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\npixldm\nPosted on\nNov 27\nOCR vs. ICR: A Developer's Guide to Passport Data Extraction\n# productivity\n# ai\n# ocr\n# documentation\nOCR vs. ICR: Understanding Passport Data Extraction in Document Processing\nWhen building applications for digital onboarding, identity verification, or document processing, extracting information from identity documents is a common requirement.\nPassport scanning is one example. Instead of asking users to manually enter passport details, applications can use character recognition technologies to convert document text into digital data.\nTwo technologies often discussed in this area are\nOptical Character Recognition (OCR)\nand\nIntelligent Character Recognition (ICR) .\nAlthough they are related, they are designed for different types of text.\nWhat Is OCR?\nOptical Character Recognition (OCR) converts printed text from an image into machine-readable characters.\nFor passport data extraction, OCR can help read information such as:\nPassport number\nName\nDate of birth\nNationality\nPassport expiry date\nOCR is commonly used to process printed passport details, including the Machine Readable Zone (MRZ).\nA typical OCR workflow includes image capture, image preprocessing, text recognition, and returning the extracted information in a structured format.\nWhat Is ICR?\nIntelligent Character Recognition (ICR) is designed to recognize handwriting and more variable character styles.\nWhile conventional OCR focuses primarily",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches article"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What you lose when you delete ~/.cache",
+            "url": "https://dev.to/notaflightrisk/what-you-lose-when-you-delete-cache-54eg",
+            "description": "I saved an OpenAI key in Langflow, stopped it, deleted ~/.cache and started it again. The key was still in Langflow's database. Langflow just couldn't read it any more, and every time it tried, its log said \"API key decryption failed after retry. This may indicate a corrupted key or SECRET_KEY misma",
+            "detailed_content": "What you lose when you delete ~/.cache - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nIain\nPosted on\nNov 27\n\u2022\nOriginally published at\nblog.peng.ly\n\u2022\nAI-assisted\nWhat you lose when you delete ~/.cache\n# ai\n# opensource\n# linux\n# backups\nI saved an OpenAI key in\nLangflow , stopped it, deleted\n~/.cache\nand started it again. The key was still in Langflow's database. Langflow just couldn't read it any more, and every time it tried, its log said \"API key decryption failed after retry. This may indicate a corrupted key or SECRET_KEY mismatch.\"\nIf you install Langflow with pip or uv and don't set anything, the key it encrypts your saved credentials with lives in\n~/.cache/langflow/secret_key . Delete that and Langflow makes a new one on the next start, and every API key you saved in it is now noise. You'd have to paste each one back in. Langflow knows the key matters, it even ships a\nscript\nfor changing it safely. It just keeps it in the cache.\nWhich feels a bit unfair, because deleting\n~/.cache\nis the one bit of tidying everyone agrees is fine. The\nXDG spec\nsays it's for \"non-essential data files\". The top answer on askubuntu's\nIs it okay to delete the ~/.cache folder? , which has been read over half a million times, says \"IMO you can delete all of .cache with no long term detrimental effects\". Mine's 8.9 GB, 6.4 of it uv's, so I get the temptation.\nSomebody did ask askubuntu, back in 2019,\n\"Is there anything in ~/.cache that is not really cache?\"\nIt's still got no answers, so here's mine.\nWhat's in there that isn't cache\nFor Langflow,",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches article"
+          }
+        ]
+      }
+    },
+    "analyze": {
+      "status": "done",
+      "output": {
+        "vetted_candidates": [
+          {
+            "source": "GitHub",
+            "title": "rustyfiles",
+            "full_name": "gelenmedya/rustyfiles",
+            "url": "https://github.com/gelenmedya/rustyfiles",
+            "description": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust.",
+            "stars": 658,
+            "forks": 41,
+            "language": "Rust",
+            "detailed_content": "<p align=\"center\">\n  <b>English</b> \u00b7\n  <a href=\"README.zh-CN.md\">\u7b80\u4f53\u4e2d\u6587</a> \u00b7\n  <a href=\"README.zh-TW.md\">\u7e41\u9ad4\u4e2d\u6587</a> \u00b7\n  <a href=\"README.ja.md\">\u65e5\u672c\u8a9e</a> \u00b7\n  <a href=\"README.de.md\">Deutsch</a> \u00b7\n  <a href=\"README.es.md\">Espa\u00f1ol</a> \u00b7\n  <a href=\"README.pt-BR.md\">Portugu\u00eas (Brasil)</a> \u00b7\n  <a href=\"README.ru.md\">\u0420\u0443\u0441\u0441\u043a\u0438\u0439</a> \u00b7\n  <a href=\"README.tr.md\">T\u00fcrk\u00e7e</a>\n</p>\n\n<img alt=\"rustyfiles: a file manager for Windows and macOS that never freezes. Written in Rust. Drawn as a rustyfiles window on a folder of 100,000 files, opened in 281 ms\" src=\"docs/readme/cover.png\" width=\"100%\">\n\n<p align=\"center\">\n  <b>A file manager that never waits on the disk.</b><br>\n  Tabs, dual panes, archives that open like folders and a preview on <kbd>Space</kbd>.<br>\n  Written from scratch in Rust, for Windows and now macOS.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/gelenmedya/rustyfiles/releases/latest\"><img alt=\"Latest version\" src=\"https://img.shields.io/github/v/release/gelenmedya/rustyfiles?label=download&labelColor=232326&color=ff6a1a\"></a>\n  <a href=\"https://github.com/gelenmedya/rustyfiles/releases\"><img alt=\"Downloads\" src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgelenmedya%2Frustyfiles%2Fbadges%2Fdownloads.json\"></a>\n  <img alt=\"Windows 11, x64 and ARM64\" src=\"https://img.shields.io/badge/Windows_11-x64_%7C_ARM64-3d3d44?labelColor=232326\">\n  <img alt=\"macOS 26 on Apple silicon, beta\" src=\"https://img.shields.io/badge/macOS_26-Apple_silicon_(beta)-3d3d44?labelColor=232326\">\n  <a href=\"https://github.com/gelenmedya/rustyfiles/releases/latest\"><img alt=\"Every release is scanned on VirusTotal: the reports are linked at the end of its notes\" src=\"https://img.shields.io/badge/VirusTotal-every_release_scanned-3d3d44?labelColor=232326\"></a>\n  <a hr",
+            "content_source": "readme",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches description",
+            "why_it_matters": "A Rust\u2011written file manager that stays responsive even with massive directories, showing how systems\u2011level Rust can replace native Explorer/Finder for power users.",
+            "who_cares": "Desktop application developers, Rust enthusiasts, and power users who need a fast, reliable file manager on Windows or macOS.",
+            "verdict": "WATCH"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AI made self-hosting fun again",
+            "url": "https://janlukas.blog/posts/ai-self-hosting",
+            "description": "AI made self-hosting fun again",
+            "detailed_content": "AI made self-hosting fun again - Jan-Lukas Else Skip to content Jan-Lukas Else Tech, life and everything else Home Posts More pages Subscribe Search Mehr auf Deutsch \ud83c\udde9\ud83c\uddea About me Contact AI made self-hosting fun again 2026-11-26\n\u00b7\n\u270d\ufe0f Posts\n\u00b7\nAI\n\u00b7\nSelfhosting\n\u00b7\nThoughts Short link:\nhttps://b.jlel.se/s/8fb Share online Share this post \u00d7 Use your browser's share dialog Copy share text I\u2019ve been self-hosting things for many years. There were times when I was quite enthusiastic about it, constantly trying out new software and tinkering with my infrastructure. But at some point, that enthusiasm faded a bit. I never really stopped self-hosting, but I became less inclined to experiment with new things. Maintaining what I already had running was enough for me. Over the last few months, however, I\u2019ve found myself getting increasingly excited about self-hosting again. And, somewhat ironically, AI is a big reason for that. Less friction Most of my infrastructure configuration lives in Git repositories, mainly in the form of Docker Compose files, scripts, and other configuration files. This makes it possible to use AI coding agents to work on my infrastructure in much the same way as they would work on any other software project. Whenever I want to try a new service, adjust an existing configuration, or automate something, I can now do so with considerably less effort. In the past, I would sometimes put off certain changes simply because I didn\u2019t feel like spending an evening reading changelogs and documentation or troubleshooting issues. It\u2019s not that I couldn\u2019t have done these things before. But often, the amount of effort required just wasn\u2019t worth it to me. Now, even relatively spontaneous ideas often end up becoming reality. Trying things I always found interesting There are als",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Title matches",
+            "why_it_matters": "Shows how AI coding assistants can cut the friction of tweaking Docker\u2011Compose, scripts, and other infra code, reigniting enthusiasm for self\u2011hosting.",
+            "who_cares": "DevOps engineers, SREs, hobbyist sysadmins, and anyone maintaining self\u2011hosted services.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Hacker News",
+            "title": "AMD-specific fork of llama.cpp",
+            "url": "https://devnull.land/amd-specific-llama-cpp",
+            "description": "AMD-specific fork of llama.cpp",
+            "detailed_content": "AMD-specific fork of llama.cpp\n| devnull.land\nAMD-specific fork of llama.cpp\n11/26/2026, 9:59:36 AM\ntl;dr\n\u2014 I recommend using\nllama-cpp-rdna-boosts\nif you have an AMD graphics card. It\u2019s lean, and increased my token generation from 35 to 55 tokens/second, and my prefill from 700 to 1300 tokens per second. YMMV.\nAs of November 2026, an explosion in the number of bespoke inference engines has taken place. Many of them take inspiration from the engines that enabled much of the LLM inference up 'til now: llama.cpp, SGLang, vLLM, etc.\nThe rationale isn\u2019t that those options are bad, but merely that they are\ngeneralist\nengines, optimized for no particular hardware and with a focus on broad compatibility. Others feel the development pace of those engines have slowed down, and with the help of LLMs, they can move faster on their own.\nSome examples of these new inference engines* are Strata, Basalt, RustingStrata, etc\u2026\nThese new forks generally all have a few things in common:\nThey focus on a specific subset of models and/or hardware\nThey use a frontier model to vibe-code the entire thing\nThey chase ever-higher token generation speeds\n\u2026 and the results are stunning! Strata is able to run a heavily-quantized model of Qwen 3.8 Flash Next, a\n180B parameter model , on a 16GB VRAM graphics card, and 16GB system RAM, and have it generate tokens at a surprisingly high rate.\nIn and of itself those three things are not red flags (the second is concerning, of course, but it may be SOP in a year\u2019s time \u2014 who knows!), but as these projects have evolved, that relentless chase toward higher token generation speeds has taken an unfortunate turn, in that the optimizations are less about hardware-specific changes, but more about changing how the model\nthinks\nso that it goes\nbrrr\nfaster.\nStrata sp",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches header",
+            "why_it_matters": "An AMD\u2011specific fork of llama.cpp delivers 50\u201160% higher token\u2011generation rates on Radeon GPUs, making on\u2011prem LLM inference viable on consumer\u2011grade hardware.",
+            "who_cares": "Machine\u2011learning engineers, AI researchers, and developers deploying LLMs on AMD GPUs.",
+            "verdict": "INTEGRATE"
+          },
+          {
+            "source": "Dev.to",
+            "title": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error",
+            "url": "https://dev.to/debugradar/fix-claude-code-couldnt-share-transcript-403-error-2oho",
+            "description": "Originally published on DebugRadar.\n\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\" \u2014 and /feedback returns 403 even after a fresh /login. There is no verified fix. Your login is not broken: a 403 that survives a fresh login points at an account or permission st",
+            "detailed_content": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nDebugRadar\nPosted on\nNov 27\n\u2022\nOriginally published at\ndebugradar.com\nFix: Claude Code 'Couldn't Share Transcript' 403 Error\n# claude\n# ai\n# cli\n# troubleshooting\nOriginally published on\nDebugRadar .\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\" \u2014 and /feedback returns 403 even after a fresh /login. There is no verified fix. Your login is not broken: a 403 that survives a fresh login points at an account or permission state on Anthropic's side, not at your local auth. Copy the transcript manually while the share stays broken.\nQuick Fix Summary\nProblem:\nAfter accepting the share prompt, Claude Code fails with \"Couldn't share transcript\". The /feedback command also returns 403 \u2014 even after running /login again.\nFix:\nNo verified fix exists. Re-run /login to confirm a fresh session; if the 403 persists, it is account-side, not local. Copy the transcript manually as the workaround.\nWhat happened:\nReported in anthropics/claude-code#101651 (8 comments), created October 12, 2026, updated November 15, 2026. Still open, no staff reply. Generic Claude Code 403 guides cover login and account-verification failures \u2014 none covers this transcript-share plus /feedback pair.\nTechnical Root Cause\nError Code\nAffected Version\nRoot Cause\nCurrent Status\n\"Couldn't share transcript\" after accepting the share prompt; /feedback returns HTTP 403 even after /login\nClaude Code (version not named in the issue)\nNot establ",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches content",
+            "why_it_matters": "Provides a concrete workaround for a 403 error when sharing transcripts in Claude Code, saving time for developers relying on Anthropic\u2019s CLI.",
+            "who_cares": "Developers using Claude Code or other Anthropic tools in their workflow.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction",
+            "url": "https://dev.to/pixldm_c9bb7dd20f35b92525/ocr-vs-icr-a-developers-guide-to-passport-data-extraction-1pj5",
+            "description": "OCR vs. ICR: Understanding Passport Data Extraction in Document Processing\n\n\nWhen building applications for digital onboarding, identity verification, or document processing, extracting information from identity documents is a common requirement.\n\nPassport scanning is one example. Instead of asking ",
+            "detailed_content": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\npixldm\nPosted on\nNov 27\nOCR vs. ICR: A Developer's Guide to Passport Data Extraction\n# productivity\n# ai\n# ocr\n# documentation\nOCR vs. ICR: Understanding Passport Data Extraction in Document Processing\nWhen building applications for digital onboarding, identity verification, or document processing, extracting information from identity documents is a common requirement.\nPassport scanning is one example. Instead of asking users to manually enter passport details, applications can use character recognition technologies to convert document text into digital data.\nTwo technologies often discussed in this area are\nOptical Character Recognition (OCR)\nand\nIntelligent Character Recognition (ICR) .\nAlthough they are related, they are designed for different types of text.\nWhat Is OCR?\nOptical Character Recognition (OCR) converts printed text from an image into machine-readable characters.\nFor passport data extraction, OCR can help read information such as:\nPassport number\nName\nDate of birth\nNationality\nPassport expiry date\nOCR is commonly used to process printed passport details, including the Machine Readable Zone (MRZ).\nA typical OCR workflow includes image capture, image preprocessing, text recognition, and returning the extracted information in a structured format.\nWhat Is ICR?\nIntelligent Character Recognition (ICR) is designed to recognize handwriting and more variable character styles.\nWhile conventional OCR focuses primarily",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches article",
+            "why_it_matters": "Clarifies the trade\u2011offs between OCR and ICR for passport data extraction, guiding engineers to pick the right technology for identity\u2011verification pipelines.",
+            "who_cares": "Engineers building digital onboarding, KYC, or any document\u2011processing system that must read passports or similar IDs.",
+            "verdict": "READ"
+          },
+          {
+            "source": "Dev.to",
+            "title": "What you lose when you delete ~/.cache",
+            "url": "https://dev.to/notaflightrisk/what-you-lose-when-you-delete-cache-54eg",
+            "description": "I saved an OpenAI key in Langflow, stopped it, deleted ~/.cache and started it again. The key was still in Langflow's database. Langflow just couldn't read it any more, and every time it tried, its log said \"API key decryption failed after retry. This may indicate a corrupted key or SECRET_KEY misma",
+            "detailed_content": "What you lose when you delete ~/.cache - DEV Community\nSkip to content\nPowered by Algolia\nLog in\nCreate account\nDEV Community\nAdd reaction\nLike\nUnicorn\nExploding Head\nRaised Hands\nFire\nJump to Comments\nSave\nBoost\nPick as gem\nCopy link\nCopied to Clipboard\nShare to X\nShare to LinkedIn\nShare to Facebook\nShare to Mastodon\nReport Abuse\nIain\nPosted on\nNov 27\n\u2022\nOriginally published at\nblog.peng.ly\n\u2022\nAI-assisted\nWhat you lose when you delete ~/.cache\n# ai\n# opensource\n# linux\n# backups\nI saved an OpenAI key in\nLangflow , stopped it, deleted\n~/.cache\nand started it again. The key was still in Langflow's database. Langflow just couldn't read it any more, and every time it tried, its log said \"API key decryption failed after retry. This may indicate a corrupted key or SECRET_KEY mismatch.\"\nIf you install Langflow with pip or uv and don't set anything, the key it encrypts your saved credentials with lives in\n~/.cache/langflow/secret_key . Delete that and Langflow makes a new one on the next start, and every API key you saved in it is now noise. You'd have to paste each one back in. Langflow knows the key matters, it even ships a\nscript\nfor changing it safely. It just keeps it in the cache.\nWhich feels a bit unfair, because deleting\n~/.cache\nis the one bit of tidying everyone agrees is fine. The\nXDG spec\nsays it's for \"non-essential data files\". The top answer on askubuntu's\nIs it okay to delete the ~/.cache folder? , which has been read over half a million times, says \"IMO you can delete all of .cache with no long term detrimental effects\". Mine's 8.9 GB, 6.4 of it uv's, so I get the temptation.\nSomebody did ask askubuntu, back in 2019,\n\"Is there anything in ~/.cache that is not really cache?\"\nIt's still got no answers, so here's mine.\nWhat's in there that isn't cache\nFor Langflow,",
+            "content_source": "web_page",
+            "verifier_status": "VALID",
+            "verifier_reason": "Matches article",
+            "why_it_matters": "Reveals that deleting\u202f~/.cache can corrupt Langflow\u2019s encrypted API keys, highlighting hidden state dependencies that many assume are safe to purge.",
+            "who_cares": "Linux developers, Langflow users, and anyone managing secret\u2011key storage in cache directories.",
+            "verdict": "READ"
+          }
+        ]
+      }
+    },
+    "editor": {
+      "status": "done",
+      "output": {
+        "final_briefs": [
+          {
+            "category": "Cool Tool",
+            "title": "rustyfiles",
+            "description": "**rustyfiles delivers a fast, never\u2011freezing file manager for Windows and macOS, built in Rust.** It offers tabs, dual panes, archive\u2011as\u2011folder support and Quick\u2011Look\u2011style previews. The README shows a folder of 100\u202f000 files opening in 281\u202fms, and the project ships binaries for Windows\u202f11 (x64\u202f|\u202fARM64) and macOS\u202f26 on Apple silicon (beta).",
+            "why_it_matters": "A Rust\u2011written file manager that stays responsive even with massive directories, showing how systems\u2011level Rust can replace native Explorer/Finder for power users.",
+            "who_cares": "Desktop application developers, Rust enthusiasts, and power users who need a fast, reliable file manager on Windows or macOS.",
+            "verdict": "WATCH",
+            "source_url": "https://github.com/gelenmedya/rustyfiles"
+          },
+          {
+            "category": "Tech Shift",
+            "title": "AI made self\u2011hosting fun again",
+            "description": "**AI coding assistants are lowering the friction of tweaking Docker\u2011Compose and scripts, reigniting enthusiasm for self\u2011hosting.** The author keeps infrastructure as code in Git (Docker Compose files, scripts) and now lets AI agents edit configurations, add services, or automate tasks, turning ideas that once required an evening of reading changelogs into quick, executable changes.",
+            "why_it_matters": "Shows how AI coding assistants can cut the friction of tweaking Docker\u2011Compose, scripts, and other infra code, reigniting enthusiasm for self\u2011hosting.",
+            "who_cares": "DevOps engineers, SREs, hobbyist sysadmins, and anyone maintaining self\u2011hosted services.",
+            "verdict": "READ",
+            "source_url": "https://janlukas.blog/posts/ai-self-hosting"
+          },
+          {
+            "category": "Ecosystem Update",
+            "title": "AMD\u2011specific fork of llama.cpp",
+            "description": "**A community fork of llama.cpp tuned for AMD GPUs boosts token generation to 55\u202ft/s and pre\u2011fill to 1300\u202ft/s, making on\u2011prem LLM inference viable on consumer Radeon cards.** The fork, named llama\u2011cpp\u2011rdna\u2011boosts, is lean and reports a 50\u201160\u202f% speed increase over the generic build on AMD hardware.",
+            "why_it_matters": "An AMD\u2011specific fork of llama.cpp delivers 50\u201160% higher token\u2011generation rates on Radeon GPUs, making on\u2011prem LLM inference viable on consumer\u2011grade hardware.",
+            "who_cares": "Machine\u2011learning engineers, AI researchers, and developers deploying LLMs on AMD GPUs.",
+            "verdict": "INTEGRATE",
+            "source_url": "https://devnull.land/amd-specific-llama-cpp"
+          },
+          {
+            "category": "Career & Learning",
+            "title": "Fix: Claude Code 'Couldn't Share Transcript' 403 Error",
+            "description": "**A practical workaround shows that a persistent 403 when sharing transcripts in Claude Code is an account\u2011side issue, not a local bug.** The suggested steps are to re\u2011run `/login` to confirm a fresh session; if the 403 remains, treat it as an Anthropic account/permission problem and copy the transcript manually as a temporary solution.",
+            "why_it_matters": "Provides a concrete workaround for a 403 error when sharing transcripts in Claude Code, saving time for developers relying on Anthropic\u2019s CLI.",
+            "who_cares": "Developers using Claude Code or other Anthropic tools in their workflow.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/debugradar/fix-claude-code-couldnt-share-transcript-403-error-2oho"
+          },
+          {
+            "category": "Watchlist",
+            "title": "OCR vs. ICR: A Developer's Guide to Passport Data Extraction",
+            "description": "**Understanding the difference between OCR and ICR helps you choose the right engine for passport data extraction in onboarding pipelines.** OCR converts printed text (including the MRZ) into machine\u2011readable characters, while ICR is designed for handwriting and more variable styles. The guide walks through the typical OCR workflow\u2014capture, preprocess, recognize, structure\u2014and explains where ICR might be needed.",
+            "why_it_matters": "Clarifies the trade\u2011offs between OCR and ICR for passport data extraction, guiding engineers to pick the right technology for identity\u2011verification pipelines.",
+            "who_cares": "Engineers building digital onboarding, KYC, or any document\u2011processing system that must read passports or similar IDs.",
+            "verdict": "READ",
+            "source_url": "https://dev.to/pixldm_c9bb7dd20f35b92525/ocr-vs-icr-a-developers-guide-to-passport-data-extraction-1pj5"
+          }
+        ]
+      }
+    }
+  },
+  "rejected_urls": [],
+  "restarted": false,
+  "email": {
+    "status": "sent",
+    "attempts": 0,
+    "last_error": null
+  },
+  "attempts": []
+}
